@@ -365,6 +365,8 @@ footer .pie-quien { margin-top:18px; }
 /* ── Interacción: estados hover, foco, pulsación y avisos, iguales en todas las páginas */
 html { -webkit-tap-highlight-color:transparent; }
 :focus-visible { outline:3px solid var(--tinta); outline-offset:2px; }
+/* Los campos de texto no llevan anillo de foco: el cursor ya dice dónde se escribe */
+:is(input, textarea):focus, :is(input, textarea):focus-visible { outline:none; box-shadow:none; }
 a { text-underline-offset:3px; text-decoration-thickness:1px; transition:text-decoration-thickness .15s ease-out, color .15s ease-out, background-color .15s ease-out; }
 a:hover { text-decoration-thickness:2px; }
 button, summary, select, .chip, .repo, .botones a, .minuto, .modo { transition:background-color .15s ease-out, color .15s ease-out, border-color .15s ease-out, box-shadow .18s ease-out, transform .12s ease-out; }
