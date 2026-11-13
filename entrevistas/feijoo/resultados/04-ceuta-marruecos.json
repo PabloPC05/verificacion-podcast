@@ -1,0 +1,205 @@
+[
+  {
+    "minuto": "0:40:58",
+    "cita": "que ya el 26 y 27 de julio ya estaban advirtiendo que se estaba habiendo un movimiento en redes con un seguimiento de más de 180.000 personas para invadir Ceuta",
+    "afirmacion": "Los servicios de inteligencia (CNI) advirtieron ya el 26 y 27 de julio de 2026 de un movimiento en redes sociales, con más de 180.000 seguidores, para entrar en masa en Ceuta.",
+    "veredicto": "mayormente_verdadero",
+    "explicacion": "Según el informe del CNI remitido a la jueza Tardón, los dos grupos de Facebook que convocaban la entrada sumaban unos 180.000 seguidores (cifra real, y son seguidores, no personas que fueran a entrar). El CNI difundió un informe el 27 de julio sobre un aumento exponencial de la presión migratoria y la alerta concreta sobre la convocatoria del 30 de julio a las 20:00 se transmite el 29 de julio; no consta ningún aviso del 26. La fecha y el detalle están algo adelantados, pero el aviso previo existió y el Gobierno lo ha negado solo en parte.",
+    "confianza": "media",
+    "fuentes": [
+      {"titulo": "Todo lo del CNI sobre la entrada masiva: lo que sabían Delegación, Marruecos y lo que hicieron (Ceuta al Día)", "url": "https://www.ceutaldia.com/al-dia/administracion/todo-cni-entrada-masiva-que-sabian-delegacion-marruecos-que-hicieron/20261016191125322899.html"},
+      {"titulo": "El CNI a la juez de Ceuta: «el 29.07.2026 el CNI identifica llamamientos para un asalto masivo» (Moncloa.com)", "url": "https://www.moncloa.com/2026/10/19/cni-informe-juez-ceuta-3451326/"},
+      {"titulo": "El CNI avisó el 29 de julio de que 180.000 personas planeaban entrar en Ceuta (The Objective)", "url": "https://theobjective.com/espana/2026-08-26/cni-aviso-julio-personas-entrar-ceuta/"}
+    ]
+  },
+  {
+    "minuto": "0:42:01",
+    "cita": "al de la Comisaría de Extranjería de la Policía Nacional, que venía a decir lo mismo",
+    "afirmacion": "La Comisaría General de Extranjería y Fronteras de la Policía Nacional advirtió, igual que el CNI, del riesgo de una entrada masiva en Ceuta antes del 30 de julio de 2026.",
+    "veredicto": "verdadero",
+    "explicacion": "El Centro Nacional de Inmigración y Fronteras (CENIF), unidad de la Comisaría General de Extranjería y Fronteras, emitió el 28 de julio un análisis de riesgo sobre posibles entradas irregulares en Ceuta el 30 de julio y avisó de un riesgo de salto masivo de la valla o cruce a nado; hubo un segundo aviso el 29 de julio a Interior. Además, el 27 de julio la Brigada Provincial de Extranjería y Fronteras de Ceuta alertó de una entrada masiva a nado. Interior sostiene que ningún informe anticipó la escala de lo ocurrido, pero los avisos policiales existen.",
+    "confianza": "media",
+    "fuentes": [
+      {"titulo": "Un informe policial apunta a que agentes marroquíes planificaron y guiaron la entrada masiva de migrantes en Ceuta (Infobae)", "url": "https://www.infobae.com/espana/2026/09/01/un-informe-policial-apunta-a-que-agentes-marroquies-planificaron-y-guiaron-la-entrada-masiva-de-migrantes-en-ceuta/"},
+      {"titulo": "El informe de la Policía sugiere que el Gobierno podría tener «responsabilidades» en la entrada masiva en Ceuta (El Independiente)", "url": "https://www.elindependiente.com/espana/2026/09/03/informe-policia-sugiere-que-gobierno-podria-tener-responsabilidades-entrada-masiva-ceuta/"}
+    ]
+  },
+  {
+    "minuto": "0:42:01",
+    "cita": "la fiesta del trono, por lo tanto, la fiesta nacional de Marruecos se estaba celebrando a 25 kilómetros de la frontera",
+    "afirmacion": "La Fiesta del Trono de Marruecos se estaba celebrando a unos 25 kilómetros de la frontera con Ceuta cuando se produjo la entrada masiva.",
+    "veredicto": "mayormente_verdadero",
+    "explicacion": "La entrada masiva del 30 de julio de 2026 coincidió con la Fiesta del Trono (aniversario de la entronización de Mohamed VI), y los llamamientos en redes la aprovecharon. La recepción del rey se sitúa en Rincón (M'diq), a unos 20 km de Castillejos, que a su vez está a unos 5 km de Ceuta, es decir, unos 25 km en total: la cifra es una aproximación razonable, sin dato oficial exacto. La propia información del CNI atribuye parte de la insuficiente respuesta marroquí a la prioridad dada a esos actos.",
+    "confianza": "media",
+    "fuentes": [
+      {"titulo": "Miles de jóvenes marroquíes tratan de cruzar la valla fronteriza de Ceuta (Diari de Tarragona, EFE)", "url": "https://www.diaridetarragona.com/espana/267211/miles-jovenes-marroquies-tratan-cruzar-valla-fronteriza-ceuta.html"},
+      {"titulo": "Dónde queda Ceuta, cómo es su frontera con Marruecos (La Nación)", "url": "https://www.lanacion.com.ar/el-mundo/donde-queda-ceuta-como-es-su-frontera-con-marruecos-y-el-mapa-para-entender-el-paso-de-migrantes-nid31072026/"},
+      {"titulo": "Todo lo del CNI sobre la entrada masiva (Ceuta al Día)", "url": "https://www.ceutaldia.com/al-dia/administracion/todo-cni-entrada-masiva-que-sabian-delegacion-marruecos-que-hicieron/20261016191125322899.html"}
+    ]
+  },
+  {
+    "minuto": "0:42:01",
+    "cita": "cogería la constitución verían qué artículo pone que el ejército debe de garantizar la integridad territorial",
+    "afirmacion": "La Constitución española establece que las Fuerzas Armadas tienen la misión de garantizar/defender la integridad territorial de España.",
+    "veredicto": "verdadero",
+    "explicacion": "El artículo 8.1 de la Constitución dice que las Fuerzas Armadas tienen como misión garantizar la soberanía e independencia de España, defender su integridad territorial y el ordenamiento constitucional. Feijóo cambia «defender» por «garantizar», un matiz sin consecuencias. Que el despliegue ante una entrada migratoria sea la respuesta adecuada es una valoración, no un hecho.",
+    "confianza": "alta",
+    "fuentes": [
+      {"titulo": "Constitución Española, art. 8 (texto publicado por el CEPC)", "url": "https://www.cepc.es/sites/default/files/2021-12/233661983100-102949.pdf"},
+      {"titulo": "Artículo 8. Las Fuerzas Armadas (Redopositor)", "url": "https://redopositor.com/constitucion/articulo-8/"}
+    ]
+  },
+  {
+    "minuto": "0:43:06",
+    "cita": "En el año 21 ya nos invadieron 15.000 personas en Ceuta.",
+    "afirmacion": "En la crisis de Ceuta de mayo de 2021 entraron 15.000 personas.",
+    "veredicto": "falso",
+    "explicacion": "Las cifras manejadas para el 17 y 18 de mayo de 2021 van de unas 8.000 (cifra inicial del Gobierno) a unas 10.000 (Interior, junio de 2021) y unas 12.000 (Gobierno de Ceuta); ninguna estimación publicada llega a 15.000. Ni el redondeo oral justifica un 25-50 % de exceso sobre las estimaciones más altas.",
+    "confianza": "media",
+    "fuentes": [
+      {"titulo": "Segunda invasión en cinco años: en 2021 se colaron más de 10.000 marroquíes (Vozpópuli)", "url": "https://www.vozpopuli.com/espana/politica/segunda-invasion-en-cinco-anos-en-2021-se-colaron-mas-de-10000-marroquies.html"},
+      {"titulo": "Un año de la crisis de desinformación de Ceuta (Maldita.es)", "url": "https://maldita.es/malditateexplica/20220518/crisis-desinformacion-ceuta-migracion/"},
+      {"titulo": "Crisis migratoria de Ceuta de 2026 (Wikipedia, comparación con 2021)", "url": "https://es.wikipedia.org/wiki/Incidentes_fronterizos_entre_Espa%C3%B1a_y_Marruecos_de_2026"}
+    ]
+  },
+  {
+    "minuto": "0:44:06",
+    "cita": "el presidente ha vuelto a mentir cuando dijo voy a dar los informes del CNI? Mentira. Tuviste los informes del CNI capados. Has visto los informes del CNI sin completar. Y por eso la jueza te los ha pedido y te ha dicho desclasifícalos y mandámoslos a la Audiencia Nacional.",
+    "afirmacion": "Sánchez prometió entregar los informes del CNI sobre Ceuta, los entregó recortados o incompletos, y por eso la jueza de la Audiencia Nacional le ha pedido desclasificarlos y remitirlos.",
+    "veredicto": "enganoso",
+    "explicacion": "Es cierto que Sánchez dijo en el Congreso que había ordenado publicar un dosier con todos los informes (se publicaron unos 40 del 1 al 31 de julio) y que el 27 de octubre de 2026 la jueza María Tardón pidió al Consejo de Ministros (no a Sánchez) desclasificar notas e informes del CNI posteriores al 30 de julio y la lista de destinatarios de las notas de los días 27 y 30; el Gobierno ha acordado desclasificarlos en noviembre. Pero que lo publicado fuera deliberadamente «capado» no está probado: la petición judicial abarca documentos posteriores a los publicados, y el Gobierno afirma haber publicado todo lo que tenía. Existe una denuncia no verificada de desaparición de informes.",
+    "confianza": "media",
+    "fuentes": [
+      {"titulo": "La juez de la Audiencia Nacional pide al Consejo de Ministros desclasificar documentos e informes sobre la entrada irregular masiva en Ceuta (Poder Judicial)", "url": "https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Noticias-Judiciales/La-juez-de-la-Audiencia-Nacional-pide-al-Consejo-de-Ministros-desclasificar-documentos-e-informes-sobre-la-entrada-irregular-masiva-en-Ceuta"},
+      {"titulo": "El Gobierno asegura que publicará «todo lo que tiene» sobre Ceuta tras acusarle el PP de recortar los informes (Público)", "url": "https://www.publico.es/politica/gobierno/gobierno-asegura-publicara-sobre-ceuta-acusarle-pp-recortar-informes.html"},
+      {"titulo": "España desclasifica los informes del CNI sobre Ceuta que pidió la juez Tardón (Euronews)", "url": "https://es.euronews.com/2026/11/10/gobierno-desclasifica-los-informes-del-cni-sobre-ceuta-que-pidio-la-jueza-tardon"},
+      {"titulo": "La jueza da 15 días al Gobierno español para desclasificar todos los informes del CNI sobre Ceuta (Noticias de Álava)", "url": "https://www.noticiasdealava.eus/politica/2026/10/27/jueza-pide-desclasificar-informes-cni-ceuta-11693439.html"}
+    ]
+  },
+  {
+    "minuto": "0:44:06",
+    "cita": "Ha dimitido el jefe de gabinete del delegado del gobierno porque estaba avisado, advertido. Ha dimitido el delegado del gobierno después.",
+    "afirmacion": "El jefe de gabinete del delegado del Gobierno en Ceuta dimitió porque había sido avisado por el CNI, y después dimitió el propio delegado del Gobierno.",
+    "veredicto": "verdadero",
+    "explicacion": "Gonzalo Sanz, jefe de gabinete de la Delegación, dimitió el 11 de septiembre de 2026 tras conocerse que recibió mensajes del CNI y mantuvo una llamada de unos once minutos con un agente el 29 de julio, un día antes de la entrada. El delegado, Miguel Ángel Pérez Triano, dimitió el 28 de septiembre, alegando una campaña de acoso. Pérez Triano sostiene que desconocía esos avisos, y ha sido citado como investigado por la jueza el 18 de noviembre: es una imputación, no una condena.",
+    "confianza": "alta",
+    "fuentes": [
+      {"titulo": "Dimite el jefe de Gabinete de la Delegación del Gobierno en Ceuta tras la polémica por los contactos con el CNI (Infobae)", "url": "https://www.infobae.com/espana/agencias/2026/09/11/dimite-el-jefe-de-gabinete-de-la-delegacion-del-gobierno-en-ceuta-tras-la-polemica-por-los-contactos-con-el-cni/"},
+      {"titulo": "El jefe de gabinete del delegado del Gobierno en Ceuta dimite tras reconocer los avisos del CNI (Moncloa.com)", "url": "https://www.moncloa.com/2026/09/12/dimision-ceuta-cni-delegacion-gobierno-3430053"},
+      {"titulo": "Dimite el delegado del Gobierno en Ceuta dos meses después de la invasión y deja la política (El Español)", "url": "https://www.elespanol.com/espana/politica/20260928/dimite-delegado-gobierno-ceuta-meses-despues-invasion-deja-politica-sufrido-campana-acoso/1003744399603_0.html"},
+      {"titulo": "La juez cita a declarar como investigado el día 18 a Pérez Triano (El Español)", "url": "https://www.elespanol.com/espana/tribunales/20261112/juez-caso-ceuta-cita-investigado-exdelegado-gobierno-semana-previa-elecciones/1003744455723_0.html"}
+    ]
+  },
+  {
+    "minuto": "0:44:06",
+    "cita": "si el ministro de Interior no dimite",
+    "afirmacion": "El ministro del Interior, Fernando Grande-Marlaska, no ha dimitido pese a la crisis de Ceuta.",
+    "veredicto": "verdadero",
+    "explicacion": "Marlaska ha descartado dimitir («no hay ninguna razón») y sigue en el cargo, mientras PP, Podemos y el sindicato Jupol reclaman su dimisión por la gestión de los avisos previos y el informe policial. Las fuentes localizadas llegan hasta septiembre de 2026 y no hay noticia de su salida posterior; la exigencia de dimisión es valoración política.",
+    "confianza": "media",
+    "fuentes": [
+      {"titulo": "Marlaska descarta dimitir y defiende que nadie previó la entrada masiva en Ceuta (Onda Vasca)", "url": "https://www.ondavasca.com/marlaska-descarta-dimitir-y-defiende-que-nadie-previo-la-entrada-masiva-en-ceuta/"},
+      {"titulo": "El PP exige la dimisión de Marlaska por el informe policial (Onda Vasca)", "url": "https://www.ondavasca.com/el-pp-exige-la-dimision-de-marlaska-por-el-informe-policial-mientras-sumar-ve-responsabilidad-de-marruecos/"}
+    ]
+  },
+  {
+    "minuto": "0:44:06",
+    "cita": "la ministra de Defensa no deja comparecer a la directora del CNI en la Comisión de Secretos Sociales",
+    "afirmacion": "La ministra de Defensa, Margarita Robles, no permite que la directora del CNI comparezca en la Comisión de Secretos Oficiales del Congreso sobre Ceuta.",
+    "veredicto": "enganoso",
+    "explicacion": "Es cierto que la directora del CNI, Esperanza Casteleiro, no había comparecido: el 22 de septiembre de 2026 el Gobierno dijo que a la Comisión de Secretos solo irían ministros (Robles lo hizo el 6 de octubre). Pero Robles dijo el 15 de septiembre que Casteleiro no tenía obstáculo y el 23 pidió a la presidenta del Congreso autorizar su comparecencia, que depende de la Junta de Portavoces; el veto lo atribuye la prensa a Moncloa. No se halló información posterior a septiembre sobre si finalmente compareció.",
+    "confianza": "media",
+    "fuentes": [
+      {"titulo": "El Gobierno evita que la directora del CNI comparezca por Ceuta en la Comisión de Secretos: «Irá solo la ministra» (El Español)", "url": "https://www.elespanol.com/espana/politica/20260922/gobierno-evita-directora-cni-comparezca-ceuta-comision-secretos-ira-solo-ministra/1003744392605_0.html"},
+      {"titulo": "Robles se muestra dispuesta a acudir a la Comisión de Secretos Oficiales con la directora del CNI (Infobae)", "url": "https://www.infobae.com/espana/agencias/2026/09/15/robles-se-muestra-dispuesta-a-acudir-a-la-comision-de-secretos-oficiales-con-la-directora-del-cni-para-hablar-de-ceuta/"},
+      {"titulo": "El caso Robles y el CNI en Ceuta: La Moncloa limita su comparecencia del 6 de octubre y veta a Casteleiro (Moncloa.com)", "url": "https://www.moncloa.com/2026/09/22/robles-cni-ceuta-comision-secretos-oficiales-3436049/"}
+    ]
+  },
+  {
+    "minuto": "0:44:06",
+    "cita": "porque tenía trabajo allí como presidente del Servicio Sanitario, conocido Insalud antes de las transferencias sanitarias, también como presidente de Correos",
+    "afirmacion": "Feijóo fue presidente del Insalud y presidente de Correos, y por ese trabajo conoce Ceuta.",
+    "veredicto": "verdadero",
+    "explicacion": "Feijóo presidió el Insalud entre el 10 de mayo de 1996 y el 18 de mayo de 2000 y fue presidente de Correos del 18 de mayo de 2000 al 18 de enero de 2003. El Insalud gestionaba la sanidad de Ceuta y Melilla, que nunca fueron transferidas a una comunidad autónoma, lo que hace plausible su vinculación con la ciudad; que la conozca bien es una anécdota no comprobable.",
+    "confianza": "media",
+    "fuentes": [
+      {"titulo": "Alberto Núñez Feijóo (Wikipedia)", "url": "https://es.wikipedia.org/wiki/Alberto_N%C3%BA%C3%B1ez_Feij%C3%B3o"}
+    ]
+  },
+  {
+    "minuto": "0:45:26",
+    "cita": "Ahora pregúntale a un musulmán ceutí qué opina de la invasión. 100.000 personas.",
+    "afirmacion": "La entrada masiva en Ceuta fue de unas 100.000 personas.",
+    "veredicto": "enganoso",
+    "explicacion": "Por contexto, Feijóo alude a la magnitud de la entrada (Ceuta tiene unos 85.000 habitantes). La cifra oficial de Interior es de 72.000 personas entre el 30 y el 31 de julio de 2026 (Torres habló de unas 80.000); solo un informe del Gobierno de Ceuta de octubre eleva el total a 96.058. Redondear a 100.000 supera la cifra oficial en casi un 40 % y la Policía admite que no hay una cifra sustentada en base estadística objetiva.",
+    "confianza": "baja",
+    "fuentes": [
+      {"titulo": "Crisis migratoria de Ceuta de 2026 (Wikipedia; cifras de Interior, Torres y Gobierno de Ceuta)", "url": "https://es.wikipedia.org/wiki/Incidentes_fronterizos_entre_Espa%C3%B1a_y_Marruecos_de_2026"},
+      {"titulo": "Un informe policial apunta a que agentes marroquíes planificaron y guiaron la entrada masiva (Infobae; 72.000 a 80.000)", "url": "https://www.infobae.com/espana/2026/09/01/un-informe-policial-apunta-a-que-agentes-marroquies-planificaron-y-guiaron-la-entrada-masiva-de-migrantes-en-ceuta/"}
+    ]
+  },
+  {
+    "minuto": "0:45:26",
+    "cita": "Al final se acredita que los gendarmes marroquíes estaban ordenando y circulando.",
+    "afirmacion": "Se ha acreditado que los gendarmes marroquíes estaban ordenando y dirigiendo el paso de los migrantes hacia Ceuta.",
+    "veredicto": "mayormente_verdadero",
+    "explicacion": "Un informe del CENIF de la Policía Nacional, entregado a la Audiencia Nacional el 1 de septiembre de 2026, describe un «guiado activo de la masa» y gendarmes uniformados dando indicaciones a los migrantes, y el propio Gobierno ha reconocido que miembros de la gendarmería permitieron el paso. Sin embargo, es un informe policial y no un hallazgo judicial; la dirección de la Policía niega que atribuya a Marruecos la planificación y ejecución, y el CNI describe una actitud sobre todo pasiva de las fuerzas marroquíes. «Se acredita» es más categórico de lo que hoy puede sostenerse.",
+    "confianza": "media",
+    "fuentes": [
+      {"titulo": "Qué sabemos sobre el «informe del CENIF» responsabilizando a «gendarmes marroquíes» (Maldita.es)", "url": "https://maldita.es/desinfo/20260902/policia-nacional-informe-alerta-ceuta-migrantes/"},
+      {"titulo": "El informe de la Policía habla de la «permisividad» de los agentes marroquíes y de un «guiado activo de la masa» (Servimedia)", "url": "https://www.servimedia.es/noticias/informe-policia-habla-permisividad-agentes-marroquies-guiado-activo-masa-hacia-ceuta/1413239951"},
+      {"titulo": "La Policía señala la actuación de gendarmes marroquíes pero no acusa a Marruecos (Ceuta Actualidad)", "url": "https://www.ceutaactualidad.com/articulo/actualidad/informe/20260902231320281408.html"}
+    ]
+  },
+  {
+    "minuto": "0:45:26",
+    "cita": "cogerte el falcoyete de vacaciones 25 días y sacar tu lista de spotty, de las canciones preferidas",
+    "afirmacion": "Sánchez acudió a Ceuta, habló de una violación de la integridad territorial, y después se fue de vacaciones unos 25 días en el Falcon y publicó su lista de Spotify.",
+    "veredicto": "mayormente_verdadero",
+    "explicacion": "Sánchez visitó Ceuta el 31 de julio de 2026 y habló de «violación de la integridad territorial». El 1 de agosto llegó en un Falcon del Ejército del Aire a Lanzarote (La Mareta) y publicó ese día su playlist de verano; sus vacaciones iban hasta el 24 de agosto (Consejo de Ministros el 25), es decir, unos 24 días, con una pausa prevista por el eclipse del 12 de agosto. Los 25 días son un redondeo razonable.",
+    "confianza": "media",
+    "fuentes": [
+      {"titulo": "La Moncloa. Comparecencia del presidente durante su visita a Ceuta", "url": "https://www.lamoncloa.gob.es/presidente/intervenciones/paginas/2026/202600731-transcripcion-pg-visita-ceuta.aspx"},
+      {"titulo": "Sánchez y su familia empiezan las vacaciones en Lanzarote en plena crisis migratoria en Ceuta (Canarias7)", "url": "https://www.canarias7.es/canarias/sanchez-llega-lanzarote-ultimas-vacaciones-mareta-20260801134702-nt.html"},
+      {"titulo": "Pedro Sánchez publica su playlist de canciones para el verano en plena crisis migratoria en Ceuta (Libertad Digital)", "url": "https://www.libertaddigital.com/espana/2026-08-02/pedro-sanchez-publica-su-playlist-de-canciones-para-el-verano-en-plena-crisis-migratoria-en-ceuta-7444554/"}
+    ]
+  },
+  {
+    "minuto": "0:46:27",
+    "cita": "Lo primero es llamar a consultas a tu embajador en Rabat. Lo segundo es pedir que venga la embajadora",
+    "afirmacion": "El Gobierno de España no llamó a consultas al embajador en Rabat ni convocó a la embajadora de Marruecos en España tras la entrada masiva en Ceuta.",
+    "veredicto": "mayormente_verdadero",
+    "explicacion": "Albares se ha resistido a llamar a consultas al embajador en Rabat, y la prensa informa de que tampoco convocó a la embajadora Karima Benyaich; al menos hasta el 11 de noviembre Feijóo seguía pidiendo ambas medidas. Hay una discrepancia: Sánchez dijo en el Congreso que Albares la convocó el 21 de agosto, pero fuentes diplomáticas citadas por The Objective afirman que no estaba en España y la reunión no se celebró; esa convocatoria, además, respondía a declaraciones de ministros marroquíes sobre la soberanía de Ceuta.",
+    "confianza": "media",
+    "fuentes": [
+      {"titulo": "Albares no llama a consultas al embajador en Rabat (El Debate)", "url": "https://www.eldebate.com/espana/20260826/albares-no-llama-consultas-embajador-rabat-cuando-hizo-argentina-corrupta-milei-begona_452328.html"},
+      {"titulo": "La embajadora marroquí no estaba en España cuando fue convocada por el Gobierno (The Objective)", "url": "https://theobjective.com/espana/2026-09-03/embajadora-marroqui-espana-convocada/"},
+      {"titulo": "Albares evita convocar a la embajadora de Marruecos (El Español)", "url": "https://www.elespanol.com/espana/politica/20260825/albares-evita-convocar-embajadora-marruecos-pese-desafios-rabat-soberania-ceuta/1003744362907_0.html"},
+      {"titulo": "Feijóo critica la gestión de Sánchez en Ceuta (Cuatro)", "url": "https://cuatro.com/noticias/espana/20261111/feijoo-critica-gestion-sanchez-ceuta_18_020676732.html"}
+    ]
+  },
+  {
+    "minuto": "0:46:27",
+    "cita": "he tenido que ser yo el jefe de la oposición y los europarlamentarios del PP en Europa los que hemos convencido al resto de europarlamentarios que hagan una declaración para condenar la invasión de Ceuta. Es decir, la oposición le pide al Parlamento Europeo solidaridad y el gobierno de España vota en contra.",
+    "afirmacion": "El PP y sus eurodiputados impulsaron en el Parlamento Europeo una resolución de condena de la invasión de Ceuta y el Gobierno de España (sus eurodiputados socialistas) votó en contra.",
+    "veredicto": "mayormente_verdadero",
+    "explicacion": "El 17 de septiembre de 2026 el Parlamento Europeo aprobó por 339 votos a favor y 225 en contra una resolución impulsada por el PPE (grupo del PP), que califica de «invasión» la crisis y abre la puerta a fiscalizar los fondos europeos a Rabat; la delegación socialista española (S&D) votó en contra. Matiz: quien votó fueron los eurodiputados del PSOE, no «el gobierno de España», que no vota en el Parlamento Europeo, y la resolución salió con apoyo de otros grupos (ECR, Patriotas, parte de Renew), no solo por la gestión del PP.",
+    "confianza": "alta",
+    "fuentes": [
+      {"titulo": "El Parlamento Europeo califica de «invasión» la crisis de Ceuta y aprueba fiscalizar los fondos UE a Rabat (Moncloa.com)", "url": "https://www.moncloa.com/2026/09/17/parlamento-europeo-ceuta-invasion-3433163/"},
+      {"titulo": "El Parlamento Europeo aprueba una resolución sobre Ceuta y abre la puerta a sanciones a Marruecos (Que.es)", "url": "https://www.que.es/2026/09/18/parlamento-europeo-ceuta-sanciones-marruecos/"},
+      {"titulo": "El Parlamento Europeo reconoce la invasión en Ceuta y exige a Marruecos respetar la soberanía española (Partido Popular)", "url": "https://www.pp.es/actualidad/articulos/el-parlamento-europeo-reconoce-la-invasion-en-ceuta-y-exige-a-marruecos-respetar-la-soberania-espanola/"}
+    ]
+  },
+  {
+    "minuto": "0:47:29",
+    "cita": "tratados de libre comercio o de comercio entre Marruecos y la Unión Europea",
+    "afirmacion": "Existen acuerdos comerciales entre la UE y Marruecos, y la UE considera a Marruecos un socio estratégico.",
+    "veredicto": "mayormente_verdadero",
+    "explicacion": "La UE y Marruecos mantienen un acuerdo de asociación y acuerdos agrícola y pesquero (2019, anulados parcialmente por el TJUE en octubre de 2024 por el Sáhara Occidental, con el agrícola vigente 12 meses más), y von der Leyen y Borrell hablaron en 2024 de una «asociación estratégica duradera, amplia y profunda». No se ha verificado el estado actual (2026) de las negociaciones de nuevos acuerdos, por lo que «estar cerrando acuerdos» no es comprobable; que Marruecos deba seguir considerado aliado estratégico es una opinión.",
+    "confianza": "media",
+    "fuentes": [
+      {"titulo": "Marruecos carga contra la justicia europea y reclama a la UE que preserve su asociación (El Independiente)", "url": "https://www.elindependiente.com/internacional/2024/10/04/marruecos-carga-contra-la-justicia-europea-y-reclama-a-la-ue-que-preserve-su-asociacion/amp/"}
+    ]
+  }
+]

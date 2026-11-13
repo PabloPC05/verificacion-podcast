@@ -1,0 +1,244 @@
+[
+  {
+    "minuto": "0:49:33",
+    "cita": "Llevamos ocho años",
+    "afirmacion": "El Gobierno de Pedro Sánchez lleva ocho años en el poder.",
+    "veredicto": "verdadero",
+    "explicacion": "Sánchez asumió la Presidencia del Gobierno el 2 de junio de 2018 tras la moción de censura del 1 de junio y sigue en el cargo, sin interrupciones. A fecha de la entrevista (13 de noviembre de 2026) han pasado ocho años y cinco meses, así que «ocho años» es un redondeo razonable a la baja.",
+    "confianza": "alta",
+    "fuentes": [
+      {
+        "titulo": "Pedro Sánchez (Wikipedia): presidente del Gobierno desde el 2 de junio de 2018",
+        "url": "https://es.wikipedia.org/wiki/Pedro_S%C3%A1nchez"
+      }
+    ]
+  },
+  {
+    "minuto": "0:51:38",
+    "cita": "en España aproximadamente hay dos millones y medio de personas que corran el ingreso mínimo vital",
+    "afirmacion": "En España unos dos millones y medio de personas cobran el ingreso mínimo vital (IMV).",
+    "veredicto": "mayormente_verdadero",
+    "explicacion": "El Ministerio de Inclusión/Seguridad Social cifra el IMV en más de 2,5 millones de personas en marzo de 2026 (829.399 hogares), más de 2,6 millones en junio, cerca de 2,7 millones en julio y cerca de 2,8 millones en octubre de 2026 (911.274 hogares). La cifra que da Feijóo corresponde a los datos de principios de 2026 y se queda unos 300.000 por debajo del último dato disponible, pero es del orden correcto.",
+    "confianza": "alta",
+    "fuentes": [
+      {
+        "titulo": "Seguridad Social: el IMV protege en octubre a cerca de 2,8 millones de personas que viven en 911.274 hogares",
+        "url": "https://revista.seg-social.es/-/el-ingreso-m%C3%ADnimo-vital-protege-en-octubre-a-cerca-de-2-8-millones-de-personas-que-viven-en-911.274-hogares"
+      },
+      {
+        "titulo": "Ministerio de Inclusión: el IMV llega en julio a cerca de 2,7 millones de personas (879.225 hogares)",
+        "url": "https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/inclusion/Paginas/2026/070826-imv-julio.aspx"
+      },
+      {
+        "titulo": "Europa Press/Bolsamanía: la nómina del IMV llegó en marzo a 829.399 hogares con más de 2,5 millones de personas",
+        "url": "https://www.bolsamania.com/noticias/economia/economia--la-nomina-del-imv-llego-en-marzo-a-829399-hogares-en-los-que-viven-mas-de-25-millones-de-personas--22270400.html"
+      }
+    ]
+  },
+  {
+    "minuto": "0:51:38",
+    "cita": "hay medio millón de inmigrantes cobrándolo sin haber trabajado una sola hora en el último año",
+    "afirmacion": "Hay medio millón de inmigrantes que cobran el ingreso mínimo vital sin haber trabajado ni una sola hora en el último año.",
+    "veredicto": "falso",
+    "explicacion": "Feijóo atribuye la cifra a «información que nos han trasladado» sin citar fuente. El dato oficial del Ministerio (a 15 de mayo de 2026) que citó laSexta es de 150.679 migrantes perceptores del IMV en total, no solo sin trabajo, es decir, un tercio de lo que dice. La ministra Saiz añadió que más del 80 % de los perceptores son españoles y que dos de cada tres trabajaron en el último año; además, el IMV exige al menos un año de residencia legal. Matiz: las fuentes no precisan si los 150.000 son titulares o beneficiarios (los titulares extranjeros son el 16-17 % según datos de Seguridad Social obtenidos por Maldita), y el Ministerio no publica el cruce con el empleo, por lo que la confianza no es alta.",
+    "confianza": "media",
+    "fuentes": [
+      {
+        "titulo": "elDiario.es/laSexta: señala las «imprecisiones» de Feijóo sobre los migrantes que cobran el IMV, «ha multiplicado por 3 la cifra oficial» (150.679 migrantes, datos a 15 de mayo)",
+        "url": "https://www.eldiario.es/vertele/videos/actualidad/lasexta-senala-imprecisiones-feijoo-hormiguero-migrantes-cobran-imv-multiplicado-3-cifra-oficial_7_13317252.html"
+      },
+      {
+        "titulo": "Diario de Avisos: Feijóo, trancas, barrancas y los bulos sobre la inmigración (réplica de Saiz: más del 80 % son españoles, unos 150.000 de origen extranjero)",
+        "url": "https://diariodeavisos.elespanol.com/2026/06/feijoo-trancas-barrancas-y-los-bulos-sobre-la-inmigracion/"
+      },
+      {
+        "titulo": "Maldita.es: los españoles superan a los extranjeros entre los titulares del IMV desde 2020",
+        "url": "https://maldita.es/prebunking/20260710/ingreso-minimo-vital-espa%C3%B1oles-extranjeros/"
+      }
+    ]
+  },
+  {
+    "minuto": "0:52:45",
+    "cita": "esto es el reglamento de retorno aprobado en la Unión Europea por la inmensa mayoría de los países con el voto en contra de Sánchez",
+    "afirmacion": "El reglamento europeo de retorno fue aprobado en la UE por la inmensa mayoría de los países, con el voto en contra del Gobierno de Sánchez.",
+    "veredicto": "verdadero",
+    "explicacion": "El Consejo de la UE adoptó el Reglamento de Retornos el 1 de octubre de 2026 con el único voto en contra de España y la abstención de Bélgica. Antes, el Parlamento Europeo lo aprobó el 17 de junio de 2026 por 418 votos a favor, 210-218 en contra (según la fuente) y 30 abstenciones, con el rechazo de los grupos de izquierda, incluidos los socialistas europeos. Marlaska justificó el voto por «serias dudas jurídicas, políticas y económicas».",
+    "confianza": "alta",
+    "fuentes": [
+      {
+        "titulo": "Artículo 14: España, el único país de la UE que rechaza acelerar las expulsiones de migrantes (adopción final con el único voto en contra de España y la abstención de Bélgica)",
+        "url": "https://www.articulo14.es/internacional/espana-el-unico-pais-de-la-ue-que-rechaza-acelerar-las-expulsiones-de-migrantes-20261001.html"
+      },
+      {
+        "titulo": "Euronews: España, único Estado miembro que votó en contra del reglamento de retornos (1 de octubre de 2026)",
+        "url": "https://es.euronews.com/2026/10/01/espana-ue-reglamento-retornos-inmigrantes-deportaciones-ceuta"
+      },
+      {
+        "titulo": "El Español: el Parlamento Europeo aprueba el reglamento por 418 votos a favor, 210 en contra y 30 abstenciones (17 de junio de 2026)",
+        "url": "https://www.elespanol.com/sociedad/20260622/oficial-ue-migrantes-situacion-irregular-deportados-centros-detencion/1003744293852_0.html"
+      }
+    ]
+  },
+  {
+    "minuto": "0:52:45",
+    "cita": "Yo creo que en Italia ha funcionado.",
+    "afirmacion": "El modelo de enviar migrantes a terceros países ha funcionado, al menos parcialmente, en Italia con su acuerdo con Albania.",
+    "veredicto": "no_verificable",
+    "explicacion": "Es una valoración matizada («por lo menos parcialmente»), no un dato. Los hechos disponibles apuntan en ambas direcciones: los centros albaneses de Gjader y Shengjin abrieron en octubre de 2024, los tribunales italianos no validaron las detenciones de solicitantes de asilo y desde marzo de 2025 Gjader funciona como un CPR convencional (144 plazas, unas 70-80 personas detenidas en 2026). Según Il Fatto Quotidiano solo ha habido 83 repatriaciones en casi tres años, todas tras devolver antes a la persona a Italia, y Fratelli d'Italia cifra en 536 las personas que han pasado por el CPR en un año. Está pendiente un pronunciamiento del TJUE sobre su legalidad. Que «funcione» depende del criterio que se aplique.",
+    "confianza": "media",
+    "fuentes": [
+      {
+        "titulo": "Il Fatto Quotidiano: Albania, repatriaciones, un fracaso (83 repatriaciones en casi tres años, 21 de abril de 2026)",
+        "url": "https://www.ilfattoquotidiano.it/2026/04/21/migranti-albania-rimpatri-flop-notizie/8362049/"
+      },
+      {
+        "titulo": "Il Post: los centros para migrantes en Albania, hasta ahora y de aquí en adelante (11 de junio de 2026)",
+        "url": "https://www.ilpost.it/2026/06/11/centri-migranti-albania-nuove-regole-europee/"
+      }
+    ]
+  },
+  {
+    "minuto": "0:53:45",
+    "cita": "España es el país. donde hay más inmigración irregular desde hace algunos años de toda Europa",
+    "afirmacion": "España es, desde hace algunos años, el país de toda Europa con más inmigración irregular.",
+    "veredicto": "enganoso",
+    "explicacion": "Las cifras de Frontex no respaldan que España lidere «desde hace algunos años». En 2025 las entradas irregulares en la UE cayeron un 26 % hasta casi 178.000 y, según los datos parciales de Frontex que recoge la prensa, la ruta del Mediterráneo central (Italia) fue la principal, mientras Interior contabilizó 35.935 entradas irregulares en España hasta el 15 de diciembre de 2025. En 2026 (enero-septiembre) la ruta del Mediterráneo oriental es la más transitada (unas 31.800 detecciones) frente a unas 25.400 en las dos rutas hacia España, aunque España es la única que sube (+26 %) y las entradas masivas en Ceuta del 30-31 de julio (unas 49.000 según el Gobierno) aún no figuran en Frontex y podrían cambiar el ranking de 2026. No hay estimación comparable de inmigrantes en situación irregular residentes por país.",
+    "confianza": "baja",
+    "fuentes": [
+      {
+        "titulo": "Frontex: 2025 en resumen (caída del 26 % hasta casi 178.000 cruces irregulares)",
+        "url": "https://www.frontex.europa.eu/2025-in-brief/"
+      },
+      {
+        "titulo": "Brussels Signal: la inmigración ilegal en España sube mientras el resto de la UE registra fuertes caídas (Frontex, enero-septiembre de 2026)",
+        "url": "https://brusselssignal.eu/2026/10/illegal-immigration-into-spain-rises-as-the-rest-of-the-eu-records-sharp-falls/"
+      },
+      {
+        "titulo": "TVN/EFE: más de 3.000 migrantes murieron tratando de llegar a España en 2025 (incluye 35.935 llegadas irregulares a España hasta el 15 de diciembre de 2025, dato de Interior)",
+        "url": "https://www.tvn-2.com/mundo/3-000-migrantes-murieron-tratando_1_2220427.amp.html"
+      }
+    ]
+  },
+  {
+    "minuto": "0:54:46",
+    "cita": "¿España necesita inmigración? Sí.",
+    "afirmacion": "España necesita inmigración.",
+    "veredicto": "mayormente_verdadero",
+    "explicacion": "Parte es valoración, pero las proyecciones oficiales del INE (2024-2074) muestran que los fallecimientos superan a los nacimientos durante todo el periodo y que todo el crecimiento de la población se debería «exclusivamente a la migración internacional»; con migración neta cero la población caería a unos 32 millones desde 49,8 millones. La población de 65 o más pasaría del 20,4 % al 30,5 %. Son escenarios, no predicciones, y cuánta inmigración se «necesita» depende de objetivos económicos y políticos.",
+    "confianza": "media",
+    "fuentes": [
+      {
+        "titulo": "INE: Proyecciones de Población 2024-2074",
+        "url": "https://www.ine.es/dyngs/Prensa/PROP20242074.htm"
+      }
+    ]
+  },
+  {
+    "minuto": "0:54:46",
+    "cita": "el 20% de la población española es de origen extranjero",
+    "afirmacion": "El 20 % de la población residente en España es de origen extranjero.",
+    "veredicto": "verdadero",
+    "explicacion": "Según el INE (Estadística Continua de Población, datos provisionales a 1 de julio de 2026), 10.291.807 de los 49.801.559 residentes nacieron en el extranjero, un 20,7 %. Con el criterio de nacionalidad extranjera la cifra es 7.437.543 personas (14,9 %). «Origen extranjero» se interpreta aquí como nacidos fuera de España; no incluye a los hijos de inmigrantes nacidos en España.",
+    "confianza": "alta",
+    "fuentes": [
+      {
+        "titulo": "INE: Estadística Continua de Población, 1 de julio de 2026",
+        "url": "https://www.ine.es/dyngs/Prensa/ECP2T26.htm"
+      },
+      {
+        "titulo": "Euronews: España roza los 50 millones, 1 de cada 5 nació en el extranjero (6 de agosto de 2026)",
+        "url": "https://es.euronews.com/2026/08/06/espana-50-millones-habitantes-1-cada-5-nacio-extranjero"
+      }
+    ]
+  },
+  {
+    "minuto": "0:54:46",
+    "cita": "aproximadamente el censo de la ciudad de Lleida más del 30% son inmigrantes",
+    "afirmacion": "Más del 30 % de los empadronados de la ciudad de Lleida son inmigrantes.",
+    "veredicto": "enganoso",
+    "explicacion": "Con el mismo criterio que usa Feijóo en ese párrafo (origen extranjero = nacidos en el extranjero), Idescat, a partir del Censo anual de población del INE, da para el municipio de Lleida 40.916 nacidos en el extranjero sobre 147.369 habitantes a 1 de enero de 2025: un 27,8 %. Es una proporción alta y cercana a la que dice, pero no supera el 30 %. Con el criterio de nacionalidad extranjera la cifra es 34.274 personas (23,3 %). Feijóo matiza «aproximadamente», pero el umbral «más del 30 %» no se cumple y no hay dato de 2026.",
+    "confianza": "alta",
+    "fuentes": [
+      {
+        "titulo": "Idescat (API El municipio en cifras, Lleida 251207): población nacida en el extranjero 40.916 y con nacionalidad extranjera 34.274, a 1 de enero de 2025 (Censo anual de población, INE)",
+        "url": "https://api.idescat.cat/emex/v1/dades.json?id=251207&lang=es"
+      },
+      {
+        "titulo": "Idescat: población a 1 de enero, total y extranjera, municipio de Lleida (147.369 habitantes en 2025; 34.274 extranjeros, 23,26 %)",
+        "url": "https://www.idescat.cat/poblacioestrangera/?geo=mun%3A251207&nac=a&b=0"
+      }
+    ]
+  },
+  {
+    "minuto": "0:55:47",
+    "cita": "que ya están nacionalizados pero hay otro 14% que persiste que no se ha nacionalizado",
+    "afirmacion": "Del 20 % de población de origen extranjero, un 6 % ya está nacionalizado y un 14 % no.",
+    "veredicto": "mayormente_verdadero",
+    "explicacion": "Según el INE (1 de julio de 2026), de los 10,29 millones de nacidos en el extranjero, 3.370.854 tienen nacionalidad española (6,8 % de la población total) y unos 6,9 millones conservan nacionalidad extranjera (unos 13,9 %). El reparto 6 %/14 % es, pues, aproximadamente correcto, con un redondeo a la baja del primer grupo, que además incluye a españoles nacidos fuera por ser hijos de emigrantes y no solo a nacionalizados.",
+    "confianza": "media",
+    "fuentes": [
+      {
+        "titulo": "INE: Estadística Continua de Población, 1 de julio de 2026",
+        "url": "https://www.ine.es/dyngs/Prensa/ECP2T26.htm"
+      }
+    ]
+  },
+  {
+    "minuto": "0:55:47",
+    "cita": "se ha incrementado el número de personas que viven en España de origen extranjero un 60%",
+    "afirmacion": "Desde que llegó Sánchez (2018) el número de personas de origen extranjero que viven en España ha aumentado un 60 %, de unos 6 millones a más de 10 millones.",
+    "veredicto": "verdadero",
+    "explicacion": "Con el criterio de nacidos en el extranjero, el INE contaba algo más de 6,2 millones a principios de 2018 (13,3 % de la población) y 10.291.807 a 1 de julio de 2026: un aumento de en torno al 60-66 %, según la base exacta de 2018. «Unos 6 millones» y «más de 10» son cifras correctas; «un 60 %» es un redondeo ligeramente a la baja. La conclusión sobre «falta de política migratoria» es opinión y no se evalúa.",
+    "confianza": "media",
+    "fuentes": [
+      {
+        "titulo": "INE: Estadística Continua de Población, 1 de julio de 2026",
+        "url": "https://www.ine.es/dyngs/Prensa/ECP2T26.htm"
+      },
+      {
+        "titulo": "CIDOB: población extranjera residente en España (nacidos en el extranjero: más de 6,2 millones, 13,3 %, datos INE de 2018)",
+        "url": "https://www.cidob.org/publicaciones/poblacion-extranjera-residente-espana-evolucion-caracteristicas-integracion-economica"
+      }
+    ]
+  },
+  {
+    "minuto": "0:55:47",
+    "cita": "uno de cada tres inmigrantes que llegan a un cayucón a costa española, uno de cada tres no llega",
+    "afirmacion": "Uno de cada tres inmigrantes que salen en cayuco hacia las costas españolas muere en el mar.",
+    "veredicto": "falso",
+    "explicacion": "Ninguna fuente respalda un tercio. Caminando Fronteras, la ONG que ofrece las cifras más altas, calcula para enero-mayo de 2026 una muerte por cada seis personas que consiguen llegar (unas 17-21 por cada 100 llegadas; 635 víctimas en la ruta atlántica) y para 2025 unas 3.090 víctimas frente a 35.935 llegadas hasta el 15 de diciembre (en torno a 8-9 por cada 100, sin ajustar los intentos fallidos). Las cifras de la OIM son más bajas (unas 1.200 muertes en la ruta atlántica en 2025). Aun con el cálculo más pesimista, la proporción es aproximadamente la mitad de la que dice Feijóo.",
+    "confianza": "media",
+    "fuentes": [
+      {
+        "titulo": "Ara: rutas migratorias letales, 1.317 muertos intentando llegar a España en cinco meses (Caminando Fronteras, 10 de junio de 2026: una persona por cada seis que llegan)",
+        "url": "https://es.ara.cat/sociedad/inmigracion/rutas-migratorias-letales-1-317-muertos-intentando-llegar-espana-cinco-meses_1_5765186.html"
+      },
+      {
+        "titulo": "TVN/EFE: más de 3.000 migrantes murieron tratando de llegar a España en 2025, según una ONG (35.935 llegadas hasta el 15 de diciembre)",
+        "url": "https://www.tvn-2.com/mundo/3-000-migrantes-murieron-tratando_1_2220427.amp.html"
+      }
+    ]
+  },
+  {
+    "minuto": "0:55:47",
+    "cita": "España es el país único de la Unión Europea que está en este momento regularizando de forma indiscriminada a 1,3 millones de inmigrantes",
+    "afirmacion": "España es el único país de la UE que está regularizando de forma indiscriminada a 1,3 millones de inmigrantes.",
+    "veredicto": "enganoso",
+    "explicacion": "Hubo una regularización extraordinaria real (Real Decreto 316/2026, solicitudes del 16 de abril al 30 de junio de 2026), pero las cifras y la descripción no encajan: se presentaron 1.174.978 solicitudes (con posibles duplicados) y a 23 de julio unas 822.000 personas tenían un permiso preliminar, no 1,3 millones. Tampoco es «indiscriminada»: exige estar en España antes del 1 de enero de 2026 con al menos cinco meses de residencia, antecedentes penales limpios, no tener prohibición de entrada ni suponer amenaza para el orden público, y acreditar trabajo, vínculos familiares o vulnerabilidad. Y no es único en la UE: Italia (2002, 2020) y Grecia (2023) han hecho regularizaciones, aunque a fecha de hoy no consta otra de esta escala en otro Estado miembro.",
+    "confianza": "media",
+    "fuentes": [
+      {
+        "titulo": "Diario de León: 822.000 inmigrantes ya cuentan con permiso de trabajo tras la regularización extraordinaria (1.174.978 solicitudes, 23 de julio de 2026)",
+        "url": "https://www.diariodeleon.es/economia/260723/2092107/822-000-inmigrantes-cuentan-permiso-trabajo-despues-haberse-acogido-regularizacion-extraordinaria.html"
+      },
+      {
+        "titulo": "Diari de Tarragona: el BOE publica el real decreto de regularización, requisitos y plazos",
+        "url": "https://www.diaridetarragona.com/espana/257246/boe-publica-real-decreto-aprueba-regularizacion-inmigrantes-requisitos-plazos.html"
+      },
+      {
+        "titulo": "elDiario.es: de Italia a Alemania, cómo buena parte de Europa ha regularizado a migrantes (18 de agosto de 2026)",
+        "url": "https://www.eldiario.es/1_cd4426"
+      }
+    ]
+  }
+]

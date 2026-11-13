@@ -28,7 +28,7 @@ Todo está aquí para que cualquiera pueda revisarlo, discutirlo y corregirlo.
 | Invitado | Programa | Estado |
 |---|---|---|
 | Pedro Sánchez | The Wild Project #393 | Verificada |
-| Alberto Núñez Feijóo | The Wild Project #392 | En curso |
+| Alberto Núñez Feijóo | The Wild Project #392 | Verificada |
 | Ada Colau | The Wild Project #391 | En curso |
 
 ## API abierta

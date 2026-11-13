@@ -1,0 +1,340 @@
+[
+  {
+    "minuto": "0:56:55",
+    "cita": "esa crema era de un herpes zoster",
+    "afirmacion": "La crema que Feijóo lleva en una de las fotos con Marcial Dorado (verano de 1995) era para tratar un herpes zóster y evitar que le diera el sol directamente.",
+    "veredicto": "no_verificable",
+    "explicacion": "Es una explicación personal sobre un episodio médico de 1995 que no consta en ninguna fuente independiente: ni hemeroteca, ni verificadores, ni historial clínico público. La prensa que ha recogido la afirmación tras la entrevista (13 de noviembre de 2026) se limita a reproducirla sin contrastarla. No hay base para darla por cierta ni por falsa.",
+    "confianza": "alta",
+    "fuentes": [
+      {
+        "titulo": "Libertad Digital: El desconocido detalle de la foto de Feijóo con Marcial Dorado que ha desvelado ante Jordi Wild (13/11/2026)",
+        "url": "https://libertaddigital.com/espana/politica/2026-11-13/el-desconocido-detalle-de-la-foto-de-feijoo-con-marcial-dorado-que-ha-desvelado-ante-jordi-wild-7491023"
+      },
+      {
+        "titulo": "Maldita.es: Las fotografías de Feijóo y Marcial Dorado, cuáles son montajes y cuáles sí se han publicado",
+        "url": "https://maldita.es/malditobulo/20241029/fotografias-feijoo-dorado-montajes-falsas/"
+      }
+    ]
+  },
+  {
+    "minuto": "0:57:57",
+    "cita": "Comparecí en una rueda de prensa en el Parlamento, comparecí en el Pleno del Parlamento",
+    "afirmacion": "Tras publicarse las fotos con Marcial Dorado en 2013, Feijóo dio una rueda de prensa en el Parlamento de Galicia y compareció en el Pleno de la cámara para dar explicaciones.",
+    "veredicto": "verdadero",
+    "explicacion": "El País publicó las fotos (tomadas en 1995) a finales de marzo de 2013. Feijóo dio una rueda de prensa en el Parlamento gallego el lunes 1 de abril y compareció en el Pleno, en una sesión de abril de 2013 (un teletipo de EFE sobre su intervención y sus disculpas es del 10 de abril de 2013).",
+    "confianza": "alta",
+    "fuentes": [
+      {
+        "titulo": "elDiario.es: La oposición arrastra a Feijóo a comparecer sobre las fotos con el narcotraficante (2/4/2013)",
+        "url": "https://www.eldiario.es/galicia/oposicion-arrastra-feijoo-comparecer-narcotraficante_1_5626221.html"
+      },
+      {
+        "titulo": "elDiario.es (EFE): Feijóo pide disculpas por el error de las fotos y cree que la infamia acabó (10/4/2013)",
+        "url": "https://www.eldiario.es/politica/feijoo-disculpas-error-infamia-acabo_1_5635076.html"
+      },
+      {
+        "titulo": "Reuters/LegalToday: Núñez Feijóo descarta dimitir por unas fotos antiguas con un narco (2/4/2013)",
+        "url": "https://www.legaltoday.com/rincon-de-reuters/nunez-feijoo-descarta-dimitir-por-unas-fotos-antiguas-con-un-narco-2013-04-02/"
+      }
+    ]
+  },
+  {
+    "minuto": "0:57:57",
+    "cita": "yo he pedido comparecer en el Parlamento, que es donde tenía que comparecer y dar explicaciones a petición propia",
+    "afirmacion": "Feijóo pidió por iniciativa propia comparecer en el Parlamento de Galicia para explicar las fotos con Marcial Dorado.",
+    "veredicto": "enganoso",
+    "explicacion": "La rueda de prensa del 1 de abril de 2013 fue iniciativa suya, pero la comparecencia en el Pleno no: según elDiario.es (2/4/2013), el PP se resistió a la petición de PSdeG, BNG y AGE y solo aceptó tras la presión de la oposición y a cambio de condiciones (retirar las preguntas parlamentarias y suspender la sesión de control). El socialista Losada resumió que comparecía «cogido por la oreja». No he podido consultar el registro parlamentario para descartar que la comparecencia se tramitara formalmente como «a petición propia».",
+    "confianza": "media",
+    "fuentes": [
+      {
+        "titulo": "elDiario.es: La oposición arrastra a Feijóo a comparecer sobre las fotos con el narcotraficante (2/4/2013)",
+        "url": "https://www.eldiario.es/galicia/oposicion-arrastra-feijoo-comparecer-narcotraficante_1_5626221.html"
+      }
+    ]
+  },
+  {
+    "minuto": "0:57:57",
+    "cita": "He conocido a esta persona en un contexto político de un ayuntamiento, concretamente a la Villa de Arousa, que era donde vivía",
+    "afirmacion": "Feijóo conoció a Marcial Dorado en un contexto político del Ayuntamiento de A Illa de Arousa, donde vivía Dorado.",
+    "veredicto": "no_verificable",
+    "explicacion": "Dorado reside en A Illa de Arousa, pero ninguna fuente consultada sitúa el primer encuentro en un contexto municipal. Lo que recogen la prensa y el propio Feijóo (2013) es que lo conoció hacia 1994 a través de un compañero de la Xunta, Manuel Cruz, chófer de la Consellería de Sanidade, donde Feijóo era alto cargo. En el mismo tramo de la entrevista Feijóo da las dos versiones, y no hay prueba independiente de la primera.",
+    "confianza": "media",
+    "fuentes": [
+      {
+        "titulo": "Reuters/LegalToday: Núñez Feijóo descarta dimitir por unas fotos antiguas con un narco (2/4/2013)",
+        "url": "https://www.legaltoday.com/rincon-de-reuters/nunez-feijoo-descarta-dimitir-por-unas-fotos-antiguas-con-un-narco-2013-04-02/"
+      },
+      {
+        "titulo": "elDiario.es: Feijóo dice que no leyó el número de Sanidade de Galicia sobre Dorado (19/7/2023)",
+        "url": "https://www.eldiario.es/galicia/noticias-marcial-dorado-feijoo-dice-no-leyo-numero-sanidad-galicia_1_10392267.html"
+      },
+      {
+        "titulo": "El Español: El origen de las fotos de Feijóo con el narco Marcial Dorado (19/7/2023)",
+        "url": "https://elespanol.com/espana/politica/20230719/origen-fotos-feijoo-narco-marcial-dorado/780172272_0.amp.html"
+      }
+    ]
+  },
+  {
+    "minuto": "0:59:00",
+    "cita": "Lo que había es que se había dedicado en su momento y había tenido contrabando de tabaco",
+    "afirmacion": "Cuando Feijóo conoció a Marcial Dorado (hacia 1994), Dorado no tenía nada que ver con el narcotráfico: solo había tenido contrabando de tabaco.",
+    "veredicto": "enganoso",
+    "explicacion": "Dorado no tenía condena por narcotráfico en 1994 (la primera llegó en 2009), y el contrabando de tabaco sí está acreditado. Pero la versión omite que Dorado fue detenido en la Operación Nécora (1990, contra el narcotráfico gallego) y puesto en libertad sin cargos días después, y que la hemeroteca anterior a su relación con Feijóo ya lo vinculaba al contrabando (detenido en 1984, procesado por el alijo de Santurtzi de 1992). Feijóo admitió en la COPE (julio de 2023) que era contrabandista al conocerlo, frente a su versión de 2013 de que «no sabía nada» de su pasado.",
+    "confianza": "media",
+    "fuentes": [
+      {
+        "titulo": "El Salto: Grande-Marlaska desestimó un recurso de Fiscalía contrario a la absolución del narco relacionado con Feijóo",
+        "url": "https://www.elsaltodiario.com/corrupcion/grande-marlaska-desestimo-recurso-fiscalia-absolucion-narco-relacionado-feijoo"
+      },
+      {
+        "titulo": "La Marea: Feijóo reconoce que Marcial Dorado era contrabandista cuando se conocieron (21/7/2023)",
+        "url": "https://www.lamarea.com/2023/07/21/feijoo-reconoce-que-marcial-dorado-era-contrabandista-cuando-se-conocieron"
+      },
+      {
+        "titulo": "elDiario.es: Feijóo dice que no leyó el número de Sanidade de Galicia sobre Dorado (19/7/2023)",
+        "url": "https://www.eldiario.es/galicia/noticias-marcial-dorado-feijoo-dice-no-leyo-numero-sanidad-galicia_1_10392267.html"
+      },
+      {
+        "titulo": "Público: Quién es Marcial Dorado, el narcotraficante amigo de Feijóo",
+        "url": "https://www.publico.es/politica/marcial-dorado-narcotraficante-amigo-feijoo.html"
+      }
+    ]
+  },
+  {
+    "minuto": "0:59:00",
+    "cita": "a este señor se le imputa asuntos de narcotráfico, pues no sé si tres o cuatro años después de que yo dejase de tener una relación",
+    "afirmacion": "A Marcial Dorado se le imputaron asuntos de narcotráfico tres o cuatro años después de que Feijóo dejase de tener relación con él.",
+    "veredicto": "mayormente_verdadero",
+    "explicacion": "Feijóo sitúa el fin de la relación en 1997-1998. El juez Vázquez Taín abrió la investigación por narcotráfico contra Dorado en 2001 y lo envió a prisión en 2003; la condena de la Audiencia Nacional (10 años) llegó el 16 de noviembre de 2009. Las fechas encajan con su cómputo, pero este es discutido: Taín constató llamadas telefónicas entre ambos entre 2001 y 2003 (que consideró irrelevantes, de ocio o felicitaciones navideñas) y Dorado afirma que hablaron en 2001. No he podido fijar la fecha exacta de la imputación formal.",
+    "confianza": "media",
+    "fuentes": [
+      {
+        "titulo": "elDiario.es: Taín revela que Feijóo habló con el narco (2013)",
+        "url": "https://www.eldiario.es/galicia/tain-revela-feijoo-hablo-narco_1_5627704.amp.html"
+      },
+      {
+        "titulo": "Público: Quién es Marcial Dorado, el narcotraficante amigo de Feijóo",
+        "url": "https://www.publico.es/politica/marcial-dorado-narcotraficante-amigo-feijoo.html"
+      },
+      {
+        "titulo": "infoLibre: Un juez revela que Feijóo y Dorado seguían hablando por teléfono años después de su ruptura",
+        "url": "https://www.infolibre.es/politica/juez-revela-feijoo-dorado-seguian-hablando-telefono-anos-despues-ruptura_1_1087733.html"
+      }
+    ]
+  },
+  {
+    "minuto": "0:59:00",
+    "cita": "Este señor iba a mítines de otros partidos políticos. También hay fotos de otros partidos políticos, de líderes del partido.",
+    "afirmacion": "Marcial Dorado asistía a mítines de otros partidos políticos y existen fotos suyas con líderes de otros partidos.",
+    "veredicto": "no_verificable",
+    "explicacion": "No he encontrado ninguna fuente que documente fotos de Dorado con líderes de otros partidos ni su asistencia a mítines ajenos al PP; las imágenes publicadas y verificadas por Maldita son las de Feijóo con Dorado, y varias que circulan son montajes. Lo único próximo son afirmaciones del propio Dorado (2025) sobre donaciones a través de sus empresas y contactos con dirigentes del PSOE, no probadas, y la controversia sobre contratos de la Xunta a sus empresas bajo el bipartito.",
+    "confianza": "baja",
+    "fuentes": [
+      {
+        "titulo": "Maldita.es: Las fotografías de Feijóo y Marcial Dorado, cuáles son montajes y cuáles sí se han publicado",
+        "url": "https://maldita.es/malditobulo/20241029/fotografias-feijoo-dorado-montajes-falsas/"
+      },
+      {
+        "titulo": "ARA: The drug trafficker pictured with Feijóo claims the PSOE offered him money to drop a bomb against the PP leader",
+        "url": "https://en.ara.cat/politics/the-drug-trafficker-pictured-with-feijoo-claims-the-psoe-offered-him-money-to-drop-bomb-against-the-pp-leader_1_5450376.html"
+      }
+    ]
+  },
+  {
+    "minuto": "1:00:01",
+    "cita": "Si en 30 años que llevo en esto",
+    "afirmacion": "Feijóo lleva unos 30 años en política.",
+    "veredicto": "verdadero",
+    "explicacion": "Feijóo ocupa cargos públicos y políticos desde julio de 1991, cuando fue nombrado secretario general técnico de la Consellería de Agricultura de la Xunta; son unos 35 años en 2026, por lo que «30 años» es una cifra prudente.",
+    "confianza": "alta",
+    "fuentes": [
+      {
+        "titulo": "Wikipedia: Alberto Núñez Feijóo (trayectoria de cargos)",
+        "url": "https://es.wikipedia.org/wiki/Alberto_N%C3%BA%C3%B1ez_Feij%C3%B3o"
+      }
+    ]
+  },
+  {
+    "minuto": "1:00:01",
+    "cita": "me la presentó un compañero de la Junta de Galicia",
+    "afirmacion": "A Marcial Dorado se lo presentó a Feijóo un compañero de la Xunta de Galicia que era amigo de Dorado.",
+    "veredicto": "mayormente_verdadero",
+    "explicacion": "Es la versión que Feijóo ya dio en 2013 y que la prensa corrobora: se lo presentó Manuel Cruz, chófer de la Consellería de Sanidade (donde Feijóo era alto cargo) y persona de confianza de Dorado (Público lo describe como su testaferro), fallecido en 1999. «Compañero» es una forma generosa de describir a un conductor de la consejería, y las fuentes difieren en el año exacto (1993-1994).",
+    "confianza": "media",
+    "fuentes": [
+      {
+        "titulo": "elDiario.es: Feijóo dice que no leyó el número de Sanidade de Galicia sobre Dorado (19/7/2023)",
+        "url": "https://www.eldiario.es/galicia/noticias-marcial-dorado-feijoo-dice-no-leyo-numero-sanidad-galicia_1_10392267.html"
+      },
+      {
+        "titulo": "Reuters/LegalToday: Núñez Feijóo descarta dimitir por unas fotos antiguas con un narco (2/4/2013)",
+        "url": "https://www.legaltoday.com/rincon-de-reuters/nunez-feijoo-descarta-dimitir-por-unas-fotos-antiguas-con-un-narco-2013-04-02/"
+      },
+      {
+        "titulo": "elDiario.es: Marcial Dorado en el pleno del Congreso, los años de amistad entre el narco y Núñez Feijóo siempre vuelven",
+        "url": "https://www.eldiario.es/galicia/marcial-dorado-pleno-congreso-anos-amistad-narco-nunez-feijoo-vuelven_1_10021515.amp.html"
+      }
+    ]
+  },
+  {
+    "minuto": "1:00:01",
+    "cita": "Y cuando observo que tenía todavía un juicio pendiente por contrabando, pues automáticamente dije",
+    "afirmacion": "Feijóo cortó la relación con Marcial Dorado de forma inmediata al saber que tenía un juicio pendiente por contrabando.",
+    "veredicto": "enganoso",
+    "explicacion": "Dorado tenía en efecto un proceso por contrabando (alijo de Santurtzi de 1992, juzgado en 1999) y Feijóo sitúa la ruptura en 1997. Pero su propio relato ha cambiado (en 1999 coincidieron en el entierro de Manuel Cruz, y primero dijo que fue la última vez), y el juez Taín constató llamadas entre ambos entre 2001 y 2003 (que calificó de intrascendentes) y Dorado asegura que hablaron en 2001. La ruptura limpia e inmediata no está respaldada.",
+    "confianza": "media",
+    "fuentes": [
+      {
+        "titulo": "elDiario.es: Taín revela que Feijóo habló con el narco (2013)",
+        "url": "https://www.eldiario.es/galicia/tain-revela-feijoo-hablo-narco_1_5627704.amp.html"
+      },
+      {
+        "titulo": "elDiario.es: Feijóo dice que no leyó el número de Sanidade de Galicia sobre Dorado (19/7/2023)",
+        "url": "https://www.eldiario.es/galicia/noticias-marcial-dorado-feijoo-dice-no-leyo-numero-sanidad-galicia_1_10392267.html"
+      },
+      {
+        "titulo": "El Economista: El juez Taín asegura que Feijóo y Dorado no se vieron entre 2001 y 2003",
+        "url": "https://www.eleconomista.es/legislacion/noticias/4720869/04/13/El-juez-Tain-asegura-que-Feijoo-y-Dorado-no-se-vieron-entre-2001-y-2003.html"
+      },
+      {
+        "titulo": "elDiario.es: Marcial Dorado en el pleno del Congreso, los años de amistad entre el narco y Núñez Feijóo siempre vuelven",
+        "url": "https://www.eldiario.es/galicia/marcial-dorado-pleno-congreso-anos-amistad-narco-nunez-feijoo-vuelven_1_10021515.amp.html"
+      }
+    ]
+  },
+  {
+    "minuto": "1:01:07",
+    "cita": "Por cierto, después creo que fue absuelto por ese juicio",
+    "afirmacion": "Marcial Dorado fue absuelto en ese juicio por contrabando.",
+    "veredicto": "verdadero",
+    "explicacion": "El juzgado de Barakaldo absolvió a Dorado en 1999 del caso del alijo de cinco millones de cajetillas de tabaco incautado en Santurtzi en 1992, y en 2000 la Audiencia Provincial de Bizkaia (ponente Fernando Grande-Marlaska) desestimó el recurso de la Fiscalía y la Abogacía del Estado. Dorado sí fue condenado en 2005 por cohecho (intentar sobornar a dos guardias civiles en 1997-1998 para introducir tabaco), una condena que Feijóo no menciona.",
+    "confianza": "alta",
+    "fuentes": [
+      {
+        "titulo": "El Salto: Grande-Marlaska desestimó un recurso de Fiscalía contrario a la absolución del narco relacionado con Feijóo",
+        "url": "https://www.elsaltodiario.com/corrupcion/grande-marlaska-desestimo-recurso-fiscalia-absolucion-narco-relacionado-feijoo"
+      },
+      {
+        "titulo": "Público: Quién es Marcial Dorado, el narcotraficante amigo de Feijóo",
+        "url": "https://www.publico.es/politica/marcial-dorado-narcotraficante-amigo-feijoo.html"
+      }
+    ]
+  },
+  {
+    "minuto": "1:01:07",
+    "cita": "yo lo que no tengo fotos es con prostitutas financiadas con fondos públicos",
+    "afirmacion": "Frente a las fotos de Feijóo con Dorado, Feijóo insinúa que en el entorno de Pedro Sánchez (caso Ábalos/Koldo) hubo prostitutas financiadas con fondos públicos.",
+    "veredicto": "enganoso",
+    "explicacion": "La sentencia del Tribunal Supremo del 22 de junio de 2026 condena a Ábalos (24 años y 3 meses), Koldo García y Aldama por organización criminal, cohecho, tráfico de influencias y malversación; da por probados los sueldos públicos sin trabajo en Ineco y Tragsatec de la expareja de Ábalos y el pago por Aldama de un piso, pero la información disponible no acredita que se pagaran prostitutas con dinero público. Las fiestas con prostitutas pagadas por un constructor (Levantina) son informaciones periodísticas con fuentes anónimas, sin confirmación judicial. Ni Sánchez ni el PSOE están condenados ni imputados por ello, y no hay «fotos» de Sánchez en esa situación.",
+    "confianza": "media",
+    "fuentes": [
+      {
+        "titulo": "The Objective: Las claves de la sentencia a Ábalos, Koldo y Aldama (22/6/2026)",
+        "url": "https://theobjective.com/espana/tribunales/2026-06-22/claves-sentencia-abalos-koldo-aldama/"
+      },
+      {
+        "titulo": "The Objective: El constructor más beneficiado en el caso Koldo pagó a Ábalos fiestas con prostitutas (6/3/2026)",
+        "url": "https://theobjective.com/espana/2026-03-06/constructor-pagaba-fiestas-abalos-prostitutas/"
+      }
+    ]
+  },
+  {
+    "minuto": "1:01:07",
+    "cita": "Oiga, esto fue en el 13. Volvió a haber elecciones en el 16. Mayoría absoluta ampliada. Volvió a haber elecciones en el 20. Mayoría absoluta ampliada.",
+    "afirmacion": "Tras explicar las fotos en 2013, Feijóo volvió a ganar las elecciones gallegas de 2016 y de 2020 con mayoría absoluta ampliada.",
+    "veredicto": "mayormente_verdadero",
+    "explicacion": "Obtuvo mayoría absoluta en ambas: 41 de 75 escaños el 25 de septiembre de 2016 (los mismos que en 2012, pero con el 47,6 % del voto frente al 45,8 %) y 42 escaños con el 47,96 % el 12 de julio de 2020. «Ampliada» es exacto en votos porcentuales en las dos citas y en escaños solo en 2020; en 2016 el número de escaños no cambió.",
+    "confianza": "alta",
+    "fuentes": [
+      {
+        "titulo": "Wikipedia: Elecciones al Parlamento de Galicia de 2016",
+        "url": "https://es.wikipedia.org/wiki/Elecciones_al_Parlamento_de_Galicia_de_2016"
+      },
+      {
+        "titulo": "Wikipedia: Elecciones al Parlamento de Galicia de 2020",
+        "url": "https://es.wikipedia.org/wiki/Elecciones_al_Parlamento_de_Galicia_de_2020"
+      }
+    ]
+  },
+  {
+    "minuto": "1:01:07",
+    "cita": "que yo no lo estoy justificando, que es un delito fiscal",
+    "afirmacion": "El contrabando de tabaco es un delito fiscal.",
+    "veredicto": "mayormente_verdadero",
+    "explicacion": "El contrabando de tabaco es delito en España cuando supera los umbrales de la Ley Orgánica 12/1995 de Represión del Contrabando, y protege sobre todo los intereses de la Hacienda pública (impuestos especiales y aduanas). En términos jurídicos estrictos, el «delito fiscal» es el de defraudación tributaria del Código Penal y el contrabando es un delito distinto, de naturaleza aduanera, aunque se suele describir como delito contra la Hacienda. No he podido consultar el texto del BOE; la calificación se apoya en fuentes de referencia generales.",
+    "confianza": "media",
+    "fuentes": [
+      {
+        "titulo": "Wikipedia: Contrabando",
+        "url": "https://es.wikipedia.org/wiki/Contrabando"
+      }
+    ]
+  },
+  {
+    "minuto": "1:02:10",
+    "cita": "Hay una pregunta que todavía no ha contestado. ¿Es verdad que las primarias de Sánchez se financiaron con el dinero de la prostitución?",
+    "afirmacion": "Las primarias de Pedro Sánchez pudieron financiarse con dinero procedente de la prostitución (de las saunas de su suegro), y Sánchez no ha contestado a esa pregunta.",
+    "veredicto": "no_verificable",
+    "explicacion": "Se formula como pregunta y no he encontrado ninguna prueba ni informe oficial que vincule la financiación de las primarias socialistas con negocios de prostitución; la hipótesis solo aparece en columnas de opinión. Tampoco hay constancia en las fuentes consultadas de que Sánchez haya sido preguntado formalmente por ello. Al ser una insinuación sin base acreditada, no procede calificarla como verdadera ni como falsa.",
+    "confianza": "baja",
+    "fuentes": [
+      {
+        "titulo": "Cuatro: Los negocios del padre de Begoña Gómez y su relación con los prostíbulos que le echó en cara el PP a Sánchez (10/7/2025)",
+        "url": "https://www.cuatro.com/noticias/espana/20250710/negocios-padre-begona-gomez-relacion-prostibulos-pp_18_016104956.html"
+      },
+      {
+        "titulo": "Newtral: Nos preguntáis por las saunas del suegro de Sánchez en Madrid (15/7/2025)",
+        "url": "https://www.newtral.es/saunas-suegro-sanchez/20250715/"
+      }
+    ]
+  },
+  {
+    "minuto": "1:02:10",
+    "cita": "el señor Sánchez fue el que empezó a utilizar esas fotos",
+    "afirmacion": "Pedro Sánchez fue quien empezó a utilizar las fotos de Feijóo con Marcial Dorado contra él.",
+    "veredicto": "enganoso",
+    "explicacion": "Las fotos las publicó El País en marzo de 2013 y la oposición gallega (PSdeG, BNG) las usó de inmediato; Sánchez no era entonces líder del PSOE. Sánchez aludió a la relación en el Congreso en marzo de 2023 («cuando yo me subo a un barco lo primero que hago es comprobar quién es el patrón») y el PSOE la usó en la campaña del 23-J, tras haber evitado hacerlo hasta entonces según El Español. Puede ser cierto que fue el primero del Gobierno en explotarlas, pero «empezó» ignora diez años de uso previo.",
+    "confianza": "media",
+    "fuentes": [
+      {
+        "titulo": "elDiario.es: Marcial Dorado en el pleno del Congreso, los años de amistad entre el narco y Núñez Feijóo siempre vuelven (marzo de 2023)",
+        "url": "https://www.eldiario.es/galicia/marcial-dorado-pleno-congreso-anos-amistad-narco-nunez-feijoo-vuelven_1_10021515.amp.html"
+      },
+      {
+        "titulo": "El Español: El PSOE desempolva una foto de Feijóo con un narco tomada hace 28 años (18/7/2023)",
+        "url": "https://www.elespanol.com/espana/politica/20230718/psoe-desempolva-foto-feijoo-narco-campana-descredito-lider-pp/779922215_0.html"
+      },
+      {
+        "titulo": "elDiario.es: La oposición arrastra a Feijóo a comparecer sobre las fotos con el narcotraficante (2/4/2013)",
+        "url": "https://www.eldiario.es/galicia/oposicion-arrastra-feijoo-comparecer-narcotraficante_1_5626221.html"
+      }
+    ]
+  },
+  {
+    "minuto": "1:02:10",
+    "cita": "Si yo digo que voy a derogar la prostitución y resulta que mi familia ha vivido y el patrimonio",
+    "afirmacion": "Sánchez prometió abolir la prostitución mientras su familia política (el suegro, con saunas) ha vivido o formado su patrimonio de negocios de prostitución.",
+    "veredicto": "enganoso",
+    "explicacion": "Es cierto que Sánchez prometió «avanzar abolindo la prostitución» en el congreso federal del PSOE en Valencia (17 de octubre de 2021) y que la ley sigue sin aprobarse. También hay documentos que vinculan a su suegro, Sabiniano Gómez (fallecido), con saunas de Chueca (Madrid) cerradas en 2012, y un prostíbulo en Segovia de un hermano suyo. Pero según Newtral esos negocios fueron considerados «actividades profesionales o comerciales lícitas» en un auto judicial, no hay hecho probado de que Sánchez viva o se haya enriquecido con ellos, y la frase está formulada como insinuación condicional y sin terminar.",
+    "confianza": "media",
+    "fuentes": [
+      {
+        "titulo": "Il Post: Pedro Sánchez promete abolir la prostitución (18/10/2021)",
+        "url": "https://www.ilpost.it/2021/10/18/pedro-sanchez-prostituzione/"
+      },
+      {
+        "titulo": "Cuatro: Los negocios del padre de Begoña Gómez y su relación con los prostíbulos que le echó en cara el PP a Sánchez (10/7/2025)",
+        "url": "https://www.cuatro.com/noticias/espana/20250710/negocios-padre-begona-gomez-relacion-prostibulos-pp_18_016104956.html"
+      },
+      {
+        "titulo": "Newtral: Nos preguntáis por las saunas del suegro de Sánchez en Madrid (15/7/2025)",
+        "url": "https://www.newtral.es/saunas-suegro-sanchez/20250715/"
+      },
+      {
+        "titulo": "El Español: Años después, el PSOE dice trabajar en la ley de prostitución (27/7/2026)",
+        "url": "https://www.elespanol.com/espana/20260727/anos-despues-psoe-dice-trabajar-ley-prostitucion-feministas-no-creen-amigos-sanchez-interesa/1003744331442_0.html"
+      }
+    ]
+  }
+]

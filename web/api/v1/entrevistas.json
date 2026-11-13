@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-13T20:14:14+01:00",
+ "generado": "2026-11-13T20:17:02+01:00",
  "aviso": "Verificación asistida por IA, sin revisión de un equipo de periodistas. «falso» no implica intención de mentir. Contrasta siempre con las fuentes enlazadas.",
  "veredictos": {
   "verdadero": "Los datos lo confirman.",
@@ -187,6 +187,185 @@
       "mayormente_verdadero": 0,
       "verdadero": 1,
       "no_verificable": 0
+     }
+    }
+   ]
+  },
+  {
+   "slug": "feijoo",
+   "invitado": "Alberto Núñez Feijóo",
+   "partido": "PP",
+   "programa": "The Wild Project #392",
+   "fecha": "13 nov 2026",
+   "duracion": "1 h 28 min",
+   "video_url": "https://www.youtube.com/watch?v=1YlGArMx_N4",
+   "web_url": "https://verificacion-podcast.vercel.app/feijoo",
+   "afirmaciones_url": "https://verificacion-podcast.vercel.app/api/v1/feijoo.json",
+   "transcripcion_url": "https://verificacion-podcast.vercel.app/api/v1/feijoo/transcripcion.json",
+   "transcripcion_txt_url": "https://verificacion-podcast.vercel.app/api/v1/feijoo/transcripcion.txt",
+   "total_afirmaciones": 168,
+   "por_veredicto": {
+    "falso": 4,
+    "enganoso": 27,
+    "mayormente_verdadero": 55,
+    "verdadero": 48,
+    "no_verificable": 34
+   },
+   "temas": [
+    {
+     "n": 1,
+     "titulo": "Formato de las entrevistas electorales y presentación de Alberto Núñez Feijóo",
+     "inicio_s": 0,
+     "total": 1,
+     "por_veredicto": {
+      "falso": 0,
+      "enganoso": 0,
+      "mayormente_verdadero": 1,
+      "verdadero": 0,
+      "no_verificable": 0
+     }
+    },
+    {
+     "n": 2,
+     "titulo": "Vox, polarización y un posible gobierno de coalición",
+     "inicio_s": 273,
+     "total": 20,
+     "por_veredicto": {
+      "falso": 0,
+      "enganoso": 4,
+      "mayormente_verdadero": 5,
+      "verdadero": 8,
+      "no_verificable": 3
+     }
+    },
+    {
+     "n": 3,
+     "titulo": "Economía, pensiones y futuro del sistema público",
+     "inicio_s": 1161,
+     "total": 21,
+     "por_veredicto": {
+      "falso": 0,
+      "enganoso": 1,
+      "mayormente_verdadero": 10,
+      "verdadero": 3,
+      "no_verificable": 7
+     }
+    },
+    {
+     "n": 4,
+     "titulo": "Autónomos, impuestos y propuestas económicas del PP",
+     "inicio_s": 1731,
+     "total": 5,
+     "por_veredicto": {
+      "falso": 0,
+      "enganoso": 0,
+      "mayormente_verdadero": 3,
+      "verdadero": 2,
+      "no_verificable": 0
+     }
+    },
+    {
+     "n": 5,
+     "titulo": "Deuda pública, déficit y gasto en defensa",
+     "inicio_s": 1997,
+     "total": 20,
+     "por_veredicto": {
+      "falso": 0,
+      "enganoso": 4,
+      "mayormente_verdadero": 5,
+      "verdadero": 4,
+      "no_verificable": 7
+     }
+    },
+    {
+     "n": 6,
+     "titulo": "Ceuta, Marruecos y la gestión de la frontera",
+     "inicio_s": 2467,
+     "total": 16,
+     "por_veredicto": {
+      "falso": 1,
+      "enganoso": 3,
+      "mayormente_verdadero": 7,
+      "verdadero": 5,
+      "no_verificable": 0
+     }
+    },
+    {
+     "n": 7,
+     "titulo": "Inmigración, ayudas sociales, integración y expulsiones",
+     "inicio_s": 2956,
+     "total": 13,
+     "por_veredicto": {
+      "falso": 2,
+      "enganoso": 3,
+      "mayormente_verdadero": 3,
+      "verdadero": 4,
+      "no_verificable": 1
+     }
+    },
+    {
+     "n": 8,
+     "titulo": "Feijóo explica su relación con Marcial Dorado",
+     "inicio_s": 3436,
+     "total": 17,
+     "por_veredicto": {
+      "falso": 0,
+      "enganoso": 6,
+      "mayormente_verdadero": 4,
+      "verdadero": 3,
+      "no_verificable": 4
+     }
+    },
+    {
+     "n": 9,
+     "titulo": "Corrupción, Gürtel y los casos que afectan al PSOE y al PP",
+     "inicio_s": 3834,
+     "total": 30,
+     "por_veredicto": {
+      "falso": 1,
+      "enganoso": 3,
+      "mayormente_verdadero": 9,
+      "verdadero": 10,
+      "no_verificable": 7
+     }
+    },
+    {
+     "n": 10,
+     "titulo": "Isabel Díaz Ayuso y su relación dentro del Partido Popular",
+     "inicio_s": 4357,
+     "total": 11,
+     "por_veredicto": {
+      "falso": 0,
+      "enganoso": 3,
+      "mayormente_verdadero": 4,
+      "verdadero": 2,
+      "no_verificable": 2
+     }
+    },
+    {
+     "n": 11,
+     "titulo": "Inglés, servicio militar, Trump y política internacional",
+     "inicio_s": 4696,
+     "total": 6,
+     "por_veredicto": {
+      "falso": 0,
+      "enganoso": 0,
+      "mayormente_verdadero": 0,
+      "verdadero": 4,
+      "no_verificable": 2
+     }
+    },
+    {
+     "n": 12,
+     "titulo": "Feijóo define a Colau, Abascal y Pedro Sánchez y cierra la entrevist",
+     "inicio_s": 4939,
+     "total": 8,
+     "por_veredicto": {
+      "falso": 0,
+      "enganoso": 0,
+      "mayormente_verdadero": 4,
+      "verdadero": 3,
+      "no_verificable": 1
      }
     }
    ]
