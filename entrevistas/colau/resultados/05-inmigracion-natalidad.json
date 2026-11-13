@@ -1,0 +1,285 @@
+[
+  {
+    "minuto": "1:05:14",
+    "cita": "he gestionado una ciudad durante ocho años",
+    "afirmacion": "Ada Colau gestionó la ciudad de Barcelona durante ocho años, como alcaldesa.",
+    "veredicto": "verdadero",
+    "explicacion": "Colau fue alcaldesa de Barcelona del 13 de junio de 2015 al 17 de junio de 2023 (dos mandatos), es decir, ocho años.",
+    "confianza": "alta",
+    "fuentes": [
+      {
+        "titulo": "Ada Colau (Wikipedia)",
+        "url": "https://es.wikipedia.org/wiki/Ada_Colau"
+      }
+    ]
+  },
+  {
+    "minuto": "1:05:14",
+    "cita": "creo que la afirmación de la derecha de asociar inmigración con delincuencia es falsa",
+    "afirmacion": "Asociar inmigración con delincuencia, como hace la derecha, es falso: no hay base estadística para esa asociación.",
+    "veredicto": "enganoso",
+    "explicacion": "Según el INE, en 2024 el 28,6% de los adultos condenados tenía nacionalidad extranjera (la población extranjera ronda el 14%), con una tasa de 15,7 condenados por cada 1.000 habitantes adultos frente a 6,2 de los españoles; en 2025 la proporción fue similar (en torno al 30%, tasas de 15,3 y 6,1). Por tanto sí existe una sobrerrepresentación estadística, aunque no prueba que la inmigración cause delincuencia: la literatura académica la atribuye en buena parte a la estructura de edad y sexo, a factores socioeconómicos y a la selectividad del sistema penal, y la nacionalidad es una variable imperfecta. Decir que «no hay base» ignora el dato bruto; decir que la inmigración en sí misma genera delincuencia tampoco se sigue de él.",
+    "confianza": "media",
+    "fuentes": [
+      {
+        "titulo": "INE: Estadística de condenados, adultos, año 2024 (nota de prensa, 18 de septiembre de 2025)",
+        "url": "https://ine.es/dyngs/Prensa/ECAECM2024.htm"
+      },
+      {
+        "titulo": "El 70% de los condenados en España en 2025 fueron españoles (elderecho.com, con datos del INE)",
+        "url": "https://elderecho.com/el-70-de-los-condenados-en-espana-en-2025-fueron-espanoles-y-los-delitos-de-seguridad-vial-fueron-los-mas-numerosos"
+      },
+      {
+        "titulo": "Inmigración y delincuencia: la falacia de una sospecha (Boletín Criminológico, Universidad de Málaga)",
+        "url": "https://revistas.uma.es/index.php/boletin-criminologico/article/view/20680"
+      }
+    ]
+  },
+  {
+    "minuto": "1:05:14",
+    "cita": "hay millones de personas que viven de otros países",
+    "afirmacion": "En España viven millones de personas procedentes de otros países.",
+    "veredicto": "verdadero",
+    "explicacion": "El INE contabilizaba a 1 de enero de 2026 unos 7,24 millones de residentes con nacionalidad extranjera y 10,0 millones nacidos en el extranjero; a 1 de julio de 2026, 7,44 y 10,29 millones respectivamente (más del 20% de la población).",
+    "confianza": "alta",
+    "fuentes": [
+      {
+        "titulo": "INE: Estadística Continua de Población, 1 de enero de 2026 (publicada el 12 de febrero de 2026)",
+        "url": "https://ine.es/dyngs/Prensa/ECP4T25.htm"
+      },
+      {
+        "titulo": "Euronews: España roza los 50 millones de habitantes, 1 de cada 5 nació en el extranjero (6 de agosto de 2026, datos INE a 1 de julio)",
+        "url": "https://es.euronews.com/my-europe/2026/08/06/espana-50-millones-habitantes-1-cada-5-nacio-extranjero"
+      }
+    ]
+  },
+  {
+    "minuto": "1:06:14",
+    "cita": "La mayoría de personas migrantes no delinquen ni son ningún problema.",
+    "afirmacion": "La gran mayoría de las personas migrantes que viven en España no delinquen.",
+    "veredicto": "verdadero",
+    "explicacion": "Con una tasa de condena de 15,7 por cada 1.000 adultos extranjeros en 2024 (INE), solo en torno al 1,6% de los adultos extranjeros fue condenado ese año, es decir, la inmensa mayoría no lo fue (la tasa de los españoles es de 6,2 por mil). La parte «ni son ningún problema» es una valoración y no se evalúa.",
+    "confianza": "alta",
+    "fuentes": [
+      {
+        "titulo": "INE: Estadística de condenados, adultos, año 2024 (nota de prensa, 18 de septiembre de 2025)",
+        "url": "https://ine.es/dyngs/Prensa/ECAECM2024.htm"
+      }
+    ]
+  },
+  {
+    "minuto": "1:08:25",
+    "cita": "los barrios populares de Barcelona los construyeron, los levantaron con sus manos, la gente trabajadora migrante que vino de Extremadura, de Andalucía",
+    "afirmacion": "Los barrios populares de Barcelona los levantó la gente trabajadora migrante procedente de Extremadura y Andalucía, en una fuerte migración del campo a la ciudad, y a esas personas se les llamaba despectivamente «charnegos».",
+    "veredicto": "verdadero",
+    "explicacion": "Está documentado que la inmigración interior a Barcelona en el siglo XX (sobre todo tras la Guerra Civil y hasta los años setenta) procedía del campo, con predominio de Andalucía y con aportes de Extremadura, Murcia, Galicia, Aragón y las dos Castillas, y que buena parte de la vivienda se levantó por autoconstrucción (barracas y barrios de aluvión). «Charnego» fue un término despectivo para el inmigrante no catalanohablante de otras regiones de España, extendido entre los años cincuenta y setenta. La frase es una generalización (no fueron solo migrantes de esas dos regiones), pero esencialmente correcta.",
+    "confianza": "media",
+    "fuentes": [
+      {
+        "titulo": "Barraquismo en Barcelona (Wikipedia)",
+        "url": "https://es.wikipedia.org/wiki/Barraquismo_en_Barcelona"
+      },
+      {
+        "titulo": "Charnego (Wikipedia)",
+        "url": "https://es.wikipedia.org/wiki/Charnego"
+      }
+    ]
+  },
+  {
+    "minuto": "1:08:25",
+    "cita": "mi familia es andaluza yo también vengo de Huesca y de Soria",
+    "afirmacion": "La familia de Ada Colau es andaluza y ella también tiene origen familiar en Huesca y en Soria.",
+    "veredicto": "no_verificable",
+    "explicacion": "No se ha encontrado constancia pública del origen geográfico de la familia de Colau: las fuentes biográficas consultadas solo recogen que nació en Barcelona en 1974, se crió en El Guinardó y los nombres de sus padres, sin indicar su procedencia. Es un dato biográfico privado que solo ella puede acreditar.",
+    "confianza": "baja",
+    "fuentes": [
+      {
+        "titulo": "Ada Colau (Wikipedia)",
+        "url": "https://es.wikipedia.org/wiki/Ada_Colau"
+      }
+    ]
+  },
+  {
+    "minuto": "1:13:40",
+    "cita": "la mayor parte de las personas migrantes están integradas, están trabajando en el día a día y contribuyendo al bien común, aportando la seguridad social y contribuyendo a pagar las pensiones de nuestra gente mayor",
+    "afirmacion": "La mayor parte de las personas migrantes en España trabajan y cotizan a la Seguridad Social, contribuyendo así a pagar las pensiones.",
+    "veredicto": "mayormente_verdadero",
+    "explicacion": "Según el INE (EPA, tercer trimestre de 2026) la tasa de actividad de los extranjeros es del 70,3% frente al 57,6% de los españoles (en parte por su estructura de edad), y según el Ministerio de Inclusión la Seguridad Social supera los 3,55 millones de afiliados extranjeros en agosto de 2026 (en torno al 15% del total). Las cotizaciones de los trabajadores en activo financian las pensiones vigentes. Matices: la tasa de paro de los extranjeros es más alta que la de los españoles y «estar integrados» es un concepto valorativo que no se mide con un solo dato.",
+    "confianza": "media",
+    "fuentes": [
+      {
+        "titulo": "INE: Encuesta de Población Activa, tercer trimestre de 2026 (27 de octubre de 2026)",
+        "url": "https://www.ine.es/dyngs/Prensa/EPA3T26.htm"
+      },
+      {
+        "titulo": "Ministerio de Inclusión: La Seguridad Social supera los 3.550.000 afiliados extranjeros en agosto (14 de septiembre de 2026)",
+        "url": "https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/inclusion/Paginas/2026/140926-afiliados-extranjeros-agosto-2026.aspx?qfr=2"
+      },
+      {
+        "titulo": "Ministerio de Inclusión: Ocho de cada diez personas llegadas a España este siglo se han incorporado a la población activa (informe del CES, 12 de noviembre de 2025)",
+        "url": "https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/inclusion/Paginas/2025/121125-informe-ces.aspx"
+      }
+    ]
+  },
+  {
+    "minuto": "1:14:48",
+    "cita": "hay discriminaciones que se hacen a la mujer en Marruecos que no se hacen en España",
+    "afirmacion": "En Marruecos existen discriminaciones legales y sociales contra la mujer que no se dan en España.",
+    "veredicto": "verdadero",
+    "explicacion": "El Código de Familia marroquí (Mudawana, reformado en 2004) mantiene desigualdades en herencia, tutela y matrimonio, y la poligamia sigue siendo legal aunque restringida, mientras que en España es delito y existe igualdad legal. No implica que en España no haya machismo, como la propia Colau subraya.",
+    "confianza": "media",
+    "fuentes": [
+      {
+        "titulo": "Mudawana, código de familia de Marruecos (Wikipedia)",
+        "url": "https://es.wikipedia.org/wiki/Mudawana"
+      }
+    ]
+  },
+  {
+    "minuto": "1:15:49",
+    "cita": "Hay este año 44 asesinatos de mujeres por parte de hombres que han matado a la mujer por el hecho de ser mujer.",
+    "afirmacion": "En lo que va de 2026 se han registrado 44 asesinatos de mujeres por violencia de género.",
+    "veredicto": "verdadero",
+    "explicacion": "La estadística oficial de la Delegación del Gobierno contra la Violencia de Género, actualizada el 30 de octubre de 2026, recoge 44 mujeres víctimas mortales en 2026 a manos de sus parejas o exparejas (1.385 desde 2003). La cifra oficial cubre solo la violencia en la pareja o expareja; los feminicidios fuera de ese ámbito se contabilizan aparte.",
+    "confianza": "alta",
+    "fuentes": [
+      {
+        "titulo": "Ministerio de Igualdad: Mujeres víctimas mortales por violencia de género, datos provisionales actualizados a 30 de octubre de 2026",
+        "url": "https://violenciagenero.igualdad.gob.es/wp-content/uploads/VMortales_2026_10_30.pdf"
+      }
+    ]
+  },
+  {
+    "minuto": "1:15:49",
+    "cita": "La mayoría de veces no son personas del extranjero. Son personas nacidas aquí.",
+    "afirmacion": "La mayoría de los autores de los asesinatos machistas de 2026 no son extranjeros, sino personas nacidas en España.",
+    "veredicto": "verdadero",
+    "explicacion": "Según la estadística oficial a 30 de octubre de 2026, de los 44 presuntos agresores de 2026, 29 (65,9%) nacieron en España y 15 (34,1%) en otro país. Contexto que no menciona: los nacidos fuera están sobrerrepresentados respecto a su peso poblacional (algo más del 20% de los residentes), y en 2025 los agresores extranjeros fueron en torno al 41% según datos de Igualdad recogidos por la prensa.",
+    "confianza": "alta",
+    "fuentes": [
+      {
+        "titulo": "Ministerio de Igualdad: Mujeres víctimas mortales por violencia de género, datos provisionales actualizados a 30 de octubre de 2026 (tabla 2.3, país de nacimiento)",
+        "url": "https://violenciagenero.igualdad.gob.es/wp-content/uploads/VMortales_2026_10_30.pdf"
+      },
+      {
+        "titulo": "El Debate: Los asesinatos por violencia de género a manos de extranjeros (balance 2025 con datos de Igualdad)",
+        "url": "https://www.eldebate.com/sociedad/20251226/asesinatos-violencia-genero-manos-extranjeros-crecen-sanchez-poder_368556.html"
+      }
+    ]
+  },
+  {
+    "minuto": "1:20:02",
+    "cita": "no deje de tener un hijo por el coste de la vida, cosa que ahora está pasando",
+    "afirmacion": "Hay personas en España que dejan de tener hijos, o tienen menos de los que querrían, por las dificultades económicas y el coste de la vida.",
+    "veredicto": "mayormente_verdadero",
+    "explicacion": "España tiene una fecundidad de 1,10-1,11 hijos por mujer (2024-2025) y la Encuesta de Fecundidad 2025 del INE (publicada el 29 de septiembre de 2026) indica que el 34,8% de las mujeres tiene menos hijos de los que quería. La afirmación de que las razones económicas son una causa relevante es coherente con ese desfase, pero no se ha podido consultar el desglose de motivos de la encuesta; además otros factores (retraso de la maternidad, preferencias personales) también influyen, y el 15,5% de las mujeres declara no querer hijos.",
+    "confianza": "media",
+    "fuentes": [
+      {
+        "titulo": "INE: Encuesta de Fecundidad 2025 (INEbase, resultados provisionales publicados el 29 de septiembre de 2026)",
+        "url": "https://www.ine.es/dyngs/INEbase/es/operacion.htm?c=Estadistica_C&cid=1254736177006&menu=ultiDatos&idp=1254735573002"
+      },
+      {
+        "titulo": "Demografía de España: fecundidad y saldo vegetativo 2024-2025 (Wikipedia, con datos del INE)",
+        "url": "https://es.wikipedia.org/wiki/Demograf%C3%ADa_de_Espa%C3%B1a"
+      }
+    ]
+  },
+  {
+    "minuto": "1:21:14",
+    "cita": "la baja natalidad de Europa hace que se necesite la migración para tener mucha más gente que trabaje y contribuya al modelo de estado del bienestar",
+    "afirmacion": "Europa ya ha advertido de que, por la baja natalidad, se necesita migración para sostener el estado del bienestar (pensiones, desempleo y servicios públicos).",
+    "veredicto": "mayormente_verdadero",
+    "explicacion": "Las proyecciones de Eurostat (EUROPOP2025) prevén en la UE más defunciones que nacimientos durante todo el periodo hasta 2100 y señalan que la migración neta positiva persistente es el único factor de crecimiento de la población. En España, la AIReF estima que se necesitarían más de un millón de inmigrantes al año para mantener la tasa de dependencia actual. Colau no cita una declaración concreta («Europa ya ha dicho»), y que la migración sea condición imprescindible para sostener el bienestar es una valoración sobre el modelo, pero el diagnóstico demográfico que describe es el de los organismos oficiales.",
+    "confianza": "media",
+    "fuentes": [
+      {
+        "titulo": "Eurostat: Population projections in the EU (EUROPOP2025)",
+        "url": "https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Population_projections_in_the_EU"
+      },
+      {
+        "titulo": "El Independiente: España no ha sido el motor económico de Europa; la inmigración explica la mitad del crecimiento (6 de julio de 2026; cita al Banco de España y a la AIReF)",
+        "url": "https://www.elindependiente.com/economia/2026/07/06/espana-no-sido-motor-economico-europa-inmigracion-mitad-crecimiento/"
+      }
+    ]
+  },
+  {
+    "minuto": "1:21:14",
+    "cita": "Y ahora mismo eso se está cubriendo en gran parte gracias a la migración.",
+    "afirmacion": "Actualmente la masa de personas que trabaja y paga impuestos en España se está cubriendo en gran parte gracias a la migración.",
+    "veredicto": "mayormente_verdadero",
+    "explicacion": "El Informe Anual 2025 del Banco de España atribuye a la población inmigrante más de dos tercios del avance del empleo y en torno a la mitad del crecimiento del PIB entre 2022 y 2025, y el INE indica que el crecimiento reciente de la población se debe casi por completo a los nacidos fuera. Matiz: en términos de stock, los extranjeros son en torno al 15% de los afiliados a la Seguridad Social, así que el efecto es sobre todo en el crecimiento y el relevo, no en el total de trabajadores.",
+    "confianza": "media",
+    "fuentes": [
+      {
+        "titulo": "El Independiente: España no ha sido el motor económico de Europa; la inmigración explica la mitad del crecimiento (6 de julio de 2026; cita el Informe Anual 2025 del Banco de España)",
+        "url": "https://www.elindependiente.com/economia/2026/07/06/espana-no-sido-motor-economico-europa-inmigracion-mitad-crecimiento/"
+      },
+      {
+        "titulo": "Ministerio de Inclusión: La Seguridad Social supera los 3.550.000 afiliados extranjeros en agosto (14 de septiembre de 2026)",
+        "url": "https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/inclusion/Paginas/2026/140926-afiliados-extranjeros-agosto-2026.aspx?qfr=2"
+      }
+    ]
+  },
+  {
+    "minuto": "1:23:16",
+    "cita": "para acceder a un trabajo si no alas el idioma, no tienes complicado",
+    "afirmacion": "Para acceder a un trabajo en España ya es necesario (o, al menos, muy difícil sin ello) hablar el idioma, de modo que el aprendizaje del idioma ya es en la práctica obligatorio para trabajar.",
+    "veredicto": "no_verificable",
+    "explicacion": "La frase es una apreciación práctica («lo tienes complicado») más que un hecho medible, y la transcripción automática del tramo es confusa. No se ha encontrado una estadística que mida cuántos empleos exigen dominar el castellano ni constancia de una obligación legal general de hablar el idioma para trabajar, que dependería del empleador y del puesto. Por eso no se puede ni confirmar ni desmentir.",
+    "confianza": "baja",
+    "fuentes": []
+  },
+  {
+    "minuto": "1:25:16",
+    "cita": "7 millones de inmigrantes que hay en el país aportan el 10% de las contribuciones a la seguridad social y suponen solo un 1% del gasto público",
+    "afirmacion": "Los inmigrantes aportan más a las cuentas públicas de lo que reciben; según datos oficiales del Ministerio, aportan el 10% de los ingresos de la Seguridad Social y suponen solo el 1% del gasto público.",
+    "veredicto": "mayormente_verdadero",
+    "explicacion": "Las cifras (10% de los ingresos de la Seguridad Social y 1% del gasto público) provienen de un informe del CES encargado por el Ministerio de Inclusión (noviembre de 2025) y de la propia comunicación del ministerio, que también cifra el saldo fiscal de la inmigración en positivo (0,54% del PIB). La población extranjera con nacionalidad es de 7,2-7,4 millones, coherente con los «7 millones». Matices: son datos de origen gubernamental, comparan magnitudes con denominadores distintos (cotizaciones de la Seguridad Social frente a gasto público, que según The Conversation se refiere sobre todo al gasto en prestaciones) y no son un saldo fiscal completo (incluye sanidad, educación y otros servicios), por lo que el balance neto es más matizado que lo expuesto.",
+    "confianza": "media",
+    "fuentes": [
+      {
+        "titulo": "Ministerio de Inclusión: informe del CES sobre la realidad migratoria (nota de prensa, 12 de noviembre de 2025)",
+        "url": "https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/inclusion/Paginas/2025/121125-informe-ces.aspx"
+      },
+      {
+        "titulo": "Conclusiones del informe del CES «La realidad migratoria en España: prioridades para las políticas públicas»",
+        "url": "https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/inclusion/Documents/2025/121125-conclusiones-informe-ces.pdf"
+      },
+      {
+        "titulo": "Ministerio de Inclusión en X: los migrantes suponen un 10% de los ingresos a la Seguridad Social y solo un 1% del gasto",
+        "url": "https://x.com/inclusiongob/status/1975577634470760454"
+      },
+      {
+        "titulo": "The Conversation: Trabajan pero no cuentan, la inmigración es clave para el estado del bienestar (10 de marzo de 2026)",
+        "url": "https://theconversation.com/trabajan-pero-no-cuentan-por-que-la-inmigracion-es-clave-para-el-estado-del-bienestar-en-espana-275755"
+      },
+      {
+        "titulo": "INE: Estadística Continua de Población, 1 de enero de 2026",
+        "url": "https://ine.es/dyngs/Prensa/ECP4T25.htm"
+      }
+    ]
+  },
+  {
+    "minuto": "1:25:16",
+    "cita": "Y no es verdad. Es al contrario.",
+    "afirmacion": "Es falso que los inmigrantes vengan a España a vivir de «paguitas» y subvenciones.",
+    "veredicto": "mayormente_verdadero",
+    "explicacion": "No hay datos que respalden que la búsqueda de ayudas sea la pauta general: los extranjeros tienen una tasa de actividad más alta (70,3% frente a 57,6% en el tercer trimestre de 2026, INE), más de 3,5 millones están afiliados a la Seguridad Social y el ingreso mínimo vital exige al menos un año de residencia legal continuada. El gasto en prestaciones dirigido a este colectivo ronda, según el CES, el 1% del total. Matiz: la afirmación es una generalización y no excluye que haya perceptores extranjeros de ayudas (no se ha podido consultar el desglose de beneficiarios por nacionalidad).",
+    "confianza": "media",
+    "fuentes": [
+      {
+        "titulo": "INE: Encuesta de Población Activa, tercer trimestre de 2026 (27 de octubre de 2026)",
+        "url": "https://www.ine.es/dyngs/Prensa/EPA3T26.htm"
+      },
+      {
+        "titulo": "The Conversation: Regularización de inmigrantes, ventajas económicas y desafíos institucionales",
+        "url": "https://theconversation.com/regularizacion-de-inmigrantes-ventajas-economicas-y-desafios-institucionales-280122"
+      },
+      {
+        "titulo": "Ministerio de Inclusión: informe del CES sobre la realidad migratoria (12 de noviembre de 2025)",
+        "url": "https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/inclusion/Paginas/2025/121125-informe-ces.aspx"
+      }
+    ]
+  }
+]

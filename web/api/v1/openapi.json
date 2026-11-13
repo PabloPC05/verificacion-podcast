@@ -58,7 +58,8 @@
       "type": "string",
       "enum": [
        "sanchez",
-       "feijoo"
+       "feijoo",
+       "colau"
       ]
      }
     }
@@ -85,7 +86,8 @@
       "type": "string",
       "enum": [
        "sanchez",
-       "feijoo"
+       "feijoo",
+       "colau"
       ]
      }
     }
@@ -112,7 +114,8 @@
       "type": "string",
       "enum": [
        "sanchez",
-       "feijoo"
+       "feijoo",
+       "colau"
       ]
      }
     }

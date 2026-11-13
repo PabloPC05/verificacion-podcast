@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-13T20:17:02+01:00",
+ "generado": "2026-11-13T20:17:15+01:00",
  "aviso": "Verificación asistida por IA, sin revisión de un equipo de periodistas. «falso» no implica intención de mentir. Contrasta siempre con las fuentes enlazadas.",
  "veredictos": {
   "verdadero": "Los datos lo confirman.",
@@ -366,6 +366,211 @@
       "mayormente_verdadero": 4,
       "verdadero": 3,
       "no_verificable": 1
+     }
+    }
+   ]
+  },
+  {
+   "slug": "colau",
+   "invitado": "Ada Colau",
+   "partido": "Frente Amplio",
+   "programa": "The Wild Project #391",
+   "fecha": "13 nov 2026",
+   "duracion": "2 h 14 min",
+   "video_url": "https://www.youtube.com/watch?v=-ESmAhdixfo",
+   "web_url": "https://verificacion-podcast.vercel.app/colau",
+   "afirmaciones_url": "https://verificacion-podcast.vercel.app/api/v1/colau.json",
+   "transcripcion_url": "https://verificacion-podcast.vercel.app/api/v1/colau/transcripcion.json",
+   "transcripcion_txt_url": "https://verificacion-podcast.vercel.app/api/v1/colau/transcripcion.txt",
+   "total_afirmaciones": 165,
+   "por_veredicto": {
+    "falso": 5,
+    "enganoso": 25,
+    "mayormente_verdadero": 77,
+    "verdadero": 41,
+    "no_verificable": 17
+   },
+   "temas": [
+    {
+     "n": 1,
+     "titulo": "Formato de las entrevistas electorales y verificadores",
+     "inicio_s": 0,
+     "total": 0,
+     "por_veredicto": {
+      "falso": 0,
+      "enganoso": 0,
+      "mayormente_verdadero": 0,
+      "verdadero": 0,
+      "no_verificable": 0
+     }
+    },
+    {
+     "n": 2,
+     "titulo": "Ada Colau llega a The Wild Project",
+     "inicio_s": 83,
+     "total": 1,
+     "por_veredicto": {
+      "falso": 0,
+      "enganoso": 0,
+      "mayormente_verdadero": 1,
+      "verdadero": 0,
+      "no_verificable": 0
+     }
+    },
+    {
+     "n": 3,
+     "titulo": "Twitter, redes sociales y polarización política",
+     "inicio_s": 273,
+     "total": 7,
+     "por_veredicto": {
+      "falso": 0,
+      "enganoso": 1,
+      "mayormente_verdadero": 3,
+      "verdadero": 1,
+      "no_verificable": 2
+     }
+    },
+    {
+     "n": 4,
+     "titulo": "Por qué Ada Colau vuelve a la política y se presenta a las elecciones",
+     "inicio_s": 509,
+     "total": 12,
+     "por_veredicto": {
+      "falso": 0,
+      "enganoso": 1,
+      "mayormente_verdadero": 5,
+      "verdadero": 5,
+      "no_verificable": 1
+     }
+    },
+    {
+     "n": 5,
+     "titulo": "Frente Amplio, Podemos y la división de la izquierda",
+     "inicio_s": 1002,
+     "total": 6,
+     "por_veredicto": {
+      "falso": 0,
+      "enganoso": 2,
+      "mayormente_verdadero": 1,
+      "verdadero": 2,
+      "no_verificable": 1
+     }
+    },
+    {
+     "n": 6,
+     "titulo": "PSOE, Sumar, corrupción y responsabilidad política",
+     "inicio_s": 1303,
+     "total": 16,
+     "por_veredicto": {
+      "falso": 0,
+      "enganoso": 2,
+      "mayormente_verdadero": 11,
+      "verdadero": 3,
+      "no_verificable": 0
+     }
+    },
+    {
+     "n": 7,
+     "titulo": "Accidentes ferroviarios y gestión del sistema de trenes",
+     "inicio_s": 2186,
+     "total": 21,
+     "por_veredicto": {
+      "falso": 3,
+      "enganoso": 2,
+      "mayormente_verdadero": 8,
+      "verdadero": 8,
+      "no_verificable": 0
+     }
+    },
+    {
+     "n": 8,
+     "titulo": "Ceuta, Marruecos y la política migratoria de España",
+     "inicio_s": 2864,
+     "total": 22,
+     "por_veredicto": {
+      "falso": 0,
+      "enganoso": 2,
+      "mayormente_verdadero": 10,
+      "verdadero": 9,
+      "no_verificable": 1
+     }
+    },
+    {
+     "n": 9,
+     "titulo": "Inmigración, integración y choque cultural",
+     "inicio_s": 3769,
+     "total": 10,
+     "por_veredicto": {
+      "falso": 0,
+      "enganoso": 1,
+      "mayormente_verdadero": 1,
+      "verdadero": 7,
+      "no_verificable": 1
+     }
+    },
+    {
+     "n": 10,
+     "titulo": "Natalidad, demografía y el futuro de la población española",
+     "inicio_s": 4767,
+     "total": 6,
+     "por_veredicto": {
+      "falso": 0,
+      "enganoso": 0,
+      "mayormente_verdadero": 5,
+      "verdadero": 0,
+      "no_verificable": 1
+     }
+    },
+    {
+     "n": 11,
+     "titulo": "Su gestión de Barcelona: seguridad, limpieza y errores como alcaldesa",
+     "inicio_s": 5164,
+     "total": 18,
+     "por_veredicto": {
+      "falso": 0,
+      "enganoso": 7,
+      "mayormente_verdadero": 5,
+      "verdadero": 3,
+      "no_verificable": 3
+     }
+    },
+    {
+     "n": 12,
+     "titulo": "Vivienda, alquileres, grandes propietarios y especulación",
+     "inicio_s": 5861,
+     "total": 7,
+     "por_veredicto": {
+      "falso": 1,
+      "enganoso": 3,
+      "mayormente_verdadero": 1,
+      "verdadero": 1,
+      "no_verificable": 1
+     }
+    },
+    {
+     "n": 13,
+     "titulo": "Ocupación, pequeños propietarios e impagos",
+     "inicio_s": 6181,
+     "total": 12,
+     "por_veredicto": {
+      "falso": 0,
+      "enganoso": 0,
+      "mayormente_verdadero": 9,
+      "verdadero": 1,
+      "no_verificable": 2
+     }
+    },
+    {
+     "n": 14,
+     "titulo": "Trump, Israel, la flotilla y sus rivales políticos",
+     "inicio_s": 6823,
+     "total": 27,
+     "por_veredicto": {
+      "falso": 1,
+      "enganoso": 4,
+      "mayormente_verdadero": 17,
+      "verdadero": 1,
+      "no_verificable": 4
      }
     }
    ]

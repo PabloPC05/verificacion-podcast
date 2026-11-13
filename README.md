@@ -29,7 +29,7 @@ Todo está aquí para que cualquiera pueda revisarlo, discutirlo y corregirlo.
 |---|---|---|
 | Pedro Sánchez | The Wild Project #393 | Verificada |
 | Alberto Núñez Feijóo | The Wild Project #392 | Verificada |
-| Ada Colau | The Wild Project #391 | En curso |
+| Ada Colau | The Wild Project #391 | Verificada |
 
 ## API abierta
 

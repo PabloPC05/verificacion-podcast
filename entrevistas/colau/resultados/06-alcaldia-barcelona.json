@@ -1,0 +1,346 @@
+[
+  {
+    "minuto": "1:26:18",
+    "cita": "una de las cosas que te encuentras es que muchas cosas dependen de la Generalitat, muchas del Estado",
+    "afirmacion": "Muchas competencias que afectan a la vida de la ciudad (seguridad, justicia, etc.) no dependen del Ayuntamiento de Barcelona sino de la Generalitat y del Estado.",
+    "veredicto": "verdadero",
+    "explicacion": "La policía con competencia general en seguridad pública en Cataluña son los Mossos d'Esquadra, que dependen de la Generalitat (art. 164 del Estatuto de 2006); el Ayuntamiento solo dispone de la Guardia Urbana. Los juzgados y la planta judicial no son competencia municipal (el propio Plan Local de Seguridad de Barcelona 2024-2027 habla de «impulsar» la creación de más juzgados y de coordinarse con otros operadores policiales y judiciales). La afirmación es un hecho institucional básico, aunque genérica. Las fuentes son secundarias para el articulado exacto (no se pudo abrir el BOE).",
+    "confianza": "media",
+    "fuentes": [
+      {
+        "titulo": "Estatuto de Autonomía de Cataluña de 2006 (Wikipedia)",
+        "url": "https://es.wikipedia.org/wiki/Estatuto_de_Autonom%C3%ADa_de_Catalu%C3%B1a_de_2006"
+      },
+      {
+        "titulo": "Pla Local de Seguretat de Barcelona 2024-2027 (Ajuntament de Barcelona)",
+        "url": "https://ajuntament.barcelona.cat/seguretatiprevencio/sites/default/files/2024-07/Pla%20Local%20de%20Seguretat_2024_2027.pdf"
+      }
+    ]
+  },
+  {
+    "minuto": "1:27:27",
+    "cita": "la mayoría de las cosas las decidía la Generalitat y el Estado, y nosotros teníamos que administrarlo",
+    "afirmacion": "Durante la pandemia de covid-19 la mayoría de las decisiones las tomaron la Generalitat y el Estado, y el Ayuntamiento de Barcelona se limitaba a gestionarlas.",
+    "veredicto": "mayormente_verdadero",
+    "explicacion": "El estado de alarma lo declaró el Gobierno central (14 de marzo de 2020, hasta el 21 de junio de 2020) y las restricciones posteriores (toques de queda, cierres perimetrales, aforos) las fijaron el Estado y las comunidades autónomas, en Cataluña la Generalitat. Los ayuntamientos tenían un papel de ejecución y servicios, aunque conservaron competencias propias (policía local, servicios sociales, espacio público) y margen para decisiones menores. Es una simplificación razonable.",
+    "confianza": "media",
+    "fuentes": [
+      {
+        "titulo": "Estado de alarma en España de 2020 (Wikipedia)",
+        "url": "https://es.wikipedia.org/wiki/Estado_de_alarma_en_Espa%C3%B1a_de_2020"
+      }
+    ]
+  },
+  {
+    "minuto": "1:27:27",
+    "cita": "hubo una campaña de desprestigio increíble",
+    "afirmacion": "Hubo una campaña de desprestigio en algunas televisiones que exageraba la inseguridad de Barcelona (sucesos del Raval presentados en bucle como si la ciudad fuera un lugar de caos).",
+    "veredicto": "no_verificable",
+    "explicacion": "Es una valoración sobre la intención y el tratamiento mediático, no un hecho medible, y no he encontrado un análisis de contenido de las televisiones que lo acredite o lo desmienta. Lo comprobable es el contexto: según el balance del Ministerio del Interior, las infracciones penales en Barcelona pasaron de 153.346 (2015) a unas 200.000 (2019) y la ciudad registra una tasa por habitante superior a la de Madrid, de modo que la preocupación ciudadana tenía base en datos reales aunque pueda haber habido sobreexposición mediática de casos concretos.",
+    "confianza": "baja",
+    "fuentes": [
+      {
+        "titulo": "Balance de la inseguridad en Barcelona: la criminalidad se dispara en los últimos ocho años (Metrópoli Abierta, 15/06/2023, con datos de Interior)",
+        "url": "https://metropoliabierta.elespanol.com/sucesos/20230615/balance-de-la-inseguridad-en-barcelona-criminalidad-se-dispara-los-ultimos-ocho-anos/771672967_0.html"
+      }
+    ]
+  },
+  {
+    "minuto": "1:28:44",
+    "cita": "aumentamos miles de agentes de guardia urbana",
+    "afirmacion": "Durante su mandato aumentaron la Guardia Urbana como hacía mucho tiempo que no se hacía: miles de agentes más.",
+    "veredicto": "enganoso",
+    "explicacion": "La plantilla de la Guardia Urbana pasó de 2.904 efectivos (marzo de 2016, Plan director municipal) a 3.124 en 2019 y 3.398 en 2023 (Plan Local de Seguridad 2024-2027), cifra que Betevé presenta como la más alta de su historia. El aumento neto fue por tanto de unos 500 agentes (alrededor del 17%), no de «miles»; lo que sí suma miles es el número bruto de plazas ofertadas y agentes incorporados (1.238 plazas entre 2019 y 2024), buena parte de ellas para cubrir jubilaciones. Es cierto que se alcanzó un máximo histórico, pero el aumento neto es muy inferior al que sugiere la frase. Verificat recogió además que Colau había hablado de 1.000 agentes más en el mandato 2019-2023 frente a una previsión oficial de unos 450.",
+    "confianza": "alta",
+    "fuentes": [
+      {
+        "titulo": "Pla director de la Guàrdia Urbana de Barcelona (Ajuntament, mayo de 2016)",
+        "url": "https://media-edg.barcelona.cat/wp-content/uploads/2016/05/PDGUB-document-1605261.pdf"
+      },
+      {
+        "titulo": "Pla Local de Seguretat de Barcelona 2024-2027 (Ajuntament de Barcelona)",
+        "url": "https://ajuntament.barcelona.cat/seguretatiprevencio/sites/default/files/2024-07/Pla%20Local%20de%20Seguretat_2024_2027.pdf"
+      },
+      {
+        "titulo": "Collboni presenta 132 agents nous de la Guàrdia Urbana (Betevé)",
+        "url": "https://beteve.cat/societat/collboni-presenta-132-agents-nous-guardia-urbana/"
+      },
+      {
+        "titulo": "La Guàrdia Urbana té previst augmentar la seva plantilla en 450 efectius aquest mandat, i no pas en «1.000 agents» com diu Colau (Verificat)",
+        "url": "https://www.verificat.cat/la-guardia-urbana-te-previst-augmentar-la-seva-plantilla-en-450-efectius-aquest-mandat-i-no-pas-en-1-000-agents-com-diu-colau/"
+      }
+    ]
+  },
+  {
+    "minuto": "1:28:44",
+    "cita": "a finales del segundo mandato, aceptar la Copa América",
+    "afirmacion": "Colau aceptó la Copa América de vela a finales de su segundo mandato; la decidieron también la Generalitat y otras administraciones; aportó poco y costó mucho dinero público.",
+    "veredicto": "mayormente_verdadero",
+    "explicacion": "La candidatura se presentó en marzo de 2022 y se anunció el 29 de marzo de 2022 con la presencia conjunta de Colau y del president Aragonès; hubo aportaciones de Ayuntamiento (10 M€), Generalitat y Estado. Un informe de la Universitat de Barcelona (marzo de 2025, encargado por la Fundación Barcelona Capital Náutica) cifra la inversión pública en 97 millones sin IVA, reconoce que no se cumplieron las expectativas (unas 455.000 personas participantes frente a lo previsto, unos 6.000 empleos menos), pero estima un impacto de 1.034 M€ en el PIB catalán y 3,3 € de retorno fiscal por euro invertido. La parte de «aportó muy poco» es una valoración, discutida por ese informe; lo comprobable (decisión compartida, coste público elevado, expectativas incumplidas) es esencialmente cierto.",
+    "confianza": "media",
+    "fuentes": [
+      {
+        "titulo": "Aragonès i Colau escenifiquen l'organització de la Copa Amèrica de Vela (VilaWeb, 29/03/2022)",
+        "url": "https://www.vilaweb.cat/noticies/barcelona-copa-america-de-vela-cost-70-milions/"
+      },
+      {
+        "titulo": "Un informe de la UB avala el retorno económico de la Copa América pese a no cumplir expectativas (Ara, 04/03/2025)",
+        "url": "https://es.ara.cat/sociedad/barcelona/informe-ub-avala-retorno-economico-copa-america-pese-no-cumplir-expectativas_1_5304527.html"
+      }
+    ]
+  },
+  {
+    "minuto": "1:29:45",
+    "cita": "empezamos en un barrio de Barcelona, en San Andreu, a hacer una cosa que la Unión Europea recomienda, que es hacer la recogida selectiva de la basura",
+    "afirmacion": "Al salir de la pandemia, el Ayuntamiento empezó en Sant Andreu la recogida selectiva puerta a puerta, que la Unión Europea recomienda y con la que se recicla mucho más.",
+    "veredicto": "mayormente_verdadero",
+    "explicacion": "El Ayuntamiento anunció el puerta a puerta en Sant Andreu de Palomar en mayo de 2021 y lo implantó en junio-julio de ese año, con el objetivo de cumplir la normativa europea (55% de recogida selectiva en 2025). Según datos municipales, la recogida selectiva subió del 37% al 76% (Ara, 07/07/2021). La UE exige la recogida separada de residuos y fija objetivos de reciclaje, pero no prescribe el puerta a puerta; y esas cifras provienen del propio Ayuntamiento, la asociación vecinal Sant Andreu Sud las puso en duda y en octubre de 2021 se suspendió la segunda fase por las quejas de los vecinos.",
+    "confianza": "media",
+    "fuentes": [
+      {
+        "titulo": "Barcelona implanta el servicio de recogida de residuos puerta a puerta en Sant Andreu de Palomar (Interempresas, 25/05/2021)",
+        "url": "https://www.interempresas.net/Equipamiento_Municipal/351989-Barcelona-implanta-servicio-recogida-residuos-puerta-puerta-barrio-Sant-Andreu-Palomar.html"
+      },
+      {
+        "titulo": "El puerta a puerta dobla la recogida selectiva en Sant Andreu de Palomar (Ara, 07/07/2021)",
+        "url": "https://es.ara.cat/sociedad/puerta-puerta-dobla-recogida-selectiva-sant-andreu-palomar-basuras_1_4046752.html"
+      },
+      {
+        "titulo": "Colau da marcha atrás en el puerta a puerta: para la segunda fase y retira los cubos de la orgánica (Ara, octubre de 2021)",
+        "url": "https://es.ara.cat/sociedad/colau-da-marcha-puerta-puerta-segunda-fase-retira-cubos-organica_1_4142450.html"
+      }
+    ]
+  },
+  {
+    "minuto": "1:31:47",
+    "cita": "ha tenido unas cifras más o menos estables desde que entramos hasta que salimos",
+    "afirmacion": "La criminalidad en Barcelona tuvo cifras más o menos estables desde que entró el gobierno de Colau (2015) hasta que salió (2023), sin grandes cambios.",
+    "veredicto": "enganoso",
+    "explicacion": "Según el balance de criminalidad del Ministerio del Interior, las infracciones penales en Barcelona pasaron de 153.346 en 2015 a unas 200.000 en 2019 (máximo, +31%), cayeron con la pandemia y se situaron en 167.698 al cierre de la etapa (+9% sobre 2015); en 2023 los delitos subieron un 8,6% respecto a 2022 aunque quedaron un 7,3% por debajo de 2019. Los hurtos, en cambio, bajaron, mientras los robos con violencia (+27% de 2015 a 2022) y el tráfico de drogas crecieron. Hubo, por tanto, un fuerte aumento hasta 2019 y un posterior descenso, no estabilidad; las series de Interior y las de la Junta Local de Seguridad (Mossos + Guardia Urbana) no coinciden exactamente en cifras.",
+    "confianza": "media",
+    "fuentes": [
+      {
+        "titulo": "Balance de la inseguridad en Barcelona: la criminalidad se dispara en los últimos ocho años (Metrópoli Abierta, 15/06/2023, con datos de Interior)",
+        "url": "https://metropoliabierta.elespanol.com/sucesos/20230615/balance-de-la-inseguridad-en-barcelona-criminalidad-se-dispara-los-ultimos-ocho-anos/771672967_0.html"
+      },
+      {
+        "titulo": "Pla Local de Seguretat de Barcelona 2024-2027 (Ajuntament de Barcelona)",
+        "url": "https://ajuntament.barcelona.cat/seguretatiprevencio/sites/default/files/2024-07/Pla%20Local%20de%20Seguretat_2024_2027.pdf"
+      },
+      {
+        "titulo": "Més delictes a Barcelona: el 50% són furts (3Cat, balance 2023)",
+        "url": "https://www.3cat.cat/3catinfo/mes-delictes-a-barcelona-el-50-son-furts-pero-els-robatoris-amb-forca-a-botigues-es-disparen/noticia-amp/3277405/"
+      }
+    ]
+  },
+  {
+    "minuto": "1:31:47",
+    "cita": "me encuentro con mucha gente que está muy contenta con la política de vivienda que se ha hecho, con las superillas que se han hecho, que se ha pacificado, con la política que hicimos para proteger nuestras escuelas y priorizarlas",
+    "afirmacion": "Durante su mandato se desarrollaron una política de vivienda, supermanzanas (superillas) y una política de protección de los entornos escolares.",
+    "veredicto": "mayormente_verdadero",
+    "explicacion": "La existencia de las políticas es cierta en lo esencial: Colau impulsó las superillas (primeras iteraciones en Sant Antoni, centradas en Eixample y Sant Martí) y medidas de vivienda como la recuperación de más de 2.000 pisos vacíos de bancos para vivienda social tras el levantamiento del veto del Tribunal Constitucional en 2018 (Wikipedia). No he podido confirmar con una fuente la política de protección de escuelas. Que «mucha gente esté contenta» es una percepción anecdótica no comprobable, y la valoración de esas políticas es discutida.",
+    "confianza": "baja",
+    "fuentes": [
+      {
+        "titulo": "Ada Colau (Wikipedia, inglés)",
+        "url": "https://en.wikipedia.org/wiki/Ada_Colau"
+      },
+      {
+        "titulo": "Ada Colau (Wikipedia)",
+        "url": "https://es.wikipedia.org/wiki/Ada_Colau"
+      }
+    ]
+  },
+  {
+    "minuto": "1:32:49",
+    "cita": "Es el grueso de los delitos que hay.",
+    "afirmacion": "En una gran ciudad con mucho turismo como Barcelona, el grueso de los delitos son robos y hurtos.",
+    "veredicto": "verdadero",
+    "explicacion": "Según el Plan Local de Seguridad 2024-2027 (datos de la Junta Local de Seguridad, febrero de 2024), los delitos contra el patrimonio suponen casi el 90% del total en 2023 y los hurtos, el 48,1%; los robos con violencia o intimidación, un 6,6%. El dato de 2023 concuerda con la serie de Interior, donde los hurtos fueron entre el 48% y el 56% del total en 2015-2022. Es cierto que robos y hurtos no llegan al 90% (Maldita desmintió en su día una afirmación de Colau en ese sentido), pero «el grueso» sí.",
+    "confianza": "media",
+    "fuentes": [
+      {
+        "titulo": "Pla Local de Seguretat de Barcelona 2024-2027 (Ajuntament de Barcelona)",
+        "url": "https://ajuntament.barcelona.cat/seguretatiprevencio/sites/default/files/2024-07/Pla%20Local%20de%20Seguretat_2024_2027.pdf"
+      },
+      {
+        "titulo": "Balance de la inseguridad en Barcelona (Metrópoli Abierta, 15/06/2023)",
+        "url": "https://metropoliabierta.elespanol.com/sucesos/20230615/balance-de-la-inseguridad-en-barcelona-criminalidad-se-dispara-los-ultimos-ocho-anos/771672967_0.html"
+      }
+    ]
+  },
+  {
+    "minuto": "1:32:49",
+    "cita": "hubieron disturbios durante meses en la ciudad",
+    "afirmacion": "Tras el referéndum del 1-O de 2017 hubo disturbios durante meses en Barcelona y una «represión del Partido Popular».",
+    "veredicto": "enganoso",
+    "explicacion": "La actuación policial del 1 de octubre de 2017, ordenada por el Gobierno del PP, dejó numerosos heridos (el Govern habló de 844 personas atendidas; el juzgado de instrucción n.º 7 de Barcelona contabilizó 218 heridos en una treintena de colegios de la capital), por lo que hablar de represión es una caracterización política de hechos reales. Pero no encuentro evidencia de «disturbios durante meses» en Barcelona tras el referéndum: las movilizaciones de otoño de 2017 fueron mayoritariamente pacíficas, con incidentes aislados. Los disturbios nocturnos y barricadas más graves en la ciudad se produjeron en octubre de 2019, durante aproximadamente una semana, tras la sentencia del Supremo (con un Gobierno del PSOE), y hubo incidentes puntuales en el aniversario de 2018.",
+    "confianza": "media",
+    "fuentes": [
+      {
+        "titulo": "Las cargas policiales produjeron 218 heridos en Barcelona el 1-O (Orain, 10/10/2017)",
+        "url": "https://orain.eus/es/politica/2017/10/10/las-cargas-policiales-produjeron-218-heridos-barcelona-1o/"
+      },
+      {
+        "titulo": "Al menos 844 personas han requerido asistencia médica en los incidentes de Cataluña, según el Govern (The Objective)",
+        "url": "https://theobjective.com/el-gobierno-catalan-confirma-el-censo-universal-para-votar-en-el-referendum/"
+      },
+      {
+        "titulo": "A week of turmoil in Catalonia (Catalan News)",
+        "url": "https://www.catalannews.com/catalan-news-tv/item/a-week-of-turmoil-in-catalonia"
+      }
+    ]
+  },
+  {
+    "minuto": "1:32:49",
+    "cita": "nosotros pusimos la policía de barrio para que hubiera más proximidad de la policía con la gente.",
+    "afirmacion": "El gobierno de Colau puso en marcha la policía de barrio para acercar la Guardia Urbana a los vecinos.",
+    "veredicto": "enganoso",
+    "explicacion": "La figura de la policía de barrio ya existía antes: el Plan director de la Guardia Urbana (mayo de 2016, ya con Colau) señala que todas las unidades territoriales disponían de un Equipo de Policía de Barrio. Lo que el gobierno de Colau planteó fue reforzarlo y extenderlo (un agente referente en cada uno de los 73 barrios), con la ampliación condicionada a nuevas incorporaciones. Decir que la «pusieron» sugiere una creación que no es exacta, aunque sí impulsaron su refuerzo; no he podido comprobar el grado de implantación real posterior.",
+    "confianza": "media",
+    "fuentes": [
+      {
+        "titulo": "Pla director de la Guàrdia Urbana de Barcelona (Ajuntament, mayo de 2016)",
+        "url": "https://media-edg.barcelona.cat/wp-content/uploads/2016/05/PDGUB-document-1605261.pdf"
+      },
+      {
+        "titulo": "Pla Local de Seguretat de Barcelona 2024-2027 (Ajuntament de Barcelona)",
+        "url": "https://ajuntament.barcelona.cat/seguretatiprevencio/sites/default/files/2024-07/Pla%20Local%20de%20Seguretat_2024_2027.pdf"
+      }
+    ]
+  },
+  {
+    "minuto": "1:33:50",
+    "cita": "Pidimos que hubieran nuevos juzgados para que se pudieran hacer los juicios rápidos.",
+    "afirmacion": "El gobierno municipal pidió nuevos juzgados para poder celebrar juicios rápidos por los robos.",
+    "veredicto": "no_verificable",
+    "explicacion": "No he encontrado una fuente de la etapa de Colau (2015-2023) que documente esa petición concreta. Sí consta que el Plan Local de Seguridad 2024-2027, ya con Collboni, incluye «impulsar la creación de más juzgados» para el enjuiciamiento inmediato de la multirreincidencia, lo que muestra que es una reivindicación municipal habitual, pero no prueba que Colau la formulara.",
+    "confianza": "baja",
+    "fuentes": [
+      {
+        "titulo": "Pla Local de Seguretat de Barcelona 2024-2027 (Ajuntament de Barcelona)",
+        "url": "https://ajuntament.barcelona.cat/seguretatiprevencio/sites/default/files/2024-07/Pla%20Local%20de%20Seguretat_2024_2027.pdf"
+      }
+    ]
+  },
+  {
+    "minuto": "1:33:50",
+    "cita": "pero no nos iba a poner y ni siquiera venía a reunirse a las juntas locales de seguridad",
+    "afirmacion": "El conseller de Interior de Junts dijo públicamente que debía Mossos a Barcelona pero que no los iba a poner, y ni siquiera iba a las juntas locales de seguridad.",
+    "veredicto": "enganoso",
+    "explicacion": "El conseller de Interior de JxCat entre 2018 y 2021, Miquel Buch, dijo públicamente que no podía contratar más Mossos porque «el Estado me debe dinero» (600-800 M€), que faltaban unos 2.000 agentes y que no los había puesto antes ni en Barcelona ni en otros lugares «porque no los tenía»; es decir, no dijo literalmente que se los debiera a Barcelona y no los fuera a poner. Colau le reprochó en mayo de 2019 no haber acudido a la Junta Local de Seguridad de abril, pero Buch sí asistió a la de 19 de julio de 2019, de modo que «ni siquiera venía» generaliza una ausencia documentada. No he encontrado la cita exacta que atribuye.",
+    "confianza": "media",
+    "fuentes": [
+      {
+        "titulo": "Colau se anticipa a las críticas por la inseguridad en Barcelona con una carta que pide al Govern más Mossos (elDiario.es, 07/05/2019)",
+        "url": "https://www.eldiario.es/catalunya/Colau-inseguridad-Barcelona-Govern-Mossos_0_896610640.html"
+      },
+      {
+        "titulo": "Buch: «No puc contractar més mossos perquè l'Estat em deu diners» (Betevé)",
+        "url": "https://beteve.cat/societat/buch-manca-de-mossos-estat/"
+      },
+      {
+        "titulo": "Acaba la primera Junta de Seguretat de Barcelona del nou mandat de Colau (3Cat, 19/07/2019)",
+        "url": "https://www.3cat.cat/3catinfo/acaba-la-primera-junta-de-seguretat-de-barcelona-del-nou-mandat-de-colau/noticia-amp/2936374/"
+      }
+    ]
+  },
+  {
+    "minuto": "1:33:50",
+    "cita": "Eso no depende del ayuntamiento.",
+    "afirmacion": "Los juzgados que harían juicios rápidos a los multirreincidentes no dependen del Ayuntamiento.",
+    "veredicto": "verdadero",
+    "explicacion": "La administración de justicia no es competencia municipal: la planta judicial y la creación de juzgados corresponden al Estado y la dotación de medios materiales y personales a la Generalitat (en Cataluña). El propio Plan Local de Seguridad de Barcelona 2024-2027 plantea «impulsar» la creación de más juzgados y reformas legislativas, es decir, depende de otros operadores. Las fuentes consultadas son secundarias (no se pudo abrir el BOE).",
+    "confianza": "media",
+    "fuentes": [
+      {
+        "titulo": "Estatuto de Autonomía de Cataluña de 2006 (Wikipedia)",
+        "url": "https://es.wikipedia.org/wiki/Estatuto_de_Autonom%C3%ADa_de_Catalu%C3%B1a_de_2006"
+      },
+      {
+        "titulo": "Pla Local de Seguretat de Barcelona 2024-2027 (Ajuntament de Barcelona)",
+        "url": "https://ajuntament.barcelona.cat/seguretatiprevencio/sites/default/files/2024-07/Pla%20Local%20de%20Seguretat_2024_2027.pdf"
+      }
+    ]
+  },
+  {
+    "minuto": "1:34:51",
+    "cita": "era la presidenta de la Junta Local de Seguridad. Entonces cada trimestre me reunía con todas las policías",
+    "afirmacion": "Como alcaldesa presidía la Junta Local de Seguridad y se reunía cada trimestre con todas las policías para revisar los datos.",
+    "veredicto": "no_verificable",
+    "explicacion": "Está acreditado que Colau participó en reuniones de la Junta Local de Seguridad junto al conseller de Interior, Mossos, Guardia Urbana, Fiscalía y representantes judiciales (por ejemplo, el 19 de julio de 2019 y el 7 de julio de 2022). Pero en las fuentes consultadas no consta quién la presidía formalmente ni una periodicidad trimestral, por lo que no puedo confirmar el detalle.",
+    "confianza": "baja",
+    "fuentes": [
+      {
+        "titulo": "Acaba la primera Junta de Seguretat de Barcelona del nou mandat de Colau (3Cat, 19/07/2019)",
+        "url": "https://www.3cat.cat/3catinfo/acaba-la-primera-junta-de-seguretat-de-barcelona-del-nou-mandat-de-colau/noticia-amp/2936374/"
+      },
+      {
+        "titulo": "Cauen un 23% els delictes a Barcelona però augmenten les denúncies per agressions sexuals respecte al 2019 (Nació Digital, 07/07/2022)",
+        "url": "https://naciodigital.cat/politica/cauen-un-23-els-delictes-a-barcelona-pero-augmenten-les-denuncies-per-agressions-sexuals-respecte-2019.html"
+      }
+    ]
+  },
+  {
+    "minuto": "1:34:51",
+    "cita": "la principal nacionalidad no era extranjera, era española",
+    "afirmacion": "En los datos de delitos cometidos en Barcelona que vio como alcaldesa (en su mayoría hurtos), la principal nacionalidad de los autores era la española, no la extranjera.",
+    "veredicto": "enganoso",
+    "explicacion": "Los únicos datos municipales de nacionalidad que he localizado contradicen esa idea para el final de su mandato: la Guardia Urbana informó de que el 76,45% de sus detenidos en el primer semestre de 2022 eran extranjeros, y entre enero de 2022 y diciembre de 2023 (Guardia Urbana y Mossos) el 78% de las 37.168 detenciones en Barcelona (29.096 extranjeros frente a 8.072 españoles); en hurtos, la Guardia Urbana registró 4.738 detenidos extranjeros y 730 españoles. Son detenciones, no condenas ni todos los delitos, y no he hallado series de 2015-2019. Solo si se interpreta «principal nacionalidad» como la nacionalidad individual más frecuente podría ser cierto (los detenidos españoles rondan el 21-24%); a nivel de toda Cataluña, los Mossos atribuyeron en 2023 unos 68.600 delitos a españoles y 55.400 a extranjeros.",
+    "confianza": "media",
+    "fuentes": [
+      {
+        "titulo": "La Guardia Urbana de Barcelona afirma que el 76% de los detenidos son extranjeros (The Objective, 23/11/2022)",
+        "url": "https://theobjective.com/espana/2022-11-23/barcelona-detenidos-extranjeros/"
+      },
+      {
+        "titulo": "El multiculturalismo hunde Barcelona: casi el 80 % de los delitos fueron cometidos por la población extranjera (El Debate, 21/01/2024; datos de detenciones 2022-2023)",
+        "url": "https://www.eldebate.com/espana/cataluna/20240121/multiculturalismo-hunde-barcelona-casi-80-delitos-fueron-cometidos-poblacion-extranjera_168590.html"
+      },
+      {
+        "titulo": "Ocho de cada diez detenidos en Barcelona son extranjeros (Metrópoli Abierta, 19/01/2024)",
+        "url": "https://metropoliabierta.elespanol.com/el-pulso-de-la-ciudad/20240119/ocho-de-cada-diez-detenidos-en-barcelona-son-extranjeros/826167448_0.html"
+      },
+      {
+        "titulo": "Los extranjeros cometen delitos menos graves y tienen menos permisos (Ara, datos Mossos 2023 para Cataluña)",
+        "url": "https://es.ara.cat/sociedad/inmigracion/extranjeros-cometen-delitos-graves-permisos_130_4934748.html"
+      }
+    ]
+  },
+  {
+    "minuto": "1:35:52",
+    "cita": "sé que la mayoría eran de nacionalidad española, del conjunto de delitos que se producían en Barcelona",
+    "afirmacion": "La mayoría de los autores del conjunto de delitos cometidos en Barcelona durante su mandato eran de nacionalidad española.",
+    "veredicto": "enganoso",
+    "explicacion": "No he encontrado una serie de Barcelona ciudad sobre nacionalidad de los autores de todos los delitos para 2015-2023. Los datos disponibles de detenciones en la ciudad (Guardia Urbana y Mossos, 2022-2023) muestran un 78% de extranjeros, y la proporción de extranjeros entre detenidos es muy superior a su peso en la población (en torno al 25% de los empadronados). Los Mossos sí atribuyen a nivel catalán (2023) un 55% de los delitos con autor identificado a españoles y un 45% a extranjeros (que son el 16% de la población), así que la frase puede ser cierta con ese criterio más amplio y para Cataluña, pero no para las detenciones en Barcelona. Colau admite no recordar el porcentaje exacto.",
+    "confianza": "baja",
+    "fuentes": [
+      {
+        "titulo": "El multiculturalismo hunde Barcelona (El Debate, 21/01/2024; detenciones 2022-2023)",
+        "url": "https://www.eldebate.com/espana/cataluna/20240121/multiculturalismo-hunde-barcelona-casi-80-delitos-fueron-cometidos-poblacion-extranjera_168590.html"
+      },
+      {
+        "titulo": "Los extranjeros cometen delitos menos graves y tienen menos permisos (Ara, datos Mossos 2023)",
+        "url": "https://es.ara.cat/sociedad/inmigracion/extranjeros-cometen-delitos-graves-permisos_130_4934748.html"
+      }
+    ]
+  },
+  {
+    "minuto": "1:37:01",
+    "cita": "durante todos los años que fui alcaldesa, el 90% del conjunto de los delitos de todos lo realizaban hombres",
+    "afirmacion": "Durante todos los años que fue alcaldesa, el 90% del conjunto de los delitos los cometían hombres.",
+    "veredicto": "mayormente_verdadero",
+    "explicacion": "El Plan Local de Seguridad 2024-2027 recoge que en 2023 el 89,28% de las personas detenidas o investigadas en Barcelona eran hombres (83,7% en hurtos, 93% en robos con violencia). A nivel estatal, el INE indica que el 81% de los condenados en 2022 eran varones (80,6% en 2023). La cifra del 90% es una aproximación razonable para Barcelona en 2023, pero no he podido comprobar «todos los años» del mandato y las estadísticas de condenas dan algo menos.",
+    "confianza": "media",
+    "fuentes": [
+      {
+        "titulo": "Pla Local de Seguretat de Barcelona 2024-2027 (Ajuntament de Barcelona)",
+        "url": "https://ajuntament.barcelona.cat/seguretatiprevencio/sites/default/files/2024-07/Pla%20Local%20de%20Seguretat_2024_2027.pdf"
+      },
+      {
+        "titulo": "Estadística de Condenados 2023 (INE, 24/09/2024)",
+        "url": "https://www.ine.es/dyngs/Prensa/ECAECM2023.htm"
+      }
+    ]
+  }
+]

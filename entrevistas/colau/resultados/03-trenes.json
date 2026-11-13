@@ -1,0 +1,468 @@
+[
+  {
+    "minuto": "0:36:46",
+    "cita": "yo entiendo que en ese primer momento no lo hiciera por el poco tiempo que llevaba de ministra responsable del tema",
+    "afirmacion": "Cuando ocurrió el primer accidente de alta velocidad (Adamuz, 18 de enero de 2026), el ministro de Transportes Óscar Puente llevaba poco tiempo en el cargo.",
+    "veredicto": "falso",
+    "explicacion": "Óscar Puente fue nombrado ministro de Transportes y Movilidad Sostenible el 20-21 de noviembre de 2023, así que en enero de 2026 llevaba algo más de dos años en el cargo, es decir, toda la legislatura. Puede discutirse qué es «poco tiempo», pero la premisa de que acababa de llegar no se sostiene con las fechas.",
+    "confianza": "media",
+    "fuentes": [
+      {
+        "titulo": "The Objective: Óscar Puente y Ana Redondo prometen sus cargos como ministros (21/11/2023)",
+        "url": "https://theobjective.com/actualidad/2023-11-21/oscar-puente-ana-redondo-prometen-cargos-ministros/"
+      },
+      {
+        "titulo": "La Moncloa: Ministro de Transportes y Movilidad Sostenible (biografía)",
+        "url": "https://www.lamoncloa.gob.es/gobierno/Paginas/biografias-xv-legislatura/ministro-oscar-puente.aspx"
+      },
+      {
+        "titulo": "Wikipedia: Accidente ferroviario de Adamuz",
+        "url": "https://es.wikipedia.org/wiki/Accidente_ferroviario_de_Adamuz"
+      }
+    ]
+  },
+  {
+    "minuto": "0:36:46",
+    "cita": "el problema venía de desinversiones de muchos años antes",
+    "afirmacion": "Los problemas de la red ferroviaria que desembocaron en los accidentes venían de recortes de inversión acumulados durante muchos años.",
+    "veredicto": "mayormente_verdadero",
+    "explicacion": "La inversión pública en ferrocarril cayó con fuerza entre 2009-2011 y 2016-2017 (de unos 8.800 M€ en 2009 a un mínimo de 1.652 M€ en 2016, según Transportes citado por El Debate) y desde entonces se recupera sin llegar a niveles de 2009. Sin embargo, la causa concreta de Adamuz sigue en investigación (un borrador de la CIAF apunta a una rotura de la vía la noche anterior) y Adif sostiene que no fue un problema de mantenimiento, por lo que atribuirlo directamente a la desinversión no está demostrado.",
+    "confianza": "media",
+    "fuentes": [
+      {
+        "titulo": "El Debate: El deterioro de la inversión ferroviaria (29/10/2026)",
+        "url": "https://www.eldebate.com/economia/20261029/deterioro-inversion-ferroviaria-trenes-viajeros-menos-dinero-vias_474787.html"
+      },
+      {
+        "titulo": "Público: Déficit histórico en inversiones, la división Renfe-Adif y servicios externalizados",
+        "url": "https://www.publico.es/economia/deficit-historico-inversiones-division-renfe-adif-servicios-externalizados-grietas-sistema-ferroviario.html"
+      },
+      {
+        "titulo": "The Objective: la CIAF descarta un vicio oculto en Adamuz (18/03/2026)",
+        "url": "https://theobjective.com/economia/transporte/2026-03-18/ciaf-descarta-vicio-oculto-adamuz-plan-puente/"
+      },
+      {
+        "titulo": "Noticias de Navarra: Adif dice que Adamuz no fue un problema de mantenimiento sino, en todo caso, de inspección",
+        "url": "https://www.noticiasdenavarra.com/sucesos/2026/04/15/adif-dice-accidente-adamuz-problema-10944994.html"
+      }
+    ]
+  },
+  {
+    "minuto": "0:37:47",
+    "cita": "también de la desinversión de gobiernos del Partido Popular",
+    "afirmacion": "La desinversión ferroviaria acumulada incluye recortes hechos por gobiernos del Partido Popular.",
+    "veredicto": "verdadero",
+    "explicacion": "Según el Observatorio del Ferrocarril citado por Público, la inversión pública en ferrocarril bajó de 7.553 M€ en 2011 a 2.214 M€ en 2017 (más de un 70 %), periodo del Gobierno de Rajoy; el mínimo de la serie fue 1.652 M€ en 2016. El recorte empezó ya en 2010-2011 con el Gobierno del PSOE y la inversión no volvió a superar los 3.100 M€ anuales entre 2013 y 2022, es decir, no fue solo cosa del PP.",
+    "confianza": "media",
+    "fuentes": [
+      {
+        "titulo": "Público: Déficit histórico en inversiones, la división Renfe-Adif y servicios externalizados",
+        "url": "https://www.publico.es/economia/deficit-historico-inversiones-division-renfe-adif-servicios-externalizados-grietas-sistema-ferroviario.html"
+      },
+      {
+        "titulo": "El Debate: El deterioro de la inversión ferroviaria (29/10/2026)",
+        "url": "https://www.eldebate.com/economia/20261029/deterioro-inversion-ferroviaria-trenes-viajeros-menos-dinero-vias_474787.html"
+      }
+    ]
+  },
+  {
+    "minuto": "0:36:46",
+    "cita": "En cambio, con el segundo accidente lo dije inmediatamente. Creía que tenía que asumir responsabilidades políticas y dimitir.",
+    "afirmacion": "Tras el segundo accidente (Urda, 28 de octubre de 2026), Colau pidió de inmediato y públicamente que el ministro Puente asumiera responsabilidades políticas y dimitiera.",
+    "veredicto": "verdadero",
+    "explicacion": "El mismo día del accidente (28 de octubre) Colau exigió que se asumieran responsabilidades, antes que ningún otro socio del Gobierno según elDiario.es; el 29 pidió que Puente compareciera y asumiera su responsabilidad, y el 30 de octubre pidió expresamente su dimisión. Puente dimitió el 3 de noviembre. La petición explícita de dimisión llegó dos días después del accidente, lo que encaja razonablemente con «inmediatamente». Tras el primer accidente (Adamuz) no consta que pidiera su dimisión, como ella misma admite.",
+    "confianza": "alta",
+    "fuentes": [
+      {
+        "titulo": "elDiario.es: El Frente Amplio eleva la presión sobre Puente (30/10/2026)",
+        "url": "https://www.eldiario.es/1_cff19b"
+      },
+      {
+        "titulo": "Demócrata: Colau rechaza culpar a los trabajadores y exige que Puente asuma su responsabilidad (29/10/2026)",
+        "url": "https://www.democrata.es/en/politics/colau-refuses-to-blame-the-workers-and-demands-that-puente-assume-his-responsibility/"
+      },
+      {
+        "titulo": "Demócrata: Colau exige la dimisión inmediata de Óscar Puente (30/10/2026)",
+        "url": "https://www.democrata.es/en/politics/expansion-colau-demands-the-immediate-resignation-of-oscar-puente-after-the-railway-accident/"
+      },
+      {
+        "titulo": "ESdiario: Ada Colau exige la dimisión de Óscar Puente (30/10/2026)",
+        "url": "https://www.esdiario.com/nacional/261030/201709/ada-colau-dimision-oscar-puente.html"
+      }
+    ]
+  },
+  {
+    "minuto": "0:38:47",
+    "cita": "Y ellos llevaban avisando tiempo.",
+    "afirmacion": "Los trabajadores ferroviarios llevaban tiempo avisando, antes de los accidentes, de la falta de mantenimiento, inversión y personal.",
+    "veredicto": "mayormente_verdadero",
+    "explicacion": "Hay advertencias sindicales documentadas antes de Adamuz: SEMAF pidió por escrito en agosto de 2025 limitar la velocidad a 250 km/h en cuatro líneas de alta velocidad por desgaste de la vía; CCOO y UGT denunciaron en 2025 falta de plantilla y externalización del mantenimiento. No he encontrado huelgas ferroviarias convocadas antes del accidente de Adamuz (las del 9-11 de febrero de 2026 son posteriores); antes de Urda, SEMAF había convocado una huelga para el 29 de octubre por incumplimientos del acuerdo de febrero.",
+    "confianza": "media",
+    "fuentes": [
+      {
+        "titulo": "Vozpópuli: Los sindicatos ya denunciaron la precariedad en Adif y Renfe antes de Adamuz",
+        "url": "https://www.vozpopuli.com/amp/economia/los-sindicatos-ya-denunciaron-la-precariedad-en-adif-y-renfe-antes-de-adamuz.html"
+      },
+      {
+        "titulo": "Última Hora: Maquinistas convocan huelga general tras los accidentes de Adamuz y Gelida (21/01/2026)",
+        "url": "https://www.ultimahora.es/sucesos/ultimas/2026/01/21/2553605/maquinistas-convocan-huelga-general-tras-accidentes-adamuz-gelida.html"
+      },
+      {
+        "titulo": "Demócrata: Los maquinistas de Renfe convocan una huelga de 24 horas el 29 de octubre",
+        "url": "https://www.democrata.es/economia/maquinistas-renfe-convocan-huelga-24-horas-29-octubre-fracasar-negociaciones/"
+      }
+    ]
+  },
+  {
+    "minuto": "0:38:47",
+    "cita": "yo me he reunido con los trabajadores porque creo que era muy importante escucharles directamente",
+    "afirmacion": "Ada Colau se ha reunido con trabajadores ferroviarios.",
+    "veredicto": "verdadero",
+    "explicacion": "El 2 de noviembre de 2026, en Barcelona, Colau se reunió con representantes de los principales sindicatos ferroviarios (CCOO, UGT, CGT, SF y SCF) y después propuso un pacto de Estado, una auditoría de la red y reunificar Renfe y Adif. Fue una reunión con representantes sindicales, no consta una con el sindicato de maquinistas SEMAF.",
+    "confianza": "media",
+    "fuentes": [
+      {
+        "titulo": "Demócrata: Colau plantea reunificar Renfe y Adif y reclama un pacto de Estado para auditar la red ferroviaria (02/11/2026)",
+        "url": "https://www.democrata.es/politica/colau-plantea-reunificar-renfe-y-adif-y-reclama-un-pacto-de-estado-para-auditar-la-red-ferroviaria/"
+      },
+      {
+        "titulo": "Onda Vasca: Colau propone un pacto de Estado para reunificar Renfe y Adif",
+        "url": "https://www.ondavasca.com/colau-propone-un-pacto-de-estado-para-reunificar-renfe-y-adif/"
+      }
+    ]
+  },
+  {
+    "minuto": "0:38:47",
+    "cita": "un modelo que desgraciadamente han compartido PP y PSOE, que es el de liberalizar",
+    "afirmacion": "PP y PSOE han compartido un modelo de liberalización del sector ferroviario.",
+    "veredicto": "verdadero",
+    "explicacion": "La separación orgánica entre gestor de infraestructura y operador se dispuso en la Ley 39/2003 del Sector Ferroviario (Gobierno del PP, en vigor desde el 1 de enero de 2005, ya con el PSOE en el Gobierno); la Ley 38/2015, que profundizó la liberalización y transpuso la Directiva 2012/34/UE, es del Gobierno del PP; y la apertura efectiva del transporte de viajeros de alta velocidad se produjo con el PSOE (Ouigo en mayo de 2021, Iryo en noviembre de 2022). Es una caracterización de fondo correcta, enmarcada además por directivas europeas.",
+    "confianza": "media",
+    "fuentes": [
+      {
+        "titulo": "BOE: Ley 38/2015, de 29 de septiembre, del sector ferroviario",
+        "url": "https://www.boe.es/eli/es/l/2015/09/29/38"
+      },
+      {
+        "titulo": "BOE: Ley 39/2003, del Sector Ferroviario (consolidado)",
+        "url": "https://boe.es/buscar/epub/2003/BOE-A-2003-20978-consolidado.epub"
+      },
+      {
+        "titulo": "Infobae: Cinco años de liberalización ferroviaria (01/11/2026)",
+        "url": "https://www.infobae.com/espana/2026/11/01/cinco-anos-de-liberalizacion-ferroviaria-el-doble-de-viajeros-mas-presion-sobre-las-plantillas-y-una-inversion-que-no-sigue-el-ritmo/"
+      }
+    ]
+  },
+  {
+    "minuto": "0:38:47",
+    "cita": "una cosa tan importante como es el mantenimiento se deja en manos de subcontratas y subcontratas",
+    "afirmacion": "El mantenimiento de la red ferroviaria se ha externalizado en manos de empresas subcontratadas privadas.",
+    "veredicto": "mayormente_verdadero",
+    "explicacion": "Adif adjudica a UTE privadas el mantenimiento de las líneas de alta velocidad (por ejemplo, 56,5 M€ para la LAV Madrid-Este en 2025) y los sindicatos denuncian que el mantenimiento está «casi todo privatizado». No hay cifra oficial del porcentaje externalizado y Adif sigue siendo pública y contratante y supervisora, por lo que «se deja en manos de subcontratas» simplifica la situación.",
+    "confianza": "media",
+    "fuentes": [
+      {
+        "titulo": "Adif: Adif destina más de 56 M€ al mantenimiento de la LAV Madrid-Este",
+        "url": "https://www.adif.es/w/adjudicacion-mantenimiento-linea-alta-velocidad-madrid-este"
+      },
+      {
+        "titulo": "Público: Déficit histórico en inversiones, la división Renfe-Adif y servicios externalizados",
+        "url": "https://www.publico.es/economia/deficit-historico-inversiones-division-renfe-adif-servicios-externalizados-grietas-sistema-ferroviario.html"
+      },
+      {
+        "titulo": "Diario de León: Sindicatos dicen que el mantenimiento de alta velocidad no puede seguir en manos privadas",
+        "url": "https://www.diariodeleon.es/nacional/260203/2074474/sindicatos-dicen-mantenimiento-alta-velocidad-seguir-manos-privadas.html"
+      }
+    ]
+  },
+  {
+    "minuto": "0:39:48",
+    "cita": "En Rodalías tenemos problemas de retrasos, de mal funcionamiento desde hace un montón de años",
+    "afirmacion": "Rodalies de Catalunya sufre retrasos y mal funcionamiento desde hace muchos años.",
+    "veredicto": "verdadero",
+    "explicacion": "Rodalies de Barcelona cerró 2025 con solo un 50 % de puntualidad, la peor de las Cercanías de España, y en septiembre de 2026 solo el 49,2 % de los trenes llegó a su hora (datos del portal de transparencia de Renfe). El Síndic de Greuges recibió 397 quejas por averías en 2025 frente a 160 en todo 2024, y la OCU describía en marzo de 2025 una infraestructura frágil con retrasos en casi todas las líneas. Mi búsqueda no encontró series de puntualidad anteriores a 2025, así que «muchos años» se apoya sobre todo en esos indicios.",
+    "confianza": "media",
+    "fuentes": [
+      {
+        "titulo": "APD: Rodalies terminó 2025 con solo un 50 % de puntualidad",
+        "url": "https://www.apd.cat/en/girona/rodalies-ended-2025-with-only-50-punctuality-the-lowest-figure-of-all-the-cercanias-of-spain_4519_102.html"
+      },
+      {
+        "titulo": "Moncloa.com: Rodalies retrasos septiembre (21/10/2026)",
+        "url": "https://www.moncloa.com/2026/10/21/rodalies-retrasos-septiembre-3452816/"
+      },
+      {
+        "titulo": "OCU: nota de prensa sobre Rodalies (26/03/2025)",
+        "url": "https://www.ocu.org/organizacion/prensa/notas-de-prensa/2025/rodaliescat260325"
+      },
+      {
+        "titulo": "Canal 21 Ebre: el Síndic recibe más del doble de quejas por Rodalies que en todo 2024",
+        "url": "https://www.canal21ebre.com/el-sindic-rep-els-primers-mesos-de-lany-mes-del-doble-de-queixes-per-rodalies-que-durant-tot-el-2024"
+      }
+    ]
+  },
+  {
+    "minuto": "0:39:48",
+    "cita": "se insinuara que esto podía ser simplemente un fallo humano",
+    "afirmacion": "Desde el Gobierno se insinuó que el accidente ferroviario podía deberse simplemente a un fallo humano.",
+    "veredicto": "mayormente_verdadero",
+    "explicacion": "Tras el accidente de Urda (28 de octubre de 2026), según Vozpópuli el Ministerio apuntaba horas después a un «fallo humano» y Puente calificó de «inexplicable» la decisión del operario de Atocha que dio luz verde al tren; al despedirse volvió a señalar al operario (cuatro días de descanso, dos horas de turno). El propio Puente reconoció que la doble verificación no es garantía absoluta. Que fuera «simplemente» un fallo humano y que ello fuese «cínico» son valoraciones de Colau, pero la insinuación está documentada. La fuente principal es un medio crítico con el Gobierno.",
+    "confianza": "media",
+    "fuentes": [
+      {
+        "titulo": "Vozpópuli: El Gobierno culpa ahora al técnico de Adif (30/10/2026)",
+        "url": "https://www.vozpopuli.com/economia/empresas/el-gobierno-culpa-ahora-al-tecnico-de-adif-pese-a-crear-una-ley-para-protegerlos-ante-accidentes-como-el-de-toledo.html"
+      },
+      {
+        "titulo": "Vozpópuli: Puente pone a los operarios de Adif en la diana de las culpas antes de marcharse (04/11/2026)",
+        "url": "https://www.vozpopuli.com/economia/transporte/puente-pone-a-los-operarios-de-adif-la-diana-de-las-culpas-antes-de-marcharse-de-transportes.html"
+      },
+      {
+        "titulo": "elDiario.es: El Frente Amplio eleva la presión sobre Puente (30/10/2026)",
+        "url": "https://www.eldiario.es/1_cff19b"
+      }
+    ]
+  },
+  {
+    "minuto": "0:40:48",
+    "cita": "donde se separó Renfe de Adif",
+    "afirmacion": "Con el modelo liberalizado, Renfe (operador) se separó de Adif (gestor de infraestructura).",
+    "veredicto": "verdadero",
+    "explicacion": "Renfe y Adif se separaron el 1 de enero de 2005 al entrar en vigor la Ley 39/2003 del Sector Ferroviario: Renfe Operadora pasó a operar trenes y Adif a gestionar la infraestructura. La separación es anterior en unos quince años a la apertura a la competencia del transporte de viajeros (2020-2021).",
+    "confianza": "alta",
+    "fuentes": [
+      {
+        "titulo": "Público: Déficit histórico en inversiones, la división Renfe-Adif y servicios externalizados",
+        "url": "https://www.publico.es/economia/deficit-historico-inversiones-division-renfe-adif-servicios-externalizados-grietas-sistema-ferroviario.html"
+      },
+      {
+        "titulo": "BOE: Ley 39/2003, del Sector Ferroviario (consolidado)",
+        "url": "https://boe.es/buscar/epub/2003/BOE-A-2003-20978-consolidado.epub"
+      },
+      {
+        "titulo": "Infobae: Cinco años de liberalización ferroviaria (01/11/2026)",
+        "url": "https://www.infobae.com/espana/2026/11/01/cinco-anos-de-liberalizacion-ferroviaria-el-doble-de-viajeros-mas-presion-sobre-las-plantillas-y-una-inversion-que-no-sigue-el-ritmo/"
+      }
+    ]
+  },
+  {
+    "minuto": "0:40:48",
+    "cita": "en lugar de tener un único operador público como tienen en Francia o tienen en Alemania",
+    "afirmacion": "Francia y Alemania tienen un único operador público ferroviario, a diferencia de España, donde se separaron Renfe y Adif.",
+    "veredicto": "enganoso",
+    "explicacion": "Francia (SNCF) y Alemania (Deutsche Bahn) tienen grupos públicos integrados en forma de holding, pero con filiales jurídicamente distintas para la infraestructura (SNCF Réseau, DB InfraGO) y no son un operador único: ambos países también han abierto el mercado a competidores (Trenitalia y Renfe en Francia; operadores privados agrupados en Mofair en Alemania). Alemania debate incluso separar más DB InfraGO del grupo por problemas de competencia. El modelo integrado existe, pero presentarlo como «un único operador» frente a una España fragmentada simplifica en exceso.",
+    "confianza": "media",
+    "fuentes": [
+      {
+        "titulo": "Railway Gazette: Monopoly commission recommends splitting off German railway infrastructure",
+        "url": "https://www.railwaygazette.com/policy/monopoly-commission-recommends-splitting-off-german-railway-infrastructure/69016.article"
+      },
+      {
+        "titulo": "RCF: SNCF, Trenitalia, Renfe: que change la concurrence dans le rail en France",
+        "url": "https://www.rcf.fr/articles/actualite/sncf-trenitalia-renfe-que-change-la-concurrence-dans-le-rail-en-france"
+      },
+      {
+        "titulo": "Sénat francés: inquietudes sobre la independencia de SNCF Réseau en la apertura a la competencia",
+        "url": "https://www.senat.fr/rap/a19-183/a19-1834.html"
+      },
+      {
+        "titulo": "Público: Déficit histórico en inversiones, la división Renfe-Adif y servicios externalizados",
+        "url": "https://www.publico.es/economia/deficit-historico-inversiones-division-renfe-adif-servicios-externalizados-grietas-sistema-ferroviario.html"
+      }
+    ]
+  },
+  {
+    "minuto": "0:41:49",
+    "cita": "Luego que se ha bajado en la inversión en mantenimiento",
+    "afirmacion": "El gasto en mantenimiento ferroviario ha bajado.",
+    "veredicto": "enganoso",
+    "explicacion": "Según Adif, el gasto en mantenimiento subió de 720 M€ en 2017 a 1.120 M€ en 2025 (+60 % nominal, unos +25 % real, según El Debate), y por km de alta velocidad pasó de 83.000 a 110.000 € (+6 % real). Lo que sí ha caído es el gasto en relación con el tráfico: -10 % por viajero-km respecto a 2017, y de 31,7 € a 8,5 € por viajero entre 2020 y 2024 (Infobae). Decir que «se ha bajado» sin ese matiz es engañoso, porque el gasto absoluto no ha bajado en la serie reciente.",
+    "confianza": "media",
+    "fuentes": [
+      {
+        "titulo": "El Debate: El deterioro de la inversión ferroviaria (29/10/2026)",
+        "url": "https://www.eldebate.com/economia/20261029/deterioro-inversion-ferroviaria-trenes-viajeros-menos-dinero-vias_474787.html"
+      },
+      {
+        "titulo": "El Español: El gasto real en mantener la red de alta velocidad cae un 22 % (27/01/2026)",
+        "url": "https://www.elespanol.com/invertia/observatorios/movilidad/20260127/gasto-real-mantener-red-alta-velocidad-cae-respecto-anos-anteriores-liberalizacion-ferroviaria/1003744100044_0.html"
+      },
+      {
+        "titulo": "Infobae: Cinco años de liberalización ferroviaria (01/11/2026)",
+        "url": "https://www.infobae.com/espana/2026/11/01/cinco-anos-de-liberalizacion-ferroviaria-el-doble-de-viajeros-mas-presion-sobre-las-plantillas-y-una-inversion-que-no-sigue-el-ritmo/"
+      }
+    ]
+  },
+  {
+    "minuto": "0:41:49",
+    "cita": "tenemos la mitad que en Francia",
+    "afirmacion": "España invierte en mantenimiento ferroviario la mitad que Francia.",
+    "veredicto": "mayormente_verdadero",
+    "explicacion": "La comparación depende de la métrica. Con datos de la Comisión Europea, España gastó unos 96.000 €/km en mantener, renovar y mejorar la red en 2018-2022, la mitad de la media de la UE (191.000), y la inversión total por km en 2023 fue de 241.000 € frente a 444.000 € de Francia (ITF-OCDE). Para alta velocidad, las estimaciones sitúan a España entre un 21 % y un 45 % por debajo de Francia, porque SNCF Réseau no publica una cifra oficial por km y Francia tiene unas cinco veces más viajeros por km de red. El propio Puente admitió en el Senado en enero de 2026 que Francia o Bélgica invierten más. «La mitad» está en el extremo alto del rango de las estimaciones.",
+    "confianza": "baja",
+    "fuentes": [
+      {
+        "titulo": "Motorpasión: España tiene la segunda red de alta velocidad más grande del mundo. Gasta en mantenimiento la mitad que Francia",
+        "url": "https://www.motorpasion.com/industria/espana-tiene-segunda-red-trenes-alta-velocidad-grande-mundo-gasta-mantenimiento-mitad-que-francia"
+      },
+      {
+        "titulo": "Diario Socialista: España invierte hasta un 45 % menos por kilómetro que Francia en mantener la red de alta velocidad (29/10/2026)",
+        "url": "https://diariosocialista.net/2026/10/29/espana-invierte-hasta-un-45-menos-por-kilometro-que-francia-en-mantener-la-mayor-red-de-alta-velocidad-de-europa/"
+      },
+      {
+        "titulo": "El Debate: El deterioro de la inversión ferroviaria (29/10/2026)",
+        "url": "https://www.eldebate.com/economia/20261029/deterioro-inversion-ferroviaria-trenes-viajeros-menos-dinero-vias_474787.html"
+      }
+    ]
+  },
+  {
+    "minuto": "0:41:49",
+    "cita": "con la liberalización, entran otras operadoras que no aceptan,",
+    "afirmacion": "Con la liberalización entraron otras operadoras ferroviarias que no aceptan devolver el dinero por retrasos.",
+    "veredicto": "falso",
+    "explicacion": "Ouigo e Iryo, las operadoras privadas de alta velocidad, devuelven el 50 % del billete con más de 60 minutos de retraso y el 100 % con más de 90 (Xataka, 19/01/2026), las mismas condiciones que Renfe desde el 1 de julio de 2024. De hecho fue la operadora pública quien endureció su compromiso de puntualidad en 2024, que antes devolvía el 50 % a los 15 minutos y el 100 % a los 30. En enero de 2026 Renfe e Iryo anunciaron que los retrasos por limitaciones de velocidad no generaban derecho a compensación, mientras Ouigo mantenía la suya.",
+    "confianza": "alta",
+    "fuentes": [
+      {
+        "titulo": "Xataka: Cómo reclamar el dinero de tus billetes de Renfe, Ouigo o Iryo si hay retrasos y cancelaciones (19/01/2026)",
+        "url": "https://www.xataka.com/basics/como-reclamar-dinero-tus-billetes-renfe-ouigo-iryo-hay-retrasos-cancelaciones-cuanto-te-corresponde-cada-caso"
+      },
+      {
+        "titulo": "El Debate: Renfe cambia las reglas desde julio y devolverá el importe de los billetes con retrasos de hora y media (12/06/2024)",
+        "url": "https://www.eldebate.com/economia/20240612/renfe-cambia-reglas-desde-julio-devolvera-importe-billetes-retrasos-hora-media_204765.html"
+      },
+      {
+        "titulo": "COPE: Renfe e Iryo eliminan las indemnizaciones por retrasos debidos a las limitaciones de velocidad mientras Ouigo las mantiene (30/01/2026)",
+        "url": "https://www.cope.es/actualidad/economia/noticias/renfe-e-iryo-eliminan-indemnizaciones-retrasos-debidos-limitaciones-velocidad-ouigo-mantiene-20260130_3298155.html"
+      }
+    ]
+  },
+  {
+    "minuto": "0:42:50",
+    "cita": "y hay un 40% o más de trenes, pero el personal solo sube un 10% y no sube el mantenimiento",
+    "afirmacion": "Tras la apertura a otras operadoras hay un 40 % o más de trenes, pero el personal solo ha subido un 10 % y el mantenimiento no ha subido.",
+    "veredicto": "mayormente_verdadero",
+    "explicacion": "Las circulaciones anuales en la red de alta velocidad aumentaron un 46 % desde 2019 (más de 106.000) y la plantilla de Adif creció un 10 % (de 12.310 a 13.566 efectivos entre 2019 y 2025), según elDiario.es. El mantenimiento sí subió en términos nominales (+60 % entre 2017 y 2025, unos +25 % real), aunque ha caído por viajero-km y por viajero, por lo que «no sube» solo es cierto en relación con el tráfico. La cifra de personal se refiere solo a Adif.",
+    "confianza": "media",
+    "fuentes": [
+      {
+        "titulo": "elDiario.es: La plantilla de Adif ha crecido un 10 % desde la liberalización, con el tráfico disparado (04/11/2026)",
+        "url": "https://www.eldiario.es/economia/plantilla-adif-crecido-10-liberalizacion-trafico-disparado-pleno-relevo-generacional_1_13635233.html"
+      },
+      {
+        "titulo": "El Debate: El deterioro de la inversión ferroviaria (29/10/2026)",
+        "url": "https://www.eldebate.com/economia/20261029/deterioro-inversion-ferroviaria-trenes-viajeros-menos-dinero-vias_474787.html"
+      },
+      {
+        "titulo": "Infobae: Cinco años de liberalización ferroviaria (01/11/2026)",
+        "url": "https://www.infobae.com/espana/2026/11/01/cinco-anos-de-liberalizacion-ferroviaria-el-doble-de-viajeros-mas-presion-sobre-las-plantillas-y-una-inversion-que-no-sigue-el-ritmo/"
+      }
+    ]
+  },
+  {
+    "minuto": "0:44:07",
+    "cita": "lo dijo el mismo presidente, que era inasumible",
+    "afirmacion": "El presidente del Gobierno, Pedro Sánchez, dijo que un segundo accidente grave en menos de un año era inasumible.",
+    "veredicto": "verdadero",
+    "explicacion": "El 28 de octubre de 2026, en el lugar del accidente de Urda, Sánchez declaró: «No es asumible para un país como España sufrir dos accidentes ferroviarios de alta velocidad en un mismo año». La palabra «inasumible» es una paráfrasis fiel y así lo titularon varios medios.",
+    "confianza": "alta",
+    "fuentes": [
+      {
+        "titulo": "Herqles: Sánchez tilda de inasumibles dos accidentes ferroviarios en un año (29/10/2026)",
+        "url": "https://herqles.com/2026/10/29/sanchez-inasumible-accidentes-ferroviarios-puente/"
+      },
+      {
+        "titulo": "Vozpópuli: Sánchez defiende a Puente a pesar de que sus socios ya reclaman su dimisión",
+        "url": "https://www.vozpopuli.com/espana/politica/sanchez-defiende-a-puente-a-pesar-de-que-sus-socios-ya-reclaman-su-dimision-por-el-accidente.html"
+      },
+      {
+        "titulo": "Onda Cero (vía Shango): Del accidente inasumible al respaldo a Puente",
+        "url": "https://www.shango.media/onda-cero-del-accidente-inasumible-al-respaldo-a-puente-sanchez-cierra-filas-con-su-ministro-pese-a-las-criticas-por-urda-11998787"
+      }
+    ]
+  },
+  {
+    "minuto": "0:45:09",
+    "cita": "en este caso se han asumido responsabilidades políticas",
+    "afirmacion": "En el caso del accidente de Urda se han asumido responsabilidades políticas.",
+    "veredicto": "verdadero",
+    "explicacion": "El ministro de Transportes, Óscar Puente, anunció su dimisión el 3 de noviembre de 2026, seis días después del accidente de Urda, y renunció también a ir en las listas de las elecciones del 29 de noviembre.",
+    "confianza": "alta",
+    "fuentes": [
+      {
+        "titulo": "Diari de Tarragona: Puente dimite por sorpresa seis días después de Urda",
+        "url": "https://www.diaridetarragona.com/espana/274817/puente-dimite-sorpresa-6-dias-despues-urda-dura-comparecencia-congreso.html"
+      },
+      {
+        "titulo": "El Debate: Cae el polémico ministro de Transportes: Puente dimite (03/11/2026)",
+        "url": "https://www.eldebate.com/espana/20261103/puente-dimite-arrastrado-nefasta-gestion-tragedias-adamuz-urda-renuncio-cargo-listas_475290.html"
+      }
+    ]
+  },
+  {
+    "minuto": "0:45:09",
+    "cita": "no han dimitido nunca cuando les han pasado cosas incluso más grave como lo de la Dana",
+    "afirmacion": "La derecha que pide la dimisión de Sánchez no ha dimitido nunca por cosas más graves, como la dana.",
+    "veredicto": "falso",
+    "explicacion": "Carlos Mazón (PP), presidente de la Generalitat Valenciana, dimitió el 3 de noviembre de 2025, un año y cinco días después de la dana del 29 de octubre de 2024, y su cese se publicó en el BOE el 5 de noviembre. Se puede criticar que tardara un año y dimitiera tras fuertes presiones, pero el «nunca» y el «jamás» son incorrectos.",
+    "confianza": "alta",
+    "fuentes": [
+      {
+        "titulo": "Maldita.es: Mazón deja la presidencia de la Generalitat (03/11/2025)",
+        "url": "https://maldita.es/malditateexplica/20251103/mazon-dimite-dana-generalitat-valenciana/"
+      },
+      {
+        "titulo": "Newtral: Mazón dimite como president de la Generalitat Valenciana (03/11/2025)",
+        "url": "https://www.newtral.es/mazon-dimision-president/20251103/"
+      },
+      {
+        "titulo": "El Debate: El BOE publica el cese de Mazón (07/11/2025)",
+        "url": "https://www.eldebate.com/espana/comunidad-valenciana/20251107/boe-publica-cese-mazon-plena-negociacion-entre-pp-vox-sobre-sucesor_352774_amp.html"
+      }
+    ]
+  },
+  {
+    "minuto": "0:46:09",
+    "cita": "porque era justo antes del referéndum del 2017, hubo el atentado en la Rambla",
+    "afirmacion": "El atentado de La Rambla se produjo justo antes del referéndum de 2017, en pleno procés.",
+    "veredicto": "mayormente_verdadero",
+    "explicacion": "El atentado fue el 17 de agosto de 2017 y el referéndum del 1 de octubre, unas seis semanas después, en pleno procés (el Parlament aprobó la ley del referéndum el 6 de septiembre). «Justo antes» es una expresión flexible, pero el contexto de tensión política es cierto.",
+    "confianza": "alta",
+    "fuentes": [
+      {
+        "titulo": "VilaWeb: Barcelona citizens chant No tinc por as they retake La Rambla",
+        "url": "https://vilaweb.cat/noticies/barcelona-citizens-chant-no-tinc-por-as-they-retake-la-rambla"
+      },
+      {
+        "titulo": "The Objective: El Parlament de Cataluña aprueba la ley del Referéndum",
+        "url": "https://theobjective.com/el-parlament-de-cataluna-aprueba-la-ley-del-referendum/"
+      },
+      {
+        "titulo": "The Objective: Las 6 preguntas sobre el referéndum (02/10/2017)",
+        "url": "https://theobjective.com/further/espana/2017-10-02/las-6-preguntas-sobre-el-referendum-que-nos-ayudan-a-entenderlo-mejor/"
+      }
+    ]
+  },
+  {
+    "minuto": "0:46:09",
+    "cita": "no hablaban políticos, hablaban solo víctimas, las víctimas delante, los políticos detrás",
+    "afirmacion": "En los actos y manifestaciones tras el atentado de La Rambla no hablaron políticos, sino solo víctimas, y las víctimas iban delante y los políticos detrás.",
+    "veredicto": "mayormente_verdadero",
+    "explicacion": "En la manifestación «No tinc por» del 26 de agosto de 2017, convocada por Generalitat y Ayuntamiento, las autoridades se colocaron deliberadamente en la retaguardia y la pancarta de cabecera la llevaron profesionales de emergencias, personal sanitario y comerciantes de La Rambla que atendieron a las víctimas. En el acto de cierre no hubo discursos de políticos: las lecturas fueron de la actriz Rosa Maria Sardà y de Míriam Hatibi (Fundación Ibn Battuta). Matiz: quienes iban delante y leyeron eran en su mayoría profesionales y sociedad civil, no víctimas en sentido estricto. No he podido comprobar todos los demás actos de aquellos días.",
+    "confianza": "media",
+    "fuentes": [
+      {
+        "titulo": "Ajuntament de Barcelona: Closing act of the I am not afraid demonstration (25/08/2017)",
+        "url": "https://ajuntament.barcelona.cat/premsa/2017/08/25/english-closing-act-of-the-i-am-not-afraid-demonstration"
+      },
+      {
+        "titulo": "The Objective: La marcha de las banderas contra el terrorismo (26/08/2017)",
+        "url": "https://theobjective.com/further/espana/2017-08-26/la-marcha-de-las-banderas-contra-el-terrorismo/"
+      },
+      {
+        "titulo": "Tiempo de San Juan: No tinc por, Barcelona vuelve a marchar contra el terror yihadista (26/08/2017)",
+        "url": "https://www.tiempodesanjuan.com/elmundo/2017/8/26/no-tinc-por-barcelona-vuelve-marchar-contra-terror-yihadista-188311.html"
+      }
+    ]
+  }
+]

@@ -1,0 +1,372 @@
+[
+  {
+    "minuto": "1:38:05",
+    "cita": "tal y como está diciendo el sindicato de inquilinas ahora mismo en las calles, no solo congele, sino baje los precios de los alquileres",
+    "afirmacion": "El Sindicato de Inquilinas reclama en la calle no solo congelar sino bajar los precios de los alquileres.",
+    "veredicto": "verdadero",
+    "explicacion": "El Sindicato de Inquilinas convocó una manifestación el 3 de octubre de 2026 en Madrid en la que reclamaba una rebaja del 50 % de los alquileres, además de contratos indefinidos y expropiación de viviendas de fondos, y ha propuesto una huelga general para el 11 de noviembre. Ya en la manifestación de Barcelona de noviembre de 2024 pedía la misma rebaja del 50 %. La demanda de bajar (no solo congelar) los alquileres es, por tanto, correcta.",
+    "confianza": "alta",
+    "fuentes": [
+      {
+        "titulo": "Artículo 14: Cómo el Sindicato de Inquilinas ha tomado las riendas de una lucha histórica (11-10-2026)",
+        "url": "https://www.articulo14.es/politica/como-el-sindicato-de-inquilinas-ha-tomado-las-riendas-de-una-lucha-historica-20261011.html"
+      },
+      {
+        "titulo": "Vozpópuli: Miles de personas piden en Barcelona una bajada de los alquileres y plantean una huelga",
+        "url": "https://www.vozpopuli.com/espana/miles-de-personas-piden-en-barcelona-una-bajada-de-los-alquileres-y-plantean-una-huelga.html"
+      },
+      {
+        "titulo": "El Español: Valeria Racu, portavoz del Sindicato de Inquilinas, apunta a la huelga general (3-10-2026)",
+        "url": "https://www.elespanol.com/madrid/20261003/valeria-racu-portavoz-sindicato-inquilinas-apunta-huelga-general-termino-tiempo-politicos/1003744407409_0.html"
+      }
+    ]
+  },
+  {
+    "minuto": "1:39:06",
+    "cita": "ya hay un índice ahora mismo con la ley de alquileres la ley de vivienda actual",
+    "afirmacion": "Con la actual ley de vivienda ya existe un índice de referencia de precios del alquiler, que Colau describe como proporcional a los salarios.",
+    "veredicto": "mayormente_verdadero",
+    "explicacion": "El Ministerio de Vivienda publicó en 2024 el Sistema Estatal de Referencia del Precio del Alquiler (SERPAVI), previsto en la Ley 12/2023, y su valor superior marca el límite de la renta en las zonas tensionadas. Pero el índice no se construye a partir de salarios: se basa sobre todo en las declaraciones de IRPF de arrendadores, con datos desde 2015. La existencia es correcta; la descripción como índice ligado a los salarios no lo es.",
+    "confianza": "media",
+    "fuentes": [
+      {
+        "titulo": "OCU: Índice de precios de alquiler del Ministerio de Vivienda",
+        "url": "https://www.ocu.org/fincas-y-casas/gestion/alquiler/analisis-gratis/2024/02/indice-precios-alquiler-ministerio"
+      },
+      {
+        "titulo": "Economist & Jurist: La problemática del Índice de Precios de Referencia del alquiler",
+        "url": "https://www.economistjurist.es/articulos-juridicos-destacados/la-problematica-del-indice-de-precios-de-referencia-del-alquiler/"
+      },
+      {
+        "titulo": "Maldita.es: El índice de precios de referencia para el alquiler: qué es, cómo se puede consultar y dónde se aplicará",
+        "url": "https://maldita.es/malditateexplica/20240229/indice-precios-alquiler-ministerio-vivienda/"
+      }
+    ]
+  },
+  {
+    "minuto": "1:39:06",
+    "cita": "13 fondos internacionales que no viven aquí que no les importa lo que pase en España que no cuidan el país y que estén especulando con nuestras viviendas con más de 100.000 viviendas",
+    "afirmacion": "Trece fondos internacionales poseen en España más de 100.000 viviendas.",
+    "veredicto": "falso",
+    "explicacion": "No hay ninguna fuente independiente que respalde la cifra; la única es la propia Colau (Artículo 14 la recoge como dato aportado por ella, pendiente de comprobar). Civio contó en 2024 (datos de fianzas a 31-12-2022) solo 16 fondos con unas 32.200 viviendas alquiladas (Blackstone 19.638, Cerberus cerca de 7.000), y 52 entidades entre bancos y fondos con casi 76.000; Atlas cifra en más de 110.000 las viviendas de alquiler de todos los grandes tenedores juntos, bancos incluidos. Quedaría la duda de si cuenta viviendas en propiedad no alquiladas, pero con los datos disponibles 13 fondos no llegan ni de lejos a 100.000.",
+    "confianza": "media",
+    "fuentes": [
+      {
+        "titulo": "Civio: CaixaBank y Blackstone, los dos mayores caseros del país (2-4-2024, act. 9-10-2024)",
+        "url": "https://civio.es/poder/2024/04/02/caixabank-y-blackstone-los-dos-mayores-caseros-del-pais-suman-cerca-de-41-dot-400-viviendas-alquiladas/"
+      },
+      {
+        "titulo": "Infobae: Quiénes son los grandes tenedores de vivienda en España (27-4-2026)",
+        "url": "https://www.infobae.com/espana/2026/04/27/quienes-son-los-grandes-tenedores-de-vivienda-en-espana-bancos-y-fondos-estadounidenses-devoran-la-oferta-de-alquiler-residencial/"
+      },
+      {
+        "titulo": "Artículo 14: Ada Colau, candidata de Frente Amplio para el 29N (8-11-2026)",
+        "url": "https://www.articulo14.es/politica/ada-colau-candidata-de-frente-amplio-para-el-29n-si-de-mi-depende-los-fondos-buitre-seran-expulsados-de-este-pais-20261108.html"
+      }
+    ]
+  },
+  {
+    "minuto": "1:39:06",
+    "cita": "No, expropiar quiere decir pagar, pero un precio justo por debajo del",
+    "afirmacion": "Expropiar implica pagar un justiprecio que está por debajo del precio de mercado.",
+    "veredicto": "enganoso",
+    "explicacion": "Es cierto que la expropiación exige indemnización (art. 33.3 de la Constitución) y que el Constitucional ha dicho que esta no tiene que coincidir siempre con el valor de mercado (STC 218/2015), porque la ley puede excluir expectativas urbanísticas especulativas. Pero «por debajo del de mercado» no es una regla general: el Tribunal Supremo entiende el justiprecio como valor de mercado y el Constitucional rechazó en 2025 (STC 25/2025) que se recorte el 50 % el valor en expropiaciones por incumplir la función social de la vivienda fuera de lo que prevé la ley estatal. El propio Frente Amplio admite que aún no ha detallado cómo calcularía las indemnizaciones.",
+    "confianza": "media",
+    "fuentes": [
+      {
+        "titulo": "Legal Today: STC 218/2015 sobre criterios de valoración y art. 33.3 CE",
+        "url": "https://www.legaltoday.com/historico/jurisprudencia/constitucional-comunitario/sentencia-num-2182015-tribunal-constitucional-madrid-22-10-2015-2016-04-28/"
+      },
+      {
+        "titulo": "Civil-Mercantil: STC 25/2025, inconstitucionalidad de la reducción del justiprecio (art. 15.4 Ley 1/2022 de Cataluña)",
+        "url": "https://www.civil-mercantil.com/node/18983"
+      },
+      {
+        "titulo": "Artículo 14: Ada Colau, candidata de Frente Amplio para el 29N (8-11-2026)",
+        "url": "https://www.articulo14.es/politica/ada-colau-candidata-de-frente-amplio-para-el-29n-si-de-mi-depende-los-fondos-buitre-seran-expulsados-de-este-pais-20261108.html"
+      }
+    ]
+  },
+  {
+    "minuto": "1:40:08",
+    "cita": "nosotros por ejemplo compramos 1.600 viviendas a precio inferior al de mercado",
+    "afirmacion": "El gobierno de Colau en Barcelona compró 1.600 viviendas mediante tanteo y retracto.",
+    "veredicto": "enganoso",
+    "explicacion": "La cifra de 1.600 es la que usan Barcelona en Comú y, como total histórico, el propio Ayuntamiento (unas 200 viviendas al año con Colau, 50 con Collboni), pero no se desglosa oficialmente. Verificat y el balance municipal sitúan en 1.349 (2022) y unas 1.500 (febrero de 2023) las viviendas compradas en el mercado privado por todas las vías, y Crónica Global señala que Colau suma otras fórmulas (cooperativas, alquiler social). Es un orden de magnitud razonable, pero la cifra exacta atribuida solo al tanteo y retracto no está contrastada.",
+    "confianza": "media",
+    "fuentes": [
+      {
+        "titulo": "elDiario.es: Cinco fincas de Barcelona exigen al Ayuntamiento que las compre antes que un fondo buitre",
+        "url": "https://www.eldiario.es/catalunya/cinco-fincas-barcelona-exigen-ayuntamiento-compre-fondo-buitre-vecinos-especulacion_1_13641604.html"
+      },
+      {
+        "titulo": "Crónica Global: Colau retuerce los datos para presentar como un éxito su promesa incumplida de vivienda social (12-11-2026)",
+        "url": "https://cronicaglobal.elespanol.com/politica/20261112/colau-retuerce-presentar-promesa-incumplida-vivienda-barcelona/1003742811452_0.html"
+      },
+      {
+        "titulo": "Verificat: El Ayuntamiento de Barcelona ha construido 1.442 viviendas desde 2016",
+        "url": "https://www.verificat.cat/es/el-ayuntamiento-de-barcelona-ha-construido-1-442-viviendas-desde-2016-siete-veces-mas-de-las-que-asegura-anna-grau/"
+      },
+      {
+        "titulo": "Ara: El Ayuntamiento de Barcelona no compró Casa Orsola (cifras de Janet Sanz)",
+        "url": "https://es.ara.cat/sociedad/barcelona/ayuntamiento-barcelona-no-compro-casa-orsola_1_5272209.html"
+      }
+    ]
+  },
+  {
+    "minuto": "1:40:08",
+    "cita": "el precio es el de tasación y es muy inferior al de mercado",
+    "afirmacion": "En el tanteo y retracto de Barcelona el ayuntamiento paga el precio de tasación, muy inferior al de mercado, y la norma la hicieron ellos.",
+    "veredicto": "enganoso",
+    "explicacion": "El tanteo y retracto funciona igualando la oferta de un tercero: la prensa describe que el Ayuntamiento adquiere «en las mismas condiciones ofertadas» (en Casa Orsola, la oferta a igualar era de 6 millones), es decir, a un precio de mercado, no a una tasación muy inferior. Solo la nueva ordenanza de 2025, ya con Collboni, limita el precio al valor medio de venta del barrio menos la rehabilitación. Lo que sí es cierto es que el área de tanteo y retracto de toda la ciudad la creó el Ayuntamiento con una modificación del Plan General Metropolitano (DOGC, 20-12-2018), parcialmente anulada por el TSJC en 2021.",
+    "confianza": "media",
+    "fuentes": [
+      {
+        "titulo": "El Salto: entrevista a Lucía Martín (18-5-2023), tanteo y retracto «en las mismas condiciones ofertadas»",
+        "url": "https://www.elsaltodiario.com/vivienda/entrevista-lucia-martin-vivienda-hemos-demostrado-ayuntamiento-transformar-barcelona"
+      },
+      {
+        "titulo": "Ara: El Ayuntamiento de Barcelona no compró Casa Orsola (iguala la oferta del comprador)",
+        "url": "https://es.ara.cat/sociedad/barcelona/ayuntamiento-barcelona-no-compro-casa-orsola_1_5272209.html"
+      },
+      {
+        "titulo": "Idealista: Más freno al inmobiliario en Barcelona, nueva ordenanza de tanteo y retracto (5-1-2026)",
+        "url": "https://www.idealista.com/news/node/878279"
+      },
+      {
+        "titulo": "Ajuntament de Barcelona: memoria general de la ordenanza de tanteo y retracto",
+        "url": "https://ajuntament.barcelona.cat/transparencia/sites/default/files/06._memoria_general._ordenanca_tanteig_vdfrev.pdf"
+      }
+    ]
+  },
+  {
+    "minuto": "1:42:12",
+    "cita": "en la ciudad hay viviendas suficientes para ofrecerles ese precio si se recuperan de la especulación",
+    "afirmacion": "En las ciudades hay viviendas suficientes para ofrecer alquiler asequible a quien lo necesite si se recuperan de la especulación.",
+    "veredicto": "no_verificable",
+    "explicacion": "Es una estimación de suficiencia que depende de cuántas viviendas se recuperarían y de cuánta demanda haya, y nadie la ha cuantificado. Como contexto, el Censo 2021 cuenta 403.073 viviendas vacías en ciudades de más de 250.000 habitantes (7,5 % del parque; Barcelona 9,3 %), y Civio contó unas 76.000 viviendas alquiladas por bancos y fondos grandes en 2022. Ninguna de esas cifras permite concluir si bastarían.",
+    "confianza": "baja",
+    "fuentes": [
+      {
+        "titulo": "INE: Censos de Población y Viviendas 2021, resultados sobre hogares y viviendas (30-6-2023)",
+        "url": "https://ine.es/prensa/censo_2021_jun.pdf"
+      },
+      {
+        "titulo": "Civio: CaixaBank y Blackstone, los dos mayores caseros del país (2-4-2024, act. 9-10-2024)",
+        "url": "https://civio.es/poder/2024/04/02/caixabank-y-blackstone-los-dos-mayores-caseros-del-pais-suman-cerca-de-41-dot-400-viviendas-alquiladas/"
+      }
+    ]
+  },
+  {
+    "minuto": "1:44:19",
+    "cita": "ofrecíamos a esta familia otra solución alternativa para que el pequeño propietario pudiera recuperar esa vivienda",
+    "afirmacion": "El Ayuntamiento de Barcelona, ante ocupaciones de viviendas vacías de pequeños propietarios por familias vulnerables, mediaba, realojaba a la familia o pagaba el alquiler al propietario.",
+    "veredicto": "mayormente_verdadero",
+    "explicacion": "Barcelona creó en 2015 el servicio de mediación SIPHO, que interviene en desahucios y ocupaciones; el Ayuntamiento afirma que ha atendido a 13.000 familias desde 2015 y que en nueve de cada diez casos no se llega al desahucio, y reconoce que con pequeños propietarios hace falta más tiempo de persuasión. No he encontrado documentación específica sobre el pago del alquiler al propietario durante la etapa de Colau (el ejemplo hallado, en Nou Barris, es de 2026 con Collboni), así que esa parte queda sin confirmar.",
+    "confianza": "baja",
+    "fuentes": [
+      {
+        "titulo": "PAH Barcelona: Valoración de los 2 años de políticas (SIPHO, mediación en pérdida de vivienda y ocupaciones)",
+        "url": "https://pahbarcelona.org/wp-content/uploads/2018/02/informe-2-a%C3%B1os-ada-colau-pahbcn.pdf"
+      },
+      {
+        "titulo": "Ara: Barcelona triplica los efectivos de la unidad antidesahucios (15-2-2022)",
+        "url": "https://es.ara.cat/sociedad/barcelona-triplica-efectivos-unidad-antidesahucios_1_4272300.amp.html"
+      }
+    ]
+  },
+  {
+    "minuto": "1:45:20",
+    "cita": "Si es tu vivienda, ahora mismo con la ley, desaloja en el mismo día.",
+    "afirmacion": "Si ocupan tu vivienda (morada), con la ley actual la policía desaloja en el mismo día.",
+    "veredicto": "mayormente_verdadero",
+    "explicacion": "Cuando se trata de una morada y hay delito flagrante (la ocupación se está cometiendo o acaba de cometerse), la policía puede entrar y desalojar sin orden judicial de forma inmediata. Pero no existe ningún plazo legal ni garantía de «mismo día»: depende de que los agentes aprecien flagrancia; si la ocupación ya está consolidada hay que denunciar y pedir al juez el desalojo cautelar. Colau distingue además, correctamente, que una vivienda vacía no constituye morada.",
+    "confianza": "media",
+    "fuentes": [
+      {
+        "titulo": "OCU: Si te ocupan la vivienda (junio de 2026)",
+        "url": "https://www.ocu.org/fincas-y-casas/gestion/gestion-patrimonial/analisis/2026/06/si-te-ocupan-la-vivienda"
+      },
+      {
+        "titulo": "Maldita.es: ¿Existe el «plazo de 48 horas» para echar a los okupas de una vivienda sin orden judicial?",
+        "url": "https://maldita.es/malditateexplica/20220905/okupas-plazo-48-horas-policia-orden-judicial/"
+      }
+    ]
+  },
+  {
+    "minuto": "1:46:21",
+    "cita": "en Poplasec, había unos bajos de un edificio que era ocupado por grupos de narcotraficantes. Nosotros como ayuntamiento nos personábamos judicialmente para desalojar ese lugar",
+    "afirmacion": "El Ayuntamiento de Barcelona se personó judicialmente para desalojar unos bajos de Poble-sec ocupados por grupos de narcotraficantes.",
+    "veredicto": "no_verificable",
+    "explicacion": "No he encontrado ninguna fuente que documente esa personación concreta. Sí constan operaciones policiales contra narcopisos en Poble-sec, y el actual Ayuntamiento de Collboni se persona como acusación particular en causas de multirreincidencia, pero ninguna fuente vincula al gobierno de Colau con ese caso. Que no aparezca no prueba que sea falso: es un caso local que exigiría consultar expedientes municipales o judiciales.",
+    "confianza": "baja",
+    "fuentes": [
+      {
+        "titulo": "Betevé: Front comú al Poble-sec per combatre els narcopisos",
+        "url": "https://beteve.cat/societat/front-comu-poble-sec-combatre-narcopisos/"
+      },
+      {
+        "titulo": "Metrópoli Abierta: Prisión provisional para tres multirreincidentes tras personarse el Ayuntamiento como acusación particular (5-11-2026)",
+        "url": "https://metropoliabierta.elespanol.com/sucesos/20261105/prision-provisional-multirreincidentes-barcelona-personarse-ayuntamiento-acusacion-particular/1003742809372_0.html"
+      }
+    ]
+  },
+  {
+    "minuto": "1:47:23",
+    "cita": "Nosotros hemos, en nuestra propuesta de ley, hemos dicho que a partir de una cuarta vivienda se deja de ser un pequeño propietario.",
+    "afirmacion": "La propuesta de ley de Frente Amplio fija en la cuarta vivienda el punto a partir del cual se deja de ser pequeño propietario.",
+    "veredicto": "mayormente_verdadero",
+    "explicacion": "La propuesta que Colau presentó el 28 de octubre de 2026 en la SER aplica el impuesto anual del 10 % a las personas físicas desde la cuarta vivienda (y solo si el conjunto supera 800.000 euros), y a las empresas desde la primera; ella defendió ese umbral con el ejemplo de casa propia, casa del pueblo y una heredada. Todavía no hay texto legal, y la prensa describe el umbral como el punto de aplicación del impuesto más que como definición formal de «pequeño propietario». La Ley de Vivienda de 2023, hoy vigente, considera gran tenedor a quien tiene más de 10 inmuebles.",
+    "confianza": "media",
+    "fuentes": [
+      {
+        "titulo": "Qué.es: el impuesto a la vivienda de Colau (28-10-2026)",
+        "url": "https://www.que.es/2026/10/28/impuesto-vivienda-colau/"
+      },
+      {
+        "titulo": "Artículo 14: Ada Colau, candidata de Frente Amplio para el 29N (8-11-2026)",
+        "url": "https://www.articulo14.es/politica/ada-colau-candidata-de-frente-amplio-para-el-29n-si-de-mi-depende-los-fondos-buitre-seran-expulsados-de-este-pais-20261108.html"
+      }
+    ]
+  },
+  {
+    "minuto": "1:48:28",
+    "cita": "No, lo de la expropiación lo hemos planteado para los fondos buitrí.",
+    "afirmacion": "La expropiación de viviendas que plantea Frente Amplio se limita a fondos buitre y grandes empresas tenedoras.",
+    "veredicto": "verdadero",
+    "explicacion": "Frente Amplio propone una Ley de Expropiación de Viviendas a Propietarios Corporativos Privados que, según la coalición, no alcanzaría a familias con su vivienda habitual ni a particulares con otra vivienda alquilada. Se aplicaría de forma progresiva a entidades con más de 1.000 viviendas, luego más de 700 y finalmente más de 50. Es una propuesta anunciada el 6-7 de noviembre de 2026, sin texto legal; conviene notar que el umbral final de 50 viviendas alcanza a empresas medianas, no solo a «fondos buitre».",
+    "confianza": "media",
+    "fuentes": [
+      {
+        "titulo": "Artículo 14: Ada Colau, candidata de Frente Amplio para el 29N (8-11-2026)",
+        "url": "https://www.articulo14.es/politica/ada-colau-candidata-de-frente-amplio-para-el-29n-si-de-mi-depende-los-fondos-buitre-seran-expulsados-de-este-pais-20261108.html"
+      },
+      {
+        "titulo": "Demócrata: Colau asegura que Frente Amplio expropiará viviendas a los fondos buitre (7-11-2026)",
+        "url": "https://www.democrata.es/politica/ada-colau-asegura-que-frente-amplio-expropiara-viviendas-a-los-fondos-buitre/"
+      }
+    ]
+  },
+  {
+    "minuto": "1:49:30",
+    "cita": "que pueden pasar de cinco, de diez, de quince, de veinte viviendas, si ponen precios abusivos o la mantienen vacías, pues un impuesto del 10% del valor de esa vivienda",
+    "afirmacion": "Frente Amplio propone un impuesto del 10 % del valor de la vivienda a los grandes propietarios que pongan precios abusivos o mantengan las viviendas vacías.",
+    "veredicto": "mayormente_verdadero",
+    "explicacion": "La propuesta existe: un impuesto anual del 10 % sobre el valor de cada inmueble, que se evita alquilando a precio «asequible y estable». Pero el alcance es mayor del que describe Colau: afecta a personas físicas desde la cuarta vivienda (si suman más de 800.000 euros) y a empresas desde la primera, no solo a quien tiene cinco, diez o veinte. La formación estima que movilizaría 213.840 viviendas no alquiladas o no habitadas. Aún no hay texto legal ni calendario.",
+    "confianza": "media",
+    "fuentes": [
+      {
+        "titulo": "Qué.es: el impuesto a la vivienda de Colau (28-10-2026)",
+        "url": "https://www.que.es/2026/10/28/impuesto-vivienda-colau/"
+      },
+      {
+        "titulo": "Artículo 14: Ada Colau, candidata de Frente Amplio para el 29N (8-11-2026)",
+        "url": "https://www.articulo14.es/politica/ada-colau-candidata-de-frente-amplio-para-el-29n-si-de-mi-depende-los-fondos-buitre-seran-expulsados-de-este-pais-20261108.html"
+      }
+    ]
+  },
+  {
+    "minuto": "1:50:33",
+    "cita": "la inmensa mayoría de los inquilinos pagan, y eso lo dicen todas las estadísticas",
+    "afirmacion": "La inmensa mayoría de los inquilinos paga el alquiler, según todas las estadísticas.",
+    "veredicto": "mayormente_verdadero",
+    "explicacion": "Las cifras disponibles apuntan en esa dirección: según OCU, en las declaraciones de IRPF de 2023 los saldos de dudoso cobro afectaban a alrededor del 1 % (máximo teórico del 1,5 %) de las declaraciones con alquiler de vivienda, y el 14 % de los arrendadores personas físicas había tenido algún caso de impago. Los lanzamientos por impago fueron 18.317 en 2025 (CGPJ). No existe una estadística oficial única de morosidad, así que «todas las estadísticas» es una generalización.",
+    "confianza": "media",
+    "fuentes": [
+      {
+        "titulo": "OCU: De alquiler a juicio (10-6-2026)",
+        "url": "https://www.ocu.org/fincas-y-casas/gestion/alquiler/analisis/2026/05/de-alquiler-a-juicio"
+      },
+      {
+        "titulo": "Forbes España: Los desahucios caen un 11 % en 2025 hasta los 25.540, según el CGPJ (20-3-2026)",
+        "url": "https://forbes.es/economia/893652/los-desahucios-caen-un-11-en-2025-hasta-los-25-540-segun-cgpj/"
+      }
+    ]
+  },
+  {
+    "minuto": "1:50:33",
+    "cita": "María Carmen no quería que le echen de su casa, llevaba 40 años pagando, teniendo muy pocos ingresos.",
+    "afirmacion": "Maricarmen, desahuciada de su vivienda, llevaba 40 años pagando el alquiler con muy pocos ingresos.",
+    "veredicto": "mayormente_verdadero",
+    "explicacion": "Si se refiere a Maricarmen Abascal (desahuciada en Madrid en septiembre de 2026), lo esencial es cierto: pagaba unos 440-500 euros al mes por una renta antigua y fue desalojada tras ganar la propiedad en los tribunales. Pero la cifra es inexacta por defecto: llevaba más de 70 años en el piso, y su pensión rondaba los 1.350 euros mensuales, modesta pero no «muy pocos ingresos» en sentido estricto. La identificación del caso es una suposición, porque Colau solo dice «María Carmen».",
+    "confianza": "baja",
+    "fuentes": [
+      {
+        "titulo": "Euronews: ¿Qué ocurre con las protestas de vivienda de Maricarmen en España? (2-10-2026)",
+        "url": "https://es.euronews.com/2026/10/02/que-ocurre-con-las-protestas-de-vivienda-de-maricarmen-en-espana"
+      },
+      {
+        "titulo": "El Salto: No se trata (solo) de Maricarmen (26-9-2026)",
+        "url": "https://www.elsaltodiario.com/madrid/no-se-trata-solo-maricarmen-una-gran-manifestacion-presiona-al-gobierno-salga-paralisis"
+      }
+    ]
+  },
+  {
+    "minuto": "1:50:33",
+    "cita": "En Alemania el alquiler es una cosa muy estable y está mucho más protegida que en España",
+    "afirmacion": "En Alemania el alquiler es mucho más estable y está mucho más protegido que en España.",
+    "veredicto": "mayormente_verdadero",
+    "explicacion": "Alemania (como Austria o Suiza) tiene contratos de arrendamiento de duración indefinida y exige motivo legítimo para resolverlos, con topes a las subidas, y más de la mitad de su población vive de alquiler frente a cerca del 25 % en España. Además, el alquiler consume en torno al 27 % del salario neto en Alemania frente a casi el 50 % en España, según un cálculo de Magtalent con datos de habitación en el centro. La comparación jurídica es sólida; las cifras de esfuerzo son estimaciones de menor calidad.",
+    "confianza": "media",
+    "fuentes": [
+      {
+        "titulo": "Fundación Disenso: Los retos de la vivienda en España en clave europea (contratos indefinidos en DE, AT, CH)",
+        "url": "https://fundaciondisenso.org/wp-content/uploads/2023/01/Los-retos-de-la-vivienda-en-Espana-en-clave-europea.pdf"
+      },
+      {
+        "titulo": "El Español: Alemania da una lección a España en el alquiler (17-4-2026)",
+        "url": "https://www.elespanol.com/sociedad/20260417/alemania-da-leccion-espana-alquiler-inquilino-quedan-euros-vivir-despues-pagarlo/1003744200840_0.html"
+      }
+    ]
+  },
+  {
+    "minuto": "1:51:33",
+    "cita": "nosotros en Barcelona, a través de las oficinas de vivienda, lo que hacíamos era ofrecer un alquiler seguro",
+    "afirmacion": "El Ayuntamiento de Barcelona, a través de las oficinas de vivienda, ofrecía a pequeños propietarios con alquiler asequible garantía de cobro aunque el inquilino no pudiera pagar.",
+    "veredicto": "mayormente_verdadero",
+    "explicacion": "La Borsa d'Habitatge de Lloguer del Consorci de l'Habitatge ofrece a los propietarios que alquilan a precio asequible cobro garantizado mediante una póliza de seguro y defensa jurídica, además de subvenciones (por ejemplo, ayudas para cubrir deuda de renta). La garantía se articula en buena parte por seguro y no siempre por pago directo de la administración, como sugiere Colau. Me baso en un folleto municipal anterior a 2020; no he podido confirmar las condiciones exactas ni su vigencia.",
+    "confianza": "baja",
+    "fuentes": [
+      {
+        "titulo": "Ajuntament de Barcelona: Si tens un pis i el vols llogar (Borsa d'Habitatge de Lloguer)",
+        "url": "https://bcnroc.ajuntament.barcelona.cat/jspui/bitstream/11703/118900/3/claus_borsa_habitatge_lloguer-cat.pdf.txt"
+      }
+    ]
+  },
+  {
+    "minuto": "1:52:35",
+    "cita": "porque más de la mitad de esos sueldos le va a pagar la vivienda",
+    "afirmacion": "Mucha gente destina más de la mitad de su sueldo a pagar la vivienda.",
+    "veredicto": "mayormente_verdadero",
+    "explicacion": "Para quien vive de alquiler es plausible: el Banco de España calculó (Informe Anual 2023) que dos de cada cinco inquilinos dedican más del 40 % de su renta a la cuota, y Fotocasa-InfoJobs estima que el alquiler de un piso de 80 m2 absorbe el 50 % del salario bruto medio (71 % en Madrid, 70 % en Cataluña). No hay un dato oficial de cuántos hogares superan el 50 %, así que «mucha gente» es defendible pero no exacto para el conjunto de trabajadores.",
+    "confianza": "media",
+    "fuentes": [
+      {
+        "titulo": "El Cronista: dos de cada cinco inquilinos destinan más del 40 % de sus ingresos (Informe Anual 2023 del Banco de España)",
+        "url": "https://www.cronista.com/espana/economia-finanzas/alerta-alquileres-dos-de-cada-cinco-inquilinos-destinan-mas-del-40-de-sus-ingresos-a-pagarlo"
+      },
+      {
+        "titulo": "Qué.es: El alquiler ya absorbe el 50 % del salario medio en España (3-6-2026)",
+        "url": "https://www.que.es/2026/06/03/alquiler-salario-medio-espana-bomba/"
+      }
+    ]
+  },
+  {
+    "minuto": "1:52:35",
+    "cita": "durante décadas se ha dejado la vivienda en manos del mercado y estamos peor que nunca",
+    "afirmacion": "Durante décadas se ha dejado la vivienda en manos del mercado y la situación actual es peor que nunca.",
+    "veredicto": "no_verificable",
+    "explicacion": "Es una valoración política con un componente medible, pero «peor que nunca» no tiene una métrica única. Hay datos de deterioro reciente: en el segundo trimestre de 2026 los precios de la vivienda subieron un 12,1 % interanual frente al 4,3 % de los costes laborales, la cuarta brecha mayor de la UE (Eurostat, vía Ara), y el esfuerzo del alquiler sobre el salario bruto pasó del 39 % en 2019 al 50 % (Fotocasa-InfoJobs). No bastan para fijar un veredicto sobre «nunca».",
+    "confianza": "baja",
+    "fuentes": [
+      {
+        "titulo": "Ara: El precio de la vivienda en España crece cerca de tres veces más que los salarios en un año (2-10-2026)",
+        "url": "https://es.ara.cat/economia/inmobiliario/precio-vivienda-espana-crece-cerca-tres-veces-salarios-ano_1_5866787.html"
+      },
+      {
+        "titulo": "Qué.es: El alquiler ya absorbe el 50 % del salario medio en España (3-6-2026)",
+        "url": "https://www.que.es/2026/06/03/alquiler-salario-medio-espana-bomba/"
+      }
+    ]
+  }
+]

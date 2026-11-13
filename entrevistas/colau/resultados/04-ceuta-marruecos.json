@@ -1,0 +1,276 @@
+[
+  {
+    "minuto": "0:47:13",
+    "cita": "Y también hay una causa judicial abierta que está investigando",
+    "afirmacion": "Hay una causa judicial abierta que investiga la entrada masiva de personas en Ceuta de julio de 2026.",
+    "veredicto": "verdadero",
+    "explicacion": "La jueza María Tardón, de la Audiencia Nacional, abrió diligencias el 3 de agosto de 2026 tras una denuncia de Iustitia Europa y después se declaró competente para investigar posibles delitos contra la integridad territorial, homicidio imprudente y organización criminal. La causa sigue abierta y parcialmente bajo secreto (Euronews, 7 de septiembre de 2026).",
+    "confianza": "alta",
+    "fuentes": [
+      {"titulo": "Euronews: La justicia española abre una investigación penal por la entrada de inmigrantes en Ceuta (7-09-2026)", "url": "https://es.euronews.com/2026/09/07/justicia-espanola-investigacion-penal-entrada-inmigrantes-ceuta"},
+      {"titulo": "El Independiente: La Audiencia Nacional abre diligencias por la entrada masiva de inmigrantes en Ceuta (3-08-2026)", "url": "https://www.elindependiente.com/espana/2026/08/03/audiencia-nacional-abre-diligencias-por-la-entrada-masiva-inmigrantes-ceuta/"},
+      {"titulo": "Wikipedia: Crisis migratoria de Ceuta de 2026", "url": "https://es.wikipedia.org/wiki/Crisis_migratoria_de_Ceuta_de_2026"}
+    ]
+  },
+  {
+    "minuto": "0:48:15",
+    "cita": "ha decidido externalizar sus fronteras y dejar que las gestionen países que pueden tener otros intereses",
+    "afirmacion": "La Unión Europea ha externalizado parte de la gestión de sus fronteras a terceros países como Marruecos, mediante acuerdos y financiación.",
+    "veredicto": "mayormente_verdadero",
+    "explicacion": "La UE financia y pacta el control migratorio con terceros países (Turquía desde 2016, Libia, Túnez, Mauritania, Egipto y Marruecos). Para Marruecos, la Comisión Europea tenía comprometidos 222 millones de euros entre 2021 y 2024 y prevé otros 190 millones hasta 2027 (Euronews, 20-08-2026). Es el término que usan ONG y analistas; la UE sigue conservando también sus propios controles (Frontex, fronteras exteriores), por lo que «externalizar» describe una parte, no toda, de la gestión fronteriza.",
+    "confianza": "media",
+    "fuentes": [
+      {"titulo": "Euronews: La UE dará más fondos a Marruecos tras la crisis de Ceuta (20-08-2026)", "url": "https://es.euronews.com/2026/08/20/exclusiva-ue-dara-mas-fondos-marruecos-crisis-ceuta"},
+      {"titulo": "El Español: Túnez, Mauritania, Egipto y ahora Líbano: la UE avanza en externalizar el control migratorio (3-05-2024)", "url": "https://www.elespanol.com/mundo/europa/20240503/tunez-mauritania-egipto-ahora-libano-ue-avanza-externalizar-control-migratorio/852164991_0.amp.html"},
+      {"titulo": "TNI: Expandiendo la fortaleza (resumen ejecutivo)", "url": "https://www.tni.org/files/publication-downloads/expandiendo_la_fortaleza_resumen_ejecutivo.pdf"}
+    ]
+  },
+  {
+    "minuto": "0:48:15",
+    "cita": "70.000 personas no se mueven sin que se dé cuenta el gobierno de Marruecos",
+    "afirmacion": "En la crisis de Ceuta de julio de 2026 entraron o se movieron unas 70.000 personas.",
+    "veredicto": "verdadero",
+    "explicacion": "La cifra oficial del Gobierno fue de 72.000 entradas (4 de agosto de 2026; Marlaska la reiteró en el Congreso el 28 de agosto), así que 70.000 es un redondeo razonable. Las estimaciones varían según la fuente y el momento: 49.000-50.000 (primeras cifras de Interior), 60.000 (Vivas) y al menos 96.058 según un informe del Gobierno de Ceuta del 14 de octubre basado en datos de Interior. La inferencia sobre lo que debía saber Marruecos es una opinión y no se evalúa.",
+    "confianza": "media",
+    "fuentes": [
+      {"titulo": "Wikipedia: Crisis migratoria de Ceuta de 2026 (cifras por fuente)", "url": "https://es.wikipedia.org/wiki/Crisis_migratoria_de_Ceuta_de_2026"},
+      {"titulo": "Artículo 14: Un informe del Gobierno de Ceuta eleva a 96.058 las entradas de julio, un 34% más que la cifra que dio Marlaska", "url": "https://www.articulo14.es/politica/un-informe-del-gobierno-de-ceuta-eleva-a-96-058-las-entradas-de-julio-un-34-mas-que-la-cifra-que-dio-marlaska-20261018.html"},
+      {"titulo": "Infobae: La crisis de Ceuta, en cinco claves (2-08-2026)", "url": "https://www.infobae.com/espana/2026/08/02/la-crisis-de-ceuta-en-cinco-claves-de-las-falsas-promesas-de-asilo-a-la-avalancha-de-60000-personas-y-el-papel-de-marruecos/"}
+    ]
+  },
+  {
+    "minuto": "0:49:19",
+    "cita": "Ellos lo que están diciendo es que habían notado movimientos y que sabían que se acercaba como más gente y que en ese sentido habían avisado que podía haber más presión en la frontera, pero que no habían entendido que fuera tanta gente.",
+    "afirmacion": "El Gobierno sostiene que el CNI detectó movimientos y avisó de más presión en la frontera de Ceuta, pero no de una entrada de tanta gente.",
+    "veredicto": "mayormente_verdadero",
+    "explicacion": "Resume razonablemente una parte de la versión oficial, pero el Gobierno no tiene una versión única. La ministra Robles (25-08-2026) dijo que el CNI avisó el 29 de julio de una convocatoria para entrar a nado al día siguiente; Marlaska negó que hubiera algún informe que permitiera prever una entrada de esa escala, y la Delegación del Gobierno negó haber recibido un informe de alerta. El 2 de octubre un ex número dos de la Delegación declaró ante la Audiencia Nacional que recibió un aviso del CNI el 29 de julio. No hay cifra pública de lo que advirtió el CNI.",
+    "confianza": "media",
+    "fuentes": [
+      {"titulo": "Diario de León: Robles y Marlaska se contradicen sobre el papel del CNI en Ceuta (26-08-2026)", "url": "https://www.diariodeleon.es/nacional/260826/2095279/salvese-pueda-robles-marlaska-contradicen-sobre-papel-cni-ceuta.html"},
+      {"titulo": "Moncloa.com: La Audiencia Nacional confirma el aviso del 29-J que Marlaska negó (2-10-2026)", "url": "https://www.moncloa.com/2026/10/02/vox-ceuta-cni-audiencia-nacional-marlaska-3441378/"},
+      {"titulo": "Wikipedia: Crisis migratoria de Ceuta de 2026", "url": "https://es.wikipedia.org/wiki/Crisis_migratoria_de_Ceuta_de_2026"}
+    ]
+  },
+  {
+    "minuto": "0:49:19",
+    "cita": "se duplica la población",
+    "afirmacion": "Con la entrada masiva de julio de 2026 la población de Ceuta se duplicó.",
+    "veredicto": "mayormente_verdadero",
+    "explicacion": "Ceuta tenía 83.567 habitantes a comienzos de 2025 (INE). Con la cifra oficial de 72.000 entradas, la población presente aumentó en torno a un 86%; con las 96.058 entradas del informe del Gobierno de Ceuta (14-10-2026) equivaldría a un 115%. «Se duplica» es una aproximación válida para el pico de los días 30-31 de julio, aunque la mayoría regresó a Marruecos en los días siguientes.",
+    "confianza": "media",
+    "fuentes": [
+      {"titulo": "Artículo 14: Un informe del Gobierno de Ceuta eleva a 96.058 las entradas de julio (población INE 83.567)", "url": "https://www.articulo14.es/politica/un-informe-del-gobierno-de-ceuta-eleva-a-96-058-las-entradas-de-julio-un-34-mas-que-la-cifra-que-dio-marlaska-20261018.html"},
+      {"titulo": "Wikipedia: Crisis migratoria de Ceuta de 2026", "url": "https://es.wikipedia.org/wiki/Crisis_migratoria_de_Ceuta_de_2026"}
+    ]
+  },
+  {
+    "minuto": "0:49:19",
+    "cita": "que muchas pierden la vida",
+    "afirmacion": "Muchas de las personas migrantes que entraron o intentaron entrar en Ceuta en la crisis de julio de 2026 perdieron la vida.",
+    "veredicto": "verdadero",
+    "explicacion": "Interior elevó el balance a 67 muertos el 1 de agosto de 2026; balances posteriores hablan de unos 140 fallecidos durante el intento, 83 de ellos en aguas españolas (Euronews, 7-09-2026), y otras fuentes citan 141 en total (78 en España y 63 en Marruecos). «Muchas» es adecuado en términos absolutos, aunque son una fracción pequeña de las decenas de miles de personas que entraron.",
+    "confianza": "alta",
+    "fuentes": [
+      {"titulo": "Euronews: La justicia española abre una investigación penal por la entrada de inmigrantes en Ceuta (7-09-2026)", "url": "https://es.euronews.com/2026/09/07/justicia-espanola-investigacion-penal-entrada-inmigrantes-ceuta"},
+      {"titulo": "Infobae: La crisis de Ceuta, en cinco claves (2-08-2026)", "url": "https://www.infobae.com/espana/2026/08/02/la-crisis-de-ceuta-en-cinco-claves-de-las-falsas-promesas-de-asilo-a-la-avalancha-de-60000-personas-y-el-papel-de-marruecos/"},
+      {"titulo": "Wikipedia: Crisis migratoria de Ceuta de 2026", "url": "https://es.wikipedia.org/wiki/Crisis_migratoria_de_Ceuta_de_2026"}
+    ]
+  },
+  {
+    "minuto": "0:49:19",
+    "cita": "para menores que quedan en la calle desatendidas y de forma vulnerable",
+    "afirmacion": "Durante la crisis de Ceuta hubo menores que quedaron en la calle, desatendidos y en situación vulnerable.",
+    "veredicto": "verdadero",
+    "explicacion": "El 13 de agosto de 2026 Save the Children estimaba unos 4.000 niños en situación de calle en Ceuta, con menos de la mitad (unos 1.500) dentro del sistema de protección, mientras Interior había identificado 1.898 menores. El Defensor del Pueblo abrió una actuación de oficio por menores sin identificar y escondidos, y la Fiscalía alertó de unos 1.000 menores en almacenes sin condiciones. Las cifras varían según la fuente, pero el hecho está acreditado.",
+    "confianza": "alta",
+    "fuentes": [
+      {"titulo": "Euronews: Miles de menores siguen durmiendo en la calle en Ceuta dos semanas después (13-08-2026)", "url": "https://es.euronews.com/2026/08/13/miles-de-menores-siguen-durmiendo-calle-ceuta-dos-semanas-despues-crisis-migratoria"},
+      {"titulo": "Defensor del Pueblo: actúa de oficio por la situación humanitaria de los migrantes que continúan en Ceuta (13-08-2026)", "url": "https://www.defensordelpueblo.es/noticias/se-dirige-a-migraciones-fge-c-a-de-ceuta-y-delegacion-de-gobierno/"}
+    ]
+  },
+  {
+    "minuto": "0:50:40",
+    "cita": "yo creo que en agosto, cuando pasa algo tan grave, evidentemente hay que estar ahí",
+    "afirmacion": "La crisis de Ceuta ocurrió en agosto y el presidente Sánchez no estuvo allí en un primer momento.",
+    "veredicto": "enganoso",
+    "explicacion": "La entrada masiva fue el 30 y 31 de julio de 2026, no en agosto (agosto fue la fase posterior de gestión). Sánchez visitó Ceuta el 31 de julio, un día después de empezar la entrada, junto a Marlaska, y al día siguiente (1 de agosto) comenzó sus vacaciones en La Mareta (Lanzarote) con la crisis aún abierta, lo que sí generó críticas de la oposición y de Sumar. La crítica por las vacaciones es real, pero afirmar que no estuvo allí al principio omite su visita del 31 de julio.",
+    "confianza": "media",
+    "fuentes": [
+      {"titulo": "El Independiente: Pedro Sánchez se va de vacaciones a La Mareta en plena crisis de Ceuta (1-08-2026)", "url": "https://www.elindependiente.com/espana/2026/08/01/pedro-sanchez-se-va-de-vacaciones-a-la-mareta-lanzarote-en-plena-crisis-de-ceuta/amp/"},
+      {"titulo": "El Español: Sánchez denuncia un ataque a la integridad de España en su visita a Ceuta (31-07-2026)", "url": "https://www.elespanol.com/espana/politica/20260731/sanchez-denuncia-ataque-integridad-espana-culpa-mafias-agradece-marruecos-cooperacion/1003744340350_0.html"},
+      {"titulo": "Diario de León (Europa Press): Sánchez llega al helipuerto de Ceuta entre insultos y enfrentamientos (31-07-2026)", "url": "https://www.diariodeleon.es/nacional/260731/2092874/sanchez-llega-helipuerto-ceuta-insultos-enfrentamientos-manifestantes-policia_amp.html"}
+    ]
+  },
+  {
+    "minuto": "0:50:40",
+    "cita": "Yo creo que luego llegó un segundo momento donde ya se reaccionó, se pusieron muchos más recursos.",
+    "afirmacion": "Tras una primera respuesta insuficiente, el Gobierno reaccionó y movilizó muchos más recursos en Ceuta.",
+    "veredicto": "mayormente_verdadero",
+    "explicacion": "El Gobierno desplegó al Ejército el 31 de julio de 2026 (más de 3.000 efectivos según Robles), instaló una barrera marina en el Tarajal y el 19 de agosto anunció el traslado de unos 500 menores vulnerables a la península. Es cierto que se reforzaron los medios, pero parte del refuerzo llegó en 24 horas y la oposición y el presidente de Ceuta calificaron la respuesta de tardía e insuficiente; Defensor del Pueblo y ONG seguían denunciando carencias semanas después.",
+    "confianza": "media",
+    "fuentes": [
+      {"titulo": "Wikipedia: Crisis migratoria de Ceuta de 2026", "url": "https://es.wikipedia.org/wiki/Crisis_migratoria_de_Ceuta_de_2026"},
+      {"titulo": "Infobae: La crisis de Ceuta, en cinco claves (2-08-2026)", "url": "https://www.infobae.com/espana/2026/08/02/la-crisis-de-ceuta-en-cinco-claves-de-las-falsas-promesas-de-asilo-a-la-avalancha-de-60000-personas-y-el-papel-de-marruecos/"},
+      {"titulo": "Diario de León: Robles y Marlaska se contradicen sobre el papel del CNI en Ceuta (26-08-2026)", "url": "https://www.diariodeleon.es/nacional/260826/2095279/salvese-pueda-robles-marlaska-contradicen-sobre-papel-cni-ceuta.html"}
+    ]
+  },
+  {
+    "minuto": "0:51:42",
+    "cita": "yo era alcaldesa y todas las administraciones colaboramos inmediatamente para acoger a miles y miles de personas refugiadas de Ucrania",
+    "afirmacion": "Cuando Rusia invadió Ucrania (febrero de 2022) Colau era alcaldesa de Barcelona y todas las administraciones colaboraron de inmediato para acoger a miles de refugiados ucranianos.",
+    "veredicto": "mayormente_verdadero",
+    "explicacion": "Colau fue alcaldesa de Barcelona del 13 de junio de 2015 al 17 de junio de 2023. En marzo de 2022 Cruz Roja, la Generalitat, el Ayuntamiento (con TMB) y el Estado montaron un dispositivo de acogida con base en Sants y un centro en Fira de Barcelona, y Cataluña acogía casi 11.000 refugiados el 24 de marzo. «Inmediatamente» es una valoración generosa (el mecanismo europeo se activó el 4 de marzo y España lo aplicó el 10), pero la colaboración institucional está documentada.",
+    "confianza": "media",
+    "fuentes": [
+      {"titulo": "Wikipedia: Ada Colau (alcaldesa de Barcelona 2015-2023)", "url": "https://es.wikipedia.org/wiki/Ada_Colau"},
+      {"titulo": "Catalan News: Sants train station welcoming hundreds of Ukrainian refugees daily (24-03-2022)", "url": "https://www.catalannews.com/society-science/item/sants-train-station-welcoming-hundreds-of-ukrainian-refugees-daily"},
+      {"titulo": "3Cat: Barcelona tindrà un dels tres grans centres per rebre refugiats ucraïnesos a Espanya", "url": "https://www.3cat.cat/3catinfo/barcelona-tindra-un-dels-tres-grans-centres-per-rebre-refugiats-ucrainesos-a-espanya/noticia-amp/3150331/"}
+    ]
+  },
+  {
+    "minuto": "0:51:42",
+    "cita": "muchas más que las que han llegado a Ceuta",
+    "afirmacion": "El número de refugiados ucranianos acogidos (en poco tiempo y con respuesta ágil) fue muy superior al de personas que llegaron a Ceuta en julio de 2026.",
+    "veredicto": "enganoso",
+    "explicacion": "En total España concedió más de 160.000 protecciones temporales a ucranianos en 2022, más que las 72.000-96.000 entradas en Ceuta, pero repartidas a lo largo de meses: unas 75.000 al 26 de abril de 2022, siete semanas tras el inicio del mecanismo, y casi 11.000 en toda Cataluña a finales de marzo. En Ceuta entraron 72.000 o más en unos dos días, por lo que la comparación de volumen y de rapidez no se sostiene. Además, la mayoría de quienes entraron en Ceuta regresó a Marruecos y los que permanecían rondaban 11.000-15.000. Jordi Wild le replicó en directo que en Ceuta se hablaba de horas.",
+    "confianza": "media",
+    "fuentes": [
+      {"titulo": "Moncloa/Interior: España ha concedido 75.000 protecciones temporales a desplazados por la guerra en Ucrania (26-04-2022)", "url": "https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/interior/Paginas/2022/260422-desplazados-ucranianos.aspx"},
+      {"titulo": "Moncloa/Interior: España supera las 160.000 protecciones temporales a refugiados de Ucrania (29-11-2022)", "url": "https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/interior/Paginas/2022/291122-refugiados-ucrania.aspx"},
+      {"titulo": "Catalan News: Sants train station welcoming hundreds of Ukrainian refugees daily (24-03-2022)", "url": "https://www.catalannews.com/society-science/item/sants-train-station-welcoming-hundreds-of-ukrainian-refugees-daily"},
+      {"titulo": "Artículo 14: Un informe del Gobierno de Ceuta eleva a 96.058 las entradas de julio", "url": "https://www.articulo14.es/politica/un-informe-del-gobierno-de-ceuta-eleva-a-96-058-las-entradas-de-julio-un-34-mas-que-la-cifra-que-dio-marlaska-20261018.html"}
+    ]
+  },
+  {
+    "minuto": "0:51:42",
+    "cita": "desde que llegaban las personas por tren a la estación de Sands, como había los recursos de Cruz Roja",
+    "afirmacion": "En Barcelona los refugiados ucranianos llegaban en tren a la estación de Sants, donde Cruz Roja tenía recursos para acogerlos.",
+    "veredicto": "verdadero",
+    "explicacion": "En marzo de 2022 llegaban a Sants varios trenes especiales desde París cada día, con más de 200 personas diarias. Cruz Roja (Creu Roja) montó una base en la estación con voluntarios que hablaban ucraniano y ruso, y organizó lanzaderas con TMB hacia el centro de acogida de Fira de Barcelona. La transcripción escribe «Sands» por error de reconocimiento.",
+    "confianza": "alta",
+    "fuentes": [
+      {"titulo": "Catalan News: Sants train station welcoming hundreds of Ukrainian refugees daily (24-03-2022)", "url": "https://www.catalannews.com/society-science/item/sants-train-station-welcoming-hundreds-of-ukrainian-refugees-daily"},
+      {"titulo": "3Cat: Barcelona tindrà un dels tres grans centres per rebre refugiats ucraïnesos a Espanya", "url": "https://www.3cat.cat/3catinfo/barcelona-tindra-un-dels-tres-grans-centres-per-rebre-refugiats-ucrainesos-a-espanya/noticia-amp/3150331/"}
+    ]
+  },
+  {
+    "minuto": "0:52:43",
+    "cita": "de esas personas que entraron, la mayoría tenían que regresar",
+    "afirmacion": "La mayoría de las personas que entraron en Ceuta en julio de 2026 acabó regresando a Marruecos.",
+    "veredicto": "verdadero",
+    "explicacion": "Interior contabilizó 48.300 retornos el 31 de julio a las 18:00 y el Gobierno de Ceuta calcula que unas 73.000 personas salieron de forma colectiva en los primeros días de agosto, más 11.225 retornos voluntarios y 531 expulsiones posteriores. Un informe de la Guardia Civil recoge 88.146 retornos hasta el 27 de octubre. A mediados de octubre quedaban unas 11.300 personas en recursos oficiales y entre 1.000 y 3.000 fuera de ellos.",
+    "confianza": "alta",
+    "fuentes": [
+      {"titulo": "Artículo 14: Un informe del Gobierno de Ceuta eleva a 96.058 las entradas de julio", "url": "https://www.articulo14.es/politica/un-informe-del-gobierno-de-ceuta-eleva-a-96-058-las-entradas-de-julio-un-34-mas-que-la-cifra-que-dio-marlaska-20261018.html"},
+      {"titulo": "Wikipedia: Crisis migratoria de Ceuta de 2026", "url": "https://es.wikipedia.org/wiki/Crisis_migratoria_de_Ceuta_de_2026"},
+      {"titulo": "Infobae: La crisis de Ceuta, en cinco claves (2-08-2026)", "url": "https://www.infobae.com/espana/2026/08/02/la-crisis-de-ceuta-en-cinco-claves-de-las-falsas-promesas-de-asilo-a-la-avalancha-de-60000-personas-y-el-papel-de-marruecos/"}
+    ]
+  },
+  {
+    "minuto": "0:52:43",
+    "cita": "son menores y la ley dice que hay que cogerlas y atenderlas",
+    "afirmacion": "La ley obliga a acoger y atender a los menores extranjeros no acompañados que llegan a España.",
+    "veredicto": "verdadero",
+    "explicacion": "El ordenamiento español (artículo 35 de la Ley Orgánica 4/2000 de Extranjería, la Ley Orgánica 1/1996 de Protección Jurídica del Menor y la Convención sobre los Derechos del Niño) obliga a los servicios de protección de menores a atender y tutelar a los menores extranjeros no acompañados presentes en territorio español. El Defensor del Pueblo reclamó en agosto de 2026 «aplicar la legalidad» y acoger a los menores de Ceuta con apoyo de las comunidades autónomas. No he podido abrir el BOE en esta sesión, así que el detalle de los artículos se basa en conocimiento jurídico y no en una consulta directa.",
+    "confianza": "media",
+    "fuentes": [
+      {"titulo": "Defensor del Pueblo: Situación en la ciudad autónoma de Ceuta (7-08-2026)", "url": "https://www.defensordelpueblo.es/noticias/situacion-en-la-ciudad-autonoma-de-ceuta/"},
+      {"titulo": "Defensor del Pueblo: actúa de oficio por la situación humanitaria de los migrantes que continúan en Ceuta (13-08-2026)", "url": "https://www.defensordelpueblo.es/noticias/se-dirige-a-migraciones-fge-c-a-de-ceuta-y-delegacion-de-gobierno/"}
+    ]
+  },
+  {
+    "minuto": "0:53:45",
+    "cita": "Me ha tocado la pandemia, me ha tocado el atentado en la Rambla.",
+    "afirmacion": "Como alcaldesa de Barcelona le tocó gestionar la pandemia de COVID-19 y el atentado de la Rambla.",
+    "veredicto": "verdadero",
+    "explicacion": "Colau fue alcaldesa de Barcelona entre el 13 de junio de 2015 y el 17 de junio de 2023, un periodo que incluye el atentado yihadista de la Rambla (17 de agosto de 2017) y la pandemia de COVID-19 (2020-2022).",
+    "confianza": "alta",
+    "fuentes": [
+      {"titulo": "Wikipedia: Ada Colau", "url": "https://es.wikipedia.org/wiki/Ada_Colau"}
+    ]
+  },
+  {
+    "minuto": "0:55:48",
+    "cita": "esos primeros días respondió con una humanidad con una solidaridad que fue ejemplar",
+    "afirmacion": "Mucha gente de Ceuta respondió con solidaridad hacia las personas que llegaron durante los primeros días de la crisis.",
+    "veredicto": "mayormente_verdadero",
+    "explicacion": "Hay constancia de ayuda ciudadana: vecinos habilitaron una pista deportiva para unas 200 personas, una vecina atendía a unos 400 migrantes al día y la ONG Luna Blanca repartía unas 3.000 comidas diarias. El Defensor del Pueblo (7-08-2026) reconoció la solidaridad de la ciudadanía y las organizaciones de Ceuta. «Ejemplar» es una valoración, y también hubo protestas y tensión: manifestación de comunidades religiosas el 9 de agosto con el lema «Ceuta no se rinde» y abucheos a Sánchez.",
+    "confianza": "media",
+    "fuentes": [
+      {"titulo": "Defensor del Pueblo: Situación en la ciudad autónoma de Ceuta (7-08-2026)", "url": "https://www.defensordelpueblo.es/noticias/situacion-en-la-ciudad-autonoma-de-ceuta/"},
+      {"titulo": "Wikipedia: Crisis migratoria de Ceuta de 2026", "url": "https://es.wikipedia.org/wiki/Crisis_migratoria_de_Ceuta_de_2026"}
+    ]
+  },
+  {
+    "minuto": "0:56:48",
+    "cita": "ahí está el tema del Sáhara, donde España tiene una responsabilidad directa",
+    "afirmacion": "España tiene una responsabilidad directa en el conflicto del Sáhara Occidental.",
+    "veredicto": "mayormente_verdadero",
+    "explicacion": "España fue la potencia colonial hasta 1975. El Asesor Jurídico de la ONU (carta de 29-01-2002, S/2002/161) concluyó que los Acuerdos de Madrid de 1975 no transfirieron la condición de potencia administradora, y la ONU sigue considerando el Sáhara Occidental un territorio no autónomo pendiente de descolonización. Por eso gran parte de la doctrina sostiene que España es potencia administradora de iure, aunque no de facto; es una lectura jurídica discutida y Marruecos la rechaza.",
+    "confianza": "media",
+    "fuentes": [
+      {"titulo": "ONU, Asesor Jurídico Hans Corell: carta al Consejo de Seguridad sobre el Sáhara Occidental (29-01-2002)", "url": "https://www.staff.city.ac.uk/p.willetts/SAC/UN/CORELL-S.PDF"},
+      {"titulo": "Ara: El Consejo de Seguridad de la ONU avala el plan de Marruecos para el Sáhara Occidental (31-10-2025)", "url": "https://es.ara.cat/internacional/africa/consejo-seguridad-onu-avala-plan-marruecos-sahara-occidental_1_5547652.html"}
+    ]
+  },
+  {
+    "minuto": "0:56:48",
+    "cita": "Que no compartimos por parte del Frente Amplio y que lo hemos dicho públicamente.",
+    "afirmacion": "El Frente Amplio (y Sumar) no comparten el cambio de posición de Pedro Sánchez sobre el Sáhara y lo han dicho públicamente.",
+    "veredicto": "mayormente_verdadero",
+    "explicacion": "En marzo de 2022 Sánchez respaldó por carta el plan de autonomía marroquí. Sumar, que forma parte de la coalición Frente Amplio junto a Izquierda Unida y Catalunya en Comú, prometió en su programa de 2023 revertir ese giro, y el 12 de noviembre de 2025 su portavoz Verónica Barbero exigió en el Congreso que el Gobierno rectificara y defendiera la autodeterminación saharaui. No he encontrado un comunicado emitido con la marca «Frente Amplio» (inscrita en octubre de 2026), pero sus partidos integrantes sí han criticado el giro en público. El «cambio de Sánchez» es un hecho; que Sumar siguiera en el Gobierno es otra cuestión.",
+    "confianza": "media",
+    "fuentes": [
+      {"titulo": "El Independiente: Sumar, Podemos y Bildu exigen a Sánchez que rectifique en el Sáhara (12-11-2025)", "url": "https://www.elindependiente.com/espana/2025/11/12/sumar-podemos-y-bildu-exigen-a-sanchez-que-rectifique-en-el-sahara-deje-de-estar-plegado-a-la-dictadura-marroqui/amp/"},
+      {"titulo": "El Independiente: Sumar promete en su programa dar marcha atrás al giro en el Sáhara Occidental (6-07-2023)", "url": "https://www.elindependiente.com/espana/2023/07/06/sumar-promete-en-su-programa-electoral-dar-marcha-atras-al-giro-en-el-sahara-occidental/amp/"},
+      {"titulo": "Wikipedia: Frente Amplio (España)", "url": "https://es.wikipedia.org/wiki/Frente_Amplio_(Espa%C3%B1a)"}
+    ]
+  },
+  {
+    "minuto": "0:58:50",
+    "cita": "la liga española ha tenido actuaciones también más que discutibles llevando Arabia Saudí, otra dictadura",
+    "afirmacion": "El fútbol español (la liga/la Supercopa) ha llevado competiciones a Arabia Saudí, que es una dictadura.",
+    "veredicto": "mayormente_verdadero",
+    "explicacion": "La Supercopa de España se juega en Arabia Saudí desde 2020 por un acuerdo de la RFEF (vigente hasta 2029, con negociaciones para ampliarlo hasta 2034). Matiz: la organiza la Federación (RFEF), no LaLiga. Arabia Saudí es una monarquía absoluta y figura entre los regímenes más autoritarios del índice de The Economist (séptimo de 167, según Ara), y es calificada de dictadura por críticos como Amnistía Internacional.",
+    "confianza": "media",
+    "fuentes": [
+      {"titulo": "Ara: El fútbol español blanquea la dictadura saudí", "url": "https://es.ara.cat/editorial/futbol-espanol-blanquea-dictadura-saudi_129_4910442.amp.html"},
+      {"titulo": "El Debate: Louzán quiere mantener la Supercopa de España en Arabia hasta 2034 (14-01-2025)", "url": "https://www.eldebate.com/deportes/futbol/20250114/plan-rfef-supercopa-espana-buscar-dinero-mantenerla-arabia_260553.html"},
+      {"titulo": "RFEF: President visits the Supercopa Fan Zone in Jeddah", "url": "https://rfef.es/en/noticias/RFEF-President-visits-the-Supercopa-Fan-Zone-in-Jeddah"}
+    ]
+  },
+  {
+    "minuto": "0:59:51",
+    "cita": "Marruecos es súper amigo de Trump",
+    "afirmacion": "Marruecos mantiene una relación muy estrecha con Donald Trump.",
+    "veredicto": "mayormente_verdadero",
+    "explicacion": "Hay alineamiento político documentado: Trump reconoció en 2020 la soberanía marroquí sobre el Sáhara Occidental y se le atribuye haberlo reiterado en 2026, y EE. UU. impulsó la resolución del Consejo de Seguridad de la ONU de octubre de 2025 que toma el plan de autonomía marroquí como base. «Súper amigo» es una expresión coloquial: la prensa consultada no documenta una amistad personal entre Trump y el rey, y 3Cat señala que el vínculo personal destacado es el de Infantino con el presidente de la federación marroquí.",
+    "confianza": "baja",
+    "fuentes": [
+      {"titulo": "Ara: El Consejo de Seguridad de la ONU avala el plan de Marruecos para el Sáhara Occidental (31-10-2025)", "url": "https://es.ara.cat/internacional/africa/consejo-seguridad-onu-avala-plan-marruecos-sahara-occidental_1_5547652.html"},
+      {"titulo": "El Español: La extrema debilidad de Sánchez permite a Infantino negociar la entrega a Marruecos de la final del Mundial (6-08-2026)", "url": "https://www.elespanol.com/espana/20260806/extrema-debilidad-sanchez-permite-infantino-negociar-entrega-marruecos-final-mundial/1003744345140_0.html"},
+      {"titulo": "3Cat: L'efecte Trump posa en perill la final del Mundial 2030 per a Espanya (8-07-2026)", "url": "https://www.3cat.cat/esport3/lefecte-trump-posa-en-perill-la-final-del-mundial-2030-per-a-espanya/noticia/3419403/"}
+    ]
+  },
+  {
+    "minuto": "0:59:51",
+    "cita": "Y claro, Trump has visto la relación que tiene con la FIFA.",
+    "afirmacion": "Donald Trump tiene una relación estrecha con la FIFA y con su presidente, Gianni Infantino.",
+    "veredicto": "verdadero",
+    "explicacion": "3Cat (8-07-2026) describe una «relación muy estrecha» entre Trump e Infantino: Infantino le entregó el Premio de la Paz de la FIFA, pidió el indulto de un jugador estadounidense sancionado en el Mundial y dijo que «sin Trump no habría habido Mundial». La prensa española vincula además esa relación con la polémica sobre la final del Mundial 2030. Se da por hecha la atribución de la frase a Colau, no a Wild.",
+    "confianza": "media",
+    "fuentes": [
+      {"titulo": "3Cat: L'efecte Trump posa en perill la final del Mundial 2030 per a Espanya (8-07-2026)", "url": "https://www.3cat.cat/esport3/lefecte-trump-posa-en-perill-la-final-del-mundial-2030-per-a-espanya/noticia/3419403/"},
+      {"titulo": "El Español: La extrema debilidad de Sánchez permite a Infantino negociar la entrega a Marruecos de la final del Mundial (6-08-2026)", "url": "https://www.elespanol.com/espana/20260806/extrema-debilidad-sanchez-permite-infantino-negociar-entrega-marruecos-final-mundial/1003744345140_0.html"}
+    ]
+  },
+  {
+    "minuto": "0:58:50",
+    "cita": "No, no, mi hijo pequeño... Juega ahí.",
+    "afirmacion": "El hijo pequeño de Ada Colau juega en el club Martinenc.",
+    "veredicto": "no_verificable",
+    "explicacion": "Es una anécdota familiar privada y no he encontrado ninguna constancia pública de que el hijo pequeño de Colau juegue en el Martinenc; los resultados solo hablan del club y de sus equipos de fútbol base, sin mención a ella. No se afirma ni se niega.",
+    "confianza": "media",
+    "fuentes": []
+  }
+]
