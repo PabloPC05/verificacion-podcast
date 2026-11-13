@@ -14,7 +14,7 @@ import re
 import shutil
 import unicodedata
 from pathlib import Path
-from urllib.parse import urlparse
+from urllib.parse import quote, urlparse
 
 import api_publica
 import panel as estadisticas
@@ -716,11 +716,28 @@ def especificacion_openapi(hechas, ejemplo, aviso, comun):
                      "properties": {k: {"type": "integer", "minimum": 0, "description": DEFINICIONES[k]} for k in ORDEN},
                      "example": m_ej["total"] if m_ej else None}
     tabla_veredictos = "\n".join(f"| `{k}` | {DEFINICIONES[k]} |" for k in ORDEN)
+    prompt = prompt_agente(hechas)
     descripcion = f"""API estática de solo lectura con todas las afirmaciones verificadas de las entrevistas de Jordi Wild a los
 candidatos a las elecciones generales del 29 de noviembre de 2026: la cita literal, el veredicto, la explicación, las fuentes y el
 segundo exacto del vídeo. También publica las transcripciones completas.
 
 > {aviso}
+
+## Prompt para agentes de IA
+
+Pega este prompt en un agente o asistente que pueda hacer peticiones web (Claude, ChatGPT, Gemini, Perplexity o tu propio
+agente), como instrucciones de sistema o como primer mensaje, y escribe tu pregunta al final. Le explica estas rutas, qué trae
+cada campo y cómo citar (id, minuto con su vídeo y fuentes).
+
+**[Abrir en Claude](https://claude.ai/new?q={quote(prompt)})** · **[Abrir en ChatGPT](https://chatgpt.com/?q={quote(prompt)})** ·
+[llms.txt]({BASE}/llms.txt)
+
+```text
+{prompt}
+```
+
+Para auditar los veredictos uno a uno hay otro encargo, configurable por entrevista, en [Verifícalo tú]({BASE}/verificalo).
+Una IA también se equivoca: pídele siempre los enlaces y ábrelos.
 
 ## Cómo se usa
 
@@ -749,10 +766,6 @@ segundo exacto del vídeo. También publica las transcripciones completas.
 Una ruta que no existe (por ejemplo, un `slug` desconocido) devuelve `404` con una página HTML, no con JSON.
 Si encuentras un dato mal verificado, abre una incidencia en [GitHub]({REPO}/issues).
 
-## Para agentes de IA
-
-En [{BASE}/api#agentes]({BASE}/api#agentes) hay un prompt listo para pegar en un agente: le explica estas rutas, qué
-trae cada campo y cómo citar (id, minuto con su vídeo y fuentes). La guía breve para modelos está en [llms.txt]({BASE}/llms.txt).
 """
     def respuesta(desc, esquema, ejemplo_json):
         return {"200": {"description": desc, "content": {"application/json": {"schema": ref(esquema), "example": ejemplo_json}}}}
@@ -1525,6 +1538,12 @@ a { color:var(--tinta); }
 .botones a:hover { background:var(--tinta); color:var(--fondo); }
 .nota { font-size:13.5px; color:var(--suave); margin:10px 0 0; }
 #referencia { min-height:60vh; }
+/* El prompt para agentes vive en la descripción OpenAPI que pinta Scalar: que no se corte y que tenga botón de copiar */
+.introduction-description pre { max-height:440px; overflow-y:auto !important; overflow-x:hidden !important; }
+.introduction-description pre, .introduction-description pre * { white-space:pre-wrap !important; overflow-wrap:anywhere !important; word-break:normal; }
+.copiar-prompt { font:inherit; font-size:14px; font-weight:700; background:var(--tinta); color:var(--fondo); border:2px solid var(--tinta);
+  border-radius:var(--r-boton, 9px); padding:7px 14px; margin:0 0 10px; cursor:pointer; }
+.copiar-prompt:hover { background:var(--fondo); color:var(--tinta); }
 noscript p { max-width:68ch; margin:24px 16px; }
 /* Scalar con los colores, letras y esquinas del resto de la web. Los selectores con body ganan a los del tema por defecto de Scalar. */
 body.light-mode, body.dark-mode, body .scalar-app {
@@ -1563,14 +1582,7 @@ body.light-mode, body.dark-mode, body .scalar-app {
 <header class="api-cab"><div class="ancho">
 <h1>API abierta</h1>
 <p>Todos los datos de la web en JSON y CSV: afirmaciones, veredictos, fuentes y transcripciones. Sin registro ni clave, con CORS abierto y de solo lectura. Base: <code>@@BASE@@/api/v1</code>.</p>
-<p class="saltos"><a href="#agentes">Prompt para agentes de IA ↓</a><a href="#referencia">Referencia completa ↓</a><a href="/api/v1/openapi.json">openapi.json</a><a href="/llms.txt">llms.txt</a><a href="/verificalo#api">Ejemplos para hoja de cálculo y programación</a></p>
-<section class="agentes" id="agentes">
-<h2>Prompt para agentes de IA</h2>
-<p>Pégalo en un agente o asistente que pueda hacer peticiones web (Claude, ChatGPT, Gemini, Perplexity o tu propio agente), como instrucciones de sistema o como primer mensaje, y escribe tu pregunta al final. Le explica la API, qué trae cada campo y cómo citar.</p>
-<pre id="prompt-agente">@@PROMPT@@</pre>
-<div class="botones"><button id="copiar-prompt" type="button">Copiar prompt</button><a id="abrir-claude" target="_blank" rel="noopener noreferrer">Abrir en Claude ↗</a><a id="abrir-chatgpt" target="_blank" rel="noopener noreferrer">Abrir en ChatGPT ↗</a></div>
-<p class="nota">Para auditar los veredictos uno a uno hay otro encargo, configurable por entrevista, en <a href="/verificalo">Verifícalo tú</a>. Una IA también se equivoca: pídele siempre los enlaces y ábrelos.</p>
-</section>
+<p class="saltos"><a href="#referencia" id="ir-agentes">Prompt para agentes de IA ↓</a><a href="#referencia">Referencia completa ↓</a><a href="/api/v1/openapi.json">openapi.json</a><a href="/llms.txt">llms.txt</a><a href="/verificalo#api">Ejemplos para hoja de cálculo y programación</a></p>
 </div></header>
 <div id="referencia"></div>
 <footer class="pie-solo"><div class="ancho">@@PIE@@</div></footer>
@@ -1578,14 +1590,6 @@ body.light-mode, body.dark-mode, body .scalar-app {
 <script src="https://cdn.jsdelivr.net/npm/@scalar/api-reference@@@SCALAR@@/dist/browser/standalone.js" integrity="@@SCALAR_SRI@@" crossorigin="anonymous"></script>
 <script>
 (() => {
-  const texto = document.getElementById("prompt-agente").textContent;
-  document.getElementById("abrir-claude").href = "https://claude.ai/new?q=" + encodeURIComponent(texto);
-  document.getElementById("abrir-chatgpt").href = "https://chatgpt.com/?q=" + encodeURIComponent(texto);
-  document.getElementById("copiar-prompt").onclick = ev => {
-    const b = ev.currentTarget;
-    const hecho = () => { b.textContent = "Copiado: pégalo en tu agente"; setTimeout(() => b.textContent = "Copiar prompt", 2200); };
-    if (navigator.clipboard) navigator.clipboard.writeText(texto).then(hecho, () => prompt("Copia este texto:", texto)); else prompt("Copia este texto:", texto);
-  };
   if (!window.Scalar) return;
   // Mismo modo que el resto de la web (botón del menú o sistema), también si cambia con la página abierta.
   const raiz = document.documentElement, sistema = matchMedia("(prefers-color-scheme: dark)");
@@ -1601,6 +1605,27 @@ body.light-mode, body.dark-mode, body .scalar-app {
     metaData: { title: "API abierta · Verificación The Wild Project" },
   };
   Scalar.createApiReference("#referencia", { ...config, forceDarkModeState: tema() });
+  // Botón «Copiar prompt» encima del bloque del prompt para agentes (Scalar no pone botón en los bloques de la descripción)
+  const ANCLA_PROMPT = "api-1/description/prompt-para-agentes-de-ia";
+  const prepararPrompt = () => {
+    const pre = [...document.querySelectorAll(".introduction-description pre")].find(x => x.textContent.trim().startsWith("Tienes acceso"));
+    if (!pre || pre.dataset.listo) return;
+    pre.dataset.listo = "1";
+    const b = document.createElement("button");
+    b.type = "button"; b.className = "copiar-prompt"; b.textContent = "Copiar prompt";
+    b.onclick = () => {
+      const t = pre.textContent.trim();
+      if (typeof copiarTexto === "function") copiarTexto(t, "Prompt copiado. Pégalo en tu agente y escribe tu pregunta al final.");
+      else if (navigator.clipboard) navigator.clipboard.writeText(t);
+      b.textContent = "Copiado ✓"; setTimeout(() => b.textContent = "Copiar prompt", 2200);
+    };
+    pre.before(b);
+  };
+  new MutationObserver(prepararPrompt).observe(document.getElementById("referencia"), { childList: true, subtree: true });
+  document.getElementById("ir-agentes").addEventListener("click", ev => {
+    const h = document.getElementById(ANCLA_PROMPT);
+    if (h) { ev.preventDefault(); h.scrollIntoView(); }
+  });
   // updateConfiguration no aplica forceDarkModeState en caliente; Scalar pinta el tema según la clase del <body>.
   const sincronizar = () => {
     const oscuro = tema() === "dark";
