@@ -1,4 +1,11 @@
 {
+ "redirects": [
+  {
+   "source": "/api/referencia",
+   "destination": "/api",
+   "permanent": true
+  }
+ ],
  "headers": [
   {
    "source": "/api/((?!estadisticas).*)",

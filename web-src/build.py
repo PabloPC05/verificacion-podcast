@@ -141,7 +141,11 @@ PLURAL = {"falso": "Falsas", "enganoso": "Engañosas", "mayormente_verdadero": "
 
 
 BASE = "https://verificacion-podcast.vercel.app"
-SCALAR = "1.76.2"  # @scalar/api-reference, versión fijada: subirla a mano tras probar /api/referencia
+SCALAR = "1.76.2"  # @scalar/api-reference, versión fijada: subirla a mano tras probar /api
+# Huella SRI de dist/browser/standalone.js de esa versión. Si cambias SCALAR, recalcúlala:
+#   curl -s https://cdn.jsdelivr.net/npm/@scalar/api-reference@<versión>/dist/browser/standalone.js \
+#     | openssl dgst -sha384 -binary | openssl base64 -A
+SCALAR_SRI = "sha384-mCh2A/B6vkfhiHyzwBZm7lbFmEK5fE/96Kbtk+RH1zei1P/XEt0I2MCiG6WfZdor"
 # Umami Cloud (estadísticas de visitas, sin cookies). Vacío = la web sale sin seguimiento.
 # El ID es público (va en el HTML); la clave de la API no: vive en Vercel como UMAMI_API_KEY.
 UMAMI_ID = ""
@@ -476,7 +480,7 @@ API de solo lectura, JSON estático, sin clave, CORS abierto. Base: {BASE}/api/v
 - [Afirmaciones de una entrevista]({BASE}/api/v1/{ejemplo}.json): sustituye el slug ({", ".join(slugs)}).
 - [Transcripción con tiempos]({BASE}/api/v1/{ejemplo}/transcripcion.json) y [en texto]({BASE}/api/v1/{ejemplo}/transcripcion.txt).
 - [Todas las afirmaciones en CSV]({BASE}/api/v1/afirmaciones.csv) y por entrevista: {BASE}/api/v1/{ejemplo}.csv
-- [OpenAPI]({BASE}/api/v1/openapi.json): esquemas de cada respuesta y ejemplos. Versión legible: {BASE}/api/referencia
+- [OpenAPI]({BASE}/api/v1/openapi.json): esquemas de cada respuesta y ejemplos. Referencia legible y prompt para agentes de IA: {BASE}/api
 - [Método y criterios]({REPO}/blob/main/METODO.md)
 
 Campos de cada afirmación: id, entrevista, invitado, tema, segundo, minuto, video_url, web_url, cita (literal de la
@@ -486,7 +490,9 @@ resumen, explicacion, confianza (alta | media | baja), fuentes [{{titulo, url}}]
 Para volver a comprobar una afirmación: lee `cita` y `afirmacion`, abre cada `fuentes[].url`, y contrasta con la `explicacion`.
 Los errores se comunican en {REPO}/issues.
 """, encoding="utf-8")
-    (SALIDA / "vercel.json").write_text(json.dumps({"headers": [
+    (SALIDA / "vercel.json").write_text(json.dumps({
+        "redirects": [{"source": "/api/referencia", "destination": "/api", "permanent": True}],
+        "headers": [
         # /api/estadisticas (el panel privado) queda fuera: no se cachea ni se abre a otros dominios.
         {"source": "/api/((?!estadisticas).*)", "headers": [{"key": "Access-Control-Allow-Origin", "value": "*"},
                                             {"key": "Cache-Control", "value": "public, max-age=300"}]},
@@ -494,7 +500,7 @@ Los errores se comunican en {REPO}/issues.
     return ejemplo, slugs
 
 
-# ───────────────────────── Descripción OpenAPI (la que pinta Scalar en /api/referencia) ─────────────────────────
+# ───────────────────────── Descripción OpenAPI (la que pinta Scalar en /api) ─────────────────────────
 
 def especificacion_openapi(hechas, ejemplo, aviso, comun):
     slugs = [m["slug"] for m in hechas]
@@ -503,6 +509,7 @@ def especificacion_openapi(hechas, ejemplo, aviso, comun):
     if ficha_ej:
         ficha_ej = dict(ficha_ej, temas=ficha_ej["temas"][:2])
     afirm_ej = [afirmacion_api(m_ej, a) for a in m_ej["todas"][:1]] if m_ej else []
+    excl_ej = [dict(x, id=f'{m_ej["slug"]}-{x["id"]}') for x in m_ej.get("excluidas", [])[:1]] if m_ej else []
     segs_ej = []
     if m_ej:
         segs = json.loads((m_ej["carpeta"] / "segmentos.json").read_text(encoding="utf-8"))[:2]
@@ -547,6 +554,11 @@ segundo exacto del vídeo. También publica las transcripciones completas.
 
 Una ruta que no existe (por ejemplo, un `slug` desconocido) devuelve `404` con una página HTML, no con JSON.
 Si encuentras un dato mal verificado, abre una incidencia en [GitHub]({REPO}/issues).
+
+## Para agentes de IA
+
+En [{BASE}/api#agentes]({BASE}/api#agentes) hay un prompt listo para pegar en un agente: le explica estas rutas, qué
+trae cada campo y cómo citar (id, minuto con su vídeo y fuentes). La guía breve para modelos está en [llms.txt]({BASE}/llms.txt).
 """
     def respuesta(desc, esquema, ejemplo_json):
         return {"200": {"description": desc, "content": {"application/json": {"schema": ref(esquema), "example": ejemplo_json}}}}
@@ -588,7 +600,7 @@ Si encuentras un dato mal verificado, abre una incidencia en [GitHub]({REPO}/iss
                 "tags": ["Afirmaciones"], "operationId": "afirmacionesDeEntrevista", "summary": "Afirmaciones de una entrevista",
                 "description": "La ficha de la entrevista y sus afirmaciones verificadas, en orden de aparición en el vídeo.",
                 "responses": dict(respuesta("Ficha y afirmaciones de la entrevista.", "AfirmacionesEntrevista",
-                                            dict(comun_ej, entrevista=ficha_ej, afirmaciones=afirm_ej)), **no_existe)}},
+                                            dict(comun_ej, entrevista=ficha_ej, afirmaciones=afirm_ej, excluidas=excl_ej)), **no_existe)}},
             "/afirmaciones.csv": {"get": {
                 "tags": ["Afirmaciones"], "operationId": "afirmacionesCsv", "summary": "Todas las afirmaciones en CSV",
                 "description": csv_desc,
@@ -649,7 +661,7 @@ Si encuentras un dato mal verificado, abre una incidencia en [GitHub]({REPO}/iss
                 "Entrevista": {"type": "object", "description": "Ficha de una entrevista.",
                                "required": ["slug", "invitado", "partido", "programa", "fecha", "duracion", "video_url", "web_url",
                                             "afirmaciones_url", "transcripcion_url", "transcripcion_txt_url",
-                                            "total_afirmaciones", "por_veredicto", "temas"],
+                                            "total_afirmaciones", "por_veredicto", "excluidas", "temas"],
                                "properties": {
                                    "slug": {"type": "string", "description": "Identificador para las rutas `/{slug}…`."},
                                    "invitado": {"type": "string", "description": "Nombre del candidato."},
@@ -662,8 +674,12 @@ Si encuentras un dato mal verificado, abre una incidencia en [GitHub]({REPO}/iss
                                    "afirmaciones_url": dict(url, description="URL de `/{slug}.json`."),
                                    "transcripcion_url": dict(url, description="URL de `/{slug}/transcripcion.json`."),
                                    "transcripcion_txt_url": dict(url, description="URL de `/{slug}/transcripcion.txt`."),
-                                   "total_afirmaciones": {"type": "integer", "minimum": 0},
+                                   "total_afirmaciones": {"type": "integer", "minimum": 0,
+                                                          "description": "Afirmaciones publicadas (sin contar las excluidas)."},
                                    "por_veredicto": ref("PorVeredicto"),
+                                   "excluidas": {"type": "integer", "minimum": 0,
+                                                 "description": "Afirmaciones comprobables que se han dejado fuera por no tener interés "
+                                                                "público. La lista está en el campo `excluidas` de `/{slug}.json`."},
                                    "temas": {"type": "array", "items": ref("Tema"), "description": "Capítulos en orden, incluidos los que no tienen afirmaciones."},
                                }},
                 "Fuente": {"type": "object", "required": ["titulo", "url"],
@@ -700,9 +716,24 @@ Si encuentras un dato mal verificado, abre una incidencia en [GitHub]({REPO}/iss
                 "TodasAfirmaciones": {"allOf": [ref("Comun"), {"type": "object", "required": ["total", "afirmaciones"],
                                       "properties": {"total": {"type": "integer", "minimum": 0, "description": "Número de afirmaciones."},
                                                      "afirmaciones": {"type": "array", "items": ref("Afirmacion")}}}]},
-                "AfirmacionesEntrevista": {"allOf": [ref("Comun"), {"type": "object", "required": ["entrevista", "afirmaciones"],
+                "Excluida": {"type": "object", "description": "Afirmación comprobable que no se publica por no tener interés público. "
+                                                              "Conserva su veredicto original por transparencia.",
+                             "required": ["id", "minuto", "afirmacion", "veredicto", "motivo"],
+                             "properties": {
+                                 "id": {"type": "string", "description": "Mismo formato que `Afirmacion.id` (`sanchez-m251`)."},
+                                 "minuto": {"type": "string", "pattern": "^\\d+:\\d{2}:\\d{2}$"},
+                                 "afirmacion": {"type": "string"},
+                                 "veredicto": ref("Veredicto"),
+                                 "motivo": {"type": "string", "description": "Uno de los cinco motivos de exclusión del método "
+                                                                             "(dato biográfico, anécdota privada, duración de un cargo, "
+                                                                             "logística de la campaña o curiosidad)."},
+                             }},
+                "AfirmacionesEntrevista": {"allOf": [ref("Comun"), {"type": "object", "required": ["entrevista", "afirmaciones", "excluidas"],
                                            "properties": {"entrevista": ref("Entrevista"),
-                                                          "afirmaciones": {"type": "array", "items": ref("Afirmacion")}}}]},
+                                                          "afirmaciones": {"type": "array", "items": ref("Afirmacion")},
+                                                          "excluidas": {"type": "array", "items": ref("Excluida"),
+                                                                        "description": "Afirmaciones dejadas fuera de `afirmaciones` y de "
+                                                                                       "los recuentos por no tener interés público."}}}]},
                 "Transcripcion": {"allOf": [ref("Comun"), {"type": "object", "required": ["entrevista", "nota", "segmentos"],
                                   "properties": {"entrevista": ref("Entrevista"),
                                                  "nota": {"type": "string", "description": "Límites de la transcripción automática."},
@@ -710,6 +741,88 @@ Si encuentras un dato mal verificado, abre una incidencia en [GitHub]({REPO}/iss
             },
         },
     }
+
+
+def prompt_agente(hechas):
+    """Prompt listo para que un agente de IA use la API. Se muestra en /api y se copia tal cual."""
+    invitados = ", ".join(f'{m["invitado"]} ({m.get("partido") or "sin partido"})' for m in hechas)
+    slugs = ", ".join(m["slug"] for m in hechas)
+    veredictos = "\n".join(f"- {k}: {DEFINICIONES[k]}" for k in ORDEN)
+    return f"""Tienes acceso a una API pública, de solo lectura y sin clave, con la verificación de las entrevistas de Jordi Wild (The Wild Project) a los candidatos a las elecciones generales españolas del 29 de noviembre de 2026: {invitados}. Úsala para responder a mis preguntas.
+
+CÓMO CONSULTARLA (peticiones GET; responden JSON salvo que se indique otra cosa)
+- {BASE}/api/v1/entrevistas.json: entrevistas, su slug, recuentos por veredicto y temas. Empieza aquí.
+- {BASE}/api/v1/{{slug}}.json: afirmaciones verificadas de una entrevista (slugs: {slugs}), más la lista de excluidas por irrelevantes.
+- {BASE}/api/v1/afirmaciones.json: todas las afirmaciones de todas las entrevistas.
+- {BASE}/api/v1/{{slug}}/transcripcion.txt: transcripción completa con marcas [h:mm:ss], para ver el contexto de una frase.
+- {BASE}/api/v1/afirmaciones.csv y {BASE}/api/v1/{{slug}}.csv: lo mismo en CSV.
+- {BASE}/api/v1/openapi.json: esquema completo.
+No hay filtros ni búsqueda en el servidor: descarga el fichero y filtra tú.
+
+QUÉ TRAE CADA AFIRMACIÓN
+id, invitado, tema, minuto, video_url (el vídeo en ese segundo), cita (literal de la transcripción), afirmacion (reformulada), veredicto, resumen, explicacion, confianza (alta, media o baja) y fuentes [{{titulo, url}}].
+Veredictos:
+{veredictos}
+
+CÓMO RESPONDER
+1. Consulta la API antes de contestar; no respondas de memoria sobre estas entrevistas.
+2. De cada afirmación que menciones, da el id, el minuto con su video_url y al menos una de sus fuentes.
+3. Separa lo que dice la verificación publicada de tu propia valoración. Si revisas un veredicto, abre las fuentes y dilo explícitamente.
+4. Para comparar candidatos usa proporciones (por ejemplo, falsas o engañosas sobre el total de cada uno), no solo números absolutos: las entrevistas duran distinto y cada invitado da más o menos datos.
+5. La verificación está hecha con IA y no la ha revisado un equipo de periodistas; «falso» no implica intención de mentir. Recuérdalo cuando sea relevante.
+6. Aplica la misma vara de medir a todos los candidatos. No inventes ids, cifras ni enlaces: si la API no tiene el dato, dilo.
+
+MI PETICIÓN
+[Escribe aquí lo que quieres saber. Por ejemplo: «¿Qué afirmaciones falsas hizo cada candidato sobre inmigración? Dame el minuto y una fuente de cada una.»]"""
+
+
+def comparativa(hechas):
+    """Cuadro comparativo de los candidatos para la portada."""
+    if len(hechas) < 2:
+        return ""
+    filas_v = [("falso", "Falsas"), ("enganoso", "Engañosas")]
+    resto_v = [("mayormente_verdadero", "Casi ciertas"), ("verdadero", "Verdaderas"), ("no_verificable", "No verificables")]
+
+    def pct(n, total):
+        return f"{round(100 * n / total)} %" if total else "—"
+
+    def horas(m):
+        segs = json.loads((m["carpeta"] / "segmentos.json").read_text(encoding="utf-8"))
+        return max((x["f"] for x in segs), default=0) / 3600
+
+    def celda_n(m, n):
+        return f'<td><b>{n}</b> <span class="pc">{pct(n, m["suma"])}</span></td>'
+
+    def tema_top(m):
+        t = max(m["temas"], key=lambda t: (t["malas"], -t["n"]))
+        if not t["malas"]:
+            return "<td>—</td>"
+        return f'<td><a href="/{e(m["slug"])}#tema-{t["n"]}">{e(t["titulo"])}</a> <span class="pc">({t["malas"]})</span></td>'
+
+    cab = "".join(
+        f'<th scope="col"><a href="/{e(m["slug"])}"><span class="cand">{e(m["invitado"])}</span></a>'
+        f'<span class="par">{e(m.get("partido") or "")}</span></th>' for m in hechas)
+    filas = [
+        ("Duración de la entrevista", "".join(f'<td>{e(m["duracion"])}</td>' for m in hechas), ""),
+        ("Afirmaciones comprobadas", "".join(f'<td><b>{m["suma"]}</b></td>' for m in hechas), ""),
+        ("Comprobadas por hora", "".join(f'<td>{m["suma"] / horas(m):.0f}</td>' if horas(m) else "<td>—</td>" for m in hechas), ""),
+    ]
+    filas += [(f'<i class="tono-{k}"></i>{nombre}', "".join(celda_n(m, m["total"][k]) for m in hechas), f' class="tono-{k}"')
+              for k, nombre in filas_v]
+    filas.append(("Falsas o engañosas", "".join(celda_n(m, m["malas"]) for m in hechas), ' class="fuerte"'))
+    filas += [(f'<i class="tono-{k}"></i>{nombre}', "".join(celda_n(m, m["total"][k]) for m in hechas), f' class="tono-{k}"')
+              for k, nombre in resto_v]
+    filas.append(("Reparto", "".join(
+        '<td><div class="reparto">' + "".join(f'<i class="tono-{k}" style="flex:{m["total"][k]}"></i>' for k in ORDEN if m["total"][k])
+        + "</div></td>" for m in hechas), ""))
+    filas.append(("Tema con más falsas o engañosas", "".join(tema_top(m) for m in hechas), ""))
+    filas.append(("Excluidas por irrelevantes", "".join(f'<td>{len(m.get("excluidas", []))}</td>' for m in hechas), ""))
+    cuerpo = "".join(f'<tr{clase}><th scope="row">{etiqueta}</th>{celdas}</tr>' for etiqueta, celdas, clase in filas)
+    return (f'<section class="compara" aria-labelledby="compara-t"><h2 id="compara-t">Los {len(hechas)} candidatos, comparados</h2>'
+            f'<div class="tabla-c"><table><thead><tr><td></td>{cab}</tr></thead><tbody>{cuerpo}</tbody></table></div>'
+            '<p class="nota-c">Los porcentajes son sobre las afirmaciones comprobadas de cada candidato. Cuántas se pueden comprobar '
+            'depende de la duración de la entrevista, de las preguntas y de cuántos datos da cada invitado, así que esto no es un ranking: '
+            'sirve para ver dónde mirar. Cada cifra lleva a su línea temporal.</p></section>')
 
 
 def main():
@@ -758,7 +871,7 @@ def main():
         f'<p class="prog">{e(m.get("programa", ""))}</p><p class="des">Verificación en curso.</p></div></article>'
         for m in entrevistas if not m.get("publicar"))
     (SALIDA / "index.html").write_text(rellenar(
-        PORTADA, CREDITOS=creditos_fotos(hechas), MENU=menu(entrevistas), CSS_MENU=CSS_MENU, LEYENDA=LEYENDA, TARJETAS=tarjetas, REPO=REPO,
+        PORTADA, CREDITOS=creditos_fotos(hechas), COMPARATIVA=comparativa(hechas), MENU=menu(entrevistas), CSS_MENU=CSS_MENU, LEYENDA=LEYENDA, TARJETAS=tarjetas, REPO=REPO,
         FECHA=dt.datetime.now().strftime("%d/%m/%Y")), encoding="utf-8")
     (SALIDA / "verificalo").mkdir(exist_ok=True)
     opciones = "".join(f'<option value="{e(m["slug"])}">{e(m["invitado"])}</option>' for m in hechas)
@@ -768,11 +881,11 @@ def main():
         EJ=ejemplo, SLUGS=", ".join(f"<code>{x}</code>" for x in slugs)), encoding="utf-8")
     (SALIDA / "api").mkdir(exist_ok=True)
     (SALIDA / "api" / "index.html").write_text(rellenar(
-        PAGINA_API, MENU=menu(entrevistas), CSS_MENU=CSS_MENU, BASE=BASE, REPO=REPO, EJ=ejemplo,
-        SLUGS=", ".join(f"<code>{x}</code>" for x in slugs)), encoding="utf-8")
+        PAGINA_API, PROMPT=e(prompt_agente(hechas)), MENU=menu(entrevistas), CSS_MENU=CSS_MENU, BASE=BASE, REPO=REPO,
+        SCALAR=SCALAR, SCALAR_SRI=SCALAR_SRI), encoding="utf-8")
+    # La referencia vivió unas horas en /api/referencia: se redirige (aquí y en vercel.json).
     (SALIDA / "api" / "referencia").mkdir(exist_ok=True)
-    (SALIDA / "api" / "referencia" / "index.html").write_text(
-        rellenar(PAGINA_REFERENCIA, SCALAR=SCALAR, MENU=menu(entrevistas), CSS_MENU=CSS_MENU, HEAD_MODO=HEAD_MODO), encoding="utf-8")
+    (SALIDA / "api" / "referencia" / "index.html").write_text(REDIRIGE_API, encoding="utf-8")
     # Panel privado de estadísticas: la página es estática y los datos los sirve /api/estadisticas tras pedir contraseña.
     (SALIDA / "panel").mkdir(exist_ok=True)
     (SALIDA / "panel" / "index.html").write_text(
@@ -1098,20 +1211,38 @@ pintar();
 </html>
 """
 
-PAGINA_REFERENCIA = """<!doctype html>
+PAGINA_API = """<!doctype html>
 <html lang="es">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 @@HEAD_MODO@@
-<title>Referencia de la API · Verificación The Wild Project</title>
-<meta name="description" content="Referencia completa de la API abierta: cada ruta, cada campo y ejemplos reales, generada a partir de la descripción OpenAPI 3.1.">
+<title>API abierta · Verificación The Wild Project</title>
+<meta name="description" content="API JSON y CSV de solo lectura, sin clave y con CORS abierto: referencia completa de cada ruta y cada campo, y un prompt listo para agentes de IA.">
 <style>
+:root { --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; --scalar-custom-header-height:var(--menu, 48px); }
 * { box-sizing:border-box; }
-body { margin:0; background:var(--fondo); color:var(--tinta); font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; }
+body { margin:0; background:var(--fondo); color:var(--tinta); font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; }
 a { color:var(--tinta); }
+.api-cab { padding:clamp(28px,5vw,48px) 0 30px; border-bottom:3px solid var(--tinta); }
+.api-cab h1 { font:700 clamp(30px,5.2vw,56px)/1.05 var(--serif); letter-spacing:-0.02em; margin:0 0 12px; }
+.api-cab > .ancho > p { font-size:17px; max-width:70ch; margin:0 0 10px; }
+.api-cab code { font:14px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace; background:var(--codigo); padding:1px 5px; }
+.saltos { display:flex; flex-wrap:wrap; gap:8px 22px; margin:14px 0 26px; font-weight:700; font-size:15px; }
+.agentes { border:2px solid var(--tinta); border-radius:var(--r-caja); padding:18px 20px; }
+.agentes h2 { font:700 25px/1.2 var(--serif); margin:0 0 6px; }
+.agentes > p { margin:0 0 12px; font-size:15px; max-width:76ch; }
+.agentes pre { background:var(--pre-fondo); color:var(--pre-tinta); outline:1px solid var(--pre-borde); outline-offset:-1px; margin:0 0 12px;
+  padding:16px 18px; white-space:pre-wrap; overflow-wrap:anywhere; font:13px/1.6 ui-monospace,SFMono-Regular,Menlo,monospace;
+  max-height:360px; overflow-y:auto; }
+.botones { display:flex; flex-wrap:wrap; gap:8px; }
+.botones button, .botones a { font:inherit; font-size:14px; font-weight:600; background:var(--fondo); color:var(--tinta); border:2px solid var(--tinta);
+  padding:7px 14px; cursor:pointer; text-decoration:none; }
+.botones button { background:var(--tinta); color:var(--fondo); }
+.botones a:hover { background:var(--tinta); color:var(--fondo); }
+.nota { font-size:13.5px; color:var(--suave); margin:10px 0 0; }
+#referencia { min-height:60vh; }
 noscript p { max-width:68ch; margin:24px 16px; }
-@@CSS_MENU@@
 /* Scalar con los colores, letras y esquinas del resto de la web. Los selectores con body ganan a los del tema por defecto de Scalar. */
 body.light-mode, body.dark-mode, body .scalar-app {
   --scalar-custom-header-height:var(--menu, 48px);
@@ -1141,135 +1272,78 @@ body.light-mode, body.dark-mode, body .scalar-app {
 .scalar-modal-search .scalar-icon-button:focus-visible { outline:3px solid var(--tinta); outline-offset:2px; }
 .ref-search-meta { border-top:1px solid var(--claro); }
 @media (max-width:760px) { .scalar-modal-search { margin-top:12px !important; max-height:calc(100dvh - 24px) !important; } }
-</style>
-</head>
-<body>
-@@MENU@@
-<div id="referencia"></div>
-<noscript><p>Esta referencia necesita JavaScript. Tienes la misma información en <a href="/api/v1/openapi.json">openapi.json</a> y una guía corta en <a href="/api">/api</a>.</p></noscript>
-<script src="https://cdn.jsdelivr.net/npm/@scalar/api-reference@@@SCALAR@@"></script>
-<script>
-// Mismo modo que el resto de la web: el elegido con el botón (localStorage «modo») o el del sistema.
-const modo = document.documentElement.dataset.modo;
-const oscuro = modo ? modo === "oscuro" : matchMedia("(prefers-color-scheme: dark)").matches;
-const ref = Scalar.createApiReference("#referencia", {
-  url: "/api/v1/openapi.json",
-  forceDarkModeState: oscuro ? "dark" : "light",
-  hideDarkModeToggle: true,
-  hideClientButton: true,
-  showDeveloperTools: "never",
-  agent: { disabled: true },
-  documentDownloadType: "json",
-  defaultHttpClient: { targetKey: "shell", clientKey: "curl" },
-  metaData: { title: "Referencia de la API · Verificación The Wild Project" },
-});
-// El botón de modo de la cabecera también cambia Scalar
-new MutationObserver(() => {
-  const o = RAIZ.dataset.modo === "oscuro" || (!RAIZ.dataset.modo && matchMedia("(prefers-color-scheme: dark)").matches);
-  document.body.classList.toggle("dark-mode", o); document.body.classList.toggle("light-mode", !o);
-  ref?.updateConfiguration?.({ forceDarkModeState: o ? "dark" : "light" });
-}).observe(RAIZ, { attributes: true, attributeFilter: ["data-modo"] });
-// En el buscador, la X de Scalar solo borra el texto aunque parece cerrar. La convertimos en «Cerrar», que es lo que se espera.
-new MutationObserver(() => document.querySelectorAll(".scalar-modal-search .scalar-icon-button:not([data-cerrar])").forEach(b => {
-  b.dataset.cerrar = ""; b.setAttribute("aria-label", "Cerrar buscador"); b.title = "Cerrar (Esc)";
-  b.querySelector(".sr-only")?.replaceChildren("Cerrar buscador");
-  b.addEventListener("click", ev => {
-    ev.preventDefault(); ev.stopImmediatePropagation();
-    const campo = b.closest(".scalar-modal")?.querySelector("input") || document.activeElement;
-    campo.dispatchEvent(new KeyboardEvent("keydown", { key: "Escape", code: "Escape", bubbles: true }));
-  }, true);
-})).observe(document.body, { childList: true, subtree: true });
-</script>
-</body>
-</html>
-"""
-
-PAGINA_API = """<!doctype html>
-<html lang="es">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-@@HEAD_MODO@@
-<title>API abierta · Verificación The Wild Project</title>
-<meta name="description" content="API JSON de solo lectura, sin clave y con CORS abierto, con todas las afirmaciones verificadas, sus fuentes y las transcripciones. Pensada para agentes de IA y verificadores.">
-<style>
-:root { --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; }
-* { box-sizing:border-box; }
-body { margin:0; background:var(--fondo); color:var(--tinta); font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; }
-a { color:var(--tinta); }
-main.ancho { padding-bottom:72px; }
-main > * { max-width:980px; }
-h1 { font:700 clamp(28px,5vw,52px)/1.06 var(--serif); letter-spacing:-0.02em; margin:clamp(28px,5vw,48px) 0 12px; text-wrap:balance; }
-h2 { font:700 23px/1.2 var(--serif); margin:40px 0 10px; padding-top:12px; border-top:3px solid var(--tinta); }
-p, li { max-width:68ch; }
-code { font:13.5px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace; background:var(--codigo); padding:1px 5px; }
-pre { background:var(--pre-fondo); color:var(--pre-tinta); outline:1px solid var(--pre-borde); outline-offset:-1px; padding:14px 16px; overflow-x:auto; font:13px/1.55 ui-monospace,SFMono-Regular,Menlo,monospace; }
-pre code { background:none; padding:0; color:inherit; }
-.tabla { overflow-x:auto; }
-table { border-collapse:collapse; width:100%; font-size:14.5px; min-width:560px; }
-th, td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--tinta); vertical-align:top; }
-th { font-size:11px; text-transform:uppercase; letter-spacing:.08em; }
-td a { overflow-wrap:anywhere; }
-.ref { border:2px solid var(--tinta); padding:14px 16px; display:flex; flex-direction:column; gap:4px; }
-.ref a { font-weight:700; font-size:17px; }
-.ref span { font-size:14.5px; }
 @@CSS_MENU@@
 </style>
 </head>
 <body>
 @@MENU@@
-<main class="ancho">
-<h1>API abierta para comprobar la verificación</h1>
-<p>Todos los datos de esta web están disponibles como JSON estático: sin clave, sin límite propio de uso y con CORS abierto. Está pensada para que periodistas, verificadores y agentes de IA puedan revisar cada veredicto contra sus fuentes mucho más rápido que leyendo la web.</p>
-<p class="ref"><a href="/api/referencia">Referencia completa de la API →</a><span>Cada ruta y cada campo, con ejemplos reales y la opción de probar las llamadas desde el navegador.</span></p>
-
-<h2>Direcciones</h2>
-<div class="tabla"><table>
-<thead><tr><th>Qué</th><th>Dirección</th></tr></thead>
-<tbody>
-<tr><td>Lista de entrevistas, recuentos y temas (empieza aquí)</td><td><a href="/api/v1/entrevistas.json">/api/v1/entrevistas.json</a></td></tr>
-<tr><td>Todas las afirmaciones de todas las entrevistas</td><td><a href="/api/v1/afirmaciones.json">/api/v1/afirmaciones.json</a> · <a href="/api/v1/afirmaciones.csv">.csv</a></td></tr>
-<tr><td>Afirmaciones de una entrevista</td><td><a href="/api/v1/@@EJ@@.json">/api/v1/{slug}.json</a> · <a href="/api/v1/@@EJ@@.csv">.csv</a></td></tr>
-<tr><td>Transcripción por segmentos con tiempos</td><td><a href="/api/v1/@@EJ@@/transcripcion.json">/api/v1/{slug}/transcripcion.json</a></td></tr>
-<tr><td>Transcripción en texto plano</td><td><a href="/api/v1/@@EJ@@/transcripcion.txt">/api/v1/{slug}/transcripcion.txt</a></td></tr>
-<tr><td>Referencia completa (Scalar)</td><td><a href="/api/referencia">/api/referencia</a></td></tr>
-<tr><td>Descripción OpenAPI 3.1</td><td><a href="/api/v1/openapi.json">/api/v1/openapi.json</a></td></tr>
-<tr><td>Guía para modelos de lenguaje</td><td><a href="/llms.txt">/llms.txt</a></td></tr>
-</tbody></table></div>
-<p>Entrevistas disponibles (<code>slug</code>): @@SLUGS@@.</p>
-
-<h2>Qué trae cada afirmación</h2>
-<div class="tabla"><table>
-<thead><tr><th>Campo</th><th>Contenido</th></tr></thead>
-<tbody>
-<tr><td><code>id</code></td><td>Identificador estable: entrevista y segundo del vídeo.</td></tr>
-<tr><td><code>cita</code></td><td>Lo que se dijo, literal de la transcripción.</td></tr>
-<tr><td><code>afirmacion</code></td><td>La afirmación reformulada para que se entienda sola.</td></tr>
-<tr><td><code>veredicto</code></td><td><code>verdadero</code>, <code>mayormente_verdadero</code>, <code>enganoso</code>, <code>falso</code> o <code>no_verificable</code>.</td></tr>
-<tr><td><code>resumen</code>, <code>explicacion</code></td><td>La justificación, en una frase y completa.</td></tr>
-<tr><td><code>confianza</code></td><td><code>alta</code>, <code>media</code> o <code>baja</code>.</td></tr>
-<tr><td><code>fuentes</code></td><td>Lista de <code>{titulo, url}</code> que sustentan el veredicto.</td></tr>
-<tr><td><code>segundo</code>, <code>minuto</code>, <code>video_url</code></td><td>El momento exacto del vídeo.</td></tr>
-<tr><td><code>tema</code>, <code>tema_n</code></td><td>El capítulo de la entrevista.</td></tr>
-<tr><td><code>web_url</code></td><td>Enlace a la tarjeta en esta web.</td></tr>
-</tbody></table></div>
-
-<h2>Ejemplos</h2>
-<pre><code># Las afirmaciones falsas de una entrevista, con sus fuentes
-curl -s @@BASE@@/api/v1/@@EJ@@.json \\
-  | jq '.afirmaciones[] | select(.veredicto == "falso") | {minuto, cita, resumen, fuentes}'
-
-# Recuento por veredicto de todas las entrevistas
-curl -s @@BASE@@/api/v1/entrevistas.json | jq '.entrevistas[] | {invitado, por_veredicto}'</code></pre>
-
-<h2>Encargo para un agente de IA</h2>
-<p>En <a href="/verificalo">Verifícalo tú</a> hay un encargo completo, configurable por entrevista, que usa esta API para auditar los veredictos.</p>
-
-<h2>Condiciones</h2>
-<p>Los datos son una verificación asistida por IA, sin revisión de un equipo de periodistas: úsalos como punto de partida y contrasta con las fuentes. «Falso» no implica intención de mentir. Los ficheros se regeneran cuando cambia algún dato (campo <code>generado</code>). Si encuentras un error, abre una incidencia en <a href="@@REPO@@/issues" target="_blank" rel="noopener noreferrer">GitHub</a>; el método completo está en <a href="@@REPO@@/blob/main/METODO.md" target="_blank" rel="noopener noreferrer">METODO.md</a>.</p>
-</main>
+<header class="api-cab"><div class="ancho">
+<h1>API abierta</h1>
+<p>Todos los datos de la web en JSON y CSV: afirmaciones, veredictos, fuentes y transcripciones. Sin registro ni clave, con CORS abierto y de solo lectura. Base: <code>@@BASE@@/api/v1</code>.</p>
+<p class="saltos"><a href="#agentes">Prompt para agentes de IA ↓</a><a href="#referencia">Referencia completa ↓</a><a href="/api/v1/openapi.json">openapi.json</a><a href="/llms.txt">llms.txt</a><a href="/verificalo#api">Ejemplos para hoja de cálculo y programación</a></p>
+<section class="agentes" id="agentes">
+<h2>Prompt para agentes de IA</h2>
+<p>Pégalo en un agente o asistente que pueda hacer peticiones web (Claude, ChatGPT, Gemini, Perplexity o tu propio agente), como instrucciones de sistema o como primer mensaje, y escribe tu pregunta al final. Le explica la API, qué trae cada campo y cómo citar.</p>
+<pre id="prompt-agente">@@PROMPT@@</pre>
+<div class="botones"><button id="copiar-prompt" type="button">Copiar prompt</button><a id="abrir-claude" target="_blank" rel="noopener noreferrer">Abrir en Claude ↗</a><a id="abrir-chatgpt" target="_blank" rel="noopener noreferrer">Abrir en ChatGPT ↗</a></div>
+<p class="nota">Para auditar los veredictos uno a uno hay otro encargo, configurable por entrevista, en <a href="/verificalo">Verifícalo tú</a>. Una IA también se equivoca: pídele siempre los enlaces y ábrelos.</p>
+</section>
+</div></header>
+<div id="referencia"></div>
+<noscript><p>La referencia interactiva necesita JavaScript. Tienes la misma información en <a href="/api/v1/openapi.json">openapi.json</a>.</p></noscript>
+<script src="https://cdn.jsdelivr.net/npm/@scalar/api-reference@@@SCALAR@@/dist/browser/standalone.js" integrity="@@SCALAR_SRI@@" crossorigin="anonymous"></script>
+<script>
+(() => {
+  const texto = document.getElementById("prompt-agente").textContent;
+  document.getElementById("abrir-claude").href = "https://claude.ai/new?q=" + encodeURIComponent(texto);
+  document.getElementById("abrir-chatgpt").href = "https://chatgpt.com/?q=" + encodeURIComponent(texto);
+  document.getElementById("copiar-prompt").onclick = ev => {
+    const b = ev.currentTarget;
+    const hecho = () => { b.textContent = "Copiado: pégalo en tu agente"; setTimeout(() => b.textContent = "Copiar prompt", 2200); };
+    if (navigator.clipboard) navigator.clipboard.writeText(texto).then(hecho, () => prompt("Copia este texto:", texto)); else prompt("Copia este texto:", texto);
+  };
+  if (!window.Scalar) return;
+  // Mismo modo que el resto de la web (botón del menú o sistema), también si cambia con la página abierta.
+  const raiz = document.documentElement, sistema = matchMedia("(prefers-color-scheme: dark)");
+  const tema = () => (raiz.dataset.modo ? raiz.dataset.modo === "oscuro" : sistema.matches) ? "dark" : "light";
+  const config = {
+    url: "/api/v1/openapi.json",
+    hideDarkModeToggle: true,
+    hideClientButton: true,
+    showDeveloperTools: "never",
+    agent: { disabled: true },
+    documentDownloadType: "json",
+    defaultHttpClient: { targetKey: "shell", clientKey: "curl" },
+    metaData: { title: "API abierta · Verificación The Wild Project" },
+  };
+  Scalar.createApiReference("#referencia", { ...config, forceDarkModeState: tema() });
+  // updateConfiguration no aplica forceDarkModeState en caliente; Scalar pinta el tema según la clase del <body>.
+  const sincronizar = () => {
+    const oscuro = tema() === "dark";
+    document.body.classList.toggle("dark-mode", oscuro);
+    document.body.classList.toggle("light-mode", !oscuro);
+  };
+  new MutationObserver(sincronizar).observe(raiz, { attributes: true, attributeFilter: ["data-modo"] });
+  sistema.addEventListener("change", sincronizar);
+  // En el buscador, la X de Scalar solo borra el texto aunque parece cerrar. La convertimos en «Cerrar», que es lo que se espera.
+  new MutationObserver(() => document.querySelectorAll(".scalar-modal-search .scalar-icon-button:not([data-cerrar])").forEach(b => {
+    b.dataset.cerrar = ""; b.setAttribute("aria-label", "Cerrar buscador"); b.title = "Cerrar (Esc)";
+    b.querySelector(".sr-only")?.replaceChildren("Cerrar buscador");
+    b.addEventListener("click", ev => {
+      ev.preventDefault(); ev.stopImmediatePropagation();
+      const campo = b.closest(".scalar-modal")?.querySelector("input") || document.activeElement;
+      campo.dispatchEvent(new KeyboardEvent("keydown", { key: "Escape", code: "Escape", bubbles: true }));
+    }, true);
+  })).observe(document.body, { childList: true, subtree: true });
+})();
+</script>
 </body>
 </html>
+"""
+
+REDIRIGE_API = """<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta http-equiv="refresh" content="0; url=/api"><link rel="canonical" href="/api">
+<title>API abierta</title></head><body><p>La referencia de la API está ahora en <a href="/api">/api</a>.</p></body></html>
 """
 
 PORTADA = """<!doctype html>
@@ -1346,6 +1420,29 @@ img.logo { background:var(--logo-fondo); box-shadow:0 0 0 6px var(--logo-fondo);
 .sr { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; }
 @media (min-width:1100px) { .acc { max-width:none; margin-top:18px; } }
 @media (max-width:560px) { .acc { grid-column:1 / -1; max-width:none; } }
+.seccion-t, .compara h2 { font:700 27px/1.2 var(--serif); margin:44px 0 14px; padding-top:12px; border-top:3px solid var(--tinta); }
+.compara { margin-bottom:8px; }
+.tabla-c { overflow-x:auto; }
+.compara table { border-collapse:collapse; width:100%; min-width:540px; font-size:15px; font-variant-numeric:tabular-nums; table-layout:fixed; }
+.compara thead td { width:28%; }
+.compara th, .compara td { text-align:left; padding:9px 10px; border-bottom:1px solid var(--claro); vertical-align:top; }
+.compara thead th { border-bottom:2px solid var(--tinta); vertical-align:bottom; }
+.compara thead a { text-decoration:none; }
+.cand { display:block; font:700 20px/1.15 var(--serif); }
+.par { display:block; font-size:12.5px; font-weight:600; color:var(--gris); margin-top:3px; }
+.compara tbody th { font-weight:600; font-size:13.5px; }
+.compara tbody th i { display:inline-block; width:9px; height:9px; border-radius:50%; background:var(--tono); margin-right:7px; }
+.compara tr[class^="tono-"] td b { color:var(--tono); }
+.compara tr.fuerte th, .compara tr.fuerte td { border-top:2px solid var(--tinta); border-bottom:2px solid var(--tinta); }
+.compara tr.fuerte td b { font:700 24px/1 var(--serif); }
+.compara .pc { color:var(--gris); font-size:13px; margin-left:3px; }
+.compara td a { text-underline-offset:3px; }
+.reparto { display:flex; gap:2px; height:12px; border-radius:3px; overflow:hidden; margin-top:4px; }
+.reparto i { display:block; min-width:3px; background:var(--tono); }
+.nota-c { font-size:13.5px; color:var(--suave); max-width:76ch; margin:10px 0 0; }
+@media (max-width:560px) { .compara table { min-width:0; font-size:12.5px; } .compara thead td { width:27%; }
+  .cand { font-size:15px; } .par { font-size:11px; } .compara th, .compara td { padding:7px 4px; } .compara tbody th { font-size:12px; }
+  .compara .pc { display:block; margin-left:0; font-size:11.5px; } .compara tr.fuerte td b { font-size:20px; } }
 footer { border-top:3px solid var(--tinta); margin-top:48px; padding:28px 0 64px; font-size:14.5px; }
 footer p { max-width:68ch; }
 footer .leyenda-f { max-width:820px; }
@@ -1363,6 +1460,8 @@ footer .leyenda-f { max-width:820px; }
 <p class="entrada">Jordi Wild ha entrevistado a los candidatos a la presidencia del Gobierno para las elecciones del 29 de noviembre de 2026. Transcribimos cada entrevista entera, separamos las afirmaciones que se pueden comprobar y las contrastamos con fuentes públicas, con el mismo método y la misma vara de medir para todos.</p>
 <p class="tu"><a href="/verificalo"><b>Puedes verificarlo tú</b> →</a> Cada dato enlaza su fuente y el minuto del vídeo, y hay un encargo listo para que cualquier IA lo revise por su cuenta.</p>
 </div>
+@@COMPARATIVA@@
+<h2 class="seccion-t">Las entrevistas</h2>
 <div class="tarjetas">@@TARJETAS@@</div>
 </main>
 <footer><div class="ancho pie">
