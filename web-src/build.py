@@ -94,7 +94,10 @@ def panel(a):
         f'{e(f.get("titulo") or f["url"])}</a> <span>{e(dominio(f["url"]))}</span></li>' for f in fuentes)
     cita = a.get("cita", "").strip("«»\" ")
     resumen = a.get("_resumen") or a.get("explicacion", "")
-    detalle = (f'<details><summary>Explicación completa</summary><p>{e(a["explicacion"])}</p></details>'
+    # «Explicación completa» lleva a la página de la afirmación; el texto se queda oculto en la tarjeta
+    # porque lo usa el botón de copiar el encargo para una IA
+    detalle = ((f'<p class="completa"><a href="/{a["_slug"]}/{a["_id"]}">Explicación completa →</a></p>'
+                f'<p class="explicacion-completa" hidden>{e(a["explicacion"])}</p>')
                if a.get("_resumen") and a.get("explicacion") else "")
     enlace = f"https://www.youtube.com/watch?v={a['_video']}&t={s}s"
     return (
@@ -2696,6 +2699,8 @@ footer .leyenda-f { margin-bottom:34px; max-width:820px; }
   .copiar { min-height:36px; } }
 .abrir { margin:14px 0 0; padding:12px 14px; border:1.5px solid var(--tinta); font-size:14.5px; max-width:68ch; }
 .contrasta { margin:12px 0 0; }
+.completa { margin:10px 0 0; padding-top:8px; border-top:1px solid var(--claro); font-size:13px; font-weight:600; }
+.completa a { text-underline-offset:3px; } .completa a:hover { color:var(--tono); }
 /* botón de expandir: abre la afirmación en su propia página (/<slug>/<id>) */
 .panel { position:relative; }
 .expandir { position:absolute; top:10px; right:10px; width:30px; height:30px; display:grid; place-items:center;
@@ -2817,7 +2822,7 @@ ${t(".dicho blockquote")}
 Afirmación que se comprueba: ${t(".que")}
 
 Una verificación automática (@@BASE@@/@@SLUG@@#${h.id}) la calificó como «${t(".ficha")}». Su justificación:
-${t("details p") || t(".porque")}
+${t(".explicacion-completa") || t(".porque")}
 
 Fuentes que cita:
 ${fuentes || "(ninguna)"}
