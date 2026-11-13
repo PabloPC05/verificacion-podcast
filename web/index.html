@@ -549,26 +549,28 @@ html.con-repro .arriba { bottom:calc(var(--repro-h, 0px) + 28px + env(safe-area-
 .muestra-cita { grid-column:1; font:italic 400 clamp(17px,1.55vw,21px)/1.3 var(--serif); text-wrap:pretty; }
 .muestra-item a:hover .muestra-cita { text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:3px; }
 .muestra-item a:focus-visible { outline:2px solid var(--tinta); outline-offset:4px; border-radius:var(--r-mini); }
-.estampa { grid-column:2; grid-row:1 / span 2; justify-self:end; align-self:center; padding:7px 10px; border:2.5px solid currentColor; border-radius:var(--r-mini);
+.estampa { grid-column:2; grid-row:1 / span 2; justify-self:end; align-self:center; padding:8px 12px; border:2.5px solid currentColor; border-radius:var(--r-mini);
   color:var(--tono); background:color-mix(in srgb, var(--tono) 8%, var(--fondo)); transform:rotate(-4deg);
-  font:800 12.5px/1 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; letter-spacing:.09em; text-transform:uppercase; white-space:nowrap; }
-@media (max-width:560px) { .muestra-item a { column-gap:12px; } .estampa { padding:6px 8px; font-size:11px; } }
-/* Escritorio sin el ajuste a una pantalla: el carrusel ocupa la columna derecha bajo el titular */
+  font:800 14px/1 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; letter-spacing:.09em; text-transform:uppercase; white-space:nowrap; }
+@media (max-width:560px) { .muestra-item a { column-gap:12px; } .estampa { padding:7px 9px; font-size:12px; } }
+/* Escritorio: a la izquierda el titular con la entradilla debajo; a la derecha el carrusel, más grande y centrado en vertical */
 @media (min-width:1000px) {
-  .cabeza .entrada { grid-column:1; grid-row:2; }
-  .cabeza .muestra { grid-column:2; grid-row:2; margin:0; align-self:end; } }
-/* Escritorio a una pantalla: titular y carrusel a la izquierda, entradilla a la derecha */
+  .cabeza { grid-template-columns:minmax(0,1.3fr) minmax(0,1fr); }
+  .cabeza h1 { grid-column:1; grid-row:1; align-self:end; }
+  .cabeza .entrada { grid-column:1; grid-row:2; align-self:start; margin:14px 0 0; }
+  .cabeza .muestra { grid-column:2; grid-row:1 / span 2; align-self:center; margin:0; max-width:none; }
+  .muestra-cita { font-size:clamp(20px,1.9vw,27px); line-height:1.25; }
+  .estampa { font-size:15px; padding:10px 14px; border-width:3px; } }
+/* Escritorio a una pantalla: los tamaños se atan también al alto de la ventana */
 @media (min-width:1000px) and (min-height:640px) {
-  .cabeza { grid-template-rows:auto auto; row-gap:clamp(12px,2.2vh,24px); }
-  .cabeza h1 { grid-row:1; align-self:end; }
-  .cabeza .entrada { grid-column:2; grid-row:1 / span 2; align-self:center; }
-  .cabeza .muestra { grid-column:1; grid-row:2; max-width:none; }
-  .muestra-rot { display:none; } .muestra-cita { line-height:1.24; }
-  .cabeza h1 { font-size:clamp(30px, min(3.5vw, 5.4vh), 58px); }
-  main.ancho { gap:clamp(8px,1.6vh,28px); } .cabeza { row-gap:clamp(8px,1.4vh,18px); }
-  .muestra-item a { min-height:64px; }
-  .muestra-cita { font-size:clamp(16px, min(1.5vw, 2.5vh), 21px); } }
-@media (min-width:1000px) and (max-width:1199px) and (min-height:640px) { .muestra-cita { font-size:16px; } }
+  .cabeza { grid-template-rows:auto auto; row-gap:0; }
+  .cabeza h1 { grid-row:1; font-size:clamp(30px, min(3.5vw, 5.4vh), 58px); }
+  .cabeza .entrada { grid-column:1; grid-row:2; margin-top:clamp(8px,1.6vh,16px); }
+  .cabeza .muestra { grid-column:2; grid-row:1 / span 2; }
+  main.ancho { gap:clamp(8px,1.6vh,28px); }
+  .muestra-cita { font-size:clamp(18px, min(1.9vw, 3.1vh), 27px); }
+  .muestra-item a { min-height:64px; } }
+@media (min-width:1000px) and (max-width:1199px) and (min-height:640px) { .muestra-cita { font-size:clamp(17px,1.8vw,20px); } .estampa { font-size:13.5px; padding:8px 11px; } }
 /* Mientras carga GSAP (como mucho 2,5 s) lo que va a animar no se pinta; luego sus animaciones sustituyen a las de CSS */
 .con-gsap .cabeza h1, .con-gsap .cabeza .entrada, .con-gsap .muestra, .con-gsap .tarjetas .entrevista { visibility:hidden; }
 .gsap-listo .cabeza *, .gsap-listo .tarjetas .entrevista, .gsap-listo .tarjetas .entrevista * { animation:none !important; }
