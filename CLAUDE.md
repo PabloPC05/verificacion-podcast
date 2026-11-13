@@ -42,6 +42,13 @@ La regla principal: **la página usa todo el contenedor y el texto conserva una 
 - Rejillas que se adaptan solas, sin media queries:
   `grid-template-columns:repeat(auto-fit,minmax(min(100%,<mínimo>px),1fr))`. Mínimos que ya se usan: 380 px para
   fichas, 440 px para bloques de texto, 240 px para elementos cortos. El `min(100%, …)` evita el desbordamiento en móvil.
+- **Excepción: artículos y páginas de lectura corrida** (método, una afirmación, textos largos que se leen de
+  arriba abajo). Esas sí llevan una sola columna centrada de unos 780 px, con márgenes blancos a los lados en
+  escritorio; no se reparten en rejilla. Como mucho, un índice fijo a la izquierda desde 1180 px (ver `METODOLOGIA`).
+  En móvil, en cambio, la columna ocupa todo el ancho menos el margen de `.ancho` y tiene que leerse bien:
+  texto a 16–17 px, títulos con `clamp()` que no se partan feo (`text-wrap:balance`), imágenes, tablas y bloques
+  de código sin desbordar (`max-width:100%` o `overflow-x:auto`), enlaces largos con `overflow-wrap:anywhere`
+  y nada fijo que tape el texto.
 - Cabeceras de página: en móvil, título y entrada apilados; desde 1000 px, rejilla de dos columnas con el `h1`
   a la izquierda y la entrada a la derecha (ver `.cabeza` en `PORTADA` y `QUIEN`).
 - Los saltos que existen son 560, 760, 1000 y 1180 px. Usa esos; no inventes otros.
