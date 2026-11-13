@@ -63,9 +63,31 @@ main h1 { font:700 clamp(28px,4.4vw,48px)/1.05 var(--serif); letter-spacing:-0.0
 form.entrar { max-width:400px; margin:10vh auto 0; border:2px solid var(--tinta); border-radius:var(--r-caja); box-shadow:var(--flota); padding:28px; }
 form.entrar h1 { font-size:30px; margin:0 0 6px; }
 form.entrar p { margin:0 0 16px; font-size:14.5px; color:var(--suave); }
-form.entrar input { width:100%; font:inherit; padding:10px 12px; min-height:44px; border:1.5px solid var(--tinta); border-radius:var(--r-boton); background:var(--fondo); color:var(--tinta); margin-bottom:12px; }
-form.entrar button { font:inherit; font-weight:700; padding:10px 16px; min-height:44px; background:var(--tinta); color:var(--fondo); border:2px solid var(--tinta); border-radius:var(--r-boton); cursor:pointer; width:100%; }
-form.entrar button:hover { background:var(--fondo); color:var(--tinta); }
+form.entrar .etq { display:block; font-size:13.5px; font-weight:700; margin:0 0 6px; }
+.campo { position:relative; margin-bottom:10px; }
+.campo input { width:100%; font:inherit; padding:10px 48px 10px 12px; min-height:46px; border:1.5px solid var(--tinta); border-radius:var(--r-boton); background:var(--fondo); color:var(--tinta); }
+.campo input:focus-visible { outline:3px solid var(--tinta); outline-offset:2px; }
+.campo input[aria-invalid=true] { border-color:var(--v-falso); box-shadow:inset 0 0 0 1px var(--v-falso); }
+.ojo { position:absolute; top:50%; right:4px; transform:translateY(-50%); width:40px; height:38px; display:grid; place-items:center; padding:0;
+  background:none; border:0; border-radius:var(--r-mini); color:var(--gris); cursor:pointer; }
+.ojo:hover { color:var(--tinta); background:var(--resalte); }
+.ojo:active { transform:translateY(-50%) scale(.94); }
+.ojo svg { width:20px; height:20px; fill:none; stroke:currentColor; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; }
+.ojo .cerrado, .ojo[aria-pressed=true] .abierto { display:none; } .ojo[aria-pressed=true] .cerrado { display:block; }
+form.entrar .aviso { margin:0 0 10px; font-size:13px; font-weight:600; color:var(--v-enganoso); }
+form.entrar .error { margin:0 0 10px; color:var(--v-falso); }
+.recordar { display:flex; align-items:center; gap:8px; font-size:14px; margin:4px 0 16px; cursor:pointer; user-select:none; min-height:32px; }
+.recordar input { width:18px; height:18px; margin:0; accent-color:var(--tinta); cursor:pointer; }
+.entrar-btn { font:inherit; font-weight:700; padding:10px 16px; min-height:46px; width:100%; display:flex; align-items:center; justify-content:center; gap:10px;
+  background:var(--tinta); color:var(--fondo); border:2px solid var(--tinta); border-radius:var(--r-boton); cursor:pointer; }
+.entrar-btn:hover { background:var(--fondo); color:var(--tinta); }
+.entrar-btn kbd { font:600 12px/1 ui-monospace,SFMono-Regular,Menlo,monospace; padding:3px 6px; border:1px solid currentColor; border-radius:var(--r-mini); opacity:.7; }
+.entrar-btn[aria-busy=true] { cursor:progress; opacity:.8; }
+.entrar-btn[aria-busy=true] kbd { display:none; }
+.entrar-btn[aria-busy=true]::before { content:""; width:14px; height:14px; border:2px solid currentColor; border-right-color:transparent; border-radius:50%; animation:gira .7s linear infinite; }
+@keyframes gira { to { transform:rotate(360deg); } }
+@keyframes sacude { 20%, 60% { transform:translateX(-6px); } 40%, 80% { transform:translateX(6px); } }
+form.entrar.mal { animation:sacude .32s ease-out; }
 .error { color:var(--v-falso); font-weight:600; font-size:14px; }
 .kpis { display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:12px; margin-bottom:18px; }
 .kpi { border:2px solid var(--tinta); border-radius:var(--r-caja); padding:14px 18px 16px; }
@@ -114,9 +136,19 @@ td .p { display:block; height:5px; background:var(--tinta); border-radius:var(--
 <form class="entrar" id="entrar" hidden>
   <h1>Panel de visitas</h1>
   <p>Estadísticas privadas de la web. Escribe la contraseña del panel.</p>
-  <input type="password" id="clave" autocomplete="current-password" aria-label="Contraseña" required>
-  <p class="error" id="fallo" hidden></p>
-  <button>Entrar</button>
+  <label class="etq" for="clave">Contraseña</label>
+  <div class="campo">
+    <input type="password" id="clave" name="password" autocomplete="current-password" autocapitalize="off" spellcheck="false"
+      required aria-describedby="fallo mayus">
+    <button type="button" class="ojo" id="ojo" aria-label="Mostrar contraseña" aria-pressed="false" title="Mostrar contraseña">
+      <svg class="abierto" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>
+      <svg class="cerrado" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3l18 18M10.6 5.1A10.4 10.4 0 0 1 12 5c6.4 0 10 7 10 7a17.6 17.6 0 0 1-3.2 4.2M6.6 6.6C3.8 8.4 2 12 2 12s3.6 7 10 7a10 10 0 0 0 5.4-1.6M9.9 9.9a3 3 0 0 0 4.2 4.2"/></svg>
+    </button>
+  </div>
+  <p class="aviso" id="mayus" hidden>Tienes activadas las mayúsculas.</p>
+  <p class="error" id="fallo" role="alert" hidden></p>
+  <label class="recordar"><input type="checkbox" id="recordar"> Recordarme en este dispositivo</label>
+  <button class="entrar-btn" id="entrar-btn"><span class="texto">Entrar</span><kbd aria-hidden="true">↵</kbd></button>
 </form>
 <div id="datos" hidden>
   <h1>Panel de visitas</h1>
@@ -142,23 +174,29 @@ const paisNombre = (() => { try { const d = new Intl.DisplayNames(["es"], { type
 const NOMBRES_EVENTO = { "enlace-externo": "Enlace a otra web", "descarga": "Descarga de datos", "enlace-interno": "Enlace dentro de la web" };
 const DISPOSITIVO = { desktop: "Ordenador", laptop: "Portátil", mobile: "Móvil", tablet: "Tableta" };
 let clave = "", dias = 7;
-try { clave = sessionStorage.getItem("panel-clave") || ""; dias = Number(sessionStorage.getItem("panel-dias")) || 7; } catch (e) {}
+try { clave = localStorage.getItem("panel-clave") || sessionStorage.getItem("panel-clave") || ""; dias = Number(sessionStorage.getItem("panel-dias")) || 7; } catch (e) {}
 const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
 
 function mostrarEntrada(error) {
   $("datos").hidden = true; $("periodos").hidden = true; $("salir").hidden = true; $("entrar").hidden = false;
   $("fallo").hidden = !error; $("fallo").textContent = error || ""; $("estado").textContent = "";
-  $("clave").focus();
+  const c = $("clave");
+  if (error) { c.setAttribute("aria-invalid", "true"); $("entrar").classList.add("mal"); c.focus(); c.select(); }
+  else { c.removeAttribute("aria-invalid"); c.focus(); }
 }
 
-async function cargar() {
+// desdeLogin: los fallos se enseñan en el formulario; si no, en la barra (recarga automática o cambio de periodo).
+async function cargar(desdeLogin) {
   $("estado").textContent = "Cargando…";
   let r;
   try { r = await fetch("/api/estadisticas?dias=" + dias, { headers: { authorization: "Bearer " + clave } }); }
-  catch (e) { $("estado").textContent = "No se pudo conectar."; return; }
+  catch (e) { return desdeLogin ? mostrarEntrada("No se pudo conectar con el servidor. Revisa tu conexión.") : ($("estado").textContent = "No se pudo conectar."); }
   const d = await r.json().catch(() => ({}));
-  if (r.status === 401) { try { sessionStorage.removeItem("panel-clave"); } catch (e) {} return mostrarEntrada(clave ? d.error : ""); }
-  if (!r.ok) { $("entrar").hidden = true; $("estado").textContent = d.error || "Error " + r.status; return; }
+  if (r.status === 401) { guardarClave(""); return mostrarEntrada(clave ? "Contraseña incorrecta." : ""); }
+  if (!r.ok) {
+    if (desdeLogin || !$("entrar").hidden) return mostrarEntrada(d.error || "El servidor respondió con un error " + r.status + ".");
+    $("estado").textContent = d.error || "Error " + r.status; return;
+  }
   $("entrar").hidden = true; $("datos").hidden = false; $("periodos").hidden = false; $("salir").hidden = false;
   pintar(d);
   $("estado").textContent = "Actualizado " + new Date().toLocaleTimeString("es-ES", { hour: "2-digit", minute: "2-digit" });
@@ -255,12 +293,41 @@ function grafica(serie, unidad) {
   el.innerHTML = svg + "</svg>";
 }
 
-$("entrar").onsubmit = (ev) => {
-  ev.preventDefault(); clave = $("clave").value;
-  try { sessionStorage.setItem("panel-clave", clave); } catch (e) {}
-  cargar();
+// Login: Enter envía (es un <form>), el ojo alterna ver/ocultar, aviso de mayúsculas y estado de carga en el botón.
+function guardarClave(valor, recordar) {
+  try {
+    localStorage.removeItem("panel-clave"); sessionStorage.removeItem("panel-clave");
+    if (valor) (recordar ? localStorage : sessionStorage).setItem("panel-clave", valor);
+  } catch (e) {}
+}
+$("ojo").onclick = () => {
+  const ver = $("clave").type === "password";
+  $("clave").type = ver ? "text" : "password";
+  const t = ver ? "Ocultar contraseña" : "Mostrar contraseña";
+  $("ojo").setAttribute("aria-pressed", String(ver)); $("ojo").setAttribute("aria-label", t); $("ojo").title = t;
+  const c = $("clave"), fin = c.value.length; c.focus(); c.setSelectionRange(fin, fin);
 };
-$("salir").onclick = () => { clave = ""; try { sessionStorage.removeItem("panel-clave"); } catch (e) {} $("clave").value = ""; mostrarEntrada(); };
+const mirarMayus = (ev) => { if (ev.getModifierState) $("mayus").hidden = !ev.getModifierState("CapsLock"); };
+$("clave").addEventListener("keydown", mirarMayus);
+$("clave").addEventListener("keyup", mirarMayus);
+$("clave").addEventListener("input", () => { $("clave").removeAttribute("aria-invalid"); $("fallo").hidden = true; });
+$("entrar").addEventListener("animationend", () => $("entrar").classList.remove("mal"));
+$("entrar").onsubmit = async (ev) => {
+  ev.preventDefault();
+  const boton = $("entrar-btn");
+  if (boton.getAttribute("aria-busy") === "true") return;
+  clave = $("clave").value;
+  if (!clave) { $("clave").focus(); return; }
+  boton.setAttribute("aria-busy", "true"); boton.querySelector(".texto").textContent = "Comprobando…";
+  guardarClave(clave, $("recordar").checked);
+  await cargar(true);
+  boton.removeAttribute("aria-busy"); boton.querySelector(".texto").textContent = "Entrar";
+};
+$("salir").onclick = () => {
+  clave = ""; guardarClave("");
+  $("clave").value = ""; $("clave").type = "password"; $("ojo").setAttribute("aria-pressed", "false");
+  mostrarEntrada();
+};
 document.querySelectorAll("#periodos button").forEach((b) => {
   b.setAttribute("aria-pressed", String(Number(b.dataset.dias) === dias));
   b.onclick = () => {
