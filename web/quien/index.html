@@ -5,6 +5,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
 <script>try{var m=localStorage.getItem("modo");if(m==="claro"||m==="oscuro")document.documentElement.dataset.modo=m}catch(e){}</script>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="83bf64a7-e92e-4617-80d2-bb6a92bb2b8e" data-domains="verificacion-podcast.vercel.app"></script>
+<script>
+document.addEventListener("click", function (ev) {
+  var a = ev.target.closest && ev.target.closest("a[href]");
+  if (!a || !window.umami) return;
+  try {
+    var u = new URL(a.href, location.href), desde = location.pathname;
+    if (u.protocol !== "http:" && u.protocol !== "https:") return;
+    if (a.hasAttribute("download") || /\.(csv|json)$/i.test(u.pathname))
+      umami.track("descarga", { url: u.pathname, desde: desde });
+    else if (u.host !== location.host)
+      umami.track("enlace-externo", { url: (u.host + u.pathname + u.search).slice(0, 480), dominio: u.host, desde: desde });
+    else if (u.pathname !== desde)
+      umami.track("enlace-interno", { url: u.pathname, desde: desde });
+  } catch (e) {}
+}, true);
+</script>
 <title>Quién hace esto · Verificación The Wild Project</title>
 <meta name="description" content="Quién hace esta verificación, su independencia, quién la paga, cómo se hace y cómo se corrigen los errores.">
 <link rel="canonical" href="https://verificacion-podcast.vercel.app/quien">
@@ -265,7 +282,8 @@ etiquetarModo();
 <p>The Wild Project y Jordi Wild no participan en esta web ni la respaldan.</p>
 
 <h2 id="financiacion">Financiación</h2>
-<p>Esta web no tiene financiación ni apoyo de nadie. Pablo paga los costes, que son sus suscripciones de IA, y la web está alojada en el plan gratuito de Vercel. No hay publicidad ni seguimiento de visitas.</p>
+<p>Esta web no tiene financiación ni apoyo de nadie. Pablo paga los costes, que son sus suscripciones de IA, y la web está alojada en el plan gratuito de Vercel. No hay publicidad.</p>
+<p>Las visitas se cuentan con <a href="https://umami.is/docs" target="_blank" rel="noopener noreferrer">Umami</a>, un servicio de estadísticas que no usa cookies y que, según su documentación, no recoge datos personales. También cuenta qué enlaces se pulsan (vídeos, fuentes y descargas), sin saber quién los pulsa. Esas cifras solo las ve Pablo.</p>
 
 <h2 id="como">Cómo se hace</h2>
 <ul>

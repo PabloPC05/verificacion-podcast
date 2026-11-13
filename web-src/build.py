@@ -153,7 +153,7 @@ SCALAR = "1.76.2"  # @scalar/api-reference, versión fijada: subirla a mano tras
 SCALAR_SRI = "sha384-mCh2A/B6vkfhiHyzwBZm7lbFmEK5fE/96Kbtk+RH1zei1P/XEt0I2MCiG6WfZdor"
 # Umami Cloud (estadísticas de visitas, sin cookies). Vacío = la web sale sin seguimiento.
 # El ID es público (va en el HTML); la clave de la API no: vive en Vercel como UMAMI_API_KEY.
-UMAMI_ID = ""
+UMAMI_ID = "83bf64a7-e92e-4617-80d2-bb6a92bb2b8e"
 LOGOS = {"PSOE": "psoe.svg", "PP": "pp.svg", "Frente Amplio": "frente-amplio.svg"}
 # Retratos de web-src/fotos: recortes cuadrados de 320 px, centrados en la cara, de las miniaturas de Wikimedia Commons.
 FOTOS = {

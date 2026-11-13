@@ -5,6 +5,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
 <script>try{var m=localStorage.getItem("modo");if(m==="claro"||m==="oscuro")document.documentElement.dataset.modo=m}catch(e){}</script>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="83bf64a7-e92e-4617-80d2-bb6a92bb2b8e" data-domains="verificacion-podcast.vercel.app"></script>
+<script>
+document.addEventListener("click", function (ev) {
+  var a = ev.target.closest && ev.target.closest("a[href]");
+  if (!a || !window.umami) return;
+  try {
+    var u = new URL(a.href, location.href), desde = location.pathname;
+    if (u.protocol !== "http:" && u.protocol !== "https:") return;
+    if (a.hasAttribute("download") || /\.(csv|json)$/i.test(u.pathname))
+      umami.track("descarga", { url: u.pathname, desde: desde });
+    else if (u.host !== location.host)
+      umami.track("enlace-externo", { url: (u.host + u.pathname + u.search).slice(0, 480), dominio: u.host, desde: desde });
+    else if (u.pathname !== desde)
+      umami.track("enlace-interno", { url: u.pathname, desde: desde });
+  } catch (e) {}
+}, true);
+</script>
 <title>Verifícalo tú · Verificación The Wild Project</title>
 <meta name="description" content="Cómo comprobar por tu cuenta cada veredicto: vídeo, fuentes, datos abiertos y un encargo listo para que cualquier IA audite la verificación.">
 <link rel="canonical" href="https://verificacion-podcast.vercel.app/verificalo">
