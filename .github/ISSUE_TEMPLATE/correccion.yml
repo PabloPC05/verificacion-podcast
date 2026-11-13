@@ -1,0 +1,40 @@
+name: Corregir una afirmación
+description: Un veredicto que crees que está mal, una fuente rota o una cita mal transcrita.
+title: "Corrección: "
+labels: ["corrección"]
+body:
+  - type: input
+    id: afirmacion
+    attributes:
+      label: Afirmación
+      description: El identificador (por ejemplo sanchez-m6003, aparece en la API) o la entrevista y el minuto.
+      placeholder: sanchez-m6003 · o · Sánchez, 1:40:03
+    validations:
+      required: true
+  - type: dropdown
+    id: tipo
+    attributes:
+      label: Qué está mal
+      options:
+        - El veredicto
+        - La explicación o el resumen
+        - Una fuente (rota, no dice eso, poco fiable)
+        - La cita (mal transcrita o la dice otra persona)
+        - Debería excluirse o recuperarse por relevancia
+        - Otra cosa
+    validations:
+      required: true
+  - type: textarea
+    id: correccion
+    attributes:
+      label: Corrección propuesta
+      description: Qué debería decir y por qué.
+    validations:
+      required: true
+  - type: textarea
+    id: fuentes
+    attributes:
+      label: Fuentes
+      description: Enlaces que respaldan la corrección. Mejor fuentes primarias u oficiales.
+    validations:
+      required: true

@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-13T20:24:29+01:00",
+ "generado": "2026-11-13T20:31:06+01:00",
  "aviso": "Verificación asistida por IA, sin revisión de un equipo de periodistas. «falso» no implica intención de mentir. Contrasta siempre con las fuentes enlazadas.",
  "veredictos": {
   "verdadero": "Los datos lo confirman.",
@@ -23,24 +23,25 @@
   "afirmaciones_url": "https://verificacion-podcast.vercel.app/api/v1/feijoo.json",
   "transcripcion_url": "https://verificacion-podcast.vercel.app/api/v1/feijoo/transcripcion.json",
   "transcripcion_txt_url": "https://verificacion-podcast.vercel.app/api/v1/feijoo/transcripcion.txt",
-  "total_afirmaciones": 168,
+  "total_afirmaciones": 153,
   "por_veredicto": {
    "falso": 4,
    "enganoso": 27,
-   "mayormente_verdadero": 55,
-   "verdadero": 48,
-   "no_verificable": 34
+   "mayormente_verdadero": 52,
+   "verdadero": 41,
+   "no_verificable": 29
   },
+  "excluidas": 15,
   "temas": [
    {
     "n": 1,
     "titulo": "Formato de las entrevistas electorales y presentación de Alberto Núñez Feijóo",
     "inicio_s": 0,
-    "total": 1,
+    "total": 0,
     "por_veredicto": {
      "falso": 0,
      "enganoso": 0,
-     "mayormente_verdadero": 1,
+     "mayormente_verdadero": 0,
      "verdadero": 0,
      "no_verificable": 0
     }
@@ -49,13 +50,13 @@
     "n": 2,
     "titulo": "Vox, polarización y un posible gobierno de coalición",
     "inicio_s": 273,
-    "total": 20,
+    "total": 18,
     "por_veredicto": {
      "falso": 0,
      "enganoso": 4,
-     "mayormente_verdadero": 5,
+     "mayormente_verdadero": 4,
      "verdadero": 8,
-     "no_verificable": 3
+     "no_verificable": 2
     }
    },
    {
@@ -88,12 +89,12 @@
     "n": 5,
     "titulo": "Deuda pública, déficit y gasto en defensa",
     "inicio_s": 1997,
-    "total": 20,
+    "total": 19,
     "por_veredicto": {
      "falso": 0,
      "enganoso": 4,
      "mayormente_verdadero": 5,
-     "verdadero": 4,
+     "verdadero": 3,
      "no_verificable": 7
     }
    },
@@ -101,12 +102,12 @@
     "n": 6,
     "titulo": "Ceuta, Marruecos y la gestión de la frontera",
     "inicio_s": 2467,
-    "total": 16,
+    "total": 15,
     "por_veredicto": {
      "falso": 1,
      "enganoso": 3,
      "mayormente_verdadero": 7,
-     "verdadero": 5,
+     "verdadero": 4,
      "no_verificable": 0
     }
    },
@@ -114,12 +115,12 @@
     "n": 7,
     "titulo": "Inmigración, ayudas sociales, integración y expulsiones",
     "inicio_s": 2956,
-    "total": 13,
+    "total": 12,
     "por_veredicto": {
      "falso": 2,
      "enganoso": 3,
      "mayormente_verdadero": 3,
-     "verdadero": 4,
+     "verdadero": 3,
      "no_verificable": 1
     }
    },
@@ -127,13 +128,13 @@
     "n": 8,
     "titulo": "Feijóo explica su relación con Marcial Dorado",
     "inicio_s": 3436,
-    "total": 17,
+    "total": 15,
     "por_veredicto": {
      "falso": 0,
      "enganoso": 6,
      "mayormente_verdadero": 4,
-     "verdadero": 3,
-     "no_verificable": 4
+     "verdadero": 2,
+     "no_verificable": 3
     }
    },
    {
@@ -153,79 +154,44 @@
     "n": 10,
     "titulo": "Isabel Díaz Ayuso y su relación dentro del Partido Popular",
     "inicio_s": 4357,
-    "total": 11,
+    "total": 9,
     "por_veredicto": {
      "falso": 0,
      "enganoso": 3,
      "mayormente_verdadero": 4,
-     "verdadero": 2,
-     "no_verificable": 2
+     "verdadero": 1,
+     "no_verificable": 1
     }
    },
    {
     "n": 11,
     "titulo": "Inglés, servicio militar, Trump y política internacional",
     "inicio_s": 4696,
-    "total": 6,
+    "total": 3,
     "por_veredicto": {
      "falso": 0,
      "enganoso": 0,
      "mayormente_verdadero": 0,
-     "verdadero": 4,
-     "no_verificable": 2
+     "verdadero": 3,
+     "no_verificable": 0
     }
    },
    {
     "n": 12,
     "titulo": "Feijóo define a Colau, Abascal y Pedro Sánchez y cierra la entrevist",
     "inicio_s": 4939,
-    "total": 8,
+    "total": 6,
     "por_veredicto": {
      "falso": 0,
      "enganoso": 0,
-     "mayormente_verdadero": 4,
-     "verdadero": 3,
+     "mayormente_verdadero": 3,
+     "verdadero": 2,
      "no_verificable": 1
     }
    }
   ]
  },
  "afirmaciones": [
-  {
-   "id": "feijoo-m191",
-   "entrevista": "feijoo",
-   "invitado": "Alberto Núñez Feijóo",
-   "tema_n": 1,
-   "tema": "Formato de las entrevistas electorales y presentación de Alberto Núñez Feijóo",
-   "segundo": 191,
-   "minuto": "0:03:11",
-   "video_url": "https://www.youtube.com/watch?v=1YlGArMx_N4&t=191s",
-   "web_url": "https://verificacion-podcast.vercel.app/feijoo#m191",
-   "cita": "Estuve, no sé, en la SER, en una entrevista en El País, en la Sesta.",
-   "afirmacion": "En esta campaña electoral Feijóo ha concedido entrevistas en la Cadena SER, El País, La Sexta, Mediaset y Atresmedia.",
-   "veredicto": "mayormente_verdadero",
-   "resumen": "En 2026 Feijóo dio entrevistas en la SER, El País, Telecinco y Antena 3, pero no se ha encontrado una en La Sexta, y algunas son previas a la campaña.",
-   "explicacion": "En 2026 Feijóo ha dado entrevistas en la Cadena SER (23 de octubre, Hoy por Hoy), en El País (publicada el 8 de noviembre), en Telecinco (Mediaset) y en Atresmedia (El Hormiguero, junio, y Espejo Público, julio, ambos en Antena 3). No he encontrado una entrevista concreta en La Sexta, y algunas son anteriores al inicio formal de la campaña (13 de noviembre), por lo que «esta campaña» se usa en sentido amplio.",
-   "confianza": "media",
-   "fuentes": [
-    {
-     "titulo": "Demócrata: Feijóo abre la puerta a gobernar con Vox y deja sin aclarar qué ministerios cedería (entrevista en El País, 8-11-2026)",
-     "url": "https://www.democrata.es/elecciones-generales-espana/feijoo-gobierno-pp-vox-ministros-entrevista/"
-    },
-    {
-     "titulo": "Artículo 14: Feijóo metería Igualdad dentro de otros ministerios (23-10-2026)",
-     "url": "https://www.articulo14.es/politica/feijoo-metera-igualdad-dentro-de-otros-ministerios-el-ministro-que-lo-lleve-se-encargara-de-otras-cosas-20261023.html"
-    },
-    {
-     "titulo": "Que.es: Susanna Griso arrincona a Feijóo en directo (Antena 3, julio 2026)",
-     "url": "https://www.que.es/2026/07/08/susanna-griso-arrincona-feijoo/"
-    },
-    {
-     "titulo": "elDiario.es: Feijóo carga contra Zapatero desde El Hormiguero (Antena 3)",
-     "url": "https://www.eldiario.es/politica/feijoo-carga-zapatero-hormiguero-blanquea-dictadura-blanquear-capitales_1_13313278.amp.html"
-    }
-   ]
-  },
   {
    "id": "feijoo-m357",
    "entrevista": "feijoo",
@@ -273,29 +239,6 @@
     {
      "titulo": "Moncloa.com: Gamarra fija el documento marco del PP como base para acuerdos con Vox en Andalucía (28-5-2026)",
      "url": "https://www.moncloa.com/2026/05/28/gamarra-documento-marco-acuerdo-vox-andalucia-3380431/"
-    }
-   ]
-  },
-  {
-   "id": "feijoo-m531",
-   "entrevista": "feijoo",
-   "invitado": "Alberto Núñez Feijóo",
-   "tema_n": 2,
-   "tema": "Vox, polarización y un posible gobierno de coalición",
-   "segundo": 531,
-   "minuto": "0:08:51",
-   "video_url": "https://www.youtube.com/watch?v=1YlGArMx_N4&t=531s",
-   "web_url": "https://verificacion-podcast.vercel.app/feijoo#m531",
-   "cita": "Lo llevo observando en los cuatro años que llevo haciendo política nacional",
-   "afirmacion": "Feijóo lleva cuatro años haciendo política nacional.",
-   "veredicto": "mayormente_verdadero",
-   "resumen": "Feijóo preside el PP desde abril de 2022 y es senador desde mayo de 2022, unos cuatro años y siete meses; antes ya tuvo cargos nacionales con Aznar.",
-   "explicacion": "Feijóo es presidente del PP desde el 2 de abril de 2022 y senador desde mayo de 2022, es decir, unos cuatro años y siete meses en la política nacional actual. Antes ya había ocupado cargos nacionales en el Gobierno de Aznar (desde 1996), por lo que la cifra es un redondeo a la baja razonable.",
-   "confianza": "alta",
-   "fuentes": [
-    {
-     "titulo": "Wikipedia: Alberto Núñez Feijóo",
-     "url": "https://es.wikipedia.org/wiki/Alberto_Núñez_Feijóo"
     }
    ]
   },
@@ -350,29 +293,6 @@
     {
      "titulo": "The Objective: Feijóo confirma que Armengol decidió con Moncloa la fecha de su investidura",
      "url": "https://theobjective.com/espana/politica/2023-10-04/feijoo-armengol-investidura-moncloa/"
-    }
-   ]
-  },
-  {
-   "id": "feijoo-m612",
-   "entrevista": "feijoo",
-   "invitado": "Alberto Núñez Feijóo",
-   "tema_n": 2,
-   "tema": "Vox, polarización y un posible gobierno de coalición",
-   "segundo": 612,
-   "minuto": "0:10:12",
-   "video_url": "https://www.youtube.com/watch?v=1YlGArMx_N4&t=612s",
-   "web_url": "https://verificacion-podcast.vercel.app/feijoo#m612",
-   "cita": "Yo he votado Felipe González en 1982. Es conocido.",
-   "afirmacion": "Feijóo votó a Felipe González (PSOE) en las elecciones generales de 1982 y es algo conocido.",
-   "veredicto": "no_verificable",
-   "resumen": "El voto es secreto y no se puede comprobar, pero Feijóo declara públicamente desde hace años que votó a González en 1982, cuando tenía 21 años.",
-   "explicacion": "El voto es secreto, así que no puede comprobarse. Sí consta que Feijóo lo declara públicamente desde hace años (por ejemplo, «Voté a González en el 82 y volvería a hacerlo», Público, 23 de septiembre de 2018), de modo que lo de «es conocido» es cierto, pero el hecho en sí solo descansa en su palabra. Tenía 21 años en 1982, por lo que podía votar.",
-   "confianza": "media",
-   "fuentes": [
-    {
-     "titulo": "Público: Feijóo: «Voté a González en el 82 y volvería a hacerlo» (23-9-2018)",
-     "url": "https://www.publico.es/politica/feijoo-vote-gonzalez-82-volveria-hacerlo.amp.html"
     }
    ]
   },
@@ -1965,29 +1885,6 @@
    "fuentes": []
   },
   {
-   "id": "feijoo-m2417-2",
-   "entrevista": "feijoo",
-   "invitado": "Alberto Núñez Feijóo",
-   "tema_n": 5,
-   "tema": "Deuda pública, déficit y gasto en defensa",
-   "segundo": 2417,
-   "minuto": "0:40:17",
-   "video_url": "https://www.youtube.com/watch?v=1YlGArMx_N4&t=2417s",
-   "web_url": "https://verificacion-podcast.vercel.app/feijoo#m2417-2",
-   "cita": "ya a partir de esta noche campaña",
-   "afirmacion": "La campaña electoral de las elecciones generales empieza «esta noche».",
-   "veredicto": "verdadero",
-   "resumen": "La campaña empieza el 13 de noviembre de 2026 y acaba el 27, con elecciones el 29; es coherente con que la entrevista se grabara el 12 de noviembre.",
-   "explicacion": "El decreto de disolución se publicó en el BOE el 6 de octubre de 2026 con elecciones el 29 de noviembre. El calendario oficial fija el inicio de la campaña el 13 de noviembre (a las 00:00 horas, es decir, en la noche del 12 al 13) y su fin el 27 de noviembre, antes de la jornada de reflexión del 28. Es coherente con que la entrevista se grabara el 12 de noviembre.",
-   "confianza": "media",
-   "fuentes": [
-    {
-     "titulo": "Wikipedia: Elecciones generales de España de 2026 (calendario electoral)",
-     "url": "https://en.wikipedia.org/wiki/2026_Spanish_general_election"
-    }
-   ]
-  },
-  {
    "id": "feijoo-m2446",
    "entrevista": "feijoo",
    "invitado": "Alberto Núñez Feijóo",
@@ -2286,29 +2183,6 @@
    ]
   },
   {
-   "id": "feijoo-m2703",
-   "entrevista": "feijoo",
-   "invitado": "Alberto Núñez Feijóo",
-   "tema_n": 6,
-   "tema": "Ceuta, Marruecos y la gestión de la frontera",
-   "segundo": 2703,
-   "minuto": "0:45:03",
-   "video_url": "https://www.youtube.com/watch?v=1YlGArMx_N4&t=2703s",
-   "web_url": "https://verificacion-podcast.vercel.app/feijoo#m2703",
-   "cita": "porque tenía trabajo allí como presidente del Servicio Sanitario, conocido Insalud antes de las transferencias sanitarias, también como presidente de Correos",
-   "afirmacion": "Feijóo fue presidente del Insalud y presidente de Correos, y por ese trabajo conoce Ceuta.",
-   "veredicto": "verdadero",
-   "resumen": "Feijóo presidió el Insalud (1996-2000) y Correos (hasta 2003); el Insalud gestionaba la sanidad de Ceuta, lo que hace plausible el vínculo; que la conozca bien no es comprobable.",
-   "explicacion": "Feijóo presidió el Insalud entre el 10 de mayo de 1996 y el 18 de mayo de 2000 y fue presidente de Correos del 18 de mayo de 2000 al 18 de enero de 2003. El Insalud gestionaba la sanidad de Ceuta y Melilla, que nunca fueron transferidas a una comunidad autónoma, lo que hace plausible su vinculación con la ciudad; que la conozca bien es una anécdota no comprobable.",
-   "confianza": "media",
-   "fuentes": [
-    {
-     "titulo": "Alberto Núñez Feijóo (Wikipedia)",
-     "url": "https://es.wikipedia.org/wiki/Alberto_N%C3%BA%C3%B1ez_Feij%C3%B3o"
-    }
-   ]
-  },
-  {
    "id": "feijoo-m2726",
    "entrevista": "feijoo",
    "invitado": "Alberto Núñez Feijóo",
@@ -2483,29 +2357,6 @@
     {
      "titulo": "Marruecos carga contra la justicia europea y reclama a la UE que preserve su asociación (El Independiente)",
      "url": "https://www.elindependiente.com/internacional/2024/10/04/marruecos-carga-contra-la-justicia-europea-y-reclama-a-la-ue-que-preserve-su-asociacion/amp/"
-    }
-   ]
-  },
-  {
-   "id": "feijoo-m2998",
-   "entrevista": "feijoo",
-   "invitado": "Alberto Núñez Feijóo",
-   "tema_n": 7,
-   "tema": "Inmigración, ayudas sociales, integración y expulsiones",
-   "segundo": 2998,
-   "minuto": "0:49:58",
-   "video_url": "https://www.youtube.com/watch?v=1YlGArMx_N4&t=2998s",
-   "web_url": "https://verificacion-podcast.vercel.app/feijoo#m2998",
-   "cita": "Llevamos ocho años",
-   "afirmacion": "El Gobierno de Pedro Sánchez lleva ocho años en el poder.",
-   "veredicto": "verdadero",
-   "resumen": "Sánchez gobierna desde el 2 de junio de 2018, ocho años y cinco meses en la entrevista; «ocho años» es un redondeo razonable a la baja.",
-   "explicacion": "Sánchez asumió la Presidencia del Gobierno el 2 de junio de 2018 tras la moción de censura del 1 de junio y sigue en el cargo, sin interrupciones. A fecha de la entrevista (13 de noviembre de 2026) han pasado ocho años y cinco meses, así que «ocho años» es un redondeo razonable a la baja.",
-   "confianza": "alta",
-   "fuentes": [
-    {
-     "titulo": "Pedro Sánchez (Wikipedia): presidente del Gobierno desde el 2 de junio de 2018",
-     "url": "https://es.wikipedia.org/wiki/Pedro_S%C3%A1nchez"
     }
    ]
   },
@@ -2846,33 +2697,6 @@
    ]
   },
   {
-   "id": "feijoo-m3469",
-   "entrevista": "feijoo",
-   "invitado": "Alberto Núñez Feijóo",
-   "tema_n": 8,
-   "tema": "Feijóo explica su relación con Marcial Dorado",
-   "segundo": 3469,
-   "minuto": "0:57:49",
-   "video_url": "https://www.youtube.com/watch?v=1YlGArMx_N4&t=3469s",
-   "web_url": "https://verificacion-podcast.vercel.app/feijoo#m3469",
-   "cita": "esa crema era de un herpes zoster",
-   "afirmacion": "La crema que Feijóo lleva en una de las fotos con Marcial Dorado (verano de 1995) era para tratar un herpes zóster y evitar que le diera el sol directamente.",
-   "veredicto": "no_verificable",
-   "resumen": "Ninguna fuente independiente (hemeroteca, verificadores, historial clínico) respalda ese episodio médico de 1995; la prensa solo lo reproduce, así que no hay base para darlo por cierto ni falso.",
-   "explicacion": "Es una explicación personal sobre un episodio médico de 1995 que no consta en ninguna fuente independiente: ni hemeroteca, ni verificadores, ni historial clínico público. La prensa que ha recogido la afirmación tras la entrevista (13 de noviembre de 2026) se limita a reproducirla sin contrastarla. No hay base para darla por cierta ni por falsa.",
-   "confianza": "alta",
-   "fuentes": [
-    {
-     "titulo": "Libertad Digital: El desconocido detalle de la foto de Feijóo con Marcial Dorado que ha desvelado ante Jordi Wild (13/11/2026)",
-     "url": "https://libertaddigital.com/espana/politica/2026-11-13/el-desconocido-detalle-de-la-foto-de-feijoo-con-marcial-dorado-que-ha-desvelado-ante-jordi-wild-7491023"
-    },
-    {
-     "titulo": "Maldita.es: Las fotografías de Feijóo y Marcial Dorado, cuáles son montajes y cuáles sí se han publicado",
-     "url": "https://maldita.es/malditobulo/20241029/fotografias-feijoo-dorado-montajes-falsas/"
-    }
-   ]
-  },
-  {
    "id": "feijoo-m3510",
    "entrevista": "feijoo",
    "invitado": "Alberto Núñez Feijóo",
@@ -3047,29 +2871,6 @@
     {
      "titulo": "ARA: The drug trafficker pictured with Feijóo claims the PSOE offered him money to drop a bomb against the PP leader",
      "url": "https://en.ara.cat/politics/the-drug-trafficker-pictured-with-feijoo-claims-the-psoe-offered-him-money-to-drop-bomb-against-the-pp-leader_1_5450376.html"
-    }
-   ]
-  },
-  {
-   "id": "feijoo-m3603",
-   "entrevista": "feijoo",
-   "invitado": "Alberto Núñez Feijóo",
-   "tema_n": 8,
-   "tema": "Feijóo explica su relación con Marcial Dorado",
-   "segundo": 3603,
-   "minuto": "1:00:03",
-   "video_url": "https://www.youtube.com/watch?v=1YlGArMx_N4&t=3603s",
-   "web_url": "https://verificacion-podcast.vercel.app/feijoo#m3603",
-   "cita": "Si en 30 años que llevo en esto",
-   "afirmacion": "Feijóo lleva unos 30 años en política.",
-   "veredicto": "verdadero",
-   "resumen": "Feijóo ocupa cargos públicos desde julio de 1991, secretario general técnico de Agricultura; son unos 35 años en 2026, así que «30 años» es una cifra prudente.",
-   "explicacion": "Feijóo ocupa cargos públicos y políticos desde julio de 1991, cuando fue nombrado secretario general técnico de la Consellería de Agricultura de la Xunta; son unos 35 años en 2026, por lo que «30 años» es una cifra prudente.",
-   "confianza": "alta",
-   "fuentes": [
-    {
-     "titulo": "Wikipedia: Alberto Núñez Feijóo (trayectoria de cargos)",
-     "url": "https://es.wikipedia.org/wiki/Alberto_N%C3%BA%C3%B1ez_Feij%C3%B3o"
     }
    ]
   },
@@ -4202,29 +4003,6 @@
    ]
   },
   {
-   "id": "feijoo-m4429",
-   "entrevista": "feijoo",
-   "invitado": "Alberto Núñez Feijóo",
-   "tema_n": 10,
-   "tema": "Isabel Díaz Ayuso y su relación dentro del Partido Popular",
-   "segundo": 4429,
-   "minuto": "1:13:49",
-   "video_url": "https://www.youtube.com/watch?v=1YlGArMx_N4&t=4429s",
-   "web_url": "https://verificacion-podcast.vercel.app/feijoo#m4429",
-   "cita": "yo he sido presidente de la Comunidad Autónoma Gallega, como sabes, mucho tiempo",
-   "afirmacion": "Feijóo fue presidente de la Xunta de Galicia durante mucho tiempo.",
-   "veredicto": "verdadero",
-   "resumen": "Presidió la Xunta del 18 de abril de 2009 al 14 de mayo de 2022: algo más de 13 años y cuatro legislaturas.",
-   "explicacion": "Presidió la Xunta del 18 de abril de 2009 al 14 de mayo de 2022, es decir, algo más de 13 años y cuatro legislaturas.",
-   "confianza": "alta",
-   "fuentes": [
-    {
-     "titulo": "Alberto Núñez Feijóo (Wikipedia)",
-     "url": "https://es.wikipedia.org/wiki/Alberto_Núñez_Feijóo"
-    }
-   ]
-  },
-  {
    "id": "feijoo-m4449",
    "entrevista": "feijoo",
    "invitado": "Alberto Núñez Feijóo",
@@ -4457,102 +4235,6 @@
    ]
   },
   {
-   "id": "feijoo-m4631",
-   "entrevista": "feijoo",
-   "invitado": "Alberto Núñez Feijóo",
-   "tema_n": 10,
-   "tema": "Isabel Díaz Ayuso y su relación dentro del Partido Popular",
-   "segundo": 4631,
-   "minuto": "1:17:11",
-   "video_url": "https://www.youtube.com/watch?v=1YlGArMx_N4&t=4631s",
-   "web_url": "https://verificacion-podcast.vercel.app/feijoo#m4631",
-   "cita": "en el momento en el que se hizo, que fue en el año 2000, no estábamos mal",
-   "afirmacion": "La residencia oficial del presidente de la Xunta se construyó en el año 2000.",
-   "veredicto": "no_verificable",
-   "resumen": "La residencia se encargó con Fraga y costó entre 7 y 10 millones, pero ninguna fuente da el año de construcción, así que el 2000 solo podría ser el encargo.",
-   "explicacion": "Las fuentes consultadas confirman que la residencia se encargó con Fraga y que costó entre 7 y 10 millones (Touriño estimó unos 7), pero no dan el año de construcción. Solo consta que el contrato de urbanización del parque de Monte Pío se adjudicó en julio de 2001 y que Touriño la ocupó a partir de 2005, por lo que el año 2000 puede ser, como mucho, el del encargo o inicio del proyecto. Lo de que «costó mucho dinero» lo dice Wild, no Feijóo.",
-   "confianza": "baja",
-   "fuentes": [
-    {
-     "titulo": "elDiario.es (30/05/2022): La «Moncloa gallega»",
-     "url": "https://www.eldiario.es/galicia/moncloa-gallega-residencia-presidencial-10-millones-euros-camino-casa-fantasma_1_9031243.html"
-    },
-    {
-     "titulo": "DOG nº 185 (24/09/2001): adjudicación de la urbanización del predio de Monte Pío",
-     "url": "https://www.xunta.gal/dog/Publicados/2001/20010924/AnuncioF2B2_gl.html"
-    }
-   ]
-  },
-  {
-   "id": "feijoo-m4697",
-   "entrevista": "feijoo",
-   "invitado": "Alberto Núñez Feijóo",
-   "tema_n": 11,
-   "tema": "Inglés, servicio militar, Trump y política internacional",
-   "segundo": 4697,
-   "minuto": "1:18:17",
-   "video_url": "https://www.youtube.com/watch?v=1YlGArMx_N4&t=4697s",
-   "web_url": "https://verificacion-podcast.vercel.app/feijoo#m4697",
-   "cita": "pues mira yo no sé inglés pero sé gobernar",
-   "afirmacion": "Feijóo no sabe inglés.",
-   "veredicto": "verdadero",
-   "resumen": "Admitió en El Hormiguero (junio de 2026) que no habla inglés y que el móvil se lo traduce; «sé gobernar» es una valoración propia.",
-   "explicacion": "En El Hormiguero (junio de 2026) admitió que no habla inglés, que su nivel es «mal» y que no lo practica porque el móvil «ya me lo traduce directamente». La segunda parte de la frase («sé gobernar») es una valoración propia.",
-   "confianza": "alta",
-   "fuentes": [
-    {
-     "titulo": "Ara (18/06/2026): Feijóo renuncia al inglés y confía en el móvil",
-     "url": "https://es.ara.cat/politica/feijoo-renuncia-ingles-confia-movil-traduce-directamente_1_5773294.html"
-    }
-   ]
-  },
-  {
-   "id": "feijoo-m4743",
-   "entrevista": "feijoo",
-   "invitado": "Alberto Núñez Feijóo",
-   "tema_n": 11,
-   "tema": "Inglés, servicio militar, Trump y política internacional",
-   "segundo": 4743,
-   "minuto": "1:19:03",
-   "video_url": "https://www.youtube.com/watch?v=1YlGArMx_N4&t=4743s",
-   "web_url": "https://verificacion-podcast.vercel.app/feijoo#m4743",
-   "cita": "yo he sido de la primera generación de la EGB y del BUP",
-   "afirmacion": "Feijóo pertenece a la primera generación que cursó la EGB y el BUP.",
-   "veredicto": "no_verificable",
-   "resumen": "No se puede comprobar: la Ley General de Educación de 1970 creó la EGB, pero no se confirmó el año de implantación del BUP ni qué cohortes son «primera generación».",
-   "explicacion": "La Ley General de Educación de 1970 creó la EGB (ocho cursos), pero en las fuentes consultadas no he podido confirmar el año de implantación del BUP ni qué cohortes cuentan como «primera generación»; sin la fecha de nacimiento y el calendario de implantación contrastados no se puede comprobar la afirmación, que es además una autodescripción imprecisa.",
-   "confianza": "baja",
-   "fuentes": [
-    {
-     "titulo": "Educación General Básica (Wikipedia)",
-     "url": "https://es.wikipedia.org/wiki/Educación_General_Básica"
-    }
-   ]
-  },
-  {
-   "id": "feijoo-m4761",
-   "entrevista": "feijoo",
-   "invitado": "Alberto Núñez Feijóo",
-   "tema_n": 11,
-   "tema": "Inglés, servicio militar, Trump y política internacional",
-   "segundo": 4761,
-   "minuto": "1:19:21",
-   "video_url": "https://www.youtube.com/watch?v=1YlGArMx_N4&t=4761s",
-   "web_url": "https://verificacion-podcast.vercel.app/feijoo#m4761",
-   "cita": "decía Felipe González hace poco, no porque la frase sea suya, pero decía que uno puede ser tonto en varios idiomas",
-   "afirmacion": "Felipe González dijo hace poco que uno puede ser tonto en varios idiomas.",
-   "veredicto": "no_verificable",
-   "resumen": "No hay ninguna fuente que atribuya la frase a González, y el propio Feijóo admite que quizá no sea suya; en 2026 González habló de Trump, no de idiomas.",
-   "explicacion": "No he encontrado ninguna fuente que atribuya esa frase a González. El propio Feijóo se cubre diciendo que la frase quizá no sea suya y que no está seguro de que sea del expresidente. En 2026 González sí ha hecho declaraciones sobre Trump («no hay nada peor que un tonto con poder»), pero no sobre idiomas.",
-   "confianza": "baja",
-   "fuentes": [
-    {
-     "titulo": "Ara (18/06/2026): Feijóo renuncia al inglés (contexto de la polémica)",
-     "url": "https://es.ara.cat/politica/feijoo-renuncia-ingles-confia-movil-traduce-directamente_1_5773294.html"
-    }
-   ]
-  },
-  {
    "id": "feijoo-m4801",
    "entrevista": "feijoo",
    "invitado": "Alberto Núñez Feijóo",
@@ -4765,52 +4447,6 @@
    ]
   },
   {
-   "id": "feijoo-m5210",
-   "entrevista": "feijoo",
-   "invitado": "Alberto Núñez Feijóo",
-   "tema_n": 12,
-   "tema": "Feijóo define a Colau, Abascal y Pedro Sánchez y cierra la entrevist",
-   "segundo": 5210,
-   "minuto": "1:26:50",
-   "video_url": "https://www.youtube.com/watch?v=1YlGArMx_N4&t=5210s",
-   "web_url": "https://verificacion-podcast.vercel.app/feijoo#m5210",
-   "cita": "hasta las 12 de la noche no empieza la campaña electoral",
-   "afirmacion": "La campaña electoral de las elecciones generales del 29 de noviembre de 2026 empieza a las 12 de la noche (la entrevista se grabó el día previo).",
-   "veredicto": "verdadero",
-   "resumen": "El Real Decreto 806/2026 fija el inicio de campaña a las 00:00 del viernes 13 de noviembre, con 15 días de duración hasta el 27, como dijo Feijóo.",
-   "explicacion": "El Real Decreto 806/2026 (BOE, 6 de octubre de 2026) fija el inicio de la campaña a las 00:00 del viernes 13 de noviembre, con una duración de 15 días, hasta el 27 de noviembre. Coincide con lo dicho por Feijóo en la grabación del día anterior.",
-   "confianza": "alta",
-   "fuentes": [
-    {
-     "titulo": "Euronews (06/10/2026): Calendario de las elecciones generales del 29N",
-     "url": "https://es.euronews.com/2026/10/06/calendario-elecciones-generales-29n-fechas-clave-voto-correo-campana"
-    }
-   ]
-  },
-  {
-   "id": "feijoo-m5244",
-   "entrevista": "feijoo",
-   "invitado": "Alberto Núñez Feijóo",
-   "tema_n": 12,
-   "tema": "Feijóo define a Colau, Abascal y Pedro Sánchez y cierra la entrevist",
-   "segundo": 5244,
-   "minuto": "1:27:24",
-   "video_url": "https://www.youtube.com/watch?v=1YlGArMx_N4&t=5244s",
-   "web_url": "https://verificacion-podcast.vercel.app/feijoo#m5244",
-   "cita": "Soy un político que ha gestionado durante los últimos 30 años de su vida, es decir, toda su vida",
-   "afirmacion": "Feijóo lleva gestionando cargos públicos durante los últimos 30 años.",
-   "veredicto": "mayormente_verdadero",
-   "resumen": "Ocupa cargos de gestión desde julio de 1991, unos 35 años, así que «30» es una cifra redondeada a la baja y «toda su vida» es hipérbole.",
-   "explicacion": "Desde julio de 1991 ocupa cargos de gestión (secretario general en la Xunta, presidente del Insalud desde 1996, presidente de Correos 2000-2003, conselleiro y vicepresidente de la Xunta, presidente de la Xunta 2009-2022), es decir, unos 35 años; «30» es una cifra redondeada a la baja, y «toda su vida» es hipérbole.",
-   "confianza": "media",
-   "fuentes": [
-    {
-     "titulo": "Alberto Núñez Feijóo (Wikipedia): trayectoria",
-     "url": "https://es.wikipedia.org/wiki/Alberto_Núñez_Feijóo"
-    }
-   ]
-  },
-  {
    "id": "feijoo-m5259",
    "entrevista": "feijoo",
    "invitado": "Alberto Núñez Feijóo",
@@ -4836,6 +4472,113 @@
      "url": "https://es.wikipedia.org/wiki/Alberto_Núñez_Feijóo"
     }
    ]
+  }
+ ],
+ "excluidas": [
+  {
+   "id": "feijoo-m191",
+   "minuto": "0:03:11",
+   "afirmacion": "En esta campaña electoral Feijóo ha concedido entrevistas en la Cadena SER, El País, La Sexta, Mediaset y Atresmedia.",
+   "veredicto": "mayormente_verdadero",
+   "motivo": "Detalle logístico de la campaña o de la entrevista."
+  },
+  {
+   "id": "feijoo-m531",
+   "minuto": "0:08:51",
+   "afirmacion": "Feijóo lleva cuatro años haciendo política nacional.",
+   "veredicto": "mayormente_verdadero",
+   "motivo": "Dato de contexto sobre la duración de un cargo o de una trayectoria, sin discusión ni relevancia para el debate."
+  },
+  {
+   "id": "feijoo-m612",
+   "minuto": "0:10:12",
+   "afirmacion": "Feijóo votó a Felipe González (PSOE) en las elecciones generales de 1982 y es algo conocido.",
+   "veredicto": "no_verificable",
+   "motivo": "Dato biográfico o familiar del invitado, sin relación con su gestión ni con el debate público."
+  },
+  {
+   "id": "feijoo-m2417-2",
+   "minuto": "0:40:17",
+   "afirmacion": "La campaña electoral de las elecciones generales empieza «esta noche».",
+   "veredicto": "verdadero",
+   "motivo": "Detalle logístico de la campaña o de la entrevista."
+  },
+  {
+   "id": "feijoo-m2703",
+   "minuto": "0:45:03",
+   "afirmacion": "Feijóo fue presidente del Insalud y presidente de Correos, y por ese trabajo conoce Ceuta.",
+   "veredicto": "verdadero",
+   "motivo": "Dato biográfico o familiar del invitado, sin relación con su gestión ni con el debate público."
+  },
+  {
+   "id": "feijoo-m2998",
+   "minuto": "0:49:58",
+   "afirmacion": "El Gobierno de Pedro Sánchez lleva ocho años en el poder.",
+   "veredicto": "verdadero",
+   "motivo": "Dato de contexto sobre la duración de un cargo o de una trayectoria, sin discusión ni relevancia para el debate."
+  },
+  {
+   "id": "feijoo-m3469",
+   "minuto": "0:57:49",
+   "afirmacion": "La crema que Feijóo lleva en una de las fotos con Marcial Dorado (verano de 1995) era para tratar un herpes zóster y evitar que le diera el sol directamente.",
+   "veredicto": "no_verificable",
+   "motivo": "Anécdota personal o privada, sin relación con la gestión pública."
+  },
+  {
+   "id": "feijoo-m3603",
+   "minuto": "1:00:03",
+   "afirmacion": "Feijóo lleva unos 30 años en política.",
+   "veredicto": "verdadero",
+   "motivo": "Dato de contexto sobre la duración de un cargo o de una trayectoria, sin discusión ni relevancia para el debate."
+  },
+  {
+   "id": "feijoo-m4429",
+   "minuto": "1:13:49",
+   "afirmacion": "Feijóo fue presidente de la Xunta de Galicia durante mucho tiempo.",
+   "veredicto": "verdadero",
+   "motivo": "Dato de contexto sobre la duración de un cargo o de una trayectoria, sin discusión ni relevancia para el debate."
+  },
+  {
+   "id": "feijoo-m4631",
+   "minuto": "1:17:11",
+   "afirmacion": "La residencia oficial del presidente de la Xunta se construyó en el año 2000.",
+   "veredicto": "no_verificable",
+   "motivo": "Curiosidad sin relación con políticas, instituciones ni el debate público."
+  },
+  {
+   "id": "feijoo-m4697",
+   "minuto": "1:18:17",
+   "afirmacion": "Feijóo no sabe inglés.",
+   "veredicto": "verdadero",
+   "motivo": "Dato biográfico o familiar del invitado, sin relación con su gestión ni con el debate público."
+  },
+  {
+   "id": "feijoo-m4743",
+   "minuto": "1:19:03",
+   "afirmacion": "Feijóo pertenece a la primera generación que cursó la EGB y el BUP.",
+   "veredicto": "no_verificable",
+   "motivo": "Dato biográfico o familiar del invitado, sin relación con su gestión ni con el debate público."
+  },
+  {
+   "id": "feijoo-m4761",
+   "minuto": "1:19:21",
+   "afirmacion": "Felipe González dijo hace poco que uno puede ser tonto en varios idiomas.",
+   "veredicto": "no_verificable",
+   "motivo": "Curiosidad sin relación con políticas, instituciones ni el debate público."
+  },
+  {
+   "id": "feijoo-m5210",
+   "minuto": "1:26:50",
+   "afirmacion": "La campaña electoral de las elecciones generales del 29 de noviembre de 2026 empieza a las 12 de la noche (la entrevista se grabó el día previo).",
+   "veredicto": "verdadero",
+   "motivo": "Detalle logístico de la campaña o de la entrevista."
+  },
+  {
+   "id": "feijoo-m5244",
+   "minuto": "1:27:24",
+   "afirmacion": "Feijóo lleva gestionando cargos públicos durante los últimos 30 años.",
+   "veredicto": "mayormente_verdadero",
+   "motivo": "Dato de contexto sobre la duración de un cargo o de una trayectoria, sin discusión ni relevancia para el debate."
   }
  ]
 }

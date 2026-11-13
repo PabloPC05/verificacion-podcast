@@ -1,0 +1,89 @@
+{
+ "criterio": "Se excluyen de la web y de los recuentos las afirmaciones comprobables que no aportan al debate público: datos biográficos o familiares, anécdotas privadas, la duración de cargos o trayectorias y detalles logísticos de la campaña. El criterio se aplica igual a todos los invitados y con independencia del veredicto. Siguen aquí, con su veredicto original, por transparencia.",
+ "excluidas": [
+  {
+   "id": "m219",
+   "minuto": "0:03:39",
+   "afirmacion": "Ada Colau tiene un hijo de 15 años.",
+   "veredicto": "mayormente_verdadero",
+   "motivo": "Dato biográfico o familiar del invitado, sin relación con su gestión ni con el debate público."
+  },
+  {
+   "id": "m300",
+   "minuto": "0:05:00",
+   "afirmacion": "Colau abandonó Twitter cuando era alcaldesa de Barcelona.",
+   "veredicto": "verdadero",
+   "motivo": "Anécdota personal o privada, sin relación con la gestión pública."
+  },
+  {
+   "id": "m339",
+   "minuto": "0:05:39",
+   "afirmacion": "Colau lleva casi cuatro años fuera de la primera línea política.",
+   "veredicto": "mayormente_verdadero",
+   "motivo": "Dato de contexto sobre la duración de un cargo o de una trayectoria, sin discusión ni relevancia para el debate."
+  },
+  {
+   "id": "m384",
+   "minuto": "0:06:24",
+   "afirmacion": "Colau, personalmente, no ha vuelto a Twitter/X y usa Instagram y otras redes.",
+   "veredicto": "enganoso",
+   "motivo": "Anécdota personal o privada, sin relación con la gestión pública."
+  },
+  {
+   "id": "m539",
+   "minuto": "0:08:59",
+   "afirmacion": "En mayo de 2027 se cumplirán 4 años desde que Colau dejó de ser alcaldesa de Barcelona.",
+   "veredicto": "mayormente_verdadero",
+   "motivo": "Dato de contexto sobre la duración de un cargo o de una trayectoria, sin discusión ni relevancia para el debate."
+  },
+  {
+   "id": "m545",
+   "minuto": "0:09:05",
+   "afirmacion": "Le propusieron ser ministra en el Gobierno de Pedro Sánchez y Colau rechazó.",
+   "veredicto": "mayormente_verdadero",
+   "motivo": "Anécdota personal o privada, sin relación con la gestión pública."
+  },
+  {
+   "id": "m545-2",
+   "minuto": "0:09:05",
+   "afirmacion": "Le propusieron presentarse a las elecciones europeas y Colau dijo que no.",
+   "veredicto": "verdadero",
+   "motivo": "Anécdota personal o privada, sin relación con la gestión pública."
+  },
+  {
+   "id": "m666",
+   "minuto": "0:11:06",
+   "afirmacion": "Colau fue alcaldesa de Barcelona durante 8 años.",
+   "veredicto": "verdadero",
+   "motivo": "Dato de contexto sobre la duración de un cargo o de una trayectoria, sin discusión ni relevancia para el debate."
+  },
+  {
+   "id": "m3278",
+   "minuto": "0:54:38",
+   "afirmacion": "Como alcaldesa de Barcelona le tocó gestionar la pandemia de COVID-19 y el atentado de la Rambla.",
+   "veredicto": "verdadero",
+   "motivo": "Dato de contexto sobre la duración de un cargo o de una trayectoria, sin discusión ni relevancia para el debate."
+  },
+  {
+   "id": "m3532",
+   "minuto": "0:58:52",
+   "afirmacion": "El hijo pequeño de Ada Colau juega en el club Martinenc.",
+   "veredicto": "no_verificable",
+   "motivo": "Dato biográfico o familiar del invitado, sin relación con su gestión ni con el debate público."
+  },
+  {
+   "id": "m3944",
+   "minuto": "1:05:44",
+   "afirmacion": "Ada Colau gestionó la ciudad de Barcelona durante ocho años, como alcaldesa.",
+   "veredicto": "verdadero",
+   "motivo": "Dato de contexto sobre la duración de un cargo o de una trayectoria, sin discusión ni relevancia para el debate."
+  },
+  {
+   "id": "m4135",
+   "minuto": "1:08:55",
+   "afirmacion": "La familia de Ada Colau es andaluza y ella también tiene origen familiar en Huesca y en Soria.",
+   "veredicto": "no_verificable",
+   "motivo": "Dato biográfico o familiar del invitado, sin relación con su gestión ni con el debate público."
+  }
+ ]
+}

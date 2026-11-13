@@ -1,0 +1,75 @@
+{
+ "criterio": "Se excluyen de la web y de los recuentos las afirmaciones comprobables que no aportan al debate público: datos biográficos o familiares, anécdotas privadas, la duración de cargos o trayectorias y detalles logísticos de la campaña. El criterio se aplica igual a todos los invitados y con independencia del veredicto. Siguen aquí, con su veredicto original, por transparencia.",
+ "excluidas": [
+  {
+   "id": "m251",
+   "minuto": "0:04:11",
+   "afirmacion": "Pedro Sánchez tiene 54 años (a fecha de la entrevista, noviembre de 2026).",
+   "veredicto": "verdadero",
+   "motivo": "Dato biográfico o familiar del invitado, sin relación con su gestión ni con el debate público."
+  },
+  {
+   "id": "m273",
+   "minuto": "0:04:33",
+   "afirmacion": "La madre de Sánchez lo tuvo con 18 años y su padre tenía 20 cuando nació.",
+   "veredicto": "no_verificable",
+   "motivo": "Dato biográfico o familiar del invitado, sin relación con su gestión ni con el debate público."
+  },
+  {
+   "id": "m286",
+   "minuto": "0:04:46",
+   "afirmacion": "Un abuelo de Sánchez trabajó 40 años emigrado en Alemania durante el franquismo.",
+   "veredicto": "no_verificable",
+   "motivo": "Dato biográfico o familiar del invitado, sin relación con su gestión ni con el debate público."
+  },
+  {
+   "id": "m294",
+   "minuto": "0:04:54",
+   "afirmacion": "Los abuelos de Sánchez no sabían leer ni escribir.",
+   "veredicto": "no_verificable",
+   "motivo": "Dato biográfico o familiar del invitado, sin relación con su gestión ni con el debate público."
+  },
+  {
+   "id": "m414",
+   "minuto": "0:06:54",
+   "afirmacion": "Sánchez lleva ocho años al frente del Gobierno de España (desde 2018).",
+   "veredicto": "verdadero",
+   "motivo": "Dato de contexto sobre la duración de un cargo o de una trayectoria, sin discusión ni relevancia para el debate."
+  },
+  {
+   "id": "m1412",
+   "minuto": "0:23:32",
+   "afirmacion": "Durante sus más de ocho años como presidente del Gobierno han coincidido la pandemia, las guerras de Ucrania e Irán, varias danas e incendios, una erupción volcánica y dos accidentes ferroviarios mortales.",
+   "veredicto": "verdadero",
+   "motivo": "Dato de contexto sobre la duración de un cargo o de una trayectoria, sin discusión ni relevancia para el debate."
+  },
+  {
+   "id": "m3148",
+   "minuto": "0:52:28",
+   "afirmacion": "El abuelo de Sánchez trabajó 40 años en Alemania y regresaba allí antes de que se cumplieran tres meses del vencimiento de su visado.",
+   "veredicto": "no_verificable",
+   "motivo": "Dato biográfico o familiar del invitado, sin relación con su gestión ni con el debate público."
+  },
+  {
+   "id": "m4154",
+   "minuto": "1:09:14",
+   "afirmacion": "Durante las primarias del PSOE iba solo en su Peugeot, estuvo a punto de tener un accidente al dormirse al volante y a partir de entonces lo condujo Juan Manuel Serrano en su Mercedes.",
+   "veredicto": "no_verificable",
+   "motivo": "Anécdota personal o privada, sin relación con la gestión pública."
+  },
+  {
+   "id": "m5608",
+   "minuto": "1:33:28",
+   "afirmacion": "Pedro Sánchez es economista.",
+   "veredicto": "verdadero",
+   "motivo": "Dato biográfico o familiar del invitado, sin relación con su gestión ni con el debate público."
+  },
+  {
+   "id": "m6686",
+   "minuto": "1:51:26",
+   "afirmacion": "El Papa ha votado (en las elecciones de Estados Unidos), y Patti Smith también se ha pronunciado a favor de votar.",
+   "veredicto": "verdadero",
+   "motivo": "Curiosidad sin relación con políticas, instituciones ni el debate público."
+  }
+ ]
+}
