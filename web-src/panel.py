@@ -67,7 +67,7 @@ form.entrar input { width:100%; font:inherit; padding:10px 12px; min-height:44px
 form.entrar button { font:inherit; font-weight:700; padding:10px 16px; min-height:44px; background:var(--tinta); color:var(--fondo); border:2px solid var(--tinta); border-radius:var(--r-boton); cursor:pointer; width:100%; }
 form.entrar button:hover { background:var(--fondo); color:var(--tinta); }
 .error { color:var(--v-falso); font-weight:600; font-size:14px; }
-.kpis { display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:14px; margin-bottom:18px; }
+.kpis { display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:12px; margin-bottom:18px; }
 .kpi { border:2px solid var(--tinta); border-radius:var(--r-caja); padding:14px 18px 16px; }
 .kpi .rot { display:block; margin-bottom:4px; }
 .kpi b { font:700 clamp(26px,2.6vw,34px)/1.1 var(--serif); font-variant-numeric:tabular-nums; display:block; margin-bottom:2px; }
@@ -233,7 +233,7 @@ function grafica(serie, unidad) {
   const el = $("serie");
   const pv = serie?.pageviews, se = serie?.sessions;
   if (!Array.isArray(pv) || !pv.length) { el.innerHTML = `<p class="vacio">${serie?.error ? "No disponible (" + esc(serie.error) + ")." : "Sin datos en este periodo."}</p>`; return; }
-  const W = 1000, H = 240, M = { a: 10, d: 10, i: 44, b: 26 };
+  const W = Math.max(300, el.clientWidth || 1000), H = W < 600 ? 200 : 260, M = { a: 10, d: 4, i: 40, b: 26 };
   const ancho = W - M.i - M.d, alto = H - M.a - M.b, n = pv.length;
   const visit = new Map((se || []).map((p) => [p.x, p.y]));
   const tope = Math.max(1, ...pv.map((p) => p.y), ...(se || []).map((p) => p.y));
@@ -250,7 +250,7 @@ function grafica(serie, unidad) {
   svg += pv.map((p, i) => { const h = (p.y / tope) * alto;
     return `<rect class="barra-v" x="${M.i + i * paso + hueco / 2}" y="${M.a + alto - h}" width="${Math.max(1, paso - hueco)}" height="${h}"><title>${fecha(p.x)}: ${fmt.format(p.y)} páginas vistas, ${fmt.format(visit.get(p.x) ?? 0)} visitantes</title></rect>`; }).join("");
   if (se?.length) svg += `<polyline class="linea" points="${pv.map((p, i) => `${M.i + i * paso + paso / 2},${y(visit.get(p.x) ?? 0)}`).join(" ")}"/>`;
-  const cada = Math.max(1, Math.ceil(n / 8));
+  const cada = Math.max(1, Math.ceil(n / Math.max(3, Math.floor(W / 110))));
   svg += pv.map((p, i) => i % cada ? "" : `<text x="${M.i + i * paso + paso / 2}" y="${H - 6}" text-anchor="middle">${fecha(p.x)}</text>`).join("");
   el.innerHTML = svg + "</svg>";
 }
