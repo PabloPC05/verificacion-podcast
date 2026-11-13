@@ -168,6 +168,15 @@ def preparar(meta):
     for a in todas:
         n = vistos[a["_t"]] = vistos.get(a["_t"], 0) + 1
         a["_id"] = f'm{a["_t"]}' if n == 1 else f'm{a["_t"]}-{n}'
+    # Afirmaciones irrelevantes para el debate público (criterio en excluidas.json y METODO.md): fuera de la web y
+    # de los recuentos, pero se publican aparte. Se filtran después de dar los identificadores para que no cambien.
+    ruta_excl = carpeta / "excluidas.json"
+    excluidas = json.loads(ruta_excl.read_text(encoding="utf-8"))["excluidas"] if ruta_excl.exists() else []
+    fuera = {x["id"] for x in excluidas}
+    sobran = fuera - {a["_id"] for a in todas}
+    if sobran:
+        print(f'AVISO: {meta["slug"]}: excluidas.json cita identificadores que no existen: {sorted(sobran)}')
+    todas = [a for a in todas if a["_id"] not in fuera]
     temas = []
     for n, c in enumerate(capitulos, 1):
         ini, fin = int(c["start_time"]), int(c["end_time"])
@@ -178,7 +187,7 @@ def preparar(meta):
                       "malas": sum(a["veredicto"] in ("falso", "enganoso") for a in suyas)})
     total = {k: sum(a["veredicto"] == k for a in todas) for k in ORDEN}
     return dict(meta, carpeta=carpeta, todas=todas, temas=temas, capitulos=capitulos, total=total,
-                suma=len(todas), malas=total["falso"] + total["enganoso"])
+                suma=len(todas), malas=total["falso"] + total["enganoso"], excluidas=excluidas)
 
 
 def menu(entrevistas, actual=None):
@@ -252,16 +261,31 @@ def filtros(m, extra=""):
 
 def pagina_entrevista(m, entrevistas):
     filas = []
+    n_temas = len(m["temas"])
+    singular = {"falso": "falsa", "enganoso": "engañosa", "mayormente_verdadero": "casi cierta",
+                "verdadero": "verdadera", "no_verificable": "no verificable"}
     for t in m["temas"]:
-        nota = f'{t["malas"]} falsas o engañosas' if t["malas"] != 1 else "1 falsa o engañosa"
+        cuenta = {k: sum(a["veredicto"] == k for a in t["suyas"]) for k in ORDEN}
+        recuento = " · ".join(
+            f'<span class="tono-{k}">{cuenta[k]} {singular[k] if cuenta[k] == 1 else PLURAL[k].lower()}</span>'
+            for k in ORDEN if cuenta[k])
+        barra = "".join(f'<i class="tono-{k}" style="flex:{cuenta[k]}"></i>' for k in ORDEN if cuenta[k])
+        fin = min(t["fin"], 10 ** 6)
         filas.append(
-            f'<li class="capitulo" id="tema-{t["n"]}">'
+            f'<li class="capitulo" id="tema-{t["n"]}" data-etiqueta="Tema {t["n"]} · {e(t["titulo"], quote=True)}">'
             f'<a class="minuto" href="https://www.youtube.com/watch?v={m["video"]}&t={t["ini"]}s" target="_blank" '
-            f'rel="noopener noreferrer">{hms(t["ini"])}</a><span class="marca" aria-hidden="true"></span>'
-            f'<div><h2>{e(t["titulo"])}</h2><p>{nota} · {t["total"]} afirmaciones comprobadas</p></div></li>')
+            f'rel="noopener noreferrer">{hms(t["ini"])}</a><span class="marca" aria-hidden="true">{t["n"]}</span>'
+            f'<div class="cab-tema"><p class="num-tema">Tema {t["n"]} de {n_temas} · {hms(t["ini"])} – {hms(fin)}</p>'
+            f'<h2>{e(t["titulo"])}</h2><p class="recuento">{t["total"]} afirmaciones: {recuento}</p>'
+            f'<div class="barra-tema" aria-hidden="true">{barra}</div></div></li>')
         filas += [panel(a) for a in t["suyas"]]
+    excl = len(m["excluidas"])
+    nota_excl = (f' Se han dejado fuera {excl} afirmaciones sin interés para el debate público (datos personales, anécdotas, '
+                 f'duración de cargos); están en <a href="{REPO}/blob/main/entrevistas/{m["slug"]}/excluidas.json" target="_blank" '
+                 f'rel="noopener noreferrer">esta lista</a>.') if excl else ""
     pagina = rellenar(
-        PLANTILLA, MENU=menu(entrevistas, m["slug"]), CSS_MENU=CSS_MENU, LEYENDA=LEYENDA, FILTROS=filtros(m), SUMA=m["suma"], MALAS=m["malas"],
+        PLANTILLA, MENU=menu(entrevistas, m["slug"]), CSS_MENU=CSS_MENU, LEYENDA=LEYENDA, NOTA_EXCL=nota_excl,
+        FILTROS=filtros(m, '<span class="tema-actual" id="tema-actual"></span>'), SUMA=m["suma"], MALAS=m["malas"],
         FALSAS=m["total"]["falso"], ENGANOSAS=m["total"]["enganoso"], CASI=m["total"]["mayormente_verdadero"],
         VERDADERAS=m["total"]["verdadero"], NV=m["total"]["no_verificable"], FILAS="".join(filas),
         INVITADO=e(m["invitado"]), PROGRAMA=e(m["programa"]), FECHA_VIDEO=e(m["fecha"]), DURACION=e(m["duracion"]),
@@ -313,7 +337,7 @@ def ficha_api(m):
         "web_url": f"{BASE}/{s}", "afirmaciones_url": f"{BASE}/api/v1/{s}.json",
         "transcripcion_url": f"{BASE}/api/v1/{s}/transcripcion.json",
         "transcripcion_txt_url": f"{BASE}/api/v1/{s}/transcripcion.txt",
-        "total_afirmaciones": m["suma"], "por_veredicto": m["total"],
+        "total_afirmaciones": m["suma"], "por_veredicto": m["total"], "excluidas": len(m.get("excluidas", [])),
         "temas": [{"n": t["n"], "titulo": t["titulo"], "inicio_s": t["ini"], "total": t["total"],
                    "por_veredicto": {k: sum(a["veredicto"] == k for a in t["suyas"]) for k in ORDEN}} for t in m["temas"]],
     }
@@ -350,7 +374,9 @@ def generar_api(hechas):
     for m in hechas:
         suyas = [afirmacion_api(m, a) for a in m["todas"]]
         todas += suyas
-        escribir_json(api / f'{m["slug"]}.json', dict(comun, entrevista=ficha_api(m), afirmaciones=suyas))
+        escribir_json(api / f'{m["slug"]}.json', dict(
+            comun, entrevista=ficha_api(m), afirmaciones=suyas,
+            excluidas=[dict(x, id=f'{m["slug"]}-{x["id"]}') for x in m.get("excluidas", [])]))
         api_publica.escribir_csv(api / f'{m["slug"]}.csv', suyas)
         segs = json.loads((m["carpeta"] / "segmentos.json").read_text(encoding="utf-8"))
         escribir_json(api / m["slug"] / "transcripcion.json", dict(
@@ -973,12 +999,24 @@ details p { margin:8px 0 0; }
 .hito:not([data-v=falso]):not([data-v=enganoso]) .flecha::after { border-left-color:var(--gris); }
 .hito:not([data-v=falso]):not([data-v=enganoso]) .minuto { font-weight:500; }
 
-.capitulo { padding:30px 0 8px; }
-.capitulo .minuto { font-weight:500; font-size:13px; margin-top:5px; color:var(--gris); }
-.marca { position:absolute; left:calc(var(--col) - 9px); top:38px; width:20px; height:4px; background:var(--tinta); }
-.capitulo > div { grid-column:2 / 4; padding-left:22px; }
+/* cabecera de cada tema: franja que cruza la línea, número en un círculo, rango de tiempo, recuento y barra */
+.capitulo { margin-top:46px; padding:22px 0 18px; border-top:3px solid var(--tinta); }
+.linea > .capitulo:first-child { margin-top:0; }
+.capitulo .minuto { font-weight:600; font-size:14px; margin-top:12px; color:var(--gris); }
+.marca { position:absolute; left:calc(var(--col) - 17px); top:-19px; width:36px; height:36px; border-radius:50%;
+  background:var(--tinta); color:var(--fondo); display:grid; place-items:center; font:700 16px/1 var(--serif);
+  box-shadow:0 0 0 5px var(--fondo); font-variant-numeric:tabular-nums; }
+.cab-tema { grid-column:2 / 4; padding-left:22px; }
+.num-tema { margin:0 0 4px; font-size:11.5px; font-weight:700; text-transform:uppercase; letter-spacing:.09em; color:var(--gris); }
 h2 { font:700 23px/1.2 var(--serif); margin:0; letter-spacing:-0.01em; text-wrap:balance; }
-.capitulo p { margin:3px 0 0; font-size:13px; color:var(--gris); }
+.cab-tema h2 { font-size:29px; line-height:1.12; }
+.recuento { margin:8px 0 0; font-size:13.5px; font-weight:600; }
+.recuento span { color:var(--tono); }
+.barra-tema { display:flex; gap:2px; height:6px; max-width:420px; margin-top:8px; border-radius:3px; overflow:hidden; }
+.barra-tema i { display:block; min-width:3px; background:var(--tono); }
+.tema-actual { margin-left:auto; font-size:13px; font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+  max-width:46ch; padding-left:10px; }
+.tema-actual:empty { display:none; }
 [hidden] { display:none !important; }
 /* color del minuto según el veredicto (el --tono de cada veredicto está en CSS_MENU) */
 .hito .minuto { color:var(--tono); } .hito .minuto:hover { background:var(--tono); color:var(--sobre-tono); }
@@ -999,7 +1037,9 @@ footer .leyenda-f { margin-bottom:34px; max-width:820px; }
 @media (max-width:860px) { :root { --col:72px; --hueco:26px; } .minuto { margin-right:10px; font-size:13px; }
   .dicho { padding-right:10px; } .dicho blockquote { display:none; } .panel blockquote.movil { display:block; }
   .flecha { margin-left:8px; margin-right:8px; } .panel { padding:13px 13px; } blockquote { font-size:17px; }
-  .capitulo > div { padding-left:16px; } h2 { font-size:20px; } }
+  .cab-tema { padding-left:16px; } h2 { font-size:20px; } .cab-tema h2 { font-size:23px; }
+  .marca { left:calc(var(--col) - 15px); width:32px; height:32px; top:-17px; font-size:15px; }
+  .tema-actual { flex-basis:100%; margin-left:0; padding-left:0; max-width:none; font-size:12.5px; } }
 .abrir { margin:14px 0 0; padding:12px 14px; border:1.5px solid var(--tinta); font-size:14.5px; max-width:78ch; }
 .contrasta { margin:12px 0 0; }
 .copiar { font:inherit; font-size:12.5px; font-weight:600; background:var(--fondo); color:var(--tinta); border:1.5px solid var(--tinta); padding:4px 11px; cursor:pointer; }
@@ -1014,7 +1054,7 @@ footer .leyenda-f { margin-bottom:34px; max-width:820px; }
   <h1>@@INVITADO@@ con Jordi Wild, minuto a minuto</h1>
   <p class="entrada">Hemos transcrito la <a href="https://www.youtube.com/watch?v=@@VIDEO@@" target="_blank" rel="noopener noreferrer">entrevista completa</a> (@@DURACION@@) y contrastado con fuentes públicas las @@SUMA@@ afirmaciones que se pueden comprobar. Esta es la línea temporal: pulsa cualquier minuto para ver ese momento del vídeo, o lee la <a href="/@@SLUG@@/transcripcion">transcripción completa</a>.</p>
   <div class="dato"><b>@@MALAS@@</b><span>afirmaciones falsas (@@FALSAS@@) o engañosas (@@ENGANOSAS@@) de @@SUMA@@ comprobadas</span></div>
-  <p class="resto">El resto: @@VERDADERAS@@ verdaderas, @@CASI@@ casi ciertas y @@NV@@ que no se han podido verificar.</p>
+  <p class="resto">El resto: @@VERDADERAS@@ verdaderas, @@CASI@@ casi ciertas y @@NV@@ que no se han podido verificar.@@NOTA_EXCL@@</p>
   <p class="abrir"><b>Contrástalo tú mismo.</b> Cada panel enlaza el vídeo y sus fuentes, y trae un botón que copia un encargo listo para pegar en cualquier IA. También puedes descargar <a href="/api/v1/@@SLUG@@.json">todos los datos de esta entrevista (JSON)</a>, usar la <a href="/api">API abierta</a> o leer el <a href="@@REPO@@/blob/main/METODO.md" target="_blank" rel="noopener noreferrer">método</a>.</p>
 </div>
 @@FILTROS@@
@@ -1052,14 +1092,24 @@ function pintar() {
   });
 }
 function verTodo() { botones.forEach(b => activos.add(b.dataset.v)); }
+const capitulos = [...document.querySelectorAll(".capitulo")], temaActual = document.getElementById("tema-actual");
+let pendienteTema = false;
+function marcarTema() {
+  pendienteTema = false;
+  const limite = document.querySelector(".menu").offsetHeight + document.querySelector(".filtros").offsetHeight + 24;
+  let c = null;
+  for (const x of capitulos) { if (x.hidden) continue; if (x.getBoundingClientRect().top <= limite) c = x; else break; }
+  temaActual.textContent = c ? c.dataset.etiqueta : "";
+}
+addEventListener("scroll", () => { if (!pendienteTema) { pendienteTema = true; requestAnimationFrame(marcarTema); } }, { passive: true });
 botones.forEach(b => b.onclick = () => {
   const v = b.dataset.v;
   if (activos.has(v) && activos.size > 1) activos.delete(v); else activos.add(v);
-  pintar();
+  pintar(); marcarTema();
 });
 todas.onclick = () => {
   if (activos.size === botones.length) { activos.clear(); activos.add("falso"); activos.add("enganoso"); } else verTodo();
-  pintar();
+  pintar(); marcarTema();
 };
 function irAlAncla() {
   const d = location.hash.length > 1 && document.getElementById(location.hash.slice(1));
@@ -1067,7 +1117,7 @@ function irAlAncla() {
   if (d.hidden) { if (d.dataset.v) activos.add(d.dataset.v); else verTodo(); pintar(); }
   d.scrollIntoView();
 }
-pintar(); irAlAncla();
+pintar(); irAlAncla(); marcarTema();
 addEventListener("hashchange", irAlAncla);
 document.addEventListener("click", ev => {
   const b = ev.target.closest(".copiar");

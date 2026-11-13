@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-13T20:24:29+01:00",
+ "generado": "2026-11-13T20:31:06+01:00",
  "aviso": "Verificación asistida por IA, sin revisión de un equipo de periodistas. «falso» no implica intención de mentir. Contrasta siempre con las fuentes enlazadas.",
  "veredictos": {
   "verdadero": "Los datos lo confirman.",
@@ -11,151 +11,8 @@
  "metodo_url": "https://github.com/PabloPC05/verificacion-podcast/blob/main/METODO.md",
  "repositorio": "https://github.com/PabloPC05/verificacion-podcast",
  "documentacion": "https://verificacion-podcast.vercel.app/api",
- "total": 490,
+ "total": 453,
  "afirmaciones": [
-  {
-   "id": "sanchez-m251",
-   "entrevista": "sanchez",
-   "invitado": "Pedro Sánchez",
-   "tema_n": 2,
-   "tema": "Por qué Pedro Sánchez quiere seguir al frente del Gobierno",
-   "segundo": 251,
-   "minuto": "0:04:11",
-   "video_url": "https://www.youtube.com/watch?v=mStOFBvToUI&t=251s",
-   "web_url": "https://verificacion-podcast.vercel.app/sanchez#m251",
-   "cita": "Yo tengo 54 años, con 15 años, 16 años.",
-   "afirmacion": "Pedro Sánchez tiene 54 años (a fecha de la entrevista, noviembre de 2026).",
-   "veredicto": "verdadero",
-   "resumen": "La Moncloa da su nacimiento el 29 de febrero de 1972, por lo que en noviembre de 2026 tiene 54 años; El Español (octubre de 2026) también lo confirma.",
-   "explicacion": "La biografía oficial de La Moncloa lo da como nacido en Madrid el 29 de febrero de 1972, de modo que en noviembre de 2026 tiene 54 años. Un perfil de El Español de octubre de 2026 también lo sitúa en 54 años.",
-   "confianza": "alta",
-   "fuentes": [
-    {
-     "titulo": "La Moncloa: Biografía de Pedro Sánchez",
-     "url": "https://www.lamoncloa.gob.es/presidente/biografia/Paginas/index.aspx"
-    },
-    {
-     "titulo": "El Español: Pedro Sánchez, años de infancia (12/10/2026)",
-     "url": "https://www.elespanol.com/corazon/20261012/pedro-sanchez-anos-infancia-hijo-clase-media-madre-padre/1003744410192_0.html"
-    }
-   ]
-  },
-  {
-   "id": "sanchez-m273",
-   "entrevista": "sanchez",
-   "invitado": "Pedro Sánchez",
-   "tema_n": 2,
-   "tema": "Por qué Pedro Sánchez quiere seguir al frente del Gobierno",
-   "segundo": 273,
-   "minuto": "0:04:33",
-   "video_url": "https://www.youtube.com/watch?v=mStOFBvToUI&t=273s",
-   "web_url": "https://verificacion-podcast.vercel.app/sanchez#m273",
-   "cita": "mi madre me tuvo con 18 años, mi padre me tuvo con 20 años Se casaron, ya embarazada ella",
-   "afirmacion": "La madre de Sánchez lo tuvo con 18 años y su padre tenía 20 cuando nació.",
-   "veredicto": "no_verificable",
-   "resumen": "No hay fechas de nacimiento de sus padres en fuentes documentales y Sánchez ha dado versiones distintas (18 y 20 años, o 20 años); sin registro no se puede confirmar.",
-   "explicacion": "No he encontrado fechas de nacimiento de sus padres en fuentes documentales. Las edades solo constan por boca del propio Sánchez: en El Español (octubre de 2026) dice 18 y 20, pero otro titular de Semana lo cita diciendo que su madre lo tuvo «a los 20 años». La discrepancia entre sus propias versiones y la falta de registro impiden confirmarlo (es una anécdota familiar plausible, no desmentida).",
-   "confianza": "baja",
-   "fuentes": [
-    {
-     "titulo": "El Español: Pedro Sánchez, años de infancia (12/10/2026)",
-     "url": "https://www.elespanol.com/corazon/20261012/pedro-sanchez-anos-infancia-hijo-clase-media-madre-padre/1003744410192_0.html"
-    },
-    {
-     "titulo": "Semana: «Mi madre me tuvo a los 20 años...»",
-     "url": "https://www.semana.es/corazon/pedro-sanchez-soy-hijo-de-clase-media-mi-madre-me-tuvo-a-los-20-anos-yo-he-tenido-una-madre-muy-joven-cuando-cumplio-los-40-se-saco-el-acceso-a-la-universidad_2821550"
-    }
-   ]
-  },
-  {
-   "id": "sanchez-m286",
-   "entrevista": "sanchez",
-   "invitado": "Pedro Sánchez",
-   "tema_n": 2,
-   "tema": "Por qué Pedro Sánchez quiere seguir al frente del Gobierno",
-   "segundo": 286,
-   "minuto": "0:04:46",
-   "video_url": "https://www.youtube.com/watch?v=mStOFBvToUI&t=286s",
-   "web_url": "https://verificacion-podcast.vercel.app/sanchez#m286",
-   "cita": "mi abuelo estuvo 40 años trabajando fuera, en la migración, durante la dictadura franquista En Alemania",
-   "afirmacion": "Un abuelo de Sánchez trabajó 40 años emigrado en Alemania durante el franquismo.",
-   "veredicto": "no_verificable",
-   "resumen": "Su abuelo emigró a Alemania en los años sesenta según prensa, pero los «40 años» solo constan por el propio Sánchez; falta una fuente independiente que confirme la cifra.",
-   "explicacion": "Que su abuelo paterno (Juan Sánchez, natural de Anchuras, Ciudad Real, pastor) emigró a Alemania en los años sesenta, y que su padre le acompañó antes de asentarse en Madrid, aparece en prensa (Infobae, El Español) y en sus propias declaraciones. Lo de «40 años» solo consta por el propio Sánchez (Semana) y ninguna fuente independiente lo confirma; además no encaja bien con una emigración en los sesenta si se entiende «durante la dictadura», que terminó en 1975. Puede ser redondeo oral, pero no hay prueba de la cifra.",
-   "confianza": "baja",
-   "fuentes": [
-    {
-     "titulo": "Semana: «Muchas veces pienso en mi abuelo, que estuvo viviendo durante 40 años en Alemania...»",
-     "url": "https://www.semana.es/corazon/pedro-sanchez-muchas-veces-pienso-mi-abuelo-que-estuvo-viviendo-durante-40-anos-alemania-durante-dictadura-franquista-para-poder-alimentar-mi-padre_2821908"
-    },
-    {
-     "titulo": "Infobae: Los orígenes de Pedro Sánchez se remontan a un pequeño pueblo de Ciudad Real (12/11/2026)",
-     "url": "https://www.infobae.com/espana/viajes/2026/11/12/los-origenes-de-pedro-sanchez-se-remontan-a-un-pequeno-pueblo-de-ciudad-real-de-265-habitantes-un-paraje-virgen-hasta-el-siglo-xiv/"
-    },
-    {
-     "titulo": "El Español: El refugio familiar de Pedro Sánchez (26/10/2026)",
-     "url": "https://www.elespanol.com/eldigitalcastillalamancha/sociedad/20261026/refugio-familiar-pedro-sanchez-pueblo-abuela-juan-padre-guarda-grandes-amigos-trt/1003744434476_0.html"
-    }
-   ]
-  },
-  {
-   "id": "sanchez-m294",
-   "entrevista": "sanchez",
-   "invitado": "Pedro Sánchez",
-   "tema_n": 2,
-   "tema": "Por qué Pedro Sánchez quiere seguir al frente del Gobierno",
-   "segundo": 294,
-   "minuto": "0:04:54",
-   "video_url": "https://www.youtube.com/watch?v=mStOFBvToUI&t=294s",
-   "web_url": "https://verificacion-podcast.vercel.app/sanchez#m294",
-   "cita": "Mis abuelos no sabían leer ni escribir.",
-   "afirmacion": "Los abuelos de Sánchez no sabían leer ni escribir.",
-   "veredicto": "no_verificable",
-   "resumen": "En 2014 dijo que sus abuelos no sabían leer ni escribir bien, pero un acta de 2025 sobre el abuelo materno indicaría lo contrario; faltan datos del resto de abuelos.",
-   "explicacion": "Hay indicios a favor: en 2014 dijo que sus abuelos fallecieron «sin saber leer ni escribir correctamente» y los acompañaba a clases de adultos. En contra, El Debate (a partir de documentos de OK Diario, medios críticos con Sánchez) publicó en noviembre de 2025 el acta de filiación del abuelo materno en el Ejército republicano, donde constaría que sabía leer y escribir; Maldita lo recoge como caso aún no verificado. Un acta de filiación es una declaración, no una prueba de alfabetización, y no hay datos del resto de abuelos, así que no se puede dar un veredicto firme.",
-   "confianza": "baja",
-   "fuentes": [
-    {
-     "titulo": "El Debate: Otra mentira de Sánchez: su abuelo materno sabía leer y escribir (19/11/2025)",
-     "url": "https://www.eldebate.com/espana/20251119/otra-mentira-sanchez-abuelo-materno-sabia-leer-escribir_356355.html"
-    },
-    {
-     "titulo": "Maldita.es: ¿Sánchez dice que su abuelo franquista «no sabía leer ni escribir»...? (caso no verificado)",
-     "url": "https://maldita.es/buloteca/claim/sanchez-dice-sanchez-dice-que-su-abuelo-franquista-no-sabia-leer-ni-escribir-pero-este-documento-demuestra-que-miente"
-    },
-    {
-     "titulo": "Trendencias: Pedro Sánchez 2014, sus abuelos y la escuela de mayores",
-     "url": "https://www.trendencias.com/celebrities/pedro-sanchez-2014-cuando-era-pequeno-mis-abuelos-vivian-aluche-cuando-mis-padres-estaban-trabajando-yo-les-acompanaba-a-escuela-mayores-para-aprender-a-leer-escribir"
-    }
-   ]
-  },
-  {
-   "id": "sanchez-m414",
-   "entrevista": "sanchez",
-   "invitado": "Pedro Sánchez",
-   "tema_n": 2,
-   "tema": "Por qué Pedro Sánchez quiere seguir al frente del Gobierno",
-   "segundo": 414,
-   "minuto": "0:06:54",
-   "video_url": "https://www.youtube.com/watch?v=mStOFBvToUI&t=414s",
-   "web_url": "https://verificacion-podcast.vercel.app/sanchez#m414",
-   "cita": "estos ocho años que llevo al frente del gobierno de España",
-   "afirmacion": "Sánchez lleva ocho años al frente del Gobierno de España (desde 2018).",
-   "veredicto": "verdadero",
-   "resumen": "La moción de censura prosperó el 1 de junio de 2018 y tomó posesión el 2; sigue en el cargo: ocho años y cinco meses en noviembre de 2026.",
-   "explicacion": "La moción de censura contra Rajoy prosperó el 1 de junio de 2018 y Sánchez tomó posesión el 2 de junio de 2018. Ha seguido en el cargo desde entonces (en funciones en 2019 y 2023), es decir, ocho años y cinco meses en noviembre de 2026.",
-   "confianza": "alta",
-   "fuentes": [
-    {
-     "titulo": "La Moncloa: Pedro Sánchez, nuevo presidente del Gobierno (1/6/2018)",
-     "url": "https://www.lamoncloa.gob.es/presidente/actividades/Paginas/2018/010618pedrosanchez.aspx"
-    },
-    {
-     "titulo": "The Objective: Pedro Sánchez toma posesión de su cargo como presidente del Gobierno",
-     "url": "https://theobjective.com/toma-posesion-sanchez/"
-    }
-   ]
-  },
   {
    "id": "sanchez-m566",
    "entrevista": "sanchez",
@@ -843,37 +700,6 @@
     {
      "titulo": "Vozpópuli: Hablan los operarios de Adif señalados por Puente (carga de trabajo y plazas convocadas)",
      "url": "https://www.vozpopuli.com/economia/transporte/hablan-los-operarios-de-adif-senalados-por-puente-la-carga-de-trabajo-es-insoportable-casi-ni-podemos-ir-al-bano.html"
-    }
-   ]
-  },
-  {
-   "id": "sanchez-m1412",
-   "entrevista": "sanchez",
-   "invitado": "Pedro Sánchez",
-   "tema_n": 4,
-   "tema": "Accidentes ferroviarios y responsabilidades del Gobierno",
-   "segundo": 1412,
-   "minuto": "0:23:32",
-   "video_url": "https://www.youtube.com/watch?v=mStOFBvToUI&t=1412s",
-   "web_url": "https://verificacion-podcast.vercel.app/sanchez#m1412",
-   "cita": "Yo he sido el presidente de la pandemia. He sido el presidente de dos guerras, una en Irán y otra en Ucrania. He sido el presidente de múltiples danas, de múltiples incendios, hasta incluso de un volcán. Y de, por desgracia, dos accidentes ferroviarios.",
-   "afirmacion": "Durante sus más de ocho años como presidente del Gobierno han coincidido la pandemia, las guerras de Ucrania e Irán, varias danas e incendios, una erupción volcánica y dos accidentes ferroviarios mortales.",
-   "veredicto": "verdadero",
-   "resumen": "Todos los sucesos ocurrieron desde junio de 2018, como la pandemia, La Palma, Ucrania, Irán, Adamuz y Urda, aunque «presidente de dos guerras» es una figura retórica.",
-   "explicacion": "Sánchez gobierna desde junio de 2018 y todos esos sucesos ocurrieron en su mandato: la pandemia de COVID-19 (2020), la erupción de La Palma (2021), la invasión de Ucrania (2022), la ofensiva de EE. UU. e Israel contra Irán (marzo de 2026), las danas y los incendios, y los accidentes de Adamuz (18/01/2026) y Urda (28/10/2026). 'Presidente de dos guerras' es una figura retórica: España no es parte beligerante y su postura fue 'no a la guerra'. Los hechos de 2020-2024 son de dominio público y no se consultó fuente específica para ellos.",
-   "confianza": "media",
-   "fuentes": [
-    {
-     "titulo": "La Moncloa: Pedro Sánchez, 'La posición del Gobierno de España se resume en cuatro palabras: No a la guerra' (4/03/2026)",
-     "url": "https://www.lamoncloa.gob.es/presidente/actividades/Paginas/2026/040326-sanchez-declaracion-situacion-internacional.aspx"
-    },
-    {
-     "titulo": "Wikipedia: Accidente ferroviario de Adamuz",
-     "url": "https://es.wikipedia.org/wiki/Accidente_ferroviario_de_Adamuz"
-    },
-    {
-     "titulo": "Wikipedia: Accidente ferroviario de Urda",
-     "url": "https://es.wikipedia.org/wiki/Accidente_ferroviario_de_Urda"
     }
    ]
   },
@@ -1881,24 +1707,6 @@
    ]
   },
   {
-   "id": "sanchez-m3148",
-   "entrevista": "sanchez",
-   "invitado": "Pedro Sánchez",
-   "tema_n": 6,
-   "tema": "Inmigración, integración y futuro demográfico de España",
-   "segundo": 3148,
-   "minuto": "0:52:28",
-   "video_url": "https://www.youtube.com/watch?v=mStOFBvToUI&t=3148s",
-   "web_url": "https://verificacion-podcast.vercel.app/sanchez#m3148",
-   "cita": "mi abuelo estuvo 40 años currando en Alemania, venía aquí a ver a sus hijos y a su mujer y antes de los 3 meses que le vencía la visa, lo que hacía era volver a Alemania",
-   "afirmacion": "El abuelo de Sánchez trabajó 40 años en Alemania y regresaba allí antes de que se cumplieran tres meses del vencimiento de su visado.",
-   "veredicto": "no_verificable",
-   "resumen": "Es una anécdota familiar sin documentación pública, por lo que no puede confirmarse ni desmentirse con fuentes abiertas; haría falta documentación personal.",
-   "explicacion": "Es una anécdota familiar sin fuente pública contrastable. No se ha buscado ni hallado documentación al respecto, y no cabe confirmarla ni desmentirla con fuentes abiertas.",
-   "confianza": "alta",
-   "fuentes": []
-  },
-  {
    "id": "sanchez-m3251",
    "entrevista": "sanchez",
    "invitado": "Pedro Sánchez",
@@ -2541,37 +2349,6 @@
     {
      "titulo": "El Español: Doce causas abiertas (Cerdán investigado en la causa de obra pública)",
      "url": "https://www.elespanol.com/espana/tribunales/20260510/doce-causas-abiertas-meses-legislatura-calvario-judicial-queda-sanchez-despues-urnas/1003744239160_0.html"
-    }
-   ]
-  },
-  {
-   "id": "sanchez-m4154",
-   "entrevista": "sanchez",
-   "invitado": "Pedro Sánchez",
-   "tema_n": 7,
-   "tema": "Ábalos, Koldo, Cerdán y los casos que afectan al PSOE",
-   "segundo": 4154,
-   "minuto": "1:09:14",
-   "video_url": "https://www.youtube.com/watch?v=mStOFBvToUI&t=4154s",
-   "web_url": "https://verificacion-podcast.vercel.app/sanchez#m4154",
-   "cita": "Hay una etapa en la que yo voy solo. [...] casi, bueno, me dormí y me salí de, vamos, me pegó un buen susto entonces bueno, pues una serie de compañeros dijeron, oye, te llevamos nosotros [...] ese fue Juan Manuel Serrano [...] tenía un Mercedes, entonces yo cambié el Peugeot por el Mercedes",
-   "afirmacion": "Durante las primarias del PSOE iba solo en su Peugeot, estuvo a punto de tener un accidente al dormirse al volante y a partir de entonces lo condujo Juan Manuel Serrano en su Mercedes.",
-   "veredicto": "no_verificable",
-   "resumen": "Sin registro público del susto al volante. Está documentado que el Peugeot era suyo, pero hay versiones enfrentadas sobre el Mercedes de Serrano, ninguna probada judicialmente.",
-   "explicacion": "Es una anécdota personal sin registro público: no he encontrado ninguna información contemporánea sobre el susto al volante. Está documentado que el Peugeot 407 era suyo (lo mantuvo hasta 2018). Hay versiones enfrentadas sobre el resto: según El Mundo (citado por Infobae), Koldo García le hizo de chófer en su visita al norte, y el libro de Ketty Garat (abril de 2026, con fuentes anónimas) sostiene que el Mercedes de Serrano se usó desde 2014, no tras un susto, y que el Peugeot fue casi un recurso de imagen. Ninguna de esas versiones está probada judicialmente.",
-   "confianza": "baja",
-   "fuentes": [
-    {
-     "titulo": "Infobae: Crónica de un accidente anunciado: el viaje de Sánchez en su Peugeot en 2016",
-     "url": "https://www.infobae.com/espana/2025/06/12/cronica-de-un-accidente-anunciado-el-viaje-de-sanchez-en-su-peugeot-en-2016-y-que-hoy-escenifica-la-caida-de-santos-cerdan-abalos-y-koldo-garcia/"
-    },
-    {
-     "titulo": "The Objective: Sánchez: «Ábalos y Cerdán sí fueron en el coche, pero no sabía si consumía prostitución»",
-     "url": "https://theobjective.com/espana/politica/2026-11-13/entrevista-wild-sanchez/"
-    },
-    {
-     "titulo": "Periodista Digital: Ketty Garat revela que Sánchez se inventó el bulo del Peugeot (versión del libro, fuentes anónimas)",
-     "url": "https://www.periodistadigital.com/gente/20260422/ketty-garat-revela-sanchez-invento-bulo-peugeot-ocultar-viajaba-mercedes-70-000-euros-noticia-689405203060/"
     }
    ]
   },
@@ -3825,29 +3602,6 @@
    ]
   },
   {
-   "id": "sanchez-m5608",
-   "entrevista": "sanchez",
-   "invitado": "Pedro Sánchez",
-   "tema_n": 9,
-   "tema": "Vivienda, alquileres y acceso de los jóvenes a una casa",
-   "segundo": 5608,
-   "minuto": "1:33:28",
-   "video_url": "https://www.youtube.com/watch?v=mStOFBvToUI&t=5608s",
-   "web_url": "https://verificacion-podcast.vercel.app/sanchez#m5608",
-   "cita": "para un economista como yo pues es raro",
-   "afirmacion": "Pedro Sánchez es economista.",
-   "veredicto": "verdadero",
-   "resumen": "Es licenciado en Ciencias Económicas y Empresariales (1990-1995), con máster en Política Económica Europea por la Libre de Bruselas y doctorado en Economía (Camilo José Cela, 2012).",
-   "explicacion": "Es licenciado en Ciencias Económicas y Empresariales (centro María Cristina, adscrito a la Complutense, 1990-1995), tiene un máster en Política Económica Europea por la Universidad Libre de Bruselas y un doctorado en Economía y Empresa por la Universidad Camilo José Cela (2012). Fue profesor asociado de economía en esa universidad entre 2008 y 2013. Su trayectoria profesional es sobre todo política, pero la formación y el título de economista son ciertos.",
-   "confianza": "alta",
-   "fuentes": [
-    {
-     "titulo": "Wikipedia: Pedro Sánchez",
-     "url": "https://es.wikipedia.org/wiki/Pedro_Sánchez"
-    }
-   ]
-  },
-  {
    "id": "sanchez-m5618",
    "entrevista": "sanchez",
    "invitado": "Pedro Sánchez",
@@ -4629,76 +4383,6 @@
    ]
   },
   {
-   "id": "sanchez-m6686",
-   "entrevista": "sanchez",
-   "invitado": "Pedro Sánchez",
-   "tema_n": 12,
-   "tema": "Alegato final de Pedro Sánchez y mensaje a los votantes",
-   "segundo": 6686,
-   "minuto": "1:51:26",
-   "video_url": "https://www.youtube.com/watch?v=mStOFBvToUI&t=6686s",
-   "web_url": "https://verificacion-podcast.vercel.app/sanchez#m6686",
-   "cita": "Yo diría, oye, hasta el Papa ha votado. No sé qué ha votado el Papa, ni tampoco Pati Smith, pero sé que votar ahora mismo es importante",
-   "afirmacion": "El Papa ha votado (en las elecciones de Estados Unidos), y Patti Smith también se ha pronunciado a favor de votar.",
-   "veredicto": "verdadero",
-   "resumen": "El 30 de octubre de 2026 la Santa Sede confirmó que León XIV votó por correo; Patti Smith instó en Oviedo a votar, aunque no consta si ella votó.",
-   "explicacion": "El 30 de octubre de 2026 la Oficina de Prensa de la Santa Sede confirmó que León XIV (ciudadano estadounidense) votó por correo en las elecciones intermedias del 3 de noviembre, algo inédito en un papa; no se ha revelado su voto. Patti Smith, que se reunió con él el 31 de julio de 2026, instó en Oviedo (octubre de 2026) a los estadounidenses a votar para cambiar el país. No consta si ella votó, pero Sánchez no afirma qué votó.",
-   "confianza": "alta",
-   "fuentes": [
-    {
-     "titulo": "Vatican News: Pope Leo XIV votes in USA midterm elections",
-     "url": "https://www.vaticannews.va/en/pope/news/2026-10/pope-leo-xiv-votes-usa-midterm-elections.html"
-    },
-    {
-     "titulo": "Euronews: Pope Leo XIV has voted in US midterm elections, Vatican says (30/10/2026)",
-     "url": "https://www.euronews.com/2026/10/30/pope-leo-xiv-has-voted-in-us-midterm-elections-vatican-says"
-    },
-    {
-     "titulo": "Crónica: Patti Smith insta a los estadounidenses a unirse con sus votos (20/10/2026)",
-     "url": "https://www.cronica.com.mx/cultura/2026/10/20/patti-smith-insta-a-los-estadounidenses-a-unirse-con-sus-votos-para-impulsar-un-cambio/"
-    },
-    {
-     "titulo": "America Magazine: Patti Smith y el papa León XIV (31/7/2026)",
-     "url": "https://www.americamagazine.org/news/2026/07/31/patti-smith-pope-leo/"
-    }
-   ]
-  },
-  {
-   "id": "feijoo-m191",
-   "entrevista": "feijoo",
-   "invitado": "Alberto Núñez Feijóo",
-   "tema_n": 1,
-   "tema": "Formato de las entrevistas electorales y presentación de Alberto Núñez Feijóo",
-   "segundo": 191,
-   "minuto": "0:03:11",
-   "video_url": "https://www.youtube.com/watch?v=1YlGArMx_N4&t=191s",
-   "web_url": "https://verificacion-podcast.vercel.app/feijoo#m191",
-   "cita": "Estuve, no sé, en la SER, en una entrevista en El País, en la Sesta.",
-   "afirmacion": "En esta campaña electoral Feijóo ha concedido entrevistas en la Cadena SER, El País, La Sexta, Mediaset y Atresmedia.",
-   "veredicto": "mayormente_verdadero",
-   "resumen": "En 2026 Feijóo dio entrevistas en la SER, El País, Telecinco y Antena 3, pero no se ha encontrado una en La Sexta, y algunas son previas a la campaña.",
-   "explicacion": "En 2026 Feijóo ha dado entrevistas en la Cadena SER (23 de octubre, Hoy por Hoy), en El País (publicada el 8 de noviembre), en Telecinco (Mediaset) y en Atresmedia (El Hormiguero, junio, y Espejo Público, julio, ambos en Antena 3). No he encontrado una entrevista concreta en La Sexta, y algunas son anteriores al inicio formal de la campaña (13 de noviembre), por lo que «esta campaña» se usa en sentido amplio.",
-   "confianza": "media",
-   "fuentes": [
-    {
-     "titulo": "Demócrata: Feijóo abre la puerta a gobernar con Vox y deja sin aclarar qué ministerios cedería (entrevista en El País, 8-11-2026)",
-     "url": "https://www.democrata.es/elecciones-generales-espana/feijoo-gobierno-pp-vox-ministros-entrevista/"
-    },
-    {
-     "titulo": "Artículo 14: Feijóo metería Igualdad dentro de otros ministerios (23-10-2026)",
-     "url": "https://www.articulo14.es/politica/feijoo-metera-igualdad-dentro-de-otros-ministerios-el-ministro-que-lo-lleve-se-encargara-de-otras-cosas-20261023.html"
-    },
-    {
-     "titulo": "Que.es: Susanna Griso arrincona a Feijóo en directo (Antena 3, julio 2026)",
-     "url": "https://www.que.es/2026/07/08/susanna-griso-arrincona-feijoo/"
-    },
-    {
-     "titulo": "elDiario.es: Feijóo carga contra Zapatero desde El Hormiguero (Antena 3)",
-     "url": "https://www.eldiario.es/politica/feijoo-carga-zapatero-hormiguero-blanquea-dictadura-blanquear-capitales_1_13313278.amp.html"
-    }
-   ]
-  },
-  {
    "id": "feijoo-m357",
    "entrevista": "feijoo",
    "invitado": "Alberto Núñez Feijóo",
@@ -4745,29 +4429,6 @@
     {
      "titulo": "Moncloa.com: Gamarra fija el documento marco del PP como base para acuerdos con Vox en Andalucía (28-5-2026)",
      "url": "https://www.moncloa.com/2026/05/28/gamarra-documento-marco-acuerdo-vox-andalucia-3380431/"
-    }
-   ]
-  },
-  {
-   "id": "feijoo-m531",
-   "entrevista": "feijoo",
-   "invitado": "Alberto Núñez Feijóo",
-   "tema_n": 2,
-   "tema": "Vox, polarización y un posible gobierno de coalición",
-   "segundo": 531,
-   "minuto": "0:08:51",
-   "video_url": "https://www.youtube.com/watch?v=1YlGArMx_N4&t=531s",
-   "web_url": "https://verificacion-podcast.vercel.app/feijoo#m531",
-   "cita": "Lo llevo observando en los cuatro años que llevo haciendo política nacional",
-   "afirmacion": "Feijóo lleva cuatro años haciendo política nacional.",
-   "veredicto": "mayormente_verdadero",
-   "resumen": "Feijóo preside el PP desde abril de 2022 y es senador desde mayo de 2022, unos cuatro años y siete meses; antes ya tuvo cargos nacionales con Aznar.",
-   "explicacion": "Feijóo es presidente del PP desde el 2 de abril de 2022 y senador desde mayo de 2022, es decir, unos cuatro años y siete meses en la política nacional actual. Antes ya había ocupado cargos nacionales en el Gobierno de Aznar (desde 1996), por lo que la cifra es un redondeo a la baja razonable.",
-   "confianza": "alta",
-   "fuentes": [
-    {
-     "titulo": "Wikipedia: Alberto Núñez Feijóo",
-     "url": "https://es.wikipedia.org/wiki/Alberto_Núñez_Feijóo"
     }
    ]
   },
@@ -4822,29 +4483,6 @@
     {
      "titulo": "The Objective: Feijóo confirma que Armengol decidió con Moncloa la fecha de su investidura",
      "url": "https://theobjective.com/espana/politica/2023-10-04/feijoo-armengol-investidura-moncloa/"
-    }
-   ]
-  },
-  {
-   "id": "feijoo-m612",
-   "entrevista": "feijoo",
-   "invitado": "Alberto Núñez Feijóo",
-   "tema_n": 2,
-   "tema": "Vox, polarización y un posible gobierno de coalición",
-   "segundo": 612,
-   "minuto": "0:10:12",
-   "video_url": "https://www.youtube.com/watch?v=1YlGArMx_N4&t=612s",
-   "web_url": "https://verificacion-podcast.vercel.app/feijoo#m612",
-   "cita": "Yo he votado Felipe González en 1982. Es conocido.",
-   "afirmacion": "Feijóo votó a Felipe González (PSOE) en las elecciones generales de 1982 y es algo conocido.",
-   "veredicto": "no_verificable",
-   "resumen": "El voto es secreto y no se puede comprobar, pero Feijóo declara públicamente desde hace años que votó a González en 1982, cuando tenía 21 años.",
-   "explicacion": "El voto es secreto, así que no puede comprobarse. Sí consta que Feijóo lo declara públicamente desde hace años (por ejemplo, «Voté a González en el 82 y volvería a hacerlo», Público, 23 de septiembre de 2018), de modo que lo de «es conocido» es cierto, pero el hecho en sí solo descansa en su palabra. Tenía 21 años en 1982, por lo que podía votar.",
-   "confianza": "media",
-   "fuentes": [
-    {
-     "titulo": "Público: Feijóo: «Voté a González en el 82 y volvería a hacerlo» (23-9-2018)",
-     "url": "https://www.publico.es/politica/feijoo-vote-gonzalez-82-volveria-hacerlo.amp.html"
     }
    ]
   },
@@ -6437,29 +6075,6 @@
    "fuentes": []
   },
   {
-   "id": "feijoo-m2417-2",
-   "entrevista": "feijoo",
-   "invitado": "Alberto Núñez Feijóo",
-   "tema_n": 5,
-   "tema": "Deuda pública, déficit y gasto en defensa",
-   "segundo": 2417,
-   "minuto": "0:40:17",
-   "video_url": "https://www.youtube.com/watch?v=1YlGArMx_N4&t=2417s",
-   "web_url": "https://verificacion-podcast.vercel.app/feijoo#m2417-2",
-   "cita": "ya a partir de esta noche campaña",
-   "afirmacion": "La campaña electoral de las elecciones generales empieza «esta noche».",
-   "veredicto": "verdadero",
-   "resumen": "La campaña empieza el 13 de noviembre de 2026 y acaba el 27, con elecciones el 29; es coherente con que la entrevista se grabara el 12 de noviembre.",
-   "explicacion": "El decreto de disolución se publicó en el BOE el 6 de octubre de 2026 con elecciones el 29 de noviembre. El calendario oficial fija el inicio de la campaña el 13 de noviembre (a las 00:00 horas, es decir, en la noche del 12 al 13) y su fin el 27 de noviembre, antes de la jornada de reflexión del 28. Es coherente con que la entrevista se grabara el 12 de noviembre.",
-   "confianza": "media",
-   "fuentes": [
-    {
-     "titulo": "Wikipedia: Elecciones generales de España de 2026 (calendario electoral)",
-     "url": "https://en.wikipedia.org/wiki/2026_Spanish_general_election"
-    }
-   ]
-  },
-  {
    "id": "feijoo-m2446",
    "entrevista": "feijoo",
    "invitado": "Alberto Núñez Feijóo",
@@ -6758,29 +6373,6 @@
    ]
   },
   {
-   "id": "feijoo-m2703",
-   "entrevista": "feijoo",
-   "invitado": "Alberto Núñez Feijóo",
-   "tema_n": 6,
-   "tema": "Ceuta, Marruecos y la gestión de la frontera",
-   "segundo": 2703,
-   "minuto": "0:45:03",
-   "video_url": "https://www.youtube.com/watch?v=1YlGArMx_N4&t=2703s",
-   "web_url": "https://verificacion-podcast.vercel.app/feijoo#m2703",
-   "cita": "porque tenía trabajo allí como presidente del Servicio Sanitario, conocido Insalud antes de las transferencias sanitarias, también como presidente de Correos",
-   "afirmacion": "Feijóo fue presidente del Insalud y presidente de Correos, y por ese trabajo conoce Ceuta.",
-   "veredicto": "verdadero",
-   "resumen": "Feijóo presidió el Insalud (1996-2000) y Correos (hasta 2003); el Insalud gestionaba la sanidad de Ceuta, lo que hace plausible el vínculo; que la conozca bien no es comprobable.",
-   "explicacion": "Feijóo presidió el Insalud entre el 10 de mayo de 1996 y el 18 de mayo de 2000 y fue presidente de Correos del 18 de mayo de 2000 al 18 de enero de 2003. El Insalud gestionaba la sanidad de Ceuta y Melilla, que nunca fueron transferidas a una comunidad autónoma, lo que hace plausible su vinculación con la ciudad; que la conozca bien es una anécdota no comprobable.",
-   "confianza": "media",
-   "fuentes": [
-    {
-     "titulo": "Alberto Núñez Feijóo (Wikipedia)",
-     "url": "https://es.wikipedia.org/wiki/Alberto_N%C3%BA%C3%B1ez_Feij%C3%B3o"
-    }
-   ]
-  },
-  {
    "id": "feijoo-m2726",
    "entrevista": "feijoo",
    "invitado": "Alberto Núñez Feijóo",
@@ -6955,29 +6547,6 @@
     {
      "titulo": "Marruecos carga contra la justicia europea y reclama a la UE que preserve su asociación (El Independiente)",
      "url": "https://www.elindependiente.com/internacional/2024/10/04/marruecos-carga-contra-la-justicia-europea-y-reclama-a-la-ue-que-preserve-su-asociacion/amp/"
-    }
-   ]
-  },
-  {
-   "id": "feijoo-m2998",
-   "entrevista": "feijoo",
-   "invitado": "Alberto Núñez Feijóo",
-   "tema_n": 7,
-   "tema": "Inmigración, ayudas sociales, integración y expulsiones",
-   "segundo": 2998,
-   "minuto": "0:49:58",
-   "video_url": "https://www.youtube.com/watch?v=1YlGArMx_N4&t=2998s",
-   "web_url": "https://verificacion-podcast.vercel.app/feijoo#m2998",
-   "cita": "Llevamos ocho años",
-   "afirmacion": "El Gobierno de Pedro Sánchez lleva ocho años en el poder.",
-   "veredicto": "verdadero",
-   "resumen": "Sánchez gobierna desde el 2 de junio de 2018, ocho años y cinco meses en la entrevista; «ocho años» es un redondeo razonable a la baja.",
-   "explicacion": "Sánchez asumió la Presidencia del Gobierno el 2 de junio de 2018 tras la moción de censura del 1 de junio y sigue en el cargo, sin interrupciones. A fecha de la entrevista (13 de noviembre de 2026) han pasado ocho años y cinco meses, así que «ocho años» es un redondeo razonable a la baja.",
-   "confianza": "alta",
-   "fuentes": [
-    {
-     "titulo": "Pedro Sánchez (Wikipedia): presidente del Gobierno desde el 2 de junio de 2018",
-     "url": "https://es.wikipedia.org/wiki/Pedro_S%C3%A1nchez"
     }
    ]
   },
@@ -7318,33 +6887,6 @@
    ]
   },
   {
-   "id": "feijoo-m3469",
-   "entrevista": "feijoo",
-   "invitado": "Alberto Núñez Feijóo",
-   "tema_n": 8,
-   "tema": "Feijóo explica su relación con Marcial Dorado",
-   "segundo": 3469,
-   "minuto": "0:57:49",
-   "video_url": "https://www.youtube.com/watch?v=1YlGArMx_N4&t=3469s",
-   "web_url": "https://verificacion-podcast.vercel.app/feijoo#m3469",
-   "cita": "esa crema era de un herpes zoster",
-   "afirmacion": "La crema que Feijóo lleva en una de las fotos con Marcial Dorado (verano de 1995) era para tratar un herpes zóster y evitar que le diera el sol directamente.",
-   "veredicto": "no_verificable",
-   "resumen": "Ninguna fuente independiente (hemeroteca, verificadores, historial clínico) respalda ese episodio médico de 1995; la prensa solo lo reproduce, así que no hay base para darlo por cierto ni falso.",
-   "explicacion": "Es una explicación personal sobre un episodio médico de 1995 que no consta en ninguna fuente independiente: ni hemeroteca, ni verificadores, ni historial clínico público. La prensa que ha recogido la afirmación tras la entrevista (13 de noviembre de 2026) se limita a reproducirla sin contrastarla. No hay base para darla por cierta ni por falsa.",
-   "confianza": "alta",
-   "fuentes": [
-    {
-     "titulo": "Libertad Digital: El desconocido detalle de la foto de Feijóo con Marcial Dorado que ha desvelado ante Jordi Wild (13/11/2026)",
-     "url": "https://libertaddigital.com/espana/politica/2026-11-13/el-desconocido-detalle-de-la-foto-de-feijoo-con-marcial-dorado-que-ha-desvelado-ante-jordi-wild-7491023"
-    },
-    {
-     "titulo": "Maldita.es: Las fotografías de Feijóo y Marcial Dorado, cuáles son montajes y cuáles sí se han publicado",
-     "url": "https://maldita.es/malditobulo/20241029/fotografias-feijoo-dorado-montajes-falsas/"
-    }
-   ]
-  },
-  {
    "id": "feijoo-m3510",
    "entrevista": "feijoo",
    "invitado": "Alberto Núñez Feijóo",
@@ -7519,29 +7061,6 @@
     {
      "titulo": "ARA: The drug trafficker pictured with Feijóo claims the PSOE offered him money to drop a bomb against the PP leader",
      "url": "https://en.ara.cat/politics/the-drug-trafficker-pictured-with-feijoo-claims-the-psoe-offered-him-money-to-drop-bomb-against-the-pp-leader_1_5450376.html"
-    }
-   ]
-  },
-  {
-   "id": "feijoo-m3603",
-   "entrevista": "feijoo",
-   "invitado": "Alberto Núñez Feijóo",
-   "tema_n": 8,
-   "tema": "Feijóo explica su relación con Marcial Dorado",
-   "segundo": 3603,
-   "minuto": "1:00:03",
-   "video_url": "https://www.youtube.com/watch?v=1YlGArMx_N4&t=3603s",
-   "web_url": "https://verificacion-podcast.vercel.app/feijoo#m3603",
-   "cita": "Si en 30 años que llevo en esto",
-   "afirmacion": "Feijóo lleva unos 30 años en política.",
-   "veredicto": "verdadero",
-   "resumen": "Feijóo ocupa cargos públicos desde julio de 1991, secretario general técnico de Agricultura; son unos 35 años en 2026, así que «30 años» es una cifra prudente.",
-   "explicacion": "Feijóo ocupa cargos públicos y políticos desde julio de 1991, cuando fue nombrado secretario general técnico de la Consellería de Agricultura de la Xunta; son unos 35 años en 2026, por lo que «30 años» es una cifra prudente.",
-   "confianza": "alta",
-   "fuentes": [
-    {
-     "titulo": "Wikipedia: Alberto Núñez Feijóo (trayectoria de cargos)",
-     "url": "https://es.wikipedia.org/wiki/Alberto_N%C3%BA%C3%B1ez_Feij%C3%B3o"
     }
    ]
   },
@@ -8674,29 +8193,6 @@
    ]
   },
   {
-   "id": "feijoo-m4429",
-   "entrevista": "feijoo",
-   "invitado": "Alberto Núñez Feijóo",
-   "tema_n": 10,
-   "tema": "Isabel Díaz Ayuso y su relación dentro del Partido Popular",
-   "segundo": 4429,
-   "minuto": "1:13:49",
-   "video_url": "https://www.youtube.com/watch?v=1YlGArMx_N4&t=4429s",
-   "web_url": "https://verificacion-podcast.vercel.app/feijoo#m4429",
-   "cita": "yo he sido presidente de la Comunidad Autónoma Gallega, como sabes, mucho tiempo",
-   "afirmacion": "Feijóo fue presidente de la Xunta de Galicia durante mucho tiempo.",
-   "veredicto": "verdadero",
-   "resumen": "Presidió la Xunta del 18 de abril de 2009 al 14 de mayo de 2022: algo más de 13 años y cuatro legislaturas.",
-   "explicacion": "Presidió la Xunta del 18 de abril de 2009 al 14 de mayo de 2022, es decir, algo más de 13 años y cuatro legislaturas.",
-   "confianza": "alta",
-   "fuentes": [
-    {
-     "titulo": "Alberto Núñez Feijóo (Wikipedia)",
-     "url": "https://es.wikipedia.org/wiki/Alberto_Núñez_Feijóo"
-    }
-   ]
-  },
-  {
    "id": "feijoo-m4449",
    "entrevista": "feijoo",
    "invitado": "Alberto Núñez Feijóo",
@@ -8929,102 +8425,6 @@
    ]
   },
   {
-   "id": "feijoo-m4631",
-   "entrevista": "feijoo",
-   "invitado": "Alberto Núñez Feijóo",
-   "tema_n": 10,
-   "tema": "Isabel Díaz Ayuso y su relación dentro del Partido Popular",
-   "segundo": 4631,
-   "minuto": "1:17:11",
-   "video_url": "https://www.youtube.com/watch?v=1YlGArMx_N4&t=4631s",
-   "web_url": "https://verificacion-podcast.vercel.app/feijoo#m4631",
-   "cita": "en el momento en el que se hizo, que fue en el año 2000, no estábamos mal",
-   "afirmacion": "La residencia oficial del presidente de la Xunta se construyó en el año 2000.",
-   "veredicto": "no_verificable",
-   "resumen": "La residencia se encargó con Fraga y costó entre 7 y 10 millones, pero ninguna fuente da el año de construcción, así que el 2000 solo podría ser el encargo.",
-   "explicacion": "Las fuentes consultadas confirman que la residencia se encargó con Fraga y que costó entre 7 y 10 millones (Touriño estimó unos 7), pero no dan el año de construcción. Solo consta que el contrato de urbanización del parque de Monte Pío se adjudicó en julio de 2001 y que Touriño la ocupó a partir de 2005, por lo que el año 2000 puede ser, como mucho, el del encargo o inicio del proyecto. Lo de que «costó mucho dinero» lo dice Wild, no Feijóo.",
-   "confianza": "baja",
-   "fuentes": [
-    {
-     "titulo": "elDiario.es (30/05/2022): La «Moncloa gallega»",
-     "url": "https://www.eldiario.es/galicia/moncloa-gallega-residencia-presidencial-10-millones-euros-camino-casa-fantasma_1_9031243.html"
-    },
-    {
-     "titulo": "DOG nº 185 (24/09/2001): adjudicación de la urbanización del predio de Monte Pío",
-     "url": "https://www.xunta.gal/dog/Publicados/2001/20010924/AnuncioF2B2_gl.html"
-    }
-   ]
-  },
-  {
-   "id": "feijoo-m4697",
-   "entrevista": "feijoo",
-   "invitado": "Alberto Núñez Feijóo",
-   "tema_n": 11,
-   "tema": "Inglés, servicio militar, Trump y política internacional",
-   "segundo": 4697,
-   "minuto": "1:18:17",
-   "video_url": "https://www.youtube.com/watch?v=1YlGArMx_N4&t=4697s",
-   "web_url": "https://verificacion-podcast.vercel.app/feijoo#m4697",
-   "cita": "pues mira yo no sé inglés pero sé gobernar",
-   "afirmacion": "Feijóo no sabe inglés.",
-   "veredicto": "verdadero",
-   "resumen": "Admitió en El Hormiguero (junio de 2026) que no habla inglés y que el móvil se lo traduce; «sé gobernar» es una valoración propia.",
-   "explicacion": "En El Hormiguero (junio de 2026) admitió que no habla inglés, que su nivel es «mal» y que no lo practica porque el móvil «ya me lo traduce directamente». La segunda parte de la frase («sé gobernar») es una valoración propia.",
-   "confianza": "alta",
-   "fuentes": [
-    {
-     "titulo": "Ara (18/06/2026): Feijóo renuncia al inglés y confía en el móvil",
-     "url": "https://es.ara.cat/politica/feijoo-renuncia-ingles-confia-movil-traduce-directamente_1_5773294.html"
-    }
-   ]
-  },
-  {
-   "id": "feijoo-m4743",
-   "entrevista": "feijoo",
-   "invitado": "Alberto Núñez Feijóo",
-   "tema_n": 11,
-   "tema": "Inglés, servicio militar, Trump y política internacional",
-   "segundo": 4743,
-   "minuto": "1:19:03",
-   "video_url": "https://www.youtube.com/watch?v=1YlGArMx_N4&t=4743s",
-   "web_url": "https://verificacion-podcast.vercel.app/feijoo#m4743",
-   "cita": "yo he sido de la primera generación de la EGB y del BUP",
-   "afirmacion": "Feijóo pertenece a la primera generación que cursó la EGB y el BUP.",
-   "veredicto": "no_verificable",
-   "resumen": "No se puede comprobar: la Ley General de Educación de 1970 creó la EGB, pero no se confirmó el año de implantación del BUP ni qué cohortes son «primera generación».",
-   "explicacion": "La Ley General de Educación de 1970 creó la EGB (ocho cursos), pero en las fuentes consultadas no he podido confirmar el año de implantación del BUP ni qué cohortes cuentan como «primera generación»; sin la fecha de nacimiento y el calendario de implantación contrastados no se puede comprobar la afirmación, que es además una autodescripción imprecisa.",
-   "confianza": "baja",
-   "fuentes": [
-    {
-     "titulo": "Educación General Básica (Wikipedia)",
-     "url": "https://es.wikipedia.org/wiki/Educación_General_Básica"
-    }
-   ]
-  },
-  {
-   "id": "feijoo-m4761",
-   "entrevista": "feijoo",
-   "invitado": "Alberto Núñez Feijóo",
-   "tema_n": 11,
-   "tema": "Inglés, servicio militar, Trump y política internacional",
-   "segundo": 4761,
-   "minuto": "1:19:21",
-   "video_url": "https://www.youtube.com/watch?v=1YlGArMx_N4&t=4761s",
-   "web_url": "https://verificacion-podcast.vercel.app/feijoo#m4761",
-   "cita": "decía Felipe González hace poco, no porque la frase sea suya, pero decía que uno puede ser tonto en varios idiomas",
-   "afirmacion": "Felipe González dijo hace poco que uno puede ser tonto en varios idiomas.",
-   "veredicto": "no_verificable",
-   "resumen": "No hay ninguna fuente que atribuya la frase a González, y el propio Feijóo admite que quizá no sea suya; en 2026 González habló de Trump, no de idiomas.",
-   "explicacion": "No he encontrado ninguna fuente que atribuya esa frase a González. El propio Feijóo se cubre diciendo que la frase quizá no sea suya y que no está seguro de que sea del expresidente. En 2026 González sí ha hecho declaraciones sobre Trump («no hay nada peor que un tonto con poder»), pero no sobre idiomas.",
-   "confianza": "baja",
-   "fuentes": [
-    {
-     "titulo": "Ara (18/06/2026): Feijóo renuncia al inglés (contexto de la polémica)",
-     "url": "https://es.ara.cat/politica/feijoo-renuncia-ingles-confia-movil-traduce-directamente_1_5773294.html"
-    }
-   ]
-  },
-  {
    "id": "feijoo-m4801",
    "entrevista": "feijoo",
    "invitado": "Alberto Núñez Feijóo",
@@ -9237,52 +8637,6 @@
    ]
   },
   {
-   "id": "feijoo-m5210",
-   "entrevista": "feijoo",
-   "invitado": "Alberto Núñez Feijóo",
-   "tema_n": 12,
-   "tema": "Feijóo define a Colau, Abascal y Pedro Sánchez y cierra la entrevist",
-   "segundo": 5210,
-   "minuto": "1:26:50",
-   "video_url": "https://www.youtube.com/watch?v=1YlGArMx_N4&t=5210s",
-   "web_url": "https://verificacion-podcast.vercel.app/feijoo#m5210",
-   "cita": "hasta las 12 de la noche no empieza la campaña electoral",
-   "afirmacion": "La campaña electoral de las elecciones generales del 29 de noviembre de 2026 empieza a las 12 de la noche (la entrevista se grabó el día previo).",
-   "veredicto": "verdadero",
-   "resumen": "El Real Decreto 806/2026 fija el inicio de campaña a las 00:00 del viernes 13 de noviembre, con 15 días de duración hasta el 27, como dijo Feijóo.",
-   "explicacion": "El Real Decreto 806/2026 (BOE, 6 de octubre de 2026) fija el inicio de la campaña a las 00:00 del viernes 13 de noviembre, con una duración de 15 días, hasta el 27 de noviembre. Coincide con lo dicho por Feijóo en la grabación del día anterior.",
-   "confianza": "alta",
-   "fuentes": [
-    {
-     "titulo": "Euronews (06/10/2026): Calendario de las elecciones generales del 29N",
-     "url": "https://es.euronews.com/2026/10/06/calendario-elecciones-generales-29n-fechas-clave-voto-correo-campana"
-    }
-   ]
-  },
-  {
-   "id": "feijoo-m5244",
-   "entrevista": "feijoo",
-   "invitado": "Alberto Núñez Feijóo",
-   "tema_n": 12,
-   "tema": "Feijóo define a Colau, Abascal y Pedro Sánchez y cierra la entrevist",
-   "segundo": 5244,
-   "minuto": "1:27:24",
-   "video_url": "https://www.youtube.com/watch?v=1YlGArMx_N4&t=5244s",
-   "web_url": "https://verificacion-podcast.vercel.app/feijoo#m5244",
-   "cita": "Soy un político que ha gestionado durante los últimos 30 años de su vida, es decir, toda su vida",
-   "afirmacion": "Feijóo lleva gestionando cargos públicos durante los últimos 30 años.",
-   "veredicto": "mayormente_verdadero",
-   "resumen": "Ocupa cargos de gestión desde julio de 1991, unos 35 años, así que «30» es una cifra redondeada a la baja y «toda su vida» es hipérbole.",
-   "explicacion": "Desde julio de 1991 ocupa cargos de gestión (secretario general en la Xunta, presidente del Insalud desde 1996, presidente de Correos 2000-2003, conselleiro y vicepresidente de la Xunta, presidente de la Xunta 2009-2022), es decir, unos 35 años; «30» es una cifra redondeada a la baja, y «toda su vida» es hipérbole.",
-   "confianza": "media",
-   "fuentes": [
-    {
-     "titulo": "Alberto Núñez Feijóo (Wikipedia): trayectoria",
-     "url": "https://es.wikipedia.org/wiki/Alberto_Núñez_Feijóo"
-    }
-   ]
-  },
-  {
    "id": "feijoo-m5259",
    "entrevista": "feijoo",
    "invitado": "Alberto Núñez Feijóo",
@@ -9306,87 +8660,6 @@
     {
      "titulo": "Alberto Núñez Feijóo (Wikipedia)",
      "url": "https://es.wikipedia.org/wiki/Alberto_Núñez_Feijóo"
-    }
-   ]
-  },
-  {
-   "id": "colau-m219",
-   "entrevista": "colau",
-   "invitado": "Ada Colau",
-   "tema_n": 2,
-   "tema": "Ada Colau llega a The Wild Project",
-   "segundo": 219,
-   "minuto": "0:03:39",
-   "video_url": "https://www.youtube.com/watch?v=-ESmAhdixfo&t=219s",
-   "web_url": "https://verificacion-podcast.vercel.app/colau#m219",
-   "cita": "lo primero que me dijo mi hijo de 15 años fue, tienes que ir con Jordi Wilde",
-   "afirmacion": "Ada Colau tiene un hijo de 15 años.",
-   "veredicto": "mayormente_verdadero",
-   "resumen": "Colau tiene dos hijos, Luca (2011) y Gael (abril de 2017); en noviembre de 2026 Luca tiene 14 o 15 años, así que lo dicho es coherente.",
-   "explicacion": "Según el perfil biográfico de Vozpópuli, Colau tiene dos hijos: Luca, nacido en 2011, y Gael, nacido en abril de 2017. En noviembre de 2026 Luca tiene 14 o 15 años según el mes de su cumpleaños, que no consta públicamente, así que lo dicho es coherente con los datos disponibles.",
-   "confianza": "media",
-   "fuentes": [
-    {
-     "titulo": "Vozpópuli - Así es Ada Colau a los 52: sus dos hijos, la ruptura con su exmarido...",
-     "url": "https://www.vozpopuli.com/dolcevita/asi-es-ada-colau-52-la-separacion-de-sus-padres-los-problemas-economicos-de-su-familia-sus-dos-hijos-la-ruptura-con-su-exmarido-su-carrera-como-actriz-y-su-bisexualidad.html"
-    }
-   ]
-  },
-  {
-   "id": "colau-m300",
-   "entrevista": "colau",
-   "invitado": "Ada Colau",
-   "tema_n": 3,
-   "tema": "Twitter, redes sociales y polarización política",
-   "segundo": 300,
-   "minuto": "0:05:00",
-   "video_url": "https://www.youtube.com/watch?v=-ESmAhdixfo&t=300s",
-   "web_url": "https://verificacion-podcast.vercel.app/colau#m300",
-   "cita": "Cuando yo dejé Twitter fue porque era alcaldesa y tenía muchísimo trabajo que hacer.",
-   "afirmacion": "Colau abandonó Twitter cuando era alcaldesa de Barcelona.",
-   "veredicto": "verdadero",
-   "resumen": "Colau anunció el 11 de abril de 2021, siendo alcaldesa, que dejaba Twitter indefinidamente; entonces citó sobre todo perfiles anónimos que incitaban al odio, no la falta de tiempo.",
-   "explicacion": "Colau anunció el 11 de abril de 2021, siendo alcaldesa de Barcelona, que dejaba Twitter de forma indefinida. Su mandato como alcaldesa duró hasta junio de 2023. El motivo que da ahora (falta de tiempo) es una explicación suya; en 2021 su carta hablaba sobre todo de perfiles anónimos que, según ella, incitaban al odio y de que la red alejaba de la buena política.",
-   "confianza": "alta",
-   "fuentes": [
-    {
-     "titulo": "The Objective - Ada Colau deja Twitter de forma indefinida para hacer buena política (12/04/2021)",
-     "url": "https://theobjective.com/espana/2021-04-12/ada-colau-deja-twitter-de-forma-indefinida-para-hacer-buena-politica/"
-    },
-    {
-     "titulo": "NacióDigital - Colau torna a X en campanya pel 29-N cinc anys després d'abandonar la xarxa",
-     "url": "https://naciodigital.cat/politica/colau-torna-a-x-en-campanya-pel-29-n-cinc-anys-despres-dabandonar-la-xarxa.html"
-    }
-   ]
-  },
-  {
-   "id": "colau-m339",
-   "entrevista": "colau",
-   "invitado": "Ada Colau",
-   "tema_n": 3,
-   "tema": "Twitter, redes sociales y polarización política",
-   "segundo": 339,
-   "minuto": "0:05:39",
-   "video_url": "https://www.youtube.com/watch?v=-ESmAhdixfo&t=339s",
-   "web_url": "https://verificacion-podcast.vercel.app/colau#m339",
-   "cita": "he estado casi cuatro años fuera de la primera línea",
-   "afirmacion": "Colau lleva casi cuatro años fuera de la primera línea política.",
-   "veredicto": "mayormente_verdadero",
-   "resumen": "Colau dejó la alcaldía el 17 de junio de 2023, hace unos 3 años y 5 meses, no cuatro; el redondeo es generoso pero razonable en lenguaje oral.",
-   "explicacion": "Colau dejó de ser alcaldesa de Barcelona el 17 de junio de 2023, cuando Jaume Collboni fue investido, así que a 13 de noviembre de 2026 han pasado unos 3 años y 5 meses, no cuatro. Además siguió como concejala de la oposición hasta que dejó el acta en octubre de 2024, aunque eso difícilmente se considera primera línea. El redondeo es generoso pero razonable en lenguaje oral; ella misma habló en otro momento de «3-4 años».",
-   "confianza": "media",
-   "fuentes": [
-    {
-     "titulo": "Artículo 14 - Quién encabeza Frente Amplio en el 29N: trayectoria política y personal de Ada Colau (05/11/2026)",
-     "url": "https://www.articulo14.es/politica/quien-encabeza-frente-amplio-en-el-29n-trayectoria-politica-y-personal-de-ada-colau-20261105.html"
-    },
-    {
-     "titulo": "The Objective - Collboni, nuevo alcalde de Barcelona gracias a los votos del PP y de los de Colau (17/06/2023)",
-     "url": "https://theobjective.com/espana/2023-06-17/collboni-nuevo-alcalde-de-barcelona-gracias-a-los-votos-de-pp-y-el-voto-de-los-de-colau/"
-    },
-    {
-     "titulo": "Libertad Digital - El último pleno de Ada Colau (25/10/2024)",
-     "url": "https://www.libertaddigital.com/espana/politica/2024-10-25/el-ultimo-pleno-de-ada-colau-7178250/"
     }
    ]
   },
@@ -9472,37 +8745,6 @@
    ]
   },
   {
-   "id": "colau-m384",
-   "entrevista": "colau",
-   "invitado": "Ada Colau",
-   "tema_n": 3,
-   "tema": "Twitter, redes sociales y polarización política",
-   "segundo": 384,
-   "minuto": "0:06:24",
-   "video_url": "https://www.youtube.com/watch?v=-ESmAhdixfo&t=384s",
-   "web_url": "https://verificacion-podcast.vercel.app/colau#m384",
-   "cita": "he decidido no volver a Twitter. Uso Instagram y uso otras redes, pero Twitter no.",
-   "afirmacion": "Colau, personalmente, no ha vuelto a Twitter/X y usa Instagram y otras redes.",
-   "veredicto": "enganoso",
-   "resumen": "El 20 de octubre de 2026 la cuenta @AdaColau publicó en X «Acepto la propuesta, será un placer»; no es cierto que no haya vuelto a publicar allí.",
-   "explicacion": "El 20 de octubre de 2026 la cuenta @AdaColau publicó en X «Acepto la propuesta, será un placer», en respuesta a la invitación de Jordi Wild; la prensa lo tituló «Colau vuelve a X cinco años después». Según Vozpópuli la cuenta conserva los mismos 779.000 seguidores que tenía al dejarla en 2021, lo que apunta a su cuenta personal de siempre; ninguna fuente aclara si la gestiona ella o su equipo. Por tanto no es cierto que no haya vuelto a publicar allí, aunque puede referirse a que no la usará de forma habitual.",
-   "confianza": "media",
-   "fuentes": [
-    {
-     "titulo": "Ara - Colau vuelve a X cinco años después para aceptar la entrevista con Jordi Wild",
-     "url": "https://es.ara.cat/politica/elecciones-generales/colau-vuelve-x-cinco-anos-despues-aceptar-entrevista-jordi-wild_1_5884799.html"
-    },
-    {
-     "titulo": "NacióDigital - Colau torna a X en campanya pel 29-N cinc anys després d'abandonar la xarxa (20/10/2026)",
-     "url": "https://naciodigital.cat/politica/colau-torna-a-x-en-campanya-pel-29-n-cinc-anys-despres-dabandonar-la-xarxa.html"
-    },
-    {
-     "titulo": "Vozpópuli - La irrelevancia fuerza a Colau a regresar a la red social de Elon Musk",
-     "url": "https://www.vozpopuli.com/espana/politica/la-irrelevancia-fuerza-a-colau-a-superar-su-fiebre-woke-y-regresar-a-la-red-social-de-elon-musk.html"
-    }
-   ]
-  },
-  {
    "id": "colau-m437",
    "entrevista": "colau",
    "invitado": "Ada Colau",
@@ -9530,114 +8772,6 @@
     {
      "titulo": "Ara - El presunto saludo nazi de Elon Musk y otros momentos clave de la investidura de Trump",
      "url": "https://es.ara.cat/internacional/estados-unidos/presunto-saludo-nazi-elon-musk-momentos-clave-investidura-trump_1_5261264.html"
-    }
-   ]
-  },
-  {
-   "id": "colau-m539",
-   "entrevista": "colau",
-   "invitado": "Ada Colau",
-   "tema_n": 4,
-   "tema": "Por qué Ada Colau vuelve a la política y se presenta a las elecciones",
-   "segundo": 539,
-   "minuto": "0:08:59",
-   "video_url": "https://www.youtube.com/watch?v=-ESmAhdixfo&t=539s",
-   "web_url": "https://verificacion-podcast.vercel.app/colau#m539",
-   "cita": "en mayo hará 4 años que dejé de ser alcaldesa",
-   "afirmacion": "En mayo de 2027 se cumplirán 4 años desde que Colau dejó de ser alcaldesa de Barcelona.",
-   "veredicto": "mayormente_verdadero",
-   "resumen": "Colau dejó la alcaldía el 17 de junio de 2023, no en mayo; los cuatro años se cumplen en junio de 2027 y el redondeo es razonable.",
-   "explicacion": "Las elecciones municipales fueron el 28 de mayo de 2023, pero Colau dejó la alcaldía el 17 de junio de 2023, al ser investido Jaume Collboni, por lo que los cuatro años exactos se cumplirán en junio de 2027, no en mayo. La diferencia es de semanas y es un redondeo razonable.",
-   "confianza": "alta",
-   "fuentes": [
-    {
-     "titulo": "Wikipedia - Ada Colau (alcaldesa de Barcelona del 13/06/2015 al 17/06/2023)",
-     "url": "https://en.wikipedia.org/wiki/Ada_Colau"
-    },
-    {
-     "titulo": "The Objective - Collboni, nuevo alcalde de Barcelona gracias a los votos del PP y de los de Colau (17/06/2023)",
-     "url": "https://theobjective.com/espana/2023-06-17/collboni-nuevo-alcalde-de-barcelona-gracias-a-los-votos-de-pp-y-el-voto-de-los-de-colau/"
-    }
-   ]
-  },
-  {
-   "id": "colau-m545",
-   "entrevista": "colau",
-   "invitado": "Ada Colau",
-   "tema_n": 4,
-   "tema": "Por qué Ada Colau vuelve a la política y se presenta a las elecciones",
-   "segundo": 545,
-   "minuto": "0:09:05",
-   "video_url": "https://www.youtube.com/watch?v=-ESmAhdixfo&t=545s",
-   "web_url": "https://verificacion-podcast.vercel.app/colau#m545",
-   "cita": "Me propusieron ser ministra en el gobierno de Sánchez y dije que no.",
-   "afirmacion": "Le propusieron ser ministra en el Gobierno de Pedro Sánchez y Colau rechazó.",
-   "veredicto": "mayormente_verdadero",
-   "resumen": "En Rac1 (octubre de 2023) Colau dijo que su espacio político le pidió ser ministra y rechazó; la propuesta vino de Sumar/Comuns, no consta que del PSOE.",
-   "explicacion": "El 26 de octubre de 2023, en una entrevista en Rac1, Colau dijo: «Mi espacio político me ha pedido insistentemente que me plantease ser ministra, pero ya he dicho que no». En agosto de 2023 la prensa ya informaba de que Yolanda Díaz (Sumar) quería que dirigiese un Ministerio de Vivienda. La propuesta vino de su espacio político (Sumar/Comuns) para el Gobierno de coalición, no consta que partiera directamente del PSOE o de Sánchez.",
-   "confianza": "media",
-   "fuentes": [
-    {
-     "titulo": "El Debate - Colau anuncia que ha decidido no ser ministra pese a la insistencia de Sumar (26/10/2023)",
-     "url": "https://www.eldebate.com/espana/cataluna/20231026/colau-anuncia-decidido-no-ministra-pese-insistencia-sumar_149187.html"
-    },
-    {
-     "titulo": "El Debate - Díaz quiere que Colau dirija el Ministerio de Vivienda que Sánchez planea crear (10/08/2023)",
-     "url": "https://www.eldebate.com/espana/20230810/diaz-quiere-colau-dirija-ministerio-vivienda-sanchez-planea-crear_133240.html"
-    }
-   ]
-  },
-  {
-   "id": "colau-m545-2",
-   "entrevista": "colau",
-   "invitado": "Ada Colau",
-   "tema_n": 4,
-   "tema": "Por qué Ada Colau vuelve a la política y se presenta a las elecciones",
-   "segundo": 545,
-   "minuto": "0:09:05",
-   "video_url": "https://www.youtube.com/watch?v=-ESmAhdixfo&t=545s",
-   "web_url": "https://verificacion-podcast.vercel.app/colau#m545-2",
-   "cita": "Me propusieron presentarme a las europeas y dije que no",
-   "afirmacion": "Le propusieron presentarse a las elecciones europeas y Colau dijo que no.",
-   "veredicto": "verdadero",
-   "resumen": "En enero de 2024 Colau declinó encabezar la lista de Sumar a las europeas, que según The Objective le ofreció Sumar con Yolanda Díaz al frente.",
-   "explicacion": "En enero de 2024 Colau descartó, en una entrevista en Catalunya Ràdio, encabezar la lista de Sumar a las elecciones europeas de junio de 2024, diciendo que quería quedarse en Barcelona. The Objective (15/01/2024) informaba de que fue Sumar, con Yolanda Díaz al frente, quien le ofreció la candidatura y de que ella la declinó.",
-   "confianza": "media",
-   "fuentes": [
-    {
-     "titulo": "The Objective - Colau rechaza ser candidata de Sumar a las europeas (15/01/2024)",
-     "url": "https://theobjective.com/espana/politica/2024-01-15/colau-candidata-europea-sumar-sustituto/"
-    },
-    {
-     "titulo": "Catalan News - Ada Colau rules herself out as Sumar candidate for European elections (13/01/2024)",
-     "url": "https://www.catalannews.com/politics/item/ada-colau-rules-herself-out-as-european-elections-candidate"
-    }
-   ]
-  },
-  {
-   "id": "colau-m666",
-   "entrevista": "colau",
-   "invitado": "Ada Colau",
-   "tema_n": 4,
-   "tema": "Por qué Ada Colau vuelve a la política y se presenta a las elecciones",
-   "segundo": 666,
-   "minuto": "0:11:06",
-   "video_url": "https://www.youtube.com/watch?v=-ESmAhdixfo&t=666s",
-   "web_url": "https://verificacion-podcast.vercel.app/colau#m666",
-   "cita": "esos 8 años de alcaldía",
-   "afirmacion": "Colau fue alcaldesa de Barcelona durante 8 años.",
-   "veredicto": "verdadero",
-   "resumen": "Colau fue alcaldesa de Barcelona del 13 de junio de 2015 al 17 de junio de 2023: ocho años y cuatro días, en dos mandatos.",
-   "explicacion": "Colau fue alcaldesa de Barcelona del 13 de junio de 2015 al 17 de junio de 2023, es decir, ocho años y cuatro días (dos mandatos).",
-   "confianza": "alta",
-   "fuentes": [
-    {
-     "titulo": "Wikipedia - Ada Colau",
-     "url": "https://en.wikipedia.org/wiki/Ada_Colau"
-    },
-    {
-     "titulo": "Catalan News - Socialist Jaume Collboni appointed Barcelona mayor after last-minute plot twist",
-     "url": "https://www.catalannews.com/2023-local-elections/item/socialist-jaume-collboni-appointed-barcelona-mayor-after-last-minute-plot-twist"
     }
    ]
   },
@@ -11641,29 +10775,6 @@
    ]
   },
   {
-   "id": "colau-m3278",
-   "entrevista": "colau",
-   "invitado": "Ada Colau",
-   "tema_n": 8,
-   "tema": "Ceuta, Marruecos y la política migratoria de España",
-   "segundo": 3278,
-   "minuto": "0:54:38",
-   "video_url": "https://www.youtube.com/watch?v=-ESmAhdixfo&t=3278s",
-   "web_url": "https://verificacion-podcast.vercel.app/colau#m3278",
-   "cita": "Me ha tocado la pandemia, me ha tocado el atentado en la Rambla.",
-   "afirmacion": "Como alcaldesa de Barcelona le tocó gestionar la pandemia de COVID-19 y el atentado de la Rambla.",
-   "veredicto": "verdadero",
-   "resumen": "Colau fue alcaldesa de Barcelona del 13 de junio de 2015 al 17 de junio de 2023, periodo que incluye el atentado de la Rambla y la pandemia de COVID-19.",
-   "explicacion": "Colau fue alcaldesa de Barcelona entre el 13 de junio de 2015 y el 17 de junio de 2023, un periodo que incluye el atentado yihadista de la Rambla (17 de agosto de 2017) y la pandemia de COVID-19 (2020-2022).",
-   "confianza": "alta",
-   "fuentes": [
-    {
-     "titulo": "Wikipedia: Ada Colau",
-     "url": "https://es.wikipedia.org/wiki/Ada_Colau"
-    }
-   ]
-  },
-  {
    "id": "colau-m3346",
    "entrevista": "colau",
    "invitado": "Ada Colau",
@@ -11747,24 +10858,6 @@
      "url": "https://es.wikipedia.org/wiki/Frente_Amplio_(Espa%C3%B1a)"
     }
    ]
-  },
-  {
-   "id": "colau-m3532",
-   "entrevista": "colau",
-   "invitado": "Ada Colau",
-   "tema_n": 8,
-   "tema": "Ceuta, Marruecos y la política migratoria de España",
-   "segundo": 3532,
-   "minuto": "0:58:52",
-   "video_url": "https://www.youtube.com/watch?v=-ESmAhdixfo&t=3532s",
-   "web_url": "https://verificacion-podcast.vercel.app/colau#m3532",
-   "cita": "No, no, mi hijo pequeño... Juega ahí.",
-   "afirmacion": "El hijo pequeño de Ada Colau juega en el club Martinenc.",
-   "veredicto": "no_verificable",
-   "resumen": "Es una anécdota familiar privada y no consta públicamente que el hijo pequeño de Colau juegue en el Martinenc. No se afirma ni se niega.",
-   "explicacion": "Es una anécdota familiar privada y no he encontrado ninguna constancia pública de que el hijo pequeño de Colau juegue en el Martinenc; los resultados solo hablan del club y de sus equipos de fútbol base, sin mención a ella. No se afirma ni se niega.",
-   "confianza": "media",
-   "fuentes": []
   },
   {
    "id": "colau-m3561",
@@ -11883,29 +10976,6 @@
    ]
   },
   {
-   "id": "colau-m3944",
-   "entrevista": "colau",
-   "invitado": "Ada Colau",
-   "tema_n": 9,
-   "tema": "Inmigración, integración y choque cultural",
-   "segundo": 3944,
-   "minuto": "1:05:44",
-   "video_url": "https://www.youtube.com/watch?v=-ESmAhdixfo&t=3944s",
-   "web_url": "https://verificacion-podcast.vercel.app/colau#m3944",
-   "cita": "he gestionado una ciudad durante ocho años",
-   "afirmacion": "Ada Colau gestionó la ciudad de Barcelona durante ocho años, como alcaldesa.",
-   "veredicto": "verdadero",
-   "resumen": "Colau fue alcaldesa de Barcelona del 13 de junio de 2015 al 17 de junio de 2023, dos mandatos, es decir, ocho años.",
-   "explicacion": "Colau fue alcaldesa de Barcelona del 13 de junio de 2015 al 17 de junio de 2023 (dos mandatos), es decir, ocho años.",
-   "confianza": "alta",
-   "fuentes": [
-    {
-     "titulo": "Ada Colau (Wikipedia)",
-     "url": "https://es.wikipedia.org/wiki/Ada_Colau"
-    }
-   ]
-  },
-  {
    "id": "colau-m3952",
    "entrevista": "colau",
    "invitado": "Ada Colau",
@@ -11983,29 +11053,6 @@
     {
      "titulo": "Charnego (Wikipedia)",
      "url": "https://es.wikipedia.org/wiki/Charnego"
-    }
-   ]
-  },
-  {
-   "id": "colau-m4135",
-   "entrevista": "colau",
-   "invitado": "Ada Colau",
-   "tema_n": 9,
-   "tema": "Inmigración, integración y choque cultural",
-   "segundo": 4135,
-   "minuto": "1:08:55",
-   "video_url": "https://www.youtube.com/watch?v=-ESmAhdixfo&t=4135s",
-   "web_url": "https://verificacion-podcast.vercel.app/colau#m4135",
-   "cita": "mi familia es andaluza yo también vengo de Huesca y de Soria",
-   "afirmacion": "La familia de Ada Colau es andaluza y ella también tiene origen familiar en Huesca y en Soria.",
-   "veredicto": "no_verificable",
-   "resumen": "No consta públicamente el origen geográfico de la familia de Colau: las fuentes solo recogen que nació en Barcelona en 1974 y se crió en El Guinardó.",
-   "explicacion": "No se ha encontrado constancia pública del origen geográfico de la familia de Colau: las fuentes biográficas consultadas solo recogen que nació en Barcelona en 1974, se crió en El Guinardó y los nombres de sus padres, sin indicar su procedencia. Es un dato biográfico privado que solo ella puede acreditar.",
-   "confianza": "baja",
-   "fuentes": [
-    {
-     "titulo": "Ada Colau (Wikipedia)",
-     "url": "https://es.wikipedia.org/wiki/Ada_Colau"
     }
    ]
   },

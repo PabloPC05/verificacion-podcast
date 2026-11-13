@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-13T20:24:29+01:00",
+ "generado": "2026-11-13T20:31:06+01:00",
  "aviso": "Verificación asistida por IA, sin revisión de un equipo de periodistas. «falso» no implica intención de mentir. Contrasta siempre con las fuentes enlazadas.",
  "veredictos": {
   "verdadero": "Los datos lo confirman.",
@@ -23,14 +23,15 @@
   "afirmaciones_url": "https://verificacion-podcast.vercel.app/api/v1/colau.json",
   "transcripcion_url": "https://verificacion-podcast.vercel.app/api/v1/colau/transcripcion.json",
   "transcripcion_txt_url": "https://verificacion-podcast.vercel.app/api/v1/colau/transcripcion.txt",
-  "total_afirmaciones": 165,
+  "total_afirmaciones": 153,
   "por_veredicto": {
    "falso": 5,
-   "enganoso": 25,
-   "mayormente_verdadero": 77,
-   "verdadero": 41,
-   "no_verificable": 17
+   "enganoso": 24,
+   "mayormente_verdadero": 73,
+   "verdadero": 36,
+   "no_verificable": 15
   },
+  "excluidas": 12,
   "temas": [
    {
     "n": 1,
@@ -49,11 +50,11 @@
     "n": 2,
     "titulo": "Ada Colau llega a The Wild Project",
     "inicio_s": 83,
-    "total": 1,
+    "total": 0,
     "por_veredicto": {
      "falso": 0,
      "enganoso": 0,
-     "mayormente_verdadero": 1,
+     "mayormente_verdadero": 0,
      "verdadero": 0,
      "no_verificable": 0
     }
@@ -62,12 +63,12 @@
     "n": 3,
     "titulo": "Twitter, redes sociales y polarización política",
     "inicio_s": 273,
-    "total": 7,
+    "total": 4,
     "por_veredicto": {
      "falso": 0,
-     "enganoso": 1,
-     "mayormente_verdadero": 3,
-     "verdadero": 1,
+     "enganoso": 0,
+     "mayormente_verdadero": 2,
+     "verdadero": 0,
      "no_verificable": 2
     }
    },
@@ -75,12 +76,12 @@
     "n": 4,
     "titulo": "Por qué Ada Colau vuelve a la política y se presenta a las elecciones",
     "inicio_s": 509,
-    "total": 12,
+    "total": 8,
     "por_veredicto": {
      "falso": 0,
      "enganoso": 1,
-     "mayormente_verdadero": 5,
-     "verdadero": 5,
+     "mayormente_verdadero": 3,
+     "verdadero": 3,
      "no_verificable": 1
     }
    },
@@ -127,26 +128,26 @@
     "n": 8,
     "titulo": "Ceuta, Marruecos y la política migratoria de España",
     "inicio_s": 2864,
-    "total": 22,
+    "total": 20,
     "por_veredicto": {
      "falso": 0,
      "enganoso": 2,
      "mayormente_verdadero": 10,
-     "verdadero": 9,
-     "no_verificable": 1
+     "verdadero": 8,
+     "no_verificable": 0
     }
    },
    {
     "n": 9,
     "titulo": "Inmigración, integración y choque cultural",
     "inicio_s": 3769,
-    "total": 10,
+    "total": 8,
     "por_veredicto": {
      "falso": 0,
      "enganoso": 1,
      "mayormente_verdadero": 1,
-     "verdadero": 7,
-     "no_verificable": 1
+     "verdadero": 6,
+     "no_verificable": 0
     }
    },
    {
@@ -217,87 +218,6 @@
   ]
  },
  "afirmaciones": [
-  {
-   "id": "colau-m219",
-   "entrevista": "colau",
-   "invitado": "Ada Colau",
-   "tema_n": 2,
-   "tema": "Ada Colau llega a The Wild Project",
-   "segundo": 219,
-   "minuto": "0:03:39",
-   "video_url": "https://www.youtube.com/watch?v=-ESmAhdixfo&t=219s",
-   "web_url": "https://verificacion-podcast.vercel.app/colau#m219",
-   "cita": "lo primero que me dijo mi hijo de 15 años fue, tienes que ir con Jordi Wilde",
-   "afirmacion": "Ada Colau tiene un hijo de 15 años.",
-   "veredicto": "mayormente_verdadero",
-   "resumen": "Colau tiene dos hijos, Luca (2011) y Gael (abril de 2017); en noviembre de 2026 Luca tiene 14 o 15 años, así que lo dicho es coherente.",
-   "explicacion": "Según el perfil biográfico de Vozpópuli, Colau tiene dos hijos: Luca, nacido en 2011, y Gael, nacido en abril de 2017. En noviembre de 2026 Luca tiene 14 o 15 años según el mes de su cumpleaños, que no consta públicamente, así que lo dicho es coherente con los datos disponibles.",
-   "confianza": "media",
-   "fuentes": [
-    {
-     "titulo": "Vozpópuli - Así es Ada Colau a los 52: sus dos hijos, la ruptura con su exmarido...",
-     "url": "https://www.vozpopuli.com/dolcevita/asi-es-ada-colau-52-la-separacion-de-sus-padres-los-problemas-economicos-de-su-familia-sus-dos-hijos-la-ruptura-con-su-exmarido-su-carrera-como-actriz-y-su-bisexualidad.html"
-    }
-   ]
-  },
-  {
-   "id": "colau-m300",
-   "entrevista": "colau",
-   "invitado": "Ada Colau",
-   "tema_n": 3,
-   "tema": "Twitter, redes sociales y polarización política",
-   "segundo": 300,
-   "minuto": "0:05:00",
-   "video_url": "https://www.youtube.com/watch?v=-ESmAhdixfo&t=300s",
-   "web_url": "https://verificacion-podcast.vercel.app/colau#m300",
-   "cita": "Cuando yo dejé Twitter fue porque era alcaldesa y tenía muchísimo trabajo que hacer.",
-   "afirmacion": "Colau abandonó Twitter cuando era alcaldesa de Barcelona.",
-   "veredicto": "verdadero",
-   "resumen": "Colau anunció el 11 de abril de 2021, siendo alcaldesa, que dejaba Twitter indefinidamente; entonces citó sobre todo perfiles anónimos que incitaban al odio, no la falta de tiempo.",
-   "explicacion": "Colau anunció el 11 de abril de 2021, siendo alcaldesa de Barcelona, que dejaba Twitter de forma indefinida. Su mandato como alcaldesa duró hasta junio de 2023. El motivo que da ahora (falta de tiempo) es una explicación suya; en 2021 su carta hablaba sobre todo de perfiles anónimos que, según ella, incitaban al odio y de que la red alejaba de la buena política.",
-   "confianza": "alta",
-   "fuentes": [
-    {
-     "titulo": "The Objective - Ada Colau deja Twitter de forma indefinida para hacer buena política (12/04/2021)",
-     "url": "https://theobjective.com/espana/2021-04-12/ada-colau-deja-twitter-de-forma-indefinida-para-hacer-buena-politica/"
-    },
-    {
-     "titulo": "NacióDigital - Colau torna a X en campanya pel 29-N cinc anys després d'abandonar la xarxa",
-     "url": "https://naciodigital.cat/politica/colau-torna-a-x-en-campanya-pel-29-n-cinc-anys-despres-dabandonar-la-xarxa.html"
-    }
-   ]
-  },
-  {
-   "id": "colau-m339",
-   "entrevista": "colau",
-   "invitado": "Ada Colau",
-   "tema_n": 3,
-   "tema": "Twitter, redes sociales y polarización política",
-   "segundo": 339,
-   "minuto": "0:05:39",
-   "video_url": "https://www.youtube.com/watch?v=-ESmAhdixfo&t=339s",
-   "web_url": "https://verificacion-podcast.vercel.app/colau#m339",
-   "cita": "he estado casi cuatro años fuera de la primera línea",
-   "afirmacion": "Colau lleva casi cuatro años fuera de la primera línea política.",
-   "veredicto": "mayormente_verdadero",
-   "resumen": "Colau dejó la alcaldía el 17 de junio de 2023, hace unos 3 años y 5 meses, no cuatro; el redondeo es generoso pero razonable en lenguaje oral.",
-   "explicacion": "Colau dejó de ser alcaldesa de Barcelona el 17 de junio de 2023, cuando Jaume Collboni fue investido, así que a 13 de noviembre de 2026 han pasado unos 3 años y 5 meses, no cuatro. Además siguió como concejala de la oposición hasta que dejó el acta en octubre de 2024, aunque eso difícilmente se considera primera línea. El redondeo es generoso pero razonable en lenguaje oral; ella misma habló en otro momento de «3-4 años».",
-   "confianza": "media",
-   "fuentes": [
-    {
-     "titulo": "Artículo 14 - Quién encabeza Frente Amplio en el 29N: trayectoria política y personal de Ada Colau (05/11/2026)",
-     "url": "https://www.articulo14.es/politica/quien-encabeza-frente-amplio-en-el-29n-trayectoria-politica-y-personal-de-ada-colau-20261105.html"
-    },
-    {
-     "titulo": "The Objective - Collboni, nuevo alcalde de Barcelona gracias a los votos del PP y de los de Colau (17/06/2023)",
-     "url": "https://theobjective.com/espana/2023-06-17/collboni-nuevo-alcalde-de-barcelona-gracias-a-los-votos-de-pp-y-el-voto-de-los-de-colau/"
-    },
-    {
-     "titulo": "Libertad Digital - El último pleno de Ada Colau (25/10/2024)",
-     "url": "https://www.libertaddigital.com/espana/politica/2024-10-25/el-ultimo-pleno-de-ada-colau-7178250/"
-    }
-   ]
-  },
   {
    "id": "colau-m355",
    "entrevista": "colau",
@@ -380,37 +300,6 @@
    ]
   },
   {
-   "id": "colau-m384",
-   "entrevista": "colau",
-   "invitado": "Ada Colau",
-   "tema_n": 3,
-   "tema": "Twitter, redes sociales y polarización política",
-   "segundo": 384,
-   "minuto": "0:06:24",
-   "video_url": "https://www.youtube.com/watch?v=-ESmAhdixfo&t=384s",
-   "web_url": "https://verificacion-podcast.vercel.app/colau#m384",
-   "cita": "he decidido no volver a Twitter. Uso Instagram y uso otras redes, pero Twitter no.",
-   "afirmacion": "Colau, personalmente, no ha vuelto a Twitter/X y usa Instagram y otras redes.",
-   "veredicto": "enganoso",
-   "resumen": "El 20 de octubre de 2026 la cuenta @AdaColau publicó en X «Acepto la propuesta, será un placer»; no es cierto que no haya vuelto a publicar allí.",
-   "explicacion": "El 20 de octubre de 2026 la cuenta @AdaColau publicó en X «Acepto la propuesta, será un placer», en respuesta a la invitación de Jordi Wild; la prensa lo tituló «Colau vuelve a X cinco años después». Según Vozpópuli la cuenta conserva los mismos 779.000 seguidores que tenía al dejarla en 2021, lo que apunta a su cuenta personal de siempre; ninguna fuente aclara si la gestiona ella o su equipo. Por tanto no es cierto que no haya vuelto a publicar allí, aunque puede referirse a que no la usará de forma habitual.",
-   "confianza": "media",
-   "fuentes": [
-    {
-     "titulo": "Ara - Colau vuelve a X cinco años después para aceptar la entrevista con Jordi Wild",
-     "url": "https://es.ara.cat/politica/elecciones-generales/colau-vuelve-x-cinco-anos-despues-aceptar-entrevista-jordi-wild_1_5884799.html"
-    },
-    {
-     "titulo": "NacióDigital - Colau torna a X en campanya pel 29-N cinc anys després d'abandonar la xarxa (20/10/2026)",
-     "url": "https://naciodigital.cat/politica/colau-torna-a-x-en-campanya-pel-29-n-cinc-anys-despres-dabandonar-la-xarxa.html"
-    },
-    {
-     "titulo": "Vozpópuli - La irrelevancia fuerza a Colau a regresar a la red social de Elon Musk",
-     "url": "https://www.vozpopuli.com/espana/politica/la-irrelevancia-fuerza-a-colau-a-superar-su-fiebre-woke-y-regresar-a-la-red-social-de-elon-musk.html"
-    }
-   ]
-  },
-  {
    "id": "colau-m437",
    "entrevista": "colau",
    "invitado": "Ada Colau",
@@ -438,114 +327,6 @@
     {
      "titulo": "Ara - El presunto saludo nazi de Elon Musk y otros momentos clave de la investidura de Trump",
      "url": "https://es.ara.cat/internacional/estados-unidos/presunto-saludo-nazi-elon-musk-momentos-clave-investidura-trump_1_5261264.html"
-    }
-   ]
-  },
-  {
-   "id": "colau-m539",
-   "entrevista": "colau",
-   "invitado": "Ada Colau",
-   "tema_n": 4,
-   "tema": "Por qué Ada Colau vuelve a la política y se presenta a las elecciones",
-   "segundo": 539,
-   "minuto": "0:08:59",
-   "video_url": "https://www.youtube.com/watch?v=-ESmAhdixfo&t=539s",
-   "web_url": "https://verificacion-podcast.vercel.app/colau#m539",
-   "cita": "en mayo hará 4 años que dejé de ser alcaldesa",
-   "afirmacion": "En mayo de 2027 se cumplirán 4 años desde que Colau dejó de ser alcaldesa de Barcelona.",
-   "veredicto": "mayormente_verdadero",
-   "resumen": "Colau dejó la alcaldía el 17 de junio de 2023, no en mayo; los cuatro años se cumplen en junio de 2027 y el redondeo es razonable.",
-   "explicacion": "Las elecciones municipales fueron el 28 de mayo de 2023, pero Colau dejó la alcaldía el 17 de junio de 2023, al ser investido Jaume Collboni, por lo que los cuatro años exactos se cumplirán en junio de 2027, no en mayo. La diferencia es de semanas y es un redondeo razonable.",
-   "confianza": "alta",
-   "fuentes": [
-    {
-     "titulo": "Wikipedia - Ada Colau (alcaldesa de Barcelona del 13/06/2015 al 17/06/2023)",
-     "url": "https://en.wikipedia.org/wiki/Ada_Colau"
-    },
-    {
-     "titulo": "The Objective - Collboni, nuevo alcalde de Barcelona gracias a los votos del PP y de los de Colau (17/06/2023)",
-     "url": "https://theobjective.com/espana/2023-06-17/collboni-nuevo-alcalde-de-barcelona-gracias-a-los-votos-de-pp-y-el-voto-de-los-de-colau/"
-    }
-   ]
-  },
-  {
-   "id": "colau-m545",
-   "entrevista": "colau",
-   "invitado": "Ada Colau",
-   "tema_n": 4,
-   "tema": "Por qué Ada Colau vuelve a la política y se presenta a las elecciones",
-   "segundo": 545,
-   "minuto": "0:09:05",
-   "video_url": "https://www.youtube.com/watch?v=-ESmAhdixfo&t=545s",
-   "web_url": "https://verificacion-podcast.vercel.app/colau#m545",
-   "cita": "Me propusieron ser ministra en el gobierno de Sánchez y dije que no.",
-   "afirmacion": "Le propusieron ser ministra en el Gobierno de Pedro Sánchez y Colau rechazó.",
-   "veredicto": "mayormente_verdadero",
-   "resumen": "En Rac1 (octubre de 2023) Colau dijo que su espacio político le pidió ser ministra y rechazó; la propuesta vino de Sumar/Comuns, no consta que del PSOE.",
-   "explicacion": "El 26 de octubre de 2023, en una entrevista en Rac1, Colau dijo: «Mi espacio político me ha pedido insistentemente que me plantease ser ministra, pero ya he dicho que no». En agosto de 2023 la prensa ya informaba de que Yolanda Díaz (Sumar) quería que dirigiese un Ministerio de Vivienda. La propuesta vino de su espacio político (Sumar/Comuns) para el Gobierno de coalición, no consta que partiera directamente del PSOE o de Sánchez.",
-   "confianza": "media",
-   "fuentes": [
-    {
-     "titulo": "El Debate - Colau anuncia que ha decidido no ser ministra pese a la insistencia de Sumar (26/10/2023)",
-     "url": "https://www.eldebate.com/espana/cataluna/20231026/colau-anuncia-decidido-no-ministra-pese-insistencia-sumar_149187.html"
-    },
-    {
-     "titulo": "El Debate - Díaz quiere que Colau dirija el Ministerio de Vivienda que Sánchez planea crear (10/08/2023)",
-     "url": "https://www.eldebate.com/espana/20230810/diaz-quiere-colau-dirija-ministerio-vivienda-sanchez-planea-crear_133240.html"
-    }
-   ]
-  },
-  {
-   "id": "colau-m545-2",
-   "entrevista": "colau",
-   "invitado": "Ada Colau",
-   "tema_n": 4,
-   "tema": "Por qué Ada Colau vuelve a la política y se presenta a las elecciones",
-   "segundo": 545,
-   "minuto": "0:09:05",
-   "video_url": "https://www.youtube.com/watch?v=-ESmAhdixfo&t=545s",
-   "web_url": "https://verificacion-podcast.vercel.app/colau#m545-2",
-   "cita": "Me propusieron presentarme a las europeas y dije que no",
-   "afirmacion": "Le propusieron presentarse a las elecciones europeas y Colau dijo que no.",
-   "veredicto": "verdadero",
-   "resumen": "En enero de 2024 Colau declinó encabezar la lista de Sumar a las europeas, que según The Objective le ofreció Sumar con Yolanda Díaz al frente.",
-   "explicacion": "En enero de 2024 Colau descartó, en una entrevista en Catalunya Ràdio, encabezar la lista de Sumar a las elecciones europeas de junio de 2024, diciendo que quería quedarse en Barcelona. The Objective (15/01/2024) informaba de que fue Sumar, con Yolanda Díaz al frente, quien le ofreció la candidatura y de que ella la declinó.",
-   "confianza": "media",
-   "fuentes": [
-    {
-     "titulo": "The Objective - Colau rechaza ser candidata de Sumar a las europeas (15/01/2024)",
-     "url": "https://theobjective.com/espana/politica/2024-01-15/colau-candidata-europea-sumar-sustituto/"
-    },
-    {
-     "titulo": "Catalan News - Ada Colau rules herself out as Sumar candidate for European elections (13/01/2024)",
-     "url": "https://www.catalannews.com/politics/item/ada-colau-rules-herself-out-as-european-elections-candidate"
-    }
-   ]
-  },
-  {
-   "id": "colau-m666",
-   "entrevista": "colau",
-   "invitado": "Ada Colau",
-   "tema_n": 4,
-   "tema": "Por qué Ada Colau vuelve a la política y se presenta a las elecciones",
-   "segundo": 666,
-   "minuto": "0:11:06",
-   "video_url": "https://www.youtube.com/watch?v=-ESmAhdixfo&t=666s",
-   "web_url": "https://verificacion-podcast.vercel.app/colau#m666",
-   "cita": "esos 8 años de alcaldía",
-   "afirmacion": "Colau fue alcaldesa de Barcelona durante 8 años.",
-   "veredicto": "verdadero",
-   "resumen": "Colau fue alcaldesa de Barcelona del 13 de junio de 2015 al 17 de junio de 2023: ocho años y cuatro días, en dos mandatos.",
-   "explicacion": "Colau fue alcaldesa de Barcelona del 13 de junio de 2015 al 17 de junio de 2023, es decir, ocho años y cuatro días (dos mandatos).",
-   "confianza": "alta",
-   "fuentes": [
-    {
-     "titulo": "Wikipedia - Ada Colau",
-     "url": "https://en.wikipedia.org/wiki/Ada_Colau"
-    },
-    {
-     "titulo": "Catalan News - Socialist Jaume Collboni appointed Barcelona mayor after last-minute plot twist",
-     "url": "https://www.catalannews.com/2023-local-elections/item/socialist-jaume-collboni-appointed-barcelona-mayor-after-last-minute-plot-twist"
     }
    ]
   },
@@ -2549,29 +2330,6 @@
    ]
   },
   {
-   "id": "colau-m3278",
-   "entrevista": "colau",
-   "invitado": "Ada Colau",
-   "tema_n": 8,
-   "tema": "Ceuta, Marruecos y la política migratoria de España",
-   "segundo": 3278,
-   "minuto": "0:54:38",
-   "video_url": "https://www.youtube.com/watch?v=-ESmAhdixfo&t=3278s",
-   "web_url": "https://verificacion-podcast.vercel.app/colau#m3278",
-   "cita": "Me ha tocado la pandemia, me ha tocado el atentado en la Rambla.",
-   "afirmacion": "Como alcaldesa de Barcelona le tocó gestionar la pandemia de COVID-19 y el atentado de la Rambla.",
-   "veredicto": "verdadero",
-   "resumen": "Colau fue alcaldesa de Barcelona del 13 de junio de 2015 al 17 de junio de 2023, periodo que incluye el atentado de la Rambla y la pandemia de COVID-19.",
-   "explicacion": "Colau fue alcaldesa de Barcelona entre el 13 de junio de 2015 y el 17 de junio de 2023, un periodo que incluye el atentado yihadista de la Rambla (17 de agosto de 2017) y la pandemia de COVID-19 (2020-2022).",
-   "confianza": "alta",
-   "fuentes": [
-    {
-     "titulo": "Wikipedia: Ada Colau",
-     "url": "https://es.wikipedia.org/wiki/Ada_Colau"
-    }
-   ]
-  },
-  {
    "id": "colau-m3346",
    "entrevista": "colau",
    "invitado": "Ada Colau",
@@ -2655,24 +2413,6 @@
      "url": "https://es.wikipedia.org/wiki/Frente_Amplio_(Espa%C3%B1a)"
     }
    ]
-  },
-  {
-   "id": "colau-m3532",
-   "entrevista": "colau",
-   "invitado": "Ada Colau",
-   "tema_n": 8,
-   "tema": "Ceuta, Marruecos y la política migratoria de España",
-   "segundo": 3532,
-   "minuto": "0:58:52",
-   "video_url": "https://www.youtube.com/watch?v=-ESmAhdixfo&t=3532s",
-   "web_url": "https://verificacion-podcast.vercel.app/colau#m3532",
-   "cita": "No, no, mi hijo pequeño... Juega ahí.",
-   "afirmacion": "El hijo pequeño de Ada Colau juega en el club Martinenc.",
-   "veredicto": "no_verificable",
-   "resumen": "Es una anécdota familiar privada y no consta públicamente que el hijo pequeño de Colau juegue en el Martinenc. No se afirma ni se niega.",
-   "explicacion": "Es una anécdota familiar privada y no he encontrado ninguna constancia pública de que el hijo pequeño de Colau juegue en el Martinenc; los resultados solo hablan del club y de sus equipos de fútbol base, sin mención a ella. No se afirma ni se niega.",
-   "confianza": "media",
-   "fuentes": []
   },
   {
    "id": "colau-m3561",
@@ -2791,29 +2531,6 @@
    ]
   },
   {
-   "id": "colau-m3944",
-   "entrevista": "colau",
-   "invitado": "Ada Colau",
-   "tema_n": 9,
-   "tema": "Inmigración, integración y choque cultural",
-   "segundo": 3944,
-   "minuto": "1:05:44",
-   "video_url": "https://www.youtube.com/watch?v=-ESmAhdixfo&t=3944s",
-   "web_url": "https://verificacion-podcast.vercel.app/colau#m3944",
-   "cita": "he gestionado una ciudad durante ocho años",
-   "afirmacion": "Ada Colau gestionó la ciudad de Barcelona durante ocho años, como alcaldesa.",
-   "veredicto": "verdadero",
-   "resumen": "Colau fue alcaldesa de Barcelona del 13 de junio de 2015 al 17 de junio de 2023, dos mandatos, es decir, ocho años.",
-   "explicacion": "Colau fue alcaldesa de Barcelona del 13 de junio de 2015 al 17 de junio de 2023 (dos mandatos), es decir, ocho años.",
-   "confianza": "alta",
-   "fuentes": [
-    {
-     "titulo": "Ada Colau (Wikipedia)",
-     "url": "https://es.wikipedia.org/wiki/Ada_Colau"
-    }
-   ]
-  },
-  {
    "id": "colau-m3952",
    "entrevista": "colau",
    "invitado": "Ada Colau",
@@ -2891,29 +2608,6 @@
     {
      "titulo": "Charnego (Wikipedia)",
      "url": "https://es.wikipedia.org/wiki/Charnego"
-    }
-   ]
-  },
-  {
-   "id": "colau-m4135",
-   "entrevista": "colau",
-   "invitado": "Ada Colau",
-   "tema_n": 9,
-   "tema": "Inmigración, integración y choque cultural",
-   "segundo": 4135,
-   "minuto": "1:08:55",
-   "video_url": "https://www.youtube.com/watch?v=-ESmAhdixfo&t=4135s",
-   "web_url": "https://verificacion-podcast.vercel.app/colau#m4135",
-   "cita": "mi familia es andaluza yo también vengo de Huesca y de Soria",
-   "afirmacion": "La familia de Ada Colau es andaluza y ella también tiene origen familiar en Huesca y en Soria.",
-   "veredicto": "no_verificable",
-   "resumen": "No consta públicamente el origen geográfico de la familia de Colau: las fuentes solo recogen que nació en Barcelona en 1974 y se crió en El Guinardó.",
-   "explicacion": "No se ha encontrado constancia pública del origen geográfico de la familia de Colau: las fuentes biográficas consultadas solo recogen que nació en Barcelona en 1974, se crió en El Guinardó y los nombres de sus padres, sin indicar su procedencia. Es un dato biográfico privado que solo ella puede acreditar.",
-   "confianza": "baja",
-   "fuentes": [
-    {
-     "titulo": "Ada Colau (Wikipedia)",
-     "url": "https://es.wikipedia.org/wiki/Ada_Colau"
     }
    ]
   },
@@ -5029,6 +4723,92 @@
      "url": "https://www.articulo14.es/economia/el-pib-modera-su-crecimiento-al-06-en-el-tercer-trimestre-una-decima-menos-y-la-inflacion-se-mantiene-en-el-49-20261030.html"
     }
    ]
+  }
+ ],
+ "excluidas": [
+  {
+   "id": "colau-m219",
+   "minuto": "0:03:39",
+   "afirmacion": "Ada Colau tiene un hijo de 15 años.",
+   "veredicto": "mayormente_verdadero",
+   "motivo": "Dato biográfico o familiar del invitado, sin relación con su gestión ni con el debate público."
+  },
+  {
+   "id": "colau-m300",
+   "minuto": "0:05:00",
+   "afirmacion": "Colau abandonó Twitter cuando era alcaldesa de Barcelona.",
+   "veredicto": "verdadero",
+   "motivo": "Anécdota personal o privada, sin relación con la gestión pública."
+  },
+  {
+   "id": "colau-m339",
+   "minuto": "0:05:39",
+   "afirmacion": "Colau lleva casi cuatro años fuera de la primera línea política.",
+   "veredicto": "mayormente_verdadero",
+   "motivo": "Dato de contexto sobre la duración de un cargo o de una trayectoria, sin discusión ni relevancia para el debate."
+  },
+  {
+   "id": "colau-m384",
+   "minuto": "0:06:24",
+   "afirmacion": "Colau, personalmente, no ha vuelto a Twitter/X y usa Instagram y otras redes.",
+   "veredicto": "enganoso",
+   "motivo": "Anécdota personal o privada, sin relación con la gestión pública."
+  },
+  {
+   "id": "colau-m539",
+   "minuto": "0:08:59",
+   "afirmacion": "En mayo de 2027 se cumplirán 4 años desde que Colau dejó de ser alcaldesa de Barcelona.",
+   "veredicto": "mayormente_verdadero",
+   "motivo": "Dato de contexto sobre la duración de un cargo o de una trayectoria, sin discusión ni relevancia para el debate."
+  },
+  {
+   "id": "colau-m545",
+   "minuto": "0:09:05",
+   "afirmacion": "Le propusieron ser ministra en el Gobierno de Pedro Sánchez y Colau rechazó.",
+   "veredicto": "mayormente_verdadero",
+   "motivo": "Anécdota personal o privada, sin relación con la gestión pública."
+  },
+  {
+   "id": "colau-m545-2",
+   "minuto": "0:09:05",
+   "afirmacion": "Le propusieron presentarse a las elecciones europeas y Colau dijo que no.",
+   "veredicto": "verdadero",
+   "motivo": "Anécdota personal o privada, sin relación con la gestión pública."
+  },
+  {
+   "id": "colau-m666",
+   "minuto": "0:11:06",
+   "afirmacion": "Colau fue alcaldesa de Barcelona durante 8 años.",
+   "veredicto": "verdadero",
+   "motivo": "Dato de contexto sobre la duración de un cargo o de una trayectoria, sin discusión ni relevancia para el debate."
+  },
+  {
+   "id": "colau-m3278",
+   "minuto": "0:54:38",
+   "afirmacion": "Como alcaldesa de Barcelona le tocó gestionar la pandemia de COVID-19 y el atentado de la Rambla.",
+   "veredicto": "verdadero",
+   "motivo": "Dato de contexto sobre la duración de un cargo o de una trayectoria, sin discusión ni relevancia para el debate."
+  },
+  {
+   "id": "colau-m3532",
+   "minuto": "0:58:52",
+   "afirmacion": "El hijo pequeño de Ada Colau juega en el club Martinenc.",
+   "veredicto": "no_verificable",
+   "motivo": "Dato biográfico o familiar del invitado, sin relación con su gestión ni con el debate público."
+  },
+  {
+   "id": "colau-m3944",
+   "minuto": "1:05:44",
+   "afirmacion": "Ada Colau gestionó la ciudad de Barcelona durante ocho años, como alcaldesa.",
+   "veredicto": "verdadero",
+   "motivo": "Dato de contexto sobre la duración de un cargo o de una trayectoria, sin discusión ni relevancia para el debate."
+  },
+  {
+   "id": "colau-m4135",
+   "minuto": "1:08:55",
+   "afirmacion": "La familia de Ada Colau es andaluza y ella también tiene origen familiar en Huesca y en Soria.",
+   "veredicto": "no_verificable",
+   "motivo": "Dato biográfico o familiar del invitado, sin relación con su gestión ni con el debate público."
   }
  ]
 }

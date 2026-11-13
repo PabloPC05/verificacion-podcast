@@ -68,6 +68,24 @@ explicación: una frase (dos como mucho), máximo 30 palabras, que empiece por e
 que no esté en la explicación. Se guarda como array de cadenas en
 `entrevistas/<slug>/resumenes/<NN-tema>.json` (misma longitud y orden que el fichero de resultados).
 
+## 4 bis. Excluir lo que no aporta al debate público
+
+Algunas afirmaciones se pueden comprobar pero no tienen interés público. Se quitan de la web y de los recuentos,
+y se listan en `entrevistas/<slug>/excluidas.json` con su veredicto original y el motivo. La API las publica
+aparte, en el campo `excluidas`. Solo hay cinco motivos posibles:
+
+| Motivo | Ejemplos |
+|---|---|
+| Dato biográfico o familiar del invitado | Edad, edad de los padres, hijos, estudios, idiomas, a quién votó en su juventud |
+| Anécdota personal o privada | Qué coche usaba en las primarias, qué redes sociales usa, ofertas de cargos que rechazó |
+| Duración de un cargo o de una trayectoria | «Lleva ocho años en el Gobierno», «llevo 30 años en política» |
+| Detalle logístico de la campaña o de la entrevista | Cuándo empieza la campaña, a qué medios ha ido |
+| Curiosidad sin relación con el debate público | Que el Papa votó, en qué año se construyó un edificio |
+
+El criterio se aplica igual a todos los invitados y **sin mirar el veredicto**. Nunca se excluye una
+afirmación sobre políticas, cifras públicas, instituciones, leyes o la actuación de un cargo o de un partido,
+aunque parezca menor. Los identificadores (`m<segundo>`) se asignan antes de excluir, así que no cambian.
+
 ## 5. Generar la web y publicar
 
 Cuando todos los bloques y resúmenes estén completos, añade `"publicar": true` a `entrevistas/<slug>/meta.json`

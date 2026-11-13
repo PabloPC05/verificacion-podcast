@@ -1,0 +1,110 @@
+{
+ "criterio": "Se excluyen de la web y de los recuentos las afirmaciones comprobables que no aportan al debate público: datos biográficos o familiares, anécdotas privadas, la duración de cargos o trayectorias y detalles logísticos de la campaña. El criterio se aplica igual a todos los invitados y con independencia del veredicto. Siguen aquí, con su veredicto original, por transparencia.",
+ "excluidas": [
+  {
+   "id": "m191",
+   "minuto": "0:03:11",
+   "afirmacion": "En esta campaña electoral Feijóo ha concedido entrevistas en la Cadena SER, El País, La Sexta, Mediaset y Atresmedia.",
+   "veredicto": "mayormente_verdadero",
+   "motivo": "Detalle logístico de la campaña o de la entrevista."
+  },
+  {
+   "id": "m531",
+   "minuto": "0:08:51",
+   "afirmacion": "Feijóo lleva cuatro años haciendo política nacional.",
+   "veredicto": "mayormente_verdadero",
+   "motivo": "Dato de contexto sobre la duración de un cargo o de una trayectoria, sin discusión ni relevancia para el debate."
+  },
+  {
+   "id": "m612",
+   "minuto": "0:10:12",
+   "afirmacion": "Feijóo votó a Felipe González (PSOE) en las elecciones generales de 1982 y es algo conocido.",
+   "veredicto": "no_verificable",
+   "motivo": "Dato biográfico o familiar del invitado, sin relación con su gestión ni con el debate público."
+  },
+  {
+   "id": "m2417-2",
+   "minuto": "0:40:17",
+   "afirmacion": "La campaña electoral de las elecciones generales empieza «esta noche».",
+   "veredicto": "verdadero",
+   "motivo": "Detalle logístico de la campaña o de la entrevista."
+  },
+  {
+   "id": "m2703",
+   "minuto": "0:45:03",
+   "afirmacion": "Feijóo fue presidente del Insalud y presidente de Correos, y por ese trabajo conoce Ceuta.",
+   "veredicto": "verdadero",
+   "motivo": "Dato biográfico o familiar del invitado, sin relación con su gestión ni con el debate público."
+  },
+  {
+   "id": "m2998",
+   "minuto": "0:49:58",
+   "afirmacion": "El Gobierno de Pedro Sánchez lleva ocho años en el poder.",
+   "veredicto": "verdadero",
+   "motivo": "Dato de contexto sobre la duración de un cargo o de una trayectoria, sin discusión ni relevancia para el debate."
+  },
+  {
+   "id": "m3469",
+   "minuto": "0:57:49",
+   "afirmacion": "La crema que Feijóo lleva en una de las fotos con Marcial Dorado (verano de 1995) era para tratar un herpes zóster y evitar que le diera el sol directamente.",
+   "veredicto": "no_verificable",
+   "motivo": "Anécdota personal o privada, sin relación con la gestión pública."
+  },
+  {
+   "id": "m3603",
+   "minuto": "1:00:03",
+   "afirmacion": "Feijóo lleva unos 30 años en política.",
+   "veredicto": "verdadero",
+   "motivo": "Dato de contexto sobre la duración de un cargo o de una trayectoria, sin discusión ni relevancia para el debate."
+  },
+  {
+   "id": "m4429",
+   "minuto": "1:13:49",
+   "afirmacion": "Feijóo fue presidente de la Xunta de Galicia durante mucho tiempo.",
+   "veredicto": "verdadero",
+   "motivo": "Dato de contexto sobre la duración de un cargo o de una trayectoria, sin discusión ni relevancia para el debate."
+  },
+  {
+   "id": "m4631",
+   "minuto": "1:17:11",
+   "afirmacion": "La residencia oficial del presidente de la Xunta se construyó en el año 2000.",
+   "veredicto": "no_verificable",
+   "motivo": "Curiosidad sin relación con políticas, instituciones ni el debate público."
+  },
+  {
+   "id": "m4697",
+   "minuto": "1:18:17",
+   "afirmacion": "Feijóo no sabe inglés.",
+   "veredicto": "verdadero",
+   "motivo": "Dato biográfico o familiar del invitado, sin relación con su gestión ni con el debate público."
+  },
+  {
+   "id": "m4743",
+   "minuto": "1:19:03",
+   "afirmacion": "Feijóo pertenece a la primera generación que cursó la EGB y el BUP.",
+   "veredicto": "no_verificable",
+   "motivo": "Dato biográfico o familiar del invitado, sin relación con su gestión ni con el debate público."
+  },
+  {
+   "id": "m4761",
+   "minuto": "1:19:21",
+   "afirmacion": "Felipe González dijo hace poco que uno puede ser tonto en varios idiomas.",
+   "veredicto": "no_verificable",
+   "motivo": "Curiosidad sin relación con políticas, instituciones ni el debate público."
+  },
+  {
+   "id": "m5210",
+   "minuto": "1:26:50",
+   "afirmacion": "La campaña electoral de las elecciones generales del 29 de noviembre de 2026 empieza a las 12 de la noche (la entrevista se grabó el día previo).",
+   "veredicto": "verdadero",
+   "motivo": "Detalle logístico de la campaña o de la entrevista."
+  },
+  {
+   "id": "m5244",
+   "minuto": "1:27:24",
+   "afirmacion": "Feijóo lleva gestionando cargos públicos durante los últimos 30 años.",
+   "veredicto": "mayormente_verdadero",
+   "motivo": "Dato de contexto sobre la duración de un cargo o de una trayectoria, sin discusión ni relevancia para el debate."
+  }
+ ]
+}

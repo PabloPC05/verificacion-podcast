@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-13T20:24:29+01:00",
+ "generado": "2026-11-13T20:31:06+01:00",
  "aviso": "Verificación asistida por IA, sin revisión de un equipo de periodistas. «falso» no implica intención de mentir. Contrasta siempre con las fuentes enlazadas.",
  "veredictos": {
   "verdadero": "Los datos lo confirman.",
@@ -23,14 +23,15 @@
   "afirmaciones_url": "https://verificacion-podcast.vercel.app/api/v1/colau.json",
   "transcripcion_url": "https://verificacion-podcast.vercel.app/api/v1/colau/transcripcion.json",
   "transcripcion_txt_url": "https://verificacion-podcast.vercel.app/api/v1/colau/transcripcion.txt",
-  "total_afirmaciones": 165,
+  "total_afirmaciones": 153,
   "por_veredicto": {
    "falso": 5,
-   "enganoso": 25,
-   "mayormente_verdadero": 77,
-   "verdadero": 41,
-   "no_verificable": 17
+   "enganoso": 24,
+   "mayormente_verdadero": 73,
+   "verdadero": 36,
+   "no_verificable": 15
   },
+  "excluidas": 12,
   "temas": [
    {
     "n": 1,
@@ -49,11 +50,11 @@
     "n": 2,
     "titulo": "Ada Colau llega a The Wild Project",
     "inicio_s": 83,
-    "total": 1,
+    "total": 0,
     "por_veredicto": {
      "falso": 0,
      "enganoso": 0,
-     "mayormente_verdadero": 1,
+     "mayormente_verdadero": 0,
      "verdadero": 0,
      "no_verificable": 0
     }
@@ -62,12 +63,12 @@
     "n": 3,
     "titulo": "Twitter, redes sociales y polarización política",
     "inicio_s": 273,
-    "total": 7,
+    "total": 4,
     "por_veredicto": {
      "falso": 0,
-     "enganoso": 1,
-     "mayormente_verdadero": 3,
-     "verdadero": 1,
+     "enganoso": 0,
+     "mayormente_verdadero": 2,
+     "verdadero": 0,
      "no_verificable": 2
     }
    },
@@ -75,12 +76,12 @@
     "n": 4,
     "titulo": "Por qué Ada Colau vuelve a la política y se presenta a las elecciones",
     "inicio_s": 509,
-    "total": 12,
+    "total": 8,
     "por_veredicto": {
      "falso": 0,
      "enganoso": 1,
-     "mayormente_verdadero": 5,
-     "verdadero": 5,
+     "mayormente_verdadero": 3,
+     "verdadero": 3,
      "no_verificable": 1
     }
    },
@@ -127,26 +128,26 @@
     "n": 8,
     "titulo": "Ceuta, Marruecos y la política migratoria de España",
     "inicio_s": 2864,
-    "total": 22,
+    "total": 20,
     "por_veredicto": {
      "falso": 0,
      "enganoso": 2,
      "mayormente_verdadero": 10,
-     "verdadero": 9,
-     "no_verificable": 1
+     "verdadero": 8,
+     "no_verificable": 0
     }
    },
    {
     "n": 9,
     "titulo": "Inmigración, integración y choque cultural",
     "inicio_s": 3769,
-    "total": 10,
+    "total": 8,
     "por_veredicto": {
      "falso": 0,
      "enganoso": 1,
      "mayormente_verdadero": 1,
-     "verdadero": 7,
-     "no_verificable": 1
+     "verdadero": 6,
+     "no_verificable": 0
     }
    },
    {
