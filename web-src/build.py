@@ -50,6 +50,24 @@ def hms(s):
     return f"{s // 3600}:{s % 3600 // 60:02d}:{s % 60:02d}"
 
 
+def _glosario():
+    """Correcciones de entrevistas/glosario.json (nombres que Whisper transcribe mal), ya compiladas."""
+    ruta = ENTREVISTAS / "glosario.json"
+    if not ruta.exists():
+        return []
+    return [(re.compile(c["buscar"]), c["poner"]) for c in json.loads(ruta.read_text(encoding="utf-8"))["correcciones"]]
+
+
+GLOSARIO = _glosario()
+
+
+def corregir(texto):
+    """Aplica el glosario a un texto de la transcripción. Solo para mostrarlo: la búsqueda de citas usa el original."""
+    for patron, poner in GLOSARIO:
+        texto = patron.sub(poner, texto)
+    return texto
+
+
 def _norm(t):
     t = unicodedata.normalize("NFD", t.lower())
     return re.sub(r"[^a-z0-9]+", " ", "".join(c for c in t if unicodedata.category(c) != "Mn")).strip()
@@ -499,6 +517,46 @@ def muestra_hero(hechas, por_veredicto=(("falso", "enganoso"), ("verdadero",), (
             f'<ul class="muestra-lista" aria-live="off">{items}</ul></section>')
 
 
+CUANTAS = {2: "dos", 3: "tres", 4: "cuatro", 5: "cinco"}
+
+
+def mini_resumen(hechas, actual=None, suelto=True):
+    """Resumen para el pie de cada página: de qué se habló (meta.json «resumen»), cuántas afirmaciones son falsas o
+    engañosas y el reparto por veredicto. En las páginas de una entrevista (`actual`) solo sale la suya; en las
+    generales, todas."""
+    if actual:
+        hechas = [m for m in hechas if m["slug"] == actual]
+    if not hechas:
+        return ""
+    tarjetas = []
+    for m in hechas:
+        s = e(m["slug"])
+        enlaces = (f'<p class="mini-acc"><a href="/{s}">Línea temporal{ICONO_SIGUE}</a>'
+                   f'<a href="/{s}/transcripcion">Transcripción{ICONO_SIGUE}</a></p>')
+        if not suelto:
+            # En la cabecera de la entrevista la foto, el nombre y las cifras ya están justo encima: solo el texto y los enlaces
+            tarjetas.append('<article class="mini-e">' + (f'<p class="mini-res">{e(m["resumen"])}</p>' if m.get("resumen") else "")
+                            + enlaces + "</article>")
+            continue
+        tarjetas.append(
+            f'<article class="mini-e"><div class="mini-cab">{retrato(m) or ""}<div>'
+            f'<h3><a href="/{s}">{e(m["invitado"])}</a></h3>'
+            f'<p class="mini-meta">{e(m.get("partido") or "")} · {e(m["programa"].replace("The Wild Project ", ""))} · {e(m["duracion"])}</p></div>'
+            + "</div>"
+            + (f'<p class="mini-res">{e(m["resumen"])}</p>' if m.get("resumen") else "")
+            + f'<p class="mini-num"><b>{m["malas"]}</b> falsas o engañosas de {m["suma"]} comprobadas</p>'
+            + barra_reparto(m, "barra-reparto mini-barra")
+            + enlaces + "</article>")
+    n = len(hechas)
+    titulo = "Esta entrevista, en corto" if actual else (f'Las {CUANTAS.get(n, n)} entrevistas, en corto' if n > 1 else "La entrevista, en corto")
+    # suelto: sección propia con su ancho; si no, va dentro de un contenedor que ya lo tiene (la cabecera de cada entrevista)
+    dentro = f'<h2 class="mini-t" id="mini-t">{titulo}</h2><div class="mini-lista">{"".join(tarjetas)}</div>'
+    if suelto:
+        dentro = f'<div class="ancho">{dentro}</div>'
+    clase = "resumenes" if suelto else "resumenes en-cabeza"
+    return f'<section class="{clase}" aria-labelledby="mini-t">{dentro}</section>'
+
+
 def creditos_fotos(entrevistas):
     partes = [f'<a href="{f["url"]}" target="_blank" rel="noopener noreferrer">{e(m["invitado"])}</a> ({e(f["autor"])}, {f["licencia"]})'
               for m in entrevistas if (f := FOTOS.get(m["slug"]))]
@@ -876,13 +934,21 @@ def menu(entrevistas, actual=None):
             f'<p class="cuanto">{e(m.get("partido") or "")} · <b>{m["malas"]}</b> falsas o engañosas de {m["suma"]}</p></div></div>'
             f'<div class="lista-acc"><a class="principal" href="/{s}">{ICONO_LINEA}<span>Línea temporal</span></a>'
             f'<a href="/{s}/transcripcion">{ICONO_TEXTO}<span>Transcripción</span></a></div>'
-            f'<p class="rot">Temas <span>· en rojo, cuántas falsas o engañosas</span></p><ol class="lista-temas">{temas}</ol></div></details>')
+            f'<p class="rot">Temas con afirmaciones <span>· en rojo, las falsas o engañosas</span></p><ol class="lista-temas">{temas}</ol></div></details>')
     aqui_buscar = ' aria-current="page"' if actual == "buscar" else ""
     aqui_participa = ' aria-current="page"' if actual == "participa" else ""
+    enlaces = [("/api", "Verifícalo tú", "", ""), ("/participa", "Participa", aqui_participa, ""), ("/metodologia", "Método", "", ""),
+               ("/quien", "Quién lo hace", "", ""), (REPO, "GitHub" + ICONO_EXTERNO, ' target="_blank" rel="noopener noreferrer"', " gh")]
+    sueltos = "".join(f'<a class="sec{c}" href="{h}"{x}>{t}</a>' for h, t, x, c in enlaces)
+    # En móvil no caben: van a un desplegable «Más» a la derecha, junto con el cambio de modo
+    mas = ('<details class="desp mas"><summary aria-label="Más enlaces y modo oscuro" title="Más">'
+           '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></summary><div class="lista">'
+           '<ul class="mas-lista">' + "".join(f'<li><a href="{h}"{x}>{t}</a></li>' for h, t, x, c in enlaces) + '</ul>'
+           + BOTON_MODO.replace('class="modo"', 'class="modo-txt"').replace("</button>", '<span>Cambiar a modo oscuro</span></button>')
+           + '</div></details>')
     return ('<header class="menu"><div class="ancho"><div class="m1"><a class="sello" href="/" title="Todas las entrevistas">Verificación</a>'
             + "".join(partes) + f'<a class="dcha buscar"{aqui_buscar} href="/buscar" title="Buscar una afirmación (tecla /)">{ICONO_LUPA}<span>Buscar</span></a>'
-            f'<a href="/api">Verifícalo tú</a><a href="/participa"{aqui_participa}>Participa</a><a href="/metodologia">Método</a><a href="/quien">Quién lo hace</a>'
-            f'<a class="gh" href="{REPO}" target="_blank" rel="noopener noreferrer">GitHub ↗</a>' + BOTON_MODO + '</div></div></header>' + JS_MENU)
+            + sueltos + BOTON_MODO + mas + '</div></div></header>' + JS_MENU)
 
 
 JS_MENU = """<script>
@@ -952,26 +1018,30 @@ const copiarTexto = (texto, ok) => {
   addEventListener("scroll", mirar, { passive: true }); mirar();
 })();
 // Modo claro/oscuro. Sin preferencia guardada manda el sistema (lo resuelve el CSS); al pulsar se guarda y manda sobre el sistema.
-const RAIZ = document.documentElement, botonModo = document.querySelector(".modo"), sistemaOscuro = matchMedia("(prefers-color-scheme: dark)");
+// Hay dos botones: el redondo del menú (pantallas anchas) y el de texto dentro de «Más» (móvil).
+const RAIZ = document.documentElement, botonesModo = document.querySelectorAll(".modo, .modo-txt"), sistemaOscuro = matchMedia("(prefers-color-scheme: dark)");
 const hayOscuro = () => (RAIZ.dataset.modo || (sistemaOscuro.matches ? "oscuro" : "claro")) === "oscuro";
 function etiquetarModo() {
   const t = hayOscuro() ? "Cambiar a modo claro" : "Cambiar a modo oscuro";
-  botonModo.setAttribute("aria-label", t); botonModo.title = t;
+  botonesModo.forEach(b => {
+    if (b.classList.contains("modo-txt")) b.querySelector("span").textContent = t;
+    else { b.setAttribute("aria-label", t); b.title = t; }
+  });
 }
 // Revelado circular desde el botón (View Transitions API); sin la API o con poco movimiento, el cambio es instantáneo.
-function revelarModo(cambiar) {
+function revelarModo(cambiar, boton) {
   if (!document.startViewTransition || matchMedia("(prefers-reduced-motion: reduce)").matches) { cambiar(); return; }
-  const c = botonModo.getBoundingClientRect(), x = c.left + c.width / 2, y = c.top + c.height / 2;
+  const c = boton.getBoundingClientRect(), x = c.left + c.width / 2, y = c.top + c.height / 2;
   const r = Math.hypot(Math.max(x, innerWidth - x), Math.max(y, innerHeight - y));
   document.startViewTransition(cambiar).ready.then(() => RAIZ.animate(
     { clipPath: [`circle(0px at ${x}px ${y}px)`, `circle(${r}px at ${x}px ${y}px)`] },
     { duration: 420, easing: "cubic-bezier(0.4, 0, 0.2, 1)", pseudoElement: "::view-transition-new(root)" })).catch(() => {});
 }
-botonModo.onclick = () => {
+botonesModo.forEach(b => b.onclick = () => {
   const nuevo = hayOscuro() ? "claro" : "oscuro";
-  revelarModo(() => { RAIZ.dataset.modo = nuevo; etiquetarModo(); });
+  revelarModo(() => { RAIZ.dataset.modo = nuevo; etiquetarModo(); }, b);
   try { localStorage.setItem("modo", nuevo); } catch (e) {}
-};
+});
 sistemaOscuro.addEventListener("change", etiquetarModo);
 etiquetarModo();
 </script>"""
@@ -985,6 +1055,9 @@ ICONO_LINEA = ('<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d=
 ICONO_LUPA = '<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg>'
 ICONO_TEXTO = '<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l4 4v14H6zM14 3v5h5M9 12h7M9 16h7"/></svg>'
 ICONO_FLECHA = '<svg class="flecha" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>'
+# Iconos pequeños que sustituyen a «↗» y «→» en el menú y en el resumen: un glifo de texto no queda centrado con la línea
+ICONO_EXTERNO = '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg>'
+ICONO_SIGUE = '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>'
 ICONO_EXPANDIR = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6M10 20H4v-6M20 4l-7 7M4 20l7-7"/></svg>'
 # Botón flotante (abajo a la izquierda) que despliega la leyenda de veredictos. Lo usan la portada y las páginas de cada entrevista.
 FAB_LEYENDA = """<div class="fab" id="fab">
@@ -1160,8 +1233,8 @@ BOTON_MODO = ('<button class="modo" type="button" aria-label="Cambiar a modo osc
               '<path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>')
 
 
-def filtros(m, extra=""):
-    return ('<div class="filtros"><div class="ancho"><div class="fila" id="filtros"><span class="rot">Filtros</span>'
+def filtros(m, extra="", antes=""):
+    return ('<div class="filtros"><div class="ancho"><div class="fila" id="filtros">' + antes + '<span class="rot">Filtros</span>'
             f'<button data-todas aria-pressed="false">Todas <b>{m["suma"]}</b></button>'
             + "".join(f'<button data-v="{k}" aria-pressed="false"><i></i>{PLURAL[k]} <b>{m["total"][k]}</b></button>'
                       for k in ORDEN) + extra + '<span class="cuenta" aria-live="polite"></span></div></div></div>')
@@ -1179,13 +1252,21 @@ def pagina_entrevista(m, entrevistas):
             for k in ORDEN if cuenta[k])
         barra = "".join(f'<i class="tono-{k}" style="flex:{cuenta[k]}"></i>' for k in ORDEN if cuenta[k])
         fin = min(t["fin"], 10 ** 6)
+        if t["total"]:
+            n_afirm = "1 afirmación" if t["total"] == 1 else f'{t["total"]} afirmaciones'
+            ver = "la afirmación" if t["total"] == 1 else f'sus {t["total"]} afirmaciones'
+            recuento = (f'<p class="recuento">{n_afirm}: {recuento}</p><div class="barra-tema" aria-hidden="true">{barra}</div>'
+                        # Solo se ve cuando el filtro deja el tema vacío: el tema se pliega en vez de desaparecer
+                        f'<p class="sin-filtro">Ninguna con el filtro actual. <button type="button" class="ver-tema">'
+                        f'Ver {ver}</button></p>')
+        else:
+            recuento = '<p class="recuento sin">Sin afirmaciones comprobables en este tema.</p>'
         filas.append(
-            f'<li class="capitulo" id="tema-{t["n"]}" data-etiqueta="Tema {t["n"]} · {e(t["titulo"], quote=True)}">'
+            f'<li class="capitulo{"" if t["total"] else " vacio"}" id="tema-{t["n"]}" data-etiqueta="Tema {t["n"]} · {e(t["titulo"], quote=True)}">'
             f'<a class="minuto" href="https://www.youtube.com/watch?v={m["video"]}&t={t["ini"]}s" data-min target="_blank" '
             f'rel="noopener noreferrer">{hms(t["ini"])}</a><span class="marca" aria-hidden="true">{t["n"]}</span>'
             f'<div class="cab-tema"><p class="num-tema">Tema {t["n"]} de {n_temas} · {hms(t["ini"])} – {hms(fin)}</p>'
-            f'<h2>{e(t["titulo"])}</h2><p class="recuento">{t["total"]} afirmaciones: {recuento}</p>'
-            f'<div class="barra-tema" aria-hidden="true">{barra}</div></div></li>')
+            f'<h2>{e(t["titulo"])}</h2>{recuento}</div></li>')
         filas += [panel(a) for a in t["suyas"]]
     excl = len(m["excluidas"])
     nota_excl = (f' Se han dejado fuera {excl} afirmaciones sin interés para el debate público (datos personales, anécdotas, '
@@ -1199,7 +1280,7 @@ def pagina_entrevista(m, entrevistas):
         alt=f'Verificación dato a dato: {m["invitado"]} ({m.get("partido") or "sin partido"}) en {m["programa"]}')
     n_preguntas = preguntas_jordi(m)
     pagina = rellenar(
-        PLANTILLA, VISOR=VISOR_FUENTE, CABECERA=cab, PREGUNTAS=JS_PREGUNTAS if n_preguntas else "", FAB=FAB_LEYENDA, BARRA=barra_reparto(m, "barra-reparto grande"), RETRATO=retrato(m) or "", CREDITOS=creditos_fotos([m]), MENU=menu(entrevistas, m["slug"]), CSS_MENU=CSS_MENU, LEYENDA=LEYENDA, NOTA_EXCL=nota_excl,
+        PLANTILLA, VISOR=VISOR_FUENTE, CABECERA=cab, PREGUNTAS=JS_PREGUNTAS if n_preguntas else "", FAB=FAB_LEYENDA, MINI=mini_resumen([x for x in entrevistas if x.get("publicar")], m["slug"], suelto=False), BARRA=barra_reparto(m, "barra-reparto grande"), RETRATO=retrato(m) or "", CREDITOS=creditos_fotos([m]), MENU=menu(entrevistas, m["slug"]), CSS_MENU=CSS_MENU, LEYENDA=LEYENDA, NOTA_EXCL=nota_excl,
         FILTROS=filtros(m, '<span class="tema-actual" id="tema-actual"></span>'), SUMA=m["suma"], MALAS=m["malas"],
         FALSAS=m["total"]["falso"], ENGANOSAS=m["total"]["enganoso"], CASI=m["total"]["mayormente_verdadero"],
         VERDADERAS=m["total"]["verdadero"], NV=m["total"]["no_verificable"], FILAS="".join(filas),
@@ -1295,7 +1376,7 @@ def pagina_transcripcion(m, entrevistas):
             k1 = k0
             while k1 + 1 < len(ks) and marca.get(ks[k1 + 1]) is a:
                 k1 += 1
-            texto = e(" ".join(segmentos[k]["t"].strip() for k in ks[k0:k1 + 1]))
+            texto = e(corregir(" ".join(segmentos[k]["t"].strip() for k in ks[k0:k1 + 1])))
             if a is None:
                 trozos.append(texto)
             else:
@@ -1350,12 +1431,15 @@ def pagina_transcripcion(m, entrevistas):
         f'Transcripción completa de la entrevista de Jordi Wild a {m["invitado"]} ({m["programa"]}), con marcas de tiempo '
         'enlazadas al vídeo y a cada afirmación verificada.', imagen_de(m["slug"]),
         alt=f'Verificación dato a dato: {m["invitado"]} ({m.get("partido") or "sin partido"}) en {m["programa"]}')
+    con_titulo = [t for t in m["temas"] if any(d.startswith(f'<h2 id="tema-{t["n"]}"') for d in cuerpo)]
     indice_temas = "".join(
-        f'<li><a href="#tema-{t["n"]}"><span>{e(t["titulo"])}</span><small>{hms(t["ini"])}</small></a></li>'
-        for t in m["temas"] if any(d.startswith(f'<h2 id="tema-{t["n"]}"') for d in cuerpo))
+        f'<li><a href="#tema-{t["n"]}"><span>{e(t["titulo"])}</span><small>{hms(t["ini"])}</small></a></li>' for t in con_titulo)
+    # En pantallas sin hueco para el índice lateral, un desplegable en la barra de filtros hace lo mismo
+    ir_tema = ('<select class="ir-tema" id="ir-tema" aria-label="Ir a un tema de la entrevista"><option value="">Temas…</option>'
+               + "".join(f'<option value="tema-{t["n"]}">{t["n"]}. {e(t["titulo"])}</option>' for t in con_titulo) + '</select>')
     pagina = rellenar(
-        TRANSCRIPCION, CABECERA=cab, FAB=FAB_LEYENDA, INDICE=indice_temas, RETRATO=retrato(m, " peque") or "", MENU=menu(entrevistas, m["slug"]),
-        CSS_MENU=CSS_MENU, LEYENDA=LEYENDA, FILTROS=filtros(m, solo), NOTA_VOCES=nota_voces,
+        TRANSCRIPCION, CABECERA=cab, FAB=FAB_LEYENDA, MINI=mini_resumen([x for x in entrevistas if x.get("publicar")], m["slug"]), INDICE=indice_temas, RETRATO=retrato(m, " peque") or "", MENU=menu(entrevistas, m["slug"]),
+        CSS_MENU=CSS_MENU, LEYENDA=LEYENDA, FILTROS=filtros(m, solo, ir_tema), NOTA_VOCES=nota_voces,
         CUERPO=f'<div class="dialogo{" con-voces" if voces else ""}">{"".join(cuerpo)}</div>',
         INVITADO=e(m["invitado"]), PROGRAMA=e(m["programa"]), FECHA_VIDEO=e(m["fecha"]), DURACION=e(m["duracion"]),
         VIDEO=m["video"], SLUG=m["slug"], REPO=REPO)
@@ -1707,11 +1791,13 @@ def generar_api(hechas):
                  else [None] * len(segs))
         escribir_json(api / m["slug"] / "transcripcion.json", dict(
             comun, entrevista=ficha_api(m),
-            nota="Transcripción automática (Whisper), que puede tener errores en nombres y cifras. El hablante de cada segmento sale de un reconocimiento automático de voces (acierto medido del 97 %; falla sobre todo en frases muy cortas).",
-            segmentos=[{"inicio_s": round(x["i"], 2), "fin_s": round(x["f"], 2), "hablante": v, "texto": x["t"].strip()}
+            nota="Transcripción automática (Whisper), que puede tener errores en nombres y cifras. Los nombres mal transcritos "
+                 f"más claros se corrigen con un glosario público ({REPO}/blob/main/entrevistas/glosario.json). El hablante de cada "
+                 "segmento sale de un reconocimiento automático de voces (acierto medido del 97 %; falla sobre todo en frases muy cortas).",
+            segmentos=[{"inicio_s": round(x["i"], 2), "fin_s": round(x["f"], 2), "hablante": v, "texto": corregir(x["t"].strip())}
                        for x, v in zip(segs, voces)]))
         (api / m["slug"] / "transcripcion.txt").write_text(
-            (m["carpeta"] / "transcripcion.txt").read_text(encoding="utf-8"), encoding="utf-8")
+            corregir((m["carpeta"] / "transcripcion.txt").read_text(encoding="utf-8")), encoding="utf-8")
     escribir_json(api / "afirmaciones.json", dict(comun, total=len(todas), afirmaciones=todas))
     api_publica.escribir_csv(api / "afirmaciones.csv", todas)
     slugs = [m["slug"] for m in hechas]
@@ -2271,7 +2357,7 @@ def main():
         QUIEN, ANALITICA=ANALITICA_QUIEN if UMAMI_ID else SIN_ANALITICA_QUIEN, CABECERA=cabecera(
             "/quien", "Quién hace esto · Verificación The Wild Project",
             "Quién hace esta verificación, su independencia, quién la paga, cómo se hace y cómo se corrigen los errores."),
-        MENU=menu(entrevistas), CSS_MENU=CSS_MENU, REPO=REPO, REPO_PABLO=REPO_PABLO, BIO_PABLO=BIO_PABLO, ENLACES_PABLO=ENLACES_PABLO, BIO_DIEGO=BIO_DIEGO, ENLACES_DIEGO=ENLACES_DIEGO), encoding="utf-8")
+        MENU=menu(entrevistas), MINI=mini_resumen(hechas), CSS_MENU=CSS_MENU, REPO=REPO, REPO_PABLO=REPO_PABLO, BIO_PABLO=BIO_PABLO, ENLACES_PABLO=ENLACES_PABLO, BIO_DIEGO=BIO_DIEGO, ENLACES_DIEGO=ENLACES_DIEGO), encoding="utf-8")
     # formularios que no salen de la web (avisar de un error y proponer un hecho) y su función de Vercel
     for ruta_f, plantilla_f, titulo_f, desc_f in (
             ("avisar", avisos.PAGINA, "Avisar de un error",
@@ -2297,7 +2383,7 @@ def main():
         PAGINA_API, CABECERA=cabecera(
             "/api", "Verifícalo tú · API abierta · Verificación The Wild Project",
             "Cómo comprobar por tu cuenta cada veredicto, con la API abierta en JSON y CSV (sin clave), un encargo para que "
-            "cualquier IA audite la verificación y un prompt listo para agentes de IA."), PROMPT=e(prompt_agente(hechas)), MENU=menu(entrevistas), CSS_MENU=CSS_MENU, BASE=BASE, REPO=REPO,
+            "cualquier IA audite la verificación y un prompt listo para agentes de IA."), PROMPT=e(prompt_agente(hechas)), MENU=menu(entrevistas), MINI=mini_resumen(hechas), CSS_MENU=CSS_MENU, BASE=BASE, REPO=REPO,
         SCALAR=SCALAR, SCALAR_SRI=SCALAR_SRI), encoding="utf-8")
     # La referencia vivió unas horas en /api/referencia: se redirige (aquí y en vercel.json).
     (DATOS / "referencia").mkdir(exist_ok=True)
@@ -2360,7 +2446,7 @@ html { scroll-behavior:smooth; scroll-padding-top:calc(var(--menu, 48px) + 64px)
 .ancho { max-width:1360px; margin:0 auto; padding-left:clamp(16px,4vw,48px); padding-right:clamp(16px,4vw,48px); }
 .menu { position:sticky; top:0; z-index:10; background:var(--fondo); border-bottom:2px solid var(--tinta); }
 .menu .ancho { padding-top:9px; padding-bottom:9px; position:relative; }
-.m1 { display:flex; flex-wrap:wrap; align-items:center; gap:4px 24px; font-size:14.5px; }
+.m1 { display:flex; flex-wrap:wrap; align-items:center; gap:4px 24px; font-size:14.5px; line-height:22px; }   /* alto de línea entero: así la fila mide píxeles enteros y el botón de modo queda centrado sin medio píxel */
 .m1 a, .desp summary { color:var(--tinta); text-decoration:none; font-weight:600; padding:3px 0; border-bottom:2px solid transparent; }
 /* Subrayado del menú: se dibuja de izquierda a derecha al pasar el ratón y se recoge hacia la derecha al salir */
 .m1 > a:not(.sello), .desp summary { position:relative; border-bottom-color:transparent !important; }
@@ -2368,13 +2454,13 @@ html { scroll-behavior:smooth; scroll-padding-top:calc(var(--menu, 48px) + 64px)
   transform:scaleX(0); transform-origin:right center; transition:transform .28s cubic-bezier(.4,0,.2,1); }
 .m1 > a:not(.sello):hover::after, .m1 > a:not(.sello):focus-visible::after, .desp summary:hover::after, .desp summary:focus-visible::after,
 .desp.actual summary::after, .desp[open] summary::after { transform:scaleX(1); transform-origin:left center; }
-.m1 .sello { font:700 17px/1.2 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; }
+.m1 .sello { font:700 17px/22px "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; }   /* alto entero: la fila del menú mide píxeles enteros y lo centrado cae en píxel exacto */
 .m1 .off { color:var(--gris-claro); } .m1 .dcha { margin-left:auto; }
 .modo { flex:none; display:inline-grid; place-items:center; width:26px; height:26px; padding:0; margin:0 0 0 -8px; cursor:pointer;
   color:var(--tinta); background:var(--fondo); border:1.5px solid var(--tinta); border-radius:50%; }
 .modo:hover { background:var(--tinta); color:var(--fondo); }
 .modo { line-height:0; font-size:0; }
-.modo svg { display:block; width:15px; height:15px; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+.modo svg { display:block; width:16px; height:16px; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
 .modo .luna { display:var(--luna); } .modo .sol { display:var(--sol); }
 .rot { font-size:10.5px; font-weight:700; text-transform:uppercase; letter-spacing:.09em; color:var(--gris); flex:none; }
 .desp { position:relative; margin:0; padding:0; border:0; font-size:inherit; }
@@ -2460,7 +2546,7 @@ footer .pie-quien { margin-top:18px; }
   .m1 > a:not(.sello)::after, .desp summary::after { bottom:5px; }
   .m1 { padding-right:72px; }
   .modo { position:absolute; right:12px; top:calc(50% - 16px); margin:0; width:32px; height:32px; }
-  .modo svg { width:17px; height:17px; }
+  .modo svg { width:18px; height:18px; }
   .menu .ancho::after { content:""; position:absolute; top:0; bottom:0; right:52px; width:28px; pointer-events:none;
     background:linear-gradient(to right, transparent, var(--fondo)); }
   .menu .ancho::before { content:""; position:absolute; top:0; bottom:0; right:0; width:52px; background:var(--fondo); pointer-events:none; z-index:1; }
@@ -2638,6 +2724,51 @@ html.con-repro .arriba { bottom:calc(var(--repro-h, 0px) + 28px + env(safe-area-
   html.con-repro .fab, html.con-repro .arriba { bottom:calc(var(--repro-h, 0px) + 12px); }
   html.con-repro .aviso { bottom:calc(var(--repro-h, 0px) + 16px); }
   html.con-repro .fab-panel { max-height:calc(100dvh - var(--menu, 48px) - 100px - var(--repro-h, 0px)); } }
+/* Menú «Más»: en pantallas anchas no existe (los enlaces van sueltos); en móvil recoge los enlaces secundarios y el cambio de modo */
+.desp > summary { font-size:inherit; }
+.mas { display:none; }
+.mas-lista { list-style:none; margin:0; padding:0; }
+.desp.mas .mas-lista a { display:flex; align-items:center; min-height:48px; padding:0 10px; font-size:16px; font-weight:600; color:var(--tinta);
+  border-bottom:1px solid var(--claro); border-radius:0; text-decoration:none; }
+.desp.mas .mas-lista a:hover, .desp.mas .mas-lista a:focus-visible { background:var(--resalte); }
+.modo-txt { display:flex; align-items:center; gap:10px; width:100%; min-height:48px; padding:0 10px; margin:0; font:inherit; font-size:16px; font-weight:600;
+  color:var(--tinta); background:none; border:0; cursor:pointer; text-align:left; border-radius:var(--r-boton); }
+.modo-txt:hover { background:var(--resalte); }
+.modo-txt svg { display:block; flex:none; width:18px; height:18px; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+.modo-txt .luna { display:var(--luna); } .modo-txt .sol { display:var(--sol); }
+@media (max-width:760px) {
+  .m1 > .sec, .m1 > .modo { display:none; }
+  .mas { display:block; }
+  .desp.mas > summary { position:absolute; right:12px; top:calc(50% - 18px); z-index:2; display:grid; place-items:center; width:36px; height:36px;
+    min-height:0; padding:0; border:1.5px solid var(--tinta) !important; border-radius:50%; background:var(--fondo); color:var(--tinta); }
+  .desp.mas > summary::after { display:none; }
+  .desp.mas[open] > summary { background:var(--tinta); color:var(--fondo); }
+  .desp.mas > summary svg { display:block; width:18px; height:18px; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; }
+  .m1 .buscar span { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; } .m1 .buscar { gap:0; }   /* solo la lupa */
+  .m1 { gap:0 14px; } }
+"""
+CSS_MENU += """
+/* Resumen al pie de cada página: la entrevista de la página o, en las generales, una tarjeta por candidato */
+.resumenes { border-top:3px solid var(--tinta); padding:26px 0 34px; margin-top:24px; }
+.resumenes .mini-t { font:700 22px/1.2 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; margin:0 0 16px; padding:0; border:0; letter-spacing:0; }
+.mini-lista { display:grid; gap:12px; grid-template-columns:repeat(auto-fit, minmax(min(100%, 280px), 1fr)); }
+.mini-e { display:flex; flex-direction:column; gap:9px; border:1.5px solid var(--tinta); border-radius:var(--r-caja); padding:14px 16px 12px; background:var(--fondo); }
+.mini-cab { display:flex; align-items:center; gap:12px; }
+.mini-cab .retrato { width:44px; height:44px; } .mini-cab .retrato .insignia { display:none; }
+.mini-cab h3 { margin:0; font:700 18px/1.2 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; }
+.mini-cab h3 a { color:var(--tinta); text-decoration:none; } .mini-cab h3 a:hover { text-decoration:underline; }
+.mini-meta { margin:2px 0 0; font-size:12.5px; color:var(--gris); }
+.mini-res { margin:0; font-size:14.5px; line-height:1.5; max-width:none; }
+.mini-num { margin:0; font-size:13.5px; } .mini-num b { font:700 21px/1 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; margin-right:2px; }
+.barra-reparto.mini-barra { margin:0; height:8px; animation:none; }
+.mini-acc { margin:auto 0 0; display:flex; flex-wrap:wrap; gap:0 18px; font-size:13.5px; font-weight:600; }
+.mini-acc a { display:inline-flex; align-items:center; gap:4px; min-height:36px; color:var(--tinta); }
+/* Iconos de «↗» y «→» (ICONO_EXTERNO, ICONO_SIGUE): trazo que hereda el color, a la altura de la letra */
+.ic { display:block; flex:none; width:14px; height:14px; fill:none; stroke:currentColor; stroke-width:2.2; stroke-linecap:round; stroke-linejoin:round; }
+.m1 > a.gh { display:inline-flex; align-items:center; gap:3px; }
+.desp.mas .mas-lista a .ic { margin-left:4px; }
+/* En la cabecera de cada entrevista: debajo del texto y de las cifras, ocupando las dos columnas */
+.resumenes.en-cabeza { grid-column:1 / -1; margin-top:28px; padding:18px 0 0; }
 """
 CSS_MENU = (CSS_MENU.replace("@@CLARO@@", _CLARO).replace("@@OSCURO@@", _OSCURO)
             .replace("@@CLASES_TONO@@", "\n".join(f"[data-v={k}], .tono-{k} {{ --tono:var(--v-{k}); }}" for k in ORDEN)))
@@ -2750,6 +2881,7 @@ h1 { font:700 clamp(30px,5.2vw,58px)/1.05 var(--serif); letter-spacing:-0.02em; 
 </section>
 </div>
 </main>
+@@MINI@@
 <footer class="pie-solo"><div class="ancho">@@PIE@@</div></footer>
 </body>
 </html>
@@ -2938,6 +3070,7 @@ body.light-mode, body.dark-mode, body .scalar-app {
 <p class="saltos"><a href="#verificalo" data-ancla="verifícalo-tú">Cómo comprobarlo ↓</a><a href="#agentes" data-ancla="prompt-para-agentes-de-ia">Prompt para agentes de IA ↓</a><a href="#referencia">Referencia de la API ↓</a><a href="/api/v1/openapi.json">openapi.json</a><a href="/llms.txt">llms.txt</a></p>
 </div></header>
 <div id="referencia"></div>
+@@MINI@@
 <footer class="pie-solo"><div class="ancho">@@PIE@@</div></footer>
 <noscript><p>La referencia interactiva necesita JavaScript. Tienes la misma información en <a href="/api/v1/openapi.json">openapi.json</a>.</p></noscript>
 <script src="https://cdn.jsdelivr.net/npm/@scalar/api-reference@@@SCALAR@@/dist/browser/standalone.js" integrity="@@SCALAR_SRI@@" crossorigin="anonymous"></script>
@@ -3420,6 +3553,12 @@ img.cara { border:0; background:var(--claro); }
   .quien { align-items:center; gap:8px; padding-top:0; } .nom { flex-direction:row; align-items:baseline; gap:6px; padding-top:0; }
   .cara { width:28px; height:28px; font-size:11px; }
   .turno[data-voz=G] .par p { padding-left:12px; } .turno:not([data-voz=G]) .par p { padding-left:0; } }
+.ir-tema { flex:none; max-width:min(240px, 52vw); font:inherit; font-size:12.5px; font-weight:700; color:var(--fondo); background:var(--tinta);
+  border:1.5px solid var(--tinta); border-radius:999px; padding:3px 26px 3px 11px; text-overflow:ellipsis; -webkit-appearance:none; appearance:none;
+  background-image:linear-gradient(45deg, transparent 50%, var(--fondo) 50%), linear-gradient(135deg, var(--fondo) 50%, transparent 50%);
+  background-position:calc(100% - 15px) 52%, calc(100% - 10px) 52%; background-size:5px 5px; background-repeat:no-repeat; }
+@media (min-width:1180px) { .ir-tema { display:none; } }
+@media (max-width:760px) { .ir-tema { font-size:13px; min-height:34px; } }
 @@CSS_MENU@@
 </style>
 </head>
@@ -3430,11 +3569,12 @@ img.cara { border:0; background:var(--claro); }
 <nav class="indice" aria-label="Temas de la entrevista"><p>Temas</p><ol>@@INDICE@@</ol></nav>
 <div class="lectura">
 <div class="titular">@@RETRATO@@<h1>Transcripción completa: @@INVITADO@@ con Jordi Wild</h1></div>
-<p class="entrada">@@PROGRAMA@@ · @@FECHA_VIDEO@@ · @@DURACION@@. Transcripción automática (Whisper), que puede tener errores en nombres y cifras. @@NOTA_VOCES@@Cada minuto abre el <a href="https://www.youtube.com/watch?v=@@VIDEO@@" target="_blank" rel="noopener noreferrer">vídeo</a> en ese punto. <b>Lo subrayado es una afirmación analizada</b>: el color es su veredicto, y al pulsarla vas a su tarjeta en la <a href="/@@SLUG@@">línea temporal</a>, con la justificación y las fuentes. Si ves algo sin subrayar que habría que comprobar, <a href="/proponer?e=@@SLUG@@">propónlo</a>.</p>
+<p class="entrada">@@PROGRAMA@@ · @@FECHA_VIDEO@@ · @@DURACION@@. Transcripción automática (Whisper), que puede tener errores en nombres y cifras; los nombres mal transcritos más claros se corrigen con un <a href="@@REPO@@/blob/main/entrevistas/glosario.json" target="_blank" rel="noopener noreferrer">glosario público</a>. @@NOTA_VOCES@@Cada minuto abre el <a href="https://www.youtube.com/watch?v=@@VIDEO@@" target="_blank" rel="noopener noreferrer">vídeo</a> en ese punto. <b>Lo subrayado es una afirmación analizada</b>: el color es su veredicto, y al pulsarla vas a su tarjeta en la <a href="/@@SLUG@@">línea temporal</a>, con la justificación y las fuentes. Si ves algo sin subrayar que habría que comprobar, <a href="/proponer?e=@@SLUG@@">propónlo</a>.</p>
 @@CUERPO@@
 <div style="border-top:3px solid var(--tinta); margin-top:48px; padding-top:22px">@@LEYENDA@@</div>
 </div>
 </main>
+@@MINI@@
 <footer class="pie-solo"><div class="ancho">@@PIE@@</div></footer>
 @@REPRODUCTOR@@
 <script>
@@ -3477,11 +3617,18 @@ todas.onclick = () => { botones.forEach(b => activos.add(b.dataset.v)); pintar()
 soloB.onclick = () => { solo = !solo; pintar(); };
 pintar();
 const enIndice = new Map([...document.querySelectorAll(".indice a")].map(a => [a.hash.slice(1), a]));
+const irTema = document.getElementById("ir-tema");
+irTema.onchange = () => {
+  const h = irTema.value && document.getElementById(irTema.value);
+  if (!h) return;
+  h.scrollIntoView(); history.replaceState(null, "", "#" + h.id);
+};
 if (enIndice.size && "IntersectionObserver" in window) {
   const obs = new IntersectionObserver(es => es.forEach(x => {
     if (!x.isIntersecting) return;
     enIndice.forEach(a => a.classList.remove("aqui"));
     enIndice.get(x.target.id)?.classList.add("aqui");
+    irTema.value = x.target.id;
   }), { rootMargin: "0px 0px -70% 0px" });
   enIndice.forEach((a, id) => { const h = document.getElementById(id); if (h) obs.observe(h); });
 }
@@ -3583,6 +3730,19 @@ h2 { font:700 23px/1.2 var(--serif); margin:0; letter-spacing:-0.01em; text-wrap
 .recuento span { color:var(--tono); }
 .barra-tema { display:flex; gap:2px; height:6px; max-width:420px; margin-top:8px; border-radius:3px; overflow:hidden; }
 .barra-tema i { display:block; min-width:3px; background:var(--tono); }
+/* Tema plegado: sin afirmaciones (vacio) o sin ninguna que pase el filtro (plegado). Se queda en la línea, más pequeño y en gris */
+.sin-filtro { display:none; margin:8px 0 0; font-size:13.5px; color:var(--gris); }
+.capitulo.plegado .sin-filtro { display:block; }
+.capitulo.plegado .barra-tema { display:none; }
+.recuento.sin { color:var(--gris); font-weight:500; }
+.ver-tema { font:inherit; font-size:13px; font-weight:600; color:var(--tinta); background:var(--fondo); border:1.5px solid var(--tinta);
+  border-radius:var(--r-boton); padding:3px 10px; margin-left:4px; cursor:pointer; }
+.ver-tema:hover { background:var(--tinta); color:var(--fondo); }
+.capitulo.plegado, .capitulo.vacio { margin-top:28px; padding:16px 0 6px; border-top-width:1px; }
+.capitulo.plegado .cab-tema h2, .capitulo.vacio .cab-tema h2 { font-size:21px; }
+.capitulo.plegado .marca, .capitulo.vacio .marca { background:var(--fondo); color:var(--gris); border:1.5px solid var(--gris);
+  width:30px; height:30px; left:calc(var(--col) - 14px); top:-16px; font-size:14px; }
+@media (max-width:600px) { .ver-tema { min-height:36px; margin:6px 0 0; display:block; } .capitulo.plegado .cab-tema h2, .capitulo.vacio .cab-tema h2 { font-size:19px; } }
 .tema-actual { margin-left:auto; font-size:13px; font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
   max-width:46ch; padding-left:10px; }
 .tema-actual:empty { display:none; }
@@ -3680,6 +3840,7 @@ footer .leyenda-f { margin-bottom:34px; max-width:820px; }
   @@BARRA@@
   <p class="resto">El resto: @@VERDADERAS@@ verdaderas, @@CASI@@ casi ciertas y @@NV@@ que no se han podido verificar.@@NOTA_EXCL@@</p>
   </div>
+  @@MINI@@
 </div>
 @@FILTROS@@
 <main class="ancho"><ol class="linea">@@FILAS@@</ol></main>
@@ -3710,16 +3871,18 @@ const aqui = location.pathname.replace(/\\/$/, "");
 function pintar() {
   botones.forEach(b => b.setAttribute("aria-pressed", activos.has(b.dataset.v)));
   todas.setAttribute("aria-pressed", activos.size === botones.length);
+  // Un tema que el filtro deja sin afirmaciones no desaparece: se pliega y ofrece ver las suyas
   let cap = null, n = 0;
+  const plegar = () => { if (cap) cap.classList.toggle("plegado", n === 0 && !cap.classList.contains("vacio")); };
   document.querySelectorAll(".linea > li").forEach(li => {
-    if (li.classList.contains("capitulo")) { if (cap) cap.hidden = n === 0; cap = li; n = 0; }
+    if (li.classList.contains("capitulo")) { plegar(); cap = li; n = 0; }
     else { li.hidden = !activos.has(li.dataset.v); if (!li.hidden) n++; }
   });
-  if (cap) cap.hidden = n === 0;
+  plegar();
   const vistas = document.querySelectorAll(".linea > .hito:not([hidden])").length;
   document.querySelector("#filtros .cuenta").textContent = `Mostrando ${vistas} de ${@@SUMA@@}`;
   document.querySelectorAll(".lista a[data-tema]").forEach(a => {
-    if (a.pathname.replace(/\\/$/, "") === aqui) a.classList.toggle("off", document.getElementById(a.dataset.tema).hidden);
+    if (a.pathname.replace(/\\/$/, "") === aqui) a.classList.toggle("off", document.getElementById(a.dataset.tema).classList.contains("plegado"));
   });
 }
 function verTodo() { botones.forEach(b => activos.add(b.dataset.v)); }
@@ -3747,9 +3910,15 @@ todas.onclick = () => {
 function irAlAncla() {
   const d = location.hash.length > 1 && document.getElementById(location.hash.slice(1));
   if (!d) return;
-  if (d.hidden) { if (d.dataset.v) activos.add(d.dataset.v); else verTodo(); pintar(); }
+  if (d.hidden) { activos.add(d.dataset.v); pintar(); }
+  else if (d.classList.contains("plegado")) { verTodo(); pintar(); }
   d.scrollIntoView();
 }
+document.querySelectorAll(".ver-tema").forEach(b => b.onclick = () => {
+  const cap = b.closest(".capitulo");
+  verTodo(); pintar(); cap.scrollIntoView(); marcarTema();
+  cap.querySelector("h2").setAttribute("tabindex", "-1"); cap.querySelector("h2").focus({ preventScroll: true });
+});
 pintar(); irAlAncla(); marcarTema();
 addEventListener("hashchange", irAlAncla);
 @@PREGUNTAS@@

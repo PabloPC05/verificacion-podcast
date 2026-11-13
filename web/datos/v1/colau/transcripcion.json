@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-13T21:47:57+01:00",
+ "generado": "2026-11-13T22:56:17+01:00",
  "aviso": "Verificación asistida por IA, sin revisión de un equipo de periodistas. «falso» no implica intención de mentir. Contrasta siempre con las fuentes enlazadas.",
  "veredictos": {
   "verdadero": "Los datos lo confirman.",
@@ -217,7 +217,7 @@
    }
   ]
  },
- "nota": "Transcripción automática (Whisper), que puede tener errores en nombres y cifras. El hablante de cada segmento sale de un reconocimiento automático de voces (acierto medido del 97 %; falla sobre todo en frases muy cortas).",
+ "nota": "Transcripción automática (Whisper), que puede tener errores en nombres y cifras. Los nombres mal transcritos más claros se corrigen con un glosario público (https://github.com/PabloPC05/verificacion-podcast/blob/main/entrevistas/glosario.json). El hablante de cada segmento sale de un reconocimiento automático de voces (acierto medido del 97 %; falla sobre todo en frases muy cortas).",
  "segmentos": [
   {
    "inicio_s": 0.0,
@@ -247,7 +247,7 @@
    "inicio_s": 77.88,
    "fin_s": 96.3,
    "hablante": "Jordi Wild",
-   "texto": "Bueno, bueno, bueno. Hacemos historia aquí en The Wall Project con esta serie de entrevistas en las que voy a tener a los cuatro candidatos para presidente, presidenta del país."
+   "texto": "Bueno, bueno, bueno. Hacemos historia aquí en The Wild Project con esta serie de entrevistas en las que voy a tener a los cuatro candidatos para presidente, presidenta del país."
   },
   {
    "inicio_s": 96.3,
@@ -541,7 +541,7 @@
    "inicio_s": 224.98,
    "fin_s": 227.28,
    "hablante": "Ada Colau",
-   "texto": "con Jordi Wilde. Es lo primero que me dijo."
+   "texto": "con Jordi Wild. Es lo primero que me dijo."
   },
   {
    "inicio_s": 228.04,
@@ -3391,7 +3391,7 @@
    "inicio_s": 1623.78,
    "fin_s": 1626.32,
    "hablante": "Jordi Wild",
-   "texto": "Pero eso es lo que la gente de The World Project quiere escuchar, que os mojéis."
+   "texto": "Pero eso es lo que la gente de The Wild Project quiere escuchar, que os mojéis."
   },
   {
    "inicio_s": 1626.44,
@@ -11083,7 +11083,7 @@
    "inicio_s": 5067.92,
    "fin_s": 5070.04,
    "hablante": "Jordi Wild",
-   "texto": "Javier Goyado, Iván Muñoz"
+   "texto": "Javier Collado, Iván Muñoz"
   },
   {
    "inicio_s": 5070.04,
@@ -16243,13 +16243,13 @@
    "inicio_s": 7312.9,
    "fin_s": 7313.7,
    "hablante": "Jordi Wild",
-   "texto": "Alberto Núñez Feijo."
+   "texto": "Alberto Núñez Feijóo."
   },
   {
    "inicio_s": 7315.4,
    "fin_s": 7325.96,
    "hablante": "Ada Colau",
-   "texto": "Alberto Núñez Feijo es un hombre de derechas bastante sincero, porque ha empezado la campaña dándonos argumentos para no votarle."
+   "texto": "Alberto Núñez Feijóo es un hombre de derechas bastante sincero, porque ha empezado la campaña dándonos argumentos para no votarle."
   },
   {
    "inicio_s": 7325.96,
