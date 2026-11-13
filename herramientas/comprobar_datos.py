@@ -4,6 +4,7 @@
 Uso: python3 herramientas/comprobar_datos.py
 Sale con error (y anotaciones ::error para GitHub) si algo no cuadra.
 """
+import datetime as dt
 import json
 import os
 import sys
@@ -22,6 +23,14 @@ def error(ruta, mensaje):
     errores += 1
     rel = ruta.relative_to(RAIZ)
     print(f"::error file={rel}::{mensaje}" if EN_CI else f"ERROR {rel}: {mensaje}")
+
+
+def es_fecha(texto):
+    try:
+        dt.date.fromisoformat(str(texto))
+        return True
+    except ValueError:
+        return False
 
 
 def leer(ruta):
@@ -61,12 +70,36 @@ for carpeta in sorted(p for p in (RAIZ / "entrevistas").iterdir() if p.is_dir())
             for f in a.get("fuentes", []):
                 if not isinstance(f, dict) or not str(f.get("url", "")).startswith(("http://", "https://")):
                     error(ruta, f"{donde}: fuente sin URL http(s): {f}")
+            if "verificado" in a and not es_fecha(a["verificado"]):
+                error(ruta, f"{donde}: «verificado» debe ser una fecha AAAA-MM-DD")
+            for c in a.get("correcciones", []):
+                if not isinstance(c, dict) or not es_fecha(c.get("fecha")) or not c.get("motivo"):
+                    error(ruta, f"{donde}: cada corrección necesita «fecha» (AAAA-MM-DD) y «motivo»")
+                elif c.get("antes") not in VEREDICTOS | {None}:
+                    error(ruta, f"{donde}: corrección con «antes» no válido: {c.get('antes')}")
         resumen = carpeta / "resumenes" / ruta.name
         if resumen.exists():
             r = leer(resumen)
             if isinstance(r, list) and len(r) != len(datos):
                 error(resumen, f"tiene {len(r)} resúmenes y resultados/{ruta.name} tiene {len(datos)} afirmaciones: "
                                "deben coincidir en número y orden")
+    if "verificado" in meta and not es_fecha(meta["verificado"]):
+        error(carpeta / "meta.json", "«verificado» debe ser una fecha AAAA-MM-DD")
+    es = carpeta / "esencial.json"
+    if es.exists():
+        d = leer(es)
+        xs = d.get("afirmaciones", []) if isinstance(d, dict) else []
+        if d is not None and not (3 <= len(xs) <= 5 and all(isinstance(x, dict) and x.get("id") and x.get("por_que") for x in xs)):
+            error(es, "«afirmaciones» debe tener de 3 a 5 elementos, cada uno con «id» y «por_que»")
+    ov = carpeta / "otros_verificadores.json"
+    if ov.exists():
+        d = leer(ov)
+        for x in d.get("enlaces", []) if isinstance(d, dict) else []:
+            if not (isinstance(x, dict) and x.get("id") and x.get("medio")
+                    and str(x.get("url", "")).startswith(("http://", "https://"))):
+                error(ov, f"cada enlace necesita «id», «medio» y una «url» http(s): {x}")
+            elif x.get("alcance") not in ("misma_frase", "mismo_dato", None):
+                error(ov, f"«alcance» debe ser misma_frase o mismo_dato: {x}")
     excl = carpeta / "excluidas.json"
     if excl.exists():
         d = leer(excl)

@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-13T21:47:57+01:00",
+ "generado": "2026-11-13T22:48:13+01:00",
  "aviso": "Verificación asistida por IA, sin revisión de un equipo de periodistas. «falso» no implica intención de mentir. Contrasta siempre con las fuentes enlazadas.",
  "veredictos": {
   "verdadero": "Los datos lo confirman.",
@@ -32,6 +32,13 @@
    "no_verificable": 15
   },
   "excluidas": 12,
+  "esencial": [
+   "colau-m5982",
+   "colau-m7323",
+   "colau-m2564",
+   "colau-m1483",
+   "colau-m4569"
+  ],
   "temas": [
    {
     "n": 1,
@@ -238,13 +245,20 @@
    "fuentes": [
     {
      "titulo": "El Español/ESdiario - Cuánto dinero público hay detrás del 29N (08/10/2026)",
-     "url": "https://www.esdiario.com/nacional/261008/199778/cuanto-dinero-publico-hay-detras-29n-cifras-disparar-ingresos-partidos.html"
+     "url": "https://www.esdiario.com/nacional/261008/199778/cuanto-dinero-publico-hay-detras-29n-cifras-disparar-ingresos-partidos.html",
+     "archivo": "https://web.archive.org/web/20261113213102/https://www.esdiario.com/nacional/261008/199778/cuanto-dinero-publico-hay-detras-29n-cifras-disparar-ingresos-partidos.html"
     },
     {
      "titulo": "Demócrata - La prima de riesgo entra en la campaña del 29N: qué interés paga cada partido por sus microcréditos",
-     "url": "https://www.democrata.es/elecciones-generales-espana/microcreditos-partidos-intereses-elecciones-29n/"
+     "url": "https://www.democrata.es/elecciones-generales-espana/microcreditos-partidos-intereses-elecciones-29n/",
+     "archivo": "https://web.archive.org/web/20261113213139/https://www.democrata.es/elecciones-generales-espana/microcreditos-partidos-intereses-elecciones-29n/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m355.png"
   },
   {
    "id": "colau-m355-2",
@@ -266,13 +280,20 @@
    "fuentes": [
     {
      "titulo": "Science Media Centre España - Un estudio muestra que el algoritmo de X (Twitter) mueve al usuario a posiciones políticas más conservadoras",
-     "url": "https://sciencemediacentre.es/un-estudio-muestra-que-el-algoritmo-de-x-twitter-mueve-al-usuario-posiciones-politicas-mas"
+     "url": "https://sciencemediacentre.es/un-estudio-muestra-que-el-algoritmo-de-x-twitter-mueve-al-usuario-posiciones-politicas-mas",
+     "archivo": "https://web.archive.org/web/20261113213300/https://sciencemediacentre.es/un-estudio-muestra-que-el-algoritmo-de-x-twitter-mueve-al-usuario-posiciones-politicas-mas"
     },
     {
      "titulo": "Diálogo Político - El algoritmo que inclina la balanza: ¿X te hace más conservador o progresista?",
-     "url": "https://dialogopolitico.org/debates/analisis-debates/algoritmo-inclina-conservador-o-progresista-feed/"
+     "url": "https://dialogopolitico.org/debates/analisis-debates/algoritmo-inclina-conservador-o-progresista-feed/",
+     "archivo": "https://web.archive.org/web/20261113213343/https://dialogopolitico.org/debates/analisis-debates/algoritmo-inclina-conservador-o-progresista-feed/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m355-2.png"
   },
   {
    "id": "colau-m355-3",
@@ -294,13 +315,20 @@
    "fuentes": [
     {
      "titulo": "Vozpópuli - Elon Musk, Europa, Alemania, AfD y Alice Weidel",
-     "url": "https://www.vozpopuli.com/internacional/elon-musk-europa-alemania-afd-alice-weidel-elecciones.html"
+     "url": "https://www.vozpopuli.com/internacional/elon-musk-europa-alemania-afd-alice-weidel-elecciones.html",
+     "archivo": "https://web.archive.org/web/20261113213419/https://www.vozpopuli.com/internacional/elon-musk-europa-alemania-afd-alice-weidel-elecciones.html"
     },
     {
      "titulo": "Metro Puerto Rico - «Totalmente inaceptable» el apoyo de Musk a la ultraderecha europea (17/01/2025)",
-     "url": "https://www.metro.pr/noticias/2025/01/17/totalmente-inaceptable-el-apoyo-de-musk-a-la-ultraderecha-europea/"
+     "url": "https://www.metro.pr/noticias/2025/01/17/totalmente-inaceptable-el-apoyo-de-musk-a-la-ultraderecha-europea/",
+     "archivo": "https://web.archive.org/web/20261113213538/https://www.metro.pr/noticias/2025/01/17/totalmente-inaceptable-el-apoyo-de-musk-a-la-ultraderecha-europea/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m355-3.png"
   },
   {
    "id": "colau-m437",
@@ -322,17 +350,24 @@
    "fuentes": [
     {
      "titulo": "El Tiempo - Musk se refirió al supuesto saludo nazi: «el ataque de todos son Hitler es agotador»",
-     "url": "https://www.eltiempo.com/mundo/eeuu-y-canada/elon-musk-se-refirio-al-supuesto-saludo-nazi-en-la-investidura-de-donald-trump-el-ataque-de-todos-son-hitler-es-agotador-3419378"
+     "url": "https://www.eltiempo.com/mundo/eeuu-y-canada/elon-musk-se-refirio-al-supuesto-saludo-nazi-en-la-investidura-de-donald-trump-el-ataque-de-todos-son-hitler-es-agotador-3419378",
+     "archivo": "https://web.archive.org/web/20261113213632/https://www.eltiempo.com/mundo/eeuu-y-canada/elon-musk-se-refirio-al-supuesto-saludo-nazi-en-la-investidura-de-donald-trump-el-ataque-de-todos-son-hitler-es-agotador-3419378"
     },
     {
      "titulo": "Euronews - ¿Hizo Elon Musk un saludo nazi ante los seguidores de Trump?",
-     "url": "https://es.euronews.com/2025/01/24/hizo-elon-musk-un-saludo-nazi-ante-los-seguidores-de-trump"
+     "url": "https://es.euronews.com/2025/01/24/hizo-elon-musk-un-saludo-nazi-ante-los-seguidores-de-trump",
+     "archivo": "https://web.archive.org/web/20261113213738/https://es.euronews.com/2025/01/24/hizo-elon-musk-un-saludo-nazi-ante-los-seguidores-de-trump"
     },
     {
      "titulo": "Ara - El presunto saludo nazi de Elon Musk y otros momentos clave de la investidura de Trump",
      "url": "https://es.ara.cat/internacional/estados-unidos/presunto-saludo-nazi-elon-musk-momentos-clave-investidura-trump_1_5261264.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m437.png"
   },
   {
    "id": "colau-m706",
@@ -364,7 +399,12 @@
      "titulo": "El Español - Confirmado: el desahucio de Maricarmen no es ilegal según la Ley de Arrendamientos Urbanos (24/09/2026)",
      "url": "https://www.elespanol.com/sociedad/20260924/confirmado-desahucio-maricarmen-anos-no-ilegal-ley-arrendamientos-urbanos-td/1003744395045_0.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m706.png"
   },
   {
    "id": "colau-m723",
@@ -396,7 +436,12 @@
      "titulo": "El Salto - No se trata (solo) de Maricarmen: una gran manifestación presiona al Gobierno",
      "url": "https://www.elsaltodiario.com/madrid/no-se-trata-solo-maricarmen-una-gran-manifestacion-presiona-al-gobierno-salga-paralisis"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m723.png"
   },
   {
    "id": "colau-m731",
@@ -418,13 +463,19 @@
    "fuentes": [
     {
      "titulo": "Demócrata - Ada Colau urges Sumar to leave the Government if the PSOE does not act after the eviction of Maricarmen (23/09/2026)",
-     "url": "https://www.democrata.es/en/politics/ada-colau-urges-sumar-to-leave-the-government-if-the-psoe-does-not-act-after-the-eviction-of-maricarmen/"
+     "url": "https://www.democrata.es/en/politics/ada-colau-urges-sumar-to-leave-the-government-if-the-psoe-does-not-act-after-the-eviction-of-maricarmen/",
+     "archivo": "https://web.archive.org/web/20261113201604/https://www.democrata.es/en/politics/ada-colau-urges-sumar-to-leave-the-government-if-the-psoe-does-not-act-after-the-eviction-of-maricarmen/"
     },
     {
      "titulo": "Onda Vasca - Colau acusa a Sánchez de llegar tarde al caso de Maricarmen",
      "url": "https://www.ondavasca.com/colau-acusa-a-sanchez-de-llegar-tarde-al-caso-de-maricarmen/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m731.png"
   },
   {
    "id": "colau-m771",
@@ -456,7 +507,12 @@
      "titulo": "The Objective - Las principales medidas de los decretos: escudo antidesahucios y prórroga de alquileres (29/09/2026)",
      "url": "https://theobjective.com/economia/2026-09-29/principales-medidas-decretos-vivienda-gobierno/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m771.png"
   },
   {
    "id": "colau-m776",
@@ -488,7 +544,12 @@
      "titulo": "El Salto - El Congreso tumba los dos decretos de vivienda y deja la legislatura al borde del fin",
      "url": "https://www.elsaltodiario.com/politica/congreso-tumba-dos-decretos-vivienda-deja-legislatura-al-borde-del-fin"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m776.png"
   },
   {
    "id": "colau-m917",
@@ -516,7 +577,12 @@
      "titulo": "Lo Entiendo - SMI 2026: evolución desde 2018 (735,90 a 1.221 euros)",
      "url": "https://loentiendo.com/subida-smi-2023-1080-euros-mensuales/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m917.png"
   },
   {
    "id": "colau-m965",
@@ -538,13 +604,19 @@
    "fuentes": [
     {
      "titulo": "Demócrata - Forbes: los nuevos movimientos entre los 100 españoles más ricos (03/11/2026)",
-     "url": "https://www.democrata.es/economia/forbes-ricos-amancio-ortega-botin-iglesias-pino/"
+     "url": "https://www.democrata.es/economia/forbes-ricos-amancio-ortega-botin-iglesias-pino/",
+     "archivo": "https://web.archive.org/web/20261113194458/https://www.democrata.es/economia/forbes-ricos-amancio-ortega-botin-iglesias-pino/"
     },
     {
      "titulo": "Merca2 - Los más ricos de España en 2026: Amancio Ortega lidera, Escribano y Pérez se disparan",
      "url": "https://www.merca2.es/2026/05/06/lista-ricos-espana-2026-2377075/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m965.png"
   },
   {
    "id": "colau-m976",
@@ -566,9 +638,15 @@
    "fuentes": [
     {
      "titulo": "Demócrata - Forbes: los nuevos movimientos entre los 100 españoles más ricos (contexto del patrimonio)",
-     "url": "https://www.democrata.es/economia/forbes-ricos-amancio-ortega-botin-iglesias-pino/"
+     "url": "https://www.democrata.es/economia/forbes-ricos-amancio-ortega-botin-iglesias-pino/",
+     "archivo": "https://web.archive.org/web/20261113194458/https://www.democrata.es/economia/forbes-ricos-amancio-ortega-botin-iglesias-pino/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m976.png"
   },
   {
    "id": "colau-m1073",
@@ -590,7 +668,8 @@
    "fuentes": [
     {
      "titulo": "Demócrata - Podemos starts its primaries with Irene Montero while Colau offers to take a step back (14/10/2026)",
-     "url": "https://www.democrata.es/en/general-elections-spain/we-can-start-its-primaries-with-irene-montero-while-colau-offers-to-take-a-step-back-to-unite-the-left/"
+     "url": "https://www.democrata.es/en/general-elections-spain/we-can-start-its-primaries-with-irene-montero-while-colau-offers-to-take-a-step-back-to-unite-the-left/",
+     "archivo": "https://web.archive.org/web/20261113201536/https://www.democrata.es/en/general-elections-spain/we-can-start-its-primaries-with-irene-montero-while-colau-offers-to-take-a-step-back-to-unite-the-left/"
     },
     {
      "titulo": "RTVC - Ada Colau se ofrece a renunciar a la candidatura para integrar a Podemos (14/10/2026)",
@@ -604,7 +683,12 @@
      "titulo": "elDiario.es - El Frente Amplio responde al órdago de Podemos y Rufián: confirma a Colau como candidata (12/10/2026)",
      "url": "https://www.eldiario.es/politica/frente-amplio-responde-ordago-rufian-confirma-colau-candidata-llama-montero-sumarse_1_13580395.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m1073.png"
   },
   {
    "id": "colau-m1140",
@@ -634,13 +718,19 @@
     },
     {
      "titulo": "El Salto - Colau, en el arranque de Frente Amplio: «Si alguien no se quiere sentar a una mesa, no se le puede obligar»",
-     "url": "https://www.elsaltodiario.com/elecciones/ada-colau-arranque-frente-amplio-alguien-no-se-quiere-sentar-una-mesa-no-se-le-puede-obligar"
+     "url": "https://www.elsaltodiario.com/elecciones/ada-colau-arranque-frente-amplio-alguien-no-se-quiere-sentar-una-mesa-no-se-le-puede-obligar",
+     "archivo": "https://web.archive.org/web/20261101075156/https://www.elsaltodiario.com/elecciones/ada-colau-arranque-frente-amplio-alguien-no-se-quiere-sentar-una-mesa-no-se-le-puede-obligar"
     },
     {
      "titulo": "Diario Sabemos - Colau ofrece apartarse y cambiar el nombre de Frente Amplio, pero la coalición lanza su marca sin esperar a Podemos",
      "url": "https://diariosabemos.com/politica/colau-frente-amplio-podemos-irene-montero-unidad-izquierda-29n_519345_102.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m1140.png"
   },
   {
    "id": "colau-m1224",
@@ -674,9 +764,15 @@
     },
     {
      "titulo": "El Salto - Colau, en el arranque de Frente Amplio",
-     "url": "https://www.elsaltodiario.com/elecciones/ada-colau-arranque-frente-amplio-alguien-no-se-quiere-sentar-una-mesa-no-se-le-puede-obligar"
+     "url": "https://www.elsaltodiario.com/elecciones/ada-colau-arranque-frente-amplio-alguien-no-se-quiere-sentar-una-mesa-no-se-le-puede-obligar",
+     "archivo": "https://web.archive.org/web/20261101075156/https://www.elsaltodiario.com/elecciones/ada-colau-arranque-frente-amplio-alguien-no-se-quiere-sentar-una-mesa-no-se-le-puede-obligar"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m1224.png"
   },
   {
    "id": "colau-m1258",
@@ -702,13 +798,19 @@
     },
     {
      "titulo": "Demócrata - Podemos starts its primaries with Irene Montero while Colau offers to take a step back (14/10/2026)",
-     "url": "https://www.democrata.es/en/general-elections-spain/we-can-start-its-primaries-with-irene-montero-while-colau-offers-to-take-a-step-back-to-unite-the-left/"
+     "url": "https://www.democrata.es/en/general-elections-spain/we-can-start-its-primaries-with-irene-montero-while-colau-offers-to-take-a-step-back-to-unite-the-left/",
+     "archivo": "https://web.archive.org/web/20261113201536/https://www.democrata.es/en/general-elections-spain/we-can-start-its-primaries-with-irene-montero-while-colau-offers-to-take-a-step-back-to-unite-the-left/"
     },
     {
      "titulo": "Artículo 14 - El BOE lo hace oficial: así es el decreto que convoca las elecciones generales del 29N (06/10/2026)",
      "url": "https://www.articulo14.es/politica/el-boe-lo-hace-oficial-asi-es-el-decreto-que-convoca-las-elecciones-generales-del-29n-20261006.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m1258.png"
   },
   {
    "id": "colau-m1286",
@@ -730,7 +832,8 @@
    "fuentes": [
     {
      "titulo": "Demócrata - Podemos starts its primaries with Irene Montero while Colau offers to take a step back (14/10/2026)",
-     "url": "https://www.democrata.es/en/general-elections-spain/we-can-start-its-primaries-with-irene-montero-while-colau-offers-to-take-a-step-back-to-unite-the-left/"
+     "url": "https://www.democrata.es/en/general-elections-spain/we-can-start-its-primaries-with-irene-montero-while-colau-offers-to-take-a-step-back-to-unite-the-left/",
+     "archivo": "https://web.archive.org/web/20261113201536/https://www.democrata.es/en/general-elections-spain/we-can-start-its-primaries-with-irene-montero-while-colau-offers-to-take-a-step-back-to-unite-the-left/"
     },
     {
      "titulo": "Diario Sabemos - Colau ofrece apartarse y cambiar el nombre de Frente Amplio",
@@ -740,7 +843,12 @@
      "titulo": "Infobae/EFE - Podemos no se pronuncia sobre Colau y condiciona un acuerdo con Frente Amplio a primarias (08/10/2026)",
      "url": "https://www.infobae.com/espana/agencias/2026/10/08/podemos-no-se-pronuncia-sobre-colau-y-condiciona-un-acuerdo-con-frente-amplio-a-primarias/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m1286.png"
   },
   {
    "id": "colau-m1292",
@@ -772,7 +880,12 @@
      "titulo": "Público - Frente Amplio y Podemos concurrirán por separado el 29 de noviembre salvo en Canarias y País Valencià",
      "url": "https://www.publico.es/politica/frente-amplio-podemos-concurriran-separado-29-noviembre-salvo-canarias-pais-valencia.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m1292.png"
   },
   {
    "id": "colau-m1321",
@@ -800,7 +913,12 @@
      "titulo": "Público: Díaz coordinará cinco ministerios y Podemos pasa a la oposición",
      "url": "https://www.publico.es/politica/diaz-coordinara-cinco-ministerios-pasa-oposicion.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m1321.png"
   },
   {
    "id": "colau-m1397",
@@ -832,7 +950,12 @@
      "titulo": "Ara: Yolanda Díaz alza la voz sobre el caso Cerdán",
      "url": "https://en.ara.cat/politics/yolanda-diaz-raises-her-voice-regarding-the-cerdan-case-we-are-not-the-same-the-problem-is-the-pp-and-the-psoe_1_5419085.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m1397.png"
   },
   {
    "id": "colau-m1413",
@@ -864,7 +987,12 @@
      "titulo": "Orain: El PSOE ha expulsado a Ábalos 15 meses después de abrir el expediente (16/06/2025)",
      "url": "https://orain.eus/en/politika/2025/06/16/the-psoe-has-expelled-jose-luis-abalos-15-months-after-the-opening-of-the-file/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m1413.png"
   },
   {
    "id": "colau-m1444",
@@ -896,7 +1024,12 @@
      "titulo": "Público: El juez deja en libertad a Cerdán tras casi cinco meses en prisión",
      "url": "https://www.publico.es/politica/juez-deja-libertad-santos-cerdan-casi-cinco-meses-prision.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m1444.png"
   },
   {
    "id": "colau-m1483",
@@ -932,7 +1065,12 @@
      "titulo": "Ara: Acaba el vía crucis judicial del gobierno de Colau (12/03/2025)",
      "url": "https://en.ara.cat/society/the-judicial-ordeal-of-the-colau-government-is-over_1_5313130.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": true,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m1483.png"
   },
   {
    "id": "colau-m1561",
@@ -972,7 +1110,12 @@
      "titulo": "El Español: La AIReF duda de que la reforma laboral mejore el empleo (12/06/2026)",
      "url": "https://www.elespanol.com/invertia/economia/empleo/20260612/airef-duda-reforma-laboral-mejore-empleo-diaz-oculta-informe-obliga-ley/1003744282857_0.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m1561.png"
   },
   {
    "id": "colau-m1646",
@@ -1000,7 +1143,12 @@
      "titulo": "Diario de León: El juez descarta imputar por ahora al PSOE en el caso Leire Díez (09/10/2026)",
      "url": "https://www.diariodeleon.es/nacional/261009/2099772/juez-descarta-imputar-psoe-caso-leire-diez-esperara-practicar-diligencias_amp.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m1646.png"
   },
   {
    "id": "colau-m1700",
@@ -1028,7 +1176,12 @@
      "titulo": "Ara: La justicia confirma que el gobierno de Colau no delinquió al detener desahucios (30/09/2024)",
      "url": "https://es.ara.cat/sociedad/barcelona/justicia-confirma-gobierno-colau-no-delinquio-detener-desahucios_1_5156072.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m1700.png"
   },
   {
    "id": "colau-m1719",
@@ -1060,7 +1213,12 @@
      "titulo": "elDiario.es: La Justicia archiva otra causa contra Colau y afea al exarquitecto del PSC el uso de la vía penal (21/12/2023)",
      "url": "https://www.eldiario.es/catalunya/justicia-archiva-causa-colau-afea-exarquitecto-psc-via-penal_1_10785241.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m1719.png"
   },
   {
    "id": "colau-m1806",
@@ -1090,9 +1248,15 @@
     },
     {
      "titulo": "Vozpópuli: La Audiencia Nacional rechaza investigar a Zapatero por malversación por quedarse con las joyas (06/11/2026)",
-     "url": "https://www.vozpopuli.com/tribunales/la-audiencia-nacional-rechaza-investigar-a-zapatero-por-malversacion-por-quedarse-con-las-joyas.html"
+     "url": "https://www.vozpopuli.com/tribunales/la-audiencia-nacional-rechaza-investigar-a-zapatero-por-malversacion-por-quedarse-con-las-joyas.html",
+     "archivo": "https://web.archive.org/web/20261106114959/https://www.vozpopuli.com/tribunales/la-audiencia-nacional-rechaza-investigar-a-zapatero-por-malversacion-por-quedarse-con-las-joyas.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m1806.png"
   },
   {
    "id": "colau-m1861",
@@ -1128,7 +1292,12 @@
      "titulo": "elDiario.es: El Supremo condena a Ábalos a 24 años de cárcel",
      "url": "https://www.eldiario.es/politica/jose-luis-abalos-condenado-carcel-tribunal-supremo_1_13301658.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m1861.png"
   },
   {
    "id": "colau-m1877",
@@ -1156,7 +1325,12 @@
      "titulo": "3Cat: El PP controlarà des del darrere la sala del Suprem de l'1-O, diu el portaveu al Senat",
      "url": "https://www.3cat.cat/3catinfo/el-pp-controlara-des-del-darrere-la-sala-del-suprem-de-l1-o-diu-el-portaveu-al-senat/noticia/2887676/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m1877.png"
   },
   {
    "id": "colau-m1919",
@@ -1184,7 +1358,12 @@
      "titulo": "LegalToday (Reuters): Españoles indignados llevan a la calle su movilización online (17/05/2011)",
      "url": "https://www.legaltoday.com/rincon-de-reuters/espanoles-indignados-llevan-a-la-calle-su-movilizacion-online-2011-05-17/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m1919.png"
   },
   {
    "id": "colau-m1933",
@@ -1216,7 +1395,12 @@
      "titulo": "Idealista: Joan Clos (Asval): «El problema de vivienda en España no es la falta de dinero, sino la inseguridad jurídica»",
      "url": "https://www.idealista.com/news/node/787771"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m1933.png"
   },
   {
    "id": "colau-m2089",
@@ -1248,7 +1432,12 @@
      "titulo": "La Nación: ¿Subestimaron las encuestas el voto a Trump?",
      "url": "https://www.lanacion.com.ar/estados-unidos/subestimaron-las-encuestas-el-voto-a-trump-el-debate-vuelve-a-instalarse-en-eeuu-nid07112024/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m2089.png"
   },
   {
    "id": "colau-m2110",
@@ -1284,7 +1473,12 @@
      "titulo": "INE: Índice de Precios de Vivienda en Alquiler (IPVA), año 2024",
      "url": "https://ine.es/dyngs/Prensa/IPVA2024.htm"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m2110.png"
   },
   {
    "id": "colau-m2221",
@@ -1314,9 +1508,15 @@
     },
     {
      "titulo": "Wikipedia: Accidente ferroviario de Adamuz",
-     "url": "https://es.wikipedia.org/wiki/Accidente_ferroviario_de_Adamuz"
+     "url": "https://es.wikipedia.org/wiki/Accidente_ferroviario_de_Adamuz",
+     "archivo": "https://web.archive.org/web/20261105080821/https://es.wikipedia.org/wiki/Accidente_ferroviario_de_Adamuz"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m2221.png"
   },
   {
    "id": "colau-m2236",
@@ -1352,7 +1552,12 @@
      "titulo": "Noticias de Navarra: Adif dice que Adamuz no fue un problema de mantenimiento sino, en todo caso, de inspección",
      "url": "https://www.noticiasdenavarra.com/sucesos/2026/04/15/adif-dice-accidente-adamuz-problema-10944994.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m2236.png"
   },
   {
    "id": "colau-m2245",
@@ -1388,7 +1593,12 @@
      "titulo": "ESdiario: Ada Colau exige la dimisión de Óscar Puente (30/10/2026)",
      "url": "https://www.esdiario.com/nacional/261030/201709/ada-colau-dimision-oscar-puente.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m2245.png"
   },
   {
    "id": "colau-m2281",
@@ -1416,7 +1626,12 @@
      "titulo": "El Debate: El deterioro de la inversión ferroviaria (29/10/2026)",
      "url": "https://www.eldebate.com/economia/20261029/deterioro-inversion-ferroviaria-trenes-viajeros-menos-dinero-vias_474787.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m2281.png"
   },
   {
    "id": "colau-m2341",
@@ -1444,7 +1659,12 @@
      "titulo": "Onda Vasca: Colau propone un pacto de Estado para reunificar Renfe y Adif",
      "url": "https://www.ondavasca.com/colau-propone-un-pacto-de-estado-para-reunificar-renfe-y-adif/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m2341.png"
   },
   {
    "id": "colau-m2346",
@@ -1476,7 +1696,12 @@
      "titulo": "Demócrata: Los maquinistas de Renfe convocan una huelga de 24 horas el 29 de octubre",
      "url": "https://www.democrata.es/economia/maquinistas-renfe-convocan-huelga-24-horas-29-octubre-fracasar-negociaciones/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m2346.png"
   },
   {
    "id": "colau-m2354",
@@ -1508,7 +1733,12 @@
      "titulo": "Infobae: Cinco años de liberalización ferroviaria (01/11/2026)",
      "url": "https://www.infobae.com/espana/2026/11/01/cinco-anos-de-liberalizacion-ferroviaria-el-doble-de-viajeros-mas-presion-sobre-las-plantillas-y-una-inversion-que-no-sigue-el-ritmo/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m2354.png"
   },
   {
    "id": "colau-m2359",
@@ -1540,7 +1770,12 @@
      "titulo": "Diario de León: Sindicatos dicen que el mantenimiento de alta velocidad no puede seguir en manos privadas",
      "url": "https://www.diariodeleon.es/nacional/260203/2074474/sindicatos-dicen-mantenimiento-alta-velocidad-seguir-manos-privadas.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m2359.png"
   },
   {
    "id": "colau-m2408",
@@ -1576,7 +1811,12 @@
      "titulo": "Canal 21 Ebre: el Síndic recibe más del doble de quejas por Rodalies que en todo 2024",
      "url": "https://www.canal21ebre.com/el-sindic-rep-els-primers-mesos-de-lany-mes-del-doble-de-queixes-per-rodalies-que-durant-tot-el-2024"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m2408.png"
   },
   {
    "id": "colau-m2418",
@@ -1598,17 +1838,24 @@
    "fuentes": [
     {
      "titulo": "Vozpópuli: El Gobierno culpa ahora al técnico de Adif (30/10/2026)",
-     "url": "https://www.vozpopuli.com/economia/empresas/el-gobierno-culpa-ahora-al-tecnico-de-adif-pese-a-crear-una-ley-para-protegerlos-ante-accidentes-como-el-de-toledo.html"
+     "url": "https://www.vozpopuli.com/economia/empresas/el-gobierno-culpa-ahora-al-tecnico-de-adif-pese-a-crear-una-ley-para-protegerlos-ante-accidentes-como-el-de-toledo.html",
+     "archivo": "https://web.archive.org/web/20261103053430/https://www.vozpopuli.com/economia/empresas/el-gobierno-culpa-ahora-al-tecnico-de-adif-pese-a-crear-una-ley-para-protegerlos-ante-accidentes-como-el-de-toledo.html"
     },
     {
      "titulo": "Vozpópuli: Puente pone a los operarios de Adif en la diana de las culpas antes de marcharse (04/11/2026)",
-     "url": "https://www.vozpopuli.com/economia/transporte/puente-pone-a-los-operarios-de-adif-la-diana-de-las-culpas-antes-de-marcharse-de-transportes.html"
+     "url": "https://www.vozpopuli.com/economia/transporte/puente-pone-a-los-operarios-de-adif-la-diana-de-las-culpas-antes-de-marcharse-de-transportes.html",
+     "archivo": "https://web.archive.org/web/20261104054829/https://www.vozpopuli.com/economia/transporte/puente-pone-a-los-operarios-de-adif-la-diana-de-las-culpas-antes-de-marcharse-de-transportes.html"
     },
     {
      "titulo": "elDiario.es: El Frente Amplio eleva la presión sobre Puente (30/10/2026)",
      "url": "https://www.eldiario.es/1_cff19b"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m2418.png"
   },
   {
    "id": "colau-m2489",
@@ -1640,7 +1887,12 @@
      "titulo": "Infobae: Cinco años de liberalización ferroviaria (01/11/2026)",
      "url": "https://www.infobae.com/espana/2026/11/01/cinco-anos-de-liberalizacion-ferroviaria-el-doble-de-viajeros-mas-presion-sobre-las-plantillas-y-una-inversion-que-no-sigue-el-ritmo/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m2489.png"
   },
   {
    "id": "colau-m2499",
@@ -1676,7 +1928,12 @@
      "titulo": "Público: Déficit histórico en inversiones, la división Renfe-Adif y servicios externalizados",
      "url": "https://www.publico.es/economia/deficit-historico-inversiones-division-renfe-adif-servicios-externalizados-grietas-sistema-ferroviario.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m2499.png"
   },
   {
    "id": "colau-m2507",
@@ -1708,7 +1965,12 @@
      "titulo": "Infobae: Cinco años de liberalización ferroviaria (01/11/2026)",
      "url": "https://www.infobae.com/espana/2026/11/01/cinco-anos-de-liberalizacion-ferroviaria-el-doble-de-viajeros-mas-presion-sobre-las-plantillas-y-una-inversion-que-no-sigue-el-ritmo/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m2507.png"
   },
   {
    "id": "colau-m2507-2",
@@ -1740,7 +2002,12 @@
      "titulo": "El Debate: El deterioro de la inversión ferroviaria (29/10/2026)",
      "url": "https://www.eldebate.com/economia/20261029/deterioro-inversion-ferroviaria-trenes-viajeros-menos-dinero-vias_474787.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m2507-2.png"
   },
   {
    "id": "colau-m2564",
@@ -1772,7 +2039,12 @@
      "titulo": "COPE: Renfe e Iryo eliminan las indemnizaciones por retrasos debidos a las limitaciones de velocidad mientras Ouigo las mantiene (30/01/2026)",
      "url": "https://www.cope.es/actualidad/economia/noticias/renfe-e-iryo-eliminan-indemnizaciones-retrasos-debidos-limitaciones-velocidad-ouigo-mantiene-20260130_3298155.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": true,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m2564.png"
   },
   {
    "id": "colau-m2596",
@@ -1794,7 +2066,8 @@
    "fuentes": [
     {
      "titulo": "elDiario.es: La plantilla de Adif ha crecido un 10 % desde la liberalización, con el tráfico disparado (04/11/2026)",
-     "url": "https://www.eldiario.es/economia/plantilla-adif-crecido-10-liberalizacion-trafico-disparado-pleno-relevo-generacional_1_13635233.html"
+     "url": "https://www.eldiario.es/economia/plantilla-adif-crecido-10-liberalizacion-trafico-disparado-pleno-relevo-generacional_1_13635233.html",
+     "archivo": "https://web.archive.org/web/20261104225124/https://www.eldiario.es/economia/plantilla-adif-crecido-10-liberalizacion-trafico-disparado-pleno-relevo-generacional_1_13635233.html"
     },
     {
      "titulo": "El Debate: El deterioro de la inversión ferroviaria (29/10/2026)",
@@ -1804,7 +2077,12 @@
      "titulo": "Infobae: Cinco años de liberalización ferroviaria (01/11/2026)",
      "url": "https://www.infobae.com/espana/2026/11/01/cinco-anos-de-liberalizacion-ferroviaria-el-doble-de-viajeros-mas-presion-sobre-las-plantillas-y-una-inversion-que-no-sigue-el-ritmo/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m2596.png"
   },
   {
    "id": "colau-m2688",
@@ -1830,13 +2108,19 @@
     },
     {
      "titulo": "Vozpópuli: Sánchez defiende a Puente a pesar de que sus socios ya reclaman su dimisión",
-     "url": "https://www.vozpopuli.com/espana/politica/sanchez-defiende-a-puente-a-pesar-de-que-sus-socios-ya-reclaman-su-dimision-por-el-accidente.html"
+     "url": "https://www.vozpopuli.com/espana/politica/sanchez-defiende-a-puente-a-pesar-de-que-sus-socios-ya-reclaman-su-dimision-por-el-accidente.html",
+     "archivo": "https://web.archive.org/web/20261102022029/https://www.vozpopuli.com/espana/politica/sanchez-defiende-a-puente-a-pesar-de-que-sus-socios-ya-reclaman-su-dimision-por-el-accidente.html"
     },
     {
      "titulo": "Onda Cero (vía Shango): Del accidente inasumible al respaldo a Puente",
      "url": "https://www.shango.media/onda-cero-del-accidente-inasumible-al-respaldo-a-puente-sanchez-cierra-filas-con-su-ministro-pese-a-las-criticas-por-urda-11998787"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m2688.png"
   },
   {
    "id": "colau-m2723",
@@ -1858,13 +2142,20 @@
    "fuentes": [
     {
      "titulo": "Diari de Tarragona: Puente dimite por sorpresa seis días después de Urda",
-     "url": "https://www.diaridetarragona.com/espana/274817/puente-dimite-sorpresa-6-dias-despues-urda-dura-comparecencia-congreso.html"
+     "url": "https://www.diaridetarragona.com/espana/274817/puente-dimite-sorpresa-6-dias-despues-urda-dura-comparecencia-congreso.html",
+     "archivo": "https://web.archive.org/web/20261104000541/https://www.diaridetarragona.com/espana/274817/puente-dimite-sorpresa-6-dias-despues-urda-dura-comparecencia-congreso.html"
     },
     {
      "titulo": "El Debate: Cae el polémico ministro de Transportes: Puente dimite (03/11/2026)",
-     "url": "https://www.eldebate.com/espana/20261103/puente-dimite-arrastrado-nefasta-gestion-tragedias-adamuz-urda-renuncio-cargo-listas_475290.html"
+     "url": "https://www.eldebate.com/espana/20261103/puente-dimite-arrastrado-nefasta-gestion-tragedias-adamuz-urda-renuncio-cargo-listas_475290.html",
+     "archivo": "https://web.archive.org/web/20261103211556/https://www.eldebate.com/espana/20261103/puente-dimite-arrastrado-nefasta-gestion-tragedias-adamuz-urda-renuncio-cargo-listas_475290.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m2723.png"
   },
   {
    "id": "colau-m2732",
@@ -1896,7 +2187,12 @@
      "titulo": "El Debate: El BOE publica el cese de Mazón (07/11/2025)",
      "url": "https://www.eldebate.com/espana/comunidad-valenciana/20251107/boe-publica-cese-mazon-plena-negociacion-entre-pp-vox-sobre-sucesor_352774_amp.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m2732.png"
   },
   {
    "id": "colau-m2799",
@@ -1928,7 +2224,12 @@
      "titulo": "The Objective: Las 6 preguntas sobre el referéndum (02/10/2017)",
      "url": "https://theobjective.com/further/espana/2017-10-02/las-6-preguntas-sobre-el-referendum-que-nos-ayudan-a-entenderlo-mejor/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m2799.png"
   },
   {
    "id": "colau-m2815",
@@ -1960,7 +2261,12 @@
      "titulo": "Tiempo de San Juan: No tinc por, Barcelona vuelve a marchar contra el terror yihadista (26/08/2017)",
      "url": "https://www.tiempodesanjuan.com/elmundo/2017/8/26/no-tinc-por-barcelona-vuelve-marchar-contra-terror-yihadista-188311.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m2815.png"
   },
   {
    "id": "colau-m2889",
@@ -1992,7 +2298,12 @@
      "titulo": "Wikipedia: Crisis migratoria de Ceuta de 2026",
      "url": "https://es.wikipedia.org/wiki/Crisis_migratoria_de_Ceuta_de_2026"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m2889.png"
   },
   {
    "id": "colau-m2912",
@@ -2024,7 +2335,12 @@
      "titulo": "TNI: Expandiendo la fortaleza (resumen ejecutivo)",
      "url": "https://www.tni.org/files/publication-downloads/expandiendo_la_fortaleza_resumen_ejecutivo.pdf"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m2912.png"
   },
   {
    "id": "colau-m2941",
@@ -2056,7 +2372,12 @@
      "titulo": "Infobae: La crisis de Ceuta, en cinco claves (2-08-2026)",
      "url": "https://www.infobae.com/espana/2026/08/02/la-crisis-de-ceuta-en-cinco-claves-de-las-falsas-promesas-de-asilo-a-la-avalancha-de-60000-personas-y-el-papel-de-marruecos/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m2941.png"
   },
   {
    "id": "colau-m2995",
@@ -2088,7 +2409,12 @@
      "titulo": "Wikipedia: Crisis migratoria de Ceuta de 2026",
      "url": "https://es.wikipedia.org/wiki/Crisis_migratoria_de_Ceuta_de_2026"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m2995.png"
   },
   {
    "id": "colau-m3013",
@@ -2116,7 +2442,12 @@
      "titulo": "Wikipedia: Crisis migratoria de Ceuta de 2026",
      "url": "https://es.wikipedia.org/wiki/Crisis_migratoria_de_Ceuta_de_2026"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m3013.png"
   },
   {
    "id": "colau-m3013-2",
@@ -2148,7 +2479,12 @@
      "titulo": "Wikipedia: Crisis migratoria de Ceuta de 2026",
      "url": "https://es.wikipedia.org/wiki/Crisis_migratoria_de_Ceuta_de_2026"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m3013-2.png"
   },
   {
    "id": "colau-m3013-3",
@@ -2176,7 +2512,12 @@
      "titulo": "Defensor del Pueblo: actúa de oficio por la situación humanitaria de los migrantes que continúan en Ceuta (13-08-2026)",
      "url": "https://www.defensordelpueblo.es/noticias/se-dirige-a-migraciones-fge-c-a-de-ceuta-y-delegacion-de-gobierno/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m3013-3.png"
   },
   {
    "id": "colau-m3058",
@@ -2208,7 +2549,12 @@
      "titulo": "Diario de León (Europa Press): Sánchez llega al helipuerto de Ceuta entre insultos y enfrentamientos (31-07-2026)",
      "url": "https://www.diariodeleon.es/nacional/260731/2092874/sanchez-llega-helipuerto-ceuta-insultos-enfrentamientos-manifestantes-policia_amp.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m3058.png"
   },
   {
    "id": "colau-m3077",
@@ -2240,7 +2586,12 @@
      "titulo": "Diario de León: Robles y Marlaska se contradicen sobre el papel del CNI en Ceuta (26-08-2026)",
      "url": "https://www.diariodeleon.es/nacional/260826/2095279/salvese-pueda-robles-marlaska-contradicen-sobre-papel-cni-ceuta.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m3077.png"
   },
   {
    "id": "colau-m3128",
@@ -2272,7 +2623,12 @@
      "titulo": "3Cat: Barcelona tindrà un dels tres grans centres per rebre refugiats ucraïnesos a Espanya",
      "url": "https://www.3cat.cat/3catinfo/barcelona-tindra-un-dels-tres-grans-centres-per-rebre-refugiats-ucrainesos-a-espanya/noticia-amp/3150331/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m3128.png"
   },
   {
    "id": "colau-m3136",
@@ -2308,7 +2664,12 @@
      "titulo": "Artículo 14: Un informe del Gobierno de Ceuta eleva a 96.058 las entradas de julio",
      "url": "https://www.articulo14.es/politica/un-informe-del-gobierno-de-ceuta-eleva-a-96-058-las-entradas-de-julio-un-34-mas-que-la-cifra-que-dio-marlaska-20261018.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m3136.png"
   },
   {
    "id": "colau-m3148",
@@ -2336,7 +2697,12 @@
      "titulo": "3Cat: Barcelona tindrà un dels tres grans centres per rebre refugiats ucraïnesos a Espanya",
      "url": "https://www.3cat.cat/3catinfo/barcelona-tindra-un-dels-tres-grans-centres-per-rebre-refugiats-ucrainesos-a-espanya/noticia-amp/3150331/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m3148.png"
   },
   {
    "id": "colau-m3185",
@@ -2368,7 +2734,12 @@
      "titulo": "Infobae: La crisis de Ceuta, en cinco claves (2-08-2026)",
      "url": "https://www.infobae.com/espana/2026/08/02/la-crisis-de-ceuta-en-cinco-claves-de-las-falsas-promesas-de-asilo-a-la-avalancha-de-60000-personas-y-el-papel-de-marruecos/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m3185.png"
   },
   {
    "id": "colau-m3203",
@@ -2396,7 +2767,12 @@
      "titulo": "Defensor del Pueblo: actúa de oficio por la situación humanitaria de los migrantes que continúan en Ceuta (13-08-2026)",
      "url": "https://www.defensordelpueblo.es/noticias/se-dirige-a-migraciones-fge-c-a-de-ceuta-y-delegacion-de-gobierno/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m3203.png"
   },
   {
    "id": "colau-m3346",
@@ -2424,7 +2800,12 @@
      "titulo": "Wikipedia: Crisis migratoria de Ceuta de 2026",
      "url": "https://es.wikipedia.org/wiki/Crisis_migratoria_de_Ceuta_de_2026"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m3346.png"
   },
   {
    "id": "colau-m3454",
@@ -2452,7 +2833,12 @@
      "titulo": "Ara: El Consejo de Seguridad de la ONU avala el plan de Marruecos para el Sáhara Occidental (31-10-2025)",
      "url": "https://es.ara.cat/internacional/africa/consejo-seguridad-onu-avala-plan-marruecos-sahara-occidental_1_5547652.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m3454.png"
   },
   {
    "id": "colau-m3462",
@@ -2484,7 +2870,12 @@
      "titulo": "Wikipedia: Frente Amplio (España)",
      "url": "https://es.wikipedia.org/wiki/Frente_Amplio_(Espa%C3%B1a)"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m3462.png"
   },
   {
    "id": "colau-m3561",
@@ -2516,7 +2907,12 @@
      "titulo": "RFEF: President visits the Supercopa Fan Zone in Jeddah",
      "url": "https://rfef.es/en/noticias/RFEF-President-visits-the-Supercopa-Fan-Zone-in-Jeddah"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m3561.png"
   },
   {
    "id": "colau-m3615",
@@ -2548,7 +2944,12 @@
      "titulo": "3Cat: L'efecte Trump posa en perill la final del Mundial 2030 per a Espanya (8-07-2026)",
      "url": "https://www.3cat.cat/esport3/lefecte-trump-posa-en-perill-la-final-del-mundial-2030-per-a-espanya/noticia/3419403/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m3615.png"
   },
   {
    "id": "colau-m3619",
@@ -2576,7 +2977,12 @@
      "titulo": "El Español: La extrema debilidad de Sánchez permite a Infantino negociar la entrega a Marruecos de la final del Mundial (6-08-2026)",
      "url": "https://www.elespanol.com/espana/20260806/extrema-debilidad-sanchez-permite-infantino-negociar-entrega-marruecos-final-mundial/1003744345140_0.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m3619.png"
   },
   {
    "id": "colau-m3922",
@@ -2604,7 +3010,12 @@
      "titulo": "Euronews: España roza los 50 millones de habitantes, 1 de cada 5 nació en el extranjero (6 de agosto de 2026, datos INE a 1 de julio)",
      "url": "https://es.euronews.com/my-europe/2026/08/06/espana-50-millones-habitantes-1-cada-5-nacio-extranjero"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m3922.png"
   },
   {
    "id": "colau-m3952",
@@ -2636,7 +3047,12 @@
      "titulo": "Inmigración y delincuencia: la falacia de una sospecha (Boletín Criminológico, Universidad de Málaga)",
      "url": "https://revistas.uma.es/index.php/boletin-criminologico/article/view/20680"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m3952.png"
   },
   {
    "id": "colau-m3984",
@@ -2660,7 +3076,12 @@
      "titulo": "INE: Estadística de condenados, adultos, año 2024 (nota de prensa, 18 de septiembre de 2025)",
      "url": "https://ine.es/dyngs/Prensa/ECAECM2024.htm"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m3984.png"
   },
   {
    "id": "colau-m4118",
@@ -2688,7 +3109,12 @@
      "titulo": "Charnego (Wikipedia)",
      "url": "https://es.wikipedia.org/wiki/Charnego"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m4118.png"
   },
   {
    "id": "colau-m4457",
@@ -2720,7 +3146,12 @@
      "titulo": "Ministerio de Inclusión: Ocho de cada diez personas llegadas a España este siglo se han incorporado a la población activa (informe del CES, 12 de noviembre de 2025)",
      "url": "https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/inclusion/Paginas/2025/121125-informe-ces.aspx"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m4457.png"
   },
   {
    "id": "colau-m4520",
@@ -2744,7 +3175,12 @@
      "titulo": "Mudawana, código de familia de Marruecos (Wikipedia)",
      "url": "https://es.wikipedia.org/wiki/Mudawana"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m4520.png"
   },
   {
    "id": "colau-m4558",
@@ -2768,7 +3204,12 @@
      "titulo": "Ministerio de Igualdad: Mujeres víctimas mortales por violencia de género, datos provisionales actualizados a 30 de octubre de 2026",
      "url": "https://violenciagenero.igualdad.gob.es/wp-content/uploads/VMortales_2026_10_30.pdf"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m4558.png"
   },
   {
    "id": "colau-m4569",
@@ -2796,7 +3237,12 @@
      "titulo": "El Debate: Los asesinatos por violencia de género a manos de extranjeros (balance 2025 con datos de Igualdad)",
      "url": "https://www.eldebate.com/sociedad/20251226/asesinatos-violencia-genero-manos-extranjeros-crecen-sanchez-poder_368556.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": true,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m4569.png"
   },
   {
    "id": "colau-m4823",
@@ -2824,7 +3270,12 @@
      "titulo": "Demografía de España: fecundidad y saldo vegetativo 2024-2025 (Wikipedia, con datos del INE)",
      "url": "https://es.wikipedia.org/wiki/Demograf%C3%ADa_de_Espa%C3%B1a"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m4823.png"
   },
   {
    "id": "colau-m4896",
@@ -2852,7 +3303,12 @@
      "titulo": "El Independiente: España no ha sido el motor económico de Europa; la inmigración explica la mitad del crecimiento (6 de julio de 2026; cita al Banco de España y a la AIReF)",
      "url": "https://www.elindependiente.com/economia/2026/07/06/espana-no-sido-motor-economico-europa-inmigracion-mitad-crecimiento/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m4896.png"
   },
   {
    "id": "colau-m4919",
@@ -2880,7 +3336,12 @@
      "titulo": "Ministerio de Inclusión: La Seguridad Social supera los 3.550.000 afiliados extranjeros en agosto (14 de septiembre de 2026)",
      "url": "https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/inclusion/Paginas/2026/140926-afiliados-extranjeros-agosto-2026.aspx?qfr=2"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m4919.png"
   },
   {
    "id": "colau-m5034",
@@ -2899,7 +3360,12 @@
    "resumen": "Es una apreciación práctica, no un hecho medible: no hay estadística de cuántos empleos exigen castellano ni obligación legal general de hablarlo, así que no se puede confirmar ni desmentir.",
    "explicacion": "La frase es una apreciación práctica («lo tienes complicado») más que un hecho medible, y la transcripción automática del tramo es confusa. No se ha encontrado una estadística que mida cuántos empleos exigen dominar el castellano ni constancia de una obligación legal general de hablar el idioma para trabajar, que dependería del empleador y del puesto. Por eso no se puede ni confirmar ni desmentir.",
    "confianza": "baja",
-   "fuentes": []
+   "fuentes": [],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m5034.png"
   },
   {
    "id": "colau-m5132",
@@ -2939,7 +3405,12 @@
      "titulo": "INE: Estadística Continua de Población, 1 de enero de 2026",
      "url": "https://ine.es/dyngs/Prensa/ECP4T25.htm"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m5132.png"
   },
   {
    "id": "colau-m5154",
@@ -2971,7 +3442,12 @@
      "titulo": "Ministerio de Inclusión: informe del CES sobre la realidad migratoria (12 de noviembre de 2025)",
      "url": "https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/inclusion/Paginas/2025/121125-informe-ces.aspx"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m5154.png"
   },
   {
    "id": "colau-m5228",
@@ -2999,7 +3475,12 @@
      "titulo": "Pla Local de Seguretat de Barcelona 2024-2027 (Ajuntament de Barcelona)",
      "url": "https://ajuntament.barcelona.cat/seguretatiprevencio/sites/default/files/2024-07/Pla%20Local%20de%20Seguretat_2024_2027.pdf"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m5228.png"
   },
   {
    "id": "colau-m5283",
@@ -3023,7 +3504,12 @@
      "titulo": "Estado de alarma en España de 2020 (Wikipedia)",
      "url": "https://es.wikipedia.org/wiki/Estado_de_alarma_en_Espa%C3%B1a_de_2020"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m5283.png"
   },
   {
    "id": "colau-m5290",
@@ -3047,7 +3533,12 @@
      "titulo": "Balance de la inseguridad en Barcelona: la criminalidad se dispara en los últimos ocho años (Metrópoli Abierta, 15/06/2023, con datos de Interior)",
      "url": "https://metropoliabierta.elespanol.com/sucesos/20230615/balance-de-la-inseguridad-en-barcelona-criminalidad-se-dispara-los-ultimos-ocho-anos/771672967_0.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m5290.png"
   },
   {
    "id": "colau-m5326",
@@ -3083,7 +3574,12 @@
      "titulo": "La Guàrdia Urbana té previst augmentar la seva plantilla en 450 efectius aquest mandat, i no pas en «1.000 agents» com diu Colau (Verificat)",
      "url": "https://www.verificat.cat/la-guardia-urbana-te-previst-augmentar-la-seva-plantilla-en-450-efectius-aquest-mandat-i-no-pas-en-1-000-agents-com-diu-colau/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m5326.png"
   },
   {
    "id": "colau-m5361",
@@ -3111,7 +3607,12 @@
      "titulo": "Un informe de la UB avala el retorno económico de la Copa América pese a no cumplir expectativas (Ara, 04/03/2025)",
      "url": "https://es.ara.cat/sociedad/barcelona/informe-ub-avala-retorno-economico-copa-america-pese-no-cumplir-expectativas_1_5304527.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m5361.png"
   },
   {
    "id": "colau-m5414",
@@ -3143,7 +3644,12 @@
      "titulo": "Colau da marcha atrás en el puerta a puerta: para la segunda fase y retira los cubos de la orgánica (Ara, octubre de 2021)",
      "url": "https://es.ara.cat/sociedad/colau-da-marcha-puerta-puerta-segunda-fase-retira-cubos-organica_1_4142450.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m5414.png"
   },
   {
    "id": "colau-m5527",
@@ -3171,7 +3677,12 @@
      "titulo": "Ada Colau (Wikipedia)",
      "url": "https://es.wikipedia.org/wiki/Ada_Colau"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m5527.png"
   },
   {
    "id": "colau-m5556",
@@ -3203,7 +3714,12 @@
      "titulo": "Més delictes a Barcelona: el 50% són furts (3Cat, balance 2023)",
      "url": "https://www.3cat.cat/3catinfo/mes-delictes-a-barcelona-el-50-son-furts-pero-els-robatoris-amb-forca-a-botigues-es-disparen/noticia-amp/3277405/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m5556.png"
   },
   {
    "id": "colau-m5567",
@@ -3231,7 +3747,12 @@
      "titulo": "Balance de la inseguridad en Barcelona (Metrópoli Abierta, 15/06/2023)",
      "url": "https://metropoliabierta.elespanol.com/sucesos/20230615/balance-de-la-inseguridad-en-barcelona-criminalidad-se-dispara-los-ultimos-ocho-anos/771672967_0.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m5567.png"
   },
   {
    "id": "colau-m5591",
@@ -3263,7 +3784,12 @@
      "titulo": "A week of turmoil in Catalonia (Catalan News)",
      "url": "https://www.catalannews.com/catalan-news-tv/item/a-week-of-turmoil-in-catalonia"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m5591.png"
   },
   {
    "id": "colau-m5618",
@@ -3291,7 +3817,12 @@
      "titulo": "Pla Local de Seguretat de Barcelona 2024-2027 (Ajuntament de Barcelona)",
      "url": "https://ajuntament.barcelona.cat/seguretatiprevencio/sites/default/files/2024-07/Pla%20Local%20de%20Seguretat_2024_2027.pdf"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m5618.png"
   },
   {
    "id": "colau-m5628",
@@ -3315,7 +3846,12 @@
      "titulo": "Pla Local de Seguretat de Barcelona 2024-2027 (Ajuntament de Barcelona)",
      "url": "https://ajuntament.barcelona.cat/seguretatiprevencio/sites/default/files/2024-07/Pla%20Local%20de%20Seguretat_2024_2027.pdf"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m5628.png"
   },
   {
    "id": "colau-m5649",
@@ -3347,7 +3883,12 @@
      "titulo": "Acaba la primera Junta de Seguretat de Barcelona del nou mandat de Colau (3Cat, 19/07/2019)",
      "url": "https://www.3cat.cat/3catinfo/acaba-la-primera-junta-de-seguretat-de-barcelona-del-nou-mandat-de-colau/noticia-amp/2936374/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m5649.png"
   },
   {
    "id": "colau-m5688",
@@ -3375,7 +3916,12 @@
      "titulo": "Pla Local de Seguretat de Barcelona 2024-2027 (Ajuntament de Barcelona)",
      "url": "https://ajuntament.barcelona.cat/seguretatiprevencio/sites/default/files/2024-07/Pla%20Local%20de%20Seguretat_2024_2027.pdf"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m5688.png"
   },
   {
    "id": "colau-m5730",
@@ -3403,7 +3949,12 @@
      "titulo": "Cauen un 23% els delictes a Barcelona però augmenten les denúncies per agressions sexuals respecte al 2019 (Nació Digital, 07/07/2022)",
      "url": "https://naciodigital.cat/politica/cauen-un-23-els-delictes-a-barcelona-pero-augmenten-les-denuncies-per-agressions-sexuals-respecte-2019.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m5730.png"
   },
   {
    "id": "colau-m5744",
@@ -3439,7 +3990,12 @@
      "titulo": "Los extranjeros cometen delitos menos graves y tienen menos permisos (Ara, datos Mossos 2023 para Cataluña)",
      "url": "https://es.ara.cat/sociedad/inmigracion/extranjeros-cometen-delitos-graves-permisos_130_4934748.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m5744.png"
   },
   {
    "id": "colau-m5782",
@@ -3467,7 +4023,12 @@
      "titulo": "Los extranjeros cometen delitos menos graves y tienen menos permisos (Ara, datos Mossos 2023)",
      "url": "https://es.ara.cat/sociedad/inmigracion/extranjeros-cometen-delitos-graves-permisos_130_4934748.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m5782.png"
   },
   {
    "id": "colau-m5828",
@@ -3495,7 +4056,12 @@
      "titulo": "Estadística de Condenados 2023 (INE, 24/09/2024)",
      "url": "https://www.ine.es/dyngs/Prensa/ECAECM2023.htm"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m5828.png"
   },
   {
    "id": "colau-m5889",
@@ -3527,7 +4093,12 @@
      "titulo": "El Español: Valeria Racu, portavoz del Sindicato de Inquilinas, apunta a la huelga general (3-10-2026)",
      "url": "https://www.elespanol.com/madrid/20261003/valeria-racu-portavoz-sindicato-inquilinas-apunta-huelga-general-termino-tiempo-politicos/1003744407409_0.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m5889.png"
   },
   {
    "id": "colau-m5964",
@@ -3559,7 +4130,12 @@
      "titulo": "Maldita.es: El índice de precios de referencia para el alquiler: qué es, cómo se puede consultar y dónde se aplicará",
      "url": "https://maldita.es/malditateexplica/20240229/indice-precios-alquiler-ministerio-vivienda/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m5964.png"
   },
   {
    "id": "colau-m5982",
@@ -3591,7 +4167,12 @@
      "titulo": "Artículo 14: Ada Colau, candidata de Frente Amplio para el 29N (8-11-2026)",
      "url": "https://www.articulo14.es/politica/ada-colau-candidata-de-frente-amplio-para-el-29n-si-de-mi-depende-los-fondos-buitre-seran-expulsados-de-este-pais-20261108.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": true,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m5982.png"
   },
   {
    "id": "colau-m6002",
@@ -3623,7 +4204,12 @@
      "titulo": "Artículo 14: Ada Colau, candidata de Frente Amplio para el 29N (8-11-2026)",
      "url": "https://www.articulo14.es/politica/ada-colau-candidata-de-frente-amplio-para-el-29n-si-de-mi-depende-los-fondos-buitre-seran-expulsados-de-este-pais-20261108.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m6002.png"
   },
   {
    "id": "colau-m6016",
@@ -3659,7 +4245,12 @@
      "titulo": "Ara: El Ayuntamiento de Barcelona no compró Casa Orsola (cifras de Janet Sanz)",
      "url": "https://es.ara.cat/sociedad/barcelona/ayuntamiento-barcelona-no-compro-casa-orsola_1_5272209.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m6016.png"
   },
   {
    "id": "colau-m6059",
@@ -3695,7 +4286,12 @@
      "titulo": "Ajuntament de Barcelona: memoria general de la ordenanza de tanteo y retracto",
      "url": "https://ajuntament.barcelona.cat/transparencia/sites/default/files/06._memoria_general._ordenanca_tanteig_vdfrev.pdf"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m6059.png"
   },
   {
    "id": "colau-m6167",
@@ -3723,7 +4319,12 @@
      "titulo": "Civio: CaixaBank y Blackstone, los dos mayores caseros del país (2-4-2024, act. 9-10-2024)",
      "url": "https://civio.es/poder/2024/04/02/caixabank-y-blackstone-los-dos-mayores-caseros-del-pais-suman-cerca-de-41-dot-400-viviendas-alquiladas/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m6167.png"
   },
   {
    "id": "colau-m6271",
@@ -3751,7 +4352,12 @@
      "titulo": "Ara: Barcelona triplica los efectivos de la unidad antidesahucios (15-2-2022)",
      "url": "https://es.ara.cat/sociedad/barcelona-triplica-efectivos-unidad-antidesahucios_1_4272300.amp.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m6271.png"
   },
   {
    "id": "colau-m6326",
@@ -3779,7 +4385,12 @@
      "titulo": "Maldita.es: ¿Existe el «plazo de 48 horas» para echar a los okupas de una vivienda sin orden judicial?",
      "url": "https://maldita.es/malditateexplica/20220905/okupas-plazo-48-horas-policia-orden-judicial/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m6326.png"
   },
   {
    "id": "colau-m6397",
@@ -3807,7 +4418,12 @@
      "titulo": "Metrópoli Abierta: Prisión provisional para tres multirreincidentes tras personarse el Ayuntamiento como acusación particular (5-11-2026)",
      "url": "https://metropoliabierta.elespanol.com/sucesos/20261105/prision-provisional-multirreincidentes-barcelona-personarse-ayuntamiento-acusacion-particular/1003742809372_0.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m6397.png"
   },
   {
    "id": "colau-m6499",
@@ -3835,7 +4451,12 @@
      "titulo": "Artículo 14: Ada Colau, candidata de Frente Amplio para el 29N (8-11-2026)",
      "url": "https://www.articulo14.es/politica/ada-colau-candidata-de-frente-amplio-para-el-29n-si-de-mi-depende-los-fondos-buitre-seran-expulsados-de-este-pais-20261108.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m6499.png"
   },
   {
    "id": "colau-m6554",
@@ -3863,7 +4484,12 @@
      "titulo": "Demócrata: Colau asegura que Frente Amplio expropiará viviendas a los fondos buitre (7-11-2026)",
      "url": "https://www.democrata.es/politica/ada-colau-asegura-que-frente-amplio-expropiara-viviendas-a-los-fondos-buitre/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m6554.png"
   },
   {
    "id": "colau-m6568",
@@ -3891,7 +4517,12 @@
      "titulo": "Artículo 14: Ada Colau, candidata de Frente Amplio para el 29N (8-11-2026)",
      "url": "https://www.articulo14.es/politica/ada-colau-candidata-de-frente-amplio-para-el-29n-si-de-mi-depende-los-fondos-buitre-seran-expulsados-de-este-pais-20261108.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m6568.png"
   },
   {
    "id": "colau-m6641",
@@ -3919,7 +4550,12 @@
      "titulo": "Forbes España: Los desahucios caen un 11 % en 2025 hasta los 25.540, según el CGPJ (20-3-2026)",
      "url": "https://forbes.es/economia/893652/los-desahucios-caen-un-11-en-2025-hasta-los-25-540-segun-cgpj/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m6641.png"
   },
   {
    "id": "colau-m6652",
@@ -3947,7 +4583,12 @@
      "titulo": "El Salto: No se trata (solo) de Maricarmen (26-9-2026)",
      "url": "https://www.elsaltodiario.com/madrid/no-se-trata-solo-maricarmen-una-gran-manifestacion-presiona-al-gobierno-salga-paralisis"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m6652.png"
   },
   {
    "id": "colau-m6664",
@@ -3975,7 +4616,12 @@
      "titulo": "El Español: Alemania da una lección a España en el alquiler (17-4-2026)",
      "url": "https://www.elespanol.com/sociedad/20260417/alemania-da-leccion-espana-alquiler-inquilino-quedan-euros-vivir-despues-pagarlo/1003744200840_0.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m6664.png"
   },
   {
    "id": "colau-m6711",
@@ -3999,7 +4645,12 @@
      "titulo": "Ajuntament de Barcelona: Si tens un pis i el vols llogar (Borsa d'Habitatge de Lloguer)",
      "url": "https://bcnroc.ajuntament.barcelona.cat/jspui/bitstream/11703/118900/3/claus_borsa_habitatge_lloguer-cat.pdf.txt"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m6711.png"
   },
   {
    "id": "colau-m6758",
@@ -4027,7 +4678,12 @@
      "titulo": "Qué.es: El alquiler ya absorbe el 50 % del salario medio en España (3-6-2026)",
      "url": "https://www.que.es/2026/06/03/alquiler-salario-medio-espana-bomba/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m6758.png"
   },
   {
    "id": "colau-m6774",
@@ -4055,7 +4711,12 @@
      "titulo": "Qué.es: El alquiler ya absorbe el 50 % del salario medio en España (3-6-2026)",
      "url": "https://www.que.es/2026/06/03/alquiler-salario-medio-espana-bomba/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m6774.png"
   },
   {
    "id": "colau-m6843",
@@ -4087,7 +4748,12 @@
      "titulo": "Los ataques a Irán amenazan el crecimiento del PIB de EE UU y las perspectivas de inflación (Euronews, 3-3-2026)",
      "url": "https://es.euronews.com/business/2026/03/03/los-ataques-iran-amenazan-crecimiento-del-pib-ee-uu-las-perspectivas-de-inflacion"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m6843.png"
   },
   {
    "id": "colau-m6867",
@@ -4119,7 +4785,12 @@
      "titulo": "Trump anuncia aranceles adicionales del 25 % a coches y camiones de la UE (elDiario.es)",
      "url": "https://www.eldiario.es/internacional/trump-anuncia-aranceles-adicionales-25-coches-camiones-ue_1_13188968.amp.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m6867.png"
   },
   {
    "id": "colau-m6875",
@@ -4151,7 +4822,12 @@
      "titulo": "La economía europea empieza a sentir el golpe de la guerra de Trump contra Irán (Bloomberg Línea)",
      "url": "https://www.bloomberglinea.com/economia/la-economia-europea-empieza-a-sentir-el-golpe-de-la-guerra-de-donald-trump-contra-iran/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m6875.png"
   },
   {
    "id": "colau-m6905",
@@ -4179,7 +4855,12 @@
      "titulo": "EE UU niega estar en guerra con Venezuela y defiende la captura de Maduro ante la ONU (Blu Radio)",
      "url": "https://www.bluradio.com/mundo/ee-uu-niega-estar-en-guerra-con-venezuela-y-defiende-captura-de-nicolas-maduro-ante-la-onu-rg10"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m6905.png"
   },
   {
    "id": "colau-m6988",
@@ -4207,7 +4888,12 @@
      "titulo": "España impone un embargo total de armas a Israel (Al Jazeera, 8-9-2025)",
      "url": "https://www.aljazeera.com/news/2025/9/8/spain-imposes-total-arms-embargo-on-israel-to-stop-genocide-in"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m6988.png"
   },
   {
    "id": "colau-m7027",
@@ -4235,7 +4921,12 @@
      "titulo": "Espanya i 15 països amenacen Israel amb la «rendició de comptes» (Nació Digital)",
      "url": "https://naciodigital.cat/internacional/espanya-i-15-paisos-amenacen-israel-amb-la-rendicio-de-comptes-si-dete-o-ataca-els-integrants-de-la-flotilla.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m7027.png"
   },
   {
    "id": "colau-m7052",
@@ -4267,7 +4958,12 @@
      "titulo": "Decenas de miles de personas se manifiestan por todo el Estado en la jornada de huelga por Palestina (El Salto)",
      "url": "https://www.elsaltodiario.com/derechos-humanos/directo-or-cientos-movilizaciones-previstas-una-jornada-huelga-luchas-palestina"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m7052.png"
   },
   {
    "id": "colau-m7070",
@@ -4299,7 +4995,12 @@
      "titulo": "The Making of Italy's Pro-Palestine General Strike (Jacobin, octubre 2025)",
      "url": "https://jacobin.com/2025/10/italy-general-strike-palestine-labor"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m7070.png"
   },
   {
    "id": "colau-m7086",
@@ -4331,7 +5032,12 @@
      "titulo": "España aprueba en pleno el embargo de armas a Israel (France 24 / Acento)",
      "url": "https://acento.com.do/france24/espana-aprueba-en-pleno-el-embargo-de-armas-a-israel-9561492.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m7086.png"
   },
   {
    "id": "colau-m7138",
@@ -4367,7 +5073,12 @@
      "titulo": "Bulos, desinformaciones y contexto sobre la Flotilla Global Sumud (Maldita.es)",
      "url": "https://maldita.es/malditobulo/20251007/desinformaciones-flotilla-global-sumud-gaza/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m7138.png"
   },
   {
    "id": "colau-m7166",
@@ -4395,7 +5106,12 @@
      "titulo": "UNICEF eleva a 300 el número de niños muertos en Gaza desde la entrada en vigor del alto el fuego (Infobae, 6-8-2026)",
      "url": "https://www.infobae.com/america/agencias/2026/08/06/unicef-eleva-a-300-el-numero-de-ninos-muertos-en-gaza-desde-la-entrada-en-vigor-del-alto-el-fuego/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m7166.png"
   },
   {
    "id": "colau-m7203",
@@ -4431,7 +5147,12 @@
      "titulo": "Pedro Sánchez conversa con Netanyahu (El Independiente, 22-10-2023)",
      "url": "https://www.elindependiente.com/internacional/2023/10/22/pedro-sanchez-conversa-con-netanyahu-hay-que-evitar-que-el-conflicto-se-extienda-al-resto-de-la-region/amp/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m7203.png"
   },
   {
    "id": "colau-m7323",
@@ -4463,7 +5184,12 @@
      "titulo": "Feijóo is wrong: the Spanish government has not made a good deal with the minimum wage increase (Ara)",
      "url": "https://en.ara.cat/politics/feijoo-is-wrong-the-spanish-government-has-not-made-good-deal-with-the-minimum-wage-increase_1_5888273.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": true,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m7323.png"
   },
   {
    "id": "colau-m7364",
@@ -4495,7 +5221,12 @@
      "titulo": "Figaredo insiste en su propuesta de «cazar» inmigrantes en Ceuta: «No me arrepiento» (El Plural)",
      "url": "https://www.elplural.com/politica/espana/figaredo-insiste-propuesta-cazar-inmigrantes-ceuta-no-me-arrepiento-ni-me-retracto-nada_398278102"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m7364.png"
   },
   {
    "id": "colau-m7364-2",
@@ -4519,7 +5250,12 @@
      "titulo": "Figaredo (Vox) se reafirma en «cazar» a inmigrantes ilegales en Ceuta (Galicia Press, 18-8-2026)",
      "url": "https://www.galiciapress.es/articulo/politica/2026-08-18/5987531-figaredo-vox-reafirma-cazar-inmigrantes-ilegales-ceuta-centren-foco-interes-espanoles"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m7364-2.png"
   },
   {
    "id": "colau-m7382",
@@ -4551,7 +5287,12 @@
      "titulo": "El discurso y la posición de Vox sobre el franquismo (Maldita.es)",
      "url": "https://maldita.es/malditahemeroteca/20220714/el-discurso-y-la-posicion-de-vox-sobre-el-franquismo/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m7382.png"
   },
   {
    "id": "colau-m7382-2",
@@ -4575,7 +5316,12 @@
      "titulo": "Miradas y debates sobre la violencia franquista (Ayer, Marcial Pons)",
      "url": "https://revistasmarcialpons.es/index.php/revistaayer/article/download/cenarro-miradas-y-debates-sobre-la-violencia-franquista/1865/4849"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m7382-2.png"
   },
   {
    "id": "colau-m7391",
@@ -4603,7 +5349,12 @@
      "titulo": "Ortega Smith se niega a condenar el franquismo (Deia, 2020)",
      "url": "https://www.deia.eus/actualidad/2020/10/26/ortega-smith-niega-condenar-franquismo-4672031.amp.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m7391.png"
   },
   {
    "id": "colau-m7457",
@@ -4631,7 +5382,12 @@
      "titulo": "Un exportavoz de Vox afirma que Abascal avaló el ingreso de neonazis al partido (La Política Online)",
      "url": "https://www.lapoliticaonline.com/espana/politica-es/un-exportavoz-de-vox-afirma-que-abascal-avalo-y-autorizo-el-ingreso-de-neonazis-al-partido/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m7457.png"
   },
   {
    "id": "colau-m7459",
@@ -4663,7 +5419,12 @@
      "titulo": "Who are the detainees of Núcleo Nacional (Demócrata)",
      "url": "https://www.democrata.es/en/courts/who-are-the-detainees-of-nucleo-nacional-the-neo-nazi-alberto-pugilato-and-the-founder-of-noviembre-nacional-among-the-14-arrested/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m7459.png"
   },
   {
    "id": "colau-m7466",
@@ -4691,7 +5452,12 @@
      "titulo": "El líder de Desokupa no vota a Vox, vota toros (Ara)",
      "url": "https://es.ara.cat/politica/lider-desokupa-no-vota-vox-toros_1_5237441.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m7466.png"
   },
   {
    "id": "colau-m7486",
@@ -4719,7 +5485,12 @@
      "titulo": "El líder de Desokupa no vota a Vox, vota toros (Ara)",
      "url": "https://es.ara.cat/politica/lider-desokupa-no-vota-vox-toros_1_5237441.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m7486.png"
   },
   {
    "id": "colau-m7486-2",
@@ -4751,7 +5522,12 @@
      "titulo": "Imagen de Abascal con Trump generada con IA (Maldita.es, 21-1-2025)",
      "url": "https://maldita.es/malditobulo/20250121/imagen-abascal-trump-ia-grok/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m7486-2.png"
   },
   {
    "id": "colau-m7499",
@@ -4783,7 +5559,12 @@
      "titulo": "Argentina 2025: deudas pendientes del modelo libertario (El Economista)",
      "url": "https://eleconomista.com.ar/economia/argentina-2025-deudas-pendientes-modelo-libertario-n91652"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m7499.png"
   },
   {
    "id": "colau-m7509",
@@ -4815,7 +5596,12 @@
      "titulo": "Milei duplicó la represión a las protestas sociales en Argentina durante 2025 (El Ciudadano)",
      "url": "https://www.elciudadano.com/?p=1141827"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m7509.png"
   },
   {
    "id": "colau-m7593",
@@ -4843,7 +5629,12 @@
      "titulo": "Colau's Broad Front is presented in Catalonia: «We will fry the posh people with taxes» (Ara)",
      "url": "https://en.ara.cat/politics/colau-s-broad-front-is-presented-in-catalonia-we-will-fry-the-posh-people-with-taxes_1_5903199.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m7593.png"
   },
   {
    "id": "colau-m7737",
@@ -4875,7 +5666,12 @@
      "titulo": "El PIB modera su crecimiento al 0,6 % en el tercer trimestre y la inflación se mantiene en el 4,9 % (Artículo14, 30-10-2026)",
      "url": "https://www.articulo14.es/economia/el-pib-modera-su-crecimiento-al-06-en-el-tercer-trimestre-una-decima-menos-y-la-inflacion-se-mantiene-en-el-49-20261030.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m7737.png"
   }
  ],
  "excluidas": [

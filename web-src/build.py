@@ -86,14 +86,74 @@ def dominio(url):
     return d[4:] if d.startswith("www.") else d
 
 
+MESES = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre",
+         "noviembre", "diciembre"]
+
+
+def fecha_larga(iso):
+    """'2026-11-13' → '13 de noviembre de 2026' (si no es una fecha, la deja tal cual)."""
+    try:
+        d = dt.date.fromisoformat(str(iso))
+    except ValueError:
+        return str(iso)
+    return f"{d.day} de {MESES[d.month - 1]} de {d.year}"
+
+
+def fecha_corta(iso):
+    try:
+        return dt.date.fromisoformat(str(iso)).strftime("%d/%m/%Y")
+    except ValueError:
+        return str(iso)
+
+
+def _archivo():
+    """Copias de las fuentes en la Wayback Machine (las guarda herramientas/archivar_fuentes.py)."""
+    ruta = ENTREVISTAS / "archivo.json"
+    return json.loads(ruta.read_text(encoding="utf-8")) if ruta.exists() else {}
+
+
+ARCHIVO = _archivo()
+CONFIANZA = {"alta": "Confianza alta", "media": "Confianza media", "baja": "Confianza baja"}
+EXPLICA_CONFIANZA = {
+    "alta": "Las fuentes son oficiales o primarias y responden directamente a lo que se dijo.",
+    "media": "Hay fuentes fiables, pero indirectas o que no cubren todo lo que se dijo.",
+    "baja": "Las fuentes son escasas o parciales: el veredicto puede cambiar con más información.",
+}
+
+
+def fuentes_de(a):
+    return [f for f in a.get("fuentes", []) if isinstance(f, dict)
+            and str(f.get("url", "")).startswith(("http://", "https://"))]
+
+
+def lista_fuentes(a):
+    """<li> de cada fuente con su dominio y, si existe, el enlace a la copia archivada en la Wayback Machine."""
+    items = []
+    for f in fuentes_de(a):
+        copia = ARCHIVO.get(f["url"])
+        arch = (f' · <a class="arch" href="{e(copia["archivo"], quote=True)}" target="_blank" rel="noopener noreferrer" '
+                f'title="Copia guardada en la Wayback Machine el {e(fecha_corta(copia["fecha"]))}, por si la noticia cambia o desaparece">'
+                'copia archivada</a>') if copia else ""
+        items.append(f'<li><a href="{e(f["url"], quote=True)}" target="_blank" rel="noopener noreferrer">'
+                     f'{e(f.get("titulo") or f["url"])}</a> <span>{e(dominio(f["url"]))}{arch}</span></li>')
+    return "".join(items)
+
+
+def sello_fecha(a):
+    """«Verificada el …» y, si el veredicto se ha corregido, la etiqueta «Corregido» con la fecha de la última corrección."""
+    partes = []
+    if a.get("_correcciones"):
+        ultima = a["_correcciones"][-1]
+        partes.append(f'<span class="corregido" title="{e(ultima.get("motivo", ""), quote=True)}">Corregido el {e(fecha_corta(ultima["fecha"]))}</span>')
+    if a.get("_verificado"):
+        partes.append(f'<span>Verificada el {e(fecha_corta(a["_verificado"]))}</span>')
+    return " ".join(partes)
+
+
 def panel(a):
     v = a["veredicto"]
     s = a["_t"]
-    fuentes = [f for f in a.get("fuentes", []) if isinstance(f, dict)
-               and str(f.get("url", "")).startswith(("http://", "https://"))]
-    lista = "".join(
-        f'<li><a href="{e(f["url"], quote=True)}" target="_blank" rel="noopener noreferrer">'
-        f'{e(f.get("titulo") or f["url"])}</a> <span>{e(dominio(f["url"]))}</span></li>' for f in fuentes)
+    lista = lista_fuentes(a)
     cita = a.get("cita", "").strip("«»\" ")
     resumen = a.get("_resumen") or a.get("explicacion", "")
     # «Explicación completa» lleva a la página de la afirmación; el texto se queda oculto en la tarjeta
@@ -109,13 +169,17 @@ def panel(a):
         + (f'<blockquote>«{e(cita)}»</blockquote>' if cita else "") + "</div>"
         f'<span class="punto" aria-hidden="true"></span><span class="flecha" aria-hidden="true"></span>'
         f'<article class="panel"><p class="ficha">{NOMBRE[v]}</p>'
-        f'<a class="expandir" href="/{a["_slug"]}/{a["_id"]}" title="Abrir en su propia página" '
+        + (f'<span class="conf conf-{e(a["confianza"])}" title="{e(EXPLICA_CONFIANZA[a["confianza"]], quote=True)}">'
+           f'{CONFIANZA[a["confianza"]]}</span>' if a.get("confianza") in CONFIANZA else "")
+        + f'<a class="expandir" href="/{a["_slug"]}/{a["_id"]}" title="Abrir en su propia página" '
         f'aria-label="Abrir esta afirmación en su propia página">{ICONO_EXPANDIR}</a>'
         + (f'<blockquote class="movil">«{e(cita)}»</blockquote>' if cita else "")
         + f'<p class="que">{e(a.get("afirmacion", ""))}</p>'
         f'<p class="porque"><b>Por qué:</b> {e(resumen)}</p>'
         + (f'<p class="rotulo">Fuentes</p><ol class="fuentes">{lista}</ol>' if lista else "")
-        + detalle + '<p class="contrasta"><button class="copiar" type="button">Copiar encargo para contrastarlo con una IA</button></p>'
+        + (f'<p class="otros-l">También lo verificó: <a href="/{a["_slug"]}/{a["_id"]}#otros">'
+           + e(", ".join(dict.fromkeys(o["medio"] for o in a["_otros"]))) + "</a></p>" if a.get("_otros") else "")
+        + detalle + (f'<p class="sello">{sello_fecha(a)}</p>' if sello_fecha(a) else "") + '<p class="contrasta"><button class="copiar" type="button">Copiar encargo para contrastarlo con una IA</button></p>'
         + "</article></li>"
     )
 
@@ -138,6 +202,10 @@ def cargar(carpeta, meta):
             a["_t"] = momento_exacto(a, indice)
             a["_video"] = meta["video"]
             a["_slug"] = meta["slug"]
+            # fecha en que se verificó: la de la afirmación si la trae, si no la de la entrevista (meta.json)
+            a["_verificado"] = a.get("verificado") or meta.get("verificado")
+            a["_correcciones"] = sorted((c for c in a.get("correcciones", []) if isinstance(c, dict) and c.get("fecha")),
+                                        key=lambda c: c["fecha"])
         todas += datos
     todas.sort(key=lambda a: a["_t"])
     return todas
@@ -306,15 +374,18 @@ def copiar_compartir():
     origen = RAIZ / "web-src" / "compartir"
     (SALIDA / "compartir").mkdir(parents=True, exist_ok=True)
     for f in sorted(origen.glob("*")) if origen.is_dir() else []:
-        shutil.copy(f, SALIDA / ("" if f.name in ICONOS else "compartir") / f.name)
+        if f.is_dir():
+            shutil.copytree(f, SALIDA / "compartir" / f.name, dirs_exist_ok=True)
+        else:
+            shutil.copy(f, SALIDA / ("" if f.name in ICONOS else "compartir") / f.name)
     if not (SALIDA / "compartir" / f"{IMAGEN_GENERAL}.png").exists():
         print("AVISO: falta web-src/compartir/general.png: las páginas apuntarán a una imagen que no existe. "
               "Ejecuta: uv run --with pillow python herramientas/imagenes_compartir.py")
 
 
-def indexacion(hechas):
+def indexacion(hechas, temas=()):
     """robots.txt y sitemap.xml con las páginas publicadas."""
-    rutas = (["/", "/buscar", "/metodologia", "/quien", "/api"]
+    rutas = (["/", "/temas"] + [f'/temas/{t["slug"]}' for t in temas] + ["/buscar", "/metodologia", "/quien", "/api"]
              + [r for m in hechas for r in (f'/{m["slug"]}', f'/{m["slug"]}/transcripcion')]
              + [f'/{m["slug"]}/{a["_id"]}' for m in hechas for a in m["todas"]])
     (SALIDA / "sitemap.xml").write_text(
@@ -540,6 +611,22 @@ def preparar(meta):
     if sobran:
         print(f'AVISO: {meta["slug"]}: excluidas.json cita identificadores que no existen: {sorted(sobran)}')
     todas = [a for a in todas if a["_id"] not in fuera]
+    por_id = {a["_id"]: a for a in todas}
+    # «Lo esencial»: las 3-5 afirmaciones clave del candidato (esencial.json, criterio en el propio fichero)
+    ruta_es = carpeta / "esencial.json"
+    esencial = json.loads(ruta_es.read_text(encoding="utf-8")) if ruta_es.exists() else {"afirmaciones": []}
+    for x in esencial["afirmaciones"]:
+        if x["id"] in por_id:
+            por_id[x["id"]]["_esencial"] = x.get("por_que", "")
+        else:
+            print(f'AVISO: {meta["slug"]}: esencial.json cita {x["id"]}, que no existe o está excluida')
+    # Lo que otros verificadores (Newtral, Maldita, EFE…) publicaron sobre la misma frase o el mismo dato
+    ruta_ov = carpeta / "otros_verificadores.json"
+    for o in json.loads(ruta_ov.read_text(encoding="utf-8"))["enlaces"] if ruta_ov.exists() else []:
+        if o["id"] in por_id:
+            por_id[o["id"]].setdefault("_otros", []).append(o)
+        else:
+            print(f'AVISO: {meta["slug"]}: otros_verificadores.json cita {o["id"]}, que no existe o está excluida')
     temas = []
     for n, c in enumerate(capitulos, 1):
         ini, fin = int(c["start_time"]), int(c["end_time"])
@@ -550,7 +637,9 @@ def preparar(meta):
                       "malas": sum(a["veredicto"] in ("falso", "enganoso") for a in suyas)})
     total = {k: sum(a["veredicto"] == k for a in todas) for k in ORDEN}
     return dict(meta, carpeta=carpeta, todas=todas, temas=temas, capitulos=capitulos, total=total,
-                suma=len(todas), malas=total["falso"] + total["enganoso"], excluidas=excluidas)
+                suma=len(todas), malas=total["falso"] + total["enganoso"], excluidas=excluidas,
+                esencial=[por_id[x["id"]] for x in esencial["afirmaciones"] if x["id"] in por_id],
+                criterio_esencial=esencial.get("criterio", ""))
 
 
 def nombre_menu(nombre):
@@ -581,8 +670,10 @@ def menu(entrevistas, actual=None):
             f'<a href="/{s}/transcripcion">{ICONO_TEXTO}<span>Transcripción</span></a></div>'
             f'<p class="rot">Temas <span>· en rojo, cuántas falsas o engañosas</span></p><ol class="lista-temas">{temas}</ol></div></details>')
     aqui_buscar = ' aria-current="page"' if actual == "buscar" else ""
+    aqui_temas = ' aria-current="page"' if actual == "temas" else ""
     return ('<header class="menu"><div class="ancho"><div class="m1"><a class="sello" href="/" title="Todas las entrevistas">Verificación</a>'
             + "".join(partes) + f'<a class="dcha buscar"{aqui_buscar} href="/buscar" title="Buscar una afirmación (tecla /)">{ICONO_LUPA}<span>Buscar</span></a>'
+            + f'<a href="/temas"{aqui_temas}>Temas</a>'
             '<a href="/api">Verifícalo tú</a><a href="/metodologia">Método</a><a href="/quien">Quién lo hace</a>'
             f'<a href="{REPO}" target="_blank" rel="noopener noreferrer">GitHub ↗</a>' + BOTON_MODO + '</div></div></header>' + JS_MENU)
 
@@ -869,6 +960,22 @@ def filtros(m, extra=""):
                       for k in ORDEN) + extra + '<span class="cuenta" aria-live="polite"></span></div></div></div>')
 
 
+def chip_v(v):
+    return f'<span class="chip-v" data-v="{v}">{NOMBRE[v]}</span>'
+
+
+def seccion_esencial(m):
+    """Las 3-5 afirmaciones clave del candidato (esencial.json), encima de la línea temporal."""
+    if not m.get("esencial"):
+        return ""
+    tarjetas = "".join(
+        f'<li data-v="{a["veredicto"]}"><p class="es-tema">{e(a["_esencial"].rstrip("."))}</p>{chip_v(a["veredicto"])}'
+        f'<a class="es-que" href="/{m["slug"]}/{a["_id"]}">{e(" ".join(a.get("afirmacion", "").split()))}</a>'
+        f'<p class="es-min">Minuto {hms(a["_t"])}</p></li>' for a in m["esencial"])
+    return (f'<section class="esencial ancho" aria-labelledby="esencial-t"><h2 id="esencial-t">Lo esencial</h2>'
+            f'<p class="es-nota">{e(m["criterio_esencial"])}</p><ol class="es-lista">{tarjetas}</ol></section>')
+
+
 def pagina_entrevista(m, entrevistas):
     filas = []
     n_temas = len(m["temas"])
@@ -901,7 +1008,7 @@ def pagina_entrevista(m, entrevistas):
         alt=f'Verificación dato a dato: {m["invitado"]} ({m.get("partido") or "sin partido"}) en {m["programa"]}')
     n_preguntas = preguntas_jordi(m)
     pagina = rellenar(
-        PLANTILLA, CABECERA=cab, PREGUNTAS=JS_PREGUNTAS if n_preguntas else "", FAB=FAB_LEYENDA, BARRA=barra_reparto(m, "barra-reparto grande"), RETRATO=retrato(m) or "", CREDITOS=creditos_fotos([m]), MENU=menu(entrevistas, m["slug"]), CSS_MENU=CSS_MENU, LEYENDA=LEYENDA, NOTA_EXCL=nota_excl,
+        PLANTILLA, CABECERA=cab, ESENCIAL=seccion_esencial(m), PREGUNTAS=JS_PREGUNTAS if n_preguntas else "", FAB=FAB_LEYENDA, BARRA=barra_reparto(m, "barra-reparto grande"), RETRATO=retrato(m) or "", CREDITOS=creditos_fotos([m]), MENU=menu(entrevistas, m["slug"]), CSS_MENU=CSS_MENU, LEYENDA=LEYENDA, NOTA_EXCL=nota_excl,
         FILTROS=filtros(m, '<span class="tema-actual" id="tema-actual"></span>'), SUMA=m["suma"], MALAS=m["malas"],
         FALSAS=m["total"]["falso"], ENGANOSAS=m["total"]["enganoso"], CASI=m["total"]["mayormente_verdadero"],
         VERDADERAS=m["total"]["verdadero"], NV=m["total"]["no_verificable"], FILAS="".join(filas),
@@ -1237,16 +1344,37 @@ def pagina_afirmacion(m, a, entrevistas, anterior, siguiente):
     if a.get("explicacion"):
         por_que += f'<p class="explicacion">{e(a["explicacion"])}</p>'
     if a.get("confianza"):
-        por_que += f'<p class="confianza">Confianza: <b>{e(str(a["confianza"]))}</b></p>'
+        por_que += (f'<p class="confianza">Confianza: <b>{e(str(a["confianza"]))}</b>'
+                    + (f'. {EXPLICA_CONFIANZA[a["confianza"]]}' if a["confianza"] in EXPLICA_CONFIANZA else "") + "</p>")
 
-    fuentes = [f for f in a.get("fuentes", []) if isinstance(f, dict)
-               and str(f.get("url", "")).startswith(("http://", "https://"))]
+    items = lista_fuentes(a)
     fuentes_html = ""
-    if fuentes:
-        items = "".join(
-            f'<li><a href="{e(f["url"], quote=True)}" target="_blank" rel="noopener noreferrer">'
-            f'{e(f.get("titulo") or f["url"])}</a> <span>{e(dominio(f["url"]))}</span></li>' for f in fuentes)
-        fuentes_html = f'<section class="seccion"><h2>Fuentes</h2><ol class="fuentes">{items}</ol></section>'
+    if items:
+        n_arch = sum(1 for f in fuentes_de(a) if f["url"] in ARCHIVO)
+        nota_arch = ('<p class="nota-arch">«Copia archivada» abre la fuente tal como estaba guardada en la '
+                     '<a href="https://web.archive.org/" target="_blank" rel="noopener noreferrer">Wayback Machine</a>, '
+                     'por si la noticia original cambia o desaparece.</p>') if n_arch else ""
+        fuentes_html = f'<section class="seccion"><h2>Fuentes</h2><ol class="fuentes">{items}</ol>{nota_arch}</section>'
+    if a.get("_otros"):
+        ALCANCE = {"misma_frase": "Sobre esta misma frase", "mismo_dato": f'Sobre el mismo dato, dicho por {m["invitado"]} en otro momento'}
+        otros = "".join(
+            f'<li><a href="{e(o["url"], quote=True)}" target="_blank" rel="noopener noreferrer">{e(o.get("titulo") or o["url"])}</a>'
+            f'<span class="medio">{e(o["medio"])}' + (f' · {e(fecha_corta(o["fecha"]))}' if o.get("fecha") else "")
+            + (f' · su veredicto: <b>{e(o["veredicto_medio"])}</b>' if o.get("veredicto_medio") else "") + "</span>"
+            + (f'<span class="alcance">{ALCANCE[o["alcance"]]}</span>' if o.get("alcance") in ALCANCE else "") + "</li>"
+            for o in a["_otros"])
+        fuentes_html += (f'<section class="seccion" id="otros"><h2>Otros verificadores</h2><ul class="otros">{otros}</ul>'
+                         '<p class="nota-arch">Piezas de verificadores profesionales sobre lo mismo. Pueden llegar a otra '
+                         'conclusión; la etiqueta que aparece es la del propio medio.</p></section>')
+    historial = ""
+    if a.get("_verificado") or a.get("_correcciones"):
+        filas = "".join(
+            f'<li><b>Corregido el {e(fecha_larga(c["fecha"]))}.</b> '
+            + (f'Antes: «{e(NOMBRE.get(c.get("antes"), c.get("antes", "")))}». ' if c.get("antes") else "")
+            + f'{e(c.get("motivo", ""))}</li>' for c in reversed(a["_correcciones"]))
+        if a.get("_verificado"):
+            filas += f'<li>Verificada el {e(fecha_larga(a["_verificado"]))}.</li>'
+        historial = f'<section class="seccion historial"><h2>Historial</h2><ul>{filas}</ul></section>'
 
     ver_tema = f"/{slug}/transcripcion" + (f"#tema-{a['_tema']}" if a.get("_tema") else "")
     contexto = (f'<section class="seccion"><h2>Contexto en la entrevista</h2><div class="contexto">{contexto_cita(m, a)}</div>'
@@ -1265,13 +1393,19 @@ def pagina_afirmacion(m, a, entrevistas, anterior, siguiente):
                 f'<small>{e(recortar(b.get("afirmacion", ""), 80))}</small></a>')
 
     descripcion = recortar(resumen, 200) or f"Verificación de una afirmación de {m['invitado']} en The Wild Project."
+    # imagen propia (herramientas/imagenes_compartir.py); si aún no se ha generado, la del candidato
+    propia = f"afirmaciones/{slug}/{idx}"
+    imagen = propia if (RAIZ / "web-src" / "compartir" / f"{propia}.png").exists() else imagen_de(slug)
     cab = cabecera(
-        ruta, f'{NOMBRE[v]}: {recortar(afirmacion, 90)} · {m["invitado"]}', descripcion, imagen_de(slug),
+        ruta, f'{NOMBRE[v]}: {recortar(afirmacion, 90)} · {m["invitado"]}', descripcion, imagen,
         titulo_social=f'{NOMBRE[v]}: {afirmacion}',
-        alt=f'Verificación dato a dato: {m["invitado"]} ({m.get("partido") or "sin partido"}) en {m["programa"]}')
+        alt=(f'{NOMBRE[v]}: {recortar(afirmacion, 200)} ({m["invitado"]}, {m["programa"]}, minuto {minuto})' if imagen == propia else
+             f'Verificación dato a dato: {m["invitado"]} ({m.get("partido") or "sin partido"}) en {m["programa"]}'))
     pagina = rellenar(
         AFIRMACION, CABECERA=cab, CSS_MENU=CSS_MENU, MENU=menu(entrevistas, slug), MIGAS=migas, V=v,
-        VEREDICTO=NOMBRE[v], AFIRMACION=e(afirmacion), CITA=cita_html, POR_QUE=por_que, FUENTES=fuentes_html,
+        VEREDICTO=NOMBRE[v], AFIRMACION=e(afirmacion), CITA=cita_html, POR_QUE=por_que, FUENTES=fuentes_html + historial,
+        SELLO=(f'<span class="corregido">Corregido</span>' if a.get("_correcciones") else "")
+        + (f'<span class="esencial-chip" title="{e(a["_esencial"], quote=True)}">Lo esencial</span>' if a.get("_esencial") else ""),
         CONTEXTO=contexto, VER_LINEA=f"/{slug}#{idx}", URL_PAGINA=e(BASE + ruta, quote=True), URL_ERROR=e(url_error, quote=True),
         ANTERIOR=vecina(anterior, "ant", "← Anterior"), SIGUIENTE=vecina(siguiente, "sig", "Siguiente →"))
     destino = SALIDA / slug / idx
@@ -1349,6 +1483,99 @@ def pagina_buscar(entrevistas, hechas):
         CLAVES=json.dumps(ORDEN), REPO=REPO), encoding="utf-8")
 
 
+# ───────────────────────── Temas comunes (/temas) ─────────────────────────
+
+def temas_comunes(hechas):
+    """Temas de entrevistas/temas.json con las afirmaciones de cada candidato. Solo los que tratan dos candidatos o más."""
+    ruta = ENTREVISTAS / "temas.json"
+    if not ruta.exists():
+        return []
+    por_slug = {m["slug"]: m for m in hechas}
+    salida = []
+    for t in json.loads(ruta.read_text(encoding="utf-8"))["temas"]:
+        bloques = []
+        for slug, caps in t["capitulos"].items():
+            m = por_slug.get(slug)
+            if not m:
+                continue
+            suyas = sorted((a for a in m["todas"] if a.get("_tema") in caps), key=lambda a: (ORDEN.index(a["veredicto"]), a["_t"]))
+            if not suyas:
+                continue
+            total = {k: sum(a["veredicto"] == k for a in suyas) for k in ORDEN}
+            bloques.append({"m": m, "caps": caps, "suyas": suyas, "total": total, "suma": len(suyas),
+                            "malas": total["falso"] + total["enganoso"]})
+        if len(bloques) >= 2:
+            orden = {m["slug"]: n for n, m in enumerate(hechas)}
+            bloques.sort(key=lambda b: orden[b["m"]["slug"]])
+            salida.append(dict(t, bloques=bloques))
+    return salida
+
+
+SINGULAR = {"falso": "falsa", "enganoso": "engañosa", "mayormente_verdadero": "casi cierta",
+            "verdadero": "verdadera", "no_verificable": "no verificable"}
+
+
+def pagina_temas(entrevistas, temas):
+    if not temas:
+        return
+    tarjetas = []
+    for t in temas:
+        filas = "".join(
+            f'<li><span class="t-cand">{retrato(b["m"], " chica", decorativo=True, con_insignia=False) or ""}{e(b["m"]["invitado"])}</span>'
+            f'<span class="t-num"><b>{b["malas"]}</b> de {b["suma"]}</span>{barra_reparto(b, "barra-reparto fina")}</li>'
+            for b in t["bloques"])
+        tarjetas.append(
+            f'<article class="tema-c"><h2><a href="/temas/{e(t["slug"])}">{e(t["titulo"])}</a></h2><p class="t-desc">{e(t["descripcion"])}</p>'
+            f'<p class="t-rot">Falsas o engañosas, de las comprobadas</p><ul class="t-filas">{filas}</ul>'
+            f'<p class="t-ir"><a href="/temas/{e(t["slug"])}">Ver qué dijo cada uno <span class="sr">sobre {e(t["titulo"])}</span>{ICONO_FLECHA}</a></p></article>')
+    cuerpo = f'<div class="temas-rej">{"".join(tarjetas)}</div>'
+    (SALIDA / "temas").mkdir(exist_ok=True)
+    (SALIDA / "temas" / "index.html").write_text(rellenar(
+        TEMAS, CABECERA=cabecera("/temas", "Los candidatos, tema a tema · Verificación The Wild Project",
+                                 "Qué dijo cada candidato sobre vivienda, inmigración, Ceuta, corrupción y otros temas, y cómo salen sus afirmaciones."),
+        MENU=menu(entrevistas, "temas"), CSS_MENU=CSS_MENU, MIGAS="", TITULO="Los candidatos, tema a tema",
+        ENTRADA="Las afirmaciones de cada entrevista agrupadas por los temas que comparten, para ver qué dijo cada candidato sobre lo mismo. "
+                "Solo salen los temas que tratan al menos dos. El número es cuántas resultaron falsas o engañosas de las que se pudieron comprobar.",
+        CUERPO=cuerpo), encoding="utf-8")
+    for t in temas:
+        columnas = []
+        for b in t["bloques"]:
+            m = b["m"]
+            caps = ", ".join(f'<a href="/{m["slug"]}#tema-{n}">{e(next(x["titulo"] for x in m["temas"] if x["n"] == n))}</a>' for n in b["caps"])
+            items = "".join(
+                f'<li data-v="{a["veredicto"]}">{chip_v(a["veredicto"])}'
+                f'<a href="/{m["slug"]}/{a["_id"]}">{e(" ".join(a.get("afirmacion", "").split()))}</a>'
+                f'<span class="t-min">{hms(a["_t"])}</span></li>' for a in b["suyas"])
+            desglose = " · ".join(f'<span class="tono-{k}">{b["total"][k]} {SINGULAR[k] if b["total"][k] == 1 else PLURAL[k].lower()}</span>'
+                                  for k in ORDEN if b["total"][k])
+            columnas.append(
+                f'<section class="cand"><header class="cand-cab">{retrato(m, " tema", decorativo=True) or ""}<div><h2><a href="/{m["slug"]}">{e(m["invitado"])}</a></h2>'
+                f'<p class="par">{e(m.get("partido") or "")}</p></div></header>'
+                f'<p class="cand-num"><b>{b["malas"]}</b> {"falsa o engañosa" if b["malas"] == 1 else "falsas o engañosas"} de {b["suma"]}</p>'
+                f'{barra_reparto(b)}<p class="cand-des">{desglose}</p>'
+                f'<p class="cand-caps">En la entrevista: {caps}</p><ol class="t-lista">{items}</ol></section>')
+        otros = " · ".join(f'<a href="/temas/{e(x["slug"])}">{e(x["titulo"])}</a>' for x in temas if x is not t)
+        cuerpo = (f'<div class="comparar">{"".join(columnas)}</div>'
+                  f'<p class="otros-temas"><b>Otros temas:</b> {otros}</p>'
+                  '<p class="nota-t">Cuántas afirmaciones se pueden comprobar depende de las preguntas y del tiempo que se dedicó al tema '
+                  'en cada entrevista, así que no es un ranking. Primero salen las falsas y engañosas.</p>')
+        (SALIDA / "temas" / t["slug"]).mkdir(parents=True, exist_ok=True)
+        (SALIDA / "temas" / t["slug"] / "index.html").write_text(rellenar(
+            TEMAS, CABECERA=cabecera(f'/temas/{t["slug"]}', f'{t["titulo"]}: qué dijo cada candidato · Verificación The Wild Project',
+                                     f'{t["descripcion"]} Las afirmaciones de ' + ", ".join(b["m"]["invitado"] for b in t["bloques"])
+                                     + ' sobre este tema, verificadas una a una.'),
+            MENU=menu(entrevistas, "temas"), CSS_MENU=CSS_MENU, MIGAS='<nav class="migas" aria-label="Ruta"><a href="/temas">Temas</a> › ' + e(t["titulo"]) + "</nav>",
+            TITULO=e(t["titulo"]), ENTRADA=e(t["descripcion"]) + " Lo que dijo cada candidato, con su veredicto.", CUERPO=cuerpo), encoding="utf-8")
+
+
+def temas_api(temas):
+    return [{"slug": t["slug"], "titulo": t["titulo"], "descripcion": t["descripcion"], "web_url": f'{BASE}/temas/{t["slug"]}',
+             "candidatos": [{"entrevista": b["m"]["slug"], "invitado": b["m"]["invitado"], "capitulos": b["caps"],
+                             "total": b["suma"], "por_veredicto": b["total"],
+                             "afirmaciones": [f'{b["m"]["slug"]}-{a["_id"]}' for a in b["suyas"]]} for b in t["bloques"]]}
+            for t in temas]
+
+
 # ───────────────────────── API estática (JSON) ─────────────────────────
 
 def ficha_api(m):
@@ -1360,6 +1587,7 @@ def ficha_api(m):
         "transcripcion_url": f"{BASE}/api/v1/{s}/transcripcion.json",
         "transcripcion_txt_url": f"{BASE}/api/v1/{s}/transcripcion.txt",
         "total_afirmaciones": m["suma"], "por_veredicto": m["total"], "excluidas": len(m.get("excluidas", [])),
+        "esencial": [f'{s}-{a["_id"]}' for a in m.get("esencial", [])],
         "temas": [{"n": t["n"], "titulo": t["titulo"], "inicio_s": t["ini"], "total": t["total"],
                    "por_veredicto": {k: sum(a["veredicto"] == k for a in t["suyas"]) for k in ORDEN}} for t in m["temas"]],
     }
@@ -1374,8 +1602,14 @@ def afirmacion_api(m, a):
         "video_url": f'https://www.youtube.com/watch?v={m["video"]}&t={a["_t"]}s', "web_url": f'{BASE}/{m["slug"]}#{a["_id"]}', "pagina_url": f'{BASE}/{m["slug"]}/{a["_id"]}',
         "cita": a.get("cita", ""), "afirmacion": a.get("afirmacion", ""), "veredicto": a["veredicto"],
         "resumen": a.get("_resumen"), "explicacion": a.get("explicacion", ""), "confianza": a.get("confianza"),
-        "fuentes": [{"titulo": f.get("titulo", ""), "url": f["url"]} for f in a.get("fuentes", [])
-                    if isinstance(f, dict) and str(f.get("url", "")).startswith(("http://", "https://"))],
+        "fuentes": [dict({"titulo": f.get("titulo", ""), "url": f["url"]},
+                         **({"archivo": ARCHIVO[f["url"]]["archivo"]} if f["url"] in ARCHIVO else {})) for f in fuentes_de(a)],
+        "verificado": a.get("_verificado"),
+        "correcciones": [{"fecha": c["fecha"], "antes": c.get("antes"), "motivo": c.get("motivo", "")} for c in a.get("_correcciones", [])],
+        "esencial": bool(a.get("_esencial")),
+        "otros_verificadores": [{k: o.get(k) for k in ("medio", "titulo", "url", "fecha", "veredicto_medio", "alcance")}
+                                for o in a.get("_otros", [])],
+        "imagen_url": f'{BASE}/compartir/afirmaciones/{m["slug"]}/{a["_id"]}.png',
     }
 
 
@@ -1384,7 +1618,7 @@ def escribir_json(ruta, datos):
     ruta.write_text(json.dumps(datos, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
 
 
-def generar_api(hechas):
+def generar_api(hechas, temas=()):
     # Restos de cuando los datos vivían en web/api/ y del panel privado de visitas, ya retirado.
     shutil.rmtree(SALIDA / "api", ignore_errors=True)
     shutil.rmtree(SALIDA / "panel", ignore_errors=True)
@@ -1416,6 +1650,9 @@ def generar_api(hechas):
         (api / m["slug"] / "transcripcion.txt").write_text(
             (m["carpeta"] / "transcripcion.txt").read_text(encoding="utf-8"), encoding="utf-8")
     escribir_json(api / "afirmaciones.json", dict(comun, total=len(todas), afirmaciones=todas))
+    escribir_json(api / "temas.json", dict(comun, nota="Temas que comparten varias entrevistas. Cada candidato trae los capítulos "
+                                                       "de su entrevista que entran en el tema y los id de sus afirmaciones.",
+                                          temas=temas_api(temas)))
     api_publica.escribir_csv(api / "afirmaciones.csv", todas)
     slugs = [m["slug"] for m in hechas]
     ejemplo = slugs[0] if slugs else "sanchez"
@@ -1437,7 +1674,11 @@ API de solo lectura, JSON estático, sin clave, CORS abierto. Base: {BASE}/api/v
 
 Campos de cada afirmación: id, entrevista, invitado, tema, segundo, minuto, video_url, web_url, cita (literal de la
 transcripción), afirmacion (reformulada), veredicto (verdadero | mayormente_verdadero | enganoso | falso | no_verificable),
-resumen, explicacion, confianza (alta | media | baja), fuentes [{{titulo, url}}].
+resumen, explicacion, confianza (alta | media | baja), fuentes [{{titulo, url, archivo}}] (archivo: copia en la Wayback
+Machine), verificado (fecha), correcciones [{{fecha, antes, motivo}}], esencial (si es de las clave del candidato),
+otros_verificadores [{{medio, titulo, url, fecha, veredicto_medio, alcance}}] e imagen_url.
+
+- [Temas comunes]({BASE}/api/v1/temas.json): las afirmaciones de cada candidato agrupadas por tema (vivienda, inmigración…).
 
 Para volver a comprobar una afirmación: lee `cita` y `afirmacion`, abre cada `fuentes[].url`, y contrasta con la `explicacion`.
 Los errores se comunican en {REPO}/issues.
@@ -1718,7 +1959,21 @@ entrevistas.forEach(e => console.log(e.invitado, e.por_veredicto));
                                }},
                 "Fuente": {"type": "object", "required": ["titulo", "url"],
                            "properties": {"titulo": {"type": "string", "description": "Medio o organismo y título del documento."},
-                                          "url": dict(url, description="Siempre `http` o `https`.")}},
+                                          "url": dict(url, description="Siempre `http` o `https`."),
+                                          "archivo": dict(url, description="Copia de la fuente en la Wayback Machine (archive.org), por si la "
+                                                                           "original cambia o desaparece. Solo si ya se ha archivado.")}},
+                "Correccion": {"type": "object", "required": ["fecha", "motivo"],
+                               "properties": {"fecha": {"type": "string", "format": "date"},
+                                              "antes": {"anyOf": [ref("Veredicto"), {"type": "null"}], "description": "Veredicto anterior, si cambió."},
+                                              "motivo": {"type": "string", "description": "Qué se corrigió y por qué."}}},
+                "OtroVerificador": {"type": "object", "required": ["medio", "url"],
+                                    "properties": {"medio": {"type": "string", "description": "Newtral, Maldita.es, EFE Verifica…"},
+                                                   "titulo": {"type": ["string", "null"]}, "url": url,
+                                                   "fecha": {"type": ["string", "null"], "format": "date"},
+                                                   "veredicto_medio": {"type": ["string", "null"], "description": "La etiqueta del propio medio, literal."},
+                                                   "alcance": {"type": ["string", "null"], "enum": ["misma_frase", "mismo_dato", None],
+                                                               "description": "`misma_frase`: verificó lo dicho en esta entrevista. "
+                                                                              "`mismo_dato`: el mismo dato dicho por el candidato en otro momento."}}},
                 "Afirmacion": {"type": "object", "description": "Una afirmación comprobable del invitado y su verificación.",
                                "required": ["id", "entrevista", "invitado", "tema_n", "tema", "segundo", "minuto", "video_url",
                                             "web_url", "pagina_url", "cita", "afirmacion", "veredicto", "resumen", "explicacion", "confianza", "fuentes"],
@@ -1741,6 +1996,13 @@ entrevistas.forEach(e => console.log(e.invitado, e.por_veredicto));
                                    "confianza": {"anyOf": [ref("Confianza"), {"type": "null"}]},
                                    "fuentes": {"type": "array", "items": ref("Fuente"),
                                                "description": "Fuentes que sustentan el veredicto. Puede venir vacía, sobre todo con `no_verificable`."},
+                                   "verificado": {"type": ["string", "null"], "format": "date", "description": "Fecha en que se verificó."},
+                                   "correcciones": {"type": "array", "items": ref("Correccion"),
+                                                    "description": "Cambios hechos después de publicar, del más antiguo al más reciente. Vacía si no se ha corregido."},
+                                   "esencial": {"type": "boolean", "description": "Si está entre las 3-5 afirmaciones clave del candidato («Lo esencial»)."},
+                                   "otros_verificadores": {"type": "array", "items": ref("OtroVerificador"),
+                                                           "description": "Lo que otros verificadores publicaron sobre la misma frase o el mismo dato."},
+                                   "imagen_url": dict(url, description="Imagen de 1200×630 para compartir la afirmación."),
                                }},
                 "Segmento": {"type": "object", "required": ["inicio_s", "fin_s", "texto"],
                              "properties": {"inicio_s": {"type": "number", "minimum": 0, "description": "Segundo de inicio, con dos decimales."},
@@ -1892,7 +2154,8 @@ def comparativa(hechas):
             f'<div class="tabla-c"><table><thead><tr><td></td>{cab}</tr></thead><tbody>{cuerpo}</tbody></table></div>'
             '<p class="nota-c">Los porcentajes son sobre las afirmaciones comprobadas de cada candidato. Cuántas se pueden comprobar '
             'depende de la duración de la entrevista, de las preguntas y de cuántos datos da cada invitado, así que esto no es un ranking: '
-            'sirve para ver dónde mirar. Cada cifra lleva a su línea temporal.</p></section>')
+            'sirve para ver dónde mirar. Cada cifra lleva a su línea temporal. Para ver qué dijo cada uno sobre lo mismo, '
+            '<a href="/temas">compáralos tema a tema</a>.</p></section>')
 
 
 def main():
@@ -1915,11 +2178,13 @@ def main():
             pagina_afirmacion(m, a, entrevistas,
                               m["todas"][n - 1] if n > 0 else None,
                               m["todas"][n + 1] if n + 1 < len(m["todas"]) else None)
-    ejemplo, slugs = generar_api(hechas)
+    temas = temas_comunes(hechas)
+    pagina_temas(entrevistas, temas)
+    ejemplo, slugs = generar_api(hechas, temas)
     indice_busqueda(hechas)
     pagina_buscar(entrevistas, hechas)
     copiar_compartir()
-    indexacion(hechas)
+    indexacion(hechas, temas)
     (SALIDA / "fotos").mkdir(exist_ok=True)
     for f in (RAIZ / "web-src" / "fotos").glob("*.jpg"):
         shutil.copy(f, SALIDA / "fotos" / f.name)
@@ -2227,6 +2492,8 @@ CSS_MENU += """
 .retrato.res-foto { width:clamp(44px,5.5vw,54px); height:clamp(44px,5.5vw,54px); align-self:center; }
 .retrato.res-foto .insignia { animation:none; }
 .retrato.chica { width:24px; height:24px; align-self:center; }
+.chip-v { align-self:flex-start; display:inline-block; padding:2px 8px; font-size:11.5px; font-weight:700; text-transform:uppercase; letter-spacing:.08em;
+  background:var(--tono); color:var(--sobre-tono); border-radius:var(--r-mini); white-space:nowrap; }
 .retrato.chica > img { border-width:1.5px; }
 .fila button[aria-pressed=true] .retrato > img { border-color:var(--fondo); }
 .creditos { font-size:12.5px; color:var(--gris); }
@@ -3013,6 +3280,17 @@ a { color:var(--tinta); }
 .cima { display:flex; justify-content:space-between; gap:12px; padding-top:18px; font-size:13px; }
 .cima a { font-weight:600; white-space:nowrap; }
 .portada { padding-top:clamp(28px,5vw,48px); padding-bottom:28px; }
+/* Lo esencial: las afirmaciones clave, en fichas que se reparten solas en columnas */
+.esencial { padding-bottom:30px; }
+.esencial h2 { font:700 clamp(24px,2.4vw,28px)/1.2 var(--serif); margin:0 0 6px; padding-top:12px; border-top:3px solid var(--tinta); }
+.es-nota { margin:0 0 16px; font-size:14px; color:var(--suave); max-width:68ch; }
+.es-lista { list-style:none; margin:0; padding:0; display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr)); gap:clamp(10px,1.4vw,16px); }
+.es-lista li { min-width:0; display:flex; flex-direction:column; gap:8px; border:2px solid var(--tinta); border-radius:var(--r-caja); padding:14px 16px;
+  box-shadow:inset 0 5px 0 var(--tono); padding-top:18px; }
+.es-tema { margin:0; font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--gris); }
+.es-que { font:600 16.5px/1.38 var(--serif); text-decoration:none; text-wrap:pretty; }
+.es-que:hover { text-decoration:underline; }
+.es-min { margin:auto 0 0; font-size:12.5px; color:var(--gris); font-variant-numeric:tabular-nums; }
 h1 { font:700 clamp(30px,5.2vw,56px)/1.05 var(--serif); letter-spacing:-0.02em; margin:0 0 18px; text-wrap:balance; max-width:22ch; }
 .entrada { font-size:17px; margin:0 0 20px; max-width:62ch; }
 .intro .abrir { margin:0; }
@@ -3057,6 +3335,16 @@ h1 { font:700 clamp(30px,5.2vw,56px)/1.05 var(--serif); letter-spacing:-0.02em; 
 [data-v=falso] .ficha { background:var(--tinta); color:var(--fondo); }
 blockquote { margin:0 0 8px; font:italic 19px/1.38 var(--serif); text-wrap:pretty; }
 .que { margin:0 0 12px; font-size:14px; color:var(--gris); line-height:1.45; }
+.conf { display:inline-block; margin:0 0 10px 8px; font-size:11.5px; font-weight:600; color:var(--gris); letter-spacing:.02em; cursor:help; }
+.conf::before { content:""; display:inline-block; width:22px; height:6px; margin-right:6px; vertical-align:1px; border-radius:3px;
+  background:linear-gradient(90deg, var(--suave) var(--lleno), var(--claro) var(--lleno)); }
+.conf-alta { --lleno:100%; } .conf-media { --lleno:66%; } .conf-baja { --lleno:33%; }
+.otros-l { margin:8px 0 0; font-size:13px; color:var(--suave); }
+.otros-l a { font-weight:600; }
+.sello { margin:10px 0 0; font-size:12px; color:var(--gris); }
+.sello .corregido { display:inline-block; margin-right:6px; padding:1px 7px; font-weight:700; text-transform:uppercase; letter-spacing:.08em;
+  font-size:11px; color:var(--tinta); border:1.5px solid var(--tinta); border-radius:var(--r-mini); }
+.fuentes .arch { color:var(--gris); }
 .porque { margin:0 0 12px; font-size:15.5px; }
 .rotulo { margin:0 0 4px; font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.09em; }
 .fuentes { margin:0; padding-left:20px; font-size:13.5px; }
@@ -3186,6 +3474,7 @@ footer .leyenda-f { margin-bottom:34px; max-width:820px; }
   <p class="resto">El resto: @@VERDADERAS@@ verdaderas, @@CASI@@ casi ciertas y @@NV@@ que no se han podido verificar.@@NOTA_EXCL@@</p>
   </div>
 </div>
+@@ESENCIAL@@
 @@FILTROS@@
 <main class="ancho"><ol class="linea">@@FILAS@@</ol></main>
 <footer><div class="ancho pie">
@@ -3262,7 +3551,7 @@ document.addEventListener("click", ev => {
   const b = ev.target.closest(".copiar");
   if (!b) return;
   const h = b.closest(".hito"), t = sel => (h.querySelector(sel)?.textContent || "").trim();
-  const fuentes = [...h.querySelectorAll(".fuentes a")].map(a => "- " + a.textContent.trim() + ": " + a.href).join("\\n");
+  const fuentes = [...h.querySelectorAll(".fuentes a:not(.arch)")].map(a => "- " + a.textContent.trim() + ": " + a.href).join("\\n");
   const texto = `Actúa como verificador de datos riguroso e imparcial.
 
 En la entrevista de Jordi Wild a @@INVITADO@@ (@@PROGRAMA@@, @@FECHA_VIDEO@@), en el minuto ${t(".minuto")} (${h.querySelector(".minuto").href}), se dijo literalmente:
@@ -3320,6 +3609,18 @@ blockquote { margin:0; padding-left:16px; border-left:4px solid var(--tono); fon
 .resumen { margin:0 0 12px; font-size:19px; font-weight:600; line-height:1.45; }
 .explicacion { margin:0; font-size:17px; }
 .confianza { margin:14px 0 0; font-size:14px; color:var(--suave); }
+.corregido, .esencial-chip { display:inline-block; vertical-align:middle; margin:22px 0 0 10px; padding:4px 10px; font-size:12px; font-weight:700;
+  text-transform:uppercase; letter-spacing:.08em; border:2px solid var(--tinta); border-radius:var(--r-mini); }
+.esencial-chip { border-color:var(--gris); color:var(--suave); }
+.nota-arch { margin:12px 0 0; font-size:13.5px; color:var(--suave); max-width:62ch; }
+.fuentes .arch { color:var(--gris); font-weight:600; }
+.otros { margin:0; padding-left:0; list-style:none; font-size:15px; }
+.otros li { margin:0 0 12px; overflow-wrap:anywhere; }
+.otros a { font-weight:600; }
+.otros .medio, .otros .alcance { display:block; font-size:13.5px; color:var(--suave); }
+.otros .alcance { color:var(--gris); }
+.historial ul { margin:0; padding-left:20px; font-size:15px; }
+.historial li { margin:4px 0; }
 .fuentes { margin:0; padding-left:22px; font-size:15px; }
 .fuentes li { margin:6px 0; overflow-wrap:anywhere; }
 .fuentes span { color:var(--gris); font-size:13px; white-space:nowrap; }
@@ -3370,7 +3671,7 @@ footer { border-top:3px solid var(--tinta); margin-top:48px; padding:24px 0 72px
 @@MENU@@
 <main class="ancho" data-v="@@V@@">
 <nav class="migas" aria-label="Ruta">@@MIGAS@@</nav>
-<p class="veredicto" data-v="@@V@@">@@VEREDICTO@@</p>
+<p class="veredicto" data-v="@@V@@">@@VEREDICTO@@</p>@@SELLO@@
 <h1>@@AFIRMACION@@</h1>
 <section class="seccion"><h2>Lo que dijo</h2>@@CITA@@</section>
 <section class="seccion"><h2>Por qué</h2>@@POR_QUE@@</section>
@@ -3392,6 +3693,79 @@ footer { border-top:3px solid var(--tinta); margin-top:48px; padding:24px 0 72px
 <script>
 document.querySelector("[data-copiar]").addEventListener("click", ev => copiarTexto(ev.currentTarget.dataset.enlace, "Enlace copiado."));
 </script>
+</body>
+</html>
+"""
+
+TEMAS = """<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+@@HEAD_MODO@@
+@@CABECERA@@
+<style>
+:root { --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--fondo); color:var(--tinta); font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; -webkit-text-size-adjust:100%; overflow-wrap:break-word; }
+a { color:var(--tinta); text-underline-offset:3px; }
+main.ancho { padding-bottom:72px; }
+.migas { font-size:14px; color:var(--gris); padding-top:18px; }
+.migas a { font-weight:600; color:var(--suave); }
+.cabeza { padding:clamp(24px,4vw,48px) 0 clamp(24px,3.4vw,40px); }
+h1 { font:700 clamp(30px,5.2vw,58px)/1.05 var(--serif); letter-spacing:-0.02em; margin:0 0 14px; text-wrap:balance; }
+.entrada { font-size:17px; max-width:62ch; margin:0; }
+@media (min-width:1000px) { .cabeza { display:grid; grid-template-columns:minmax(0,1.2fr) minmax(0,1fr); gap:0 clamp(32px,5vw,80px); align-items:end; }
+  .cabeza h1 { margin:0; } }
+/* índice de temas: una ficha por tema */
+.temas-rej { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr)); gap:clamp(14px,2vw,24px); }
+.tema-c { min-width:0; display:flex; flex-direction:column; border:2px solid var(--tinta); border-radius:var(--r-caja); padding:clamp(16px,2.2vw,24px); }
+.tema-c h2 { font:700 clamp(22px,2.2vw,26px)/1.15 var(--serif); margin:0 0 6px; }
+.tema-c h2 a { text-decoration:none; } .tema-c h2 a:hover { text-decoration:underline; }
+.t-desc { margin:0 0 14px; font-size:14.5px; color:var(--suave); }
+.t-rot { margin:0 0 6px; font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--gris); }
+.t-filas { list-style:none; margin:0 0 14px; padding:0; }
+.t-filas li { display:grid; grid-template-columns:minmax(0,1fr) auto; align-items:center; gap:2px 12px; padding:8px 0; border-top:1px solid var(--claro); }
+.t-cand { display:flex; align-items:center; gap:8px; font-weight:600; font-size:15px; min-width:0; }
+.t-num { font-size:14px; color:var(--suave); font-variant-numeric:tabular-nums; } .t-num b { color:var(--v-falso); font-size:16px; }
+.barra-reparto.fina { grid-column:1 / -1; height:6px; }
+.t-ir { margin:auto 0 0; font-weight:700; font-size:15px; }
+.t-ir a { display:inline-flex; align-items:center; gap:6px; min-height:40px; text-decoration:none; }
+.t-ir a:hover { text-decoration:underline; }
+.t-ir .flecha { width:18px; height:18px; fill:none; stroke:currentColor; stroke-width:2.2; }
+/* un tema: una columna por candidato */
+.comparar { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr)); gap:clamp(16px,2.4vw,32px); align-items:start; }
+.cand { min-width:0; border-top:3px solid var(--tinta); padding-top:14px; }
+.cand-cab { display:flex; align-items:center; gap:12px; margin:0 0 10px; }
+.retrato.tema { width:52px; height:52px; } .retrato.tema .insignia { width:22px; height:22px; }
+.cand h2 { font:700 clamp(22px,2.2vw,26px)/1.1 var(--serif); margin:0; }
+.cand h2 a { text-decoration:none; } .cand h2 a:hover { text-decoration:underline; }
+.par { margin:2px 0 0; font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--gris); }
+.cand-num { margin:0 0 8px; font-size:15px; } .cand-num b { font:700 30px/1 var(--serif); color:var(--v-falso); margin-right:4px; }
+.cand-des { margin:8px 0 0; font-size:13px; font-weight:600; } .cand-des span { color:var(--tono); }
+.cand-caps { margin:8px 0 14px; font-size:13.5px; color:var(--suave); }
+.t-lista { list-style:none; margin:0; padding:0; }
+.t-lista li { display:flex; flex-direction:column; gap:5px; padding:11px 0; border-top:1px solid var(--claro); }
+.t-lista li > a { font-size:15.5px; line-height:1.42; text-decoration:none; } .t-lista li > a:hover { text-decoration:underline; }
+.t-lista li:not([data-v=falso]):not([data-v=enganoso]) > a { color:var(--suave); }
+.t-lista .chip-v { font-size:10.5px; }
+.t-lista li:not([data-v=falso]):not([data-v=enganoso]) .chip-v { background:none; color:var(--tono); box-shadow:inset 0 0 0 1.5px var(--tono); }
+.t-min { font-size:12px; color:var(--gris); font-variant-numeric:tabular-nums; }
+.otros-temas { margin:40px 0 0; padding-top:14px; border-top:2px solid var(--tinta); font-size:15px; max-width:none; }
+.otros-temas a { font-weight:600; white-space:nowrap; }
+.nota-t { font-size:14px; color:var(--suave); max-width:68ch; }
+footer { border-top:3px solid var(--tinta); margin-top:24px; padding:24px 0 72px; font-size:14.5px; }
+@@CSS_MENU@@
+</style>
+</head>
+<body>
+@@MENU@@
+<main class="ancho">
+@@MIGAS@@
+<div class="cabeza"><h1>@@TITULO@@</h1><p class="entrada">@@ENTRADA@@</p></div>
+@@CUERPO@@
+</main>
+<footer class="pie-solo"><div class="ancho">@@PIE@@</div></footer>
 </body>
 </html>
 """

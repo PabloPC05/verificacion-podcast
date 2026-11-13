@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://verificacion-podcast.vercel.app/</loc></url>
+  <url><loc>https://verificacion-podcast.vercel.app/temas</loc></url>
+  <url><loc>https://verificacion-podcast.vercel.app/temas/vivienda</loc></url>
+  <url><loc>https://verificacion-podcast.vercel.app/temas/inmigracion</loc></url>
+  <url><loc>https://verificacion-podcast.vercel.app/temas/ceuta</loc></url>
+  <url><loc>https://verificacion-podcast.vercel.app/temas/corrupcion</loc></url>
+  <url><loc>https://verificacion-podcast.vercel.app/temas/trenes</loc></url>
+  <url><loc>https://verificacion-podcast.vercel.app/temas/pactos</loc></url>
+  <url><loc>https://verificacion-podcast.vercel.app/temas/polarizacion</loc></url>
+  <url><loc>https://verificacion-podcast.vercel.app/temas/internacional</loc></url>
+  <url><loc>https://verificacion-podcast.vercel.app/temas/rivales</loc></url>
   <url><loc>https://verificacion-podcast.vercel.app/buscar</loc></url>
   <url><loc>https://verificacion-podcast.vercel.app/metodologia</loc></url>
   <url><loc>https://verificacion-podcast.vercel.app/quien</loc></url>

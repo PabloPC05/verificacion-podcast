@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-13T21:47:57+01:00",
+ "generado": "2026-11-13T22:48:13+01:00",
  "aviso": "Verificación asistida por IA, sin revisión de un equipo de periodistas. «falso» no implica intención de mentir. Contrasta siempre con las fuentes enlazadas.",
  "veredictos": {
   "verdadero": "Los datos lo confirman.",
@@ -32,6 +32,13 @@
    "no_verificable": 29
   },
   "excluidas": 15,
+  "esencial": [
+   "feijoo-m3123-2",
+   "feijoo-m2591",
+   "feijoo-m2159-2",
+   "feijoo-m3945-2",
+   "feijoo-m2201"
+  ],
   "temas": [
    {
     "n": 1,
@@ -218,7 +225,12 @@
      "titulo": "Noticias de Navarra: Sánchez defiende la amnistía (15-11-2023)",
      "url": "https://www.noticiasdenavarra.com/politica/2023/11/15/sanchez-defiende-amnistia-ahondar-camino-7519536.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m357.png"
   },
   {
    "id": "feijoo-m434",
@@ -242,7 +254,12 @@
      "titulo": "Moncloa.com: Gamarra fija el documento marco del PP como base para acuerdos con Vox en Andalucía (28-5-2026)",
      "url": "https://www.moncloa.com/2026/05/28/gamarra-documento-marco-acuerdo-vox-andalucia-3380431/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m434.png"
   },
   {
    "id": "feijoo-m554",
@@ -270,7 +287,12 @@
      "titulo": "BOE-A-2023-18907: Resultados de las elecciones generales de 23 de julio de 2023",
      "url": "https://boe.gob.es/boe/dias/2023/09/01/pdfs/BOE-A-2023-18907.pdf"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m554.png"
   },
   {
    "id": "feijoo-m567",
@@ -298,7 +320,12 @@
      "titulo": "The Objective: Feijóo confirma que Armengol decidió con Moncloa la fecha de su investidura",
      "url": "https://theobjective.com/espana/politica/2023-10-04/feijoo-armengol-investidura-moncloa/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m567.png"
   },
   {
    "id": "feijoo-m639",
@@ -326,7 +353,12 @@
      "titulo": "Orain: Pedro Sánchez dimite como secretario general del PSOE (1-10-2016)",
      "url": "https://orain.eus/es/politica/2016/10/01/pedro-sanchez-dimite-secretario-general-psoe/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m639.png"
   },
   {
    "id": "feijoo-m675",
@@ -358,7 +390,12 @@
      "titulo": "Wikipedia: 2016 PSOE crisis",
      "url": "https://en.wikipedia.org/wiki/2016_PSOE_crisis"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m675.png"
   },
   {
    "id": "feijoo-m718",
@@ -390,7 +427,12 @@
      "titulo": "Artículo 14: Qué partidos forman Frente Amplio (7-11-2026)",
      "url": "https://www.articulo14.es/politica/que-partidos-forman-frente-amplio-integrantes-acuerdos-y-diferencias-con-sumar-20261107.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m718.png"
   },
   {
    "id": "feijoo-m743",
@@ -418,7 +460,12 @@
      "titulo": "Noticias de Navarra: Feijóo, investidura fallida (25-9-2023)",
      "url": "https://www.noticiasdenavarra.com/politica/2023/09/25/feijoo-investidura-fallida-7299315.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m743.png"
   },
   {
    "id": "feijoo-m853",
@@ -446,7 +493,12 @@
      "titulo": "Wikipedia: Tercer Gobierno de Pedro Sánchez (disolución de las Cortes el 5-10-2026)",
      "url": "https://es.wikipedia.org/wiki/Tercer_Gobierno_de_Pedro_Sánchez"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m853.png"
   },
   {
    "id": "feijoo-m901",
@@ -482,7 +534,12 @@
      "titulo": "Moncloa.com: Gamarra fija el documento marco del PP como base para acuerdos con Vox (28-5-2026)",
      "url": "https://www.moncloa.com/2026/05/28/gamarra-documento-marco-acuerdo-vox-andalucia-3380431/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m901.png"
   },
   {
    "id": "feijoo-m966",
@@ -510,7 +567,12 @@
      "titulo": "The Objective: Aprobado el Pacto de Estado de violencia de género con la abstención de Podemos",
      "url": "https://theobjective.com/aprobado-el-pacto-de-estado-de-violencia-de-genero-con-la-abstencion-de-podemos/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m966.png"
   },
   {
    "id": "feijoo-m971",
@@ -538,7 +600,12 @@
      "titulo": "Infobae/EFE: Feijóo carga contra Sánchez por las pulseras antimaltrato (13-11-2026)",
      "url": "https://www.infobae.com/espana/agencias/2026/11/13/feijoo-carga-contra-sanchez-por-las-pulseras-antimaltrato-de-aliexpres-este-gobierno-es-un-peligro-para-las-mujeres/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m971.png"
   },
   {
    "id": "feijoo-m1026",
@@ -566,7 +633,12 @@
      "titulo": "RTVC: Sánchez mantendrá un Gobierno con 22 ministerios, cinco para Sumar",
      "url": "https://rtvc.es/sanchez-mantendra-un-gobierno-con-22-ministerios-cinco-para-sumar/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m1026.png"
   },
   {
    "id": "feijoo-m1053",
@@ -598,7 +670,12 @@
      "titulo": "Menorca.info/EFE: el Gobierno de Sánchez será el segundo más grande de la democracia (10-1-2020)",
      "url": "https://www.menorca.info/actualidad/nacional/2020/01/10/1613972/nuevo-gobierno-sanchez-sera-segundo-mas-grande-democracia-1.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m1053.png"
   },
   {
    "id": "feijoo-m1085",
@@ -630,7 +707,12 @@
      "titulo": "Banco de España: El gasto público en España desde una perspectiva europea",
      "url": "https://www.bde.es/f/webbde/SES/Secciones/Publicaciones/PublicacionesSeriadas/DocumentosOcasionales/22/Fich/do2217.pdf"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m1085.png"
   },
   {
    "id": "feijoo-m1095",
@@ -658,7 +740,12 @@
      "titulo": "Wikipedia: Presidente de la Junta de Galicia (funciones según el Estatuto)",
      "url": "https://es.wikipedia.org/wiki/Presidente_de_la_Junta_de_Galicia"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m1095.png"
   },
   {
    "id": "feijoo-m1131",
@@ -686,7 +773,12 @@
      "titulo": "Galipedia: Susana López Abella (Secretaria Xeral da Igualdade desde 2012)",
      "url": "https://gl.wikipedia.org/wiki/Susana_López_Abella"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m1131.png"
   },
   {
    "id": "feijoo-m1137",
@@ -714,7 +806,12 @@
      "titulo": "Wikipedia: Gobierno de Asturias",
      "url": "https://es.wikipedia.org/wiki/Gobierno_de_Asturias"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m1137.png"
   },
   {
    "id": "feijoo-m1208",
@@ -750,7 +847,12 @@
      "titulo": "El INE confirma que el PIB creció un 2,8% en 2025 (Deia, 26/03/2026)",
      "url": "https://www.deia.eus/economia/2026/03/26/ine-confirma-pib-crecio-2-10869286.amp.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m1208.png"
   },
   {
    "id": "feijoo-m1215",
@@ -786,7 +888,12 @@
      "titulo": "Horas trabajadas y productividad: ¿es España un caso atípico en la UE? (CaixaBank Research, 06/02/2026)",
      "url": "https://www.caixabankresearch.com/es/economia-y-mercados/actividad-y-crecimiento/horas-trabajadas-y-productividad-espana-caso-atipico-ue"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m1215.png"
   },
   {
    "id": "feijoo-m1219",
@@ -810,7 +917,12 @@
      "titulo": "España se estanca en el índice mundial de competitividad (El Observador, 18/06/2026)",
      "url": "https://www.elobservador.com.uy/espana/economia-y-finanzas/espana-se-estanca-el-indice-mundial-competitividad-pesar-del-despliegue-los-fondos-europeos-n6047810"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m1219.png"
   },
   {
    "id": "feijoo-m1219-2",
@@ -846,7 +958,12 @@
      "titulo": "INE, Proyecciones de población 2026-2076 (saldo vegetativo negativo)",
      "url": "https://ine.es/dyngs/Prensa/PROP20262076.htm"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m1219-2.png"
   },
   {
    "id": "feijoo-m1232",
@@ -878,7 +995,12 @@
      "titulo": "Eurostat (API, nama_10_gdp): PIB de España en volumen encadenado, 2018-2025",
      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_gdp?format=JSON&lang=EN&geo=ES&na_item=B1GQ&unit=CLV10_MEUR&sinceTimePeriod=2018"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m1232.png"
   },
   {
    "id": "feijoo-m1236",
@@ -910,7 +1032,12 @@
      "titulo": "Banco de España: nota informativa sobre la deuda a cierre de 2018 (1.173 mm de euros)",
      "url": "https://www.bde.es/f/webbde/GAP/Secciones/SalaPrensa/NotasInformativas/Briefing_notes/en/notabe230419en.pdf"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m1236.png"
   },
   {
    "id": "feijoo-m1276",
@@ -934,7 +1061,12 @@
      "titulo": "Demografía de España (Wikipedia): serie anual de nacimientos 1955-1980",
      "url": "https://es.wikipedia.org/wiki/Demograf%C3%ADa_de_Espa%C3%B1a"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m1276.png"
   },
   {
    "id": "feijoo-m1346",
@@ -970,7 +1102,12 @@
      "titulo": "Robles y Hereu, decididos a sacar 14.000 millones para el sector de defensa (Vozpópuli, 21/10/2026)",
      "url": "https://www.vozpopuli.com/espana/politica/robles-y-hereu-decididos-a-sacar-en-los-proximos-dias-14000-millones-para-el-sector-de-defensa-a-pesar-de-las-elecciones-y-las-dudas-del-pp.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m1346.png"
   },
   {
    "id": "feijoo-m1359",
@@ -1002,7 +1139,12 @@
      "titulo": "La legislatura de Pedro Sánchez termina sin nuevos PGE y con las cuentas de 2023 prorrogadas tres veces (El Diario de Madrid)",
      "url": "https://www.eldiariodemadrid.es/articulo/politica/legislatura-sanchez-nuevos-presupuestos-generales-estado-pge-2023-prorrogados/20261005103413143316.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m1359.png"
   },
   {
    "id": "feijoo-m1413",
@@ -1034,7 +1176,12 @@
      "titulo": "El déficit de la Seguridad Social supera los 60.000 millones (Raisin, 10/02/2026, sobre informe de Fedea)",
      "url": "https://www.raisin.com/es-es/noticias/el-deficit-de-la-seguridad-social-supera-los-60-000-millones/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m1413.png"
   },
   {
    "id": "feijoo-m1452",
@@ -1062,7 +1209,12 @@
      "titulo": "Edad de jubilación en 2026 (El Independiente, 31/12/2025)",
      "url": "https://www.elindependiente.com/economia/2025/12/31/edad-jubilacion-2026/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m1452.png"
   },
   {
    "id": "feijoo-m1531",
@@ -1081,7 +1233,12 @@
    "resumen": "No hay estimación publicada para España que contraste las 0,5 empleos por vivienda; las internacionales varían mucho y no son comparables. Es una proyección, no un dato.",
    "explicacion": "No he encontrado una estimación publicada para España con la que contrastar la cifra (0,5 empleos por vivienda). Las estimaciones internacionales localizadas varían mucho según se cuente empleo directo o indirecto y la duración de la obra, y no son comparables con el caso español. Es una proyección, no un dato.",
    "confianza": "baja",
-   "fuentes": []
+   "fuentes": [],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m1531.png"
   },
   {
    "id": "feijoo-m1552",
@@ -1113,7 +1270,12 @@
      "titulo": "Feijóo denuncia el grave problema del absentismo laboral (El Debate, 07/07/2026)",
      "url": "https://www.eldebate.com/economia/20260707/feijoo-denuncia-grave-problema-absentismo-laboral-izquierda-le-echa-encima_437170.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m1552.png"
   },
   {
    "id": "feijoo-m1561",
@@ -1149,7 +1311,12 @@
      "titulo": "El 4,5% de los ocupados no acude a su puesto por incapacidad temporal, un 73% más que en 2018 (Bolsamanía, 27/01/2026)",
      "url": "https://www.bolsamania.com/noticias/economia/economia--el-45-de-los-ocupados-no-acude-a-su-puesto-de-trabajo-por-incapacidad-temporal-un-73-mas-que-en-2018--21559088.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m1561.png"
   },
   {
    "id": "feijoo-m1600",
@@ -1177,7 +1344,12 @@
      "titulo": "La incapacidad temporal en trabajadores por cuenta ajena aumenta mientras los autónomos presentan cifras muy inferiores (Infocop, datos del INSS)",
      "url": "https://www.infocop.es/la-incapacidad-temporal-en-trabajadores-por-cuenta-ajena-aumenta-en-espana-mientras-los-autonomos-presentan-cifras-muy-inferiores/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m1600.png"
   },
   {
    "id": "feijoo-m1620",
@@ -1205,7 +1377,12 @@
      "titulo": "Adecco Institute: VIII Informe Adecco sobre absentismo (2019), «efecto lunes»",
      "url": "https://www.adeccoinstitute.es/wp-content/uploads/2019/06/VIII-Informe-Absentismo.pdf"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m1620.png"
   },
   {
    "id": "feijoo-m1625",
@@ -1229,7 +1406,12 @@
      "titulo": "XV Informe Adecco sobre Empresa Saludable y Gestión del Absentismo (nota de prensa, 14/07/2026)",
      "url": "https://www.adeccogroup.com/-/media/project/adecco-group/adeccogroup/spain-content/2026-press-releases/2026-07-14-ndp-xv-informe-anual-adecco-empresa-saludable-gestion-absentismo.pdf"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m1625.png"
   },
   {
    "id": "feijoo-m1651",
@@ -1248,7 +1430,12 @@
    "resumen": "No hay fuente pública sobre la tasa de absentismo de Correos en 2000-2002 ni sobre el pacto con los sindicatos; es un dato anecdótico y no contrastable.",
    "explicacion": "No he encontrado ninguna fuente pública que recoja la tasa de absentismo de Correos en 2000-2002 ni el pacto con los sindicatos al que se refiere. Es un dato anecdótico de su etapa como presidente de la empresa y no es contrastable con la documentación disponible.",
    "confianza": "baja",
-   "fuentes": []
+   "fuentes": [],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m1651.png"
   },
   {
    "id": "feijoo-m1661",
@@ -1276,7 +1463,12 @@
      "titulo": "XV Informe Adecco sobre absentismo anual (2026)",
      "url": "https://www.adeccoinstitute.es/wp-content/uploads/2026/07/xv-informe-absentismo-anual-2026.pdf"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m1661.png"
   },
   {
    "id": "feijoo-m1672",
@@ -1300,7 +1492,12 @@
      "titulo": "XV Informe Adecco sobre absentismo anual (2026)",
      "url": "https://www.adeccoinstitute.es/wp-content/uploads/2026/07/xv-informe-absentismo-anual-2026.pdf"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m1672.png"
   },
   {
    "id": "feijoo-m1690",
@@ -1328,7 +1525,12 @@
      "titulo": "La incapacidad temporal en trabajadores por cuenta ajena aumenta mientras los autónomos presentan cifras muy inferiores (Infocop, datos de Umivale Activa e Ivie)",
      "url": "https://www.infocop.es/la-incapacidad-temporal-en-trabajadores-por-cuenta-ajena-aumenta-en-espana-mientras-los-autonomos-presentan-cifras-muy-inferiores/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m1690.png"
   },
   {
    "id": "feijoo-m1779",
@@ -1368,7 +1570,12 @@
      "titulo": "El Independiente (6-5-2026): Moncloa rechaza la exención del IVA para los autónomos que le pide Junts",
      "url": "https://www.elindependiente.com/espana/2026/05/06/moncloa-no-iva-franquiciado-pequenos-autonomos-junts-prorroga-alquileres/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m1779.png"
   },
   {
    "id": "feijoo-m1851",
@@ -1396,7 +1603,12 @@
      "titulo": "Pymes Magazine: Los autónomos superan por primera vez los 3,5 millones",
      "url": "https://pymesmagazine.es/actualidad/los-autonomos-superan-por-primera-vez-los-35-millones-mientras-espana-alcanza-un-nuevo-record-de-afiliacion/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m1851.png"
   },
   {
    "id": "feijoo-m1894",
@@ -1428,7 +1640,12 @@
      "titulo": "Eurostat (gov_10a_main): ingresos y gastos de las AAPP de España en % del PIB",
      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/gov_10a_main?format=JSON&lang=EN&geo=ES&sector=S13&unit=PC_GDP&na_item=TR&na_item=TE&sinceTimePeriod=2018"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m1894.png"
   },
   {
    "id": "feijoo-m1904",
@@ -1460,7 +1677,12 @@
      "titulo": "Ministerio de Hacienda (31-3-2026): nota de prensa sobre el cierre de 2025",
      "url": "https://www.hacienda.gob.es/es-es/prensa/noticias/noticiaspdf/536.pdf"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m1904.png"
   },
   {
    "id": "feijoo-m1938",
@@ -1488,7 +1710,12 @@
      "titulo": "SESCAM (Junta de Castilla-La Mancha): Incapacidad temporal 2025 (cuantías de la prestación)",
      "url": "https://sanidad.castillalamancha.es/sites/sescam.castillalamancha.es/files/documentos/pdf/20250911/incapacidad_temporal_web_2025.pdf"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m1938.png"
   },
   {
    "id": "feijoo-m2025",
@@ -1516,7 +1743,12 @@
      "titulo": "BOE: Ley 16/2008, de presupuestos generales de la Comunidad Autónoma de Galicia para 2009",
      "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2009-4369"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m2025.png"
   },
   {
    "id": "feijoo-m2042",
@@ -1544,7 +1776,12 @@
      "titulo": "Newtral (10-1-2024): Galicia no es la comunidad autónoma que más ha reducido su deuda pública desde 2009",
      "url": "https://www.newtral.es/deuda-galicia-2009-deficit-rueda-factcheck/20240110/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m2042.png"
   },
   {
    "id": "feijoo-m2075",
@@ -1572,7 +1809,12 @@
      "titulo": "DOG (22-4-2009): Decreto 83/2009 por el que se fija la estructura orgánica de los departamentos de la Xunta",
      "url": "https://www.xunta.gal/dog/Publicados/2009/20090422/Anuncio176AE_es.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m2075.png"
   },
   {
    "id": "feijoo-m2081",
@@ -1600,7 +1842,12 @@
      "titulo": "El Debate (22-5-2026): Uno de cada tres gallegos tendrá más de 65 años en 2039",
      "url": "https://www.eldebate.com/espana/galicia/20260522/galicia-comunidades-envejecidas-europa-cada-tres-gallegos-tendra-65-anos-2039_420426_amp.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m2081.png"
   },
   {
    "id": "feijoo-m2159",
@@ -1632,7 +1879,12 @@
      "titulo": "Eurostat (gov_10dd_edpt1): saldo de las AAPP de España, 2018-2025",
      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/gov_10dd_edpt1?format=JSON&lang=EN&geo=ES&sector=S13&unit=PC_GDP&na_item=B9&sinceTimePeriod=2018"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m2159.png"
   },
   {
    "id": "feijoo-m2159-2",
@@ -1664,7 +1916,12 @@
      "titulo": "Eurostat (gov_10a_taxag): impuestos y cotizaciones de las AAPP de España, 2018-2025",
      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/gov_10a_taxag?format=JSON&lang=EN&geo=ES&unit=MIO_EUR&na_item=D2_D5_D91_D61_M_D995&na_item=D61&na_item=D2REC&na_item=D5REC&sector=S13&sinceTimePeriod=2018"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": true,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m2159-2.png"
   },
   {
    "id": "feijoo-m2188",
@@ -1688,7 +1945,12 @@
      "titulo": "Wikipedia: NextGenerationEU (financiación y devolución con recursos propios de la UE hasta 2058)",
      "url": "https://en.wikipedia.org/wiki/NextGenerationEU"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m2188.png"
   },
   {
    "id": "feijoo-m2201",
@@ -1712,7 +1974,12 @@
      "titulo": "Eurostat (gov_10a_main, D41PAY): intereses pagados por las AAPP de España, 2018-2025",
      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/gov_10a_main?format=JSON&lang=EN&geo=ES&sector=S13&unit=MIO_EUR&na_item=D41PAY&sinceTimePeriod=2018"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": true,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m2201.png"
   },
   {
    "id": "feijoo-m2214",
@@ -1731,7 +1998,12 @@
    "resumen": "Es una generalización política sin datos que la contrasten; los beneficios de la banca dependen sobre todo de los tipos del BCE y la actividad económica.",
    "explicacion": "Es una generalización política que exigiría comparar los beneficios de la banca bajo gobiernos de distinto signo, y no he encontrado una serie de datos que lo contraste. Los beneficios de la banca dependen sobre todo del ciclo de tipos de interés del BCE y de la actividad económica, no del color del gobierno, y en esta búsqueda no he podido obtener ni las series de beneficios bancarios ni un análisis comparado.",
    "confianza": "baja",
-   "fuentes": []
+   "fuentes": [],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m2214.png"
   },
   {
    "id": "feijoo-m2235",
@@ -1755,7 +2027,12 @@
      "titulo": "FMI DataMapper: deuda bruta de las administraciones públicas de Perú (% del PIB)",
      "url": "https://www.imf.org/external/datamapper/api/v1/GGXWDG_NGDP/PER"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m2235.png"
   },
   {
    "id": "feijoo-m2257",
@@ -1774,7 +2051,12 @@
    "resumen": "No se pudo consultar el saldo de la Xunta y la afirmación es ambigua (ejercicio, presupuesto o ejecución, criterio contable): no hay base para darla por cierta ni falsa.",
    "explicacion": "No he podido consultar el saldo de las cuentas de la Xunta en sus últimos ejercicios (Eurostat no desglosa por comunidad y la búsqueda web quedó limitada). La afirmación es ambigua: no indica qué ejercicio, si habla del presupuesto aprobado o de la ejecución, ni qué criterio contable (superávit en contabilidad nacional frente a presupuestario). No hay base para darla por cierta ni por falsa.",
    "confianza": "baja",
-   "fuentes": []
+   "fuentes": [],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m2257.png"
   },
   {
    "id": "feijoo-m2260",
@@ -1798,7 +2080,12 @@
      "titulo": "Ministerio de Hacienda (31-3-2026): déficit de 2025 por subsectores (CCAA: 0,3% del PIB)",
      "url": "https://www.hacienda.gob.es/es-es/prensa/noticias/noticiaspdf/536.pdf"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m2260.png"
   },
   {
    "id": "feijoo-m2284",
@@ -1826,7 +2113,12 @@
      "titulo": "Ministerio de Hacienda (31-3-2026): ingresos tributarios de 2025",
      "url": "https://www.hacienda.gob.es/es-es/prensa/noticias/noticiaspdf/536.pdf"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m2284.png"
   },
   {
    "id": "feijoo-m2308",
@@ -1854,7 +2146,12 @@
      "titulo": "Wikipedia: Cumbre de la OTAN de 2025",
      "url": "https://en.wikipedia.org/wiki/2025_NATO_summit"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m2308.png"
   },
   {
    "id": "feijoo-m2308-2",
@@ -1882,7 +2179,12 @@
      "titulo": "OTAN: Declaración de la Cumbre de La Haya (2025)",
      "url": "https://www.nato.int/cps/en/natohq/official_texts_236705.htm"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m2308-2.png"
   },
   {
    "id": "feijoo-m2340",
@@ -1906,7 +2208,12 @@
      "titulo": "Eurostat (gov_10a_exp, COFOG GF02): gasto en defensa de España, % del PIB",
      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/gov_10a_exp?format=JSON&lang=EN&geo=ES&sector=S13&unit=PC_GDP&cofog99=GF02&na_item=TE&sinceTimePeriod=2018"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m2340.png"
   },
   {
    "id": "feijoo-m2409",
@@ -1925,7 +2232,12 @@
    "resumen": "Es una afirmación en gran parte retórica sobre la opacidad y no se pudo contrastar con la publicidad de contratos y gasto de Defensa; no se puede calificar.",
    "explicacion": "Es una afirmación en gran parte retórica sobre la opacidad. No he podido contrastarla con el grado de publicidad real de los contratos y del gasto de Defensa (presupuestos, programas especiales de modernización, Plataforma de Contratación del Sector Público), por lo que no puedo calificarla de cierta ni de falsa.",
    "confianza": "baja",
-   "fuentes": []
+   "fuentes": [],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m2409.png"
   },
   {
    "id": "feijoo-m2417",
@@ -1944,7 +2256,12 @@
    "resumen": "No se halló fuente que confirme una adjudicación de 18.000 millones en defensa antes de la campaña ni su programa, por lo que no se puede calificar.",
    "explicacion": "No he encontrado ninguna fuente que confirme una adjudicación de 18.000 millones de euros en contratos de defensa en las semanas previas a la campaña, ni a qué programa o contratos se refiere. La búsqueda web de este tramo quedó limitada, por lo que no descarto que exista una base para la cifra; sin ella no se puede calificar.",
    "confianza": "baja",
-   "fuentes": []
+   "fuentes": [],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m2417.png"
   },
   {
    "id": "feijoo-m2446",
@@ -1968,7 +2285,12 @@
      "titulo": "Constitución Española, artículo 134 (Wikisource, Título VII)",
      "url": "https://es.wikisource.org/wiki/Constitución_española_de_1978/09"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m2446.png"
   },
   {
    "id": "feijoo-m2507",
@@ -2000,7 +2322,12 @@
      "titulo": "El CNI avisó el 29 de julio de que 180.000 personas planeaban entrar en Ceuta (The Objective)",
      "url": "https://theobjective.com/espana/2026-08-26/cni-aviso-julio-personas-entrar-ceuta/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m2507.png"
   },
   {
    "id": "feijoo-m2526",
@@ -2028,7 +2355,12 @@
      "titulo": "El informe de la Policía sugiere que el Gobierno podría tener «responsabilidades» en la entrada masiva en Ceuta (El Independiente)",
      "url": "https://www.elindependiente.com/espana/2026/09/03/informe-policia-sugiere-que-gobierno-podria-tener-responsabilidades-entrada-masiva-ceuta/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m2526.png"
   },
   {
    "id": "feijoo-m2532",
@@ -2060,7 +2392,12 @@
      "titulo": "Todo lo del CNI sobre la entrada masiva (Ceuta al Día)",
      "url": "https://www.ceutaldia.com/al-dia/administracion/todo-cni-entrada-masiva-que-sabian-delegacion-marruecos-que-hicieron/20261016191125322899.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m2532.png"
   },
   {
    "id": "feijoo-m2576",
@@ -2088,7 +2425,12 @@
      "titulo": "Artículo 8. Las Fuerzas Armadas (Redopositor)",
      "url": "https://redopositor.com/constitucion/articulo-8/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m2576.png"
   },
   {
    "id": "feijoo-m2591",
@@ -2120,7 +2462,12 @@
      "titulo": "Crisis migratoria de Ceuta de 2026 (Wikipedia, comparación con 2021)",
      "url": "https://es.wikipedia.org/wiki/Incidentes_fronterizos_entre_Espa%C3%B1a_y_Marruecos_de_2026"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": true,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m2591.png"
   },
   {
    "id": "feijoo-m2654",
@@ -2156,7 +2503,12 @@
      "titulo": "La jueza da 15 días al Gobierno español para desclasificar todos los informes del CNI sobre Ceuta (Noticias de Álava)",
      "url": "https://www.noticiasdealava.eus/politica/2026/10/27/jueza-pide-desclasificar-informes-cni-ceuta-11693439.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m2654.png"
   },
   {
    "id": "feijoo-m2663",
@@ -2192,7 +2544,12 @@
      "titulo": "La juez cita a declarar como investigado el día 18 a Pérez Triano (El Español)",
      "url": "https://www.elespanol.com/espana/tribunales/20261112/juez-caso-ceuta-cita-investigado-exdelegado-gobierno-semana-previa-elecciones/1003744455723_0.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m2663.png"
   },
   {
    "id": "feijoo-m2663-2",
@@ -2220,7 +2577,12 @@
      "titulo": "El PP exige la dimisión de Marlaska por el informe policial (Onda Vasca)",
      "url": "https://www.ondavasca.com/el-pp-exige-la-dimision-de-marlaska-por-el-informe-policial-mientras-sumar-ve-responsabilidad-de-marruecos/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m2663-2.png"
   },
   {
    "id": "feijoo-m2663-3",
@@ -2252,7 +2614,12 @@
      "titulo": "El caso Robles y el CNI en Ceuta: La Moncloa limita su comparecencia del 6 de octubre y veta a Casteleiro (Moncloa.com)",
      "url": "https://www.moncloa.com/2026/09/22/robles-cni-ceuta-comision-secretos-oficiales-3436049/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m2663-3.png"
   },
   {
    "id": "feijoo-m2726",
@@ -2280,7 +2647,12 @@
      "titulo": "Un informe policial apunta a que agentes marroquíes planificaron y guiaron la entrada masiva (Infobae; 72.000 a 80.000)",
      "url": "https://www.infobae.com/espana/2026/09/01/un-informe-policial-apunta-a-que-agentes-marroquies-planificaron-y-guiaron-la-entrada-masiva-de-migrantes-en-ceuta/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m2726.png"
   },
   {
    "id": "feijoo-m2733",
@@ -2312,7 +2684,12 @@
      "titulo": "La Policía señala la actuación de gendarmes marroquíes pero no acusa a Marruecos (Ceuta Actualidad)",
      "url": "https://www.ceutaactualidad.com/articulo/actualidad/informe/20260902231320281408.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m2733.png"
   },
   {
    "id": "feijoo-m2772",
@@ -2344,7 +2721,12 @@
      "titulo": "Pedro Sánchez publica su playlist de canciones para el verano en plena crisis migratoria en Ceuta (Libertad Digital)",
      "url": "https://www.libertaddigital.com/espana/2026-08-02/pedro-sanchez-publica-su-playlist-de-canciones-para-el-verano-en-plena-crisis-migratoria-en-ceuta-7444554/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m2772.png"
   },
   {
    "id": "feijoo-m2795",
@@ -2380,7 +2762,12 @@
      "titulo": "Feijóo critica la gestión de Sánchez en Ceuta (Cuatro)",
      "url": "https://cuatro.com/noticias/espana/20261111/feijoo-critica-gestion-sanchez-ceuta_18_020676732.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m2795.png"
   },
   {
    "id": "feijoo-m2813",
@@ -2412,7 +2799,12 @@
      "titulo": "El Parlamento Europeo reconoce la invasión en Ceuta y exige a Marruecos respetar la soberanía española (Partido Popular)",
      "url": "https://www.pp.es/actualidad/articulos/el-parlamento-europeo-reconoce-la-invasion-en-ceuta-y-exige-a-marruecos-respetar-la-soberania-espanola/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m2813.png"
   },
   {
    "id": "feijoo-m2894",
@@ -2436,7 +2828,12 @@
      "titulo": "Marruecos carga contra la justicia europea y reclama a la UE que preserve su asociación (El Independiente)",
      "url": "https://www.elindependiente.com/internacional/2024/10/04/marruecos-carga-contra-la-justicia-europea-y-reclama-a-la-ue-que-preserve-su-asociacion/amp/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m2894.png"
   },
   {
    "id": "feijoo-m3123",
@@ -2468,7 +2865,12 @@
      "titulo": "Europa Press/Bolsamanía: la nómina del IMV llegó en marzo a 829.399 hogares con más de 2,5 millones de personas",
      "url": "https://www.bolsamania.com/noticias/economia/economia--la-nomina-del-imv-llego-en-marzo-a-829399-hogares-en-los-que-viven-mas-de-25-millones-de-personas--22270400.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m3123.png"
   },
   {
    "id": "feijoo-m3123-2",
@@ -2500,7 +2902,12 @@
      "titulo": "Maldita.es: los españoles superan a los extranjeros entre los titulares del IMV desde 2020",
      "url": "https://maldita.es/prebunking/20260710/ingreso-minimo-vital-espa%C3%B1oles-extranjeros/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": true,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m3123-2.png"
   },
   {
    "id": "feijoo-m3187",
@@ -2532,7 +2939,12 @@
      "titulo": "El Español: el Parlamento Europeo aprueba el reglamento por 418 votos a favor, 210 en contra y 30 abstenciones (17 de junio de 2026)",
      "url": "https://www.elespanol.com/sociedad/20260622/oficial-ue-migrantes-situacion-irregular-deportados-centros-detencion/1003744293852_0.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m3187.png"
   },
   {
    "id": "feijoo-m3220",
@@ -2560,7 +2972,12 @@
      "titulo": "Il Post: los centros para migrantes en Albania, hasta ahora y de aquí en adelante (11 de junio de 2026)",
      "url": "https://www.ilpost.it/2026/06/11/centri-migranti-albania-nuove-regole-europee/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m3220.png"
   },
   {
    "id": "feijoo-m3225",
@@ -2592,7 +3009,29 @@
      "titulo": "TVN/EFE: más de 3.000 migrantes murieron tratando de llegar a España en 2025 (incluye 35.935 llegadas irregulares a España hasta el 15 de diciembre de 2025, dato de Interior)",
      "url": "https://www.tvn-2.com/mundo/3-000-migrantes-murieron-tratando_1_2220427.amp.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [
+    {
+     "medio": "Newtral",
+     "titulo": "FACT-CHECK: España no es el país con “la mayor inmigración irregular de toda Europa”",
+     "url": "https://www.newtral.es/feijoo-inmigracion-irregular-factcheck/20250606/",
+     "fecha": "2025-06-06",
+     "veredicto_medio": "Engañoso",
+     "alcance": "mismo_dato"
+    },
+    {
+     "medio": "Newtral",
+     "titulo": "FACT-CHECK: España no fue el país de la UE donde más “inmigración irregular entró”",
+     "url": "https://www.newtral.es/feijoo-inmigracion-irregular-espana-factcheck/20250717/",
+     "fecha": "2025-07-17",
+     "veredicto_medio": "Falso",
+     "alcance": "mismo_dato"
+    }
+   ],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m3225.png"
   },
   {
    "id": "feijoo-m3315",
@@ -2616,7 +3055,12 @@
      "titulo": "INE: Proyecciones de Población 2024-2074",
      "url": "https://www.ine.es/dyngs/Prensa/PROP20242074.htm"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m3315.png"
   },
   {
    "id": "feijoo-m3321",
@@ -2644,7 +3088,12 @@
      "titulo": "Euronews: España roza los 50 millones, 1 de cada 5 nació en el extranjero (6 de agosto de 2026)",
      "url": "https://es.euronews.com/2026/08/06/espana-50-millones-habitantes-1-cada-5-nacio-extranjero"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m3321.png"
   },
   {
    "id": "feijoo-m3334",
@@ -2672,7 +3121,12 @@
      "titulo": "Idescat: población a 1 de enero, total y extranjera, municipio de Lleida (147.369 habitantes en 2025; 34.274 extranjeros, 23,26 %)",
      "url": "https://www.idescat.cat/poblacioestrangera/?geo=mun%3A251207&nac=a&b=0"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m3334.png"
   },
   {
    "id": "feijoo-m3345",
@@ -2696,7 +3150,12 @@
      "titulo": "INE: Estadística Continua de Población, 1 de julio de 2026",
      "url": "https://www.ine.es/dyngs/Prensa/ECP2T26.htm"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m3345.png"
   },
   {
    "id": "feijoo-m3355",
@@ -2724,7 +3183,12 @@
      "titulo": "CIDOB: población extranjera residente en España (nacidos en el extranjero: más de 6,2 millones, 13,3 %, datos INE de 2018)",
      "url": "https://www.cidob.org/publicaciones/poblacion-extranjera-residente-espana-evolucion-caracteristicas-integracion-economica"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m3355.png"
   },
   {
    "id": "feijoo-m3377",
@@ -2752,7 +3216,12 @@
      "titulo": "TVN/EFE: más de 3.000 migrantes murieron tratando de llegar a España en 2025, según una ONG (35.935 llegadas hasta el 15 de diciembre)",
      "url": "https://www.tvn-2.com/mundo/3-000-migrantes-murieron-tratando_1_2220427.amp.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m3377.png"
   },
   {
    "id": "feijoo-m3389",
@@ -2784,7 +3253,12 @@
      "titulo": "elDiario.es: de Italia a Alemania, cómo buena parte de Europa ha regularizado a migrantes (18 de agosto de 2026)",
      "url": "https://www.eldiario.es/1_cd4426"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m3389.png"
   },
   {
    "id": "feijoo-m3510",
@@ -2808,7 +3282,12 @@
      "titulo": "elDiario.es: La oposición arrastra a Feijóo a comparecer sobre las fotos con el narcotraficante (2/4/2013)",
      "url": "https://www.eldiario.es/galicia/oposicion-arrastra-feijoo-comparecer-narcotraficante_1_5626221.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m3510.png"
   },
   {
    "id": "feijoo-m3516",
@@ -2840,7 +3319,12 @@
      "titulo": "Reuters/LegalToday: Núñez Feijóo descarta dimitir por unas fotos antiguas con un narco (2/4/2013)",
      "url": "https://www.legaltoday.com/rincon-de-reuters/nunez-feijoo-descarta-dimitir-por-unas-fotos-antiguas-con-un-narco-2013-04-02/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m3516.png"
   },
   {
    "id": "feijoo-m3526",
@@ -2872,7 +3356,12 @@
      "titulo": "El Español: El origen de las fotos de Feijóo con el narco Marcial Dorado (19/7/2023)",
      "url": "https://elespanol.com/espana/politica/20230719/origen-fotos-feijoo-narco-marcial-dorado/780172272_0.amp.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m3526.png"
   },
   {
    "id": "feijoo-m3540",
@@ -2908,7 +3397,12 @@
      "titulo": "Público: Quién es Marcial Dorado, el narcotraficante amigo de Feijóo",
      "url": "https://www.publico.es/politica/marcial-dorado-narcotraficante-amigo-feijoo.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m3540.png"
   },
   {
    "id": "feijoo-m3549",
@@ -2940,7 +3434,12 @@
      "titulo": "infoLibre: Un juez revela que Feijóo y Dorado seguían hablando por teléfono años después de su ruptura",
      "url": "https://www.infolibre.es/politica/juez-revela-feijoo-dorado-seguian-hablando-telefono-anos-despues-ruptura_1_1087733.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m3549.png"
   },
   {
    "id": "feijoo-m3578",
@@ -2968,7 +3467,12 @@
      "titulo": "ARA: The drug trafficker pictured with Feijóo claims the PSOE offered him money to drop a bomb against the PP leader",
      "url": "https://en.ara.cat/politics/the-drug-trafficker-pictured-with-feijoo-claims-the-psoe-offered-him-money-to-drop-bomb-against-the-pp-leader_1_5450376.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m3578.png"
   },
   {
    "id": "feijoo-m3628",
@@ -3000,7 +3504,12 @@
      "titulo": "elDiario.es: Marcial Dorado en el pleno del Congreso, los años de amistad entre el narco y Núñez Feijóo siempre vuelven",
      "url": "https://www.eldiario.es/galicia/marcial-dorado-pleno-congreso-anos-amistad-narco-nunez-feijoo-vuelven_1_10021515.amp.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m3628.png"
   },
   {
    "id": "feijoo-m3651",
@@ -3036,7 +3545,21 @@
      "titulo": "elDiario.es: Marcial Dorado en el pleno del Congreso, los años de amistad entre el narco y Núñez Feijóo siempre vuelven",
      "url": "https://www.eldiario.es/galicia/marcial-dorado-pleno-congreso-anos-amistad-narco-nunez-feijoo-vuelven_1_10021515.amp.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [
+    {
+     "medio": "Newtral",
+     "titulo": "Marcial Dorado, el contrabandista y narcotraficante amigo de Feijóo",
+     "url": "https://www.newtral.es/marcial-dorado-feijoo/20230718/",
+     "fecha": "2023-07-18",
+     "veredicto_medio": null,
+     "alcance": "mismo_dato"
+    }
+   ],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m3651.png"
   },
   {
    "id": "feijoo-m3665",
@@ -3064,7 +3587,12 @@
      "titulo": "Público: Quién es Marcial Dorado, el narcotraficante amigo de Feijóo",
      "url": "https://www.publico.es/politica/marcial-dorado-narcotraficante-amigo-feijoo.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m3665.png"
   },
   {
    "id": "feijoo-m3674",
@@ -3092,7 +3620,12 @@
      "titulo": "The Objective: El constructor más beneficiado en el caso Koldo pagó a Ábalos fiestas con prostitutas (6/3/2026)",
      "url": "https://theobjective.com/espana/2026-03-06/constructor-pagaba-fiestas-abalos-prostitutas/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m3674.png"
   },
   {
    "id": "feijoo-m3695",
@@ -3120,7 +3653,12 @@
      "titulo": "Wikipedia: Elecciones al Parlamento de Galicia de 2020",
      "url": "https://es.wikipedia.org/wiki/Elecciones_al_Parlamento_de_Galicia_de_2020"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m3695.png"
   },
   {
    "id": "feijoo-m3711",
@@ -3144,7 +3682,12 @@
      "titulo": "Wikipedia: Contrabando",
      "url": "https://es.wikipedia.org/wiki/Contrabando"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m3711.png"
   },
   {
    "id": "feijoo-m3738",
@@ -3172,7 +3715,12 @@
      "titulo": "Newtral: Nos preguntáis por las saunas del suegro de Sánchez en Madrid (15/7/2025)",
      "url": "https://www.newtral.es/saunas-suegro-sanchez/20250715/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m3738.png"
   },
   {
    "id": "feijoo-m3757",
@@ -3204,7 +3752,12 @@
      "titulo": "elDiario.es: La oposición arrastra a Feijóo a comparecer sobre las fotos con el narcotraficante (2/4/2013)",
      "url": "https://www.eldiario.es/galicia/oposicion-arrastra-feijoo-comparecer-narcotraficante_1_5626221.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m3757.png"
   },
   {
    "id": "feijoo-m3769",
@@ -3240,7 +3793,12 @@
      "titulo": "El Español: Años después, el PSOE dice trabajar en la ley de prostitución (27/7/2026)",
      "url": "https://www.elespanol.com/espana/20260727/anos-despues-psoe-dice-trabajar-ley-prostitucion-feministas-no-creen-amigos-sanchez-interesa/1003744331442_0.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m3769.png"
   },
   {
    "id": "feijoo-m3869",
@@ -3268,7 +3826,12 @@
      "titulo": "Los delitos de financiación ilegal de partidos políticos en España: estado de la cuestión (Univ. de Huelva)",
      "url": "https://ariasmontano.uhu.es/entities/publication/f77935b1-be63-4b49-aba5-33f637ad2971"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m3869.png"
   },
   {
    "id": "feijoo-m3869-2",
@@ -3300,7 +3863,12 @@
      "titulo": "El Supremo confirma la condena al PP en Gürtel (Público, 14/10/2020)",
      "url": "https://www.publico.es/politica/supremo-confirma-condena-al-pp-guertel.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m3869-2.png"
   },
   {
    "id": "feijoo-m3883",
@@ -3328,7 +3896,12 @@
      "titulo": "El tribunal cuestiona la credibilidad del testimonio de Rajoy (Última Hora, 24/5/2018)",
      "url": "https://www.ultimahora.es/noticias/nacional/2018/05/24/1002441/tribunal-verosimil-cuestiona-credibilidad-del-testimonio-rajoy.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m3883.png"
   },
   {
    "id": "feijoo-m3896",
@@ -3360,7 +3933,12 @@
      "titulo": "Caso Filesa (derechos.org)",
      "url": "https://derechos.org/nizkor/espana/doc/filesa2.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m3896.png"
   },
   {
    "id": "feijoo-m3916",
@@ -3388,7 +3966,12 @@
      "titulo": "Feijóo insta al PP a pedir perdón por el caso Bárcenas (Público, 24/3/2013)",
      "url": "https://www.publico.es/actualidad/feijoo-insta-pp-pedir-perdon-caso-barcenas.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m3916.png"
   },
   {
    "id": "feijoo-m3920",
@@ -3412,7 +3995,12 @@
      "titulo": "Feijóo sobre Bárcenas: «No me fío de él, nada» (Libertad Digital, 9/2/2013)",
      "url": "https://www.libertaddigital.com/espana/2013-02-09/feijoo-sobre-mato-tiene-que-dar-explicaciones-y-contundentes-1276481796/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m3920.png"
   },
   {
    "id": "feijoo-m3928",
@@ -3440,7 +4028,12 @@
      "titulo": "Luis Bárcenas, ya más en la calle que en prisión (Izquierda Diario)",
      "url": "https://www.izquierdadiario.es/Luis-Barcenas-ya-mas-en-la-calle-que-en-prision-y-cerca-de-la-libertad-condicional"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m3928.png"
   },
   {
    "id": "feijoo-m3930",
@@ -3468,7 +4061,12 @@
      "titulo": "El PSOE denuncia ante la Fiscalía los presuntos pagos del PP a Koldo que Feijóo niega (Infobae/EFE, 13/11/2026)",
      "url": "https://www.infobae.com/espana/agencias/2026/11/13/el-psoe-denuncia-ante-la-fiscalia-los-presuntos-pagos-del-pp-a-koldo-que-feijoo-niega/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m3930.png"
   },
   {
    "id": "feijoo-m3945",
@@ -3496,7 +4094,12 @@
      "titulo": "El Supremo confirma la condena al PP en Gürtel (Público, 14/10/2020)",
      "url": "https://www.publico.es/politica/supremo-confirma-condena-al-pp-guertel.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m3945.png"
   },
   {
    "id": "feijoo-m3945-2",
@@ -3528,7 +4131,12 @@
      "titulo": "La Audiencia Nacional condena por tercera vez al PP en Gürtel (Noticias de Navarra, 8/4/2022)",
      "url": "https://www.noticiasdenavarra.com/actualidad/2022/04/08/audiencia-nacional-condena-tercera-vez-2086159.amp.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": true,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m3945-2.png"
   },
   {
    "id": "feijoo-m3973",
@@ -3556,7 +4164,12 @@
      "titulo": "José Luis Ábalos (Wikipedia)",
      "url": "https://en.wikipedia.org/wiki/Jos%C3%A9_Luis_%C3%81balos"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m3973.png"
   },
   {
    "id": "feijoo-m3973-2",
@@ -3584,7 +4197,12 @@
      "titulo": "José Luis Ábalos (Wikipedia)",
      "url": "https://en.wikipedia.org/wiki/Jos%C3%A9_Luis_%C3%81balos"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m3973-2.png"
   },
   {
    "id": "feijoo-m3994",
@@ -3616,7 +4234,12 @@
      "titulo": "Antxon Alonso niega que Cerdán fuese copropietario de Servinabar (VilaWeb)",
      "url": "https://www.vilaweb.cat/noticies/empresari-antxon-alonso-nega-cerdan-copropietari-servinabar/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m3994.png"
   },
   {
    "id": "feijoo-m3994-2",
@@ -3648,7 +4271,12 @@
      "titulo": "El Supremo envía a prisión a Ábalos y Koldo (Ara)",
      "url": "https://es.ara.cat/politica/supremo-decide-envia-abalos-koldo-carcel_1_5574849.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m3994-2.png"
   },
   {
    "id": "feijoo-m4009",
@@ -3680,7 +4308,12 @@
      "titulo": "La UCO detecta que Cerdán disfrutó con su familia de 323.000 euros de Servinabar (Diario de León, 18/7/2026)",
      "url": "https://www.diariodeleon.es/nacional/260718/2091573/uco-detecta-cerdan-disfruto-familia-323-000-euros-servinabars.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m4009.png"
   },
   {
    "id": "feijoo-m4044",
@@ -3712,7 +4345,12 @@
      "titulo": "El tribunal cuestiona la credibilidad del testimonio de Rajoy (Última Hora, 24/5/2018)",
      "url": "https://www.ultimahora.es/noticias/nacional/2018/05/24/1002441/tribunal-verosimil-cuestiona-credibilidad-del-testimonio-rajoy.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m4044.png"
   },
   {
    "id": "feijoo-m4053",
@@ -3748,7 +4386,12 @@
      "titulo": "El PP pide a la Audiencia Nacional la imputación del PSOE por financiación ilegal (Artículo 14)",
      "url": "https://www.articulo14.es/politica/el-pp-pide-a-la-audiencia-nacional-la-imputacion-del-psoe-por-financiacion-ilegal-20261006.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m4053.png"
   },
   {
    "id": "feijoo-m4066",
@@ -3776,7 +4419,12 @@
      "titulo": "Cuáles son los plazos si Sánchez convoca elecciones (Orain, 2/10/2026)",
      "url": "https://orain.eus/es/politica/2026/10/02/cuales-son-los-plazos-sanchez-convoca-elecciones/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m4066.png"
   },
   {
    "id": "feijoo-m4081",
@@ -3804,7 +4452,12 @@
      "titulo": "Las fotografías de Feijóo y Marcial Dorado: cuáles son montajes y cuáles sí se han publicado (Maldita.es)",
      "url": "https://maldita.es/malditobulo/20241029/fotografias-feijoo-dorado-montajes-falsas/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m4081.png"
   },
   {
    "id": "feijoo-m4174",
@@ -3832,7 +4485,12 @@
      "titulo": "Gamarra reconoce una reunión entre el abogado del PP y Koldo (elDiario.es, 9/11/2026)",
      "url": "https://www.eldiario.es/1_d0461b"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m4174.png"
   },
   {
    "id": "feijoo-m4185",
@@ -3860,7 +4518,12 @@
      "titulo": "El PP rechaza que el paso a un lado de Alberto Durán tenga relación con su reunión con Koldo García (Artículo 14, 7/11/2026)",
      "url": "https://www.articulo14.es/politica/el-pp-rechaza-que-el-paso-a-un-lado-de-alberto-duran-tenga-relacion-con-su-reunion-con-koldo-garcia-20261107.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m4185.png"
   },
   {
    "id": "feijoo-m4232",
@@ -3884,7 +4547,12 @@
      "titulo": "El PP rechaza que el paso a un lado de Alberto Durán tenga relación con su reunión con Koldo García (Artículo 14, 7/11/2026)",
      "url": "https://www.articulo14.es/politica/el-pp-rechaza-que-el-paso-a-un-lado-de-alberto-duran-tenga-relacion-con-su-reunion-con-koldo-garcia-20261107.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m4232.png"
   },
   {
    "id": "feijoo-m4238",
@@ -3912,7 +4580,12 @@
      "titulo": "El PP también dirigirá las acusaciones populares del caso Koldo en la Audiencia Nacional (Infobae/Europa Press, 30/12/2024)",
      "url": "https://www.infobae.com/espana/agencias/2024/12/30/el-pp-tambien-dirigira-las-acusaciones-populares-del-caso-koldo-en-la-audiencia-nacional/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m4238.png"
   },
   {
    "id": "feijoo-m4244",
@@ -3936,7 +4609,12 @@
      "titulo": "El PP crea una web con el mapa de la corrupción ligada al PSOE: 15 causas judiciales (Vozpópuli)",
      "url": "https://www.vozpopuli.com/espana/politica/el-pp-crea-una-web-con-el-mapa-de-la-corrupcion-ligada-al-psoe-15-causas-judiciales-94-investigados-y-1817-anos-de-carcel.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m4244.png"
   },
   {
    "id": "feijoo-m4258",
@@ -3968,7 +4646,12 @@
      "titulo": "El PP niega la oferta de un millón a Koldo García y Ayuso le reta a mostrar las pruebas (Moncloa.com, 6/11/2026)",
      "url": "https://www.moncloa.com/2026/11/06/pp-koldo-garcia-ayuso-pruebas-3463129"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m4258.png"
   },
   {
    "id": "feijoo-m4272",
@@ -3996,7 +4679,12 @@
      "titulo": "Feijóo, en The Wild Project (Vozpópuli)",
      "url": "https://www.vozpopuli.com/espana/politica/feijoo-en-the-wild-project-no-tengo-fotos-con-prostitutas-pagadas-con-fondos-publicos.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m4272.png"
   },
   {
    "id": "feijoo-m4298",
@@ -4024,7 +4712,12 @@
      "titulo": "El Supremo condena a Ábalos a 24 años de cárcel y a Koldo García a 19 años (RTVC, 22/6/2026)",
      "url": "https://rtvc.es/el-supremo-condena-a-abalos-a-24-anos-de-carcel-22-junio-2026/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m4298.png"
   },
   {
    "id": "feijoo-m4302",
@@ -4052,7 +4745,12 @@
      "titulo": "El PSOE denuncia ante la Fiscalía los presuntos pagos del PP a Koldo que Feijóo niega (Infobae/EFE, 13/11/2026)",
      "url": "https://www.infobae.com/espana/agencias/2026/11/13/el-psoe-denuncia-ante-la-fiscalia-los-presuntos-pagos-del-pp-a-koldo-que-feijoo-niega/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m4302.png"
   },
   {
    "id": "feijoo-m4314",
@@ -4080,7 +4778,12 @@
      "titulo": "Anticorrupción mantiene las penas para Ábalos, Koldo y Aldama y el PP reduce a 5 los años para el empresario (Periódico de Ibiza, 4/5/2026)",
      "url": "https://www.periodicodeibiza.es/noticias/nacional/2026/05/04/2622773/anticorrupcion-mantiene-penas-para-abalos-koldo-aldama-reduce-anos-carcel-para-empresario.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m4314.png"
   },
   {
    "id": "feijoo-m4322",
@@ -4108,7 +4811,12 @@
      "titulo": "Anticorrupción mantiene las penas para Ábalos, Koldo y Aldama (Periódico de Ibiza, 4/5/2026)",
      "url": "https://www.periodicodeibiza.es/noticias/nacional/2026/05/04/2622773/anticorrupcion-mantiene-penas-para-abalos-koldo-aldama-reduce-anos-carcel-para-empresario.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m4322.png"
   },
   {
    "id": "feijoo-m4395",
@@ -4136,7 +4844,12 @@
      "titulo": "El PP arranca en Madrid la precampaña para las elecciones generales del 29 de noviembre (Infobae)",
      "url": "https://www.infobae.com/espana/2026/10/10/el-pp-arranca-en-madrid-la-precampana-para-las-elecciones-generales-del-29-de-noviembre-con-la-promesa-de-feijoo-de-ser-el-presidente-que-espana-esta-esperando/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m4395.png"
   },
   {
    "id": "feijoo-m4449",
@@ -4164,7 +4877,12 @@
      "titulo": "Público/EFE (24/03/2013): Feijóo insta al PP a pedir perdón por el caso Bárcenas",
      "url": "https://www.publico.es/actualidad/feijoo-insta-pp-pedir-perdon-caso-barcenas.amp.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m4449.png"
   },
   {
    "id": "feijoo-m4475",
@@ -4196,7 +4914,12 @@
      "titulo": "Moncloa.com (02/09/2026): Óscar López anula las primarias del PSOE en Alcalá de Henares",
      "url": "https://www.moncloa.com/2026/09/02/oscar-lopez-primarias-psoe-alcala-3424594/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m4475.png"
   },
   {
    "id": "feijoo-m4483",
@@ -4228,7 +4951,12 @@
      "titulo": "Maldita.es (29/05/2023): Resultados Comunidad de Madrid, Ayuso logra la mayoría absoluta",
      "url": "https://maldita.es/malditodato/20230529/resultados-comunidad-madrid/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m4483.png"
   },
   {
    "id": "feijoo-m4483-2",
@@ -4260,7 +4988,12 @@
      "titulo": "Orain (04/05/2021): resultados de las elecciones de Madrid",
      "url": "https://orain.eus/es/politica/2021/05/04/resultados-elecciones-madrid-4-mayo-2021-victoria-pp/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m4483-2.png"
   },
   {
    "id": "feijoo-m4529",
@@ -4292,7 +5025,12 @@
      "titulo": "Vozpópuli: La Comunidad publica el expediente del ático",
      "url": "https://www.vozpopuli.com/espana/madrid/la-comunidad-de-madrid-publica-el-expediente-del-atico-avala-su-uso-como-despacho-y-alojamiento-ocasional.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m4529.png"
   },
   {
    "id": "feijoo-m4564",
@@ -4320,7 +5058,12 @@
      "titulo": "elDiario.es: El ático comprado por el Gobierno de Ayuso, para reuniones, no puede ser oficina",
      "url": "https://www.eldiario.es/madrid/somos/atico-comprado-gobierno-ayuso-reuniones-no-oficina-destinarse-vivienda_1_13414404.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m4564.png"
   },
   {
    "id": "feijoo-m4613",
@@ -4348,7 +5091,12 @@
      "titulo": "Alberto Núñez Feijóo (Wikipedia)",
      "url": "https://es.wikipedia.org/wiki/Alberto_Núñez_Feijóo"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m4613.png"
   },
   {
    "id": "feijoo-m4619",
@@ -4376,7 +5124,12 @@
      "titulo": "Alberto Núñez Feijóo (Wikipedia): cronología de cargos",
      "url": "https://es.wikipedia.org/wiki/Alberto_Núñez_Feijóo"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m4619.png"
   },
   {
    "id": "feijoo-m4801",
@@ -4404,7 +5157,12 @@
      "titulo": "Hola (14/04/2026): qué hay de cierto en la vuelta de la mili y los modelos europeos",
      "url": "https://www.hola.com/al-dia/20260414895243/vuelta-mili-espana-sueldo-2600-euros-europa-modelo-alemania/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m4801.png"
   },
   {
    "id": "feijoo-m4840",
@@ -4428,7 +5186,12 @@
      "titulo": "Euronews (03/11/2026): Ucrania asegura que Hungría no bloquea las negociaciones de adhesión",
      "url": "https://es.euronews.com/2026/11/03/ucrania-asegura-que-hungria-no-bloquea-las-negociaciones-de-adhesion-a-la-union-europea"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m4840.png"
   },
   {
    "id": "feijoo-m4883",
@@ -4456,7 +5219,12 @@
      "titulo": "WDBO: Election 2026, Democrats capture both chambers of Congress",
      "url": "https://www.wdbo.com/news/trending/election-2026-democrats-capture-both-houses-congress/5ILOWTVABVDPZFYP7VBBCX4EWE/?outputType=amp"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m4883.png"
   },
   {
    "id": "feijoo-m4968",
@@ -4484,7 +5252,12 @@
      "titulo": "Elecciones generales de España de 2023, Wikipedia",
      "url": "https://es.wikipedia.org/wiki/Elecciones_generales_de_España_de_2023"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m4968.png"
   },
   {
    "id": "feijoo-m5012",
@@ -4512,7 +5285,12 @@
      "titulo": "Público: Galicia consolida su territorio hostil a Vox",
      "url": "https://www.publico.es/politica/galicia-consolida-territorio-hostil-vox.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m5012.png"
   },
   {
    "id": "feijoo-m5044",
@@ -4540,7 +5318,12 @@
      "titulo": "Alberto Núñez Feijóo (Wikipedia)",
      "url": "https://es.wikipedia.org/wiki/Alberto_Núñez_Feijóo"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m5044.png"
   },
   {
    "id": "feijoo-m5044-2",
@@ -4568,7 +5351,12 @@
      "titulo": "Ara: El PP arrasa y obtiene la mayoría absoluta en Andalucía",
      "url": "https://es.ara.cat/politica/pp-arrasa-obtiene-mayoria-absoluta-andalucia_1_4409041.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m5044-2.png"
   },
   {
    "id": "feijoo-m5082",
@@ -4596,7 +5384,12 @@
      "titulo": "El Plural: Montero responde al «pufo» de Feijóo",
      "url": "https://www.elplural.com/economia/montero-responde-feijoo-demuestra-total-ignorancia-mala-fe_295015102"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m5082.png"
   },
   {
    "id": "feijoo-m5259",
@@ -4624,7 +5417,12 @@
      "titulo": "Alberto Núñez Feijóo (Wikipedia)",
      "url": "https://es.wikipedia.org/wiki/Alberto_Núñez_Feijóo"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m5259.png"
   }
  ],
  "excluidas": [

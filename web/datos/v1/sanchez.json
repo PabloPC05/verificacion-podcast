@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-13T21:47:57+01:00",
+ "generado": "2026-11-13T22:48:13+01:00",
  "aviso": "Verificación asistida por IA, sin revisión de un equipo de periodistas. «falso» no implica intención de mentir. Contrasta siempre con las fuentes enlazadas.",
  "veredictos": {
   "verdadero": "Los datos lo confirman.",
@@ -32,6 +32,13 @@
    "no_verificable": 35
   },
   "excluidas": 10,
+  "esencial": [
+   "sanchez-m5188",
+   "sanchez-m3267",
+   "sanchez-m2012",
+   "sanchez-m4742",
+   "sanchez-m6437"
+  ],
   "temas": [
    {
     "n": 1,
@@ -226,7 +233,12 @@
      "titulo": "Diari de Tarragona/EFE: Sánchez a Abascal: «yo seré un perro, pero no tengo amo» (9/9/2026)",
      "url": "https://www.diaridetarragona.com/espana/270259/sanchez-abascal-diferencia-sere-perro-amo.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m566.png"
   },
   {
    "id": "sanchez-m570",
@@ -254,7 +266,12 @@
      "titulo": "Público: El PSOE denunciará ante la Fiscalía el ataque de Abascal a Sánchez",
      "url": "https://www.publico.es/politica/psoe-denunciara-fiscalia-ataque-abascal-sanchez.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m570.png"
   },
   {
    "id": "sanchez-m638",
@@ -282,7 +299,12 @@
      "titulo": "The Objective: Ayuso acusa a Sánchez de difamarla (16/11/2023)",
      "url": "https://theobjective.com/espana/politica/2023-11-16/ayuso-acusa-sanchez-difarmarla/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m638.png"
   },
   {
    "id": "sanchez-m648",
@@ -314,7 +336,12 @@
      "titulo": "SMU: Goebbels' Principles (Doob, 1950)",
      "url": "https://www.physics.smu.edu/pseudo/Propaganda/principles.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m648.png"
   },
   {
    "id": "sanchez-m710",
@@ -350,7 +377,12 @@
      "titulo": "Infobae/EFE: Abascal acusa a Sánchez de favorecer un clima de violencia contra Vox (27/10/2026)",
      "url": "https://www.infobae.com/espana/agencias/2026/10/27/abascal-acusa-a-sanchez-de-favorecer-un-clima-de-violencia-contra-vox/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m710.png"
   },
   {
    "id": "sanchez-m734",
@@ -386,7 +418,12 @@
      "titulo": "Infobae: Cientos de manifestantes se concentran en Ferraz por decimoséptimo día",
      "url": "https://www.infobae.com/espana/2023/11/19/cientos-de-manifestantes-se-concentran-en-ferraz-por-decimoseptimo-dia-consecutivo/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m734.png"
   },
   {
    "id": "sanchez-m805",
@@ -422,7 +459,12 @@
      "titulo": "Público: Feijóo llama «cobarde» a Sánchez y este lo tacha de «Torquemada» (17/6/2026)",
      "url": "https://www.publico.es/politica/feijoo-llama-cobarde-sanchez-permitir-congreso-vota-debe-adelantar-elecciones.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m805.png"
   },
   {
    "id": "sanchez-m914",
@@ -450,7 +492,12 @@
      "titulo": "El Observador: La inversión en la red ferroviaria de España cayó casi un 20% en los últimos 15 años (análisis con datos de Adif, en términos reales)",
      "url": "https://www.elobservador.com.uy/espana/economia-y-finanzas/en-la-tragedia-toledo-tambien-fallo-la-economia-la-inversion-la-red-ferroviaria-espana-cayo-casi-un-20-los-ultimos-15-anos-n6062101"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m914.png"
   },
   {
    "id": "sanchez-m937",
@@ -478,7 +525,12 @@
      "titulo": "La Moncloa: Pedro Sánchez inaugura, junto al rey Felipe VI, la Línea de Alta Velocidad Madrid-Murcia (19/12/2022)",
      "url": "https://www.lamoncloa.gob.es/presidente/actividades/Paginas/2022/191222-sanchez-murcia-ave.aspx"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m937.png"
   },
   {
    "id": "sanchez-m947",
@@ -500,7 +552,8 @@
    "fuentes": [
     {
      "titulo": "Wikipedia: Accidente ferroviario de Adamuz (700 M€ frente a 189 M€ de inversión en la vía)",
-     "url": "https://es.wikipedia.org/wiki/Accidente_ferroviario_de_Adamuz"
+     "url": "https://es.wikipedia.org/wiki/Accidente_ferroviario_de_Adamuz",
+     "archivo": "https://web.archive.org/web/20261105080821/https://es.wikipedia.org/wiki/Accidente_ferroviario_de_Adamuz"
     },
     {
      "titulo": "Adif: renovación integral de la LAV Madrid-Sevilla, inversión global de 650-700 M€",
@@ -514,7 +567,12 @@
      "titulo": "Verificat: ¿Ha crecido el gasto en mantenimiento de la alta velocidad tanto como dice el Gobierno?",
      "url": "https://www.verificat.cat/es/crecido-gasto-mantenimiento-alta-velocidad/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m947.png"
   },
   {
    "id": "sanchez-m1020",
@@ -546,7 +604,12 @@
      "titulo": "Merca2: La CNMC revela que la alta velocidad duplicó viajeros y abarató precios un 40% tras la liberalización",
      "url": "https://www.merca2.es/2026/07/17/liberalizacion-ferroviaria-cnmc-viajeros-precios-2419507/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m1020.png"
   },
   {
    "id": "sanchez-m1034",
@@ -582,7 +645,12 @@
      "titulo": "Wikipedia: Accidente ferroviario de Urda",
      "url": "https://es.wikipedia.org/wiki/Accidente_ferroviario_de_Urda"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m1034.png"
   },
   {
    "id": "sanchez-m1079",
@@ -614,7 +682,12 @@
      "titulo": "La Moncloa: Consejo de Ministros 10/11/2026 (referencia oficial, no accesible al verificar)",
      "url": "https://www.lamoncloa.gob.es/consejodeministros/resumenes/Paginas/2026/101126-rueda-prensa-ministros.aspx"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m1079.png"
   },
   {
    "id": "sanchez-m1087",
@@ -642,7 +715,12 @@
      "titulo": "Diari de Tarragona: Puente anuncia inteligencia artificial para reducir errores humanos en la red ferroviaria",
      "url": "https://www.diaridetarragona.com/espana/274761/puente-anuncia-inteligencia-artificial-reducir-errores-humanos-red-ferroviaria.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m1087.png"
   },
   {
    "id": "sanchez-m1087-2",
@@ -678,7 +756,12 @@
      "titulo": "Artículo 14: Sánchez admite algo inédito en The Wild Project (cita la cifra sin contrastarla)",
      "url": "https://www.articulo14.es/politica/sanchez-admite-algo-inedito-en-the-wild-project-oscar-puente-ha-hecho-bien-en-dimitir-20261113.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m1087-2.png"
   },
   {
    "id": "sanchez-m1109",
@@ -706,7 +789,12 @@
      "titulo": "El Economista: La cadena de fallos más allá del error humano que provocaron el accidente ferroviario de Toledo",
      "url": "https://www.eleconomista.es/transportes-turismo/noticias/14024493/10/26/la-cadena-de-fallos-mas-alla-del-error-humano-que-provocaron-el-accidente-ferroviario-de-toledo.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m1109.png"
   },
   {
    "id": "sanchez-m1185",
@@ -732,13 +820,19 @@
     },
     {
      "titulo": "Wikipedia: Accidente ferroviario de Adamuz (CIAF, Guardia Civil y juzgado de Montoro)",
-     "url": "https://es.wikipedia.org/wiki/Accidente_ferroviario_de_Adamuz"
+     "url": "https://es.wikipedia.org/wiki/Accidente_ferroviario_de_Adamuz",
+     "archivo": "https://web.archive.org/web/20261105080821/https://es.wikipedia.org/wiki/Accidente_ferroviario_de_Adamuz"
     },
     {
      "titulo": "Wikipedia: Accidente ferroviario de Urda (AITAT sustituye a la CIAF desde julio de 2026)",
      "url": "https://es.wikipedia.org/wiki/Accidente_ferroviario_de_Urda"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m1185.png"
   },
   {
    "id": "sanchez-m1217",
@@ -768,9 +862,15 @@
     },
     {
      "titulo": "Diari de Tarragona: Puente dimite por sorpresa seis días después de Urda tras una dura comparecencia en el Congreso",
-     "url": "https://www.diaridetarragona.com/espana/274817/puente-dimite-sorpresa-6-dias-despues-urda-dura-comparecencia-congreso.html"
+     "url": "https://www.diaridetarragona.com/espana/274817/puente-dimite-sorpresa-6-dias-despues-urda-dura-comparecencia-congreso.html",
+     "archivo": "https://web.archive.org/web/20261104000541/https://www.diaridetarragona.com/espana/274817/puente-dimite-sorpresa-6-dias-despues-urda-dura-comparecencia-congreso.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m1217.png"
   },
   {
    "id": "sanchez-m1243",
@@ -802,7 +902,12 @@
      "titulo": "Maldita: Los maquinistas pidieron hace cinco meses reducir la velocidad en el tramo del accidente de Adamuz",
      "url": "https://maldita.es/malditobulo/20260120/los-maquinistas-pidieron-hace-cinco-meses-reducir-la-velocidad-en-el-tramo-en-el-que-se-ha-producido-el-accidente-de-adamuz-por-el-estado-de-la-via/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m1243.png"
   },
   {
    "id": "sanchez-m1279",
@@ -838,7 +943,12 @@
      "titulo": "Orain: Atocha control center to AVE driver 'restart with normal gear'",
      "url": "https://orain.eus/en/current-events/society-and-social-news-now/2026/10/29/atocha-control-center-to-ave-driver-restart-with-normal-gear/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m1279.png"
   },
   {
    "id": "sanchez-m1310",
@@ -874,7 +984,12 @@
      "titulo": "Público: La jueza de la DANA pide imputar a Mazón por su 'inactividad negligente'",
      "url": "https://www.publico.es/politica/jueza-dana-pide-imputar-mazon.amp.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m1310.png"
   },
   {
    "id": "sanchez-m1358",
@@ -902,7 +1017,12 @@
      "titulo": "Vozpópuli: Hablan los operarios de Adif señalados por Puente (carga de trabajo y plazas convocadas)",
      "url": "https://www.vozpopuli.com/economia/transporte/hablan-los-operarios-de-adif-senalados-por-puente-la-carga-de-trabajo-es-insoportable-casi-ni-podemos-ir-al-bano.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m1358.png"
   },
   {
    "id": "sanchez-m1537",
@@ -930,7 +1050,12 @@
      "titulo": "La Moncloa (Transportes): Explicación sobre el accidente de Adamuz ante la Cámara Alta (29/01/2026)",
      "url": "https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/transportes-movilidad-sostenible/Paginas/2026/290126-oscar-puente-comparecencia-senado.aspx"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m1537.png"
   },
   {
    "id": "sanchez-m1556",
@@ -966,7 +1091,12 @@
      "titulo": "Newtral: Las víctimas de Angrois sí pidieron dimisiones",
      "url": "https://www.newtral.es/archivo-caso-angrois/20261030/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m1556.png"
   },
   {
    "id": "sanchez-m1570",
@@ -998,7 +1128,12 @@
      "titulo": "elDiario.es: Dos hombres frente a la responsabilidad de la tragedia de Angrois: el maquinista y el exjefe de seguridad de Adif",
      "url": "https://www.eldiario.es/galicia/hombres-frente-responsabilidad-tragedia-angrois-maquinista-exjefe-seguridad-adif_1_9620730.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m1570.png"
   },
   {
    "id": "sanchez-m1673",
@@ -1020,7 +1155,8 @@
    "fuentes": [
     {
      "titulo": "Diari de Tarragona: Puente dimite por sorpresa seis días después de Urda tras una dura comparecencia en el Congreso",
-     "url": "https://www.diaridetarragona.com/espana/274817/puente-dimite-sorpresa-6-dias-despues-urda-dura-comparecencia-congreso.html"
+     "url": "https://www.diaridetarragona.com/espana/274817/puente-dimite-sorpresa-6-dias-despues-urda-dura-comparecencia-congreso.html",
+     "archivo": "https://web.archive.org/web/20261104000541/https://www.diaridetarragona.com/espana/274817/puente-dimite-sorpresa-6-dias-despues-urda-dura-comparecencia-congreso.html"
     },
     {
      "titulo": "Euronews: El ministro de Transportes descarta dimitir por el accidente de Urda (30/10/2026)",
@@ -1030,7 +1166,12 @@
      "titulo": "RTVC: Óscar Puente anuncia su dimisión como ministro de Transportes (3/11/2026)",
      "url": "https://rtvc.es/oscar-puente-anuncia-su-dimision-como-ministro-de-transportes-3-noviembre-2026/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m1673.png"
   },
   {
    "id": "sanchez-m1803",
@@ -1058,7 +1199,12 @@
      "titulo": "El Debate: Ceuta y Melilla, unas grandes desconocidas para los ministros de Sánchez",
      "url": "https://www.eldebate.com/espana/20260805/ceuta-melilla-grandes-desconocidas-ministros-sanchez_446543.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m1803.png"
   },
   {
    "id": "sanchez-m1846",
@@ -1090,7 +1236,12 @@
      "titulo": "Infobae: Guardia Civil registró un incremento reseñable en las llegadas a nado la semana previa",
      "url": "https://www.infobae.com/espana/agencias/2026/09/09/guardia-civil-registro-un-incremento-resenable-en-las-llegadas-a-nado-la-semana-previa-a-la-entrada-masiva-a-ceuta/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m1846.png"
   },
   {
    "id": "sanchez-m1846-2",
@@ -1122,7 +1273,12 @@
      "titulo": "Wikipedia: Crisis migratoria de Ceuta de 2026 (recopilación de cifras)",
      "url": "https://es.wikipedia.org/wiki/Crisis_migratoria_de_Ceuta_de_2026"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m1846-2.png"
   },
   {
    "id": "sanchez-m1911",
@@ -1158,7 +1314,12 @@
      "titulo": "Wikipedia: Crisis migratoria de Ceuta de 2026",
      "url": "https://es.wikipedia.org/wiki/Crisis_migratoria_de_Ceuta_de_2026"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m1911.png"
   },
   {
    "id": "sanchez-m1932",
@@ -1186,7 +1347,12 @@
      "titulo": "The Objective: Robles insiste en que el CNI avisó un día antes (aprovechando una fiesta en el país vecino)",
      "url": "https://theobjective.com/espana/2026-08-25/robles-cni-aviso-entrada-inmigrantes-ceuta/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m1932.png"
   },
   {
    "id": "sanchez-m1976",
@@ -1222,7 +1388,12 @@
      "titulo": "Maldita.es: Por qué la frontera de España y Marruecos no es la más desigual del mundo",
      "url": "https://maldita.es/malditateexplica/20210525/ceuta-melilla-fronteras-mas-desiguales/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m1976.png"
   },
   {
    "id": "sanchez-m2012",
@@ -1254,7 +1425,12 @@
      "titulo": "El Debate: ¿Cuáles son las verdaderas cifras de la crisis de Ceuta? (2.048 menores filiados)",
      "url": "https://www.eldebate.com/espana/20260917/cuales-son-verdaderas-cifras-invasion-ceuta-numero-entradas-salidas-alojados-calle_459327.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": true,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m2012.png"
   },
   {
    "id": "sanchez-m2062",
@@ -1290,7 +1466,12 @@
      "titulo": "Articulo14: Marlaska reconoce que había muchos informes y preocupación",
      "url": "https://www.articulo14.es/politica/marlaska-reconoce-que-habia-muchos-informes-y-preocupacion-sobre-la-llegada-de-inmigrantes-a-ceuta-pero-como-la-del-ano-pasado-20260828.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m2062.png"
   },
   {
    "id": "sanchez-m2119",
@@ -1322,7 +1503,12 @@
      "titulo": "El Pueblo de Ceuta: Crisis migratoria en Ceuta, las cifras que explican su magnitud (82 cuerpos en Medicina Legal)",
      "url": "https://www.elpueblodeceuta.es/sec/politica/inmigracion/numeros-crisis-ceuta-sigue-batallando_1_1185686.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m2119.png"
   },
   {
    "id": "sanchez-m2161",
@@ -1354,7 +1540,12 @@
      "titulo": "Infobae: Informe policial sobre la entrada masiva (agentes marroquíes no uniformados)",
      "url": "https://www.infobae.com/espana/2026/09/02/de-jovenes-con-neopreno-y-aletas-a-familias-con-ninos-en-ropa-deportiva-y-chancletas-asi-fue-la-entrada-masiva-de-los-migrantes-en-ceuta/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m2161.png"
   },
   {
    "id": "sanchez-m2176",
@@ -1390,7 +1581,12 @@
      "titulo": "La República (Reuters): Presidente de España acusa a Rusia e Israel de difundir desinformación",
      "url": "https://www.larepublica.co/globoeconomia/presidente-de-espana-acusa-a-rusia-e-israel-de-difundir-desinformacion-en-crisis-de-ceuta-4470759"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m2176.png"
   },
   {
    "id": "sanchez-m2247",
@@ -1418,7 +1614,12 @@
      "titulo": "El Pueblo de Ceuta: Crisis migratoria en Ceuta, las cifras que explican su magnitud",
      "url": "https://www.elpueblodeceuta.es/sec/politica/inmigracion/numeros-crisis-ceuta-sigue-batallando_1_1185686.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m2247.png"
   },
   {
    "id": "sanchez-m2270",
@@ -1454,7 +1655,12 @@
      "titulo": "Infobae: De jóvenes con neopreno y aletas a familias con niños (informe policial: ~90 % no se quedó)",
      "url": "https://www.infobae.com/espana/2026/09/02/de-jovenes-con-neopreno-y-aletas-a-familias-con-ninos-en-ropa-deportiva-y-chancletas-asi-fue-la-entrada-masiva-de-los-migrantes-en-ceuta/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m2270.png"
   },
   {
    "id": "sanchez-m2353",
@@ -1486,7 +1692,12 @@
      "titulo": "Democrata: Elma Saiz avanza el cierre gradual de plazas temporales (≈13.000 retornos a 2-nov)",
      "url": "https://www.democrata.es/politica/elma-saiz-avanza-que-el-gobierno-prepara-el-cierre-gradual-de-plazas-temporales-para-inmigrantes-en-ceuta/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m2353.png"
   },
   {
    "id": "sanchez-m2368",
@@ -1514,7 +1725,12 @@
      "titulo": "Euronews: El desmantelamiento del campamento del puerto de Ceuta acelera los retornos a Marruecos",
      "url": "https://es.euronews.com/2026/11/10/desmantelamiento-campamento-puerto-ceuta-acelera-retornos-marruecos"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m2368.png"
   },
   {
    "id": "sanchez-m2490",
@@ -1546,7 +1762,12 @@
      "titulo": "Economist & Jurist: Archivada la investigación del caso Pegasus ante la falta de cooperación de Israel (ene-2026)",
      "url": "https://www.economistjurist.es/actualidad-juridica/archivada-la-investigacion-por-el-caso-pegasus-ante-la-falta-de-cooperacion-de-israel/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m2490.png"
   },
   {
    "id": "sanchez-m2544",
@@ -1574,7 +1795,12 @@
      "titulo": "Ara: El Gobierno español denuncia espionaje Pegasus en los móviles de Sánchez y Robles",
      "url": "https://es.ara.cat/politica/gobierno-espanol-denuncia-espionaje-pegasus-moviles-pedro-sanchez-margarita-robles_1_4357938.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m2544.png"
   },
   {
    "id": "sanchez-m2592",
@@ -1602,7 +1828,12 @@
      "titulo": "El Correo Gallego: El Gobierno ha invertido 79 millones en reforzar las fronteras de Ceuta y Melilla",
      "url": "https://www.elcorreogallego.es/espana/2026/08/10/gobierno-invertido-79-millones-reforzar-fronteras-ceuta-melilla-133225236.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m2592.png"
   },
   {
    "id": "sanchez-m2714",
@@ -1630,7 +1861,12 @@
      "titulo": "Press Digital: Pedro Sánchez visita este viernes Ceuta para abordar la crisis migratoria",
      "url": "https://www.pressdigital.es/articulo/politica/2026-07-31/5971247-pedro-sanchez-visita-viernes-ceuta-abordar-crisis-migratoria"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m2714.png"
   },
   {
    "id": "sanchez-m2718",
@@ -1666,7 +1902,12 @@
      "titulo": "El Debate: Moncloa asegura que las vacaciones de Sánchez en La Mareta solo costaron 271 euros (cita «he trabajado y he descansado»)",
      "url": "https://www.eldebate.com/espana/20260921/moncloa-rie-todos-asegura-vacaciones-sanchez-mareta-mientras-ceuta-invadida-solo-costaron-271-euros_460682.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m2718.png"
   },
   {
    "id": "sanchez-m2770",
@@ -1698,7 +1939,12 @@
      "titulo": "Wikipedia: Crisis migratoria de Ceuta de 2026 (evolución de plazas)",
      "url": "https://es.wikipedia.org/wiki/Crisis_migratoria_de_Ceuta_de_2026"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m2770.png"
   },
   {
    "id": "sanchez-m2847",
@@ -1726,7 +1972,12 @@
      "titulo": "Puertos del Estado: reafirma su compromiso con la cohesión territorial con la apertura de la nueva estación marítima de Ceuta",
      "url": "https://www.puertos.es/en/comunication/puertos-del-estado-reaffirms-its-commitment-territorial-cohesion-opening-new-maritime-station-ceuta"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m2847.png"
   },
   {
    "id": "sanchez-m2847-2",
@@ -1758,7 +2009,12 @@
      "titulo": "DataCenterDynamics: Redeia activa el cable submarino que conecta Ceuta con la península",
      "url": "https://www.datacenterdynamics.com/es/noticias/redeia-activa-el-cable-submarino-que-conecta-ceuta-con-la-pen%C3%ADnsula/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m2847-2.png"
   },
   {
    "id": "sanchez-m2847-3",
@@ -1790,7 +2046,12 @@
      "titulo": "Onda Vasca: Las ayudas directas a empresas y autónomos de Ceuta podrán pedirse hasta el 30 de noviembre",
      "url": "https://www.ondavasca.com/las-ayudas-directas-a-empresas-y-autonomos-de-ceuta-podran-pedirse-hasta-el-30-de-noviembre/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m2847-3.png"
   },
   {
    "id": "sanchez-m2908",
@@ -1818,7 +2079,12 @@
      "titulo": "Civio: El Gobierno declara la situación de interés para la seguridad nacional por la crisis de Ceuta casi un mes después (BOE 26-ago)",
      "url": "https://civio.es/el-boe-nuestro-de-cada-dia/2026/08/26/el-gobierno-declara-situacion-de-interes-para-la-seguridad-nacional-la-crisis-de-ceuta-casi-un-mes-despues/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m2908.png"
   },
   {
    "id": "sanchez-m2949",
@@ -1850,7 +2116,12 @@
      "titulo": "Press Digital: El mando único en Ceuta se extiende hasta el 31 de diciembre, con posibilidad de prórroga",
      "url": "https://www.pressdigital.es/articulo/politica/2026-08-26/5993768-mando-unico-ceuta-extiende-hasta-31-diciembre-posibilidad-prorroga"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m2949.png"
   },
   {
    "id": "sanchez-m2982",
@@ -1878,7 +2149,12 @@
      "titulo": "Diario de Lanzarote: Pedro Sánchez comienza sus vacaciones de verano en La Mareta",
      "url": "https://www.diariodelanzarote.com/noticia/pedro-s%C3%A1nchez-comienza-sus-vacaciones-de-verano-en-la-residencia-de-la-mareta-en-lanzarote"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m2982.png"
   },
   {
    "id": "sanchez-m3019",
@@ -1906,7 +2182,12 @@
      "titulo": "Wikipedia: Crisis migratoria de Ceuta de 2026 (cronología de visitas)",
      "url": "https://es.wikipedia.org/wiki/Crisis_migratoria_de_Ceuta_de_2026"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m3019.png"
   },
   {
    "id": "sanchez-m3074",
@@ -1938,7 +2219,12 @@
      "titulo": "Wikipedia: Crisis migratoria de Ceuta de 2026 (traslado de 500 menores, 19-ago)",
      "url": "https://es.wikipedia.org/wiki/Crisis_migratoria_de_Ceuta_de_2026"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m3074.png"
   },
   {
    "id": "sanchez-m3251",
@@ -1970,7 +2256,12 @@
      "titulo": "Seis meses de regularización extraordinaria: más de un millón de solicitudes y pocas respuestas oficiales (Infomigrante, 16/10/2026)",
      "url": "https://infomigrante.es/2026/10/16/seis-meses-de-regularizacion-extraordinaria-en-espana-mas-de-un-millon-de-solicitudes-y-pocas-respuestas-oficiales/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m3251.png"
   },
   {
    "id": "sanchez-m3257",
@@ -1998,7 +2289,12 @@
      "titulo": "La mayoría de los 840.000 migrantes en situación irregular en España son latinoamericanos (Infobae, 27/1/2026, datos Funcas)",
      "url": "https://www.infobae.com/espana/2026/01/27/la-mayoria-de-los-840000-migrantes-en-situacion-irregular-en-espana-son-latinoamericanos-con-colombia-peru-y-honduras-a-la-cabeza/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m3257.png"
   },
   {
    "id": "sanchez-m3267",
@@ -2030,7 +2326,12 @@
      "titulo": "Infomigrante: Sánchez defiende la regularización (13/11/2026)",
      "url": "https://infomigrante.es/2026/11/13/sanchez-regularizacion-500000-trabajando-cotizando/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": true,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m3267.png"
   },
   {
    "id": "sanchez-m3378",
@@ -2062,7 +2363,12 @@
      "titulo": "Banco de España, Boletín Económico 2025/T2: estimación de la contribución de la población extranjera al crecimiento",
      "url": "https://www.bde.es/f/webbe/SES/Secciones/Publicaciones/InformesBoletinesRevistas/BoletinEconomico/25/T2/Fich/be2502-art10.pdf"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m3378.png"
   },
   {
    "id": "sanchez-m3418",
@@ -2090,7 +2396,12 @@
      "titulo": "Gaceta Sanitaria (2009): utilización y costes hospitalarios de inmigrantes y españoles en Murcia",
      "url": "https://scielosp.org/pdf/gs/2009.v23n3/208-215/es"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m3418.png"
   },
   {
    "id": "sanchez-m3602",
@@ -2118,7 +2429,12 @@
      "titulo": "Infobae (27/1/2026): migrantes irregulares, datos Funcas",
      "url": "https://www.infobae.com/espana/2026/01/27/la-mayoria-de-los-840000-migrantes-en-situacion-irregular-en-espana-son-latinoamericanos-con-colombia-peru-y-honduras-a-la-cabeza/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m3602.png"
   },
   {
    "id": "sanchez-m3613",
@@ -2142,7 +2458,12 @@
      "titulo": "The Objective (27/7/2026): La Policía cifra en 1,5 millones los inmigrantes irregulares en España",
      "url": "https://theobjective.com/espana/2026-07-27/policia-cifra-15-millones-inmigrantes-irregulares-espana-efecto-llamada/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m3613.png"
   },
   {
    "id": "sanchez-m3620",
@@ -2174,7 +2495,12 @@
      "titulo": "Los datos sobre la nacionalidad de los inmigrantes (Infobae, 13/11/2026; Censo anual 1/1/2025: 9.464.210 nacidos fuera)",
      "url": "https://www.infobae.com/espana/2026/11/13/los-datos-sobre-la-nacionalidad-de-los-inmigrantes-que-han-hecho-trabajar-a-los-verificadores-de-jordi-wild-pedro-sanchez-asegura-que-un-40-son-latinoamericanos/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m3620.png"
   },
   {
    "id": "sanchez-m3706",
@@ -2206,7 +2532,12 @@
      "titulo": "Seguridad Social: el permiso por nacimiento será de 16 semanas para ambos progenitores",
      "url": "https://revista.seg-social.es/-/el-permiso-por-nacimiento-y-cuidado-de-menor-ser%C3%A1-de-16-semanas-para-ambos-progenitores-a-partir-de-enero"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m3706.png"
   },
   {
    "id": "sanchez-m3720",
@@ -2230,7 +2561,12 @@
      "titulo": "Congreso aprueba la ampliación de los permisos por nacimiento y cuidados a 19 semanas",
      "url": "https://www.dsca.gob.es/es/comunicacion/notas-prensa/congreso-aprueba-ampliacion-del-gobierno-permisos-nacimiento-cuidados"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m3720.png"
   },
   {
    "id": "sanchez-m3754",
@@ -2262,7 +2598,12 @@
      "titulo": "Randstad: España perderá 2,6 millones de trabajadores en 25 años",
      "url": "https://www.randstad.es/nosotros/sala-prensa/espana-perdera-trabajadores-por-envejecimiento-poblacion/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m3754.png"
   },
   {
    "id": "sanchez-m3844",
@@ -2290,7 +2631,12 @@
      "titulo": "PSOE Alhaurín de la Torre: Seguridad ciudadana, visión progresista vs visión liberal",
      "url": "https://www.psoealhaurindelatorre.com/seguridad-ciudadana/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m3844.png"
   },
   {
    "id": "sanchez-m3856",
@@ -2322,7 +2668,12 @@
      "titulo": "COPE: Moreno (PSRM) recuerda que Rajoy recortó más de 13.000 efectivos",
      "url": "https://www.cope.es/actualidad/espana/noticias/moreno-psrm-recuerda-que-fue-rajoy-quien-recorto-mas-13000-efectivos-policia-nacional-guardia-civil-20240216_3150071"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m3856.png"
   },
   {
    "id": "sanchez-m3856-2",
@@ -2354,7 +2705,12 @@
      "titulo": "Infobae (4/10/2026): Marlaska destaca la labor de la Guardia Civil",
      "url": "https://www.infobae.com/espana/agencias/2026/10/04/marlaska-destaca-la-labor-de-la-guardia-civil-frente-al-narcotrafico-y-el-reto-migratorio/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m3856-2.png"
   },
   {
    "id": "sanchez-m3873",
@@ -2382,7 +2738,12 @@
      "titulo": "El Orden Mundial: Datos contra la alarma del crimen en España, uno de los países más seguros",
      "url": "https://elordenmundial.com/mapas-y-graficos/seguridad-espana-crimen/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m3873.png"
   },
   {
    "id": "sanchez-m3873-2",
@@ -2410,7 +2771,12 @@
      "titulo": "Infobae (4/6/2026): La criminalidad sube en España con un aumento de homicidios (+10%) (1T 2026)",
      "url": "https://www.infobae.com/america/agencias/2026/06/04/la-criminalidad-sube-en-espana-con-un-aumento-de-homicidios-10-y-agresiones-sexuales-con-penetracion-38/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m3873-2.png"
   },
   {
    "id": "sanchez-m3918",
@@ -2442,7 +2808,12 @@
      "titulo": "The Objective (27/7/2026): La Policía cifra en 1,5 millones los inmigrantes irregulares",
      "url": "https://theobjective.com/espana/2026-07-27/policia-cifra-15-millones-inmigrantes-irregulares-espana-efecto-llamada/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m3918.png"
   },
   {
    "id": "sanchez-m3929",
@@ -2474,7 +2845,12 @@
      "titulo": "The Objective (2/10/2026): Saiz celebra el mejor septiembre de la afiliación",
      "url": "https://theobjective.com/espana/politica/2026-10-02/saiz-afiliacion-papel-regularizacion/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m3929.png"
   },
   {
    "id": "sanchez-m3929-2",
@@ -2506,7 +2882,12 @@
      "titulo": "CaixaBank Research: La tasa de paro cae en el 2T 2025 al 10,3%, mínimo desde 2008",
      "url": "https://www.caixabankresearch.com/es/publicaciones/notas-breves-actualidad-economica-y-financiera/espana/tasa-paro-cae-2t-al-103-minimo"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m3929-2.png"
   },
   {
    "id": "sanchez-m3976",
@@ -2538,7 +2919,12 @@
      "titulo": "La Moncloa: Plan de Integración y Ciudadanía 2026-2030",
      "url": "https://www.lamoncloa.gob.es/presidente/actividades/Documents/2026/300626-sanchez-plan-integracion-ciudadania.pdf"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m3976.png"
   },
   {
    "id": "sanchez-m3976-2",
@@ -2570,7 +2956,12 @@
      "titulo": "Diario Jaén/Europa Press: Sánchez anuncia 500 millones para un Plan de Integración y Ciudadanía",
      "url": "https://www.diariojaen.es/espana/pedro-sanchez-anuncia-que-se-destinaran-500-millones-de-euros-para-un-plan-de-integracion-y-ciudadania-BN11495172"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m3976-2.png"
   },
   {
    "id": "sanchez-m4080",
@@ -2606,7 +2997,12 @@
      "titulo": "El Español: Doce causas abiertas (Cerdán investigado en la causa de obra pública)",
      "url": "https://www.elespanol.com/espana/tribunales/20260510/doce-causas-abiertas-meses-legislatura-calvario-judicial-queda-sanchez-despues-urnas/1003744239160_0.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m4080.png"
   },
   {
    "id": "sanchez-m4259",
@@ -2634,7 +3030,12 @@
      "titulo": "El Español: Koldo mintió en el Supremo: tenía el número personal de Sánchez guardado como «Número 1»",
      "url": "https://www.elespanol.com/espana/20260503/koldo-mintio-supremo-numero-personal-presidente-sanchez-guardado-movil-numero/1003744230262_0.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m4259.png"
   },
   {
    "id": "sanchez-m4262",
@@ -2678,7 +3079,12 @@
      "titulo": "OKDiario (línea crítica): El «anecdótico» Koldo escoltó a Sánchez en el mitin",
      "url": "https://okdiario.com/investigacion/anecdotico-koldo-escolto-sanchez-mitin-fin-semana-fiesta-pueblo-cerdan-15821121"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m4262.png"
   },
   {
    "id": "sanchez-m4277",
@@ -2702,7 +3108,12 @@
      "titulo": "The Objective: Sánchez: «Ábalos y Cerdán sí fueron en el coche, pero no sabía si consumía prostitución»",
      "url": "https://theobjective.com/espana/politica/2026-11-13/entrevista-wild-sanchez/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m4277.png"
   },
   {
    "id": "sanchez-m4285",
@@ -2730,7 +3141,12 @@
      "titulo": "The Objective (2026): Sánchez confesó a Cerdán su enfado por la vida de Ábalos (relato de Cerdán)",
      "url": "https://theobjective.com/espana/politica/2026-04-28/sanchez-cerdan-cabreo-vida-abalos-traicion/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m4285.png"
   },
   {
    "id": "sanchez-m4309",
@@ -2762,7 +3178,12 @@
      "titulo": "Moncloa.com: Ábalos renuncia al acta de diputado (28/1/2026)",
      "url": "https://www.moncloa.com/2026/01/28/abalos-renuncia-diputado-3357918/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m4309.png"
   },
   {
    "id": "sanchez-m4331",
@@ -2794,7 +3215,12 @@
      "titulo": "Moncloa.com: Sánchez revoluciona el Gobierno ascendiendo a Calviño y Bolaños",
      "url": "https://www.moncloa.com/2021/07/10/sanchez-gobierno-ascendiendo-calvino-bolanos/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m4331.png"
   },
   {
    "id": "sanchez-m4360",
@@ -2822,7 +3248,12 @@
      "titulo": "Orain.eus: El PSOE ha expulsado a José Luis Ábalos 15 meses después de abrir el expediente",
      "url": "https://orain.eus/en/politika/2025/06/16/the-psoe-has-expelled-jose-luis-abalos-15-months-after-the-opening-of-the-file/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m4360.png"
   },
   {
    "id": "sanchez-m4374",
@@ -2854,7 +3285,12 @@
      "titulo": "The Objective (2021): Las razones de la caída de Ábalos",
      "url": "https://theobjective.com/further/espana/2021-11-03/razones-caida-abalos-doble-vida/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m4374.png"
   },
   {
    "id": "sanchez-m4377",
@@ -2882,7 +3318,12 @@
      "titulo": "Maldita Hemeroteca: Cuando Pedro Sánchez decía que no bastaba con pedir perdón",
      "url": "https://maldita.es/malditahemeroteca/20250613/psoe-corrupcion-pedir-perdon-sanchez/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m4377.png"
   },
   {
    "id": "sanchez-m4485",
@@ -2910,7 +3351,12 @@
      "titulo": "Orain.eus: Sánchez deja su escaño en el Congreso (29/10/2016)",
      "url": "https://orain.eus/es/politica/2016/10/29/pedro-sanchez-entrega-su-acta-diputado/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m4485.png"
   },
   {
    "id": "sanchez-m4560",
@@ -2934,7 +3380,12 @@
      "titulo": "El Debate: El post de 2014 que Jordi Wild ha recordado a Pedro Sánchez alabando a Koldo García",
      "url": "https://www.eldebate.com/cine-tv-series/20261113/post-2014-jordi-wild-recordado-pedro-sanchez-alabando-koldo-garcia-cnsm_480566.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m4560.png"
   },
   {
    "id": "sanchez-m4623",
@@ -2966,7 +3417,12 @@
      "titulo": "Demócrata: Koldo detalla su relación con Sánchez ante el Supremo",
      "url": "https://www.democrata.es/en/courts/koldo-states-that-he-only-dealt-with-sanchez-until-his-arrival-at-moncloa/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m4623.png"
   },
   {
    "id": "sanchez-m4660",
@@ -2994,7 +3450,12 @@
      "titulo": "Noticias de Navarra: El navarro Santos Cerdán se mantiene como número 3 en la nueva Ejecutiva del PSOE",
      "url": "https://www.noticiasdenavarra.com/politica/2021/10/17/navarro-santos-cerdan-mantiene-numero-2115319.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m4660.png"
   },
   {
    "id": "sanchez-m4683",
@@ -3030,7 +3491,12 @@
      "titulo": "RTVC: La UCO afirma que Koldo logró implicar a Ángel Víctor Torres para pagar facturas a la empresa de Aldama",
      "url": "https://rtvc.es/informe-uco-angel-victor-torres-koldo-garcia-3-noviembre-2025/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m4683.png"
   },
   {
    "id": "sanchez-m4742",
@@ -3062,7 +3528,12 @@
      "titulo": "Moncloa.com: Ferraz no expedienta a Zapatero pese al terremoto judicial del caso Plus Ultra",
      "url": "https://www.moncloa.com/2026/05/21/ferraz-no-expedienta-zapatero-3378516/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": true,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m4742.png"
   },
   {
    "id": "sanchez-m4808",
@@ -3098,7 +3569,12 @@
      "titulo": "Caso Leire Díez (Wikipedia)",
      "url": "https://es.wikipedia.org/wiki/Caso_Leire_D%C3%ADez"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m4808.png"
   },
   {
    "id": "sanchez-m4823",
@@ -3130,7 +3606,12 @@
      "titulo": "La UCO confirma que el PSOE realizó pagos de un total de 43.225 euros a Leire Díez (Público)",
      "url": "https://www.publico.es/politica/uco-confirma-psoe-realizo-pagos-total-43-225-euros-leire-diez.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m4823.png"
   },
   {
    "id": "sanchez-m4860",
@@ -3162,7 +3643,12 @@
      "titulo": "El Gobierno niega reuniones entre Sánchez y Leire como negó las tres de la directora de la Guardia Civil (El Debate)",
      "url": "https://www.eldebate.com/espana/20260609/gobierno-niega-reuniones-entre-sanchez-leire-como-nego-tres-directora-guardia-civil_426818.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m4860.png"
   },
   {
    "id": "sanchez-m4873",
@@ -3190,7 +3676,12 @@
      "titulo": "Sánchez reconoce ante Jordi Wild que contrató a los despachos que pagaron a Leire Díez (Vozpópuli)",
      "url": "https://www.vozpopuli.com/espana/politica/sanchez-reconoce-ante-jordi-wild-que-contrato-a-los-despachos-que-pagaron-a-leire-diez.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m4873.png"
   },
   {
    "id": "sanchez-m4891",
@@ -3222,7 +3713,12 @@
      "titulo": "Las notas de Leire Díez 'reunión con P. S.' y 'reunión con ZP' (El Español)",
      "url": "https://www.elespanol.com/espana/tribunales/20260606/notas-leire-reunion-zp-refuerzan-teoria-acceso-sanchez-zapatero/1003744275987_0.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m4891.png"
   },
   {
    "id": "sanchez-m4938",
@@ -3262,7 +3758,12 @@
      "titulo": "Iberia y Vueling logran créditos por 1.010 millones a la espera del ICO (elEconomista)",
      "url": "https://www.eleconomista.es/empresas-finanzas/noticias/10517586/05/20/Iberia-y-Vueling-logran-creditos-por-1010-millones-a-la-espera-del-ICO.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m4938.png"
   },
   {
    "id": "sanchez-m4939",
@@ -3294,7 +3795,12 @@
      "titulo": "La Sepi ha recuperado 1.425M de los rescates a empresas por la Covid (El Español)",
      "url": "https://www.elespanol.com/invertia/empresas/turismo/20251107/sepi-recuperado-rescates-empresas-covid-doble-previsto-devolucion-air-europa/1003744001957_0.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m4939.png"
   },
   {
    "id": "sanchez-m4953",
@@ -3326,7 +3832,12 @@
      "titulo": "La SEPI infló los empleos de Plus Ultra, su cuota de mercado y minimizó su crisis financiera para aprobar el rescate (El Español)",
      "url": "https://www.elespanol.com/invertia/empresas/20260527/sepi-inflo-empleos-plus-ultra-cuota-mercado-minimizo-crisis-financiera-aprobar-rescate/1003744258402_0.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m4953.png"
   },
   {
    "id": "sanchez-m4983",
@@ -3362,7 +3873,12 @@
      "titulo": "El juez pide a la UDEF que identifique al autor de la marca grabada en las joyas de Zapatero (El Español)",
      "url": "https://www.elespanol.com/espana/tribunales/20261103/juez-pide-udef-identifique-autor-marca-grabada-joyas-zapatero-intentar-revelar-origen/1003744444476_0.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m4983.png"
   },
   {
    "id": "sanchez-m5000",
@@ -3394,7 +3910,12 @@
      "titulo": "Sánchez asegura que Zapatero nunca le habló de Plus Ultra (El Debate)",
      "url": "https://www.eldebate.com/espana/20261110/sanchez-asegura-zapatero-nunca-le-hablo-plus-ultra-rescate-prestamo-esta-absolutamente-impoluto_479010.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m5000.png"
   },
   {
    "id": "sanchez-m5104",
@@ -3426,7 +3947,12 @@
      "titulo": "El Diario de Madrid: Ada Colau con Jordi Wild (13/11/2026)",
      "url": "https://www.eldiariodemadrid.es/articulo/politica/ada-colau-jordi-wild-entrevista-moralismo-psoe-vivienda/20261113115210146813.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m5104.png"
   },
   {
    "id": "sanchez-m5139",
@@ -3478,7 +4004,12 @@
      "titulo": "RealAdvisor: precio de la vivienda en Manresa",
      "url": "https://realadvisor.es/es/precios-viviendas/municipio-manresa"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m5139.png"
   },
   {
    "id": "sanchez-m5164",
@@ -3506,7 +4037,12 @@
      "titulo": "Moncloa.com: el precio de la vivienda en Málaga sube un 64% desde 2020 (Gesvalt, 3T 2026)",
      "url": "https://www.moncloa.com/2026/10/18/precio-vivienda-malaga-sube-64-3450871/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m5164.png"
   },
   {
    "id": "sanchez-m5188",
@@ -3542,7 +4078,12 @@
      "titulo": "Electomanía: viviendas de protección oficial terminadas por cada Gobierno desde 1981",
      "url": "https://electomania.es/viviendas-de-proteccion-oficial-terminadas-por-cada-gobierno-desde-1981/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": true,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m5188.png"
   },
   {
    "id": "sanchez-m5248",
@@ -3574,7 +4115,12 @@
      "titulo": "The Objective: Las mentiras de Pedro Sánchez sobre vivienda en La Revuelta",
      "url": "https://theobjective.com/economia/2026-10-23/mentiras-pedro-sanchez-vivienda-la-revuelta/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m5248.png"
   },
   {
    "id": "sanchez-m5281",
@@ -3606,7 +4152,12 @@
      "titulo": "idealista: Las viviendas iniciadas se disparan un 24% en 2024, con más de 136.000 unidades",
      "url": "https://www.idealista.com/news/node/846343"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m5281.png"
   },
   {
    "id": "sanchez-m5287",
@@ -3634,7 +4185,12 @@
      "titulo": "El Español: Sánchez ha prometido 34.000 millones y 276.000 viviendas protegidas en seis años (22/4/2026)",
      "url": "https://www.elespanol.com/invertia/observatorios/vivienda/20260422/sanchez-prometido-millones-viviendas-protegidas-anos-solo-entregado/1003744214034_0.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m5287.png"
   },
   {
    "id": "sanchez-m5290",
@@ -3666,7 +4222,12 @@
      "titulo": "elDiario.es: La gran asignatura pendiente de la vivienda",
      "url": "https://www.eldiario.es/1_cf21aa"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m5290.png"
   },
   {
    "id": "sanchez-m5295",
@@ -3694,7 +4255,12 @@
      "titulo": "MIVAU: El 20% de las viviendas que se empezaron a construir en el último año son protegidas (18/12/2025)",
      "url": "https://www.mivau.gob.es/el-ministerio/sala-de-prensa/noticias/jue-18122025-1246"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m5295.png"
   },
   {
    "id": "sanchez-m5329",
@@ -3713,7 +4279,12 @@
    "resumen": "Es una caracterización histórica interpretativa: hubo medidas liberalizadoras y también planes de protección, y no hay fuentes que midan un grado de «desregulación» en cuarenta años.",
    "explicacion": "Es una caracterización histórica general, más interpretativa que factual: hubo medidas liberalizadoras en la etapa citada y también políticas de protección y planes de vivienda, y no he reunido fuentes que permitan medir un grado de «desregulación» en cuarenta años. No la califico.",
    "confianza": "baja",
-   "fuentes": []
+   "fuentes": [],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m5329.png"
   },
   {
    "id": "sanchez-m5365",
@@ -3732,7 +4303,12 @@
    "resumen": "Faltan fuentes sobre las posiciones de Podemos y del partido de Colau y sobre la reforma del suelo propuesta; que esa ley frene la construcción es una valoración.",
    "explicacion": "No he encontrado fuentes que documenten las posiciones de Podemos o del partido de Colau sobre una reforma de la ley del suelo, ni el contenido concreto de la reforma que propone el Gobierno. Que la ley del suelo sea un cuello de botella para construir es una valoración, no un dato.",
    "confianza": "baja",
-   "fuentes": []
+   "fuentes": [],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m5365.png"
   },
   {
    "id": "sanchez-m5392",
@@ -3756,7 +4332,12 @@
      "titulo": "Newtral: El decreto de la renovación automática de los contratos de alquiler (12/11/2026)",
      "url": "https://www.newtral.es/decreto-renovacion-automatica-contratos-alquiler/20261112/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m5392.png"
   },
   {
    "id": "sanchez-m5428",
@@ -3800,7 +4381,12 @@
      "titulo": "Vozpópuli: Moncloa ha tramitado menos de 10.000 viviendas públicas desde julio de 2023 (20/5/2024)",
      "url": "https://www.vozpopuli.com/espana/184-000-viviendas-asequibles-prometidas-sanchez-barrena-proyecto-estancado-julio.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m5428.png"
   },
   {
    "id": "sanchez-m5454",
@@ -3840,7 +4426,12 @@
      "titulo": "idealista news: etiqueta Ministerio de Vivienda (Casa 47 arranca con 638 pisos; Campamento)",
      "url": "https://www.idealista.com/news/etiquetas/ministerio-de-vivienda"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m5454.png"
   },
   {
    "id": "sanchez-m5556",
@@ -3872,7 +4463,12 @@
      "titulo": "The Objective: Las mentiras de Pedro Sánchez sobre vivienda en La Revuelta (23/10/2026)",
      "url": "https://theobjective.com/economia/2026-10-23/mentiras-pedro-sanchez-vivienda-la-revuelta/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m5556.png"
   },
   {
    "id": "sanchez-m5595",
@@ -3896,7 +4492,12 @@
      "titulo": "Newtral: De la vivienda al empleo, los datos de Sánchez en La Revuelta (23/10/2026)",
      "url": "https://www.newtral.es/sanchez-la-revuelta-verificaciones/20261023/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m5595.png"
   },
   {
    "id": "sanchez-m5618",
@@ -3928,7 +4529,12 @@
      "titulo": "The Objective: Las mentiras de Pedro Sánchez sobre vivienda en La Revuelta",
      "url": "https://theobjective.com/economia/2026-10-23/mentiras-pedro-sanchez-vivienda-la-revuelta/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m5618.png"
   },
   {
    "id": "sanchez-m5751",
@@ -3947,7 +4553,12 @@
    "resumen": "Es una afirmación de Jordi Wild que Sánchez no responde y no se contrastó con la hemeroteca, así que falta verificar lo dicho sobre 2015-16.",
    "explicacion": "Contexto sin veredicto: es una afirmación de Jordi Wild y Sánchez no la responde (tampoco lo de los topes de alquiler). Whisper transcribe «Capó» por Campo. No he contrastado estas hemerotecas en esta sesión.",
    "confianza": "baja",
-   "fuentes": []
+   "fuentes": [],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m5751.png"
   },
   {
    "id": "sanchez-m5816",
@@ -3971,7 +4582,12 @@
      "titulo": "Maldita.es: Cuando Pedro Sánchez decía 'no' a la amnistía: «No entra en la Constitución» (actualizado 27-6-2025)",
      "url": "https://maldita.es/malditahemeroteca/20231031/pedro-sanchez-amnistia-constitucion/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m5816.png"
   },
   {
    "id": "sanchez-m5838",
@@ -4011,7 +4627,12 @@
      "titulo": "eldiario.es: El Gobierno renuncia definitivamente a tipificar como delito el referéndum ilegal",
      "url": "https://www.eldiario.es/politica/gobierno-renuncia-definitivamente-tipificar-referendum_1_1122474.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m5838.png"
   },
   {
    "id": "sanchez-m5890",
@@ -4043,7 +4664,12 @@
      "titulo": "Moncloa.com: El barómetro del CEO de 2026 revela que Illa pierde seis escaños y la mayoría independentista se rompe",
      "url": "https://www.moncloa.com/2026/07/12/barometro-ceo-2026-illa-escanos-independentismo-3397816/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m5890.png"
   },
   {
    "id": "sanchez-m5911",
@@ -4083,7 +4709,12 @@
      "titulo": "TelQuel: Sahara: double veto au Conseil de sécurité, le mandat de la MINURSO n'est pas renouvelé (30-10-2026, solo titular, no verificado)",
      "url": "https://telquel.ma/2026/10/30/sahara-la-russie-torpille-les-avancees-sur-le-sahara_2016033"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m5911.png"
   },
   {
    "id": "sanchez-m5923",
@@ -4115,7 +4746,12 @@
      "titulo": "El Independiente: El PSOE renuncia al derecho de autodeterminación del pueblo saharaui que defendió en las europeas de 2019 (1-6-2024)",
      "url": "https://www.elindependiente.com/espana/2024/06/01/el-psoe-renuncia-al-derecho-de-autodeterminacion-del-pueblo-saharaui-que-defendio-en-las-europeas-de-2019/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m5923.png"
   },
   {
    "id": "sanchez-m5951",
@@ -4139,7 +4775,12 @@
      "titulo": "Maldita.es: La relación de Bildu y el PSOE: cronología de acuerdos, apoyos de iniciativas y formación de gobiernos",
      "url": "https://maldita.es/malditateexplica/20240125/cronologia-relacion-bildu-psoe/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m5951.png"
   },
   {
    "id": "sanchez-m5970",
@@ -4163,7 +4804,12 @@
      "titulo": "Maldita.es: La relación de Bildu y el PSOE: cronología de acuerdos, apoyos de iniciativas y formación de gobiernos",
      "url": "https://maldita.es/malditateexplica/20240125/cronologia-relacion-bildu-psoe/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m5970.png"
   },
   {
    "id": "sanchez-m5986",
@@ -4187,7 +4833,12 @@
      "titulo": "Maldita.es: La relación de Bildu y el PSOE: cronología de acuerdos, apoyos de iniciativas y formación de gobiernos",
      "url": "https://maldita.es/malditateexplica/20240125/cronologia-relacion-bildu-psoe/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m5986.png"
   },
   {
    "id": "sanchez-m6003",
@@ -4215,7 +4866,21 @@
      "titulo": "La Moncloa: Entrevista al presidente del Gobierno en funciones en Al Rojo Vivo de La Sexta (18-7-2019)",
      "url": "https://www.lamoncloa.gob.es/presidente/intervenciones/Paginas/2019/prs18072019.aspx"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [
+    {
+     "medio": "Maldita.es",
+     "titulo": "Cuando Sánchez no quería una coalición con Podemos: \"sería un presidente de Gobierno que no dormiría por la noche\"",
+     "url": "https://maldita.es/malditahemeroteca/cuando-sanchez-no-queria-una-coalicion-con-podemos-seria-un-presidente-de-gobierno-que-no-dormiria-por-la-noche",
+     "fecha": "2019-12-30",
+     "veredicto_medio": null,
+     "alcance": "mismo_dato"
+    }
+   ],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m6003.png"
   },
   {
    "id": "sanchez-m6009",
@@ -4243,7 +4908,12 @@
      "titulo": "eldiario.es: Españoles, tenéis que volver a votar para que Sánchez pueda dormir por las noches (19-9-2019)",
      "url": "https://www.eldiario.es/politica/sanchez-entrevista_1_1351546.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m6009.png"
   },
   {
    "id": "sanchez-m6028",
@@ -4275,7 +4945,29 @@
      "titulo": "La Moncloa: Entrevista La Sexta, 19-9-2019 (transcripción)",
      "url": "https://www.lamoncloa.gob.es/presidente/intervenciones/Documents/2019/ENTREVISTA. LA SEXTA. PRESIDENTE. 190919.pdf"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [
+    {
+     "medio": "Maldita.es",
+     "titulo": "Qué dijo Pedro Sánchez en 2019 y qué no sobre “dormir tranquilo” con ministros de Podemos en el Gobierno",
+     "url": "https://maldita.es/malditobulo/20230620/pedro-sanchez-dormir-tranquilo-ministros-unidas-podemos-gobierno",
+     "fecha": "2023-06-20",
+     "veredicto_medio": null,
+     "alcance": "mismo_dato"
+    },
+    {
+     "medio": "Maldita.es",
+     "titulo": "Cuando Sánchez no quería una coalición con Podemos: \"sería un presidente de Gobierno que no dormiría por la noche\"",
+     "url": "https://maldita.es/malditahemeroteca/cuando-sanchez-no-queria-una-coalicion-con-podemos-seria-un-presidente-de-gobierno-que-no-dormiria-por-la-noche",
+     "fecha": "2019-12-30",
+     "veredicto_medio": null,
+     "alcance": "mismo_dato"
+    }
+   ],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m6028.png"
   },
   {
    "id": "sanchez-m6037",
@@ -4303,7 +4995,12 @@
      "titulo": "Wikipedia: Elecciones generales de España de abril de 2019",
      "url": "https://es.wikipedia.org/wiki/Elecciones_generales_de_España_de_abril_de_2019"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m6037.png"
   },
   {
    "id": "sanchez-m6054",
@@ -4335,7 +5032,12 @@
      "titulo": "Wikipedia: XV Legislatura de España (disolución 6-10-2026)",
      "url": "https://es.wikipedia.org/wiki/XV_Legislatura_de_España"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m6054.png"
   },
   {
    "id": "sanchez-m6081",
@@ -4359,7 +5061,12 @@
      "titulo": "Wikipedia: Elecciones generales de España de 2023",
      "url": "https://es.wikipedia.org/wiki/Elecciones_generales_de_España_de_2023"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m6081.png"
   },
   {
    "id": "sanchez-m6104",
@@ -4391,7 +5098,12 @@
      "titulo": "Noticias de Navarra: El PSOE recupera un escaño con la renuncia de Ábalos (28-1-2026)",
      "url": "https://www.noticiasdenavarra.com/politica/2026/01/28/psoe-recupera-escano-renuncia-abalos-10630708.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m6104.png"
   },
   {
    "id": "sanchez-m6204",
@@ -4423,7 +5135,12 @@
      "titulo": "Wikipedia: Elecciones municipales de España de 2023",
      "url": "https://es.wikipedia.org/wiki/Elecciones_municipales_de_España_de_2023"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m6204.png"
   },
   {
    "id": "sanchez-m6250",
@@ -4459,7 +5176,12 @@
      "titulo": "The Objective: Sánchez respalda al Gobierno ante el desafío soberanista (7-9-2017)",
      "url": "https://theobjective.com/sanchez-respalda-al-gobierno-ante-el-desafio-soberano/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m6250.png"
   },
   {
    "id": "sanchez-m6347",
@@ -4483,7 +5205,12 @@
      "titulo": "El Independiente: Acuerdo Rajoy-Sánchez: diálogo y trabajo codo con codo (13-10-2017)",
      "url": "https://www.elindependiente.com/politica/2017/10/13/acuerdo-rajoy-sanchez-dialogo-trabajo-codo-con-codo/amp/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m6347.png"
   },
   {
    "id": "sanchez-m6367",
@@ -4507,7 +5234,12 @@
      "titulo": "El Independiente: Acuerdo Rajoy-Sánchez: diálogo y trabajo codo con codo (13-10-2017)",
      "url": "https://www.elindependiente.com/politica/2017/10/13/acuerdo-rajoy-sanchez-dialogo-trabajo-codo-con-codo/amp/"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m6367.png"
   },
   {
    "id": "sanchez-m6381",
@@ -4531,7 +5263,12 @@
      "titulo": "Wikipedia: Ley de amnistía de España de 2024",
      "url": "https://es.wikipedia.org/wiki/Ley_de_amnistía_de_España_de_2024"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m6381.png"
   },
   {
    "id": "sanchez-m6392",
@@ -4555,7 +5292,12 @@
      "titulo": "Ara: Feijóo explora la moción de censura y los socios de Sánchez le dan la espalda (1-7-2025)",
      "url": "https://es.ara.cat/politica/feijoo-explora-mocion-censura-socios-sanchez-le-dan-espalda_1_5428803.amp.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m6392.png"
   },
   {
    "id": "sanchez-m6414",
@@ -4583,7 +5325,12 @@
      "titulo": "Maldita.es: Qué dijo Pedro Sánchez en 2019 y qué no sobre «dormir tranquilo»",
      "url": "https://maldita.es/malditobulo/20230620/pedro-sanchez-dormir-tranquilo-ministros-unidas-podemos-gobierno"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m6414.png"
   },
   {
    "id": "sanchez-m6437",
@@ -4611,7 +5358,12 @@
      "titulo": "Noticias de Navarra: Díaz firma con los sindicatos el incremento del SMI (16-2-2026)",
      "url": "https://www.noticiasdenavarra.com/economia/2026/02/16/diaz-firma-lunes-ccoo-ugt-smi-10705616.amp.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": true,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m6437.png"
   },
   {
    "id": "sanchez-m6440",
@@ -4630,7 +5382,12 @@
    "resumen": "Es una valoración genérica sin cifra ni compromiso concreto; faltan indicadores definidos (gasto, plazas, becas) para poder comprobarlo.",
    "explicacion": "Es una valoración genérica («apostar por») sin cifra ni compromiso concreto que contrastar; habría que definir indicadores (gasto, plazas, becas) y no los he evaluado aquí.",
    "confianza": "baja",
-   "fuentes": []
+   "fuentes": [],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m6440.png"
   },
   {
    "id": "sanchez-m6446",
@@ -4658,7 +5415,12 @@
      "titulo": "Deia: El BOE publica la subida de las pensiones para 2026 (24-12-2025)",
      "url": "https://www.deia.eus/economia/2025/12/24/boe-publica-subida-pensiones-2026-10511410.html"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m6446.png"
   },
   {
    "id": "sanchez-m6451",
@@ -4682,7 +5444,12 @@
      "titulo": "Wikipedia: 2025 NATO summit",
      "url": "https://en.wikipedia.org/wiki/2025_NATO_summit"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m6451.png"
   },
   {
    "id": "sanchez-m6456",
@@ -4706,7 +5473,12 @@
      "titulo": "Wikipedia: Spain–Israel relations",
      "url": "https://en.wikipedia.org/wiki/Spain–Israel_relations"
     }
-   ]
+   ],
+   "verificado": "2026-11-13",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m6456.png"
   }
  ],
  "excluidas": [

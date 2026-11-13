@@ -1,0 +1,902 @@
+{
+ "generado": "2026-11-13T22:48:13+01:00",
+ "aviso": "Verificación asistida por IA, sin revisión de un equipo de periodistas. «falso» no implica intención de mentir. Contrasta siempre con las fuentes enlazadas.",
+ "veredictos": {
+  "verdadero": "Los datos lo confirman.",
+  "mayormente_verdadero": "Cierto en lo esencial, con una imprecisión menor.",
+  "enganoso": "Se apoya en algo real pero omite contexto, mezcla periodos o lleva a una conclusión que no se sigue.",
+  "falso": "Los datos lo contradicen. No implica intención de mentir: incluye errores y lapsus.",
+  "no_verificable": "No se encontró prueba pública suficiente, o la búsqueda automática se quedó corta."
+ },
+ "metodo_url": "https://github.com/PabloPC05/verificacion-podcast/blob/main/METODO.md",
+ "repositorio": "https://github.com/PabloPC05/verificacion-podcast",
+ "documentacion": "https://verificacion-podcast.vercel.app/api",
+ "nota": "Temas que comparten varias entrevistas. Cada candidato trae los capítulos de su entrevista que entran en el tema y los id de sus afirmaciones.",
+ "temas": [
+  {
+   "slug": "vivienda",
+   "titulo": "Vivienda",
+   "descripcion": "Alquileres, vivienda pública, grandes propietarios y ocupación.",
+   "web_url": "https://verificacion-podcast.vercel.app/temas/vivienda",
+   "candidatos": [
+    {
+     "entrevista": "sanchez",
+     "invitado": "Pedro Sánchez",
+     "capitulos": [
+      9
+     ],
+     "total": 17,
+     "por_veredicto": {
+      "falso": 1,
+      "enganoso": 5,
+      "mayormente_verdadero": 6,
+      "verdadero": 1,
+      "no_verificable": 4
+     },
+     "afirmaciones": [
+      "sanchez-m5188",
+      "sanchez-m5104",
+      "sanchez-m5164",
+      "sanchez-m5290",
+      "sanchez-m5428",
+      "sanchez-m5618",
+      "sanchez-m5139",
+      "sanchez-m5248",
+      "sanchez-m5295",
+      "sanchez-m5454",
+      "sanchez-m5556",
+      "sanchez-m5595",
+      "sanchez-m5281",
+      "sanchez-m5287",
+      "sanchez-m5329",
+      "sanchez-m5365",
+      "sanchez-m5392"
+     ]
+    },
+    {
+     "entrevista": "colau",
+     "invitado": "Ada Colau",
+     "capitulos": [
+      12,
+      13
+     ],
+     "total": 19,
+     "por_veredicto": {
+      "falso": 1,
+      "enganoso": 3,
+      "mayormente_verdadero": 10,
+      "verdadero": 2,
+      "no_verificable": 3
+     },
+     "afirmaciones": [
+      "colau-m5982",
+      "colau-m6002",
+      "colau-m6016",
+      "colau-m6059",
+      "colau-m5964",
+      "colau-m6271",
+      "colau-m6326",
+      "colau-m6499",
+      "colau-m6568",
+      "colau-m6641",
+      "colau-m6652",
+      "colau-m6664",
+      "colau-m6711",
+      "colau-m6774",
+      "colau-m5889",
+      "colau-m6554",
+      "colau-m6167",
+      "colau-m6397",
+      "colau-m6758"
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "inmigracion",
+   "titulo": "Inmigración",
+   "descripcion": "Llegadas, regularización, integración, ayudas y demografía.",
+   "web_url": "https://verificacion-podcast.vercel.app/temas/inmigracion",
+   "candidatos": [
+    {
+     "entrevista": "sanchez",
+     "invitado": "Pedro Sánchez",
+     "capitulos": [
+      6
+     ],
+     "total": 21,
+     "por_veredicto": {
+      "falso": 2,
+      "enganoso": 1,
+      "mayormente_verdadero": 10,
+      "verdadero": 3,
+      "no_verificable": 5
+     },
+     "afirmaciones": [
+      "sanchez-m3267",
+      "sanchez-m3720",
+      "sanchez-m3620",
+      "sanchez-m3251",
+      "sanchez-m3257",
+      "sanchez-m3378",
+      "sanchez-m3418",
+      "sanchez-m3602",
+      "sanchez-m3856",
+      "sanchez-m3873",
+      "sanchez-m3873-2",
+      "sanchez-m3918",
+      "sanchez-m3929-2",
+      "sanchez-m3706",
+      "sanchez-m3929",
+      "sanchez-m3976",
+      "sanchez-m3613",
+      "sanchez-m3754",
+      "sanchez-m3844",
+      "sanchez-m3856-2",
+      "sanchez-m3976-2"
+     ]
+    },
+    {
+     "entrevista": "feijoo",
+     "invitado": "Alberto Núñez Feijóo",
+     "capitulos": [
+      7
+     ],
+     "total": 12,
+     "por_veredicto": {
+      "falso": 2,
+      "enganoso": 3,
+      "mayormente_verdadero": 3,
+      "verdadero": 3,
+      "no_verificable": 1
+     },
+     "afirmaciones": [
+      "feijoo-m3123-2",
+      "feijoo-m3377",
+      "feijoo-m3225",
+      "feijoo-m3334",
+      "feijoo-m3389",
+      "feijoo-m3123",
+      "feijoo-m3315",
+      "feijoo-m3345",
+      "feijoo-m3187",
+      "feijoo-m3321",
+      "feijoo-m3355",
+      "feijoo-m3220"
+     ]
+    },
+    {
+     "entrevista": "colau",
+     "invitado": "Ada Colau",
+     "capitulos": [
+      9,
+      10
+     ],
+     "total": 14,
+     "por_veredicto": {
+      "falso": 0,
+      "enganoso": 1,
+      "mayormente_verdadero": 6,
+      "verdadero": 6,
+      "no_verificable": 1
+     },
+     "afirmaciones": [
+      "colau-m3952",
+      "colau-m4457",
+      "colau-m4823",
+      "colau-m4896",
+      "colau-m4919",
+      "colau-m5132",
+      "colau-m5154",
+      "colau-m3922",
+      "colau-m3984",
+      "colau-m4118",
+      "colau-m4520",
+      "colau-m4558",
+      "colau-m4569",
+      "colau-m5034"
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "ceuta",
+   "titulo": "Ceuta y Marruecos",
+   "descripcion": "La entrada masiva de julio de 2026 y la gestión de la frontera.",
+   "web_url": "https://verificacion-podcast.vercel.app/temas/ceuta",
+   "candidatos": [
+    {
+     "entrevista": "sanchez",
+     "invitado": "Pedro Sánchez",
+     "capitulos": [
+      5
+     ],
+     "total": 29,
+     "por_veredicto": {
+      "falso": 1,
+      "enganoso": 6,
+      "mayormente_verdadero": 6,
+      "verdadero": 10,
+      "no_verificable": 6
+     },
+     "afirmaciones": [
+      "sanchez-m2012",
+      "sanchez-m2062",
+      "sanchez-m2119",
+      "sanchez-m2176",
+      "sanchez-m2353",
+      "sanchez-m2718",
+      "sanchez-m2908",
+      "sanchez-m1846-2",
+      "sanchez-m1911",
+      "sanchez-m1976",
+      "sanchez-m2270",
+      "sanchez-m2770",
+      "sanchez-m2847-2",
+      "sanchez-m1803",
+      "sanchez-m1932",
+      "sanchez-m2368",
+      "sanchez-m2490",
+      "sanchez-m2544",
+      "sanchez-m2714",
+      "sanchez-m2847",
+      "sanchez-m2847-3",
+      "sanchez-m2949",
+      "sanchez-m3074",
+      "sanchez-m1846",
+      "sanchez-m2161",
+      "sanchez-m2247",
+      "sanchez-m2592",
+      "sanchez-m2982",
+      "sanchez-m3019"
+     ]
+    },
+    {
+     "entrevista": "feijoo",
+     "invitado": "Alberto Núñez Feijóo",
+     "capitulos": [
+      6
+     ],
+     "total": 15,
+     "por_veredicto": {
+      "falso": 1,
+      "enganoso": 3,
+      "mayormente_verdadero": 7,
+      "verdadero": 4,
+      "no_verificable": 0
+     },
+     "afirmaciones": [
+      "feijoo-m2591",
+      "feijoo-m2654",
+      "feijoo-m2663-3",
+      "feijoo-m2726",
+      "feijoo-m2507",
+      "feijoo-m2532",
+      "feijoo-m2733",
+      "feijoo-m2772",
+      "feijoo-m2795",
+      "feijoo-m2813",
+      "feijoo-m2894",
+      "feijoo-m2526",
+      "feijoo-m2576",
+      "feijoo-m2663",
+      "feijoo-m2663-2"
+     ]
+    },
+    {
+     "entrevista": "colau",
+     "invitado": "Ada Colau",
+     "capitulos": [
+      8
+     ],
+     "total": 20,
+     "por_veredicto": {
+      "falso": 0,
+      "enganoso": 2,
+      "mayormente_verdadero": 10,
+      "verdadero": 8,
+      "no_verificable": 0
+     },
+     "afirmaciones": [
+      "colau-m3058",
+      "colau-m3136",
+      "colau-m2912",
+      "colau-m2995",
+      "colau-m3013",
+      "colau-m3077",
+      "colau-m3128",
+      "colau-m3346",
+      "colau-m3454",
+      "colau-m3462",
+      "colau-m3561",
+      "colau-m3615",
+      "colau-m2889",
+      "colau-m2941",
+      "colau-m3013-2",
+      "colau-m3013-3",
+      "colau-m3148",
+      "colau-m3185",
+      "colau-m3203",
+      "colau-m3619"
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "corrupcion",
+   "titulo": "Corrupción y causas judiciales",
+   "descripcion": "Ábalos, Koldo, Cerdán, Leire Díez, Gürtel, Marcial Dorado y la financiación de los partidos.",
+   "web_url": "https://verificacion-podcast.vercel.app/temas/corrupcion",
+   "candidatos": [
+    {
+     "entrevista": "sanchez",
+     "invitado": "Pedro Sánchez",
+     "capitulos": [
+      7,
+      8
+     ],
+     "total": 26,
+     "por_veredicto": {
+      "falso": 1,
+      "enganoso": 5,
+      "mayormente_verdadero": 9,
+      "verdadero": 3,
+      "no_verificable": 8
+     },
+     "afirmaciones": [
+      "sanchez-m4938",
+      "sanchez-m4262",
+      "sanchez-m4623",
+      "sanchez-m4742",
+      "sanchez-m4808",
+      "sanchez-m4823",
+      "sanchez-m4309",
+      "sanchez-m4331",
+      "sanchez-m4377",
+      "sanchez-m4485",
+      "sanchez-m4560",
+      "sanchez-m4660",
+      "sanchez-m4683",
+      "sanchez-m4891",
+      "sanchez-m4983",
+      "sanchez-m4080",
+      "sanchez-m4360",
+      "sanchez-m4939",
+      "sanchez-m4259",
+      "sanchez-m4277",
+      "sanchez-m4285",
+      "sanchez-m4374",
+      "sanchez-m4860",
+      "sanchez-m4873",
+      "sanchez-m4953",
+      "sanchez-m5000"
+     ]
+    },
+    {
+     "entrevista": "feijoo",
+     "invitado": "Alberto Núñez Feijóo",
+     "capitulos": [
+      8,
+      9
+     ],
+     "total": 45,
+     "por_veredicto": {
+      "falso": 1,
+      "enganoso": 9,
+      "mayormente_verdadero": 13,
+      "verdadero": 12,
+      "no_verificable": 10
+     },
+     "afirmaciones": [
+      "feijoo-m3945-2",
+      "feijoo-m3510",
+      "feijoo-m3540",
+      "feijoo-m3651",
+      "feijoo-m3674",
+      "feijoo-m3757",
+      "feijoo-m3769",
+      "feijoo-m3994",
+      "feijoo-m4053",
+      "feijoo-m4238",
+      "feijoo-m3549",
+      "feijoo-m3628",
+      "feijoo-m3695",
+      "feijoo-m3711",
+      "feijoo-m3869-2",
+      "feijoo-m3883",
+      "feijoo-m3916",
+      "feijoo-m3945",
+      "feijoo-m3973-2",
+      "feijoo-m3994-2",
+      "feijoo-m4044",
+      "feijoo-m4185",
+      "feijoo-m4232",
+      "feijoo-m3516",
+      "feijoo-m3665",
+      "feijoo-m3869",
+      "feijoo-m3896",
+      "feijoo-m3928",
+      "feijoo-m3973",
+      "feijoo-m4009",
+      "feijoo-m4066",
+      "feijoo-m4081",
+      "feijoo-m4298",
+      "feijoo-m4314",
+      "feijoo-m4322",
+      "feijoo-m3526",
+      "feijoo-m3578",
+      "feijoo-m3738",
+      "feijoo-m3920",
+      "feijoo-m3930",
+      "feijoo-m4174",
+      "feijoo-m4244",
+      "feijoo-m4258",
+      "feijoo-m4272",
+      "feijoo-m4302"
+     ]
+    },
+    {
+     "entrevista": "colau",
+     "invitado": "Ada Colau",
+     "capitulos": [
+      6
+     ],
+     "total": 16,
+     "por_veredicto": {
+      "falso": 0,
+      "enganoso": 2,
+      "mayormente_verdadero": 11,
+      "verdadero": 3,
+      "no_verificable": 0
+     },
+     "afirmaciones": [
+      "colau-m1483",
+      "colau-m1861",
+      "colau-m1397",
+      "colau-m1413",
+      "colau-m1444",
+      "colau-m1561",
+      "colau-m1700",
+      "colau-m1719",
+      "colau-m1877",
+      "colau-m1919",
+      "colau-m1933",
+      "colau-m2089",
+      "colau-m2110",
+      "colau-m1321",
+      "colau-m1646",
+      "colau-m1806"
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "trenes",
+   "titulo": "Trenes",
+   "descripcion": "Los accidentes de Adamuz y Urda, la inversión ferroviaria y la liberalización.",
+   "web_url": "https://verificacion-podcast.vercel.app/temas/trenes",
+   "candidatos": [
+    {
+     "entrevista": "sanchez",
+     "invitado": "Pedro Sánchez",
+     "capitulos": [
+      4
+     ],
+     "total": 19,
+     "por_veredicto": {
+      "falso": 0,
+      "enganoso": 2,
+      "mayormente_verdadero": 7,
+      "verdadero": 3,
+      "no_verificable": 7
+     },
+     "afirmaciones": [
+      "sanchez-m914",
+      "sanchez-m1034",
+      "sanchez-m1020",
+      "sanchez-m1087",
+      "sanchez-m1185",
+      "sanchez-m1217",
+      "sanchez-m1556",
+      "sanchez-m1570",
+      "sanchez-m1673",
+      "sanchez-m937",
+      "sanchez-m1079",
+      "sanchez-m1109",
+      "sanchez-m947",
+      "sanchez-m1087-2",
+      "sanchez-m1243",
+      "sanchez-m1279",
+      "sanchez-m1310",
+      "sanchez-m1358",
+      "sanchez-m1537"
+     ]
+    },
+    {
+     "entrevista": "colau",
+     "invitado": "Ada Colau",
+     "capitulos": [
+      7
+     ],
+     "total": 21,
+     "por_veredicto": {
+      "falso": 3,
+      "enganoso": 2,
+      "mayormente_verdadero": 8,
+      "verdadero": 8,
+      "no_verificable": 0
+     },
+     "afirmaciones": [
+      "colau-m2221",
+      "colau-m2564",
+      "colau-m2732",
+      "colau-m2499",
+      "colau-m2507",
+      "colau-m2236",
+      "colau-m2346",
+      "colau-m2359",
+      "colau-m2418",
+      "colau-m2507-2",
+      "colau-m2596",
+      "colau-m2799",
+      "colau-m2815",
+      "colau-m2245",
+      "colau-m2281",
+      "colau-m2341",
+      "colau-m2354",
+      "colau-m2408",
+      "colau-m2489",
+      "colau-m2688",
+      "colau-m2723"
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "pactos",
+   "titulo": "Pactos y alianzas",
+   "descripcion": "Coaliciones, amnistía, Bildu, Vox, Podemos y el Frente Amplio.",
+   "web_url": "https://verificacion-podcast.vercel.app/temas/pactos",
+   "candidatos": [
+    {
+     "entrevista": "sanchez",
+     "invitado": "Pedro Sánchez",
+     "capitulos": [
+      10
+     ],
+     "total": 28,
+     "por_veredicto": {
+      "falso": 2,
+      "enganoso": 3,
+      "mayormente_verdadero": 12,
+      "verdadero": 8,
+      "no_verificable": 3
+     },
+     "afirmaciones": [
+      "sanchez-m6003",
+      "sanchez-m6028",
+      "sanchez-m5838",
+      "sanchez-m5923",
+      "sanchez-m6054",
+      "sanchez-m5890",
+      "sanchez-m5911",
+      "sanchez-m5951",
+      "sanchez-m5970",
+      "sanchez-m6009",
+      "sanchez-m6037",
+      "sanchez-m6104",
+      "sanchez-m6204",
+      "sanchez-m6381",
+      "sanchez-m6392",
+      "sanchez-m6451",
+      "sanchez-m6456",
+      "sanchez-m5816",
+      "sanchez-m5986",
+      "sanchez-m6081",
+      "sanchez-m6347",
+      "sanchez-m6367",
+      "sanchez-m6414",
+      "sanchez-m6437",
+      "sanchez-m6446",
+      "sanchez-m5751",
+      "sanchez-m6250",
+      "sanchez-m6440"
+     ]
+    },
+    {
+     "entrevista": "feijoo",
+     "invitado": "Alberto Núñez Feijóo",
+     "capitulos": [
+      2
+     ],
+     "total": 18,
+     "por_veredicto": {
+      "falso": 0,
+      "enganoso": 4,
+      "mayormente_verdadero": 4,
+      "verdadero": 8,
+      "no_verificable": 2
+     },
+     "afirmaciones": [
+      "feijoo-m718",
+      "feijoo-m971",
+      "feijoo-m1053",
+      "feijoo-m1085",
+      "feijoo-m639",
+      "feijoo-m853",
+      "feijoo-m901",
+      "feijoo-m1137",
+      "feijoo-m357",
+      "feijoo-m434",
+      "feijoo-m554",
+      "feijoo-m567",
+      "feijoo-m743",
+      "feijoo-m966",
+      "feijoo-m1026",
+      "feijoo-m1095",
+      "feijoo-m675",
+      "feijoo-m1131"
+     ]
+    },
+    {
+     "entrevista": "colau",
+     "invitado": "Ada Colau",
+     "capitulos": [
+      5
+     ],
+     "total": 6,
+     "por_veredicto": {
+      "falso": 0,
+      "enganoso": 2,
+      "mayormente_verdadero": 1,
+      "verdadero": 2,
+      "no_verificable": 1
+     },
+     "afirmaciones": [
+      "colau-m1140",
+      "colau-m1224",
+      "colau-m1258",
+      "colau-m1073",
+      "colau-m1292",
+      "colau-m1286"
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "polarizacion",
+   "titulo": "Crispación y polarización",
+   "descripcion": "Insultos, redes sociales y el tono del debate político.",
+   "web_url": "https://verificacion-podcast.vercel.app/temas/polarizacion",
+   "candidatos": [
+    {
+     "entrevista": "sanchez",
+     "invitado": "Pedro Sánchez",
+     "capitulos": [
+      3
+     ],
+     "total": 7,
+     "por_veredicto": {
+      "falso": 0,
+      "enganoso": 1,
+      "mayormente_verdadero": 3,
+      "verdadero": 1,
+      "no_verificable": 2
+     },
+     "afirmaciones": [
+      "sanchez-m805",
+      "sanchez-m570",
+      "sanchez-m648",
+      "sanchez-m734",
+      "sanchez-m566",
+      "sanchez-m638",
+      "sanchez-m710"
+     ]
+    },
+    {
+     "entrevista": "feijoo",
+     "invitado": "Alberto Núñez Feijóo",
+     "capitulos": [
+      2
+     ],
+     "total": 18,
+     "por_veredicto": {
+      "falso": 0,
+      "enganoso": 4,
+      "mayormente_verdadero": 4,
+      "verdadero": 8,
+      "no_verificable": 2
+     },
+     "afirmaciones": [
+      "feijoo-m718",
+      "feijoo-m971",
+      "feijoo-m1053",
+      "feijoo-m1085",
+      "feijoo-m639",
+      "feijoo-m853",
+      "feijoo-m901",
+      "feijoo-m1137",
+      "feijoo-m357",
+      "feijoo-m434",
+      "feijoo-m554",
+      "feijoo-m567",
+      "feijoo-m743",
+      "feijoo-m966",
+      "feijoo-m1026",
+      "feijoo-m1095",
+      "feijoo-m675",
+      "feijoo-m1131"
+     ]
+    },
+    {
+     "entrevista": "colau",
+     "invitado": "Ada Colau",
+     "capitulos": [
+      3
+     ],
+     "total": 4,
+     "por_veredicto": {
+      "falso": 0,
+      "enganoso": 0,
+      "mayormente_verdadero": 2,
+      "verdadero": 0,
+      "no_verificable": 2
+     },
+     "afirmaciones": [
+      "colau-m355-2",
+      "colau-m355-3",
+      "colau-m355",
+      "colau-m437"
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "internacional",
+   "titulo": "Política internacional",
+   "descripcion": "Trump, Israel, Ucrania, la OTAN y el servicio militar.",
+   "web_url": "https://verificacion-podcast.vercel.app/temas/internacional",
+   "candidatos": [
+    {
+     "entrevista": "feijoo",
+     "invitado": "Alberto Núñez Feijóo",
+     "capitulos": [
+      11
+     ],
+     "total": 3,
+     "por_veredicto": {
+      "falso": 0,
+      "enganoso": 0,
+      "mayormente_verdadero": 0,
+      "verdadero": 3,
+      "no_verificable": 0
+     },
+     "afirmaciones": [
+      "feijoo-m4801",
+      "feijoo-m4840",
+      "feijoo-m4883"
+     ]
+    },
+    {
+     "entrevista": "colau",
+     "invitado": "Ada Colau",
+     "capitulos": [
+      14
+     ],
+     "total": 27,
+     "por_veredicto": {
+      "falso": 1,
+      "enganoso": 4,
+      "mayormente_verdadero": 17,
+      "verdadero": 1,
+      "no_verificable": 4
+     },
+     "afirmaciones": [
+      "colau-m7323",
+      "colau-m7086",
+      "colau-m7382",
+      "colau-m7382-2",
+      "colau-m7499",
+      "colau-m6843",
+      "colau-m6867",
+      "colau-m6875",
+      "colau-m6905",
+      "colau-m6988",
+      "colau-m7027",
+      "colau-m7052",
+      "colau-m7070",
+      "colau-m7138",
+      "colau-m7166",
+      "colau-m7203",
+      "colau-m7364",
+      "colau-m7391",
+      "colau-m7459",
+      "colau-m7509",
+      "colau-m7593",
+      "colau-m7737",
+      "colau-m7486-2",
+      "colau-m7364-2",
+      "colau-m7457",
+      "colau-m7466",
+      "colau-m7486"
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "rivales",
+   "titulo": "Los rivales",
+   "descripcion": "Lo que cada candidato dice de los demás.",
+   "web_url": "https://verificacion-podcast.vercel.app/temas/rivales",
+   "candidatos": [
+    {
+     "entrevista": "feijoo",
+     "invitado": "Alberto Núñez Feijóo",
+     "capitulos": [
+      12
+     ],
+     "total": 6,
+     "por_veredicto": {
+      "falso": 0,
+      "enganoso": 0,
+      "mayormente_verdadero": 3,
+      "verdadero": 2,
+      "no_verificable": 1
+     },
+     "afirmaciones": [
+      "feijoo-m4968",
+      "feijoo-m5012",
+      "feijoo-m5044",
+      "feijoo-m5044-2",
+      "feijoo-m5259",
+      "feijoo-m5082"
+     ]
+    },
+    {
+     "entrevista": "colau",
+     "invitado": "Ada Colau",
+     "capitulos": [
+      14
+     ],
+     "total": 27,
+     "por_veredicto": {
+      "falso": 1,
+      "enganoso": 4,
+      "mayormente_verdadero": 17,
+      "verdadero": 1,
+      "no_verificable": 4
+     },
+     "afirmaciones": [
+      "colau-m7323",
+      "colau-m7086",
+      "colau-m7382",
+      "colau-m7382-2",
+      "colau-m7499",
+      "colau-m6843",
+      "colau-m6867",
+      "colau-m6875",
+      "colau-m6905",
+      "colau-m6988",
+      "colau-m7027",
+      "colau-m7052",
+      "colau-m7070",
+      "colau-m7138",
+      "colau-m7166",
+      "colau-m7203",
+      "colau-m7364",
+      "colau-m7391",
+      "colau-m7459",
+      "colau-m7509",
+      "colau-m7593",
+      "colau-m7737",
+      "colau-m7486-2",
+      "colau-m7364-2",
+      "colau-m7457",
+      "colau-m7466",
+      "colau-m7486"
+     ]
+    }
+   ]
+  }
+ ]
+}
