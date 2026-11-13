@@ -25,37 +25,50 @@ h2 { font:700 23px/1.2 var(--serif); margin:44px 0 14px; padding-top:12px; borde
 .chip:hover { background:var(--tono); color:#fff; }
 @media (max-width:600px) { .par { grid-template-columns:1fr; } .par p { font-size:16.5px; } }
 
-html { scroll-behavior:smooth; scroll-padding-top:150px; }
+html { scroll-behavior:smooth; scroll-padding-top:110px; }
 .menu { position:sticky; top:0; z-index:10; background:#fff; border-bottom:2px solid #000; }
-.menu .ancho { padding-top:8px; padding-bottom:8px; }
-.m1, .menu .fila { display:flex; align-items:center; gap:8px; overflow-x:auto; scrollbar-width:none; white-space:nowrap; }
-.m1::-webkit-scrollbar, .menu .fila::-webkit-scrollbar { display:none; }
-.m1 { gap:22px; font-size:14px; padding-bottom:2px; }
-.m1 nav { display:flex; align-items:center; gap:14px; }
-.m1 a { color:#000; text-decoration:none; font-weight:600; padding:3px 0; border-bottom:2px solid transparent; }
-.m1 a:hover, .m1 a[aria-current] { border-bottom-color:#000; }
+.menu .ancho { padding-top:8px; padding-bottom:8px; position:relative; }
+.m1 { display:flex; flex-wrap:wrap; align-items:center; gap:4px 22px; font-size:14px; }
+.m1 nav { display:flex; flex-wrap:wrap; align-items:center; gap:4px 14px; }
+.m1 a, .desp summary { color:#000; text-decoration:none; font-weight:600; padding:3px 0; border-bottom:2px solid transparent; }
+.m1 > a:hover, .m1 nav a:hover, .m1 a[aria-current], .desp[open] summary, .desp summary:hover { border-bottom-color:#000; }
 .m1 .sello { font:700 16px/1.2 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; }
 .m1 .off { color:#999; } .m1 .dcha { margin-left:auto; }
 .rot { font-size:10.5px; font-weight:700; text-transform:uppercase; letter-spacing:.09em; color:#666; flex:none; }
-.menu .fila { margin-top:7px; }
-.menu .fila button, .menu .fila a { flex:none; font:inherit; font-size:12.5px; font-weight:600; color:#000; background:#fff;
-  border:1.5px solid #000; border-radius:999px; padding:3px 11px; cursor:pointer; text-decoration:none;
-  display:inline-flex; align-items:center; gap:6px; }
+.desp { position:relative; margin:0; padding:0; border:0; font-size:inherit; }
+.desp summary { list-style:none; cursor:pointer; user-select:none; }
+.desp summary::-webkit-details-marker { display:none; }
+.desp summary::after { content:" ▾"; }
+.desp[open] summary::after { content:" ▴"; }
+.desp .lista { position:absolute; top:calc(100% + 9px); left:0; z-index:20; background:#fff; border:2px solid #000; box-shadow:5px 5px 0 #000;
+  width:max-content; min-width:240px; max-width:min(92vw,480px); max-height:70vh; overflow-y:auto; padding:6px 0; }
+.desp .lista a, .desp .lista .off { display:flex; justify-content:space-between; align-items:baseline; gap:16px; padding:8px 16px;
+  font-size:14.5px; font-weight:500; border:0; line-height:1.35; }
+.desp .lista a:hover { background:#000; color:#fff; }
+.desp .lista b { color:#c0271e; font-weight:700; font-variant-numeric:tabular-nums; }
+.desp .lista a:hover b { color:#fff; }
+.desp .lista a.off { opacity:.4; }
+.menu .fila { display:flex; flex-wrap:wrap; align-items:center; gap:6px 8px; margin-top:8px; }
+.menu .fila button { font:inherit; font-size:12.5px; font-weight:600; color:#000; background:#fff; border:1.5px solid #000;
+  border-radius:999px; padding:3px 11px; cursor:pointer; display:inline-flex; align-items:center; gap:6px; }
 .menu .fila b { font-weight:500; opacity:.7; font-variant-numeric:tabular-nums; }
 .menu .fila button[data-v] { color:var(--tono); border-color:var(--tono); }
 .menu .fila button[data-v] i { width:8px; height:8px; border-radius:50%; background:currentColor; }
 .menu .fila button[aria-pressed=true] { background:#000; color:#fff; }
 .menu .fila button[data-v][aria-pressed=true] { background:var(--tono); color:#fff; }
-#temas a { border-color:#ccc; font-weight:500; }
-#temas a:hover { border-color:#000; }
-#temas a b { color:#c0271e; opacity:1; font-weight:700; }
-#temas a.off { opacity:.4; }
-@media (max-width:860px) { html { scroll-padding-top:140px; } .m1 { gap:16px; font-size:13px; } }
+@media (max-width:700px) { html { scroll-padding-top:170px; } .m1 { gap:4px 16px; font-size:13.5px; } .m1 .dcha { margin-left:0; }
+  .desp { position:static; } .desp .lista { left:16px; right:16px; top:auto; margin-top:9px; width:auto; max-width:none; }
+  .menu .fila .rot { display:none; } .menu .fila button { font-size:12px; padding:2px 9px; } }
 
 </style>
 </head>
 <body>
-<header class="menu"><div class="ancho"><div class="m1"><a class="sello" href="/" title="Todas las entrevistas">Verificación</a><nav aria-label="Entrevistas"><span class="rot">Entrevistas</span><a href="/sanchez" aria-current="page">Pedro Sánchez</a><span class="off" title="Verificación en curso">Alberto Núñez Feijóo</span><span class="off" title="Verificación en curso">Ada Colau</span></nav><nav aria-label="Vistas"><span class="rot">Ver</span><a href="/sanchez">Línea temporal</a><a href="/sanchez/transcripcion" aria-current="page">Transcripción completa</a></nav><a class="dcha" href="https://github.com/PabloPC05/verificacion-podcast" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div><nav class="fila" id="temas" aria-label="Temas"><span class="rot">Temas</span><a href="#tema-1">Formato de las entrevistas electorales y presentación de Pedro Sánchez</a><a href="#tema-2">Por qué Pedro Sánchez quiere seguir al frente del Gobierno</a><a href="#tema-3">Insultos, polarización y crispación en la política española</a><a href="#tema-4">Accidentes ferroviarios y responsabilidades del Gobierno</a><a href="#tema-5">Crisis de Ceuta, Marruecos y gestión de la frontera</a><a href="#tema-6">Inmigración, integración y futuro demográfico de España</a><a href="#tema-7">Ábalos, Koldo, Cerdán y los casos que afectan al PSOE</a><a href="#tema-8">Leire Díez, Zapatero y las investigaciones abiertas</a><a href="#tema-9">Vivienda, alquileres y acceso de los jóvenes a una casa</a><a href="#tema-10">Amnistía, Bildu, Pablo Iglesias y los cambios de opinión de Sánchez</a><a href="#tema-11">Pedro Sánchez define a Colau, Feijóo y Abascal</a><a href="#tema-12">Alegato final de Pedro Sánchez y mensaje a los votantes</a></nav></div></header>
+<header class="menu"><div class="ancho"><div class="m1"><a class="sello" href="/" title="Todas las entrevistas">Verificación</a><nav aria-label="Entrevistas"><span class="rot">Entrevistas</span><a href="/sanchez" aria-current="page">Pedro Sánchez</a><span class="off" title="Verificación en curso">Alberto Núñez Feijóo</span><span class="off" title="Verificación en curso">Ada Colau</span></nav><details class="desp"><summary>Temas</summary><div class="lista" id="temas"><a href="#tema-1"><span>Formato de las entrevistas electorales y presentación de Pedro Sánchez</span></a><a href="#tema-2"><span>Por qué Pedro Sánchez quiere seguir al frente del Gobierno</span></a><a href="#tema-3"><span>Insultos, polarización y crispación en la política española</span></a><a href="#tema-4"><span>Accidentes ferroviarios y responsabilidades del Gobierno</span></a><a href="#tema-5"><span>Crisis de Ceuta, Marruecos y gestión de la frontera</span></a><a href="#tema-6"><span>Inmigración, integración y futuro demográfico de España</span></a><a href="#tema-7"><span>Ábalos, Koldo, Cerdán y los casos que afectan al PSOE</span></a><a href="#tema-8"><span>Leire Díez, Zapatero y las investigaciones abiertas</span></a><a href="#tema-9"><span>Vivienda, alquileres y acceso de los jóvenes a una casa</span></a><a href="#tema-10"><span>Amnistía, Bildu, Pablo Iglesias y los cambios de opinión de Sánchez</span></a><a href="#tema-11"><span>Pedro Sánchez define a Colau, Feijóo y Abascal</span></a><a href="#tema-12"><span>Alegato final de Pedro Sánchez y mensaje a los votantes</span></a></div></details><details class="desp"><summary>Transcripciones</summary><div class="lista"><a href="/sanchez/transcripcion">Pedro Sánchez</a><span class="off">Alberto Núñez Feijóo · en curso</span><span class="off">Ada Colau · en curso</span></div></details><a class="dcha" href="https://github.com/PabloPC05/verificacion-podcast" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></div></header><script>
+document.addEventListener("click", ev => document.querySelectorAll("details.desp[open]").forEach(d => {
+  if (!d.contains(ev.target) || ev.target.closest(".lista a")) d.open = false;
+}));
+document.addEventListener("keydown", ev => { if (ev.key === "Escape") document.querySelectorAll("details.desp[open]").forEach(d => d.open = false); });
+</script>
 <main class="ancho">
 <h1>Transcripción completa: Pedro Sánchez con Jordi Wild</h1>
 <p class="entrada">The Wild Project #393 · 13 nov 2026 · 1 h 52 min. Transcripción automática (Whisper): no distingue quién habla y puede tener errores en nombres y cifras. Cada minuto abre el <a href="https://www.youtube.com/watch?v=mStOFBvToUI" target="_blank" rel="noopener noreferrer">vídeo</a> en ese punto; las etiquetas de color llevan a la afirmación verificada en la <a href="/sanchez">línea temporal</a>.</p>

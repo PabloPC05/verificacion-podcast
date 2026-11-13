@@ -132,21 +132,29 @@ PLURAL = {"falso": "Falsas", "enganoso": "Engañosas", "mayormente_verdadero": "
           "verdadero": "Verdaderas", "no_verificable": "No verificables"}
 
 
-def menu(metas, actual=None, vista="", filas=""):
-    """Menú superior fijo: entrevistas, transcripción, y (en la línea temporal) filtros y temas."""
+def menu(metas, actual=None, temas="", filas=""):
+    """Menú superior fijo: entrevistas, desplegables de temas y transcripciones, y filtros."""
     enlaces = "".join(
         (f'<a href="/{e(m["slug"])}"' + (' aria-current="page"' if m["slug"] == actual else "") + f'>{e(m["invitado"])}</a>')
         if m.get("publicar") else f'<span class="off" title="Verificación en curso">{e(m["invitado"])}</span>'
         for m in metas)
-    vistas = ""
-    if actual:
-        vistas = (f'<a href="/{actual}"' + (' aria-current="page"' if vista == "linea" else "") + '>Línea temporal</a>'
-                  f'<a href="/{actual}/transcripcion"' + (' aria-current="page"' if vista == "texto" else "")
-                  + '>Transcripción completa</a>')
+    textos = "".join(
+        f'<a href="/{e(m["slug"])}/transcripcion">{e(m["invitado"])}</a>' if m.get("publicar")
+        else f'<span class="off">{e(m["invitado"])} · en curso</span>' for m in metas)
     return (f'<header class="menu"><div class="ancho"><div class="m1"><a class="sello" href="/" title="Todas las entrevistas">Verificación</a>'
             f'<nav aria-label="Entrevistas"><span class="rot">Entrevistas</span>{enlaces}</nav>'
-            + (f'<nav aria-label="Vistas"><span class="rot">Ver</span>{vistas}</nav>' if vistas else "")
-            + f'<a class="dcha" href="{REPO}" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div>{filas}</div></header>')
+            + (f'<details class="desp"><summary>Temas</summary><div class="lista" id="temas">{temas}</div></details>' if temas else "")
+            + f'<details class="desp"><summary>Transcripciones</summary><div class="lista">{textos}</div></details>'
+            f'<a class="dcha" href="{REPO}" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div>{filas}</div></header>'
+            + JS_MENU)
+
+
+JS_MENU = """<script>
+document.addEventListener("click", ev => document.querySelectorAll("details.desp[open]").forEach(d => {
+  if (!d.contains(ev.target) || ev.target.closest(".lista a")) d.open = false;
+}));
+document.addEventListener("keydown", ev => { if (ev.key === "Escape") document.querySelectorAll("details.desp[open]").forEach(d => d.open = false); });
+</script>"""
 
 
 def pagina_entrevista(carpeta, meta, metas):
@@ -173,11 +181,10 @@ def pagina_entrevista(carpeta, meta, metas):
                  f'<button data-todas aria-pressed="false">Todas <b>{len(todas)}</b></button>'
                  + "".join(f'<button data-v="{k}" style="--tono:{TONO[k]}" aria-pressed="false"><i></i>{PLURAL[k]} <b>{total[k]}</b></button>'
                            for k in ORDEN) + "</div>")
-    f_temas = ('<nav class="fila" id="temas" aria-label="Temas"><span class="rot">Temas</span>'
-               + "".join(f'<a href="#tema-{t["n"]}">{e(t["titulo"])}' + (f' <b>{t["malas"]}</b>' if t["malas"] else "") + "</a>"
-                         for t in temas if t["total"]) + "</nav>")
+    f_temas = "".join(f'<a href="#tema-{t["n"]}"><span>{e(t["titulo"])}</span>' + (f'<b>{t["malas"]}</b>' if t["malas"] else "") + "</a>"
+                      for t in temas if t["total"])
     pagina = (PLANTILLA
-              .replace("@@MENU@@", menu(metas, meta["slug"], "linea", f_filtros + f_temas)).replace("@@CSS_MENU@@", CSS_MENU)
+              .replace("@@MENU@@", menu(metas, meta["slug"], f_temas, f_filtros)).replace("@@CSS_MENU@@", CSS_MENU)
               .replace("@@SUMA@@", str(len(todas))).replace("@@MALAS@@", str(malas))
               .replace("@@FALSAS@@", str(total["falso"])).replace("@@ENGANOSAS@@", str(total["enganoso"]))
               .replace("@@CASI@@", str(total["mayormente_verdadero"])).replace("@@VERDADERAS@@", str(total["verdadero"]))
@@ -207,7 +214,7 @@ def pagina_transcripcion(carpeta, meta, metas, todas, capitulos):
         while pendientes and int(pendientes[0][1]["start_time"]) < fin:
             n, c = pendientes.pop(0)
             cuerpo.append(f'<h2 id="tema-{n}">{e(c["title"])}</h2>')
-            indice.append(f'<a href="#tema-{n}">{e(c["title"])}</a>')
+            indice.append(f'<a href="#tema-{n}"><span>{e(c["title"])}</span></a>')
         marcas = "".join(
             f'<a class="chip" style="--tono:{TONO[a["veredicto"]]}" href="/{meta["slug"]}#m{a["_t"]}" '
             f'title="{e(a.get("afirmacion", ""), quote=True)}">{hms(a["_t"])} · {NOMBRE[a["veredicto"]]}</a>'
@@ -216,9 +223,8 @@ def pagina_transcripcion(carpeta, meta, metas, todas, capitulos):
             f'<div class="par" id="t{t}"><a class="minuto" href="https://www.youtube.com/watch?v={meta["video"]}&t={t}s" '
             f'target="_blank" rel="noopener noreferrer">{hms(t)}</a><div><p>{e(texto)}</p>'
             + (f'<p class="chips">{marcas}</p>' if marcas else "") + "</div></div>")
-    f_temas = '<nav class="fila" id="temas" aria-label="Temas"><span class="rot">Temas</span>' + "".join(indice) + "</nav>"
     pagina = (TRANSCRIPCION
-              .replace("@@MENU@@", menu(metas, meta["slug"], "texto", f_temas)).replace("@@CSS_MENU@@", CSS_MENU)
+              .replace("@@MENU@@", menu(metas, meta["slug"], "".join(indice))).replace("@@CSS_MENU@@", CSS_MENU)
               .replace("@@CUERPO@@", "".join(cuerpo)).replace("@@INVITADO@@", e(meta["invitado"]))
               .replace("@@PROGRAMA@@", e(meta["programa"])).replace("@@FECHA_VIDEO@@", e(meta["fecha"]))
               .replace("@@DURACION@@", e(meta["duracion"])).replace("@@VIDEO@@", meta["video"])
@@ -262,32 +268,40 @@ def main():
 
 
 CSS_MENU = """
-html { scroll-behavior:smooth; scroll-padding-top:150px; }
+html { scroll-behavior:smooth; scroll-padding-top:110px; }
 .menu { position:sticky; top:0; z-index:10; background:#fff; border-bottom:2px solid #000; }
-.menu .ancho { padding-top:8px; padding-bottom:8px; }
-.m1, .menu .fila { display:flex; align-items:center; gap:8px; overflow-x:auto; scrollbar-width:none; white-space:nowrap; }
-.m1::-webkit-scrollbar, .menu .fila::-webkit-scrollbar { display:none; }
-.m1 { gap:22px; font-size:14px; padding-bottom:2px; }
-.m1 nav { display:flex; align-items:center; gap:14px; }
-.m1 a { color:#000; text-decoration:none; font-weight:600; padding:3px 0; border-bottom:2px solid transparent; }
-.m1 a:hover, .m1 a[aria-current] { border-bottom-color:#000; }
+.menu .ancho { padding-top:8px; padding-bottom:8px; position:relative; }
+.m1 { display:flex; flex-wrap:wrap; align-items:center; gap:4px 22px; font-size:14px; }
+.m1 nav { display:flex; flex-wrap:wrap; align-items:center; gap:4px 14px; }
+.m1 a, .desp summary { color:#000; text-decoration:none; font-weight:600; padding:3px 0; border-bottom:2px solid transparent; }
+.m1 > a:hover, .m1 nav a:hover, .m1 a[aria-current], .desp[open] summary, .desp summary:hover { border-bottom-color:#000; }
 .m1 .sello { font:700 16px/1.2 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; }
 .m1 .off { color:#999; } .m1 .dcha { margin-left:auto; }
 .rot { font-size:10.5px; font-weight:700; text-transform:uppercase; letter-spacing:.09em; color:#666; flex:none; }
-.menu .fila { margin-top:7px; }
-.menu .fila button, .menu .fila a { flex:none; font:inherit; font-size:12.5px; font-weight:600; color:#000; background:#fff;
-  border:1.5px solid #000; border-radius:999px; padding:3px 11px; cursor:pointer; text-decoration:none;
-  display:inline-flex; align-items:center; gap:6px; }
+.desp { position:relative; margin:0; padding:0; border:0; font-size:inherit; }
+.desp summary { list-style:none; cursor:pointer; user-select:none; }
+.desp summary::-webkit-details-marker { display:none; }
+.desp summary::after { content:" ▾"; }
+.desp[open] summary::after { content:" ▴"; }
+.desp .lista { position:absolute; top:calc(100% + 9px); left:0; z-index:20; background:#fff; border:2px solid #000; box-shadow:5px 5px 0 #000;
+  width:max-content; min-width:240px; max-width:min(92vw,480px); max-height:70vh; overflow-y:auto; padding:6px 0; }
+.desp .lista a, .desp .lista .off { display:flex; justify-content:space-between; align-items:baseline; gap:16px; padding:8px 16px;
+  font-size:14.5px; font-weight:500; border:0; line-height:1.35; }
+.desp .lista a:hover { background:#000; color:#fff; }
+.desp .lista b { color:#c0271e; font-weight:700; font-variant-numeric:tabular-nums; }
+.desp .lista a:hover b { color:#fff; }
+.desp .lista a.off { opacity:.4; }
+.menu .fila { display:flex; flex-wrap:wrap; align-items:center; gap:6px 8px; margin-top:8px; }
+.menu .fila button { font:inherit; font-size:12.5px; font-weight:600; color:#000; background:#fff; border:1.5px solid #000;
+  border-radius:999px; padding:3px 11px; cursor:pointer; display:inline-flex; align-items:center; gap:6px; }
 .menu .fila b { font-weight:500; opacity:.7; font-variant-numeric:tabular-nums; }
 .menu .fila button[data-v] { color:var(--tono); border-color:var(--tono); }
 .menu .fila button[data-v] i { width:8px; height:8px; border-radius:50%; background:currentColor; }
 .menu .fila button[aria-pressed=true] { background:#000; color:#fff; }
 .menu .fila button[data-v][aria-pressed=true] { background:var(--tono); color:#fff; }
-#temas a { border-color:#ccc; font-weight:500; }
-#temas a:hover { border-color:#000; }
-#temas a b { color:#c0271e; opacity:1; font-weight:700; }
-#temas a.off { opacity:.4; }
-@media (max-width:860px) { html { scroll-padding-top:140px; } .m1 { gap:16px; font-size:13px; } }
+@media (max-width:700px) { html { scroll-padding-top:170px; } .m1 { gap:4px 16px; font-size:13.5px; } .m1 .dcha { margin-left:0; }
+  .desp { position:static; } .desp .lista { left:16px; right:16px; top:auto; margin-top:9px; width:auto; max-width:none; }
+  .menu .fila .rot { display:none; } .menu .fila button { font-size:12px; padding:2px 9px; } }
 """
 
 PORTADA = """<!doctype html>
