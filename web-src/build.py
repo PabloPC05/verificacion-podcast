@@ -222,7 +222,7 @@ def pagina_entrevista(m, entrevistas):
             f'<div><h2>{e(t["titulo"])}</h2><p>{nota} · {t["total"]} afirmaciones comprobadas</p></div></li>')
         filas += [panel(a) for a in t["suyas"]]
     pagina = rellenar(
-        PLANTILLA, MENU=menu(entrevistas, m["slug"]), CSS_MENU=CSS_MENU, FILTROS=filtros(m), SUMA=m["suma"], MALAS=m["malas"],
+        PLANTILLA, MENU=menu(entrevistas, m["slug"]), CSS_MENU=CSS_MENU, LEYENDA=LEYENDA, FILTROS=filtros(m), SUMA=m["suma"], MALAS=m["malas"],
         FALSAS=m["total"]["falso"], ENGANOSAS=m["total"]["enganoso"], CASI=m["total"]["mayormente_verdadero"],
         VERDADERAS=m["total"]["verdadero"], NV=m["total"]["no_verificable"], FILAS="".join(filas),
         INVITADO=e(m["invitado"]), PROGRAMA=e(m["programa"]), FECHA_VIDEO=e(m["fecha"]), DURACION=e(m["duracion"]),
@@ -256,7 +256,7 @@ def pagina_transcripcion(m, entrevistas):
             + (f'<p class="chips">{marcas}</p>' if marcas else "") + "</div></div>")
     solo = '<button data-solo aria-pressed="false">Solo párrafos con afirmaciones</button>'
     pagina = rellenar(
-        TRANSCRIPCION, MENU=menu(entrevistas, m["slug"]), CSS_MENU=CSS_MENU, FILTROS=filtros(m, solo), CUERPO="".join(cuerpo),
+        TRANSCRIPCION, MENU=menu(entrevistas, m["slug"]), CSS_MENU=CSS_MENU, LEYENDA=LEYENDA, FILTROS=filtros(m, solo), CUERPO="".join(cuerpo),
         INVITADO=e(m["invitado"]), PROGRAMA=e(m["programa"]), FECHA_VIDEO=e(m["fecha"]), DURACION=e(m["duracion"]),
         VIDEO=m["video"], SLUG=m["slug"], REPO=REPO)
     destino = SALIDA / m["slug"] / "transcripcion"
@@ -396,13 +396,30 @@ def main():
         f'<article class="entrevista off"><p class="prog">{e(m.get("programa", ""))}</p><h2>{e(m["invitado"])}</h2>'
         f'<p class="des">Verificación en curso.</p></article>' for m in entrevistas if not m.get("publicar"))
     (SALIDA / "index.html").write_text(rellenar(
-        PORTADA, MENU=menu(entrevistas), CSS_MENU=CSS_MENU, TARJETAS=tarjetas, REPO=REPO,
+        PORTADA, MENU=menu(entrevistas), CSS_MENU=CSS_MENU, LEYENDA=LEYENDA, TARJETAS=tarjetas, REPO=REPO,
         FECHA=dt.datetime.now().strftime("%d/%m/%Y")), encoding="utf-8")
     (SALIDA / "api").mkdir(exist_ok=True)
     (SALIDA / "api" / "index.html").write_text(rellenar(
         PAGINA_API, MENU=menu(entrevistas), CSS_MENU=CSS_MENU, BASE=BASE, REPO=REPO, EJ=ejemplo,
         SLUGS=", ".join(f"<code>{x}</code>" for x in slugs)), encoding="utf-8")
 
+
+LEYENDA = """<section class="leyenda-f" aria-label="Leyenda de veredictos">
+<h2>Leyenda</h2>
+<p class="ley-intro">El color del minuto, del punto de la línea y de la etiqueta indica el veredicto de cada afirmación.</p>
+<dl>
+<div style="--tono:#c0271e"><dt>Falso</dt><dd><b>Los datos lo contradicen.</b> Incluye errores y lapsus: no implica intención de mentir.</dd></div>
+<div style="--tono:#c26a00"><dt>Engañoso</dt><dd><b>Parte de un dato real, pero confunde.</b> Omite contexto, mezcla periodos o lleva a una conclusión que no se sigue.</dd></div>
+<div style="--tono:#5a7d10"><dt>Casi cierto</dt><dd><b>Cierto en lo esencial.</b> Tiene una imprecisión menor, como un redondeo o una fecha aproximada.</dd></div>
+<div style="--tono:#1c7c45"><dt>Verdadero</dt><dd><b>Los datos lo confirman.</b></dd></div>
+<div style="--tono:#777"><dt>No verificable</dt><dd><b>Sin prueba pública suficiente.</b> No se puede confirmar ni desmentir, o la búsqueda automática se quedó corta.</dd></div>
+</dl>
+<ul class="ley-notas">
+<li><b>Se evalúa:</b> hechos comprobables que afirma el entrevistado (cifras, fechas, leyes, lo que dijo o hizo alguien).</li>
+<li><b>No se evalúa:</b> opiniones, promesas, predicciones ni lo que dice el entrevistador.</li>
+<li><b>Confianza</b> (alta, media, baja): cuánta prueba respalda el veredicto.</li>
+</ul>
+</section>"""
 
 CSS_MENU = """
 html { scroll-behavior:smooth; scroll-padding-top:calc(var(--menu, 48px) + 64px); }
@@ -429,6 +446,15 @@ html { scroll-behavior:smooth; scroll-padding-top:calc(var(--menu, 48px) + 64px)
 .desp .lista a:hover { background:#000; color:#fff; } .desp .lista a:hover small { color:#ccc; }
 .desp .lista b { color:#c0271e; font-weight:700; font-variant-numeric:tabular-nums; }
 .desp .lista a:hover b { color:#fff; } .desp .lista a.off { opacity:.4; }
+.leyenda-f h2 { font:700 22px/1.2 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; margin:0 0 4px; padding:0; border:0; }
+.ley-intro { margin:0 0 14px; font-size:14.5px; color:#444; }
+.leyenda-f dl { margin:0 0 16px; border-top:2px solid #000; }
+.leyenda-f dl div { display:grid; grid-template-columns:150px minmax(0,1fr); gap:0 16px; align-items:center; padding:9px 0; border-bottom:1px solid #000; }
+.leyenda-f dt { background:var(--tono); color:#fff; font-size:12.5px; font-weight:700; text-transform:uppercase; letter-spacing:.07em;
+  padding:7px 10px; text-align:center; }
+.leyenda-f dd { margin:0; font-size:15px; line-height:1.4; }
+.ley-notas { list-style:none; margin:0; padding:0; font-size:14.5px; display:grid; gap:4px; }
+@media (max-width:560px) { .leyenda-f dl div { grid-template-columns:1fr; gap:6px; } .leyenda-f dt { justify-self:start; } }
 .filtros { position:sticky; top:var(--menu, 48px); z-index:5; background:#fff; border-bottom:1px solid #000; padding:9px 0; }
 .fila { display:flex; flex-wrap:wrap; align-items:center; gap:6px 8px; }
 .fila button { font:inherit; font-size:12.5px; font-weight:600; color:#000; background:#fff; border:1.5px solid #000;
@@ -592,7 +618,8 @@ oír el contexto si la cita es ambigua. Aplica la misma vara de medir a todos lo
 </section>
 </main>
 <footer><div class="ancho">
-<p>Verificación asistida por IA (transcripción con Whisper, contraste con modelos Claude y búsqueda web), sin revisión de un equipo de periodistas. Cada afirmación enlaza el segundo exacto del vídeo y sus fuentes, y el código, las transcripciones y los datos están publicados en <a href="@@REPO@@" target="_blank" rel="noopener noreferrer">GitHub</a>. «Falso» no implica intención de mentir: incluye errores y lapsus. El número de afirmaciones falsas depende también de cuánto habla cada invitado y de cuántos datos da, así que las cifras no son un ranking. En rojo, junto a cada tema, cuántas afirmaciones falsas o engañosas contiene.</p>
+@@LEYENDA@@
+<p style="margin-top:22px">Verificación asistida por IA (transcripción con Whisper, contraste con modelos Claude y búsqueda web), sin revisión de un equipo de periodistas. Cada afirmación enlaza el segundo exacto del vídeo y sus fuentes, y el código, las transcripciones y los datos están publicados en <a href="@@REPO@@" target="_blank" rel="noopener noreferrer">GitHub</a>. «Falso» no implica intención de mentir: incluye errores y lapsus. El número de afirmaciones falsas depende también de cuánto habla cada invitado y de cuántos datos da, así que las cifras no son un ranking. En rojo, junto a cada tema, cuántas afirmaciones falsas o engañosas contiene.</p>
 <p>Última actualización: @@FECHA@@.</p>
 </div></footer>
 </body>
@@ -635,6 +662,7 @@ h2 { font:700 23px/1.2 var(--serif); margin:44px 0 14px; padding-top:12px; borde
 <h1>Transcripción completa: @@INVITADO@@ con Jordi Wild</h1>
 <p class="entrada">@@PROGRAMA@@ · @@FECHA_VIDEO@@ · @@DURACION@@. Transcripción automática (Whisper): no distingue quién habla y puede tener errores en nombres y cifras. Cada minuto abre el <a href="https://www.youtube.com/watch?v=@@VIDEO@@" target="_blank" rel="noopener noreferrer">vídeo</a> en ese punto; las etiquetas de color llevan a la afirmación verificada en la <a href="/@@SLUG@@">línea temporal</a>.</p>
 @@CUERPO@@
+<div style="border-top:3px solid #000; margin-top:48px; padding-top:22px">@@LEYENDA@@</div>
 </main>
 <script>
 const botones = document.querySelectorAll("#filtros button[data-v]");
@@ -761,6 +789,9 @@ h2 { font:700 23px/1.2 var(--serif); margin:0; letter-spacing:-0.01em; text-wrap
 footer { border-top:3px solid var(--negro); padding:28px 0 72px; font-size:14.5px; }
 footer h2 { font-size:20px; margin-bottom:10px; }
 footer p { max-width:68ch; }
+footer .leyenda-f { margin-bottom:34px; max-width:820px; }
+.pasos { margin:0 0 12px; padding-left:22px; max-width:68ch; } .pasos li { margin:3px 0; }
+.repo.claro { background:#fff; color:#000; border:2px solid #000; padding:7px 14px; margin-left:8px; }
 .repo { display:inline-block; margin:6px 0 14px; padding:9px 16px; background:var(--negro); color:var(--blanco); text-decoration:none; font-weight:600; }
 @media (max-width:860px) { :root { --col:72px; --hueco:26px; } .minuto { margin-right:10px; font-size:13px; }
   .dicho { padding-right:10px; } .dicho blockquote { display:none; } .panel blockquote.movil { display:block; }
@@ -786,10 +817,17 @@ footer p { max-width:68ch; }
 @@FILTROS@@
 <main class="ancho"><ol class="linea">@@FILAS@@</ol></main>
 <footer><div class="ancho">
+  @@LEYENDA@@
   <h2>Cómo se ha hecho</h2>
-  <p>El audio se transcribió con Whisper y las afirmaciones se extrajeron y contrastaron con modelos de IA (Claude) con búsqueda web, un bloque por cada tema del vídeo. No lo ha revisado un equipo de periodistas: es un punto de partida. Por eso cada panel enlaza el segundo exacto del vídeo y sus fuentes, y todo el material está publicado.</p>
-  <a class="repo" href="@@REPO@@" target="_blank" rel="noopener noreferrer">Ver código, transcripción y datos en GitHub ↗</a>
-  <p><b>Falso</b>: los datos lo contradicen. <b>Engañoso</b>: se apoya en algo real pero omite contexto o lleva a una conclusión que no se sigue. <b>No verificable</b>: no se encontró prueba pública suficiente; a veces porque la búsqueda se quedó corta, no porque el dato no exista. «Falso» no implica intención de mentir: incluye errores y lapsus. Solo se evalúan hechos, no opiniones ni promesas, y solo lo que dice el entrevistado.</p>
+  <ol class="pasos">
+    <li><b>Transcripción.</b> El audio completo, con Whisper.</li>
+    <li><b>Extracción.</b> Se separan las afirmaciones comprobables del entrevistado.</li>
+    <li><b>Contraste.</b> Un agente de IA (Claude) por tema las compara con fuentes públicas y asigna el veredicto.</li>
+    <li><b>Publicación.</b> Cada afirmación enlaza el segundo exacto del vídeo y sus fuentes.</li>
+  </ol>
+  <p><b>Límite importante:</b> no lo ha revisado un equipo de periodistas. Es un punto de partida; por eso todo el material está publicado.</p>
+  <a class="repo" href="@@REPO@@" target="_blank" rel="noopener noreferrer">Código, transcripción y datos en GitHub ↗</a>
+  <a class="repo claro" href="/api">API abierta</a>
   <p>¿Ves un error? Abre una incidencia en el repositorio. Última actualización: @@FECHA@@.</p>
 </div></footer>
 <script>

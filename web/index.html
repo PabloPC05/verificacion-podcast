@@ -58,6 +58,15 @@ html { scroll-behavior:smooth; scroll-padding-top:calc(var(--menu, 48px) + 64px)
 .desp .lista a:hover { background:#000; color:#fff; } .desp .lista a:hover small { color:#ccc; }
 .desp .lista b { color:#c0271e; font-weight:700; font-variant-numeric:tabular-nums; }
 .desp .lista a:hover b { color:#fff; } .desp .lista a.off { opacity:.4; }
+.leyenda-f h2 { font:700 22px/1.2 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; margin:0 0 4px; padding:0; border:0; }
+.ley-intro { margin:0 0 14px; font-size:14.5px; color:#444; }
+.leyenda-f dl { margin:0 0 16px; border-top:2px solid #000; }
+.leyenda-f dl div { display:grid; grid-template-columns:150px minmax(0,1fr); gap:0 16px; align-items:center; padding:9px 0; border-bottom:1px solid #000; }
+.leyenda-f dt { background:var(--tono); color:#fff; font-size:12.5px; font-weight:700; text-transform:uppercase; letter-spacing:.07em;
+  padding:7px 10px; text-align:center; }
+.leyenda-f dd { margin:0; font-size:15px; line-height:1.4; }
+.ley-notas { list-style:none; margin:0; padding:0; font-size:14.5px; display:grid; gap:4px; }
+@media (max-width:560px) { .leyenda-f dl div { grid-template-columns:1fr; gap:6px; } .leyenda-f dt { justify-self:start; } }
 .filtros { position:sticky; top:var(--menu, 48px); z-index:5; background:#fff; border-bottom:1px solid #000; padding:9px 0; }
 .fila { display:flex; flex-wrap:wrap; align-items:center; gap:6px 8px; }
 .fila button { font:inherit; font-size:12.5px; font-weight:600; color:#000; background:#fff; border:1.5px solid #000;
@@ -105,7 +114,23 @@ oír el contexto si la cita es ambigua. Aplica la misma vara de medir a todos lo
 </section>
 </main>
 <footer><div class="ancho">
-<p>Verificación asistida por IA (transcripción con Whisper, contraste con modelos Claude y búsqueda web), sin revisión de un equipo de periodistas. Cada afirmación enlaza el segundo exacto del vídeo y sus fuentes, y el código, las transcripciones y los datos están publicados en <a href="https://github.com/PabloPC05/verificacion-podcast" target="_blank" rel="noopener noreferrer">GitHub</a>. «Falso» no implica intención de mentir: incluye errores y lapsus. El número de afirmaciones falsas depende también de cuánto habla cada invitado y de cuántos datos da, así que las cifras no son un ranking. En rojo, junto a cada tema, cuántas afirmaciones falsas o engañosas contiene.</p>
+<section class="leyenda-f" aria-label="Leyenda de veredictos">
+<h2>Leyenda</h2>
+<p class="ley-intro">El color del minuto, del punto de la línea y de la etiqueta indica el veredicto de cada afirmación.</p>
+<dl>
+<div style="--tono:#c0271e"><dt>Falso</dt><dd><b>Los datos lo contradicen.</b> Incluye errores y lapsus: no implica intención de mentir.</dd></div>
+<div style="--tono:#c26a00"><dt>Engañoso</dt><dd><b>Parte de un dato real, pero confunde.</b> Omite contexto, mezcla periodos o lleva a una conclusión que no se sigue.</dd></div>
+<div style="--tono:#5a7d10"><dt>Casi cierto</dt><dd><b>Cierto en lo esencial.</b> Tiene una imprecisión menor, como un redondeo o una fecha aproximada.</dd></div>
+<div style="--tono:#1c7c45"><dt>Verdadero</dt><dd><b>Los datos lo confirman.</b></dd></div>
+<div style="--tono:#777"><dt>No verificable</dt><dd><b>Sin prueba pública suficiente.</b> No se puede confirmar ni desmentir, o la búsqueda automática se quedó corta.</dd></div>
+</dl>
+<ul class="ley-notas">
+<li><b>Se evalúa:</b> hechos comprobables que afirma el entrevistado (cifras, fechas, leyes, lo que dijo o hizo alguien).</li>
+<li><b>No se evalúa:</b> opiniones, promesas, predicciones ni lo que dice el entrevistador.</li>
+<li><b>Confianza</b> (alta, media, baja): cuánta prueba respalda el veredicto.</li>
+</ul>
+</section>
+<p style="margin-top:22px">Verificación asistida por IA (transcripción con Whisper, contraste con modelos Claude y búsqueda web), sin revisión de un equipo de periodistas. Cada afirmación enlaza el segundo exacto del vídeo y sus fuentes, y el código, las transcripciones y los datos están publicados en <a href="https://github.com/PabloPC05/verificacion-podcast" target="_blank" rel="noopener noreferrer">GitHub</a>. «Falso» no implica intención de mentir: incluye errores y lapsus. El número de afirmaciones falsas depende también de cuánto habla cada invitado y de cuántos datos da, así que las cifras no son un ranking. En rojo, junto a cada tema, cuántas afirmaciones falsas o engañosas contiene.</p>
 <p>Última actualización: 13/11/2026.</p>
 </div></footer>
 </body>
