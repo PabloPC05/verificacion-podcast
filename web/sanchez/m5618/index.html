@@ -84,6 +84,10 @@ img.cara { border:0; background:var(--claro); }
 mark { background:var(--tono); color:var(--sobre-tono); padding:1px 3px; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
 .mas { margin:12px 0 0; font-size:15px; font-weight:600; }
 .acciones { display:flex; flex-wrap:wrap; gap:10px; margin-top:34px; padding-top:18px; border-top:2px solid var(--tinta); }
+.corregir p { margin:0 0 12px; max-width:62ch; }
+.corregir .btn { display:inline-block; background:var(--tinta); color:var(--fondo); }
+.corregir .btn:hover { background:var(--fondo); color:var(--tinta); }
+.nota-corregir { font-size:13.5px; color:var(--suave); }
 .btn { font:inherit; font-size:14.5px; font-weight:600; color:var(--tinta); background:var(--fondo); border:2px solid var(--tinta); padding:7px 14px; cursor:pointer; text-decoration:none; line-height:1.4; }
 .btn:hover { background:var(--tinta); color:var(--fondo); }
 .vecinas { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:30px; }
@@ -436,8 +440,12 @@ etiquetarModo();
 <div class="acciones">
 <a class="btn" href="/sanchez#m5618">Ver en la línea temporal</a>
 <button class="btn" type="button" data-copiar data-enlace="https://verificacion-podcast.vercel.app/sanchez/m5618">Copiar enlace</button>
-<a class="btn" href="https://github.com/PabloPC05/verificacion-podcast/issues/new?template=correccion.yml&amp;title=Corregir%20sanchez-m5618" target="_blank" rel="noopener noreferrer">¿Ves un error?</a>
 </div>
+<section class="seccion corregir"><h2>¿Crees que está mal?</h2>
+<p>Si tienes una fuente que dice otra cosa, mándanosla y lo revisamos con el mismo criterio para todos. Solo hace falta pegar el enlace.</p>
+<p><a class="btn" href="https://github.com/PabloPC05/verificacion-podcast/issues/new?template=correccion.yml&amp;title=Error%20en%3A%20Pedro%20S%C3%A1nchez%2C%201%3A33%3A38&amp;afirmacion=Pedro%20S%C3%A1nchez%2C%201%3A33%3A38%20%C2%B7%20https%3A//verificacion-podcast.vercel.app/sanchez/m5618" target="_blank" rel="noopener noreferrer">Avisar de un error</a></p>
+<p class="nota-corregir">Se abre un formulario en GitHub, la web donde está publicado todo el proyecto. Para enviarlo hace falta una cuenta gratuita.</p>
+</section>
 <nav class="vecinas" aria-label="Afirmaciones de la misma entrevista"><a class="vecina ant" href="/sanchez/m5595" rel="prev"><span class="rot-v">← Anterior</span><span class="tiempo">1:33:15 · <b data-v="mayormente_verdadero">Casi cierto</b></span><small>Antes de la crisis financiera se construyeron en España 4,5 millones de…</small></a><a class="vecina sig" href="/sanchez/m5751" rel="next"><span class="rot-v">Siguiente →</span><span class="tiempo">1:35:51 · <b data-v="no_verificable">No verificable</b></span><small>Contexto (planteado por Jordi Wild, no respondido por Sánchez): en 2015-16 el…</small></a></nav>
 </main>
 <footer class="pie-solo"><div class="ancho"><p class="pie-quien"><a href="/quien">Proyecto personal e independiente de Pablo Pardo Cotos, sin relación con The Wild Project ni con ningún partido.</a></p></div></footer>
