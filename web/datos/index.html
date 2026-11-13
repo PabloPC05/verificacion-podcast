@@ -49,6 +49,12 @@ a { color:var(--tinta); }
 .botones a:hover { background:var(--tinta); color:var(--fondo); }
 .nota { font-size:13.5px; color:var(--suave); margin:10px 0 0; }
 #referencia { min-height:60vh; }
+/* El prompt para agentes vive en la descripción OpenAPI que pinta Scalar: que no se corte y que tenga botón de copiar */
+.introduction-description pre { max-height:440px; overflow-y:auto !important; overflow-x:hidden !important; }
+.introduction-description pre, .introduction-description pre * { white-space:pre-wrap !important; overflow-wrap:anywhere !important; word-break:normal; }
+.copiar-prompt { font:inherit; font-size:14px; font-weight:700; background:var(--tinta); color:var(--fondo); border:2px solid var(--tinta);
+  border-radius:var(--r-boton, 9px); padding:7px 14px; margin:0 0 10px; cursor:pointer; }
+.copiar-prompt:hover { background:var(--fondo); color:var(--tinta); }
 noscript p { max-width:68ch; margin:24px 16px; }
 /* Scalar con los colores, letras y esquinas del resto de la web. Los selectores con body ganan a los del tema por defecto de Scalar. */
 body.light-mode, body.dark-mode, body .scalar-app {
@@ -296,43 +302,7 @@ etiquetarModo();
 <header class="api-cab"><div class="ancho">
 <h1>API abierta</h1>
 <p>Todos los datos de la web en JSON y CSV: afirmaciones, veredictos, fuentes y transcripciones. Sin registro ni clave, con CORS abierto y de solo lectura. Base: <code>https://verificacion-podcast.vercel.app/api/v1</code>.</p>
-<p class="saltos"><a href="#agentes">Prompt para agentes de IA ↓</a><a href="#referencia">Referencia completa ↓</a><a href="/api/v1/openapi.json">openapi.json</a><a href="/llms.txt">llms.txt</a><a href="/verificalo#api">Ejemplos para hoja de cálculo y programación</a></p>
-<section class="agentes" id="agentes">
-<h2>Prompt para agentes de IA</h2>
-<p>Pégalo en un agente o asistente que pueda hacer peticiones web (Claude, ChatGPT, Gemini, Perplexity o tu propio agente), como instrucciones de sistema o como primer mensaje, y escribe tu pregunta al final. Le explica la API, qué trae cada campo y cómo citar.</p>
-<pre id="prompt-agente">Tienes acceso a una API pública, de solo lectura y sin clave, con la verificación de las entrevistas de Jordi Wild (The Wild Project) a los candidatos a las elecciones generales españolas del 29 de noviembre de 2026: Pedro Sánchez (PSOE), Alberto Núñez Feijóo (PP), Ada Colau (Frente Amplio). Úsala para responder a mis preguntas.
-
-CÓMO CONSULTARLA (peticiones GET; responden JSON salvo que se indique otra cosa)
-- https://verificacion-podcast.vercel.app/api/v1/entrevistas.json: entrevistas, su slug, recuentos por veredicto y temas. Empieza aquí.
-- https://verificacion-podcast.vercel.app/api/v1/{slug}.json: afirmaciones verificadas de una entrevista (slugs: sanchez, feijoo, colau), más la lista de excluidas por irrelevantes.
-- https://verificacion-podcast.vercel.app/api/v1/afirmaciones.json: todas las afirmaciones de todas las entrevistas.
-- https://verificacion-podcast.vercel.app/api/v1/{slug}/transcripcion.txt: transcripción completa con marcas [h:mm:ss], para ver el contexto de una frase.
-- https://verificacion-podcast.vercel.app/api/v1/afirmaciones.csv y https://verificacion-podcast.vercel.app/api/v1/{slug}.csv: lo mismo en CSV.
-- https://verificacion-podcast.vercel.app/api/v1/openapi.json: esquema completo.
-No hay filtros ni búsqueda en el servidor: descarga el fichero y filtra tú.
-
-QUÉ TRAE CADA AFIRMACIÓN
-id, invitado, tema, minuto, video_url (el vídeo en ese segundo), cita (literal de la transcripción), afirmacion (reformulada), veredicto, resumen, explicacion, confianza (alta, media o baja) y fuentes [{titulo, url}].
-Veredictos:
-- falso: Los datos lo contradicen. No implica intención de mentir: incluye errores y lapsus.
-- enganoso: Se apoya en algo real pero omite contexto, mezcla periodos o lleva a una conclusión que no se sigue.
-- mayormente_verdadero: Cierto en lo esencial, con una imprecisión menor.
-- verdadero: Los datos lo confirman.
-- no_verificable: No se encontró prueba pública suficiente, o la búsqueda automática se quedó corta.
-
-CÓMO RESPONDER
-1. Consulta la API antes de contestar; no respondas de memoria sobre estas entrevistas.
-2. De cada afirmación que menciones, da el id, el minuto con su video_url y al menos una de sus fuentes.
-3. Separa lo que dice la verificación publicada de tu propia valoración. Si revisas un veredicto, abre las fuentes y dilo explícitamente.
-4. Para comparar candidatos usa proporciones (por ejemplo, falsas o engañosas sobre el total de cada uno), no solo números absolutos: las entrevistas duran distinto y cada invitado da más o menos datos.
-5. La verificación está hecha con IA y no la ha revisado un equipo de periodistas; «falso» no implica intención de mentir. Recuérdalo cuando sea relevante.
-6. Aplica la misma vara de medir a todos los candidatos. No inventes ids, cifras ni enlaces: si la API no tiene el dato, dilo.
-
-MI PETICIÓN
-[Escribe aquí lo que quieres saber. Por ejemplo: «¿Qué afirmaciones falsas hizo cada candidato sobre inmigración? Dame el minuto y una fuente de cada una.»]</pre>
-<div class="botones"><button id="copiar-prompt" type="button">Copiar prompt</button><a id="abrir-claude" target="_blank" rel="noopener noreferrer">Abrir en Claude ↗</a><a id="abrir-chatgpt" target="_blank" rel="noopener noreferrer">Abrir en ChatGPT ↗</a></div>
-<p class="nota">Para auditar los veredictos uno a uno hay otro encargo, configurable por entrevista, en <a href="/verificalo">Verifícalo tú</a>. Una IA también se equivoca: pídele siempre los enlaces y ábrelos.</p>
-</section>
+<p class="saltos"><a href="#referencia" id="ir-agentes">Prompt para agentes de IA ↓</a><a href="#referencia">Referencia completa ↓</a><a href="/api/v1/openapi.json">openapi.json</a><a href="/llms.txt">llms.txt</a><a href="/verificalo#api">Ejemplos para hoja de cálculo y programación</a></p>
 </div></header>
 <div id="referencia"></div>
 <footer class="pie-solo"><div class="ancho"><p class="pie-quien"><a href="/quien">Proyecto personal e independiente de Pablo Pardo Cotos, sin relación con The Wild Project ni con ningún partido.</a></p></div></footer>
@@ -340,14 +310,6 @@ MI PETICIÓN
 <script src="https://cdn.jsdelivr.net/npm/@scalar/api-reference@1.76.2/dist/browser/standalone.js" integrity="sha384-mCh2A/B6vkfhiHyzwBZm7lbFmEK5fE/96Kbtk+RH1zei1P/XEt0I2MCiG6WfZdor" crossorigin="anonymous"></script>
 <script>
 (() => {
-  const texto = document.getElementById("prompt-agente").textContent;
-  document.getElementById("abrir-claude").href = "https://claude.ai/new?q=" + encodeURIComponent(texto);
-  document.getElementById("abrir-chatgpt").href = "https://chatgpt.com/?q=" + encodeURIComponent(texto);
-  document.getElementById("copiar-prompt").onclick = ev => {
-    const b = ev.currentTarget;
-    const hecho = () => { b.textContent = "Copiado: pégalo en tu agente"; setTimeout(() => b.textContent = "Copiar prompt", 2200); };
-    if (navigator.clipboard) navigator.clipboard.writeText(texto).then(hecho, () => prompt("Copia este texto:", texto)); else prompt("Copia este texto:", texto);
-  };
   if (!window.Scalar) return;
   // Mismo modo que el resto de la web (botón del menú o sistema), también si cambia con la página abierta.
   const raiz = document.documentElement, sistema = matchMedia("(prefers-color-scheme: dark)");
@@ -363,6 +325,27 @@ MI PETICIÓN
     metaData: { title: "API abierta · Verificación The Wild Project" },
   };
   Scalar.createApiReference("#referencia", { ...config, forceDarkModeState: tema() });
+  // Botón «Copiar prompt» encima del bloque del prompt para agentes (Scalar no pone botón en los bloques de la descripción)
+  const ANCLA_PROMPT = "api-1/description/prompt-para-agentes-de-ia";
+  const prepararPrompt = () => {
+    const pre = [...document.querySelectorAll(".introduction-description pre")].find(x => x.textContent.trim().startsWith("Tienes acceso"));
+    if (!pre || pre.dataset.listo) return;
+    pre.dataset.listo = "1";
+    const b = document.createElement("button");
+    b.type = "button"; b.className = "copiar-prompt"; b.textContent = "Copiar prompt";
+    b.onclick = () => {
+      const t = pre.textContent.trim();
+      if (typeof copiarTexto === "function") copiarTexto(t, "Prompt copiado. Pégalo en tu agente y escribe tu pregunta al final.");
+      else if (navigator.clipboard) navigator.clipboard.writeText(t);
+      b.textContent = "Copiado ✓"; setTimeout(() => b.textContent = "Copiar prompt", 2200);
+    };
+    pre.before(b);
+  };
+  new MutationObserver(prepararPrompt).observe(document.getElementById("referencia"), { childList: true, subtree: true });
+  document.getElementById("ir-agentes").addEventListener("click", ev => {
+    const h = document.getElementById(ANCLA_PROMPT);
+    if (h) { ev.preventDefault(); h.scrollIntoView(); }
+  });
   // updateConfiguration no aplica forceDarkModeState en caliente; Scalar pinta el tema según la clase del <body>.
   const sincronizar = () => {
     const oscuro = tema() === "dark";

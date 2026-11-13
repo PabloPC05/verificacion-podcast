@@ -54,6 +54,8 @@ python3 web-src/build.py          # genera web/ a partir de los datos
 python3 -m http.server -d web 8000  # y abre http://localhost:8000
 ```
 
+En local, los datos de la API están en `/datos/v1/` (en la web publicada, Vercel los sirve en `/api/v1/`).
+
 Cada PR pasa además una comprobación automática que valida los JSON y genera la web. Si falla, el detalle está
 en la pestaña **Checks** de la PR.
 
