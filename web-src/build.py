@@ -281,7 +281,7 @@ VISOR_FUENTE = r"""<dialog id="visor" aria-labelledby="visor-titulo">
     if (!d.open) d.showModal();
     if (!empujado) { history.pushState({ visor: 1 }, ""); empujado = true; }
     texto.textContent = ""; cargando(); cuerpo.scrollTop = 0;
-    d.querySelector(".v-x").focus();
+    cuerpo.focus({ preventScroll: true });  // el foco va al texto, no a la ×: sin anillo al abrir, y las flechas desplazan
     const url = actual;
     leer(url).then(c => {
       if (url !== actual) return;
