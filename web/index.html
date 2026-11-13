@@ -15,10 +15,15 @@ a { color:#000; }
 main.ancho { max-width:860px; }
 h1 { font:700 clamp(30px,6vw,48px)/1.06 var(--serif); letter-spacing:-0.02em; margin:40px 0 14px; text-wrap:balance; }
 .entrada { font-size:17px; max-width:62ch; margin:0 0 30px; }
-.entrevista { border:2px solid #000; padding:20px 22px; margin-bottom:18px; }
+.tu { margin:-10px 0 30px; padding:12px 14px; border:1.5px solid #000; font-size:15px; max-width:62ch; }
+.entrevista { border:2px solid #000; padding:22px 24px; margin-bottom:18px; display:grid; grid-template-columns:76px minmax(0,1fr); gap:0 22px; align-items:start; }
+.logo { width:76px; height:76px; object-fit:contain; display:block; }
+.logo.sin { display:grid; place-items:center; border:2px solid #000; font:700 24px/1 var(--serif); }
+.entrevista.off .logo { opacity:.45; }
+.partido { margin:0 0 6px; font-size:15px; font-weight:700; }
 .entrevista.off { border:1px dashed #999; color:#666; }
-.prog { margin:0; font-size:12px; text-transform:uppercase; letter-spacing:.08em; color:#666; }
-.entrevista h2 { font:700 30px/1.15 var(--serif); margin:4px 0 8px; } .entrevista h2 a { text-decoration:none; }
+.prog { margin:0 0 12px; font-size:12px; text-transform:uppercase; letter-spacing:.08em; color:#666; }
+.entrevista h2 { font:700 32px/1.1 var(--serif); margin:0 0 2px; } .entrevista h2 a { text-decoration:none; }
 .num { margin:0; font-size:17px; } .num b { font:700 34px/1 var(--serif); margin-right:4px; }
 .des { margin:4px 0 14px; font-size:13.5px; font-weight:600; }
 .entrevista ul { list-style:none; margin:6px 0 16px; padding:0; columns:2; column-gap:28px; font-size:14.5px; }
@@ -32,7 +37,7 @@ h1 { font:700 clamp(30px,6vw,48px)/1.06 var(--serif); letter-spacing:-0.02em; ma
 .acc { margin:0; display:flex; flex-wrap:wrap; gap:8px 22px; } .acc a { font-weight:700; text-underline-offset:3px; }
 footer { border-top:3px solid #000; margin-top:48px; padding:24px 0 64px; font-size:14.5px; }
 footer p { max-width:68ch; }
-@media (max-width:640px) { .entrevista ul { columns:1; } }
+@media (max-width:560px) { .entrevista { grid-template-columns:52px minmax(0,1fr); gap:0 14px; padding:16px; } .logo { width:52px; height:52px; } .entrevista h2 { font-size:26px; } }
 
 html { scroll-behavior:smooth; scroll-padding-top:calc(var(--menu, 48px) + 64px); }
 [hidden] { display:none !important; }
@@ -84,7 +89,7 @@ html { scroll-behavior:smooth; scroll-padding-top:calc(var(--menu, 48px) + 64px)
 </style>
 </head>
 <body>
-<header class="menu"><div class="ancho"><div class="m1"><a class="sello" href="/" title="Todas las entrevistas">Verificación</a><details class="desp"><summary>Pedro Sánchez</summary><div class="lista"><a class="fuerte" href="/sanchez"><span>Línea temporal</span><small>30 falsas o engañosas de 157</small></a><a class="fuerte" href="/sanchez/transcripcion"><span>Transcripción completa</span></a><p class="rot">Temas</p><a href="/sanchez#tema-2" data-tema="tema-2"><span>Por qué Pedro Sánchez quiere seguir al frente del Gobierno</span></a><a href="/sanchez#tema-3" data-tema="tema-3"><span>Insultos, polarización y crispación en la política española</span><b>1</b></a><a href="/sanchez#tema-4" data-tema="tema-4"><span>Accidentes ferroviarios y responsabilidades del Gobierno</span><b>2</b></a><a href="/sanchez#tema-5" data-tema="tema-5"><span>Crisis de Ceuta, Marruecos y gestión de la frontera</span><b>7</b></a><a href="/sanchez#tema-6" data-tema="tema-6"><span>Inmigración, integración y futuro demográfico de España</span><b>3</b></a><a href="/sanchez#tema-7" data-tema="tema-7"><span>Ábalos, Koldo, Cerdán y los casos que afectan al PSOE</span><b>3</b></a><a href="/sanchez#tema-8" data-tema="tema-8"><span>Leire Díez, Zapatero y las investigaciones abiertas</span><b>3</b></a><a href="/sanchez#tema-9" data-tema="tema-9"><span>Vivienda, alquileres y acceso de los jóvenes a una casa</span><b>6</b></a><a href="/sanchez#tema-10" data-tema="tema-10"><span>Amnistía, Bildu, Pablo Iglesias y los cambios de opinión de Sánchez</span><b>5</b></a><a href="/sanchez#tema-12" data-tema="tema-12"><span>Alegato final de Pedro Sánchez y mensaje a los votantes</span></a></div></details><span class="off" title="Verificación en curso">Alberto Núñez Feijóo</span><span class="off" title="Verificación en curso">Ada Colau</span><a class="dcha" href="/api">API</a><a href="https://github.com/PabloPC05/verificacion-podcast" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></div></header><script>
+<header class="menu"><div class="ancho"><div class="m1"><a class="sello" href="/" title="Todas las entrevistas">Verificación</a><details class="desp"><summary>Pedro Sánchez</summary><div class="lista"><a class="fuerte" href="/sanchez"><span>Línea temporal</span><small>30 falsas o engañosas de 157</small></a><a class="fuerte" href="/sanchez/transcripcion"><span>Transcripción completa</span></a><p class="rot">Temas</p><a href="/sanchez#tema-2" data-tema="tema-2"><span>Por qué Pedro Sánchez quiere seguir al frente del Gobierno</span></a><a href="/sanchez#tema-3" data-tema="tema-3"><span>Insultos, polarización y crispación en la política española</span><b>1</b></a><a href="/sanchez#tema-4" data-tema="tema-4"><span>Accidentes ferroviarios y responsabilidades del Gobierno</span><b>2</b></a><a href="/sanchez#tema-5" data-tema="tema-5"><span>Crisis de Ceuta, Marruecos y gestión de la frontera</span><b>7</b></a><a href="/sanchez#tema-6" data-tema="tema-6"><span>Inmigración, integración y futuro demográfico de España</span><b>3</b></a><a href="/sanchez#tema-7" data-tema="tema-7"><span>Ábalos, Koldo, Cerdán y los casos que afectan al PSOE</span><b>3</b></a><a href="/sanchez#tema-8" data-tema="tema-8"><span>Leire Díez, Zapatero y las investigaciones abiertas</span><b>3</b></a><a href="/sanchez#tema-9" data-tema="tema-9"><span>Vivienda, alquileres y acceso de los jóvenes a una casa</span><b>6</b></a><a href="/sanchez#tema-10" data-tema="tema-10"><span>Amnistía, Bildu, Pablo Iglesias y los cambios de opinión de Sánchez</span><b>5</b></a><a href="/sanchez#tema-12" data-tema="tema-12"><span>Alegato final de Pedro Sánchez y mensaje a los votantes</span></a></div></details><span class="off" title="Verificación en curso">Alberto Núñez Feijóo</span><span class="off" title="Verificación en curso">Ada Colau</span><a class="dcha" href="/verificalo">Verifícalo tú</a><a href="/api">API</a><a href="https://github.com/PabloPC05/verificacion-podcast" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></div></header><script>
 document.addEventListener("click", ev => document.querySelectorAll("details.desp[open]").forEach(d => {
   if (!d.contains(ev.target) || ev.target.closest(".lista a")) d.open = false;
 }));
@@ -95,23 +100,8 @@ medirMenu(); addEventListener("resize", medirMenu);
 <main class="ancho">
 <h1>Las entrevistas de The Wild Project, comprobadas dato a dato</h1>
 <p class="entrada">Jordi Wild ha entrevistado a los candidatos a la presidencia del Gobierno para las elecciones del 29 de noviembre de 2026. Transcribimos cada entrevista entera, separamos las afirmaciones que se pueden comprobar y las contrastamos con fuentes públicas, con el mismo método y la misma vara de medir para todos.</p>
-<article class="entrevista"><p class="prog">The Wild Project #393 · 13 nov 2026 · 1 h 52 min</p><h2><a href="/sanchez">Pedro Sánchez</a></h2><p class="num"><b>30</b> falsas o engañosas de 157 afirmaciones comprobadas</p><p class="des"><span style="color:#c0271e">7 falsas</span> · <span style="color:#c26a00">23 engañosas</span> · <span style="color:#5a7d10">53 casi ciertas</span> · <span style="color:#1c7c45">34 verdaderas</span> · <span style="color:#777">40 no verificables</span></p><p class="rot">Temas de la entrevista</p><ul><li><a href="/sanchez#tema-2">Por qué Pedro Sánchez quiere seguir al frente del Gobierno</a></li><li><a href="/sanchez#tema-3">Insultos, polarización y crispación en la política española</a> <b>1</b></li><li><a href="/sanchez#tema-4">Accidentes ferroviarios y responsabilidades del Gobierno</a> <b>2</b></li><li><a href="/sanchez#tema-5">Crisis de Ceuta, Marruecos y gestión de la frontera</a> <b>7</b></li><li><a href="/sanchez#tema-6">Inmigración, integración y futuro demográfico de España</a> <b>3</b></li><li><a href="/sanchez#tema-7">Ábalos, Koldo, Cerdán y los casos que afectan al PSOE</a> <b>3</b></li><li><a href="/sanchez#tema-8">Leire Díez, Zapatero y las investigaciones abiertas</a> <b>3</b></li><li><a href="/sanchez#tema-9">Vivienda, alquileres y acceso de los jóvenes a una casa</a> <b>6</b></li><li><a href="/sanchez#tema-10">Amnistía, Bildu, Pablo Iglesias y los cambios de opinión de Sánchez</a> <b>5</b></li><li><a href="/sanchez#tema-12">Alegato final de Pedro Sánchez y mensaje a los votantes</a></li></ul><p class="acc"><a href="/sanchez">Línea temporal →</a><a href="/sanchez/transcripcion">Transcripción completa →</a></p></article><article class="entrevista off"><p class="prog">The Wild Project #392</p><h2>Alberto Núñez Feijóo</h2><p class="des">Verificación en curso.</p></article><article class="entrevista off"><p class="prog">The Wild Project #391</p><h2>Ada Colau</h2><p class="des">Verificación en curso.</p></article>
-<section class="contrastar">
-<h2>Contrástalo tú mismo</h2>
-<p>No te fíes de nosotros: todo lo que hay aquí se puede comprobar.</p>
-<ol>
-<li><b>En cada afirmación.</b> El minuto abre el vídeo en el segundo exacto, las fuentes están enlazadas una a una y un botón copia un encargo listo para pegar en cualquier IA y que la revise por su cuenta.</li>
-<li><b>Con la API abierta.</b> Todas las afirmaciones, veredictos, fuentes y transcripciones en JSON, sin clave: <a href="/api">documentación</a> · <a href="/api/v1/afirmaciones.json">afirmaciones.json</a> · <a href="/llms.txt">llms.txt</a>.</li>
-<li><b>Con el código.</b> El método, los encargos literales que recibieron los agentes de IA y los datos en bruto están en <a href="https://github.com/PabloPC05/verificacion-podcast" target="_blank" rel="noopener noreferrer">GitHub</a>. Si encuentras un error, <a href="https://github.com/PabloPC05/verificacion-podcast/issues" target="_blank" rel="noopener noreferrer">abre una incidencia</a>.</li>
-</ol>
-<p class="rot">Encargo para un agente de IA</p>
-<pre id="encargo">Descarga https://verificacion-podcast.vercel.app/api/v1/afirmaciones.json.
-Para cada afirmación con veredicto "falso" o "enganoso": abre cada fuentes[].url y
-comprueba si de verdad respalda la explicacion, busca al menos una fuente independiente
-más y dime en cuáles discrepas del veredicto y por qué, con enlaces. Usa video_url para
-oír el contexto si la cita es ambigua. Aplica la misma vara de medir a todos los invitados.</pre>
-<button class="copiar" type="button" onclick="navigator.clipboard.writeText(document.getElementById('encargo').textContent).then(()=>{this.textContent='Copiado'})">Copiar encargo</button>
-</section>
+<p class="tu"><a href="/verificalo"><b>Puedes verificarlo tú</b> →</a> Cada dato enlaza su fuente y el minuto del vídeo, y hay un encargo listo para que cualquier IA lo revise por su cuenta.</p>
+<article class="entrevista"><img class="logo" src="/logos/psoe.svg" alt="Logotipo de PSOE" width="76" height="76"><div><h2><a href="/sanchez">Pedro Sánchez</a></h2><p class="partido">PSOE</p><p class="prog">The Wild Project #393 · 13 nov 2026 · 1 h 52 min</p><p class="num"><b>30</b> falsas o engañosas de 157 afirmaciones comprobadas</p><p class="des"><span style="color:#c0271e">7 falsas</span> · <span style="color:#c26a00">23 engañosas</span> · <span style="color:#5a7d10">53 casi ciertas</span> · <span style="color:#1c7c45">34 verdaderas</span> · <span style="color:#777">40 no verificables</span></p><p class="acc"><a href="/sanchez">Línea temporal →</a><a href="/sanchez/transcripcion">Transcripción completa →</a></p></div></article><article class="entrevista off"><img class="logo" src="/logos/pp.svg" alt="Logotipo de PP" width="76" height="76"><div><h2>Alberto Núñez Feijóo</h2><p class="partido">PP</p><p class="prog">The Wild Project #392</p><p class="des">Verificación en curso.</p></div></article><article class="entrevista off"><span class="logo sin" aria-hidden="true">FA</span><div><h2>Ada Colau</h2><p class="partido">Frente Amplio</p><p class="prog">The Wild Project #391</p><p class="des">Verificación en curso.</p></div></article>
 </main>
 <footer><div class="ancho">
 <section class="leyenda-f" aria-label="Leyenda de veredictos">

@@ -10,6 +10,7 @@ import datetime as dt
 import html
 import json
 import re
+import shutil
 import unicodedata
 from pathlib import Path
 from urllib.parse import urlparse
@@ -134,6 +135,7 @@ PLURAL = {"falso": "Falsas", "enganoso": "Engañosas", "mayormente_verdadero": "
 
 
 BASE = "https://verificacion-podcast.vercel.app"
+LOGOS = {"PSOE": "psoe.svg", "PP": "pp.svg"}
 DEFINICIONES = {
     "verdadero": "Los datos lo confirman.",
     "mayormente_verdadero": "Cierto en lo esencial, con una imprecisión menor.",
@@ -190,7 +192,7 @@ def menu(entrevistas, actual=None):
             f'<a class="fuerte" href="/{s}/transcripcion"><span>Transcripción completa</span></a>'
             f'<p class="rot">Temas</p>{temas}</div></details>')
     return ('<header class="menu"><div class="ancho"><div class="m1"><a class="sello" href="/" title="Todas las entrevistas">Verificación</a>'
-            + "".join(partes) + '<a class="dcha" href="/api">API</a>'
+            + "".join(partes) + '<a class="dcha" href="/verificalo">Verifícalo tú</a><a href="/api">API</a>'
             f'<a href="{REPO}" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></div></header>' + JS_MENU)
 
 
@@ -381,23 +383,40 @@ def main():
         pagina_entrevista(m, entrevistas)
         pagina_transcripcion(m, entrevistas)
     ejemplo, slugs = generar_api(hechas)
+    for carpeta_logos in [RAIZ / "web-src" / "logos"]:
+        (SALIDA / "logos").mkdir(exist_ok=True)
+        for f in carpeta_logos.glob("*.svg"):
+            shutil.copy(f, SALIDA / "logos" / f.name)
+
+    def logo(m):
+        partido = m.get("partido") or ""
+        fichero = LOGOS.get(partido)
+        if fichero:
+            return f'<img class="logo" src="/logos/{fichero}" alt="Logotipo de {e(partido)}" width="76" height="76">'
+        siglas = "".join(w[0] for w in partido.split()[:3]).upper() or "·"
+        return f'<span class="logo sin" aria-hidden="true">{e(siglas)}</span>'
+
     tarjetas = "".join(
-        f'<article class="entrevista"><p class="prog">{e(m["programa"])} · {e(m["fecha"])} · {e(m["duracion"])}</p>'
-        f'<h2><a href="/{e(m["slug"])}">{e(m["invitado"])}</a></h2>'
+        f'<article class="entrevista">{logo(m)}<div><h2><a href="/{e(m["slug"])}">{e(m["invitado"])}</a></h2>'
+        f'<p class="partido">{e(m.get("partido") or "")}</p>'
+        f'<p class="prog">{e(m["programa"])} · {e(m["fecha"])} · {e(m["duracion"])}</p>'
         f'<p class="num"><b>{m["malas"]}</b> falsas o engañosas de {m["suma"]} afirmaciones comprobadas</p>'
         f'<p class="des">' + " · ".join(f'<span style="color:{TONO[k]}">{m["total"][k]} {PLURAL[k].lower()}</span>' for k in ORDEN) + "</p>"
-        f'<p class="rot">Temas de la entrevista</p><ul>'
-        + "".join(f'<li><a href="/{e(m["slug"])}#tema-{t["n"]}">{e(t["titulo"])}</a>'
-                  + (f' <b>{t["malas"]}</b>' if t["malas"] else "") + "</li>" for t in m["temas"] if t["total"])
-        + f'</ul><p class="acc"><a href="/{e(m["slug"])}">Línea temporal →</a>'
-        f'<a href="/{e(m["slug"])}/transcripcion">Transcripción completa →</a></p></article>'
+        f'<p class="acc"><a href="/{e(m["slug"])}">Línea temporal →</a>'
+        f'<a href="/{e(m["slug"])}/transcripcion">Transcripción completa →</a></p></div></article>'
         for m in hechas)
     tarjetas += "".join(
-        f'<article class="entrevista off"><p class="prog">{e(m.get("programa", ""))}</p><h2>{e(m["invitado"])}</h2>'
-        f'<p class="des">Verificación en curso.</p></article>' for m in entrevistas if not m.get("publicar"))
+        f'<article class="entrevista off">{logo(m)}<div><h2>{e(m["invitado"])}</h2><p class="partido">{e(m.get("partido") or "")}</p>'
+        f'<p class="prog">{e(m.get("programa", ""))}</p><p class="des">Verificación en curso.</p></div></article>'
+        for m in entrevistas if not m.get("publicar"))
     (SALIDA / "index.html").write_text(rellenar(
         PORTADA, MENU=menu(entrevistas), CSS_MENU=CSS_MENU, LEYENDA=LEYENDA, TARJETAS=tarjetas, REPO=REPO,
         FECHA=dt.datetime.now().strftime("%d/%m/%Y")), encoding="utf-8")
+    (SALIDA / "verificalo").mkdir(exist_ok=True)
+    opciones = "".join(f'<option value="{e(m["slug"])}">{e(m["invitado"])}</option>' for m in hechas)
+    (SALIDA / "verificalo" / "index.html").write_text(rellenar(
+        VERIFICALO, MENU=menu(entrevistas), CSS_MENU=CSS_MENU, LEYENDA=LEYENDA, BASE=BASE, REPO=REPO, OPCIONES=opciones,
+        EJ=ejemplo), encoding="utf-8")
     (SALIDA / "api").mkdir(exist_ok=True)
     (SALIDA / "api" / "index.html").write_text(rellenar(
         PAGINA_API, MENU=menu(entrevistas), CSS_MENU=CSS_MENU, BASE=BASE, REPO=REPO, EJ=ejemplo,
@@ -468,6 +487,132 @@ html { scroll-behavior:smooth; scroll-padding-top:calc(var(--menu, 48px) + 64px)
 @media (max-width:700px) { .m1 { gap:4px 16px; font-size:14px; } .m1 .dcha { margin-left:0; }
   .desp { position:static; } .desp .lista { left:16px; right:16px; top:auto; margin-top:10px; width:auto; max-width:none; }
   .fila .rot { display:none; } .fila button { font-size:12px; padding:2px 9px; } .fila button[data-solo] { margin-left:0; } }
+"""
+
+VERIFICALO = """<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light only">
+<title>Verifícalo tú · Verificación The Wild Project</title>
+<meta name="description" content="Cómo comprobar por tu cuenta cada veredicto: vídeo, fuentes, datos abiertos y un encargo listo para que cualquier IA audite la verificación.">
+<style>
+:root { --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; }
+* { box-sizing:border-box; }
+body { margin:0; background:#fff; color:#000; font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; }
+a { color:#000; }
+.ancho { max-width:1120px; margin:0 auto; padding:0 16px; }
+main.ancho { max-width:820px; padding-bottom:72px; }
+h1 { font:700 clamp(30px,6vw,48px)/1.06 var(--serif); letter-spacing:-0.02em; margin:38px 0 12px; text-wrap:balance; }
+.entrada { font-size:17px; max-width:62ch; }
+main > h2 { font:700 24px/1.2 var(--serif); margin:44px 0 10px; padding-top:12px; border-top:3px solid #000; }
+p, li { max-width:68ch; }
+.vias { list-style:none; padding:0; margin:18px 0 0; display:grid; gap:12px; }
+.vias li { border:2px solid #000; padding:14px 16px; max-width:none; display:grid; grid-template-columns:44px minmax(0,1fr); gap:0 14px; }
+.vias li > b { font:700 34px/1 var(--serif); }
+.vias h3 { margin:0 0 2px; font-size:17px; } .vias p { margin:0; font-size:15px; }
+.opciones { display:flex; flex-wrap:wrap; gap:10px 18px; margin:14px 0; font-size:14.5px; font-weight:600; }
+.opciones select { font:inherit; font-weight:500; border:1.5px solid #000; background:#fff; padding:5px 8px; margin-left:6px; border-radius:0; }
+pre { background:#000; color:#fff; padding:16px 18px; white-space:pre-wrap; overflow-wrap:anywhere; font:13px/1.6 ui-monospace,SFMono-Regular,Menlo,monospace; margin:0 0 12px; }
+.botones { display:flex; flex-wrap:wrap; gap:8px; }
+.botones button, .botones a { font:inherit; font-size:14px; font-weight:600; background:#fff; color:#000; border:2px solid #000; padding:7px 14px; cursor:pointer; text-decoration:none; }
+.botones button { background:#000; color:#fff; }
+.botones a:hover { background:#000; color:#fff; }
+.nota { font-size:14px; color:#444; }
+code { font:13.5px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace; background:#f2f2f2; padding:1px 5px; }
+@@CSS_MENU@@
+</style>
+</head>
+<body>
+@@MENU@@
+<main class="ancho">
+<h1>Verifícalo tú</h1>
+<p class="entrada">Esta verificación la han hecho modelos de IA y no la ha revisado un equipo de periodistas. No hace falta que te la creas: todo está publicado para que lo compruebes, a mano o con tu propia IA.</p>
+
+<ol class="vias">
+<li><b>1</b><div><h3>Mira el momento exacto</h3><p>En la línea temporal, el minuto de cada afirmación abre el vídeo de YouTube en ese segundo. Escucha la frase y su contexto.</p></div></li>
+<li><b>2</b><div><h3>Abre las fuentes</h3><p>Cada panel lista las fuentes con su enlace. «Explicación completa» detalla qué dato sale de cada una.</p></div></li>
+<li><b>3</b><div><h3>Pásaselo a una IA</h3><p>Cada panel tiene un botón que copia un encargo para esa afirmación concreta. Para auditar una entrevista entera, usa el encargo de abajo.</p></div></li>
+<li><b>4</b><div><h3>Usa los datos abiertos</h3><p>Afirmaciones, veredictos, fuentes y transcripciones están en la <a href="/api">API</a> en JSON, sin clave. El método y los encargos originales, en <a href="@@REPO@@" target="_blank" rel="noopener noreferrer">GitHub</a>.</p></div></li>
+</ol>
+
+<h2>Encargo para auditar una entrevista con una IA</h2>
+<p>Elige qué quieres revisar, copia el texto y pégalo en un asistente que pueda navegar por internet (Claude, ChatGPT, Gemini, Perplexity…). Lee los datos directamente de la API.</p>
+<div class="opciones">
+<label>Entrevista<select id="cual">@@OPCIONES@@<option value="">Todas</option></select></label>
+<label>Qué revisar<select id="alcance">
+<option value="malas">Solo falsas y engañosas</option>
+<option value="nv">Solo las no verificables</option>
+<option value="todas">Todas las afirmaciones</option>
+<option value="muestra">Una muestra al azar de 15</option>
+</select></label>
+</div>
+<pre id="encargo"></pre>
+<div class="botones"><button id="copiar" type="button">Copiar encargo</button><a id="claude" target="_blank" rel="noopener noreferrer">Abrir en Claude ↗</a><a id="chatgpt" target="_blank" rel="noopener noreferrer">Abrir en ChatGPT ↗</a></div>
+<p class="nota">Una IA también se equivoca: pídele siempre los enlaces y ábrelos. Si su respuesta contradice un veredicto con una fuente sólida, <a href="@@REPO@@/issues" target="_blank" rel="noopener noreferrer">abre una incidencia</a> con el identificador de la afirmación y lo corregimos.</p>
+
+<h2>Qué significa cada veredicto</h2>
+@@LEYENDA@@
+</main>
+<script>
+const B = "@@BASE@@";
+const ALCANCE = {
+  malas: 'las que tienen "veredicto" igual a "falso" o "enganoso"',
+  nv: 'las que tienen "veredicto" igual a "no_verificable" (intenta encontrar la prueba que faltó)',
+  todas: "todas",
+  muestra: "una muestra al azar de 15, con al menos 5 falsas o engañosas",
+};
+function encargo() {
+  const slug = document.getElementById("cual").value, alcance = document.getElementById("alcance").value;
+  const datos = slug ? `${B}/api/v1/${slug}.json` : `${B}/api/v1/afirmaciones.json`;
+  const texto = slug ? `${B}/api/v1/${slug}/transcripcion.txt` : `${B}/api/v1/{entrevista}/transcripcion.txt (el campo "entrevista" de cada afirmación da el nombre)`;
+  return `Eres un verificador de datos independiente, riguroso e imparcial. Vas a auditar una verificación hecha con IA de las entrevistas de Jordi Wild (The Wild Project) a los candidatos a las elecciones generales españolas del 29 de noviembre de 2026.
+
+DATOS (JSON público, sin clave)
+- Guía de la API: ${B}/llms.txt
+- Afirmaciones verificadas: ${datos}
+- Transcripción con marcas de tiempo: ${texto}
+Cada afirmación trae: id, minuto, video_url, cita (literal), afirmacion, veredicto, explicacion, confianza y fuentes[{titulo, url}]. Las definiciones de los veredictos están en el campo "veredictos" del JSON.
+
+TAREA
+Descarga las afirmaciones y revisa ${ALCANCE[alcance]}. Para cada una:
+1. Cita: localízala en la transcripción cerca de su minuto. Comprueba que es literal, que la dice el entrevistado y no Jordi Wild, y que el contexto no le cambia el sentido.
+2. Fuentes: abre cada fuentes[].url. Anota si existe y si dice de verdad lo que la explicacion le atribuye.
+3. Contraste: busca al menos dos fuentes independientes más. Prioriza las primarias y oficiales (INE, Eurostat, BOE, Banco de España, Congreso, ministerios, resoluciones judiciales) y prensa de distintas líneas editoriales.
+4. Veredicto: decide el tuyo con las mismas definiciones y compáralo con el publicado.
+
+REGLAS
+- La misma vara de medir para todos los partidos.
+- No te fíes de tu memoria para hechos de 2025 y 2026: búscalos.
+- No inventes enlaces ni datos. Si no puedes abrir una fuente, dilo.
+- Si no hay prueba suficiente, el veredicto es "no_verificable"; no fuerces ni "falso" ni "verdadero".
+- Admite el redondeo normal del lenguaje oral. "Falso" no implica intención de mentir.
+
+ENTREGA
+1. Una tabla: id | minuto | veredicto publicado | tu veredicto | ¿coinciden? | motivo en una frase | enlaces.
+2. Las discrepancias, de más a menos grave, con la fuente que las sustenta.
+3. Las fuentes rotas, inaccesibles o mal atribuidas.
+4. Una frase final: cuántas has revisado, en cuántas coincides y cuánto te fías del conjunto.
+Si encuentras un error claro, redacta la incidencia para @@REPO@@/issues con el id, el minuto y la fuente.`;
+}
+function pintar() {
+  const t = encargo();
+  document.getElementById("encargo").textContent = t;
+  document.getElementById("claude").href = "https://claude.ai/new?q=" + encodeURIComponent(t);
+  document.getElementById("chatgpt").href = "https://chatgpt.com/?q=" + encodeURIComponent(t);
+}
+document.getElementById("cual").onchange = pintar;
+document.getElementById("alcance").onchange = pintar;
+document.getElementById("copiar").onclick = ev => {
+  const b = ev.currentTarget, t = encargo();
+  const hecho = () => { b.textContent = "Copiado: pégalo en tu IA"; setTimeout(() => b.textContent = "Copiar encargo", 2200); };
+  if (navigator.clipboard) navigator.clipboard.writeText(t).then(hecho, () => prompt("Copia este texto:", t)); else prompt("Copia este texto:", t);
+};
+pintar();
+</script>
+</body>
+</html>
 """
 
 PAGINA_API = """<!doctype html>
@@ -543,11 +688,8 @@ curl -s @@BASE@@/api/v1/@@EJ@@.json \\
 # Recuento por veredicto de todas las entrevistas
 curl -s @@BASE@@/api/v1/entrevistas.json | jq '.entrevistas[] | {invitado, por_veredicto}'</code></pre>
 
-<h2>Encargo de ejemplo para un agente de IA</h2>
-<pre><code>Descarga @@BASE@@/api/v1/@@EJ@@.json. Para cada afirmación con veredicto
-"falso" o "enganoso": abre cada fuentes[].url, comprueba si de verdad respalda la
-explicacion, busca al menos una fuente independiente más y dime en cuáles discrepas
-del veredicto y por qué. Usa video_url para oír el contexto si la cita es ambigua.</code></pre>
+<h2>Encargo para un agente de IA</h2>
+<p>En <a href="/verificalo">Verifícalo tú</a> hay un encargo completo, configurable por entrevista, que usa esta API para auditar los veredictos.</p>
 
 <h2>Condiciones</h2>
 <p>Los datos son una verificación asistida por IA, sin revisión de un equipo de periodistas: úsalos como punto de partida y contrasta con las fuentes. «Falso» no implica intención de mentir. Los ficheros se regeneran cuando cambia algún dato (campo <code>generado</code>). Si encuentras un error, abre una incidencia en <a href="@@REPO@@/issues" target="_blank" rel="noopener noreferrer">GitHub</a>; el método completo está en <a href="@@REPO@@/blob/main/METODO.md" target="_blank" rel="noopener noreferrer">METODO.md</a>.</p>
@@ -573,10 +715,15 @@ a { color:#000; }
 main.ancho { max-width:860px; }
 h1 { font:700 clamp(30px,6vw,48px)/1.06 var(--serif); letter-spacing:-0.02em; margin:40px 0 14px; text-wrap:balance; }
 .entrada { font-size:17px; max-width:62ch; margin:0 0 30px; }
-.entrevista { border:2px solid #000; padding:20px 22px; margin-bottom:18px; }
+.tu { margin:-10px 0 30px; padding:12px 14px; border:1.5px solid #000; font-size:15px; max-width:62ch; }
+.entrevista { border:2px solid #000; padding:22px 24px; margin-bottom:18px; display:grid; grid-template-columns:76px minmax(0,1fr); gap:0 22px; align-items:start; }
+.logo { width:76px; height:76px; object-fit:contain; display:block; }
+.logo.sin { display:grid; place-items:center; border:2px solid #000; font:700 24px/1 var(--serif); }
+.entrevista.off .logo { opacity:.45; }
+.partido { margin:0 0 6px; font-size:15px; font-weight:700; }
 .entrevista.off { border:1px dashed #999; color:#666; }
-.prog { margin:0; font-size:12px; text-transform:uppercase; letter-spacing:.08em; color:#666; }
-.entrevista h2 { font:700 30px/1.15 var(--serif); margin:4px 0 8px; } .entrevista h2 a { text-decoration:none; }
+.prog { margin:0 0 12px; font-size:12px; text-transform:uppercase; letter-spacing:.08em; color:#666; }
+.entrevista h2 { font:700 32px/1.1 var(--serif); margin:0 0 2px; } .entrevista h2 a { text-decoration:none; }
 .num { margin:0; font-size:17px; } .num b { font:700 34px/1 var(--serif); margin-right:4px; }
 .des { margin:4px 0 14px; font-size:13.5px; font-weight:600; }
 .entrevista ul { list-style:none; margin:6px 0 16px; padding:0; columns:2; column-gap:28px; font-size:14.5px; }
@@ -590,7 +737,7 @@ h1 { font:700 clamp(30px,6vw,48px)/1.06 var(--serif); letter-spacing:-0.02em; ma
 .acc { margin:0; display:flex; flex-wrap:wrap; gap:8px 22px; } .acc a { font-weight:700; text-underline-offset:3px; }
 footer { border-top:3px solid #000; margin-top:48px; padding:24px 0 64px; font-size:14.5px; }
 footer p { max-width:68ch; }
-@media (max-width:640px) { .entrevista ul { columns:1; } }
+@media (max-width:560px) { .entrevista { grid-template-columns:52px minmax(0,1fr); gap:0 14px; padding:16px; } .logo { width:52px; height:52px; } .entrevista h2 { font-size:26px; } }
 @@CSS_MENU@@
 </style>
 </head>
@@ -599,23 +746,8 @@ footer p { max-width:68ch; }
 <main class="ancho">
 <h1>Las entrevistas de The Wild Project, comprobadas dato a dato</h1>
 <p class="entrada">Jordi Wild ha entrevistado a los candidatos a la presidencia del Gobierno para las elecciones del 29 de noviembre de 2026. Transcribimos cada entrevista entera, separamos las afirmaciones que se pueden comprobar y las contrastamos con fuentes públicas, con el mismo método y la misma vara de medir para todos.</p>
+<p class="tu"><a href="/verificalo"><b>Puedes verificarlo tú</b> →</a> Cada dato enlaza su fuente y el minuto del vídeo, y hay un encargo listo para que cualquier IA lo revise por su cuenta.</p>
 @@TARJETAS@@
-<section class="contrastar">
-<h2>Contrástalo tú mismo</h2>
-<p>No te fíes de nosotros: todo lo que hay aquí se puede comprobar.</p>
-<ol>
-<li><b>En cada afirmación.</b> El minuto abre el vídeo en el segundo exacto, las fuentes están enlazadas una a una y un botón copia un encargo listo para pegar en cualquier IA y que la revise por su cuenta.</li>
-<li><b>Con la API abierta.</b> Todas las afirmaciones, veredictos, fuentes y transcripciones en JSON, sin clave: <a href="/api">documentación</a> · <a href="/api/v1/afirmaciones.json">afirmaciones.json</a> · <a href="/llms.txt">llms.txt</a>.</li>
-<li><b>Con el código.</b> El método, los encargos literales que recibieron los agentes de IA y los datos en bruto están en <a href="@@REPO@@" target="_blank" rel="noopener noreferrer">GitHub</a>. Si encuentras un error, <a href="@@REPO@@/issues" target="_blank" rel="noopener noreferrer">abre una incidencia</a>.</li>
-</ol>
-<p class="rot">Encargo para un agente de IA</p>
-<pre id="encargo">Descarga https://verificacion-podcast.vercel.app/api/v1/afirmaciones.json.
-Para cada afirmación con veredicto "falso" o "enganoso": abre cada fuentes[].url y
-comprueba si de verdad respalda la explicacion, busca al menos una fuente independiente
-más y dime en cuáles discrepas del veredicto y por qué, con enlaces. Usa video_url para
-oír el contexto si la cita es ambigua. Aplica la misma vara de medir a todos los invitados.</pre>
-<button class="copiar" type="button" onclick="navigator.clipboard.writeText(document.getElementById('encargo').textContent).then(()=>{this.textContent='Copiado'})">Copiar encargo</button>
-</section>
 </main>
 <footer><div class="ancho">
 @@LEYENDA@@
@@ -884,7 +1016,14 @@ ${t("details p") || t(".porque")}
 Fuentes que cita:
 ${fuentes || "(ninguna)"}
 
-Comprueba por tu cuenta si ese veredicto es correcto: abre esas fuentes y mira si de verdad dicen lo que se les atribuye, busca al menos dos fuentes independientes más (mejor primarias y oficiales) y ten en cuenta el contexto de la frase. Dime si estás de acuerdo con el veredicto, en qué discrepas y con qué enlaces lo sustentas. Si no hay pruebas suficientes, dilo.`;
+Datos completos en JSON: @@BASE@@/api/v1/@@SLUG@@.json (id "@@SLUG@@-${h.id}"). Transcripción para ver el contexto: @@BASE@@/api/v1/@@SLUG@@/transcripcion.txt
+
+Haz esto:
+1. Comprueba en la transcripción que la cita es literal, que la dice el entrevistado y que el contexto no le cambia el sentido.
+2. Abre cada fuente y dime si existe y si de verdad dice lo que la justificación le atribuye.
+3. Busca al menos dos fuentes independientes más, mejor primarias y oficiales. No te fíes de tu memoria para hechos de 2025 y 2026: búscalo.
+4. Da tu propio veredicto (verdadero, casi cierto, engañoso, falso o no verificable) y di si coincide con el publicado, en qué discrepas y con qué enlaces lo sustentas.
+No inventes enlaces. Si no puedes abrir una fuente o no hay pruebas suficientes, dilo.`;
   const hecho = () => { b.textContent = "Copiado: pégalo en tu IA"; b.classList.add("hecho");
     setTimeout(() => { b.textContent = "Copiar encargo para contrastarlo con una IA"; b.classList.remove("hecho"); }, 2200); };
   if (navigator.clipboard) navigator.clipboard.writeText(texto).then(hecho, () => prompt("Copia este texto:", texto));

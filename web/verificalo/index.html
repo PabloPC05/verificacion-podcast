@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light only">
+<title>Verifícalo tú · Verificación The Wild Project</title>
+<meta name="description" content="Cómo comprobar por tu cuenta cada veredicto: vídeo, fuentes, datos abiertos y un encargo listo para que cualquier IA audite la verificación.">
+<style>
+:root { --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; }
+* { box-sizing:border-box; }
+body { margin:0; background:#fff; color:#000; font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; }
+a { color:#000; }
+.ancho { max-width:1120px; margin:0 auto; padding:0 16px; }
+main.ancho { max-width:820px; padding-bottom:72px; }
+h1 { font:700 clamp(30px,6vw,48px)/1.06 var(--serif); letter-spacing:-0.02em; margin:38px 0 12px; text-wrap:balance; }
+.entrada { font-size:17px; max-width:62ch; }
+main > h2 { font:700 24px/1.2 var(--serif); margin:44px 0 10px; padding-top:12px; border-top:3px solid #000; }
+p, li { max-width:68ch; }
+.vias { list-style:none; padding:0; margin:18px 0 0; display:grid; gap:12px; }
+.vias li { border:2px solid #000; padding:14px 16px; max-width:none; display:grid; grid-template-columns:44px minmax(0,1fr); gap:0 14px; }
+.vias li > b { font:700 34px/1 var(--serif); }
+.vias h3 { margin:0 0 2px; font-size:17px; } .vias p { margin:0; font-size:15px; }
+.opciones { display:flex; flex-wrap:wrap; gap:10px 18px; margin:14px 0; font-size:14.5px; font-weight:600; }
+.opciones select { font:inherit; font-weight:500; border:1.5px solid #000; background:#fff; padding:5px 8px; margin-left:6px; border-radius:0; }
+pre { background:#000; color:#fff; padding:16px 18px; white-space:pre-wrap; overflow-wrap:anywhere; font:13px/1.6 ui-monospace,SFMono-Regular,Menlo,monospace; margin:0 0 12px; }
+.botones { display:flex; flex-wrap:wrap; gap:8px; }
+.botones button, .botones a { font:inherit; font-size:14px; font-weight:600; background:#fff; color:#000; border:2px solid #000; padding:7px 14px; cursor:pointer; text-decoration:none; }
+.botones button { background:#000; color:#fff; }
+.botones a:hover { background:#000; color:#fff; }
+.nota { font-size:14px; color:#444; }
+code { font:13.5px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace; background:#f2f2f2; padding:1px 5px; }
+
+html { scroll-behavior:smooth; scroll-padding-top:calc(var(--menu, 48px) + 64px); }
+[hidden] { display:none !important; }
+.menu { position:sticky; top:0; z-index:10; background:#fff; border-bottom:2px solid #000; }
+.menu .ancho { padding-top:9px; padding-bottom:9px; position:relative; }
+.m1 { display:flex; flex-wrap:wrap; align-items:center; gap:4px 24px; font-size:14.5px; }
+.m1 a, .desp summary { color:#000; text-decoration:none; font-weight:600; padding:3px 0; border-bottom:2px solid transparent; }
+.m1 > a:hover, .desp.actual summary, .desp[open] summary, .desp summary:hover { border-bottom-color:#000; }
+.m1 .sello { font:700 17px/1.2 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; }
+.m1 .off { color:#999; } .m1 .dcha { margin-left:auto; }
+.rot { font-size:10.5px; font-weight:700; text-transform:uppercase; letter-spacing:.09em; color:#666; flex:none; }
+.desp { position:relative; margin:0; padding:0; border:0; font-size:inherit; }
+.desp summary { list-style:none; cursor:pointer; user-select:none; }
+.desp summary::-webkit-details-marker { display:none; }
+.desp summary::after { content:" ▾"; } .desp[open] summary::after { content:" ▴"; }
+.desp .lista { position:absolute; top:calc(100% + 10px); left:0; z-index:20; background:#fff; border:2px solid #000; box-shadow:5px 5px 0 #000;
+  width:max-content; min-width:260px; max-width:min(92vw,470px); max-height:74vh; overflow-y:auto; padding:6px 0; }
+.desp .lista a { display:flex; justify-content:space-between; align-items:baseline; gap:16px; padding:7px 16px;
+  font-size:14.5px; font-weight:500; border:0; line-height:1.35; }
+.desp .lista a.fuerte { font-weight:700; padding:9px 16px; }
+.desp .lista a.fuerte small { font-weight:500; color:#666; font-size:12px; white-space:nowrap; }
+.desp .lista .rot { margin:8px 0 2px; padding:9px 16px 0; border-top:1px solid #000; }
+.desp .lista a:hover { background:#000; color:#fff; } .desp .lista a:hover small { color:#ccc; }
+.desp .lista b { color:#c0271e; font-weight:700; font-variant-numeric:tabular-nums; }
+.desp .lista a:hover b { color:#fff; } .desp .lista a.off { opacity:.4; }
+.leyenda-f h2 { font:700 22px/1.2 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; margin:0 0 4px; padding:0; border:0; }
+.ley-intro { margin:0 0 14px; font-size:14.5px; color:#444; }
+.leyenda-f dl { margin:0 0 16px; border-top:2px solid #000; }
+.leyenda-f dl div { display:grid; grid-template-columns:150px minmax(0,1fr); gap:0 16px; align-items:center; padding:9px 0; border-bottom:1px solid #000; }
+.leyenda-f dt { background:var(--tono); color:#fff; font-size:12.5px; font-weight:700; text-transform:uppercase; letter-spacing:.07em;
+  padding:7px 10px; text-align:center; }
+.leyenda-f dd { margin:0; font-size:15px; line-height:1.4; }
+.ley-notas { list-style:none; margin:0; padding:0; font-size:14.5px; display:grid; gap:4px; }
+@media (max-width:560px) { .leyenda-f dl div { grid-template-columns:1fr; gap:6px; } .leyenda-f dt { justify-self:start; } }
+.filtros { position:sticky; top:var(--menu, 48px); z-index:5; background:#fff; border-bottom:1px solid #000; padding:9px 0; }
+.fila { display:flex; flex-wrap:wrap; align-items:center; gap:6px 8px; }
+.fila button { font:inherit; font-size:12.5px; font-weight:600; color:#000; background:#fff; border:1.5px solid #000;
+  border-radius:999px; padding:3px 11px; cursor:pointer; display:inline-flex; align-items:center; gap:6px; }
+.fila b { font-weight:500; opacity:.7; font-variant-numeric:tabular-nums; }
+.fila button[data-v] { color:var(--tono); border-color:var(--tono); }
+.fila button[data-v] i { width:8px; height:8px; border-radius:50%; background:currentColor; }
+.fila button[aria-pressed=true] { background:#000; color:#fff; }
+.fila button[data-v][aria-pressed=true] { background:var(--tono); color:#fff; }
+.fila button[data-solo] { margin-left:auto; }
+@media (max-width:700px) { .m1 { gap:4px 16px; font-size:14px; } .m1 .dcha { margin-left:0; }
+  .desp { position:static; } .desp .lista { left:16px; right:16px; top:auto; margin-top:10px; width:auto; max-width:none; }
+  .fila .rot { display:none; } .fila button { font-size:12px; padding:2px 9px; } .fila button[data-solo] { margin-left:0; } }
+
+</style>
+</head>
+<body>
+<header class="menu"><div class="ancho"><div class="m1"><a class="sello" href="/" title="Todas las entrevistas">Verificación</a><details class="desp"><summary>Pedro Sánchez</summary><div class="lista"><a class="fuerte" href="/sanchez"><span>Línea temporal</span><small>30 falsas o engañosas de 157</small></a><a class="fuerte" href="/sanchez/transcripcion"><span>Transcripción completa</span></a><p class="rot">Temas</p><a href="/sanchez#tema-2" data-tema="tema-2"><span>Por qué Pedro Sánchez quiere seguir al frente del Gobierno</span></a><a href="/sanchez#tema-3" data-tema="tema-3"><span>Insultos, polarización y crispación en la política española</span><b>1</b></a><a href="/sanchez#tema-4" data-tema="tema-4"><span>Accidentes ferroviarios y responsabilidades del Gobierno</span><b>2</b></a><a href="/sanchez#tema-5" data-tema="tema-5"><span>Crisis de Ceuta, Marruecos y gestión de la frontera</span><b>7</b></a><a href="/sanchez#tema-6" data-tema="tema-6"><span>Inmigración, integración y futuro demográfico de España</span><b>3</b></a><a href="/sanchez#tema-7" data-tema="tema-7"><span>Ábalos, Koldo, Cerdán y los casos que afectan al PSOE</span><b>3</b></a><a href="/sanchez#tema-8" data-tema="tema-8"><span>Leire Díez, Zapatero y las investigaciones abiertas</span><b>3</b></a><a href="/sanchez#tema-9" data-tema="tema-9"><span>Vivienda, alquileres y acceso de los jóvenes a una casa</span><b>6</b></a><a href="/sanchez#tema-10" data-tema="tema-10"><span>Amnistía, Bildu, Pablo Iglesias y los cambios de opinión de Sánchez</span><b>5</b></a><a href="/sanchez#tema-12" data-tema="tema-12"><span>Alegato final de Pedro Sánchez y mensaje a los votantes</span></a></div></details><span class="off" title="Verificación en curso">Alberto Núñez Feijóo</span><span class="off" title="Verificación en curso">Ada Colau</span><a class="dcha" href="/verificalo">Verifícalo tú</a><a href="/api">API</a><a href="https://github.com/PabloPC05/verificacion-podcast" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></div></header><script>
+document.addEventListener("click", ev => document.querySelectorAll("details.desp[open]").forEach(d => {
+  if (!d.contains(ev.target) || ev.target.closest(".lista a")) d.open = false;
+}));
+document.addEventListener("keydown", ev => { if (ev.key === "Escape") document.querySelectorAll("details.desp[open]").forEach(d => d.open = false); });
+const medirMenu = () => document.documentElement.style.setProperty("--menu", document.querySelector(".menu").offsetHeight + "px");
+medirMenu(); addEventListener("resize", medirMenu);
+</script>
+<main class="ancho">
+<h1>Verifícalo tú</h1>
+<p class="entrada">Esta verificación la han hecho modelos de IA y no la ha revisado un equipo de periodistas. No hace falta que te la creas: todo está publicado para que lo compruebes, a mano o con tu propia IA.</p>
+
+<ol class="vias">
+<li><b>1</b><div><h3>Mira el momento exacto</h3><p>En la línea temporal, el minuto de cada afirmación abre el vídeo de YouTube en ese segundo. Escucha la frase y su contexto.</p></div></li>
+<li><b>2</b><div><h3>Abre las fuentes</h3><p>Cada panel lista las fuentes con su enlace. «Explicación completa» detalla qué dato sale de cada una.</p></div></li>
+<li><b>3</b><div><h3>Pásaselo a una IA</h3><p>Cada panel tiene un botón que copia un encargo para esa afirmación concreta. Para auditar una entrevista entera, usa el encargo de abajo.</p></div></li>
+<li><b>4</b><div><h3>Usa los datos abiertos</h3><p>Afirmaciones, veredictos, fuentes y transcripciones están en la <a href="/api">API</a> en JSON, sin clave. El método y los encargos originales, en <a href="https://github.com/PabloPC05/verificacion-podcast" target="_blank" rel="noopener noreferrer">GitHub</a>.</p></div></li>
+</ol>
+
+<h2>Encargo para auditar una entrevista con una IA</h2>
+<p>Elige qué quieres revisar, copia el texto y pégalo en un asistente que pueda navegar por internet (Claude, ChatGPT, Gemini, Perplexity…). Lee los datos directamente de la API.</p>
+<div class="opciones">
+<label>Entrevista<select id="cual"><option value="sanchez">Pedro Sánchez</option><option value="">Todas</option></select></label>
+<label>Qué revisar<select id="alcance">
+<option value="malas">Solo falsas y engañosas</option>
+<option value="nv">Solo las no verificables</option>
+<option value="todas">Todas las afirmaciones</option>
+<option value="muestra">Una muestra al azar de 15</option>
+</select></label>
+</div>
+<pre id="encargo"></pre>
+<div class="botones"><button id="copiar" type="button">Copiar encargo</button><a id="claude" target="_blank" rel="noopener noreferrer">Abrir en Claude ↗</a><a id="chatgpt" target="_blank" rel="noopener noreferrer">Abrir en ChatGPT ↗</a></div>
+<p class="nota">Una IA también se equivoca: pídele siempre los enlaces y ábrelos. Si su respuesta contradice un veredicto con una fuente sólida, <a href="https://github.com/PabloPC05/verificacion-podcast/issues" target="_blank" rel="noopener noreferrer">abre una incidencia</a> con el identificador de la afirmación y lo corregimos.</p>
+
+<h2>Qué significa cada veredicto</h2>
+<section class="leyenda-f" aria-label="Leyenda de veredictos">
+<h2>Leyenda</h2>
+<p class="ley-intro">El color del minuto, del punto de la línea y de la etiqueta indica el veredicto de cada afirmación.</p>
+<dl>
+<div style="--tono:#c0271e"><dt>Falso</dt><dd><b>Los datos lo contradicen.</b> Incluye errores y lapsus: no implica intención de mentir.</dd></div>
+<div style="--tono:#c26a00"><dt>Engañoso</dt><dd><b>Parte de un dato real, pero confunde.</b> Omite contexto, mezcla periodos o lleva a una conclusión que no se sigue.</dd></div>
+<div style="--tono:#5a7d10"><dt>Casi cierto</dt><dd><b>Cierto en lo esencial.</b> Tiene una imprecisión menor, como un redondeo o una fecha aproximada.</dd></div>
+<div style="--tono:#1c7c45"><dt>Verdadero</dt><dd><b>Los datos lo confirman.</b></dd></div>
+<div style="--tono:#777"><dt>No verificable</dt><dd><b>Sin prueba pública suficiente.</b> No se puede confirmar ni desmentir, o la búsqueda automática se quedó corta.</dd></div>
+</dl>
+<ul class="ley-notas">
+<li><b>Se evalúa:</b> hechos comprobables que afirma el entrevistado (cifras, fechas, leyes, lo que dijo o hizo alguien).</li>
+<li><b>No se evalúa:</b> opiniones, promesas, predicciones ni lo que dice el entrevistador.</li>
+<li><b>Confianza</b> (alta, media, baja): cuánta prueba respalda el veredicto.</li>
+</ul>
+</section>
+</main>
+<script>
+const B = "https://verificacion-podcast.vercel.app";
+const ALCANCE = {
+  malas: 'las que tienen "veredicto" igual a "falso" o "enganoso"',
+  nv: 'las que tienen "veredicto" igual a "no_verificable" (intenta encontrar la prueba que faltó)',
+  todas: "todas",
+  muestra: "una muestra al azar de 15, con al menos 5 falsas o engañosas",
+};
+function encargo() {
+  const slug = document.getElementById("cual").value, alcance = document.getElementById("alcance").value;
+  const datos = slug ? `${B}/api/v1/${slug}.json` : `${B}/api/v1/afirmaciones.json`;
+  const texto = slug ? `${B}/api/v1/${slug}/transcripcion.txt` : `${B}/api/v1/{entrevista}/transcripcion.txt (el campo "entrevista" de cada afirmación da el nombre)`;
+  return `Eres un verificador de datos independiente, riguroso e imparcial. Vas a auditar una verificación hecha con IA de las entrevistas de Jordi Wild (The Wild Project) a los candidatos a las elecciones generales españolas del 29 de noviembre de 2026.
+
+DATOS (JSON público, sin clave)
+- Guía de la API: ${B}/llms.txt
+- Afirmaciones verificadas: ${datos}
+- Transcripción con marcas de tiempo: ${texto}
+Cada afirmación trae: id, minuto, video_url, cita (literal), afirmacion, veredicto, explicacion, confianza y fuentes[{titulo, url}]. Las definiciones de los veredictos están en el campo "veredictos" del JSON.
+
+TAREA
+Descarga las afirmaciones y revisa ${ALCANCE[alcance]}. Para cada una:
+1. Cita: localízala en la transcripción cerca de su minuto. Comprueba que es literal, que la dice el entrevistado y no Jordi Wild, y que el contexto no le cambia el sentido.
+2. Fuentes: abre cada fuentes[].url. Anota si existe y si dice de verdad lo que la explicacion le atribuye.
+3. Contraste: busca al menos dos fuentes independientes más. Prioriza las primarias y oficiales (INE, Eurostat, BOE, Banco de España, Congreso, ministerios, resoluciones judiciales) y prensa de distintas líneas editoriales.
+4. Veredicto: decide el tuyo con las mismas definiciones y compáralo con el publicado.
+
+REGLAS
+- La misma vara de medir para todos los partidos.
+- No te fíes de tu memoria para hechos de 2025 y 2026: búscalos.
+- No inventes enlaces ni datos. Si no puedes abrir una fuente, dilo.
+- Si no hay prueba suficiente, el veredicto es "no_verificable"; no fuerces ni "falso" ni "verdadero".
+- Admite el redondeo normal del lenguaje oral. "Falso" no implica intención de mentir.
+
+ENTREGA
+1. Una tabla: id | minuto | veredicto publicado | tu veredicto | ¿coinciden? | motivo en una frase | enlaces.
+2. Las discrepancias, de más a menos grave, con la fuente que las sustenta.
+3. Las fuentes rotas, inaccesibles o mal atribuidas.
+4. Una frase final: cuántas has revisado, en cuántas coincides y cuánto te fías del conjunto.
+Si encuentras un error claro, redacta la incidencia para https://github.com/PabloPC05/verificacion-podcast/issues con el id, el minuto y la fuente.`;
+}
+function pintar() {
+  const t = encargo();
+  document.getElementById("encargo").textContent = t;
+  document.getElementById("claude").href = "https://claude.ai/new?q=" + encodeURIComponent(t);
+  document.getElementById("chatgpt").href = "https://chatgpt.com/?q=" + encodeURIComponent(t);
+}
+document.getElementById("cual").onchange = pintar;
+document.getElementById("alcance").onchange = pintar;
+document.getElementById("copiar").onclick = ev => {
+  const b = ev.currentTarget, t = encargo();
+  const hecho = () => { b.textContent = "Copiado: pégalo en tu IA"; setTimeout(() => b.textContent = "Copiar encargo", 2200); };
+  if (navigator.clipboard) navigator.clipboard.writeText(t).then(hecho, () => prompt("Copia este texto:", t)); else prompt("Copia este texto:", t);
+};
+pintar();
+</script>
+</body>
+</html>
