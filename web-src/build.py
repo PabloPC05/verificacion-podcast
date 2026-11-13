@@ -16,6 +16,7 @@ import unicodedata
 from pathlib import Path
 from urllib.parse import quote, urlparse
 
+import acceso
 import api_publica
 import estadisticas
 
@@ -84,14 +85,262 @@ def dominio(url):
     return d[4:] if d.startswith("www.") else d
 
 
+# Visor de fuentes: al pulsar una fuente que se puede leer (web-src/acceso.json) se abre un diálogo con solo su
+# texto, sacado con el lector gratuito r.jina.ai, y un botón a la original. No se incrusta la web. Las fuentes que
+# no se pueden leer, y Cmd/Ctrl/clic central, abren pestaña nueva como siempre; sin JavaScript, igual.
+VISOR_FUENTE = r"""<dialog id="visor" aria-labelledby="visor-titulo">
+<div class="v-caja">
+  <header class="v-cab">
+    <div class="v-que"><p class="v-dom" id="visor-dom"></p><h2 id="visor-titulo"></h2></div>
+    <button class="v-x" type="button" data-cerrar aria-label="Cerrar (Esc)">×</button>
+  </header>
+  <div class="v-cuerpo" id="visor-cuerpo" tabindex="-1">
+    <div class="v-estado" id="visor-estado" role="status"></div>
+    <article class="v-texto" id="visor-texto"></article>
+  </div>
+  <footer class="v-pie">
+    <p>Solo el texto de la página, sacado con <a href="https://jina.ai/reader" target="_blank" rel="noopener noreferrer">r.jina.ai</a>. Puede faltar alguna tabla o gráfico: ante la duda, abre la original.</p>
+    <a class="v-ir" id="visor-ir" target="_blank" rel="noopener noreferrer">Ir a la fuente original ↗</a>
+  </footer>
+</div>
+</dialog>
+<style>
+#visor { padding:0; border:0; background:transparent; max-width:none; max-height:none; width:100%; height:100%; margin:0; }
+#visor::backdrop { background:rgba(0,0,0,.55); }
+#visor[open] .v-caja { animation:v-entra .18s ease-out; }
+@keyframes v-entra { from { opacity:0; transform:translateY(10px); } }
+@media (prefers-reduced-motion:reduce) { #visor[open] .v-caja { animation:none; } }
+.v-caja { position:absolute; inset:clamp(12px,3vw,32px); margin:0 auto; max-width:820px; display:flex; flex-direction:column;
+  background:var(--fondo); color:var(--tinta); border:2px solid var(--tinta); border-radius:var(--r-caja,14px); box-shadow:var(--flota); overflow:hidden; }
+.v-cab { display:flex; align-items:flex-start; gap:12px; padding:14px 12px 12px clamp(16px,3vw,24px); border-bottom:2px solid var(--tinta); }
+.v-que { flex:1; min-width:0; }
+.v-dom { margin:0 0 3px; font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--gris); }
+.v-cab h2 { font:700 clamp(18px,2.2vw,21px)/1.25 var(--serif,Georgia,serif); margin:0; text-wrap:balance;
+  overflow:hidden; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; }
+.v-x { flex:none; width:44px; height:44px; font:400 28px/1 sans-serif; background:transparent; color:var(--tinta);
+  border:1.5px solid transparent; border-radius:var(--r-boton,9px); cursor:pointer; }
+.v-x:hover { border-color:var(--tinta); }
+.v-ir { display:inline-flex; align-items:center; flex:none; min-height:44px; padding:0 16px; background:var(--tinta); color:var(--fondo);
+  font-size:14px; font-weight:600; text-decoration:none; border:2px solid var(--tinta); border-radius:var(--r-boton,9px); }
+.v-ir:hover { background:var(--fondo); color:var(--tinta); }
+.v-x:focus-visible, .v-ir:focus-visible { outline:3px solid var(--tinta); outline-offset:2px; }
+.v-cuerpo { position:relative; flex:1; min-height:0; overflow:auto; overscroll-behavior:contain; outline:none; }
+.v-estado:empty { display:none; }
+.v-estado { padding:min(14vh,90px) 20px 28px; text-align:center; font-size:15px; }
+.v-estado h3 { font:700 21px/1.25 var(--serif,Georgia,serif); margin:0 0 8px; }
+.v-estado p { margin:0 auto; max-width:46ch; color:var(--suave); }
+.v-estado .v-ir { margin-top:18px; }
+.v-carga { max-width:68ch; margin:0 auto; text-align:left; }
+.v-carga span { display:block; height:12px; margin:12px 0; border-radius:var(--r-mini,5px); background:var(--claro); animation:v-pulso 1.1s ease-in-out infinite alternate; }
+.v-carga span:nth-child(3n) { width:70%; } .v-carga span:nth-child(4n) { width:85%; }
+@keyframes v-pulso { to { opacity:.4; } }
+@media (prefers-reduced-motion:reduce) { .v-carga span { animation:none; } }
+.v-texto { max-width:68ch; margin:0 auto; padding:clamp(18px,3vw,28px) clamp(16px,3vw,24px) 40px;
+  font:clamp(16px,1.6vw,17px)/1.65 var(--serif,Georgia,serif); overflow-wrap:anywhere; }
+.v-texto:empty { display:none; }
+.v-texto h1, .v-texto h2, .v-texto h3, .v-texto h4 { font-family:inherit; line-height:1.25; margin:1.4em 0 .5em; text-wrap:balance; }
+.v-texto h1 { font-size:25px; } .v-texto h2 { font-size:22px; } .v-texto h3, .v-texto h4 { font-size:18px; }
+.v-texto p, .v-texto ul, .v-texto ol, .v-texto blockquote, .v-texto pre, .v-texto table { margin:0 0 1em; }
+.v-texto blockquote { border-left:3px solid var(--tinta); padding-left:14px; font-style:italic; }
+.v-texto pre { white-space:pre-wrap; font:13px/1.5 ui-monospace,Menlo,monospace; background:var(--codigo); padding:10px 12px; border-radius:var(--r-mini,5px); }
+.v-texto table { border-collapse:collapse; font:13.5px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; display:block; max-width:100%; overflow-x:auto; }
+.v-texto td, .v-texto th { border:1px solid var(--claro); padding:4px 8px; vertical-align:top; }
+.v-texto hr { border:0; border-top:1px solid var(--tinta); margin:1.5em 0; }
+.v-texto a { color:var(--tinta); }
+.v-texto .v-corte { font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; border-top:1px solid var(--tinta); padding-top:10px; }
+.v-pie { display:flex; align-items:center; justify-content:space-between; gap:10px 16px; flex-wrap:wrap;
+  padding:10px 12px 10px clamp(16px,3vw,24px); padding-bottom:max(10px, env(safe-area-inset-bottom)); border-top:2px solid var(--tinta); }
+.v-pie p { flex:1 1 260px; margin:0; font-size:12.5px; color:var(--gris); }
+.v-pie p a { color:inherit; }
+@media (max-width:560px) {
+  .v-caja { inset:0; border:0; border-radius:0; box-shadow:none; }
+  .v-pie .v-ir { flex:1 1 100%; justify-content:center; }
+}
+</style>
+<script>
+(() => {
+  const d = document.getElementById("visor");
+  if (!d || typeof d.showModal !== "function") return;  // navegador antiguo: el enlace abre pestaña como antes
+  const $ = id => document.getElementById(id);
+  const titulo = $("visor-titulo"), dom = $("visor-dom"), ir = $("visor-ir"), cuerpo = $("visor-cuerpo"),
+        estado = $("visor-estado"), texto = $("visor-texto");
+  const LECTOR = "https://r.jina.ai/", MAX = 150000;
+  const cache = new Map();
+  let actual = null, empujado = false;
+
+  // Si la web devuelve un error (403 de un CDN, «Just a moment…» de Cloudflare…), el lector lo trae como si fuera
+  // el artículo: se descarta.
+  const ERROR = /^(\d{3}\b|the request could not be satisfied|access denied|just a moment|attention required|forbidden|not found|página no encontrada|error)/i;
+  const espera = ms => new Promise(r => setTimeout(r, ms));
+  function pedir(url, intentos = 2) {
+    return fetch(LECTOR + url, { headers: { "Accept": "application/json", "X-Retain-Images": "none",
+        "X-Remove-Selector": "header, nav, footer, aside, form, [role=navigation], [aria-hidden=true]" } })
+      .then(r => {
+        if (r.status === 429 && intentos > 1)  // límite de 20 por minuto del lector gratuito
+          return r.json().catch(() => ({})).then(j => espera(1000 * Math.min(8, (j.retryAfter || 3) + 1))).then(() => pedir(url, intentos - 1));
+        return r.ok ? r.json().then(j => {
+          const c = j && j.data;
+          if (!c || !(c.content || "").trim() || c.httpStatus >= 400 || /error \d{3}/i.test(c.warning || "")
+              || ERROR.test((c.title || "").trim()) || c.content.trim().length < 200) throw new Error("sin texto");
+          return c;
+        }) : Promise.reject(new Error("HTTP " + r.status));
+      });
+  }
+  function leer(url) {
+    if (!cache.has(url)) {
+      const p = pedir(url);
+      p.catch(() => cache.delete(url));
+      cache.set(url, p);
+    }
+    return cache.get(url);
+  }
+
+  // Markdown -> DOM sin innerHTML: el contenido es de terceros.
+  const seguro = u => { try { const x = new URL(u, actual); return /^https?:$/.test(x.protocol) ? x.href : null; } catch { return null; } };
+  function enLinea(padre, s) {
+    const re = /\[([^\]]*)\]\(([^)\s]+)(?:\s+"[^"]*")?\)|\*\*([^*]+)\*\*|__([^_]+)__|\*([^*\s][^*]*)\*|`([^`]+)`/g;
+    let i = 0, m;
+    while ((m = re.exec(s))) {
+      if (m.index > i) padre.append(s.slice(i, m.index));
+      if (m[2] !== undefined) {
+        const t = m[1].trim(), h = seguro(m[2]);
+        if (t) { if (h) { const a = document.createElement("a"); a.href = h; a.target = "_blank"; a.rel = "noopener noreferrer"; enLinea(a, t); padre.append(a); } else enLinea(padre, t); }
+      } else if (m[3] || m[4]) { const b = document.createElement("strong"); enLinea(b, m[3] || m[4]); padre.append(b); }
+      else if (m[5]) { const em = document.createElement("em"); enLinea(em, m[5]); padre.append(em); }
+      else { const c = document.createElement("code"); c.textContent = m[6]; padre.append(c); }
+      i = re.lastIndex;
+    }
+    if (i < s.length) padre.append(s.slice(i));
+  }
+  const el = (tag, txt) => { const n = document.createElement(tag); if (txt != null) enLinea(n, txt); return n; };
+  function pintarMd(md, raiz) {
+    const lineas = md.replace(/\r/g, "").split("\n");
+    let parrafo = [], lista = null, tipo = "";
+    const cerrar = () => {
+      if (parrafo.length) { raiz.append(el("p", parrafo.join(" "))); parrafo = []; }
+      lista = null; tipo = "";
+    };
+    for (let k = 0; k < lineas.length; k++) {
+      const l = lineas[k], t = l.trim();
+      if (!t) { cerrar(); continue; }
+      if (/^```/.test(t)) {
+        cerrar(); const pre = document.createElement("pre"), buf = [];
+        while (++k < lineas.length && !/^```/.test(lineas[k].trim())) buf.push(lineas[k]);
+        pre.textContent = buf.join("\n"); raiz.append(pre); continue;
+      }
+      let m;
+      if ((m = t.match(/^(#{1,6})\s+(.*)$/))) { cerrar(); raiz.append(el("h" + Math.min(4, m[1].length + 1), m[2].replace(/#+$/, ""))); continue; }
+      if (k + 1 < lineas.length && /^(=+|-+)$/.test(lineas[k + 1].trim()) && !parrafo.length) { cerrar(); raiz.append(el(lineas[k + 1].trim()[0] === "=" ? "h2" : "h3", t)); k++; continue; }
+      if (/^([-*_])(\s*\1){2,}$/.test(t)) { cerrar(); raiz.append(document.createElement("hr")); continue; }
+      if (t[0] === "|") {
+        cerrar(); const tabla = document.createElement("table");
+        for (; k < lineas.length && lineas[k].trim()[0] === "|"; k++) {
+          const f = lineas[k].trim();
+          if (/^\|[\s:|-]+\|$/.test(f)) continue;
+          const tr = document.createElement("tr");
+          f.replace(/^\||\|$/g, "").split("|").forEach(c => tr.append(el("td", c.trim())));
+          tabla.append(tr);
+        }
+        k--; raiz.append(tabla); continue;
+      }
+      if (t[0] === ">") { cerrar(); raiz.append(el("blockquote", t.replace(/^>\s?/, ""))); continue; }
+      if ((m = t.match(/^([-*+]|\d+[.)])\s+(.*)$/))) {
+        const nuevo = /\d/.test(m[1][0]) ? "ol" : "ul";
+        if (parrafo.length) { raiz.append(el("p", parrafo.join(" "))); parrafo = []; }
+        if (!lista || tipo !== nuevo) { lista = document.createElement(nuevo); tipo = nuevo; raiz.append(lista); }
+        if (m[2].replace(/\[\]\([^)]*\)/g, "").trim()) lista.append(el("li", m[2]));
+        continue;
+      }
+      if (lista && /^\s{2,}/.test(l) && lista.lastChild) { lista.lastChild.append(" "); enLinea(lista.lastChild, t); continue; }
+      lista = null; tipo = "";
+      parrafo.push(t);
+    }
+    cerrar();
+  }
+
+  function cargando() {
+    estado.innerHTML = '<div class="v-carga" aria-label="Cargando"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>';
+  }
+  function fallo() {
+    estado.textContent = "";
+    const h = document.createElement("h3"), p = document.createElement("p");
+    h.textContent = "Ahora mismo no se puede leer desde aquí";
+    p.textContent = "El lector no ha podido sacar el texto de esta web. Ábrela en su web: es un clic.";
+    const a = ir.cloneNode(true); a.removeAttribute("id");
+    estado.append(h, p, a);
+  }
+
+  function abrir(a) {
+    actual = a.href;
+    const host = new URL(actual).hostname.replace(/^www\./, ""), propio = a.textContent.trim();
+    dom.textContent = host;
+    titulo.textContent = propio || host;
+    ir.href = actual;
+    document.documentElement.style.overflow = "hidden";
+    if (!d.open) d.showModal();
+    if (!empujado) { history.pushState({ visor: 1 }, ""); empujado = true; }
+    texto.textContent = ""; cargando(); cuerpo.scrollTop = 0;
+    d.querySelector(".v-x").focus();
+    const url = actual;
+    leer(url).then(c => {
+      if (url !== actual) return;
+      estado.textContent = "";
+      if (!propio && c.title) titulo.textContent = c.title;
+      let md = c.content;
+      const corto = md.length > MAX;
+      if (corto) md = md.slice(0, md.lastIndexOf("\n", MAX));
+      pintarMd(md, texto);
+      if (corto) { const p = document.createElement("p"); p.className = "v-corte"; p.textContent = "El documento sigue. Ábrelo en su web para leerlo entero."; texto.append(p); }
+    }, () => { if (url === actual) fallo(); });
+  }
+  function cerrar() {
+    if (!d.open) return;
+    d.close();
+    document.documentElement.style.overflow = "";
+    actual = null;
+    if (empujado) { empujado = false; history.back(); }
+  }
+
+  document.addEventListener("click", ev => {
+    const a = ev.target.closest("a[data-lectura]");  // sin data-lectura: no se puede leer aquí, pestaña nueva
+    if (!a || ev.defaultPrevented || ev.button !== 0 || ev.metaKey || ev.ctrlKey || ev.shiftKey || ev.altKey) return;
+    ev.preventDefault();
+    abrir(a);
+  });
+  // Precarga al pasar el ratón por encima, para que al pulsar ya esté.
+  let reloj;
+  document.addEventListener("pointerover", ev => {
+    const a = ev.target.closest && ev.target.closest("a[data-lectura]");
+    clearTimeout(reloj);
+    if (a && ev.pointerType === "mouse") reloj = setTimeout(() => leer(a.href), 180);
+  });
+  d.addEventListener("click", ev => {
+    if (ev.target.closest("[data-cerrar]")) return cerrar();
+    if (ev.target === d) cerrar();  // clic en el fondo
+  });
+  d.addEventListener("cancel", ev => { ev.preventDefault(); cerrar(); });  // Esc
+  addEventListener("popstate", () => { if (d.open) { empujado = false; cerrar(); } });
+})();
+</script>"""
+
+
+def enlace_fuente(f):
+    """Enlace a una fuente: abre el visor si se puede leer (data-lectura) y, si no, pestaña nueva."""
+    lectura = " data-lectura" if acceso.se_puede_leer(f["url"], ACCESO) else ""
+    return (f'<a href="{e(f["url"], quote=True)}" target="_blank" rel="noopener noreferrer"{lectura}>'
+            f'{e(f.get("titulo") or f["url"])}</a>')
+
+
+ACCESO = {}
+
+
 def panel(a):
     v = a["veredicto"]
     s = a["_t"]
     fuentes = [f for f in a.get("fuentes", []) if isinstance(f, dict)
                and str(f.get("url", "")).startswith(("http://", "https://"))]
     lista = "".join(
-        f'<li><a href="{e(f["url"], quote=True)}" target="_blank" rel="noopener noreferrer">'
-        f'{e(f.get("titulo") or f["url"])}</a> <span>{e(dominio(f["url"]))}</span></li>' for f in fuentes)
+        f'<li>{enlace_fuente(f)} <span>{e(dominio(f["url"]))}</span></li>' for f in fuentes)
     cita = a.get("cita", "").strip("«»\" ")
     resumen = a.get("_resumen") or a.get("explicacion", "")
     # «Explicación completa» lleva a la página de la afirmación; el texto se queda oculto en la tarjeta
@@ -723,7 +972,7 @@ def pagina_entrevista(m, entrevistas):
         imagen_de(m["slug"]), titulo_social=f'{m["invitado"]} en The Wild Project, minuto a minuto',
         alt=f'Verificación dato a dato: {m["invitado"]} ({m.get("partido") or "sin partido"}) en {m["programa"]}')
     pagina = rellenar(
-        PLANTILLA, CABECERA=cab, FAB=FAB_LEYENDA, BARRA=barra_reparto(m, "barra-reparto grande"), RETRATO=retrato(m) or "", CREDITOS=creditos_fotos([m]), MENU=menu(entrevistas, m["slug"]), CSS_MENU=CSS_MENU, LEYENDA=LEYENDA, NOTA_EXCL=nota_excl,
+        PLANTILLA, VISOR=VISOR_FUENTE, CABECERA=cab, FAB=FAB_LEYENDA, BARRA=barra_reparto(m, "barra-reparto grande"), RETRATO=retrato(m) or "", CREDITOS=creditos_fotos([m]), MENU=menu(entrevistas, m["slug"]), CSS_MENU=CSS_MENU, LEYENDA=LEYENDA, NOTA_EXCL=nota_excl,
         FILTROS=filtros(m, '<span class="tema-actual" id="tema-actual"></span>'), SUMA=m["suma"], MALAS=m["malas"],
         FALSAS=m["total"]["falso"], ENGANOSAS=m["total"]["enganoso"], CASI=m["total"]["mayormente_verdadero"],
         VERDADERAS=m["total"]["verdadero"], NV=m["total"]["no_verificable"], FILAS="".join(filas),
@@ -980,8 +1229,7 @@ def pagina_afirmacion(m, a, entrevistas, anterior, siguiente):
     fuentes_html = ""
     if fuentes:
         items = "".join(
-            f'<li><a href="{e(f["url"], quote=True)}" target="_blank" rel="noopener noreferrer">'
-            f'{e(f.get("titulo") or f["url"])}</a> <span>{e(dominio(f["url"]))}</span></li>' for f in fuentes)
+            f'<li>{enlace_fuente(f)} <span>{e(dominio(f["url"]))}</span></li>' for f in fuentes)
         fuentes_html = f'<section class="seccion"><h2>Fuentes</h2><ol class="fuentes">{items}</ol></section>'
 
     ver_tema = f"/{slug}/transcripcion" + (f"#tema-{a['_tema']}" if a.get("_tema") else "")
@@ -1008,7 +1256,7 @@ def pagina_afirmacion(m, a, entrevistas, anterior, siguiente):
         titulo_social=f'{NOMBRE[v]}: {afirmacion}',
         alt=f'Verificación dato a dato: {m["invitado"]} ({m.get("partido") or "sin partido"}) en {m["programa"]}')
     pagina = rellenar(
-        AFIRMACION, CABECERA=cab, CSS_MENU=CSS_MENU, MENU=menu(entrevistas, slug), MIGAS=migas, V=v,
+        AFIRMACION, VISOR=VISOR_FUENTE, CABECERA=cab, CSS_MENU=CSS_MENU, MENU=menu(entrevistas, slug), MIGAS=migas, V=v,
         VEREDICTO=NOMBRE[v], AFIRMACION=e(afirmacion), CITA=cita_html, POR_QUE=por_que, FUENTES=fuentes_html,
         CONTEXTO=contexto, VER_LINEA=f"/{slug}#{idx}", URL_PAGINA=e(BASE + ruta, quote=True), URL_ERROR=e(url_error, quote=True),
         ANTERIOR=vecina(anterior, "ant", "← Anterior"), SIGUIENTE=vecina(siguiente, "sig", "Siguiente →"))
@@ -1479,6 +1727,7 @@ def main():
             print(f'{meta["slug"]}: verificación en curso (meta.json sin "publicar": true), se omite')
             entrevistas.append(dict(meta, publicar=False))
     hechas = [m for m in entrevistas if m.get("publicar")]
+    ACCESO.update(acceso.asegurar(acceso.urls_de_las_entrevistas()))
     SALIDA.mkdir(exist_ok=True)
     for m in hechas:
         pagina_entrevista(m, entrevistas)
@@ -2922,6 +3171,7 @@ No inventes enlaces. Si no puedes abrir una fuente o no hay pruebas suficientes,
 });
 </script>
 @@FAB@@
+@@VISOR@@
 </body>
 </html>
 """
@@ -3023,6 +3273,7 @@ footer { border-top:3px solid var(--tinta); margin-top:48px; padding:24px 0 72px
 <script>
 document.querySelector("[data-copiar]").addEventListener("click", ev => copiarTexto(ev.currentTarget.dataset.enlace, "Enlace copiado."));
 </script>
+@@VISOR@@
 </body>
 </html>
 """
