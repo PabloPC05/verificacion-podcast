@@ -140,6 +140,7 @@ PLURAL = {"falso": "Falsas", "enganoso": "Engañosas", "mayormente_verdadero": "
 
 
 BASE = "https://verificacion-podcast.vercel.app"
+SCALAR = "1.76.2"  # @scalar/api-reference, versión fijada: subirla a mano tras probar /api/referencia
 LOGOS = {"PSOE": "psoe.svg", "PP": "pp.svg", "Frente Amplio": "frente-amplio.svg"}
 DEFINICIONES = {
     "verdadero": "Los datos lo confirman.",
@@ -388,24 +389,8 @@ def generar_api(hechas):
     escribir_json(api / "afirmaciones.json", dict(comun, total=len(todas), afirmaciones=todas))
     api_publica.escribir_csv(api / "afirmaciones.csv", todas)
     slugs = [m["slug"] for m in hechas]
-    def op(resumen):
-        return {"get": {"summary": resumen, "responses": {"200": {"description": "JSON", "content": {"application/json": {}}}}}}
-    par = [{"name": "slug", "in": "path", "required": True, "schema": {"type": "string", "enum": slugs}}]
-    escribir_json(api / "openapi.json", {
-        "openapi": "3.1.0",
-        "info": {"title": "Verificación de entrevistas de The Wild Project", "version": "1",
-                 "description": "API estática de solo lectura, sin clave y con CORS abierto. " + aviso},
-        "servers": [{"url": f"{BASE}/api/v1"}],
-        "paths": {
-            "/entrevistas.json": op("Lista de entrevistas verificadas, con recuentos por veredicto y por tema"),
-            "/afirmaciones.json": op("Todas las afirmaciones verificadas de todas las entrevistas"),
-            "/afirmaciones.csv": op("Todas las afirmaciones en CSV (UTF-8, una fila por afirmación)"),
-            "/{slug}.json": dict(op("Afirmaciones verificadas de una entrevista"), parameters=par),
-            "/{slug}.csv": dict(op("Afirmaciones verificadas de una entrevista, en CSV"), parameters=par),
-            "/{slug}/transcripcion.json": dict(op("Transcripción por segmentos con tiempos"), parameters=par),
-            "/{slug}/transcripcion.txt": dict(op("Transcripción en texto plano con marcas [h:mm:ss]"), parameters=par),
-        }})
     ejemplo = slugs[0] if slugs else "sanchez"
+    escribir_json(api / "openapi.json", especificacion_openapi(hechas, ejemplo, aviso, comun))
     (SALIDA / "llms.txt").write_text(f"""# Verificación de las entrevistas electorales de The Wild Project
 
 > Afirmaciones comprobables de los candidatos a las elecciones generales españolas del 29-11-2026 en sus entrevistas
@@ -418,7 +403,7 @@ API de solo lectura, JSON estático, sin clave, CORS abierto. Base: {BASE}/api/v
 - [Afirmaciones de una entrevista]({BASE}/api/v1/{ejemplo}.json): sustituye el slug ({", ".join(slugs)}).
 - [Transcripción con tiempos]({BASE}/api/v1/{ejemplo}/transcripcion.json) y [en texto]({BASE}/api/v1/{ejemplo}/transcripcion.txt).
 - [Todas las afirmaciones en CSV]({BASE}/api/v1/afirmaciones.csv) y por entrevista: {BASE}/api/v1/{ejemplo}.csv
-- [OpenAPI]({BASE}/api/v1/openapi.json)
+- [OpenAPI]({BASE}/api/v1/openapi.json): esquemas de cada respuesta y ejemplos. Versión legible: {BASE}/api/referencia
 - [Método y criterios]({REPO}/blob/main/METODO.md)
 
 Campos de cada afirmación: id, entrevista, invitado, tema, segundo, minuto, video_url, web_url, cita (literal de la
@@ -433,6 +418,224 @@ Los errores se comunican en {REPO}/issues.
                                             {"key": "Cache-Control", "value": "public, max-age=300"}]},
         {"source": "/llms.txt", "headers": [{"key": "Access-Control-Allow-Origin", "value": "*"}]}]}, indent=1) + "\n")
     return ejemplo, slugs
+
+
+# ───────────────────────── Descripción OpenAPI (la que pinta Scalar en /api/referencia) ─────────────────────────
+
+def especificacion_openapi(hechas, ejemplo, aviso, comun):
+    slugs = [m["slug"] for m in hechas]
+    m_ej = next((m for m in hechas if m["slug"] == ejemplo), None)
+    ficha_ej = ficha_api(m_ej) if m_ej else {}
+    if ficha_ej:
+        ficha_ej = dict(ficha_ej, temas=ficha_ej["temas"][:2])
+    afirm_ej = [afirmacion_api(m_ej, a) for a in m_ej["todas"][:1]] if m_ej else []
+    segs_ej = []
+    if m_ej:
+        segs = json.loads((m_ej["carpeta"] / "segmentos.json").read_text(encoding="utf-8"))[:2]
+        segs_ej = [{"inicio_s": round(x["i"], 2), "fin_s": round(x["f"], 2), "texto": x["t"].strip()} for x in segs]
+    comun_ej = dict(comun, generado="2026-11-13T20:00:00+01:00")
+    ref = lambda n: {"$ref": f"#/components/schemas/{n}"}
+    url = {"type": "string", "format": "uri"}
+    por_veredicto = {"type": "object", "description": "Número de afirmaciones con cada veredicto. Trae siempre las cinco claves.",
+                     "required": ORDEN, "additionalProperties": False,
+                     "properties": {k: {"type": "integer", "minimum": 0, "description": DEFINICIONES[k]} for k in ORDEN},
+                     "example": m_ej["total"] if m_ej else None}
+    tabla_veredictos = "\n".join(f"| `{k}` | {DEFINICIONES[k]} |" for k in ORDEN)
+    descripcion = f"""API estática de solo lectura con todas las afirmaciones verificadas de las entrevistas de Jordi Wild a los
+candidatos a las elecciones generales del 29 de noviembre de 2026: la cita literal, el veredicto, la explicación, las fuentes y el
+segundo exacto del vídeo. También publica las transcripciones completas.
+
+> {aviso}
+
+## Cómo se usa
+
+- **Sin clave ni registro.** Son ficheros JSON y CSV servidos por una CDN: basta con un `GET`.
+- **CORS abierto** (`Access-Control-Allow-Origin: *`), así que se puede llamar desde el navegador.
+- **Caché de 5 minutos** (`Cache-Control: public, max-age=300`). El campo `generado` dice cuándo se regeneraron los datos.
+- **Sin paginación ni filtros en el servidor.** Cada fichero trae la colección entera; filtra en tu lado (con `jq`, por ejemplo).
+- **Versión en la ruta** (`/v1`). Los campos nuevos se añaden sin cambiar de versión; si alguno cambia de significado o
+  desaparece, saldrá `/v2` y `/v1` se mantendrá.
+
+## Por dónde empezar
+
+1. `GET /entrevistas.json` da la lista de entrevistas con su `slug` y sus recuentos.
+2. Con el `slug`, `GET /{{slug}}.json` da las afirmaciones de esa entrevista. `GET /afirmaciones.json` las da todas juntas.
+3. Para comprobar una afirmación, lee `cita` y `afirmacion`, abre cada `fuentes[].url` y contrasta con `explicacion`.
+   Si quieres el contexto de lo que se dijo, `segundo` te lleva al punto de la transcripción.
+
+## Veredictos
+
+| Valor | Significado |
+|---|---|
+{tabla_veredictos}
+
+## Errores
+
+Una ruta que no existe (por ejemplo, un `slug` desconocido) devuelve `404` con una página HTML, no con JSON.
+Si encuentras un dato mal verificado, abre una incidencia en [GitHub]({REPO}/issues).
+"""
+    def respuesta(desc, esquema, ejemplo_json):
+        return {"200": {"description": desc, "content": {"application/json": {"schema": ref(esquema), "example": ejemplo_json}}}}
+    cols = ", ".join(f"`{c}`" for c in api_publica.COLUMNAS)
+    csv_desc = (f"Las mismas afirmaciones que el JSON, una fila por afirmación, en UTF-8 con BOM para que Excel muestre bien las tildes. "
+                f"Columnas: {cols}. `fuentes` junta las URL separadas por ` | `. Sirve para `IMPORTDATA` de Google Sheets.")
+    csv_ej = ",".join(api_publica.COLUMNAS) + "\n" + (",".join(f'"{x}"' if ("," in x or '"' in x) else x for x in (
+        str(api_publica._fila(afirm_ej[0])[c]).replace('"', '""') for c in api_publica.COLUMNAS)) if afirm_ej else "") + "\n"
+    no_existe = {"404": {"$ref": "#/components/responses/NoExiste"}}
+    par = [{"$ref": "#/components/parameters/slug"}]
+    return {
+        "openapi": "3.1.0",
+        "info": {"title": "Verificación de las entrevistas electorales de The Wild Project", "version": "1.0.0",
+                 "summary": "Afirmaciones verificadas, fuentes y transcripciones, en JSON abierto.",
+                 "description": descripcion,
+                 "contact": {"name": "Incidencias en GitHub", "url": f"{REPO}/issues"}},
+        "externalDocs": {"description": "Método y criterios de verificación", "url": f"{REPO}/blob/main/METODO.md"},
+        "servers": [{"url": f"{BASE}/api/v1", "description": "Producción"}],
+        "security": [],
+        "tags": [
+            {"name": "Entrevistas", "description": "Qué entrevistas hay, con sus recuentos por veredicto y por tema."},
+            {"name": "Afirmaciones", "description": "Cada afirmación comprobable con su veredicto, explicación y fuentes."},
+            {"name": "Transcripciones", "description": "La transcripción automática completa (Whisper), con tiempos."},
+        ],
+        "paths": {
+            "/entrevistas.json": {"get": {
+                "tags": ["Entrevistas"], "operationId": "listarEntrevistas", "summary": "Lista de entrevistas",
+                "description": "Todas las entrevistas publicadas, con su ficha, el recuento por veredicto y el desglose por tema. "
+                               "Es el punto de entrada: de aquí salen los `slug` y las URL del resto de recursos.",
+                "responses": respuesta("Entrevistas publicadas.", "ListaEntrevistas",
+                                       dict(comun_ej, entrevistas=[ficha_ej] if ficha_ej else []))}},
+            "/afirmaciones.json": {"get": {
+                "tags": ["Afirmaciones"], "operationId": "listarAfirmaciones", "summary": "Todas las afirmaciones",
+                "description": "Todas las afirmaciones verificadas de todas las entrevistas en un solo fichero, en el orden en "
+                               "que se dijeron dentro de cada entrevista.",
+                "responses": respuesta("Todas las afirmaciones.", "TodasAfirmaciones",
+                                       dict(comun_ej, total=sum(m["suma"] for m in hechas), afirmaciones=afirm_ej))}},
+            "/{slug}.json": {"parameters": par, "get": {
+                "tags": ["Afirmaciones"], "operationId": "afirmacionesDeEntrevista", "summary": "Afirmaciones de una entrevista",
+                "description": "La ficha de la entrevista y sus afirmaciones verificadas, en orden de aparición en el vídeo.",
+                "responses": dict(respuesta("Ficha y afirmaciones de la entrevista.", "AfirmacionesEntrevista",
+                                            dict(comun_ej, entrevista=ficha_ej, afirmaciones=afirm_ej)), **no_existe)}},
+            "/afirmaciones.csv": {"get": {
+                "tags": ["Afirmaciones"], "operationId": "afirmacionesCsv", "summary": "Todas las afirmaciones en CSV",
+                "description": csv_desc,
+                "responses": {"200": {"description": "CSV en UTF-8 con BOM.", "content": {"text/csv": {"schema": {"type": "string"}, "example": csv_ej}}}}}},
+            "/{slug}.csv": {"parameters": par, "get": {
+                "tags": ["Afirmaciones"], "operationId": "afirmacionesDeEntrevistaCsv", "summary": "Afirmaciones de una entrevista en CSV",
+                "description": csv_desc,
+                "responses": dict({"200": {"description": "CSV en UTF-8 con BOM.", "content": {"text/csv": {"schema": {"type": "string"}, "example": csv_ej}}}}, **no_existe)}},
+            "/{slug}/transcripcion.json": {"parameters": par, "get": {
+                "tags": ["Transcripciones"], "operationId": "transcripcionSegmentos", "summary": "Transcripción por segmentos",
+                "description": "La transcripción automática partida en segmentos con su segundo de inicio y de fin. "
+                               "No distingue quién habla.",
+                "responses": dict(respuesta("Transcripción por segmentos.", "Transcripcion", dict(
+                    comun_ej, entrevista=ficha_ej,
+                    nota="Transcripción automática (Whisper): no distingue hablantes y puede tener errores en nombres y cifras.",
+                    segmentos=segs_ej)), **no_existe)}},
+            "/{slug}/transcripcion.txt": {"parameters": par, "get": {
+                "tags": ["Transcripciones"], "operationId": "transcripcionTexto", "summary": "Transcripción en texto plano",
+                "description": "La misma transcripción en párrafos, cada uno precedido de su marca de tiempo `[h:mm:ss]`. "
+                               "Útil para pasársela entera a un modelo de lenguaje.",
+                "responses": dict({"200": {"description": "Texto plano en UTF-8.", "content": {"text/plain": {
+                    "schema": {"type": "string"},
+                    "example": "[0:00:00] ¿Qué tal mi gente? ¿Cómo estamos?…\n\n[0:01:17] Siempre digo día histórico en The Wild Project…\n"}}}},
+                    **no_existe)}},
+        },
+        "components": {
+            "parameters": {"slug": {"name": "slug", "in": "path", "required": True,
+                                    "description": "Identificador de la entrevista. Sale del campo `slug` de `/entrevistas.json`.",
+                                    "schema": {"type": "string", "enum": slugs}, "example": ejemplo}},
+            "responses": {"NoExiste": {"description": "No hay ninguna entrevista publicada con ese `slug`. La respuesta es una página HTML.",
+                                       "content": {"text/html": {"schema": {"type": "string"}}}}},
+            "schemas": {
+                "Veredicto": {"type": "string", "enum": ORDEN,
+                              "description": "Resultado de la verificación.\n\n" + "\n".join(f"- `{k}`: {DEFINICIONES[k]}" for k in ORDEN)},
+                "Confianza": {"type": "string", "enum": ["alta", "media", "baja"],
+                              "description": "Seguridad del verificador en su veredicto, según la calidad y la concordancia de las fuentes."},
+                "PorVeredicto": por_veredicto,
+                "Comun": {"type": "object", "description": "Campos que traen todas las respuestas JSON.",
+                          "required": ["generado", "aviso", "veredictos", "metodo_url", "repositorio", "documentacion"],
+                          "properties": {
+                              "generado": {"type": "string", "format": "date-time", "description": "Cuándo se generó el fichero."},
+                              "aviso": {"type": "string", "description": "Límites de la verificación. Muéstralo si reutilizas los datos."},
+                              "veredictos": {"type": "object", "description": "Definición de cada veredicto.",
+                                             "required": ORDEN, "properties": {k: {"type": "string"} for k in ORDEN}},
+                              "metodo_url": dict(url, description="Método y criterios completos."),
+                              "repositorio": dict(url, description="Repositorio con los datos y el código."),
+                              "documentacion": dict(url, description="Esta documentación."),
+                          }},
+                "Tema": {"type": "object", "description": "Un capítulo de la entrevista.",
+                         "required": ["n", "titulo", "inicio_s", "total", "por_veredicto"],
+                         "properties": {
+                             "n": {"type": "integer", "minimum": 1, "description": "Número del capítulo, desde 1."},
+                             "titulo": {"type": "string", "description": "Título del capítulo."},
+                             "inicio_s": {"type": "integer", "minimum": 0, "description": "Segundo del vídeo en que empieza."},
+                             "total": {"type": "integer", "minimum": 0, "description": "Afirmaciones verificadas en el capítulo."},
+                             "por_veredicto": ref("PorVeredicto"),
+                         }},
+                "Entrevista": {"type": "object", "description": "Ficha de una entrevista.",
+                               "required": ["slug", "invitado", "partido", "programa", "fecha", "duracion", "video_url", "web_url",
+                                            "afirmaciones_url", "transcripcion_url", "transcripcion_txt_url",
+                                            "total_afirmaciones", "por_veredicto", "temas"],
+                               "properties": {
+                                   "slug": {"type": "string", "description": "Identificador para las rutas `/{slug}…`."},
+                                   "invitado": {"type": "string", "description": "Nombre del candidato."},
+                                   "partido": {"type": ["string", "null"], "description": "Partido o coalición."},
+                                   "programa": {"type": "string", "description": "Programa y número de episodio."},
+                                   "fecha": {"type": "string", "description": "Fecha de publicación del vídeo, en texto (`13 nov 2026`)."},
+                                   "duracion": {"type": "string", "description": "Duración del vídeo, en texto (`1 h 52 min`)."},
+                                   "video_url": dict(url, description="Vídeo en YouTube."),
+                                   "web_url": dict(url, description="Línea temporal en la web."),
+                                   "afirmaciones_url": dict(url, description="URL de `/{slug}.json`."),
+                                   "transcripcion_url": dict(url, description="URL de `/{slug}/transcripcion.json`."),
+                                   "transcripcion_txt_url": dict(url, description="URL de `/{slug}/transcripcion.txt`."),
+                                   "total_afirmaciones": {"type": "integer", "minimum": 0},
+                                   "por_veredicto": ref("PorVeredicto"),
+                                   "temas": {"type": "array", "items": ref("Tema"), "description": "Capítulos en orden, incluidos los que no tienen afirmaciones."},
+                               }},
+                "Fuente": {"type": "object", "required": ["titulo", "url"],
+                           "properties": {"titulo": {"type": "string", "description": "Medio o organismo y título del documento."},
+                                          "url": dict(url, description="Siempre `http` o `https`.")}},
+                "Afirmacion": {"type": "object", "description": "Una afirmación comprobable del invitado y su verificación.",
+                               "required": ["id", "entrevista", "invitado", "tema_n", "tema", "segundo", "minuto", "video_url",
+                                            "web_url", "cita", "afirmacion", "veredicto", "resumen", "explicacion", "confianza", "fuentes"],
+                               "properties": {
+                                   "id": {"type": "string", "description": "Identificador estable: `slug` de la entrevista y segundo del vídeo (`sanchez-m251`)."},
+                                   "entrevista": {"type": "string", "description": "`slug` de la entrevista."},
+                                   "invitado": {"type": "string"},
+                                   "tema_n": {"type": ["integer", "null"], "description": "Número del capítulo (`Tema.n`)."},
+                                   "tema": {"type": ["string", "null"], "description": "Título del capítulo."},
+                                   "segundo": {"type": "integer", "minimum": 0, "description": "Segundo del vídeo en que se dice."},
+                                   "minuto": {"type": "string", "pattern": "^\\d+:\\d{2}:\\d{2}$", "description": "El mismo momento en `h:mm:ss`."},
+                                   "video_url": dict(url, description="Vídeo en YouTube, ya situado en ese segundo."),
+                                   "web_url": dict(url, description="Tarjeta de la afirmación en la web."),
+                                   "cita": {"type": "string", "description": "Lo que se dijo, literal de la transcripción automática."},
+                                   "afirmacion": {"type": "string", "description": "La afirmación reformulada para que se entienda sin contexto."},
+                                   "veredicto": ref("Veredicto"),
+                                   "resumen": {"type": ["string", "null"], "description": "La justificación en una frase (la que muestra la web)."},
+                                   "explicacion": {"type": "string", "description": "La justificación completa."},
+                                   "confianza": {"anyOf": [ref("Confianza"), {"type": "null"}]},
+                                   "fuentes": {"type": "array", "items": ref("Fuente"),
+                                               "description": "Fuentes que sustentan el veredicto. Puede venir vacía, sobre todo con `no_verificable`."},
+                               }},
+                "Segmento": {"type": "object", "required": ["inicio_s", "fin_s", "texto"],
+                             "properties": {"inicio_s": {"type": "number", "minimum": 0, "description": "Segundo de inicio, con dos decimales."},
+                                            "fin_s": {"type": "number", "minimum": 0, "description": "Segundo de fin."},
+                                            "texto": {"type": "string"}}},
+                "ListaEntrevistas": {"allOf": [ref("Comun"), {"type": "object", "required": ["entrevistas"],
+                                     "properties": {"entrevistas": {"type": "array", "items": ref("Entrevista")}}}]},
+                "TodasAfirmaciones": {"allOf": [ref("Comun"), {"type": "object", "required": ["total", "afirmaciones"],
+                                      "properties": {"total": {"type": "integer", "minimum": 0, "description": "Número de afirmaciones."},
+                                                     "afirmaciones": {"type": "array", "items": ref("Afirmacion")}}}]},
+                "AfirmacionesEntrevista": {"allOf": [ref("Comun"), {"type": "object", "required": ["entrevista", "afirmaciones"],
+                                           "properties": {"entrevista": ref("Entrevista"),
+                                                          "afirmaciones": {"type": "array", "items": ref("Afirmacion")}}}]},
+                "Transcripcion": {"allOf": [ref("Comun"), {"type": "object", "required": ["entrevista", "nota", "segmentos"],
+                                  "properties": {"entrevista": ref("Entrevista"),
+                                                 "nota": {"type": "string", "description": "Límites de la transcripción automática."},
+                                                 "segmentos": {"type": "array", "items": ref("Segmento")}}}]},
+            },
+        },
+    }
 
 
 def main():
@@ -490,6 +693,9 @@ def main():
     (SALIDA / "api" / "index.html").write_text(rellenar(
         PAGINA_API, MENU=menu(entrevistas), CSS_MENU=CSS_MENU, BASE=BASE, REPO=REPO, EJ=ejemplo,
         SLUGS=", ".join(f"<code>{x}</code>" for x in slugs)), encoding="utf-8")
+    (SALIDA / "api" / "referencia").mkdir(exist_ok=True)
+    (SALIDA / "api" / "referencia" / "index.html").write_text(
+        rellenar(PAGINA_REFERENCIA, SCALAR=SCALAR), encoding="utf-8")
 
 
 LEYENDA = """<section class="leyenda-f" aria-label="Leyenda de veredictos">
@@ -712,6 +918,56 @@ pintar();
 </html>
 """
 
+PAGINA_REFERENCIA = """<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+@@HEAD_MODO@@
+<title>Referencia de la API · Verificación The Wild Project</title>
+<meta name="description" content="Referencia completa de la API abierta: cada ruta, cada campo y ejemplos reales, generada a partir de la descripción OpenAPI 3.1.">
+<style>
+:root { --fondo:#fff; --tinta:#000; }
+@media (prefers-color-scheme: dark) { :root:not([data-modo="claro"]) { --fondo:#0f0f0f; --tinta:#f2f2f2; } }
+:root[data-modo="oscuro"] { --fondo:#0f0f0f; --tinta:#f2f2f2; }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--fondo); color:var(--tinta); font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; }
+.volver { display:flex; flex-wrap:wrap; gap:6px 20px; align-items:center; padding:10px 16px; border-bottom:2px solid var(--tinta); background:var(--fondo); font-size:14px; }
+.volver a { color:var(--tinta); }
+.volver .sello { font:700 16px/1 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; text-decoration:none; }
+.volver .dcha { margin-left:auto; }
+noscript p { max-width:68ch; margin:24px 16px; }
+.scalar-app { --scalar-radius:0; --scalar-radius-lg:0; --scalar-radius-xl:0; }
+.light-mode .scalar-app, .light-mode { --scalar-color-accent:#000; }
+.dark-mode .scalar-app, .dark-mode { --scalar-color-accent:#f2f2f2; }
+</style>
+</head>
+<body>
+<nav class="volver" aria-label="Navegación"><a class="sello" href="/">Verificación</a><a href="/api">← Guía de la API</a>
+<a class="dcha" href="/api/v1/openapi.json">openapi.json</a></nav>
+<div id="referencia"></div>
+<noscript><p>Esta referencia necesita JavaScript. Tienes la misma información en <a href="/api/v1/openapi.json">openapi.json</a> y una guía corta en <a href="/api">/api</a>.</p></noscript>
+<script src="https://cdn.jsdelivr.net/npm/@scalar/api-reference@@@SCALAR@@"></script>
+<script>
+// Mismo modo que el resto de la web: el elegido con el botón (localStorage «modo») o el del sistema.
+const modo = document.documentElement.dataset.modo;
+const oscuro = modo ? modo === "oscuro" : matchMedia("(prefers-color-scheme: dark)").matches;
+Scalar.createApiReference("#referencia", {
+  url: "/api/v1/openapi.json",
+  forceDarkModeState: oscuro ? "dark" : "light",
+  hideDarkModeToggle: true,
+  hideClientButton: true,
+  showDeveloperTools: "never",
+  agent: { disabled: true },
+  documentDownloadType: "json",
+  defaultHttpClient: { targetKey: "shell", clientKey: "curl" },
+  metaData: { title: "Referencia de la API · Verificación The Wild Project" },
+});
+</script>
+</body>
+</html>
+"""
+
 PAGINA_API = """<!doctype html>
 <html lang="es">
 <head>
@@ -738,6 +994,9 @@ table { border-collapse:collapse; width:100%; font-size:14.5px; min-width:560px;
 th, td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--tinta); vertical-align:top; }
 th { font-size:11px; text-transform:uppercase; letter-spacing:.08em; }
 td a { overflow-wrap:anywhere; }
+.ref { border:2px solid var(--tinta); padding:14px 16px; display:flex; flex-direction:column; gap:4px; }
+.ref a { font-weight:700; font-size:17px; }
+.ref span { font-size:14.5px; }
 @@CSS_MENU@@
 </style>
 </head>
@@ -746,6 +1005,7 @@ td a { overflow-wrap:anywhere; }
 <main class="ancho">
 <h1>API abierta para comprobar la verificación</h1>
 <p>Todos los datos de esta web están disponibles como JSON estático: sin clave, sin límite propio de uso y con CORS abierto. Está pensada para que periodistas, verificadores y agentes de IA puedan revisar cada veredicto contra sus fuentes mucho más rápido que leyendo la web.</p>
+<p class="ref"><a href="/api/referencia">Referencia completa de la API →</a><span>Cada ruta y cada campo, con ejemplos reales y la opción de probar las llamadas desde el navegador.</span></p>
 
 <h2>Direcciones</h2>
 <div class="tabla"><table>
@@ -756,6 +1016,7 @@ td a { overflow-wrap:anywhere; }
 <tr><td>Afirmaciones de una entrevista</td><td><a href="/api/v1/@@EJ@@.json">/api/v1/{slug}.json</a> · <a href="/api/v1/@@EJ@@.csv">.csv</a></td></tr>
 <tr><td>Transcripción por segmentos con tiempos</td><td><a href="/api/v1/@@EJ@@/transcripcion.json">/api/v1/{slug}/transcripcion.json</a></td></tr>
 <tr><td>Transcripción en texto plano</td><td><a href="/api/v1/@@EJ@@/transcripcion.txt">/api/v1/{slug}/transcripcion.txt</a></td></tr>
+<tr><td>Referencia completa (Scalar)</td><td><a href="/api/referencia">/api/referencia</a></td></tr>
 <tr><td>Descripción OpenAPI 3.1</td><td><a href="/api/v1/openapi.json">/api/v1/openapi.json</a></td></tr>
 <tr><td>Guía para modelos de lenguaje</td><td><a href="/llms.txt">/llms.txt</a></td></tr>
 </tbody></table></div>
