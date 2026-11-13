@@ -321,6 +321,12 @@ select { cursor:pointer; } select:hover { box-shadow:inset 0 0 0 1px var(--tinta
 .titular h1 { margin:0 !important; }
 .titular .retrato { width:clamp(64px,8vw,104px); height:clamp(64px,8vw,104px); }
 .titular .retrato.peque { width:clamp(52px,6vw,76px); height:clamp(52px,6vw,76px); }
+/* Buscador: foto de cada resultado (con insignia) y foto pequeña, sin ella, en los botones de candidato */
+.retrato.res-foto { width:clamp(44px,5.5vw,54px); height:clamp(44px,5.5vw,54px); align-self:center; }
+.retrato.res-foto .insignia { animation:none; }
+.retrato.chica { width:24px; height:24px; align-self:center; }
+.retrato.chica > img { border-width:1.5px; }
+.fila button[aria-pressed=true] .retrato > img { border-color:var(--fondo); }
 .creditos { font-size:12.5px; color:var(--gris); }
 .creditos a { color:inherit; }
 

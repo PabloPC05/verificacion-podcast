@@ -181,13 +181,19 @@ def insignia(m):
     return f'<b>{e("".join(w[0] for w in partido.split()[:3]).upper() or "·")}</b>'
 
 
-def retrato(m, extra=""):
-    """Foto redonda del candidato con el logotipo de su partido como insignia; sin foto, None."""
+def retrato(m, extra="", *, decorativo=False, lazy=False, con_insignia=True):
+    """Foto redonda del candidato con el logotipo de su partido como insignia; sin foto, None.
+
+    «decorativo» deja el alt vacío (cuando el nombre ya va en texto al lado), «lazy» carga la foto al acercarse y
+    «con_insignia» False la deja sin el logotipo (botones de filtro)."""
     f = FOTOS.get(m["slug"])
     if not f:
         return None
-    return (f'<span class="logo retrato{extra}"><img src="/fotos/{m["slug"]}.jpg" alt="{e(m["invitado"])}" width="160" height="160" '
-            f'decoding="async"><span class="insignia" title="{e(m.get("partido") or "")}">{insignia(m)}</span></span>')
+    alt = "" if decorativo else e(m["invitado"])
+    carga = ' loading="lazy"' if lazy else ""
+    ins = f'<span class="insignia" title="{e(m.get("partido") or "")}">{insignia(m)}</span>' if con_insignia else ""
+    return (f'<span class="logo retrato{extra}"><img src="/fotos/{m["slug"]}.jpg" alt="{alt}" width="160" height="160" '
+            f'decoding="async"{carga}>{ins}</span>')
 
 
 def barra_reparto(m, clase="barra-reparto"):
@@ -1288,8 +1294,9 @@ def _plano(texto):
 def indice_busqueda(hechas):
     """web/buscar/indice.json: lo justo para buscar y pintar cada resultado, mucho más ligero que afirmaciones.json.
 
-    Formato: {"c": [[slug, invitado, partido]], "t": [temas], "a": [[candidato, veredicto, segundo, id, tema, cita, afirmación,
-    resumen, [títulos de las fuentes]]]}. «candidato» y «tema» son posiciones en "c" y "t"; «veredicto» es la posición en ORDEN."""
+    Formato: {"c": [[slug, invitado, partido, retrato]], "t": [temas], "a": [[candidato, veredicto, segundo, id, tema, cita, afirmación,
+    resumen, [títulos de las fuentes]]]}. «candidato» y «tema» son posiciones en "c" y "t"; «veredicto» es la posición en ORDEN.
+    «retrato» es el HTML de retrato() (foto y logotipo del partido, o siglas), una sola vez por candidato; "" si no hay foto."""
     temas, filas, textos = [], [], []
     for n, m in enumerate(hechas):
         for a in m["todas"]:
@@ -1306,7 +1313,7 @@ def indice_busqueda(hechas):
                           " ".join(a.get("cita", "").strip("«»\" ").split()), " ".join(a.get("afirmacion", "").split()),
                           " ".join((a.get("_resumen") or a.get("explicacion", "")).split()), fuentes])
             textos.append((n, _plano(" ".join([m["invitado"], tema] + [str(x) for x in filas[-1][5:8]] + fuentes))))
-    datos = {"c": [[m["slug"], m["invitado"], m.get("partido") or ""] for m in hechas], "t": temas, "a": filas}
+    datos = {"c": [[m["slug"], m["invitado"], m.get("partido") or "", retrato(m, " res-foto", decorativo=True, lazy=True) or ""] for m in hechas], "t": temas, "a": filas}
     destino = SALIDA / "buscar"
     destino.mkdir(exist_ok=True)
     ruta = destino / "indice.json"
@@ -1326,7 +1333,8 @@ def indice_busqueda(hechas):
 def pagina_buscar(entrevistas, hechas):
     total = sum(m["suma"] for m in hechas)
     botones_c = "".join(
-        f'<button type="button" data-c="{e(m["slug"])}" aria-pressed="false">{e(m["invitado"])} <b></b></button>' for m in hechas)
+        f'<button type="button" data-c="{e(m["slug"])}" aria-pressed="false">'
+        f'{retrato(m, " chica", decorativo=True, con_insignia=False) or ""}{e(m["invitado"])} <b></b></button>' for m in hechas)
     botones_v = "".join(f'<button type="button" data-v="{k}" aria-pressed="false"><i></i>{PLURAL[k]} <b></b></button>' for k in ORDEN)
     ejemplos = "".join(f'<button type="button" data-ej="{e(x, quote=True)}">{e(x)} <b></b></button>' for x in EJEMPLOS_BUSQUEDA)
     (SALIDA / "buscar").mkdir(exist_ok=True)
@@ -2109,6 +2117,12 @@ CSS_MENU += """
 .titular h1 { margin:0 !important; }
 .titular .retrato { width:clamp(64px,8vw,104px); height:clamp(64px,8vw,104px); }
 .titular .retrato.peque { width:clamp(52px,6vw,76px); height:clamp(52px,6vw,76px); }
+/* Buscador: foto de cada resultado (con insignia) y foto pequeña, sin ella, en los botones de candidato */
+.retrato.res-foto { width:clamp(44px,5.5vw,54px); height:clamp(44px,5.5vw,54px); align-self:center; }
+.retrato.res-foto .insignia { animation:none; }
+.retrato.chica { width:24px; height:24px; align-self:center; }
+.retrato.chica > img { border-width:1.5px; }
+.fila button[aria-pressed=true] .retrato > img { border-color:var(--fondo); }
 .creditos { font-size:12.5px; color:var(--gris); }
 .creditos a { color:inherit; }
 """
@@ -3439,6 +3453,7 @@ code { font:13.5px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace; background:v
 .filtros-b .fila { flex-wrap:wrap; overflow:visible; padding:0; }
 .filtros-b .fila .rot { display:inline-block; min-width:76px; }
 .filtros-b .fila button { min-height:30px; }
+.filtros-b .fila button:has(.retrato) { padding-left:4px; }
 .fila button[data-n="0"]:not([aria-pressed=true]) { opacity:.45; }
 .fila button[data-n="0"]:not([aria-pressed=true]):hover { opacity:.8; }
 .fila b { min-width:1.6ch; }
@@ -3452,12 +3467,15 @@ code { font:13.5px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace; background:v
 .res[data-v=falso] { box-shadow:inset 5px 0 0 var(--tono); padding-left:23px; }
 .res:hover { background:var(--resalte); }
 .res:focus-within { outline:3px solid var(--tinta); outline-offset:3px; }
-.res-cab { display:flex; flex-wrap:wrap; align-items:center; gap:6px 12px; margin:0 0 10px; font-size:13.5px; color:var(--suave); }
-.res-cab b { color:var(--tinta); font-weight:700; }
-.res-cab .t { min-width:0; color:var(--gris); }
-.res-cab .min { font-variant-numeric:tabular-nums; font-weight:700; color:var(--tono); white-space:nowrap; }
+.res-cab { display:flex; align-items:center; gap:10px 14px; margin:0 0 12px; }
+.res-cab .quien { flex:1 1 0; min-width:0; }
+.res-cab .nom { display:block; font:700 clamp(19px,2.4vw,23px)/1.15 var(--serif); color:var(--tinta); letter-spacing:-.005em; text-wrap:balance; }
+.res-cab .partido { display:block; margin-top:3px; font-size:12px; font-weight:600; text-transform:uppercase; letter-spacing:.08em; line-height:1.3; color:var(--gris); }
+.res-cab .dato { flex:none; display:grid; justify-items:end; gap:4px; text-align:right; }
+.res-cab .min { font-size:13.5px; font-variant-numeric:tabular-nums; font-weight:700; color:var(--tono); white-space:nowrap; }
+.res .tema { margin:0 0 10px; font-size:12px; font-weight:600; text-transform:uppercase; letter-spacing:.08em; line-height:1.4; color:var(--gris); }
 .ficha { display:inline-block; font-size:11.5px; font-weight:700; text-transform:uppercase; letter-spacing:.09em; line-height:1.3;
-  border:1.5px solid var(--tono); color:var(--tono); padding:2px 9px; border-radius:var(--r-mini); }
+  border:1.5px solid var(--tono); color:var(--tono); padding:2px 9px; border-radius:var(--r-mini); white-space:nowrap; }
 .res[data-v=falso] .ficha { background:var(--tono); color:var(--sobre-tono); }
 .res blockquote { margin:0 0 10px; padding-left:14px; border-left:4px solid var(--tono); font:italic 18px/1.4 var(--serif); text-wrap:pretty; }
 .res h3 { margin:0 0 6px; font-size:16.5px; line-height:1.4; font-weight:700; }
@@ -3484,7 +3502,9 @@ mark { background:color-mix(in srgb, var(--tono, var(--tinta)) 24%, transparent)
 .sin h2 { font:700 22px/1.25 var(--serif); margin:0 0 6px; }
 .sin p { margin:0 0 12px; max-width:62ch; }
 .sin .acc { display:flex; flex-wrap:wrap; gap:8px; margin-top:4px; }
-@media (max-width:600px) {
+@media (max-width:560px) {
+  .res-cab { flex-wrap:wrap; } .res-cab .quien { flex-basis:calc(100% - 44px - 14px); }
+  .res-cab .dato { flex:1 0 100%; display:flex; justify-content:space-between; align-items:center; text-align:left; }
   .caja input { height:56px; padding-left:50px; } .caja svg { left:15px; width:22px; height:22px; margin-top:-11px; }
   .filtros-b .fila .rot { display:block; flex:0 0 100%; min-width:0; margin-bottom:-2px; }
   .res { padding:14px 14px 14px; } .res[data-v=falso] { padding-left:19px; }
@@ -3607,9 +3627,10 @@ function tarjeta(x, ps) {
     const i = d.fu.findIndex(t => sueltas.some(p => tiene(plano(t), p)));
     if (i >= 0) fuente = '<p class="fu">Fuente: ' + resaltar(d.fu[i], plano(d.fu[i]), ps) + "</p>";
   }
-  return '<li class="res" data-v="' + v + '"><article><div class="res-cab"><span class="ficha">' + NOMBRES[d.v] + "</span>" +
-    "<b>" + resaltar(cand[1], plano(cand[1]), ps) + '</b><span class="min">' + hms(d.seg) + "</span>" +
-    (tema ? '<span class="t">' + resaltar(tema, d.n.t, ps) + "</span>" : "") + "</div>" +
+  return '<li class="res" data-v="' + v + '"><article><div class="res-cab">' + cand[3] +
+    '<div class="quien"><b class="nom">' + resaltar(cand[1], plano(cand[1]), ps) + '</b><span class="partido">' + resaltar(cand[2], plano(cand[2]), ps) + "</span></div>" +
+    '<div class="dato"><span class="ficha">' + NOMBRES[d.v] + '</span><span class="min">' + hms(d.seg) + "</span></div></div>" +
+    (tema ? '<p class="tema">' + resaltar(tema, d.n.t, ps) + "</p>" : "") +
     (d.cita ? "<blockquote>«" + resaltar(d.cita, d.n.c, ps) + "»</blockquote>" : "") +
     '<h3><a href="' + enlace + '">' + resaltar(d.af, d.n.a, ps) + "</a></h3>" +
     "<p>" + resaltar(d.res, d.n.r, ps) + "</p>" + fuente + "</article></li>";

@@ -117,6 +117,7 @@ code { font:13.5px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace; background:v
 .filtros-b .fila { flex-wrap:wrap; overflow:visible; padding:0; }
 .filtros-b .fila .rot { display:inline-block; min-width:76px; }
 .filtros-b .fila button { min-height:30px; }
+.filtros-b .fila button:has(.retrato) { padding-left:4px; }
 .fila button[data-n="0"]:not([aria-pressed=true]) { opacity:.45; }
 .fila button[data-n="0"]:not([aria-pressed=true]):hover { opacity:.8; }
 .fila b { min-width:1.6ch; }
@@ -130,12 +131,15 @@ code { font:13.5px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace; background:v
 .res[data-v=falso] { box-shadow:inset 5px 0 0 var(--tono); padding-left:23px; }
 .res:hover { background:var(--resalte); }
 .res:focus-within { outline:3px solid var(--tinta); outline-offset:3px; }
-.res-cab { display:flex; flex-wrap:wrap; align-items:center; gap:6px 12px; margin:0 0 10px; font-size:13.5px; color:var(--suave); }
-.res-cab b { color:var(--tinta); font-weight:700; }
-.res-cab .t { min-width:0; color:var(--gris); }
-.res-cab .min { font-variant-numeric:tabular-nums; font-weight:700; color:var(--tono); white-space:nowrap; }
+.res-cab { display:flex; align-items:center; gap:10px 14px; margin:0 0 12px; }
+.res-cab .quien { flex:1 1 0; min-width:0; }
+.res-cab .nom { display:block; font:700 clamp(19px,2.4vw,23px)/1.15 var(--serif); color:var(--tinta); letter-spacing:-.005em; text-wrap:balance; }
+.res-cab .partido { display:block; margin-top:3px; font-size:12px; font-weight:600; text-transform:uppercase; letter-spacing:.08em; line-height:1.3; color:var(--gris); }
+.res-cab .dato { flex:none; display:grid; justify-items:end; gap:4px; text-align:right; }
+.res-cab .min { font-size:13.5px; font-variant-numeric:tabular-nums; font-weight:700; color:var(--tono); white-space:nowrap; }
+.res .tema { margin:0 0 10px; font-size:12px; font-weight:600; text-transform:uppercase; letter-spacing:.08em; line-height:1.4; color:var(--gris); }
 .ficha { display:inline-block; font-size:11.5px; font-weight:700; text-transform:uppercase; letter-spacing:.09em; line-height:1.3;
-  border:1.5px solid var(--tono); color:var(--tono); padding:2px 9px; border-radius:var(--r-mini); }
+  border:1.5px solid var(--tono); color:var(--tono); padding:2px 9px; border-radius:var(--r-mini); white-space:nowrap; }
 .res[data-v=falso] .ficha { background:var(--tono); color:var(--sobre-tono); }
 .res blockquote { margin:0 0 10px; padding-left:14px; border-left:4px solid var(--tono); font:italic 18px/1.4 var(--serif); text-wrap:pretty; }
 .res h3 { margin:0 0 6px; font-size:16.5px; line-height:1.4; font-weight:700; }
@@ -162,7 +166,9 @@ mark { background:color-mix(in srgb, var(--tono, var(--tinta)) 24%, transparent)
 .sin h2 { font:700 22px/1.25 var(--serif); margin:0 0 6px; }
 .sin p { margin:0 0 12px; max-width:62ch; }
 .sin .acc { display:flex; flex-wrap:wrap; gap:8px; margin-top:4px; }
-@media (max-width:600px) {
+@media (max-width:560px) {
+  .res-cab { flex-wrap:wrap; } .res-cab .quien { flex-basis:calc(100% - 44px - 14px); }
+  .res-cab .dato { flex:1 0 100%; display:flex; justify-content:space-between; align-items:center; text-align:left; }
   .caja input { height:56px; padding-left:50px; } .caja svg { left:15px; width:22px; height:22px; margin-top:-11px; }
   .filtros-b .fila .rot { display:block; flex:0 0 100%; min-width:0; margin-bottom:-2px; }
   .res { padding:14px 14px 14px; } .res[data-v=falso] { padding-left:19px; }
@@ -355,6 +361,12 @@ select { cursor:pointer; } select:hover { box-shadow:inset 0 0 0 1px var(--tinta
 .titular h1 { margin:0 !important; }
 .titular .retrato { width:clamp(64px,8vw,104px); height:clamp(64px,8vw,104px); }
 .titular .retrato.peque { width:clamp(52px,6vw,76px); height:clamp(52px,6vw,76px); }
+/* Buscador: foto de cada resultado (con insignia) y foto pequeña, sin ella, en los botones de candidato */
+.retrato.res-foto { width:clamp(44px,5.5vw,54px); height:clamp(44px,5.5vw,54px); align-self:center; }
+.retrato.res-foto .insignia { animation:none; }
+.retrato.chica { width:24px; height:24px; align-self:center; }
+.retrato.chica > img { border-width:1.5px; }
+.fila button[aria-pressed=true] .retrato > img { border-color:var(--fondo); }
 .creditos { font-size:12.5px; color:var(--gris); }
 .creditos a { color:inherit; }
 
@@ -545,7 +557,7 @@ etiquetarModo();
 <div class="caja"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg><input id="q" name="q" type="search" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="search" placeholder="Vivienda, una cifra, un nombre…"></div>
 </form>
 <div class="filtros-b" id="filtros">
-<div class="fila" role="group" aria-label="Filtrar por candidato"><span class="rot">Candidato</span><button type="button" data-todas="c" aria-pressed="true">Todos <b></b></button><button type="button" data-c="sanchez" aria-pressed="false">Pedro Sánchez <b></b></button><button type="button" data-c="feijoo" aria-pressed="false">Alberto Núñez Feijóo <b></b></button><button type="button" data-c="colau" aria-pressed="false">Ada Colau <b></b></button></div>
+<div class="fila" role="group" aria-label="Filtrar por candidato"><span class="rot">Candidato</span><button type="button" data-todas="c" aria-pressed="true">Todos <b></b></button><button type="button" data-c="sanchez" aria-pressed="false"><span class="logo retrato chica"><img src="/fotos/sanchez.jpg" alt="" width="160" height="160" decoding="async"></span>Pedro Sánchez <b></b></button><button type="button" data-c="feijoo" aria-pressed="false"><span class="logo retrato chica"><img src="/fotos/feijoo.jpg" alt="" width="160" height="160" decoding="async"></span>Alberto Núñez Feijóo <b></b></button><button type="button" data-c="colau" aria-pressed="false"><span class="logo retrato chica"><img src="/fotos/colau.jpg" alt="" width="160" height="160" decoding="async"></span>Ada Colau <b></b></button></div>
 <div class="fila" role="group" aria-label="Filtrar por veredicto"><span class="rot">Veredicto</span><button type="button" data-todas="v" aria-pressed="true">Todos <b></b></button><button type="button" data-v="falso" aria-pressed="false"><i></i>Falsas <b></b></button><button type="button" data-v="enganoso" aria-pressed="false"><i></i>Engañosas <b></b></button><button type="button" data-v="mayormente_verdadero" aria-pressed="false"><i></i>Casi ciertas <b></b></button><button type="button" data-v="verdadero" aria-pressed="false"><i></i>Verdaderas <b></b></button><button type="button" data-v="no_verificable" aria-pressed="false"><i></i>No verificables <b></b></button></div>
 </div>
 <div id="resultados" aria-live="polite">
@@ -647,9 +659,10 @@ function tarjeta(x, ps) {
     const i = d.fu.findIndex(t => sueltas.some(p => tiene(plano(t), p)));
     if (i >= 0) fuente = '<p class="fu">Fuente: ' + resaltar(d.fu[i], plano(d.fu[i]), ps) + "</p>";
   }
-  return '<li class="res" data-v="' + v + '"><article><div class="res-cab"><span class="ficha">' + NOMBRES[d.v] + "</span>" +
-    "<b>" + resaltar(cand[1], plano(cand[1]), ps) + '</b><span class="min">' + hms(d.seg) + "</span>" +
-    (tema ? '<span class="t">' + resaltar(tema, d.n.t, ps) + "</span>" : "") + "</div>" +
+  return '<li class="res" data-v="' + v + '"><article><div class="res-cab">' + cand[3] +
+    '<div class="quien"><b class="nom">' + resaltar(cand[1], plano(cand[1]), ps) + '</b><span class="partido">' + resaltar(cand[2], plano(cand[2]), ps) + "</span></div>" +
+    '<div class="dato"><span class="ficha">' + NOMBRES[d.v] + '</span><span class="min">' + hms(d.seg) + "</span></div></div>" +
+    (tema ? '<p class="tema">' + resaltar(tema, d.n.t, ps) + "</p>" : "") +
     (d.cita ? "<blockquote>«" + resaltar(d.cita, d.n.c, ps) + "»</blockquote>" : "") +
     '<h3><a href="' + enlace + '">' + resaltar(d.af, d.n.a, ps) + "</a></h3>" +
     "<p>" + resaltar(d.res, d.n.r, ps) + "</p>" + fuente + "</article></li>";
