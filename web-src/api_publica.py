@@ -95,6 +95,8 @@ JS_API = """<script>
   async function consultar() {
     pintarUrl();
     const ver = $("api-ver").value;
+    const boton = $("api-ir");
+    boton.disabled = true; boton.textContent = "Consultando…"; $("api-res").setAttribute("aria-busy", "true");
     $("api-estado").textContent = "Consultando…";
     $("api-res").innerHTML = "";
     try {
@@ -102,15 +104,20 @@ JS_API = """<script>
       const lista = datos.afirmaciones.filter(a => !ver || a.veredicto === ver);
       $("api-estado").textContent = lista.length + " de " + datos.afirmaciones.length + " afirmaciones"
         + (ver ? " (filtradas por veredicto = \\"" + ver + "\\")" : "") + ". Se muestran las 25 primeras.";
-      $("api-res").innerHTML = "<table><thead><tr><th>Invitado</th><th>Minuto</th><th>Veredicto</th><th>Afirmación</th><th>Fuentes</th></tr></thead><tbody>"
-        + lista.slice(0, 25).map(a => "<tr><td>" + esc(a.invitado) + "</td><td><a href=\\"" + esc(a.web_url) + "\\">" + esc(a.minuto)
-          + "</a></td><td data-v=\\"" + esc(a.veredicto) + "\\"><b>" + esc(NOMBRE[a.veredicto] || a.veredicto) + "</b></td><td>" + esc(a.afirmacion)
-          + "</td><td>" + a.fuentes.length + "</td></tr>").join("") + "</tbody></table>";
+      $("api-res").innerHTML = lista.length ? "<table><thead><tr><th>Invitado</th><th>Minuto</th><th>Veredicto</th><th>Afirmación</th><th>Fuentes</th></tr></thead><tbody>"
+        + lista.slice(0, 25).map(a => "<tr><td>" + esc(a.invitado) + "</td><td data-l=\\"Minuto\\"><a href=\\"" + esc(a.web_url) + "\\">" + esc(a.minuto)
+          + "</a></td><td data-l=\\"Veredicto\\" data-v=\\"" + esc(a.veredicto) + "\\"><b>" + esc(NOMBRE[a.veredicto] || a.veredicto) + "</b></td><td>" + esc(a.afirmacion)
+          + "</td><td data-l=\\"Fuentes\\">" + a.fuentes.length + "</td></tr>").join("") + "</tbody></table>"
+        : "<p class=\\"vacio\\">Ninguna afirmación cumple ese filtro.</p>";
     } catch (err) {
-      $("api-estado").textContent = "No se ha podido consultar la API: " + err.message;
+      $("api-estado").textContent = "No se ha podido consultar la API: " + err.message + ". Prueba de nuevo en unos segundos.";
+      avisar("No se ha podido consultar la API.", true);
+    } finally {
+      boton.disabled = false; boton.textContent = "Consultar"; $("api-res").removeAttribute("aria-busy");
     }
   }
   $("api-cual").onchange = pintarUrl;
+  $("api-csv").addEventListener("click", () => avisar("Descargando el CSV…"));
   $("api-ir").onclick = consultar;
   pintarUrl();
 })();
@@ -131,4 +138,6 @@ h3.sub { font-size:17px; margin:26px 0 8px; }
 .explorador .botones { margin:10px 0 0; }
 .explorador .tabla-api td { font-size:13.5px; }
 #api-res td[data-v] { color:var(--tono, inherit); white-space:nowrap; }
+#api-res .vacio { margin:6px 0; padding:12px 14px; border:1.5px dashed var(--gris); color:var(--gris); }
+#api-csv { cursor:pointer; }
 """
