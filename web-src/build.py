@@ -3496,7 +3496,7 @@ mark { background:color-mix(in srgb, var(--tono, var(--tinta)) 24%, transparent)
 .btn-b.claro { background:var(--fondo); color:var(--tinta); }
 .btn-b.claro:hover { background:var(--tinta); color:var(--fondo); }
 /* Estados vacíos */
-.ejemplos { margin-top:6px; }
+.ejemplos { margin:6px 0 22px; }
 .ejemplos .rot { display:block; margin:0 0 8px; }
 .ejemplos .fila { flex-wrap:wrap; overflow:visible; padding:0; }
 .ejemplos .fila button { font-size:14.5px; padding:5px 14px; min-height:36px; }
@@ -3530,13 +3530,13 @@ footer { border-top:3px solid var(--tinta); margin-top:48px; padding:24px 0 72px
 <div class="fila" role="group" aria-label="Filtrar por candidato"><span class="rot">Candidato</span><button type="button" data-todas="c" aria-pressed="true">Todos <b></b></button>@@BOTONES_C@@</div>
 <div class="fila" role="group" aria-label="Filtrar por veredicto"><span class="rot">Veredicto</span><button type="button" data-todas="v" aria-pressed="true">Todos <b></b></button>@@BOTONES_V@@</div>
 </div>
+<div id="ejemplos" class="ejemplos" hidden><span class="rot">Prueba con</span><div class="fila">@@EJEMPLOS@@</div></div>
 <div id="resultados" aria-live="polite">
 <p class="cuenta-b" id="cuenta"></p>
 <div id="sin" class="sin" hidden></div>
 <ol id="lista" class="lista-res" aria-live="off"></ol>
 <p class="mas-b" id="mas-p" hidden><button type="button" class="btn-b" id="mas"></button></p>
 </div>
-<div id="ejemplos" class="ejemplos" hidden><span class="rot">Prueba con</span><div class="fila">@@EJEMPLOS@@</div></div>
 </div>
 <p class="nota" id="error" hidden>No se ha podido cargar el índice de búsqueda. Puedes descargar todas las afirmaciones en <a href="/api/v1/afirmaciones.csv">CSV</a> o <a href="/api/v1/afirmaciones.json">JSON</a>.</p>
 </main>
@@ -3572,7 +3572,8 @@ function puntuar(d, ps) {
 }
 function buscar(docs, q) {
   const ps = palabras(q);
-  if (!ps.length) return docs.map(d => ({ d, p: 1 }));
+  // Sin palabras salen todas, alternando candidatos (la 1.ª de cada uno, luego la 2.ª…) para no empezar por uno solo
+  if (!ps.length) { const k = {}; return docs.map(d => ({ d, p: 1, r: (k[d.c] = (k[d.c] || 0) + 1) })).sort((x, y) => x.r - y.r || x.d.c - y.d.c); }
   return docs.map(d => ({ d, p: puntuar(d, ps) })).filter(x => x.p).sort((x, y) => y.p - x.p);   // sort es estable: a igualdad, orden del índice
 }
 // Texto escapado con <mark> en cada trozo que coincide con alguna palabra
@@ -3592,7 +3593,7 @@ function resaltar(texto, norm, ps) {
 }
 /* ── Fin del núcleo ── */
 
-const TAM = 60, NOMBRES = @@NOMBRES@@, CLAVES = @@CLAVES@@;
+const TAM = 20, NOMBRES = @@NOMBRES@@, CLAVES = @@CLAVES@@;
 const $ = id => document.getElementById(id);
 const campo = $("q"), lista = $("lista"), botonMas = $("mas");
 let datos = null, docs = [], hallados = [], pintados = 0, espera = 0;
@@ -3643,7 +3644,7 @@ function pintarMas(n) {
   lista.insertAdjacentHTML("beforeend", hallados.slice(ini, pintados).map(x => tarjeta(x, ps)).join(""));
   const quedan = hallados.length - pintados;
   $("mas-p").hidden = !quedan;
-  botonMas.textContent = "Ver más (quedan " + quedan.toLocaleString("es-ES") + ")";
+  botonMas.textContent = "Cargar más (quedan " + quedan.toLocaleString("es-ES") + ")";
   return ini;
 }
 function aplicar(mantener) {
@@ -3664,8 +3665,9 @@ function aplicar(mantener) {
   const sin = $("sin"); sin.hidden = true;
   const cuenta = $("cuenta");
   if (vacio) {
-    cuenta.innerHTML = "Escribe algo para buscar entre las " + docs.length.toLocaleString("es-ES") + " afirmaciones.";
-    $("mas-p").hidden = true;
+    // Sin búsqueda ni filtros se ven todas; los filtros solo se aplican cuando la persona los elige
+    cuenta.innerHTML = "Todas las " + docs.length.toLocaleString("es-ES") + " afirmaciones <span>· escribe para buscar o filtra por candidato y veredicto</span>";
+    pintarMas(mantener || TAM);
   } else if (!hallados.length) {
     cuenta.textContent = "0 afirmaciones";
     $("mas-p").hidden = true;
