@@ -42,7 +42,7 @@ agentes de IA puedan revisar cada veredicto contra sus fuentes. Documentación: 
 | Todas las afirmaciones | `/api/v1/afirmaciones.json` |
 | Afirmaciones de una entrevista | `/api/v1/{slug}.json` |
 | Transcripción con tiempos | `/api/v1/{slug}/transcripcion.json` y `.txt` |
-| Referencia completa (Scalar) | `/api/referencia` |
+| Referencia completa y prompt para agentes de IA | `/api` |
 | OpenAPI 3.1 | `/api/v1/openapi.json` |
 | Guía para modelos de lenguaje | `/llms.txt` |
 

@@ -36,10 +36,10 @@ SECCION_API = """<h2 id="api">API abierta</h2>
 <tr><td>Todas las afirmaciones</td><td><a href="/api/v1/afirmaciones.json">/api/v1/afirmaciones.json</a> · <a href="/api/v1/afirmaciones.csv">.csv</a></td></tr>
 <tr><td>Afirmaciones de una entrevista</td><td><a href="/api/v1/@@EJ@@.json">/api/v1/{entrevista}.json</a> · <a href="/api/v1/@@EJ@@.csv">.csv</a></td></tr>
 <tr><td>Transcripción con tiempos</td><td><a href="/api/v1/@@EJ@@/transcripcion.json">/api/v1/{entrevista}/transcripcion.json</a> · <a href="/api/v1/@@EJ@@/transcripcion.txt">.txt</a></td></tr>
-<tr><td>Referencia completa (cada ruta y cada campo)</td><td><a href="/api/referencia">/api/referencia</a></td></tr>
+<tr><td>Referencia completa (cada ruta y cada campo) y prompt para agentes de IA</td><td><a href="/api">/api</a></td></tr>
 <tr><td>Especificación OpenAPI 3.1</td><td><a href="/api/v1/openapi.json">/api/v1/openapi.json</a></td></tr>
 </tbody></table></div>
-<p class="nota">Base: <code>@@BASE@@/api/v1</code>. Entrevistas disponibles: @@SLUGS@@. Descripción de cada campo en la <a href="/api/referencia">referencia completa de la API</a>.</p>
+<p class="nota">Base: <code>@@BASE@@/api/v1</code>. Entrevistas disponibles: @@SLUGS@@. Descripción de cada campo en la <a href="/api">referencia completa de la API</a>.</p>
 
 <h3 class="sub">Pruébala</h3>
 <div class="explorador">
