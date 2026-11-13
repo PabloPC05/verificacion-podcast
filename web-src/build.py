@@ -17,13 +17,12 @@ from pathlib import Path
 from urllib.parse import quote, urlparse
 
 import api_publica
-import panel as estadisticas
+import estadisticas
 
 RAIZ = Path(__file__).resolve().parent.parent
 ENTREVISTAS = RAIZ / "entrevistas"
 SALIDA = RAIZ / "web"
-# Datos estáticos de la API. Vercel no sirve ficheros estáticos dentro de web/api/ en cuanto ahí hay una función
-# (web/api/estadisticas.js), así que se guardan en web/datos/ y vercel.json los publica en /api y /api/v1/*.
+# Datos estáticos de la API: se guardan en web/datos/ y vercel.json los publica en /api y /api/v1/*.
 # En local (python3 -m http.server -d web) están en /datos/v1/.
 DATOS = SALIDA / "datos"
 REPO = "https://github.com/PabloPC05/verificacion-podcast"
@@ -152,7 +151,7 @@ SCALAR = "1.76.2"  # @scalar/api-reference, versión fijada: subirla a mano tras
 #     | openssl dgst -sha384 -binary | openssl base64 -A
 SCALAR_SRI = "sha384-mCh2A/B6vkfhiHyzwBZm7lbFmEK5fE/96Kbtk+RH1zei1P/XEt0I2MCiG6WfZdor"
 # Umami Cloud (estadísticas de visitas, sin cookies). Vacío = la web sale sin seguimiento.
-# El ID es público (va en el HTML); la clave de la API no: vive en Vercel como UMAMI_API_KEY.
+# El ID es público (va en el HTML). Las cifras se ven en el panel de Umami Cloud, no en la web.
 UMAMI_ID = "83bf64a7-e92e-4617-80d2-bb6a92bb2b8e"
 LOGOS = {"PSOE": "psoe.svg", "PP": "pp.svg", "Frente Amplio": "frente-amplio.svg"}
 # Retratos de web-src/fotos: recortes cuadrados de 320 px, centrados en la cara, de las miniaturas de Wikimedia Commons.
@@ -202,8 +201,8 @@ PIE = ('<p class="pie-quien"><a href="/quien">Proyecto personal e independiente 
 REPO_PABLO = "https://github.com/PabloPC05"
 
 
-def rellenar(plantilla, analitica=True, **valores):
-    plantilla = plantilla.replace("@@HEAD_MODO@@", HEAD_MODO + (estadisticas.seguimiento(UMAMI_ID, BASE) if analitica else "")).replace("@@PIE@@", PIE)
+def rellenar(plantilla, **valores):
+    plantilla = plantilla.replace("@@HEAD_MODO@@", HEAD_MODO + estadisticas.seguimiento(UMAMI_ID, BASE)).replace("@@PIE@@", PIE)
     for k, v in valores.items():
         plantilla = plantilla.replace(f"@@{k}@@", str(v))
     return plantilla
@@ -620,10 +619,9 @@ def escribir_json(ruta, datos):
 
 
 def generar_api(hechas):
-    # Restos de cuando los datos vivían en web/api/: ahí ahora solo va la función del panel.
-    shutil.rmtree(SALIDA / "api" / "v1", ignore_errors=True)
-    shutil.rmtree(SALIDA / "api" / "referencia", ignore_errors=True)
-    (SALIDA / "api" / "index.html").unlink(missing_ok=True)
+    # Restos de cuando los datos vivían en web/api/ y del panel privado de visitas, ya retirado.
+    shutil.rmtree(SALIDA / "api", ignore_errors=True)
+    shutil.rmtree(SALIDA / "panel", ignore_errors=True)
     api = DATOS / "v1"
     ahora = dt.datetime.now().astimezone().isoformat(timespec="seconds")
     aviso = ("Verificación asistida por IA, sin revisión de un equipo de periodistas. «falso» no implica intención de mentir. "
@@ -685,7 +683,6 @@ Los errores se comunican en {REPO}/issues.
                      {"source": "/api/", "destination": "/datos/index.html"},
                      {"source": "/api/v1/:ruta*", "destination": "/datos/v1/:ruta*"}],
         "headers": [
-        # Solo los datos: /api/estadisticas (el panel privado) no se cachea ni se abre a otros dominios.
         {"source": "/api/v1/(.*)", "headers": [{"key": "Access-Control-Allow-Origin", "value": "*"},
                                                {"key": "Cache-Control", "value": "public, max-age=300"}]},
         {"source": "/llms.txt", "headers": [{"key": "Access-Control-Allow-Origin", "value": "*"}]},
@@ -1115,12 +1112,6 @@ def main():
     (DATOS / "referencia").mkdir(exist_ok=True)
     (DATOS / "referencia" / "index.html").write_text(rellenar(REDIRIGE_API, CABECERA=cabecera(
         "/api", "API abierta · Verificación The Wild Project", "La referencia de la API está en /api.")), encoding="utf-8")
-    # Panel privado de estadísticas: la página es estática y los datos los sirve /api/estadisticas tras pedir contraseña.
-    (SALIDA / "panel").mkdir(exist_ok=True)
-    (SALIDA / "panel" / "index.html").write_text(
-        rellenar(estadisticas.PAGINA, analitica=False, CSS_MENU=CSS_MENU), encoding="utf-8")
-    (SALIDA / "api").mkdir(exist_ok=True)
-    shutil.copy(RAIZ / "web-src" / "estadisticas.js", SALIDA / "api" / "estadisticas.js")
 
 
 ANALITICA_QUIEN = (
