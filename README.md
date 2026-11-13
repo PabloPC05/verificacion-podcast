@@ -23,7 +23,7 @@ Todo está aquí para que cualquiera pueda revisarlo, discutirlo y corregirlo.
 | `entrevistas/<slug>/hablantes.json`, `transcripcion-hablantes.txt` | La voz de cada segmento y la transcripción por intervenciones. |
 | `web-src/build.py` | Genera la web estática (`web/`) a partir de los datos. Sin dependencias. |
 | `en-directo/` | Experimento: graba el micrófono, transcribe y verifica en directo. Sin terminar de probar. |
-| `METODO.md` | El procedimiento exacto, los criterios de cada veredicto y los límites. |
+| `METODO.md` | El procedimiento exacto, los criterios de cada veredicto y los límites. La web lo publica en `/metodologia`. |
 
 ## Entrevistas
 
