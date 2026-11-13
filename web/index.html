@@ -753,11 +753,12 @@ function carrusel(muestra, animado) {
       .to(partes(it), { autoAlpha: 0, duration: .22, ease: "power1.in" }, "<")
       .add(() => { it._split.revert(); it._split = null; gsap.set(partes(it), { clearProps: "all" }); });
   };
-  // Pasa sola cada ESPERA segundos; se para con el ratón o el foco encima, y del todo en cuanto alguien usa las flechas
+  // Pasa sola cada ESPERA segundos y solo se para mientras el ratón o el foco del teclado están encima.
+  // Las flechas cambian de afirmación y vuelven a empezar la cuenta. Lo que pasa solo no se anuncia al lector de pantalla.
   const esperar = () => {
     espera?.kill(); espera = null;
     if (parado) return;
-    espera = gsap.delayedCall(ESPERA, () => ir(actual + 1));
+    espera = gsap.delayedCall(ESPERA, () => { lista.setAttribute("aria-live", "off"); ir(actual + 1); });
     if (encima) espera.pause();
   };
   function ir(n) {
@@ -769,14 +770,15 @@ function carrusel(muestra, animado) {
     paso?.progress(1).kill(); espera?.kill();
     paso = gsap.timeline({ onComplete: esperar }).add(salir(viejo)).add(() => activar(viejo, nuevo)).add(entrar(nuevo));
   }
-  const mano = d => { parado = true; espera?.kill(); espera = null; lista.setAttribute("aria-live", "polite"); ir(actual + d); };
+  const mano = d => { lista.setAttribute("aria-live", "polite"); ir(actual + d); };
   muestra.querySelector(".muestra-ant").onclick = () => mano(-1);
   muestra.querySelector(".muestra-sig").onclick = () => mano(1);
   if (!animado) return;
   const sobre = v => { encima = v; if (espera) v ? espera.pause() : espera.resume(); };
   muestra.addEventListener("pointerenter", e => e.pointerType === "mouse" && sobre(true));
   muestra.addEventListener("pointerleave", e => e.pointerType === "mouse" && sobre(false));
-  muestra.addEventListener("focusin", () => sobre(true));
+  const conTeclado = el => { try { return el.matches(":focus-visible"); } catch (e) { return true; } };
+  muestra.addEventListener("focusin", e => conTeclado(e.target) && sobre(true));
   muestra.addEventListener("focusout", e => muestra.contains(e.relatedTarget) || sobre(false));
   paso = gsap.timeline({ onComplete: esperar }).add(entrar(items[actual]), .25);
 }
