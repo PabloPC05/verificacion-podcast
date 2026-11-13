@@ -22,6 +22,10 @@ import panel as estadisticas
 RAIZ = Path(__file__).resolve().parent.parent
 ENTREVISTAS = RAIZ / "entrevistas"
 SALIDA = RAIZ / "web"
+# Datos estáticos de la API. Vercel no sirve ficheros estáticos dentro de web/api/ en cuanto ahí hay una función
+# (web/api/estadisticas.js), así que se guardan en web/datos/ y vercel.json los publica en /api y /api/v1/*.
+# En local (python3 -m http.server -d web) están en /datos/v1/.
+DATOS = SALIDA / "datos"
 REPO = "https://github.com/PabloPC05/verificacion-podcast"
 
 ORDEN = ["falso", "enganoso", "mayormente_verdadero", "verdadero", "no_verificable"]
@@ -616,7 +620,11 @@ def escribir_json(ruta, datos):
 
 
 def generar_api(hechas):
-    api = SALIDA / "api" / "v1"
+    # Restos de cuando los datos vivían en web/api/: ahí ahora solo va la función del panel.
+    shutil.rmtree(SALIDA / "api" / "v1", ignore_errors=True)
+    shutil.rmtree(SALIDA / "api" / "referencia", ignore_errors=True)
+    (SALIDA / "api" / "index.html").unlink(missing_ok=True)
+    api = DATOS / "v1"
     ahora = dt.datetime.now().astimezone().isoformat(timespec="seconds")
     aviso = ("Verificación asistida por IA, sin revisión de un equipo de periodistas. «falso» no implica intención de mentir. "
              "Contrasta siempre con las fuentes enlazadas.")
@@ -672,11 +680,17 @@ Los errores se comunican en {REPO}/issues.
 """, encoding="utf-8")
     (SALIDA / "vercel.json").write_text(json.dumps({
         "redirects": [{"source": "/api/referencia", "destination": "/api", "permanent": True}],
+        # Las URL públicas siguen siendo /api y /api/v1/*; los ficheros están en web/datos/ (ver DATOS).
+        "rewrites": [{"source": "/api", "destination": "/datos/index.html"},
+                     {"source": "/api/", "destination": "/datos/index.html"},
+                     {"source": "/api/v1/:ruta*", "destination": "/datos/v1/:ruta*"}],
         "headers": [
-        # /api/estadisticas (el panel privado) queda fuera: no se cachea ni se abre a otros dominios.
-        {"source": "/api/((?!estadisticas).*)", "headers": [{"key": "Access-Control-Allow-Origin", "value": "*"},
-                                            {"key": "Cache-Control", "value": "public, max-age=300"}]},
-        {"source": "/llms.txt", "headers": [{"key": "Access-Control-Allow-Origin", "value": "*"}]}]}, indent=1) + "\n")
+        # Solo los datos: /api/estadisticas (el panel privado) no se cachea ni se abre a otros dominios.
+        {"source": "/api/v1/(.*)", "headers": [{"key": "Access-Control-Allow-Origin", "value": "*"},
+                                               {"key": "Cache-Control", "value": "public, max-age=300"}]},
+        {"source": "/llms.txt", "headers": [{"key": "Access-Control-Allow-Origin", "value": "*"}]},
+        # La ruta interna /datos/ no se indexa: la pública es /api.
+        {"source": "/datos/(.*)", "headers": [{"key": "X-Robots-Tag", "value": "noindex"}]}]}, indent=1) + "\n")
     return ejemplo, slugs
 
 
@@ -1077,21 +1091,22 @@ def main():
             "/quien", "Quién hace esto · Verificación The Wild Project",
             "Quién hace esta verificación, su independencia, quién la paga, cómo se hace y cómo se corrigen los errores."),
         MENU=menu(entrevistas), CSS_MENU=CSS_MENU, REPO=REPO, REPO_PABLO=REPO_PABLO), encoding="utf-8")
-    (SALIDA / "api").mkdir(exist_ok=True)
-    (SALIDA / "api" / "index.html").write_text(rellenar(
+    DATOS.mkdir(exist_ok=True)
+    (DATOS / "index.html").write_text(rellenar(
         PAGINA_API, CABECERA=cabecera(
             "/api", "API abierta · Verificación The Wild Project",
             "API JSON y CSV de solo lectura, sin clave y con CORS abierto: referencia completa de cada ruta y cada campo, "
             "y un prompt listo para agentes de IA."), PROMPT=e(prompt_agente(hechas)), MENU=menu(entrevistas), CSS_MENU=CSS_MENU, BASE=BASE, REPO=REPO,
         SCALAR=SCALAR, SCALAR_SRI=SCALAR_SRI), encoding="utf-8")
     # La referencia vivió unas horas en /api/referencia: se redirige (aquí y en vercel.json).
-    (SALIDA / "api" / "referencia").mkdir(exist_ok=True)
-    (SALIDA / "api" / "referencia" / "index.html").write_text(rellenar(REDIRIGE_API, CABECERA=cabecera(
+    (DATOS / "referencia").mkdir(exist_ok=True)
+    (DATOS / "referencia" / "index.html").write_text(rellenar(REDIRIGE_API, CABECERA=cabecera(
         "/api", "API abierta · Verificación The Wild Project", "La referencia de la API está en /api.")), encoding="utf-8")
     # Panel privado de estadísticas: la página es estática y los datos los sirve /api/estadisticas tras pedir contraseña.
     (SALIDA / "panel").mkdir(exist_ok=True)
     (SALIDA / "panel" / "index.html").write_text(
         rellenar(estadisticas.PAGINA, analitica=False, CSS_MENU=CSS_MENU), encoding="utf-8")
+    (SALIDA / "api").mkdir(exist_ok=True)
     shutil.copy(RAIZ / "web-src" / "estadisticas.js", SALIDA / "api" / "estadisticas.js")
 
 
