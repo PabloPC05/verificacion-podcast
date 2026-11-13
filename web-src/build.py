@@ -15,6 +15,8 @@ import unicodedata
 from pathlib import Path
 from urllib.parse import urlparse
 
+import api_publica
+
 RAIZ = Path(__file__).resolve().parent.parent
 ENTREVISTAS = RAIZ / "entrevistas"
 SALIDA = RAIZ / "web"
@@ -130,12 +132,15 @@ def cargar(carpeta, meta):
 
 TONO = {"falso": "#c0271e", "enganoso": "#c26a00", "mayormente_verdadero": "#5a7d10",
         "verdadero": "#1c7c45", "no_verificable": "#777"}
+# En oscuro se usan tonos más claros (mismo matiz): sirven de texto sobre el fondo oscuro y, con tinta oscura encima, de relleno.
+TONO_OSCURO = {"falso": "#ff6b5e", "enganoso": "#ff9a2e", "mayormente_verdadero": "#b8d63c",
+               "verdadero": "#3fd083", "no_verificable": "#a4a4ac"}
 PLURAL = {"falso": "Falsas", "enganoso": "Engañosas", "mayormente_verdadero": "Casi ciertas",
           "verdadero": "Verdaderas", "no_verificable": "No verificables"}
 
 
 BASE = "https://verificacion-podcast.vercel.app"
-LOGOS = {"PSOE": "psoe.svg", "PP": "pp.svg"}
+LOGOS = {"PSOE": "psoe.svg", "PP": "pp.svg", "Frente Amplio": "frente-amplio.svg"}
 DEFINICIONES = {
     "verdadero": "Los datos lo confirman.",
     "mayormente_verdadero": "Cierto en lo esencial, con una imprecisión menor.",
@@ -146,6 +151,7 @@ DEFINICIONES = {
 
 
 def rellenar(plantilla, **valores):
+    plantilla = plantilla.replace("@@HEAD_MODO@@", HEAD_MODO)
     for k, v in valores.items():
         plantilla = plantilla.replace(f"@@{k}@@", str(v))
     return plantilla
@@ -193,7 +199,7 @@ def menu(entrevistas, actual=None):
             f'<p class="rot">Temas</p>{temas}</div></details>')
     return ('<header class="menu"><div class="ancho"><div class="m1"><a class="sello" href="/" title="Todas las entrevistas">Verificación</a>'
             + "".join(partes) + '<a class="dcha" href="/verificalo">Verifícalo tú</a><a href="/api">API</a>'
-            f'<a href="{REPO}" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></div></header>' + JS_MENU)
+            f'<a href="{REPO}" target="_blank" rel="noopener noreferrer">GitHub ↗</a>' + BOTON_MODO + '</div></div></header>' + JS_MENU)
 
 
 JS_MENU = """<script>
@@ -203,13 +209,44 @@ document.addEventListener("click", ev => document.querySelectorAll("details.desp
 document.addEventListener("keydown", ev => { if (ev.key === "Escape") document.querySelectorAll("details.desp[open]").forEach(d => d.open = false); });
 const medirMenu = () => document.documentElement.style.setProperty("--menu", document.querySelector(".menu").offsetHeight + "px");
 medirMenu(); addEventListener("resize", medirMenu);
+// Modo claro/oscuro. Sin preferencia guardada manda el sistema (lo resuelve el CSS); al pulsar se guarda y manda sobre el sistema.
+const RAIZ = document.documentElement, botonModo = document.querySelector(".modo"), sistemaOscuro = matchMedia("(prefers-color-scheme: dark)");
+const hayOscuro = () => (RAIZ.dataset.modo || (sistemaOscuro.matches ? "oscuro" : "claro")) === "oscuro";
+function etiquetarModo() {
+  const t = hayOscuro() ? "Cambiar a modo claro" : "Cambiar a modo oscuro";
+  botonModo.setAttribute("aria-label", t); botonModo.title = t;
+}
+// Revelado circular desde el botón (View Transitions API); sin la API o con poco movimiento, el cambio es instantáneo.
+function revelarModo(cambiar) {
+  if (!document.startViewTransition || matchMedia("(prefers-reduced-motion: reduce)").matches) { cambiar(); return; }
+  const c = botonModo.getBoundingClientRect(), x = c.left + c.width / 2, y = c.top + c.height / 2;
+  const r = Math.hypot(Math.max(x, innerWidth - x), Math.max(y, innerHeight - y));
+  document.startViewTransition(cambiar).ready.then(() => RAIZ.animate(
+    { clipPath: [`circle(0px at ${x}px ${y}px)`, `circle(${r}px at ${x}px ${y}px)`] },
+    { duration: 420, easing: "cubic-bezier(0.4, 0, 0.2, 1)", pseudoElement: "::view-transition-new(root)" })).catch(() => {});
+}
+botonModo.onclick = () => {
+  const nuevo = hayOscuro() ? "claro" : "oscuro";
+  revelarModo(() => { RAIZ.dataset.modo = nuevo; etiquetarModo(); });
+  try { localStorage.setItem("modo", nuevo); } catch (e) {}
+};
+sistemaOscuro.addEventListener("change", etiquetarModo);
+etiquetarModo();
 </script>"""
+
+# Se ejecuta en el <head>, antes de pintar: aplica la preferencia guardada para que no haya parpadeo.
+HEAD_MODO = ('<meta name="color-scheme" content="light dark">\n'
+             '<script>try{var m=localStorage.getItem("modo");if(m==="claro"||m==="oscuro")document.documentElement.dataset.modo=m}catch(e){}</script>')
+BOTON_MODO = ('<button class="modo" type="button" aria-label="Cambiar a modo oscuro" title="Cambiar a modo oscuro">'
+              '<svg class="luna" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>'
+              '<svg class="sol" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/>'
+              '<path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>')
 
 
 def filtros(m, extra=""):
     return ('<div class="filtros"><div class="ancho"><div class="fila" id="filtros"><span class="rot">Filtros</span>'
             f'<button data-todas aria-pressed="false">Todas <b>{m["suma"]}</b></button>'
-            + "".join(f'<button data-v="{k}" style="--tono:{TONO[k]}" aria-pressed="false"><i></i>{PLURAL[k]} <b>{m["total"][k]}</b></button>'
+            + "".join(f'<button data-v="{k}" aria-pressed="false"><i></i>{PLURAL[k]} <b>{m["total"][k]}</b></button>'
                       for k in ORDEN) + extra + "</div></div></div>")
 
 
@@ -249,7 +286,7 @@ def pagina_transcripcion(m, entrevistas):
             tema = pendientes.pop(0)
             cuerpo.append(f'<h2 id="tema-{tema["n"]}">{e(tema["titulo"])}</h2>')
         marcas = "".join(
-            f'<a class="chip" data-v="{a["veredicto"]}" style="--tono:{TONO[a["veredicto"]]}" href="/{m["slug"]}#{a["_id"]}" '
+            f'<a class="chip" data-v="{a["veredicto"]}" href="/{m["slug"]}#{a["_id"]}" '
             f'title="{e(a.get("afirmacion", ""), quote=True)}">{hms(a["_t"])} · {NOMBRE[a["veredicto"]]}</a>'
             for a in m["todas"] if t <= a["_t"] < fin)
         cuerpo.append(
@@ -314,6 +351,7 @@ def generar_api(hechas):
         suyas = [afirmacion_api(m, a) for a in m["todas"]]
         todas += suyas
         escribir_json(api / f'{m["slug"]}.json', dict(comun, entrevista=ficha_api(m), afirmaciones=suyas))
+        api_publica.escribir_csv(api / f'{m["slug"]}.csv', suyas)
         segs = json.loads((m["carpeta"] / "segmentos.json").read_text(encoding="utf-8"))
         escribir_json(api / m["slug"] / "transcripcion.json", dict(
             comun, entrevista=ficha_api(m),
@@ -322,6 +360,7 @@ def generar_api(hechas):
         (api / m["slug"] / "transcripcion.txt").write_text(
             (m["carpeta"] / "transcripcion.txt").read_text(encoding="utf-8"), encoding="utf-8")
     escribir_json(api / "afirmaciones.json", dict(comun, total=len(todas), afirmaciones=todas))
+    api_publica.escribir_csv(api / "afirmaciones.csv", todas)
     slugs = [m["slug"] for m in hechas]
     def op(resumen):
         return {"get": {"summary": resumen, "responses": {"200": {"description": "JSON", "content": {"application/json": {}}}}}}
@@ -334,7 +373,9 @@ def generar_api(hechas):
         "paths": {
             "/entrevistas.json": op("Lista de entrevistas verificadas, con recuentos por veredicto y por tema"),
             "/afirmaciones.json": op("Todas las afirmaciones verificadas de todas las entrevistas"),
+            "/afirmaciones.csv": op("Todas las afirmaciones en CSV (UTF-8, una fila por afirmación)"),
             "/{slug}.json": dict(op("Afirmaciones verificadas de una entrevista"), parameters=par),
+            "/{slug}.csv": dict(op("Afirmaciones verificadas de una entrevista, en CSV"), parameters=par),
             "/{slug}/transcripcion.json": dict(op("Transcripción por segmentos con tiempos"), parameters=par),
             "/{slug}/transcripcion.txt": dict(op("Transcripción en texto plano con marcas [h:mm:ss]"), parameters=par),
         }})
@@ -350,6 +391,7 @@ API de solo lectura, JSON estático, sin clave, CORS abierto. Base: {BASE}/api/v
 - [Todas las afirmaciones]({BASE}/api/v1/afirmaciones.json): un solo fichero con todas las afirmaciones verificadas.
 - [Afirmaciones de una entrevista]({BASE}/api/v1/{ejemplo}.json): sustituye el slug ({", ".join(slugs)}).
 - [Transcripción con tiempos]({BASE}/api/v1/{ejemplo}/transcripcion.json) y [en texto]({BASE}/api/v1/{ejemplo}/transcripcion.txt).
+- [Todas las afirmaciones en CSV]({BASE}/api/v1/afirmaciones.csv) y por entrevista: {BASE}/api/v1/{ejemplo}.csv
 - [OpenAPI]({BASE}/api/v1/openapi.json)
 - [Método y criterios]({REPO}/blob/main/METODO.md)
 
@@ -401,7 +443,7 @@ def main():
         f'<p class="partido">{e(m.get("partido") or "")}</p>'
         f'<p class="prog">{e(m["programa"])} · {e(m["fecha"])} · {e(m["duracion"])}</p>'
         f'<p class="num"><b>{m["malas"]}</b> falsas o engañosas de {m["suma"]} afirmaciones comprobadas</p>'
-        f'<p class="des">' + " · ".join(f'<span style="color:{TONO[k]}">{m["total"][k]} {PLURAL[k].lower()}</span>' for k in ORDEN) + "</p>"
+        f'<p class="des">' + " · ".join(f'<span class="tono-{k}">{m["total"][k]} {PLURAL[k].lower()}</span>' for k in ORDEN) + "</p>"
         f'<p class="acc"><a href="/{e(m["slug"])}">Línea temporal →</a>'
         f'<a href="/{e(m["slug"])}/transcripcion">Transcripción completa →</a></p></div></article>'
         for m in hechas)
@@ -415,8 +457,9 @@ def main():
     (SALIDA / "verificalo").mkdir(exist_ok=True)
     opciones = "".join(f'<option value="{e(m["slug"])}">{e(m["invitado"])}</option>' for m in hechas)
     (SALIDA / "verificalo" / "index.html").write_text(rellenar(
-        VERIFICALO, MENU=menu(entrevistas), CSS_MENU=CSS_MENU, LEYENDA=LEYENDA, BASE=BASE, REPO=REPO, OPCIONES=opciones,
-        EJ=ejemplo), encoding="utf-8")
+        VERIFICALO, SECCION_API=api_publica.SECCION_API, JS_API=api_publica.JS_API, CSS_API=api_publica.CSS_API,
+        MENU=menu(entrevistas), CSS_MENU=CSS_MENU, LEYENDA=LEYENDA, BASE=BASE, REPO=REPO, OPCIONES=opciones,
+        EJ=ejemplo, SLUGS=", ".join(f"<code>{x}</code>" for x in slugs)), encoding="utf-8")
     (SALIDA / "api").mkdir(exist_ok=True)
     (SALIDA / "api" / "index.html").write_text(rellenar(
         PAGINA_API, MENU=menu(entrevistas), CSS_MENU=CSS_MENU, BASE=BASE, REPO=REPO, EJ=ejemplo,
@@ -427,11 +470,11 @@ LEYENDA = """<section class="leyenda-f" aria-label="Leyenda de veredictos">
 <h2>Leyenda</h2>
 <p class="ley-intro">El color del minuto, del punto de la línea y de la etiqueta indica el veredicto de cada afirmación.</p>
 <dl>
-<div style="--tono:#c0271e"><dt>Falso</dt><dd><b>Los datos lo contradicen.</b> Incluye errores y lapsus: no implica intención de mentir.</dd></div>
-<div style="--tono:#c26a00"><dt>Engañoso</dt><dd><b>Parte de un dato real, pero confunde.</b> Omite contexto, mezcla periodos o lleva a una conclusión que no se sigue.</dd></div>
-<div style="--tono:#5a7d10"><dt>Casi cierto</dt><dd><b>Cierto en lo esencial.</b> Tiene una imprecisión menor, como un redondeo o una fecha aproximada.</dd></div>
-<div style="--tono:#1c7c45"><dt>Verdadero</dt><dd><b>Los datos lo confirman.</b></dd></div>
-<div style="--tono:#777"><dt>No verificable</dt><dd><b>Sin prueba pública suficiente.</b> No se puede confirmar ni desmentir, o la búsqueda automática se quedó corta.</dd></div>
+<div class="tono-falso"><dt>Falso</dt><dd><b>Los datos lo contradicen.</b> Incluye errores y lapsus: no implica intención de mentir.</dd></div>
+<div class="tono-enganoso"><dt>Engañoso</dt><dd><b>Parte de un dato real, pero confunde.</b> Omite contexto, mezcla periodos o lleva a una conclusión que no se sigue.</dd></div>
+<div class="tono-mayormente_verdadero"><dt>Casi cierto</dt><dd><b>Cierto en lo esencial.</b> Tiene una imprecisión menor, como un redondeo o una fecha aproximada.</dd></div>
+<div class="tono-verdadero"><dt>Verdadero</dt><dd><b>Los datos lo confirman.</b></dd></div>
+<div class="tono-no_verificable"><dt>No verificable</dt><dd><b>Sin prueba pública suficiente.</b> No se puede confirmar ni desmentir, o la búsqueda automática se quedó corta.</dd></div>
 </dl>
 <ul class="ley-notas">
 <li><b>Se evalúa:</b> hechos comprobables que afirma el entrevistado (cifras, fechas, leyes, lo que dijo o hizo alguien).</li>
@@ -440,87 +483,112 @@ LEYENDA = """<section class="leyenda-f" aria-label="Leyenda de veredictos">
 </ul>
 </section>"""
 
+# Colores como variables: el tema claro (el de siempre) en :root y el oscuro redefinido una sola vez.
+# Sin preferencia guardada manda prefers-color-scheme; si la persona pulsa el botón, <html data-modo="claro|oscuro"> manda sobre el sistema.
+def _tonos(paleta):
+    return " ".join(f"--v-{k}:{v};" for k, v in paleta.items())
+
+
+_CLARO = ("--fondo:#fff; --tinta:#000; --suave:#444; --gris:#666; --gris-claro:#999; --claro:#d9d9d9; --codigo:#f2f2f2; --resalte:#f3f3f3; "
+          "--pre-fondo:#000; --pre-tinta:#fff; --pre-borde:transparent; --sombra:#000; --inv-suave:#ccc; --sobre-tono:#fff; "
+          "--logo-fondo:transparent; --logo-radio:0; --luna:block; --sol:none; color-scheme:light; " + _tonos(TONO))
+_OSCURO = ("--fondo:#121214; --tinta:#ececee; --suave:#bdbdc4; --gris:#a3a3aa; --gris-claro:#7c7c84; --claro:#3a3a40; --codigo:#26262b; --resalte:#26262b; "
+           "--pre-fondo:#1c1c20; --pre-tinta:#ececee; --pre-borde:#3a3a40; --sombra:#55555c; --inv-suave:#55555c; --sobre-tono:#121214; "
+           "--logo-fondo:#fff; --logo-radio:4px; --luna:none; --sol:block; color-scheme:dark; " + _tonos(TONO_OSCURO))
 CSS_MENU = """
+:root { @@CLARO@@ }
+@media (prefers-color-scheme:dark) { :root:not([data-modo=claro]) { @@OSCURO@@ } }
+:root[data-modo=oscuro] { @@OSCURO@@ }
+@@CLASES_TONO@@
+::view-transition-old(root), ::view-transition-new(root) { animation:none; mix-blend-mode:normal; }
 html { scroll-behavior:smooth; scroll-padding-top:calc(var(--menu, 48px) + 64px); }
 [hidden] { display:none !important; }
-.menu { position:sticky; top:0; z-index:10; background:#fff; border-bottom:2px solid #000; }
+.menu { position:sticky; top:0; z-index:10; background:var(--fondo); border-bottom:2px solid var(--tinta); }
 .menu .ancho { padding-top:9px; padding-bottom:9px; position:relative; }
 .m1 { display:flex; flex-wrap:wrap; align-items:center; gap:4px 24px; font-size:14.5px; }
-.m1 a, .desp summary { color:#000; text-decoration:none; font-weight:600; padding:3px 0; border-bottom:2px solid transparent; }
-.m1 > a:hover, .desp.actual summary, .desp[open] summary, .desp summary:hover { border-bottom-color:#000; }
+.m1 a, .desp summary { color:var(--tinta); text-decoration:none; font-weight:600; padding:3px 0; border-bottom:2px solid transparent; }
+.m1 > a:hover, .desp.actual summary, .desp[open] summary, .desp summary:hover { border-bottom-color:var(--tinta); }
 .m1 .sello { font:700 17px/1.2 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; }
-.m1 .off { color:#999; } .m1 .dcha { margin-left:auto; }
-.rot { font-size:10.5px; font-weight:700; text-transform:uppercase; letter-spacing:.09em; color:#666; flex:none; }
+.m1 .off { color:var(--gris-claro); } .m1 .dcha { margin-left:auto; }
+.modo { flex:none; display:inline-grid; place-items:center; width:26px; height:26px; padding:0; margin:0 0 0 -8px; cursor:pointer;
+  color:var(--tinta); background:var(--fondo); border:1.5px solid var(--tinta); border-radius:50%; }
+.modo:hover { background:var(--tinta); color:var(--fondo); }
+.modo svg { width:15px; height:15px; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+.modo .luna { display:var(--luna); } .modo .sol { display:var(--sol); }
+.rot { font-size:10.5px; font-weight:700; text-transform:uppercase; letter-spacing:.09em; color:var(--gris); flex:none; }
 .desp { position:relative; margin:0; padding:0; border:0; font-size:inherit; }
 .desp summary { list-style:none; cursor:pointer; user-select:none; }
 .desp summary::-webkit-details-marker { display:none; }
 .desp summary::after { content:" ▾"; } .desp[open] summary::after { content:" ▴"; }
-.desp .lista { position:absolute; top:calc(100% + 10px); left:0; z-index:20; background:#fff; border:2px solid #000; box-shadow:5px 5px 0 #000;
+.desp .lista { position:absolute; top:calc(100% + 10px); left:0; z-index:20; background:var(--fondo); border:2px solid var(--tinta); box-shadow:5px 5px 0 var(--sombra);
   width:max-content; min-width:260px; max-width:min(92vw,470px); max-height:74vh; overflow-y:auto; padding:6px 0; }
 .desp .lista a { display:flex; justify-content:space-between; align-items:baseline; gap:16px; padding:7px 16px;
   font-size:14.5px; font-weight:500; border:0; line-height:1.35; }
 .desp .lista a.fuerte { font-weight:700; padding:9px 16px; }
-.desp .lista a.fuerte small { font-weight:500; color:#666; font-size:12px; white-space:nowrap; }
-.desp .lista .rot { margin:8px 0 2px; padding:9px 16px 0; border-top:1px solid #000; }
-.desp .lista a:hover { background:#000; color:#fff; } .desp .lista a:hover small { color:#ccc; }
-.desp .lista b { color:#c0271e; font-weight:700; font-variant-numeric:tabular-nums; }
-.desp .lista a:hover b { color:#fff; } .desp .lista a.off { opacity:.4; }
+.desp .lista a.fuerte small { font-weight:500; color:var(--gris); font-size:12px; white-space:nowrap; }
+.desp .lista .rot { margin:8px 0 2px; padding:9px 16px 0; border-top:1px solid var(--tinta); }
+.desp .lista a:hover { background:var(--tinta); color:var(--fondo); } .desp .lista a:hover small { color:var(--inv-suave); }
+.desp .lista b { color:var(--v-falso); font-weight:700; font-variant-numeric:tabular-nums; }
+.desp .lista a:hover b { color:var(--fondo); } .desp .lista a.off { opacity:.4; }
 .leyenda-f h2 { font:700 22px/1.2 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; margin:0 0 4px; padding:0; border:0; }
-.ley-intro { margin:0 0 14px; font-size:14.5px; color:#444; }
-.leyenda-f dl { margin:0 0 16px; border-top:2px solid #000; }
-.leyenda-f dl div { display:grid; grid-template-columns:150px minmax(0,1fr); gap:0 16px; align-items:center; padding:9px 0; border-bottom:1px solid #000; }
-.leyenda-f dt { background:var(--tono); color:#fff; font-size:12.5px; font-weight:700; text-transform:uppercase; letter-spacing:.07em;
+.ley-intro { margin:0 0 14px; font-size:14.5px; color:var(--suave); }
+.leyenda-f dl { margin:0 0 16px; border-top:2px solid var(--tinta); }
+.leyenda-f dl div { display:grid; grid-template-columns:150px minmax(0,1fr); gap:0 16px; align-items:center; padding:9px 0; border-bottom:1px solid var(--tinta); }
+.leyenda-f dt { background:var(--tono); color:var(--sobre-tono); font-size:12.5px; font-weight:700; text-transform:uppercase; letter-spacing:.07em;
   padding:7px 10px; text-align:center; }
 .leyenda-f dd { margin:0; font-size:15px; line-height:1.4; }
 .ley-notas { list-style:none; margin:0; padding:0; font-size:14.5px; display:grid; gap:4px; }
 @media (max-width:560px) { .leyenda-f dl div { grid-template-columns:1fr; gap:6px; } .leyenda-f dt { justify-self:start; } }
-.filtros { position:sticky; top:var(--menu, 48px); z-index:5; background:#fff; border-bottom:1px solid #000; padding:9px 0; }
+.filtros { position:sticky; top:var(--menu, 48px); z-index:5; background:var(--fondo); border-bottom:1px solid var(--tinta); padding:9px 0; }
 .fila { display:flex; flex-wrap:wrap; align-items:center; gap:6px 8px; }
-.fila button { font:inherit; font-size:12.5px; font-weight:600; color:#000; background:#fff; border:1.5px solid #000;
+.fila button { font:inherit; font-size:12.5px; font-weight:600; color:var(--tinta); background:var(--fondo); border:1.5px solid var(--tinta);
   border-radius:999px; padding:3px 11px; cursor:pointer; display:inline-flex; align-items:center; gap:6px; }
 .fila b { font-weight:500; opacity:.7; font-variant-numeric:tabular-nums; }
 .fila button[data-v] { color:var(--tono); border-color:var(--tono); }
 .fila button[data-v] i { width:8px; height:8px; border-radius:50%; background:currentColor; }
-.fila button[aria-pressed=true] { background:#000; color:#fff; }
-.fila button[data-v][aria-pressed=true] { background:var(--tono); color:#fff; }
+.fila button[aria-pressed=true] { background:var(--tinta); color:var(--fondo); }
+.fila button[data-v][aria-pressed=true] { background:var(--tono); color:var(--sobre-tono); }
 .fila button[data-solo] { margin-left:auto; }
 @media (max-width:700px) { .m1 { gap:4px 16px; font-size:14px; } .m1 .dcha { margin-left:0; }
   .desp { position:static; } .desp .lista { left:16px; right:16px; top:auto; margin-top:10px; width:auto; max-width:none; }
   .fila .rot { display:none; } .fila button { font-size:12px; padding:2px 9px; } .fila button[data-solo] { margin-left:0; } }
 """
+CSS_MENU = (CSS_MENU.replace("@@CLARO@@", _CLARO).replace("@@OSCURO@@", _OSCURO)
+            .replace("@@CLASES_TONO@@", "\n".join(f"[data-v={k}], .tono-{k} {{ --tono:var(--v-{k}); }}" for k in ORDEN)))
 
 VERIFICALO = """<!doctype html>
 <html lang="es">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="light only">
+@@HEAD_MODO@@
 <title>Verifícalo tú · Verificación The Wild Project</title>
 <meta name="description" content="Cómo comprobar por tu cuenta cada veredicto: vídeo, fuentes, datos abiertos y un encargo listo para que cualquier IA audite la verificación.">
 <style>
 :root { --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; }
 * { box-sizing:border-box; }
-body { margin:0; background:#fff; color:#000; font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; }
-a { color:#000; }
+body { margin:0; background:var(--fondo); color:var(--tinta); font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; }
+a { color:var(--tinta); }
 .ancho { max-width:1120px; margin:0 auto; padding:0 16px; }
 main.ancho { max-width:820px; padding-bottom:72px; }
 h1 { font:700 clamp(30px,6vw,48px)/1.06 var(--serif); letter-spacing:-0.02em; margin:38px 0 12px; text-wrap:balance; }
 .entrada { font-size:17px; max-width:62ch; }
-main > h2 { font:700 24px/1.2 var(--serif); margin:44px 0 10px; padding-top:12px; border-top:3px solid #000; }
+main > h2 { font:700 24px/1.2 var(--serif); margin:44px 0 10px; padding-top:12px; border-top:3px solid var(--tinta); }
 p, li { max-width:68ch; }
 .vias { list-style:none; padding:0; margin:18px 0 0; display:grid; gap:12px; }
-.vias li { border:2px solid #000; padding:14px 16px; max-width:none; display:grid; grid-template-columns:44px minmax(0,1fr); gap:0 14px; }
+.vias li { border:2px solid var(--tinta); padding:14px 16px; max-width:none; display:grid; grid-template-columns:44px minmax(0,1fr); gap:0 14px; }
 .vias li > b { font:700 34px/1 var(--serif); }
 .vias h3 { margin:0 0 2px; font-size:17px; } .vias p { margin:0; font-size:15px; }
 .opciones { display:flex; flex-wrap:wrap; gap:10px 18px; margin:14px 0; font-size:14.5px; font-weight:600; }
-.opciones select { font:inherit; font-weight:500; border:1.5px solid #000; background:#fff; padding:5px 8px; margin-left:6px; border-radius:0; }
-pre { background:#000; color:#fff; padding:16px 18px; white-space:pre-wrap; overflow-wrap:anywhere; font:13px/1.6 ui-monospace,SFMono-Regular,Menlo,monospace; margin:0 0 12px; }
+.opciones select { font:inherit; font-weight:500; color:var(--tinta); border:1.5px solid var(--tinta); background:var(--fondo); padding:5px 8px; margin-left:6px; border-radius:0; }
+pre { background:var(--pre-fondo); color:var(--pre-tinta); outline:1px solid var(--pre-borde); outline-offset:-1px; padding:16px 18px; white-space:pre-wrap; overflow-wrap:anywhere; font:13px/1.6 ui-monospace,SFMono-Regular,Menlo,monospace; margin:0 0 12px; }
 .botones { display:flex; flex-wrap:wrap; gap:8px; }
-.botones button, .botones a { font:inherit; font-size:14px; font-weight:600; background:#fff; color:#000; border:2px solid #000; padding:7px 14px; cursor:pointer; text-decoration:none; }
-.botones button { background:#000; color:#fff; }
-.botones a:hover { background:#000; color:#fff; }
-.nota { font-size:14px; color:#444; }
-code { font:13.5px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace; background:#f2f2f2; padding:1px 5px; }
+.botones button, .botones a { font:inherit; font-size:14px; font-weight:600; background:var(--fondo); color:var(--tinta); border:2px solid var(--tinta); padding:7px 14px; cursor:pointer; text-decoration:none; }
+.botones button { background:var(--tinta); color:var(--fondo); }
+.botones a:hover { background:var(--tinta); color:var(--fondo); }
+.nota { font-size:14px; color:var(--suave); }
+code { font:13.5px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace; background:var(--codigo); padding:1px 5px; }
+@@CSS_API@@
 @@CSS_MENU@@
 </style>
 </head>
@@ -528,14 +596,16 @@ code { font:13.5px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace; background:#
 @@MENU@@
 <main class="ancho">
 <h1>Verifícalo tú</h1>
-<p class="entrada">Esta verificación la han hecho modelos de IA y no la ha revisado un equipo de periodistas. No hace falta que te la creas: todo está publicado para que lo compruebes, a mano o con tu propia IA.</p>
+<p class="entrada">Esta verificación la han hecho modelos de IA y no la ha revisado un equipo de periodistas. No hace falta que te la creas: todo está publicado para que lo compruebes a mano, con los datos de la API o con tu propia IA.</p>
 
 <ol class="vias">
 <li><b>1</b><div><h3>Mira el momento exacto</h3><p>En la línea temporal, el minuto de cada afirmación abre el vídeo de YouTube en ese segundo. Escucha la frase y su contexto.</p></div></li>
 <li><b>2</b><div><h3>Abre las fuentes</h3><p>Cada panel lista las fuentes con su enlace. «Explicación completa» detalla qué dato sale de cada una.</p></div></li>
 <li><b>3</b><div><h3>Pásaselo a una IA</h3><p>Cada panel tiene un botón que copia un encargo para esa afirmación concreta. Para auditar una entrevista entera, usa el encargo de abajo.</p></div></li>
-<li><b>4</b><div><h3>Usa los datos abiertos</h3><p>Afirmaciones, veredictos, fuentes y transcripciones están en la <a href="/api">API</a> en JSON, sin clave. El método y los encargos originales, en <a href="@@REPO@@" target="_blank" rel="noopener noreferrer">GitHub</a>.</p></div></li>
+<li><b>4</b><div><h3>Consulta la API</h3><p>Afirmaciones, veredictos, fuentes y transcripciones, en JSON y CSV, sin clave. Está <a href="#api">aquí abajo</a>, con ejemplos para hoja de cálculo, terminal y programación. El método y los encargos originales, en <a href="@@REPO@@" target="_blank" rel="noopener noreferrer">GitHub</a>.</p></div></li>
 </ol>
+
+@@SECCION_API@@
 
 <h2>Encargo para auditar una entrevista con una IA</h2>
 <p>Elige qué quieres revisar, copia el texto y pégalo en un asistente que pueda navegar por internet (Claude, ChatGPT, Gemini, Perplexity…). Lee los datos directamente de la API.</p>
@@ -555,6 +625,7 @@ code { font:13.5px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace; background:#
 <h2>Qué significa cada veredicto</h2>
 @@LEYENDA@@
 </main>
+@@JS_API@@
 <script>
 const B = "@@BASE@@";
 const ALCANCE = {
@@ -620,25 +691,25 @@ PAGINA_API = """<!doctype html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="light only">
+@@HEAD_MODO@@
 <title>API abierta · Verificación The Wild Project</title>
 <meta name="description" content="API JSON de solo lectura, sin clave y con CORS abierto, con todas las afirmaciones verificadas, sus fuentes y las transcripciones. Pensada para agentes de IA y verificadores.">
 <style>
 :root { --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; }
 * { box-sizing:border-box; }
-body { margin:0; background:#fff; color:#000; font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; }
-a { color:#000; }
+body { margin:0; background:var(--fondo); color:var(--tinta); font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; }
+a { color:var(--tinta); }
 .ancho { max-width:1120px; margin:0 auto; padding:0 16px; }
 main.ancho { max-width:820px; padding-bottom:72px; }
 h1 { font:700 clamp(28px,5.5vw,44px)/1.08 var(--serif); letter-spacing:-0.02em; margin:38px 0 12px; text-wrap:balance; }
-h2 { font:700 23px/1.2 var(--serif); margin:40px 0 10px; padding-top:12px; border-top:3px solid #000; }
+h2 { font:700 23px/1.2 var(--serif); margin:40px 0 10px; padding-top:12px; border-top:3px solid var(--tinta); }
 p, li { max-width:68ch; }
-code { font:13.5px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace; background:#f2f2f2; padding:1px 5px; }
-pre { background:#000; color:#fff; padding:14px 16px; overflow-x:auto; font:13px/1.55 ui-monospace,SFMono-Regular,Menlo,monospace; }
+code { font:13.5px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace; background:var(--codigo); padding:1px 5px; }
+pre { background:var(--pre-fondo); color:var(--pre-tinta); outline:1px solid var(--pre-borde); outline-offset:-1px; padding:14px 16px; overflow-x:auto; font:13px/1.55 ui-monospace,SFMono-Regular,Menlo,monospace; }
 pre code { background:none; padding:0; color:inherit; }
 .tabla { overflow-x:auto; }
 table { border-collapse:collapse; width:100%; font-size:14.5px; min-width:560px; }
-th, td { text-align:left; padding:8px 10px; border-bottom:1px solid #000; vertical-align:top; }
+th, td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--tinta); vertical-align:top; }
 th { font-size:11px; text-transform:uppercase; letter-spacing:.08em; }
 td a { overflow-wrap:anywhere; }
 @@CSS_MENU@@
@@ -655,8 +726,8 @@ td a { overflow-wrap:anywhere; }
 <thead><tr><th>Qué</th><th>Dirección</th></tr></thead>
 <tbody>
 <tr><td>Lista de entrevistas, recuentos y temas (empieza aquí)</td><td><a href="/api/v1/entrevistas.json">/api/v1/entrevistas.json</a></td></tr>
-<tr><td>Todas las afirmaciones de todas las entrevistas</td><td><a href="/api/v1/afirmaciones.json">/api/v1/afirmaciones.json</a></td></tr>
-<tr><td>Afirmaciones de una entrevista</td><td><a href="/api/v1/@@EJ@@.json">/api/v1/{slug}.json</a></td></tr>
+<tr><td>Todas las afirmaciones de todas las entrevistas</td><td><a href="/api/v1/afirmaciones.json">/api/v1/afirmaciones.json</a> · <a href="/api/v1/afirmaciones.csv">.csv</a></td></tr>
+<tr><td>Afirmaciones de una entrevista</td><td><a href="/api/v1/@@EJ@@.json">/api/v1/{slug}.json</a> · <a href="/api/v1/@@EJ@@.csv">.csv</a></td></tr>
 <tr><td>Transcripción por segmentos con tiempos</td><td><a href="/api/v1/@@EJ@@/transcripcion.json">/api/v1/{slug}/transcripcion.json</a></td></tr>
 <tr><td>Transcripción en texto plano</td><td><a href="/api/v1/@@EJ@@/transcripcion.txt">/api/v1/{slug}/transcripcion.txt</a></td></tr>
 <tr><td>Descripción OpenAPI 3.1</td><td><a href="/api/v1/openapi.json">/api/v1/openapi.json</a></td></tr>
@@ -703,39 +774,41 @@ PORTADA = """<!doctype html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="light only">
+@@HEAD_MODO@@
 <title>Verificación de las entrevistas electorales de The Wild Project</title>
 <meta name="description" content="Las entrevistas de Jordi Wild a los candidatos a las elecciones generales de 2026, comprobadas dato a dato con el mismo método. Código y datos abiertos.">
 <style>
 :root { --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; }
 * { box-sizing:border-box; }
-body { margin:0; background:#fff; color:#000; font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; }
-a { color:#000; }
+body { margin:0; background:var(--fondo); color:var(--tinta); font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; }
+a { color:var(--tinta); }
 .ancho { max-width:1120px; margin:0 auto; padding:0 16px; }
 main.ancho { max-width:860px; }
 h1 { font:700 clamp(30px,6vw,48px)/1.06 var(--serif); letter-spacing:-0.02em; margin:40px 0 14px; text-wrap:balance; }
 .entrada { font-size:17px; max-width:62ch; margin:0 0 30px; }
-.tu { margin:-10px 0 30px; padding:12px 14px; border:1.5px solid #000; font-size:15px; max-width:62ch; }
-.entrevista { border:2px solid #000; padding:22px 24px; margin-bottom:18px; display:grid; grid-template-columns:76px minmax(0,1fr); gap:0 22px; align-items:start; }
+.tu { margin:-10px 0 30px; padding:12px 14px; border:1.5px solid var(--tinta); font-size:15px; max-width:62ch; }
+.entrevista { border:2px solid var(--tinta); padding:22px 24px; margin-bottom:18px; display:grid; grid-template-columns:76px minmax(0,1fr); gap:0 22px; align-items:start; }
 .logo { width:76px; height:76px; object-fit:contain; display:block; }
-.logo.sin { display:grid; place-items:center; border:2px solid #000; font:700 24px/1 var(--serif); }
+/* en oscuro, los logotipos llevan una placa clara detrás (el azul del PP casi desaparece sobre fondo oscuro); en claro no hay placa */
+img.logo { background:var(--logo-fondo); box-shadow:0 0 0 6px var(--logo-fondo); border-radius:var(--logo-radio); }
+.logo.sin { display:grid; place-items:center; border:2px solid var(--tinta); font:700 24px/1 var(--serif); }
 .entrevista.off .logo { opacity:.45; }
 .partido { margin:0 0 6px; font-size:15px; font-weight:700; }
-.entrevista.off { border:1px dashed #999; color:#666; }
-.prog { margin:0 0 12px; font-size:12px; text-transform:uppercase; letter-spacing:.08em; color:#666; }
+.entrevista.off { border:1px dashed var(--gris-claro); color:var(--gris); }
+.prog { margin:0 0 12px; font-size:12px; text-transform:uppercase; letter-spacing:.08em; color:var(--gris); }
 .entrevista h2 { font:700 32px/1.1 var(--serif); margin:0 0 2px; } .entrevista h2 a { text-decoration:none; }
 .num { margin:0; font-size:17px; } .num b { font:700 34px/1 var(--serif); margin-right:4px; }
-.des { margin:4px 0 14px; font-size:13.5px; font-weight:600; }
+.des { margin:4px 0 14px; font-size:13.5px; font-weight:600; } .des span { color:var(--tono); }
 .entrevista ul { list-style:none; margin:6px 0 16px; padding:0; columns:2; column-gap:28px; font-size:14.5px; }
-.entrevista li { margin:0 0 5px; break-inside:avoid; } .entrevista li b { color:#c0271e; }
-.contrastar { border-top:3px solid #000; margin-top:40px; padding-top:6px; }
+.entrevista li { margin:0 0 5px; break-inside:avoid; } .entrevista li b { color:var(--v-falso); }
+.contrastar { border-top:3px solid var(--tinta); margin-top:40px; padding-top:6px; }
 .contrastar h2 { font:700 26px/1.2 var(--serif); margin:18px 0 6px; }
 .contrastar li { margin-bottom:8px; max-width:68ch; }
-.contrastar pre { background:#000; color:#fff; padding:14px 16px; overflow-x:auto; white-space:pre-wrap; font:13px/1.55 ui-monospace,SFMono-Regular,Menlo,monospace; margin:6px 0 10px; }
-.copiar { font:inherit; font-size:13px; font-weight:600; background:#fff; color:#000; border:1.5px solid #000; padding:5px 12px; cursor:pointer; }
-.copiar:hover { background:#000; color:#fff; }
+.contrastar pre { background:var(--pre-fondo); color:var(--pre-tinta); outline:1px solid var(--pre-borde); outline-offset:-1px; padding:14px 16px; overflow-x:auto; white-space:pre-wrap; font:13px/1.55 ui-monospace,SFMono-Regular,Menlo,monospace; margin:6px 0 10px; }
+.copiar { font:inherit; font-size:13px; font-weight:600; background:var(--fondo); color:var(--tinta); border:1.5px solid var(--tinta); padding:5px 12px; cursor:pointer; }
+.copiar:hover { background:var(--tinta); color:var(--fondo); }
 .acc { margin:0; display:flex; flex-wrap:wrap; gap:8px 22px; } .acc a { font-weight:700; text-underline-offset:3px; }
-footer { border-top:3px solid #000; margin-top:48px; padding:24px 0 64px; font-size:14.5px; }
+footer { border-top:3px solid var(--tinta); margin-top:48px; padding:24px 0 64px; font-size:14.5px; }
 footer p { max-width:68ch; }
 @media (max-width:560px) { .entrevista { grid-template-columns:52px minmax(0,1fr); gap:0 14px; padding:16px; } .logo { width:52px; height:52px; } .entrevista h2 { font-size:26px; } }
 @@CSS_MENU@@
@@ -763,26 +836,26 @@ TRANSCRIPCION = """<!doctype html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="light only">
+@@HEAD_MODO@@
 <title>Transcripción completa: @@INVITADO@@ en The Wild Project</title>
 <meta name="description" content="Transcripción completa de la entrevista de Jordi Wild a @@INVITADO@@ (@@PROGRAMA@@), con marcas de tiempo enlazadas al vídeo y a cada afirmación verificada.">
 <style>
 :root { --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; }
 * { box-sizing:border-box; }
-body { margin:0; background:#fff; color:#000; font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; }
-a { color:#000; }
+body { margin:0; background:var(--fondo); color:var(--tinta); font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; }
+a { color:var(--tinta); }
 .ancho { max-width:1120px; margin:0 auto; padding:0 16px; }
 main.ancho { max-width:820px; padding-bottom:72px; }
 h1 { font:700 clamp(28px,5.5vw,42px)/1.08 var(--serif); letter-spacing:-0.02em; margin:36px 0 12px; text-wrap:balance; }
-.entrada { font-size:16px; color:#444; max-width:64ch; margin:0 0 8px; }
-h2 { font:700 23px/1.2 var(--serif); margin:44px 0 14px; padding-top:12px; border-top:3px solid #000; text-wrap:balance; }
+.entrada { font-size:16px; color:var(--suave); max-width:64ch; margin:0 0 8px; }
+h2 { font:700 23px/1.2 var(--serif); margin:44px 0 14px; padding-top:12px; border-top:3px solid var(--tinta); text-wrap:balance; }
 .par { display:grid; grid-template-columns:74px minmax(0,1fr); gap:0 14px; margin-bottom:16px; }
-.par:target { background:#f3f3f3; }
+.par:target { background:var(--resalte); }
 .minuto { font-size:13px; font-weight:700; font-variant-numeric:tabular-nums; text-underline-offset:3px; padding-top:3px; }
 .par p { margin:0; font:17px/1.6 var(--serif); }
 .par .chips { margin-top:6px; display:flex; flex-wrap:wrap; gap:6px; font:600 12px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
 .chip { color:var(--tono); border:1.5px solid var(--tono); border-radius:999px; padding:1px 9px; text-decoration:none; }
-.chip:hover { background:var(--tono); color:#fff; }
+.chip:hover { background:var(--tono); color:var(--sobre-tono); }
 @media (max-width:600px) { .par { grid-template-columns:1fr; } .par p { font-size:16.5px; } }
 @@CSS_MENU@@
 </style>
@@ -794,7 +867,7 @@ h2 { font:700 23px/1.2 var(--serif); margin:44px 0 14px; padding-top:12px; borde
 <h1>Transcripción completa: @@INVITADO@@ con Jordi Wild</h1>
 <p class="entrada">@@PROGRAMA@@ · @@FECHA_VIDEO@@ · @@DURACION@@. Transcripción automática (Whisper): no distingue quién habla y puede tener errores en nombres y cifras. Cada minuto abre el <a href="https://www.youtube.com/watch?v=@@VIDEO@@" target="_blank" rel="noopener noreferrer">vídeo</a> en ese punto; las etiquetas de color llevan a la afirmación verificada en la <a href="/@@SLUG@@">línea temporal</a>.</p>
 @@CUERPO@@
-<div style="border-top:3px solid #000; margin-top:48px; padding-top:22px">@@LEYENDA@@</div>
+<div style="border-top:3px solid var(--tinta); margin-top:48px; padding-top:22px">@@LEYENDA@@</div>
 </main>
 <script>
 const botones = document.querySelectorAll("#filtros button[data-v]");
@@ -830,38 +903,38 @@ PLANTILLA = """<!doctype html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="light only">
+@@HEAD_MODO@@
 <title>Verificación: @@INVITADO@@ en The Wild Project</title>
 <meta name="description" content="Línea temporal de la entrevista de Jordi Wild a @@INVITADO@@: @@MALAS@@ afirmaciones falsas o engañosas, cada una con su minuto, su justificación y sus fuentes.">
 <meta property="og:title" content="@@INVITADO@@ en The Wild Project, minuto a minuto">
 <meta property="og:description" content="@@MALAS@@ de @@SUMA@@ afirmaciones son falsas o engañosas. Cada una enlaza al segundo exacto del vídeo y a sus fuentes.">
 <style>
-:root { --negro:#000; --blanco:#fff; --gris:#666; --claro:#d9d9d9; --col:330px; --hueco:56px;
+:root { --col:330px; --hueco:56px;
   --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; }
 * { box-sizing:border-box; }
 html { scroll-behavior:smooth; }
-body { margin:0; background:var(--blanco); color:var(--negro); font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; -webkit-text-size-adjust:100%; }
-a { color:var(--negro); }
+body { margin:0; background:var(--fondo); color:var(--tinta); font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; -webkit-text-size-adjust:100%; }
+a { color:var(--tinta); }
 .ancho { max-width:1120px; margin:0 auto; padding:0 16px; }
 .cima { display:flex; justify-content:space-between; gap:12px; padding-top:18px; font-size:13px; }
 .cima a { font-weight:600; white-space:nowrap; }
 .portada { padding-top:40px; padding-bottom:8px; }
 h1 { font:700 clamp(30px,6vw,48px)/1.06 var(--serif); letter-spacing:-0.02em; margin:0 0 14px; text-wrap:balance; }
 .entrada { font-size:17px; margin:0 0 28px; max-width:60ch; }
-.dato { display:flex; align-items:baseline; gap:16px; flex-wrap:wrap; border-top:3px solid var(--negro); border-bottom:1px solid var(--negro); padding:14px 0; }
+.dato { display:flex; align-items:baseline; gap:16px; flex-wrap:wrap; border-top:3px solid var(--tinta); border-bottom:1px solid var(--tinta); padding:14px 0; }
 .dato b { font:700 clamp(60px,13vw,96px)/0.85 var(--serif); font-variant-numeric:tabular-nums; }
 .dato span { font-size:18px; max-width:24ch; line-height:1.3; }
 .resto { font-size:14px; color:var(--gris); margin:10px 0 0; }
-.pegado { position:sticky; top:0; z-index:5; background:var(--blanco); border-bottom:1px solid var(--negro); padding:10px 0; margin-top:22px; }
+.pegado { position:sticky; top:0; z-index:5; background:var(--fondo); border-bottom:1px solid var(--tinta); padding:10px 0; margin-top:22px; }
 .fila { display:flex; gap:8px; overflow-x:auto; scrollbar-width:none; }
 .fila::-webkit-scrollbar { display:none; }
-.fila button { flex:none; font:inherit; font-size:13px; font-weight:600; color:var(--negro); background:var(--blanco);
-  border:1.5px solid var(--negro); border-radius:999px; padding:5px 14px; cursor:pointer; }
-.fila button[aria-pressed=true] { background:var(--negro); color:var(--blanco); }
+.fila button { flex:none; font:inherit; font-size:13px; font-weight:600; color:var(--tinta); background:var(--fondo);
+  border:1.5px solid var(--tinta); border-radius:999px; padding:5px 14px; cursor:pointer; }
+.fila button[aria-pressed=true] { background:var(--tinta); color:var(--fondo); }
 .fila b { font-weight:500; opacity:.65; font-variant-numeric:tabular-nums; }
 
 .linea { list-style:none; margin:0; padding:28px 0 40px; position:relative; }
-.linea::before { content:""; position:absolute; top:0; bottom:0; left:var(--col); width:2px; background:var(--negro); }
+.linea::before { content:""; position:absolute; top:0; bottom:0; left:var(--col); width:2px; background:var(--tinta); }
 .linea > li { position:relative; display:grid; grid-template-columns:var(--col) var(--hueco) minmax(0,1fr); align-items:start; }
 .minuto { grid-column:1; justify-self:end; margin-right:22px; font-weight:700; font-size:17px; font-variant-numeric:tabular-nums;
   text-underline-offset:3px; white-space:nowrap; }
@@ -870,18 +943,18 @@ h1 { font:700 clamp(30px,6vw,48px)/1.06 var(--serif); letter-spacing:-0.02em; ma
 .dicho .minuto { margin:0; }
 .dicho blockquote { margin:8px 0 0; font-size:17px; }
 .panel blockquote.movil { display:none; }
-.minuto:hover { background:var(--negro); color:var(--blanco); text-decoration:none; }
+.minuto:hover { background:var(--tinta); color:var(--fondo); text-decoration:none; }
 .punto { position:absolute; left:calc(var(--col) - 6px); top:36px; width:14px; height:14px; border-radius:50%;
-  background:var(--blanco); border:2px solid var(--negro); }
-[data-v=falso] .punto { background:var(--negro); width:18px; height:18px; left:calc(var(--col) - 8px); top:34px; }
-.flecha { grid-column:2; height:2px; background:var(--negro); margin:42px 9px 0 10px; position:relative; }
-.flecha::after { content:""; position:absolute; right:-9px; top:-5px; border-left:10px solid var(--negro);
+  background:var(--fondo); border:2px solid var(--tinta); }
+[data-v=falso] .punto { background:var(--tinta); width:18px; height:18px; left:calc(var(--col) - 8px); top:34px; }
+.flecha { grid-column:2; height:2px; background:var(--tinta); margin:42px 9px 0 10px; position:relative; }
+.flecha::after { content:""; position:absolute; right:-9px; top:-5px; border-left:10px solid var(--tinta);
   border-top:6px solid transparent; border-bottom:6px solid transparent; }
-.panel { grid-column:3; border:2px solid var(--negro); padding:16px 18px; background:var(--blanco); }
-[data-v=falso] .panel { box-shadow:5px 5px 0 var(--negro); }
+.panel { grid-column:3; border:2px solid var(--tinta); padding:16px 18px; background:var(--fondo); }
+[data-v=falso] .panel { box-shadow:5px 5px 0 var(--sombra); }
 .ficha { display:inline-block; margin:0 0 10px; font-size:11.5px; font-weight:700; text-transform:uppercase; letter-spacing:.09em;
-  border:1.5px solid var(--negro); padding:2px 9px; }
-[data-v=falso] .ficha { background:var(--negro); color:var(--blanco); }
+  border:1.5px solid var(--tinta); padding:2px 9px; }
+[data-v=falso] .ficha { background:var(--tinta); color:var(--fondo); }
 blockquote { margin:0 0 8px; font:italic 19px/1.38 var(--serif); text-wrap:pretty; }
 .que { margin:0 0 12px; font-size:14px; color:var(--gris); line-height:1.45; }
 .porque { margin:0 0 12px; font-size:15.5px; }
@@ -902,37 +975,35 @@ details p { margin:8px 0 0; }
 
 .capitulo { padding:30px 0 8px; }
 .capitulo .minuto { font-weight:500; font-size:13px; margin-top:5px; color:var(--gris); }
-.marca { position:absolute; left:calc(var(--col) - 9px); top:38px; width:20px; height:4px; background:var(--negro); }
+.marca { position:absolute; left:calc(var(--col) - 9px); top:38px; width:20px; height:4px; background:var(--tinta); }
 .capitulo > div { grid-column:2 / 4; padding-left:22px; }
 h2 { font:700 23px/1.2 var(--serif); margin:0; letter-spacing:-0.01em; text-wrap:balance; }
 .capitulo p { margin:3px 0 0; font-size:13px; color:var(--gris); }
 [hidden] { display:none !important; }
-/* color del minuto según el veredicto */
-.hito { --tono:#777; } .hito[data-v=falso] { --tono:#c0271e; } .hito[data-v=enganoso] { --tono:#c26a00; }
-.hito[data-v=mayormente_verdadero] { --tono:#5a7d10; } .hito[data-v=verdadero] { --tono:#1c7c45; }
-.hito .minuto { color:var(--tono); } .hito .minuto:hover { background:var(--tono); color:#fff; }
+/* color del minuto según el veredicto (el --tono de cada veredicto está en CSS_MENU) */
+.hito .minuto { color:var(--tono); } .hito .minuto:hover { background:var(--tono); color:var(--sobre-tono); }
 .hito .punto { border-color:var(--tono) !important; } .hito[data-v=falso] .punto { background:var(--tono); }
 .hito .ficha { border-color:var(--tono) !important; color:var(--tono) !important; }
-.hito[data-v=falso] .ficha { background:var(--tono); color:#fff !important; }
+.hito[data-v=falso] .ficha { background:var(--tono); color:var(--sobre-tono) !important; }
 .leyenda { display:flex; flex-wrap:wrap; gap:4px 16px; font-size:12.5px; margin-top:8px; }
 .leyenda span { display:inline-flex; align-items:center; gap:6px; font-weight:600; }
 .leyenda i { width:10px; height:10px; border-radius:50%; background:currentColor; }
 
-footer { border-top:3px solid var(--negro); padding:28px 0 72px; font-size:14.5px; }
+footer { border-top:3px solid var(--tinta); padding:28px 0 72px; font-size:14.5px; }
 footer h2 { font-size:20px; margin-bottom:10px; }
 footer p { max-width:68ch; }
 footer .leyenda-f { margin-bottom:34px; max-width:820px; }
 .pasos { margin:0 0 12px; padding-left:22px; max-width:68ch; } .pasos li { margin:3px 0; }
-.repo.claro { background:#fff; color:#000; border:2px solid #000; padding:7px 14px; margin-left:8px; }
-.repo { display:inline-block; margin:6px 0 14px; padding:9px 16px; background:var(--negro); color:var(--blanco); text-decoration:none; font-weight:600; }
+.repo.claro { background:var(--fondo); color:var(--tinta); border:2px solid var(--tinta); padding:7px 14px; margin-left:8px; }
+.repo { display:inline-block; margin:6px 0 14px; padding:9px 16px; background:var(--tinta); color:var(--fondo); text-decoration:none; font-weight:600; }
 @media (max-width:860px) { :root { --col:72px; --hueco:26px; } .minuto { margin-right:10px; font-size:13px; }
   .dicho { padding-right:10px; } .dicho blockquote { display:none; } .panel blockquote.movil { display:block; }
   .flecha { margin-left:8px; margin-right:8px; } .panel { padding:13px 13px; } blockquote { font-size:17px; }
   .capitulo > div { padding-left:16px; } h2 { font-size:20px; } }
-.abrir { margin:14px 0 0; padding:12px 14px; border:1.5px solid #000; font-size:14.5px; max-width:78ch; }
+.abrir { margin:14px 0 0; padding:12px 14px; border:1.5px solid var(--tinta); font-size:14.5px; max-width:78ch; }
 .contrasta { margin:12px 0 0; }
-.copiar { font:inherit; font-size:12.5px; font-weight:600; background:#fff; color:#000; border:1.5px solid #000; padding:4px 11px; cursor:pointer; }
-.copiar:hover, .copiar.hecho { background:#000; color:#fff; }
+.copiar { font:inherit; font-size:12.5px; font-weight:600; background:var(--fondo); color:var(--tinta); border:1.5px solid var(--tinta); padding:4px 11px; cursor:pointer; }
+.copiar:hover, .copiar.hecho { background:var(--tinta); color:var(--fondo); }
 .hito:target .panel { outline:3px solid var(--tono); outline-offset:3px; }
 @@CSS_MENU@@
 </style>

@@ -7,3 +7,4 @@ en-directo/sesiones/
 .vercel/
 node_modules/
 .DS_Store
+.modelos/

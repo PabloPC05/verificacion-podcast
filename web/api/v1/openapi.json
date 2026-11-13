@@ -37,9 +37,50 @@
     }
    }
   },
+  "/afirmaciones.csv": {
+   "get": {
+    "summary": "Todas las afirmaciones en CSV (UTF-8, una fila por afirmación)",
+    "responses": {
+     "200": {
+      "description": "JSON",
+      "content": {
+       "application/json": {}
+      }
+     }
+    }
+   }
+  },
   "/{slug}.json": {
    "get": {
     "summary": "Afirmaciones verificadas de una entrevista",
+    "responses": {
+     "200": {
+      "description": "JSON",
+      "content": {
+       "application/json": {}
+      }
+     }
+    }
+   },
+   "parameters": [
+    {
+     "name": "slug",
+     "in": "path",
+     "required": true,
+     "schema": {
+      "type": "string",
+      "enum": [
+       "sanchez",
+       "feijoo",
+       "colau"
+      ]
+     }
+    }
+   ]
+  },
+  "/{slug}.csv": {
+   "get": {
+    "summary": "Afirmaciones verificadas de una entrevista, en CSV",
     "responses": {
      "200": {
       "description": "JSON",
