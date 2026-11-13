@@ -92,7 +92,7 @@ VISOR_FUENTE = r"""<dialog id="visor" aria-labelledby="visor-titulo">
 <div class="v-caja">
   <header class="v-cab">
     <div class="v-que"><p class="v-dom" id="visor-dom"></p><h2 id="visor-titulo"></h2></div>
-    <button class="v-x" type="button" data-cerrar aria-label="Cerrar (Esc)">×</button>
+    <button class="v-x" type="button" data-cerrar aria-label="Cerrar (Esc)"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round"/></svg></button>
   </header>
   <div class="v-cuerpo" id="visor-cuerpo" tabindex="-1">
     <div class="v-estado" id="visor-estado" role="status"></div>
@@ -117,8 +117,9 @@ VISOR_FUENTE = r"""<dialog id="visor" aria-labelledby="visor-titulo">
 .v-dom { margin:0 0 3px; font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--gris); }
 .v-cab h2 { font:700 clamp(18px,2.2vw,21px)/1.25 var(--serif,Georgia,serif); margin:0; text-wrap:balance;
   overflow:hidden; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; }
-.v-x { flex:none; width:44px; height:44px; font:400 28px/1 sans-serif; background:transparent; color:var(--tinta);
+.v-x { flex:none; display:grid; place-items:center; width:44px; height:44px; padding:0; background:transparent; color:var(--tinta);
   border:1.5px solid transparent; border-radius:var(--r-boton,9px); cursor:pointer; }
+.v-x svg { display:block; }
 .v-x:hover { border-color:var(--tinta); }
 .v-ir { display:inline-flex; align-items:center; flex:none; min-height:44px; padding:0 16px; background:var(--tinta); color:var(--fondo);
   font-size:14px; font-weight:600; text-decoration:none; border:2px solid var(--tinta); border-radius:var(--r-boton,9px); }
