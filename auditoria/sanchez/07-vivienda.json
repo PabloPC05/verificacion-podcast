@@ -1,0 +1,594 @@
+[
+ {
+  "indice": 0,
+  "minuto": "1:24:57",
+  "afirmacion": "Pedro Sánchez dice que no ha oído a Ada Colau afirmar que el Gobierno ha hecho «cero» en vivienda en ocho años.",
+  "veredicto_antes": "enganoso",
+  "veredicto_despues": "no_verificable",
+  "cambia_veredicto": true,
+  "confianza_antes": "media",
+  "confianza_despues": "media",
+  "fuentes_descartadas": [
+   {
+    "url": "https://www.eldiariodemadrid.es/articulo/politica/ada-colau-jordi-wild-entrevista-moralismo-psoe-vivienda/20261113115210146813.html",
+    "motivo": "Abierta: no contiene «cero», «ocho años» ni «no ha hecho nada»; solo recoge críticas generales de Colau a la lentitud del PSOE."
+   }
+  ],
+  "fuentes_nuevas": [],
+  "tiene_fuente_primaria": false,
+  "nota": "Paso de «enganoso» a «no_verificable»: lo que Sánchez ha oído no se puede comprobar y la frase literal de Colau no aparece, aunque su crítica (3/11/2026) es cercana. Sin fuente primaria posible, confianza media."
+ },
+ {
+  "indice": 1,
+  "minuto": "1:24:57",
+  "afirmacion": "El precio de la vivienda es de unos 1.500 €/m² en Manresa y unos 4.000 €/m² en Málaga, y la renta de Manresa es superior a la de Málaga.",
+  "veredicto_antes": "mayormente_verdadero",
+  "veredicto_despues": "mayormente_verdadero",
+  "cambia_veredicto": false,
+  "confianza_antes": "alta",
+  "confianza_despues": "alta",
+  "fuentes_descartadas": [
+   {
+    "url": "https://www.tinsa.es/precio-vivienda/catalunya/barcelona/manresa/",
+    "motivo": "No se pudo abrir (tiempo de espera agotado); el precio de Manresa se cita con el dato oficial del Ministerio."
+   },
+   {
+    "url": "https://realadvisor.es/es/precios-viviendas/municipio-manresa",
+    "motivo": "Portal inmobiliario con estimaciones automáticas (1.661 €/m² en octubre de 2026); sustituido por el valor tasado oficial."
+   }
+  ],
+  "fuentes_nuevas": [
+   {
+    "titulo": "Ministerio de Transportes (Boletín Online): Valor tasado medio de vivienda libre de los municipios de más de 25.000 habitantes, 2T 2026 (tabla 4)",
+    "url": "https://apps.fomento.gob.es/BoletinOnline2/sedal/35103500.XLS",
+    "tipo": "primaria"
+   }
+  ],
+  "tiene_fuente_primaria": true,
+  "nota": "Mantengo el veredicto y subo a fuente primaria el precio (valor tasado del Ministerio, 2T 2026, que da 1.531 y 3.321 €/m²); descarto Tinsa (no abre) y RealAdvisor (portal con estimaciones)."
+ },
+ {
+  "indice": 2,
+  "minuto": "1:25:57",
+  "afirmacion": "Parte de la vivienda que se pone en alquiler en Málaga son apartamentos turísticos, y eso ayuda a explicar que sus precios sean más altos que los de Manresa.",
+  "veredicto_antes": "enganoso",
+  "veredicto_despues": "no_verificable",
+  "cambia_veredicto": true,
+  "confianza_antes": "media",
+  "confianza_despues": "media",
+  "fuentes_descartadas": [
+   {
+    "url": "https://www.moncloa.com/2026/10/18/precio-vivienda-malaga-sube-64-3450871/",
+    "motivo": "moncloa.com es un medio privado que no es el Gobierno (no válido por la política de fuentes); además trata del precio de venta, no de pisos turísticos."
+   }
+  ],
+  "fuentes_nuevas": [
+   {
+    "titulo": "Xataka: El Banco de España ha echado un vistazo al alquiler en España (18/10/2024)",
+    "url": "https://www.xataka.com/magnet/hay-colectivo-espana-al-que-amenaza-huelga-alquileres-no-le-quita-sueno-fondos-sociedades/amp",
+    "tipo": "apoyo"
+   },
+   {
+    "titulo": "El Español: Málaga deja los pisos turísticos por los apartamentos en edificios (3/5/2026)",
+    "url": "https://www.elespanol.com/malaga/malaga-ciudad/20260503/malaga-deja-pisos-turisticos-edificios-apartamentos-disparan-cambian-modelo/1003744229497_0.html",
+    "tipo": "prensa"
+   }
+  ],
+  "tiene_fuente_primaria": false,
+  "nota": "Paso de «enganoso» a «no_verificable» y reformulo la afirmación para que refleje lo que dijo Sánchez (una causa parcial y de alquiler, no la explicación de la brecha de precios de venta). Hay correlación, pero el Banco de España y la Universidad de Málaga no miden esa brecha; descarto moncloa.com."
+ },
+ {
+  "indice": 3,
+  "minuto": "1:25:57",
+  "afirmacion": "Durante los años de gobierno de Sánchez se han construido en torno a un millón de viviendas, de las que el 13% (más de 150.000) han sido protegidas.",
+  "veredicto_antes": "falso",
+  "veredicto_despues": "enganoso",
+  "cambia_veredicto": true,
+  "confianza_antes": "alta",
+  "confianza_despues": "media",
+  "fuentes_descartadas": [
+   {
+    "url": "https://electomania.es/viviendas-de-proteccion-oficial-terminadas-por-cada-gobierno-desde-1981/",
+    "motivo": "Sitio de encuestas y datos políticos; sus 78.735 protegidas terminadas de 2018 a 2025 coinciden con la serie oficial, que se cita directamente."
+   }
+  ],
+  "fuentes_nuevas": [
+   {
+    "titulo": "Ministerio de Transportes (Boletín Online): Número de viviendas libres iniciadas, series mensuales (tabla 3.1)",
+    "url": "https://apps.fomento.gob.es/BoletinOnline2/sedal/32100500.XLS",
+    "tipo": "primaria"
+   },
+   {
+    "titulo": "Ministerio de Transportes (Boletín Online): Número de viviendas libres terminadas, series mensuales (tabla 3.2)",
+    "url": "https://apps.fomento.gob.es/BoletinOnline2/sedal/32101000.XLS",
+    "tipo": "primaria"
+   },
+   {
+    "titulo": "Ministerio de Transportes (Boletín Online): Calificaciones provisionales de vivienda protegida, planes estatales y autonómicos (tabla 1.3)",
+    "url": "https://apps.fomento.gob.es/BoletinOnline2/sedal/31202000.XLS",
+    "tipo": "primaria"
+   },
+   {
+    "titulo": "Ministerio de Transportes (Boletín Online): Calificaciones definitivas de vivienda protegida, planes estatales y autonómicos (tabla 1.6, mensual)",
+    "url": "https://apps.fomento.gob.es/BoletinOnline2/sedal/31205000.XLS",
+    "tipo": "primaria"
+   }
+  ],
+  "tiene_fuente_primaria": true,
+  "nota": "Paso de «falso» a «enganoso»: con las tablas oficiales, el millón y el 13 % encajan con las viviendas iniciadas desde 2018 (947.600 y 13,1 % desde junio de 2018), no con las terminadas (726.100); los «más de 150.000» protegidas siguen sin cuadrar (unas 124.000 iniciadas)."
+ },
+ {
+  "indice": 4,
+  "minuto": "1:27:05",
+  "afirmacion": "La construcción de vivienda en España está en máximos desde la crisis financiera.",
+  "veredicto_antes": "verdadero",
+  "veredicto_despues": "verdadero",
+  "cambia_veredicto": false,
+  "confianza_antes": "alta",
+  "confianza_despues": "alta",
+  "fuentes_descartadas": [
+   {
+    "url": "https://www.mivau.gob.es/el-ministerio/sala-de-prensa/noticias/lun-04052026-1329",
+    "motivo": "No se pudo abrir (403 Forbidden; la web del Ministerio devuelve «página bloqueada»); los datos salen de las tablas del Ministerio de Transportes."
+   },
+   {
+    "url": "https://www.idealista.com/news/node/846343",
+    "motivo": "No la he abierto en esta revisión; la cifra de 2024 (136.187 iniciadas) sale de las tablas oficiales."
+   }
+  ],
+  "fuentes_nuevas": [
+   {
+    "titulo": "Ministerio de Transportes (Boletín Online): Número de viviendas libres iniciadas, series mensuales (tabla 3.1)",
+    "url": "https://apps.fomento.gob.es/BoletinOnline2/sedal/32100500.XLS",
+    "tipo": "primaria"
+   },
+   {
+    "titulo": "Ministerio de Transportes (Boletín Online): Número de viviendas libres terminadas, series mensuales (tabla 3.2)",
+    "url": "https://apps.fomento.gob.es/BoletinOnline2/sedal/32101000.XLS",
+    "tipo": "primaria"
+   },
+   {
+    "titulo": "Ministerio de Transportes (Boletín Online): Calificaciones provisionales de vivienda protegida, planes estatales y autonómicos (tabla 1.3)",
+    "url": "https://apps.fomento.gob.es/BoletinOnline2/sedal/31202000.XLS",
+    "tipo": "primaria"
+   },
+   {
+    "titulo": "Ministerio de Transportes (Boletín Online): Calificaciones definitivas de vivienda protegida, planes estatales y autonómicos (tabla 1.6, mensual)",
+    "url": "https://apps.fomento.gob.es/BoletinOnline2/sedal/31205000.XLS",
+    "tipo": "primaria"
+   }
+  ],
+  "tiene_fuente_primaria": true,
+  "nota": "Mantengo «verdadero» y lo apoyo en las tablas oficiales (iniciadas 2025: 137.330, máximo desde 2009); descarto la nota del Ministerio, que no abre."
+ },
+ {
+  "indice": 5,
+  "minuto": "1:27:05",
+  "afirmacion": "La ley estatal de vivienda permite a comunidades autónomas y ayuntamientos intervenir los precios en zonas tensionadas, incentiva fiscalmente a los pequeños propietarios que alquilen y se apoya en contratos de cinco años.",
+  "veredicto_antes": "mayormente_verdadero",
+  "veredicto_despues": "mayormente_verdadero",
+  "cambia_veredicto": false,
+  "confianza_antes": "media",
+  "confianza_despues": "alta",
+  "fuentes_descartadas": [
+   {
+    "url": "https://www.newtral.es/decreto-renovacion-automatica-contratos-alquiler/20261112/",
+    "motivo": "Abierta: trata del Real Decreto-ley 28/2026 de renovación automática, no del contenido de la Ley 12/2023."
+   },
+   {
+    "url": "https://theobjective.com/economia/2026-10-23/mentiras-pedro-sanchez-vivienda-la-revuelta/",
+    "motivo": "Abierta: verifica otras cifras de La Revuelta y no recoge el contenido de la ley."
+   }
+  ],
+  "fuentes_nuevas": [
+   {
+    "titulo": "BOE (copia archivada en Internet Archive): Ley 12/2023, de 24 de mayo, por el derecho a la vivienda",
+    "url": "https://web.archive.org/web/2025/https://www.boe.es/buscar/doc.php?id=BOE-A-2023-12203",
+    "tipo": "primaria"
+   },
+   {
+    "titulo": "BOE (copia archivada en Internet Archive): Real Decreto-ley 7/2019, de 1 de marzo, de medidas urgentes en materia de vivienda y alquiler",
+    "url": "https://web.archive.org/web/2025/https://www.boe.es/buscar/act.php?id=BOE-A-2019-3108",
+    "tipo": "primaria"
+   }
+  ],
+  "tiene_fuente_primaria": true,
+  "nota": "Mantengo «mayormente_verdadero» y subo la confianza a alta: el texto de la Ley 12/2023 (copia archivada del BOE) confirma zonas tensionadas, límite de rentas e incentivos del IRPF; los cinco años vienen del RDL 7/2019."
+ },
+ {
+  "indice": 6,
+  "minuto": "1:28:09",
+  "afirmacion": "El presupuesto estatal en vivienda se ha multiplicado por ocho (repetido en 1:31:11).",
+  "veredicto_antes": "no_verificable",
+  "veredicto_despues": "enganoso",
+  "cambia_veredicto": true,
+  "confianza_antes": "baja",
+  "confianza_despues": "media",
+  "fuentes_descartadas": [
+   {
+    "url": "https://www.elespanol.com/invertia/observatorios/vivienda/20260422/sanchez-prometido-millones-viviendas-protegidas-anos-solo-entregado/1003744214034_0.html",
+    "motivo": "Abierta: no menciona el factor ocho (la explicación anterior se lo atribuía)."
+   }
+  ],
+  "fuentes_nuevas": [
+   {
+    "titulo": "BOE (copia archivada en Internet Archive): Real Decreto 326/2026, de 22 de abril, por el que se regula el Plan Estatal de Vivienda 2026-2030",
+    "url": "https://web.archive.org/web/2026/https://www.boe.es/eli/es/rd/2026/04/22/326",
+    "tipo": "primaria"
+   },
+   {
+    "titulo": "Ministerio de Hacienda (SEPG): Presupuestos Generales del Estado consolidados, estadísticas 2012-2021 (política 26, acceso a la vivienda y fomento de la edificación)",
+    "url": "https://www.sepg.pap.hacienda.gob.es/sitios/sepg/es-ES/Presupuestos/DocumentacionEstadisticas/Estadisticas/Documents/2021/01%20Presupuestos%20Generales%20del%20Estado%20Consolidados.pdf",
+    "tipo": "primaria"
+   },
+   {
+    "titulo": "Ministerio de Hacienda (SEPG): Presupuestos Generales del Estado 2023, Informe Económico y Financiero (acceso a la vivienda y fomento de la edificación)",
+    "url": "https://www.sepg.pap.hacienda.gob.es/Presup/PGE2023Ley/MaestroDocumentos/PGE-ROM/doc/3/1/3/2/N_23_E_A_1_2_2_1.PDF",
+    "tipo": "primaria"
+   },
+   {
+    "titulo": "RTVC: CASA 47, el primer portal del parque público estatal de vivienda (7/9/2026)",
+    "url": "https://rtvc.es/casa-47-primer-portal-parque-publico-estatal-vivienda-7-septiembre-2026/",
+    "tipo": "prensa"
+   }
+  ],
+  "tiene_fuente_primaria": true,
+  "nota": "Paso de «no_verificable» a «enganoso»: el origen del «ocho» está en el preámbulo del RD 326/2026 (20.988 M€ movilizados, que incluyen financiación y fondos europeos), mientras que en los PGE el crédito nacional solo se duplicó de 2018 a 2023 (481 a 997 M€)."
+ },
+ {
+  "indice": 7,
+  "minuto": "1:28:09",
+  "afirmacion": "El Gobierno ha repartido a las comunidades autónomas más de 7.000 millones de euros para construir vivienda («7.000 millones en el último plan estatal», repetido en 1:31:11).",
+  "veredicto_antes": "enganoso",
+  "veredicto_despues": "enganoso",
+  "cambia_veredicto": false,
+  "confianza_antes": "media",
+  "confianza_despues": "alta",
+  "fuentes_descartadas": [
+   {
+    "url": "https://www.elespanol.com/invertia/observatorios/vivienda/20260422/sanchez-prometido-millones-viviendas-protegidas-anos-solo-entregado/1003744214034_0.html",
+    "motivo": "Abierta: menciona el plan de pasada y no aporta el reparto ni las anualidades."
+   }
+  ],
+  "fuentes_nuevas": [
+   {
+    "titulo": "BOE (copia archivada en Internet Archive): Real Decreto 326/2026, de 22 de abril, por el que se regula el Plan Estatal de Vivienda 2026-2030",
+    "url": "https://web.archive.org/web/2026/https://www.boe.es/eli/es/rd/2026/04/22/326",
+    "tipo": "primaria"
+   },
+   {
+    "titulo": "Diario de León: Vivienda celebra el jueves una sectorial para distribuir los fondos del nuevo plan estatal (19/5/2026)",
+    "url": "https://www.diariodeleon.es/nacional/260519/2085477/vivienda-celebra-jueves-sectorial-distribuir-fondos-nuevo-plan-estatal.html",
+    "tipo": "prensa"
+   },
+   {
+    "titulo": "Infobae (EFE): Cómo será el reparto de fondos del nuevo Plan Estatal de Vivienda 2026-2030 (21/4/2026)",
+    "url": "https://www.infobae.com/espana/agencias/2026/04/21/como-sera-el-reparto-de-fondos-del-nuevo-plan-estatal-de-vivienda-2026-2030/",
+    "tipo": "agencia"
+   },
+   {
+    "titulo": "The Objective: Vivienda, acuerdo de colores políticos sobre el Plan Estatal (21/5/2026)",
+    "url": "https://theobjective.com/economia/2026-05-21/vivienda-acuerdo-colores-politicos-plan-estatal/",
+    "tipo": "prensa"
+   }
+  ],
+  "tiene_fuente_primaria": true,
+  "nota": "Mantengo «enganoso» y subo la confianza a alta: el preámbulo del RD 326/2026 confirma que los 7.000 M€ son el total del plan (4.200 del Estado y 2.800 de las comunidades), no dinero ya repartido ni solo para construir."
+ },
+ {
+  "indice": 8,
+  "minuto": "1:28:09",
+  "afirmacion": "Los planes estatales exigen que la vivienda protegida que financian mantenga su protección de forma permanente, sin descalificarse a los pocos años, para que siga sirviendo como patrimonio público.",
+  "veredicto_antes": "mayormente_verdadero",
+  "veredicto_despues": "mayormente_verdadero",
+  "cambia_veredicto": false,
+  "confianza_antes": "media",
+  "confianza_despues": "alta",
+  "fuentes_descartadas": [
+   {
+    "url": "https://www.mivau.gob.es/el-ministerio/sala-de-prensa/noticias/jue-18122025-1246",
+    "motivo": "No se pudo abrir (403 Forbidden) y, por su título, trata de las protegidas iniciadas, no de su protección permanente."
+   }
+  ],
+  "fuentes_nuevas": [
+   {
+    "titulo": "BOE (copia archivada en Internet Archive): Real Decreto 326/2026, de 22 de abril, por el que se regula el Plan Estatal de Vivienda 2026-2030",
+    "url": "https://web.archive.org/web/2026/https://www.boe.es/eli/es/rd/2026/04/22/326",
+    "tipo": "primaria"
+   }
+  ],
+  "tiene_fuente_primaria": true,
+  "nota": "Mantengo «mayormente_verdadero» con confianza alta (texto del RD 326/2026) y corrijo la afirmación: lo que exigen los planes es la protección permanente de la vivienda financiada, no que no pueda venderse ni que sea siempre patrimonio público."
+ },
+ {
+  "indice": 9,
+  "minuto": "1:28:09",
+  "afirmacion": "Durante los últimos cuarenta años España ha desregulado la vivienda, dejándola en manos de la oferta y la demanda.",
+  "veredicto_antes": "no_verificable",
+  "veredicto_despues": "no_verificable",
+  "cambia_veredicto": false,
+  "confianza_antes": "baja",
+  "confianza_despues": "baja",
+  "fuentes_descartadas": [],
+  "fuentes_nuevas": [
+   {
+    "titulo": "BOE (copia archivada en Internet Archive): Real Decreto-ley 7/2019, de 1 de marzo, de medidas urgentes en materia de vivienda y alquiler",
+    "url": "https://web.archive.org/web/2025/https://www.boe.es/buscar/act.php?id=BOE-A-2019-3108",
+    "tipo": "primaria"
+   },
+   {
+    "titulo": "BOE (copia archivada en Internet Archive): Real Decreto 326/2026, de 22 de abril, por el que se regula el Plan Estatal de Vivienda 2026-2030",
+    "url": "https://web.archive.org/web/2026/https://www.boe.es/eli/es/rd/2026/04/22/326",
+    "tipo": "primaria"
+   },
+   {
+    "titulo": "Maldita.es: Las promesas del Gobierno sobre construcción de vivienda social, no hay datos públicos de casas construidas y entregadas (actualizado 30/4/2026)",
+    "url": "https://maldita.es/malditahemeroteca/20260430/vivienda-social-espana-sanchez/",
+    "tipo": "verificador"
+   }
+  ],
+  "tiene_fuente_primaria": true,
+  "nota": "Mantengo «no_verificable» y añado fuentes que muestran hechos a favor y en contra (reforma liberalizadora de 2013 frente a 2,7 millones de protegidas desde 1980); es una valoración histórica, no un dato medible."
+ },
+ {
+  "indice": 10,
+  "minuto": "1:29:09",
+  "afirmacion": "El Gobierno tiene reales decretos-ley de vivienda pendientes de convalidación que Sánchez espera sacar adelante esta semana.",
+  "veredicto_antes": "no_verificable",
+  "veredicto_despues": "verdadero",
+  "cambia_veredicto": true,
+  "confianza_antes": "media",
+  "confianza_despues": "media",
+  "fuentes_descartadas": [],
+  "fuentes_nuevas": [
+   {
+    "titulo": "elDiario.es: El Gobierno saca adelante el decreto que prorroga los alquileres y prohíbe desahucios (12/11/2026)",
+    "url": "https://www.eldiario.es/politica/gobierno-sortea-rechazo-pp-vox-junts-logra-prohibir-desahucios-2031-horas-iniciarse-campana_1_13657109.html",
+    "tipo": "prensa"
+   },
+   {
+    "titulo": "LawAndTrends: La Diputación Permanente convalida el decreto que prohíbe los desahucios y tumba el que hacía indefinidos los alquileres (13/11/2026)",
+    "url": "https://www.lawandtrends.com/noticias/administrativo/la-diputacion-permanente-convalida-el-decreto-que-prohibe-los-desahucios-y-tumba-el-que-hacia-indefinidos-los-alquileres-1.html",
+    "tipo": "prensa"
+   }
+  ],
+  "tiene_fuente_primaria": false,
+  "nota": "Paso de «no_verificable» a «verdadero»: el hecho comprobable (dos decretos pendientes, votación el 12/11/2026) es cierto; el resultado fue mixto (uno convalidado, otro derogado). Sin fuente oficial del Congreso, confianza media."
+ },
+ {
+  "indice": 11,
+  "minuto": "1:29:09",
+  "afirmacion": "Para construir más vivienda hay que modificar la ley del suelo y los partidos a la izquierda del PSOE (el de Colau y Podemos, 1:32:14) se oponen.",
+  "veredicto_antes": "no_verificable",
+  "veredicto_despues": "mayormente_verdadero",
+  "cambia_veredicto": true,
+  "confianza_antes": "baja",
+  "confianza_despues": "media",
+  "fuentes_descartadas": [],
+  "fuentes_nuevas": [
+   {
+    "titulo": "El Independiente: El Gobierno renuncia a la reforma de la ley del suelo para acercar a Podemos al decreto de vivienda (28/9/2026)",
+    "url": "https://www.elindependiente.com/espana/2026/09/28/gobierno-renuncia-reforma-ley-suelo-podemos-decreto-vivienda/",
+    "tipo": "prensa"
+   },
+   {
+    "titulo": "Público: Podemos exige al Gobierno eliminar la reforma de la ley del suelo para negociar el decreto de vivienda (22/7/2026)",
+    "url": "https://www.publico.es/politica/partidos/podemos-exige-gobierno-eliminar-reforma-ley-suelo-negociar-decreto-vivienda.html",
+    "tipo": "prensa"
+   },
+   {
+    "titulo": "RTVC: El Congreso rechaza la reforma de la ley del suelo (25/2/2025)",
+    "url": "https://rtvc.es/el-congreso-rechaza-la-reforma-de-la-ley-del-suelo/",
+    "tipo": "prensa"
+   },
+   {
+    "titulo": "The Objective: Sumar celebra la retirada de la ley del suelo (23/5/2024)",
+    "url": "https://theobjective.com/espana/politica/2024-05-23/sumar-celebra-retirada-ley-suelo/",
+    "tipo": "prensa"
+   }
+  ],
+  "tiene_fuente_primaria": false,
+  "nota": "Paso de «no_verificable» a «mayormente_verdadero»: sí hay prueba de que Podemos y Sumar rechazaron las reformas de la ley del suelo (2024, 2025 y 2026); falta la posición de Colau y consta que Sumar aceptó incluirla en el borrador de julio de 2026. Sin fuente oficial, confianza media."
+ },
+ {
+  "indice": 12,
+  "minuto": "1:30:11",
+  "afirmacion": "De las 184.000 viviendas públicas y de alquiler asequible prometidas en diciembre de 2023, entre 120.000 y 130.000 están ya entregadas o en proceso, y el Gobierno cumplirá el compromiso.",
+  "veredicto_antes": "enganoso",
+  "veredicto_despues": "enganoso",
+  "cambia_veredicto": false,
+  "confianza_antes": "media",
+  "confianza_despues": "media",
+  "fuentes_descartadas": [
+   {
+    "url": "https://www.mivau.gob.es/vivienda/plan-estatal-de-vivienda/plan-vivienda-alquiler-asequible",
+    "motivo": "La web del Ministerio devuelve «página bloqueada» (403); la cifra de 120.479 se cita a través de Maldita."
+   },
+   {
+    "url": "https://www.eldebate.com/economia/20261001/gobierno-solo-construido-540-casas-cuatro-anos-184000-prometido_464593.html",
+    "motivo": "No la he abierto en esta revisión y recoge cálculos del PP, parte interesada."
+   },
+   {
+    "url": "https://okdiario.com/economia/isabel-rodriguez-pide-presupuestos-vivienda-publica-pero-tiene-sin-entregar-945-lo-prometido-2023-15300155",
+    "motivo": "No la he abierto; medio de opinión alineado y sin fuente identificada para la cifra de 10.206 entregadas."
+   },
+   {
+    "url": "https://www.vozpopuli.com/espana/184-000-viviendas-asequibles-prometidas-sanchez-barrena-proyecto-estancado-julio.html",
+    "motivo": "No la he abierto; es de mayo de 2024 y está desfasada."
+   }
+  ],
+  "fuentes_nuevas": [
+   {
+    "titulo": "Maldita.es: Las promesas del Gobierno sobre construcción de vivienda social, no hay datos públicos de casas construidas y entregadas (actualizado 30/4/2026)",
+    "url": "https://maldita.es/malditahemeroteca/20260430/vivienda-social-espana-sanchez/",
+    "tipo": "verificador"
+   }
+  ],
+  "tiene_fuente_primaria": false,
+  "nota": "Mantengo «enganoso»: Maldita recoge el dato oficial de 120.479 viviendas movilizadas (30/4/2026), que coincide con lo que dice Sánchez, pero no hay datos de entregadas. Descarto el Ministerio (bloqueado), OKDiario, El Debate y Vozpópuli."
+ },
+ {
+  "indice": 13,
+  "minuto": "1:30:11",
+  "afirmacion": "Se ha creado la empresa pública Casa 47, a la que pasan todas las viviendas de la Sareb, además de suelo de Defensa como la Operación Campamento (1:31:11).",
+  "veredicto_antes": "mayormente_verdadero",
+  "veredicto_despues": "mayormente_verdadero",
+  "cambia_veredicto": false,
+  "confianza_antes": "media",
+  "confianza_despues": "alta",
+  "fuentes_descartadas": [
+   {
+    "url": "https://www.idealista.com/news/etiquetas/ministerio-de-vivienda",
+    "motivo": "Página de etiquetas del portal, no un artículo con datos verificables."
+   }
+  ],
+  "fuentes_nuevas": [
+   {
+    "titulo": "BOE (copia archivada en Internet Archive): Orden PJC/784/2025, que publica el Acuerdo del Consejo de Ministros de 1 de julio de 2025 sobre los inmuebles de Sareb para vivienda asequible",
+    "url": "https://web.archive.org/web/2026/https://boe.es/boe/dias/2025/07/23/pdfs/BOE-A-2025-15292.pdf",
+    "tipo": "primaria"
+   },
+   {
+    "titulo": "BOE (copia archivada en Internet Archive): Real Decreto 1123/2025, de 10 de diciembre, por el que se modifica el Estatuto de SEPES (pasa a CASA 47)",
+    "url": "https://web.archive.org/web/2026/https://boe.es/boe/dias/2025/12/11/pdfs/BOE-A-2025-25270.pdf",
+    "tipo": "primaria"
+   },
+   {
+    "titulo": "idealista news: Sareb traspasa 40.000 viviendas y 2.400 suelos a Sepes (1/7/2025)",
+    "url": "https://www.idealista.com/news/node/851594",
+    "tipo": "prensa"
+   },
+   {
+    "titulo": "elDiario.es (EFE): Casa 47, la nueva empresa pública de vivienda y suelo, echa a andar (13/12/2025)",
+    "url": "https://www.eldiario.es/economia/casa-47-nueva-empresa-publica-vivienda-suelo-echa-andar_1_12842696.html",
+    "tipo": "agencia"
+   }
+  ],
+  "tiene_fuente_primaria": true,
+  "nota": "Mantengo «mayormente_verdadero» y subo la confianza a alta con el texto del BOE (RD 1123/2025 y Orden PJC/784/2025): Sareb transmite sus inmuebles aptos (más de 40.000 viviendas frente a unas 37.500 en cartera). Descarto la página de etiquetas de idealista."
+ },
+ {
+  "indice": 14,
+  "minuto": "1:32:14",
+  "afirmacion": "En Barcelona y otras zonas de Cataluña donde se aplica la ley estatal de vivienda se está conteniendo la evolución del precio de los alquileres, hay evidencia empírica de ello, y en Madrid no se aplica.",
+  "veredicto_antes": "mayormente_verdadero",
+  "veredicto_despues": "mayormente_verdadero",
+  "cambia_veredicto": false,
+  "confianza_antes": "media",
+  "confianza_despues": "media",
+  "fuentes_descartadas": [
+   {
+    "url": "https://theobjective.com/economia/2026-10-23/mentiras-pedro-sanchez-vivienda-la-revuelta/",
+    "motivo": "Abierta: verifica otras frases de La Revuelta y no aporta datos de alquiler propios; sustituida por Fedea e INE."
+   }
+  ],
+  "fuentes_nuevas": [
+   {
+    "titulo": "INE: Índice de Precios de Vivienda en Alquiler (IPVA), año 2024 (nota de prensa, 11/5/2026)",
+    "url": "https://ine.es/dyngs/Prensa/IPVA2024.htm",
+    "tipo": "primaria"
+   },
+   {
+    "titulo": "Fedea (Fernando Pinto, URJC): La Ley 12/2023 por el derecho a la vivienda, un primer balance (Apuntes 2026/15, junio de 2026)",
+    "url": "https://documentos.fedea.net/pubs/ap/2026/ap2026-15.pdf",
+    "tipo": "apoyo"
+   }
+  ],
+  "tiene_fuente_primaria": true,
+  "nota": "Mantengo «mayormente_verdadero»: Fedea y el INE apoyan la contención (Cataluña +3,1 % frente a +3,4 % en la Comunidad de Madrid en 2024), con la salvedad de que es un indicio y de que cae la oferta. Sustituyo The Objective por Fedea e INE."
+ },
+ {
+  "indice": 15,
+  "minuto": "1:33:17",
+  "afirmacion": "Antes de la crisis financiera se construyeron en España 4,5 millones de viviendas y los precios se dispararon.",
+  "veredicto_antes": "mayormente_verdadero",
+  "veredicto_despues": "mayormente_verdadero",
+  "cambia_veredicto": false,
+  "confianza_antes": "alta",
+  "confianza_despues": "alta",
+  "fuentes_descartadas": [],
+  "fuentes_nuevas": [
+   {
+    "titulo": "Ministerio de Transportes (Boletín Online): Valor tasado medio de vivienda libre, serie trimestral desde 1995 (tabla 1)",
+    "url": "https://apps.fomento.gob.es/BoletinOnline2/sedal/35101000.XLS",
+    "tipo": "primaria"
+   },
+   {
+    "titulo": "Ministerio de Transportes (Boletín Online): Número de viviendas libres terminadas, series mensuales (tabla 3.2)",
+    "url": "https://apps.fomento.gob.es/BoletinOnline2/sedal/32101000.XLS",
+    "tipo": "primaria"
+   },
+   {
+    "titulo": "Ministerio de Transportes (Boletín Online): Calificaciones definitivas de vivienda protegida, planes estatales y autonómicos (tabla 1.6, mensual)",
+    "url": "https://apps.fomento.gob.es/BoletinOnline2/sedal/31205000.XLS",
+    "tipo": "primaria"
+   }
+  ],
+  "tiene_fuente_primaria": true,
+  "nota": "Mantengo «mayormente_verdadero» y añado la serie oficial de valor tasado (893 a 2.086 €/m² entre 2000 y 2007) para el aumento de precios; los 4,4 millones de terminadas siguen apoyándose en Newtral."
+ },
+ {
+  "indice": 16,
+  "minuto": "1:33:17",
+  "afirmacion": "Antes de la crisis hubo muy poca vivienda protegida, y por eso los precios se dispararon pese a construirse 4,5 millones de viviendas.",
+  "veredicto_antes": "enganoso",
+  "veredicto_despues": "enganoso",
+  "cambia_veredicto": false,
+  "confianza_antes": "media",
+  "confianza_despues": "media",
+  "fuentes_descartadas": [
+   {
+    "url": "https://electomania.es/viviendas-de-proteccion-oficial-terminadas-por-cada-gobierno-desde-1981/",
+    "motivo": "Sitio de encuestas y datos políticos; sus cifras (477.410 en 1996-2003 y 498.982 en 2004-2011) se sustituyen por la serie oficial del Ministerio."
+   },
+   {
+    "url": "https://theobjective.com/economia/2026-10-23/mentiras-pedro-sanchez-vivienda-la-revuelta/",
+    "motivo": "Abierta: no trata la vivienda protegida de antes de la crisis."
+   }
+  ],
+  "fuentes_nuevas": [
+   {
+    "titulo": "Ministerio de Transportes (Boletín Online): Calificaciones definitivas de vivienda protegida, serie anual 1991-2025 (tabla 1.6)",
+    "url": "https://apps.fomento.gob.es/BoletinOnline2/sedal/31306000.XLS",
+    "tipo": "primaria"
+   },
+   {
+    "titulo": "Ministerio de Transportes (Boletín Online): Calificaciones definitivas de vivienda protegida, planes estatales y autonómicos (tabla 1.6, mensual)",
+    "url": "https://apps.fomento.gob.es/BoletinOnline2/sedal/31205000.XLS",
+    "tipo": "primaria"
+   },
+   {
+    "titulo": "Maldita.es: Las promesas del Gobierno sobre construcción de vivienda social, no hay datos públicos de casas construidas y entregadas (actualizado 30/4/2026)",
+    "url": "https://maldita.es/malditahemeroteca/20260430/vivienda-social-espana-sanchez/",
+    "tipo": "verificador"
+   }
+  ],
+  "tiene_fuente_primaria": true,
+  "nota": "Mantengo «enganoso» y lo apoyo en la serie oficial de calificaciones definitivas (430.141 entre 2000 y 2007, 9,8 % de lo terminado, frente a 12 % ahora); sustituyo Electomanía y The Objective por las tablas del Ministerio y Maldita."
+ },
+ {
+  "indice": 17,
+  "minuto": "1:33:17",
+  "afirmacion": "Pedro Sánchez es economista.",
+  "veredicto_antes": "verdadero",
+  "veredicto_despues": "verdadero",
+  "cambia_veredicto": false,
+  "confianza_antes": "alta",
+  "confianza_despues": "alta",
+  "fuentes_descartadas": [
+   {
+    "url": "https://es.wikipedia.org/wiki/Pedro_Sánchez",
+    "motivo": "Wikipedia solo vale para llegar a la fuente primaria; se sustituye por la biografía oficial de la Moncloa."
+   }
+  ],
+  "fuentes_nuevas": [
+   {
+    "titulo": "La Moncloa (copia archivada en Internet Archive): Biografía del presidente del Gobierno, Pedro Sánchez",
+    "url": "https://web.archive.org/web/2026/https://www.lamoncloa.gob.es/presidente/biografia/Paginas/index.aspx",
+    "tipo": "primaria"
+   }
+  ],
+  "tiene_fuente_primaria": true,
+  "nota": "Mantengo «verdadero» y cambio Wikipedia por la biografía oficial de la Moncloa (licenciado en Económicas, máster en Economía de la UE y doctor en Economía en 2012)."
+ }
+]

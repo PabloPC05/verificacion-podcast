@@ -1,0 +1,859 @@
+[
+  {
+    "indice": 0,
+    "minuto": "1:36:34",
+    "afirmacion": "Pedro Sánchez ha cambiado de opinión sobre los indultos y la amnistía a los líderes del procés y lo ha reconocido públicamente.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Última Hora (Europa Press): Sánchez asegura que incluir a Junts o ERC en la gobernabilidad de España fortalece la democracia",
+        "url": "https://www.ultimahora.es/noticias/comunidades/2024/01/28/2094617/sanchez-asegura-incluir-junts-erc-gobernabilidad-espana-fortalece-democracia.html",
+        "tipo": "agencia"
+      },
+      {
+        "titulo": "Maldita.es: Cuando Pedro Sánchez se oponía a otorgar los indultos a los líderes del 'procés'",
+        "url": "https://maldita.es/malditahemeroteca/20210623/indultos-proces-cataluna-sanchez/",
+        "tipo": "verificador"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Verdicto sin cambios; añadidos Europa Press (entrevista de La Vanguardia, 28-1-2024) y Maldita sobre los indultos, que la explicación anterior no cubría. He quitado la frase sobre la sentencia del TC de 2025 porque no he podido comprobarla en las páginas abiertas."
+  },
+  {
+    "indice": 1,
+    "minuto": "1:36:34",
+    "afirmacion": "Su cambio de posición sobre el procés se debió a una visita a un hospital de Cataluña en la campaña de 2019, tras la sentencia del Supremo, donde profesionales sanitarios de clase media le reprocharon que estuvieran encarcelando a sus líderes.",
+    "veredicto_antes": "enganoso",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": true,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.moncloa.com/2019/10/21/sanchez-abucheos-visita-hospital-57335",
+        "motivo": "moncloa.com es un medio privado, no es el Gobierno; fuente no válida según la política de fuentes."
+      },
+      {
+        "url": "https://rr.pt/noticia/mundo/2019/11/04/debate-em-espanha-sanchez-propoe-pacto-para-acabar-com-bloqueio-politico-e-quer-penalizar-referendos-ilegais/170547/",
+        "motivo": "Devuelve 403 al abrirla; se sustituye por elDiario.es, que recoge la promesa de la campaña de 2019 y su abandono."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Maldita.es: Cuando Pedro Sánchez se oponía a otorgar los indultos a los líderes del 'procés'",
+        "url": "https://maldita.es/malditahemeroteca/20210623/indultos-proces-cataluna-sanchez/",
+        "tipo": "verificador"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Pasa de «engañoso» a «casi cierto»: la visita y los gritos del personal sanitario («llibertat presos polítics») encajan con su relato y lo único que no se puede comprobar es su motivación íntima, no un dato falso u omitido."
+  },
+  {
+    "indice": 2,
+    "minuto": "1:37:35",
+    "afirmacion": "Hoy la independencia no es probablemente la principal prioridad de la sociedad catalana, aunque el movimiento independentista exista.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.moncloa.com/2026/07/12/barometro-ceo-2026-illa-escanos-independentismo-3397816/",
+        "motivo": "moncloa.com es un medio privado, no es el Gobierno; fuente no válida según la política de fuentes."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Demócrata (Agencias): L'accés a l'habitatge continua com a principal preocupació per als catalans (28%), segons el CEO",
+        "url": "https://www.democrata.es/ca/actualitat/l-acces-a-l-habitatge-continua-com-a-principal-preocupacio-per-als-catalans-28-segons-el-ceo/",
+        "tipo": "agencia"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Verdicto sin cambios; quito moncloa.com y añado una cobertura de agencia. La nota de prensa del CEO (govern.cat) da 403 y ceo.gencat.cat no responde, así que no hay fuente primaria abierta y bajo la confianza de alta a media."
+  },
+  {
+    "indice": 3,
+    "minuto": "1:37:35",
+    "afirmacion": "La posición actual de España sobre el Sáhara Occidental coincide con la de la resolución del Consejo de Seguridad de la ONU, a la que se han sumado Francia, Alemania y Países Bajos.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://gna.org.gh/2025/12/the-netherlands-says-moroccos-autonomy-plan-offers-most-viable-solution-to-sahara-dispute/",
+        "motivo": "La página no carga el contenido (pantalla de verificación); sustituida por la nota de Europa Press reproducida en Diario Estrategia."
+      },
+      {
+        "url": "https://telquel.ma/2026/10/30/sahara-la-russie-torpille-les-avancees-sur-le-sahara_2016033",
+        "motivo": "No la he abierto y solo aportaba un titular; el hecho (veto ruso, mandato no renovado) lo confirma la ONU en press.un.org."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "ONU (press.un.org): Following Contentious Debate, Security Council Fails to Adopt Resolution to Extend UN Mission for Referendum in Western Sahara",
+        "url": "https://press.un.org/en/2026/sc16498",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Security Council Report: Western Sahara, vote on a draft resolution renewing MINURSO's mandate",
+        "url": "https://www.securitycouncilreport.org/whatsinblue/2026/10/western-sahara-vote-on-a-draft-resolution-renewing-minursos-mandate-4.php",
+        "tipo": "apoyo"
+      },
+      {
+        "titulo": "un-project.org: S/RES/2797 (2025)",
+        "url": "https://un-project.org/votes/resolution/S-RES-2797(2025)",
+        "tipo": "apoyo"
+      },
+      {
+        "titulo": "Diario Estrategia (Europa Press): Países Bajos afirma que el plan de autonomía marroquí es la «solución más viable»",
+        "url": "https://www.diarioestrategia.cl/texto-diario/mostrar/5695401/paises-bajos-afirma-plan-autonomia-marroqui-sahara-occidental-solucion-viable",
+        "tipo": "agencia"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Verdicto sin cambios. Sustituyo la fuente de Países Bajos que no cargaba por Europa Press y añado a la ONU para el hecho posterior (MINURSO, 30-10-2026); el texto de la resolución 2797 en press.un.org, docs.un.org y digitallibrary.un.org no se dejó abrir, por eso la fuente primaria solo cubre el contexto de 2026 y la confianza queda en media."
+  },
+  {
+    "indice": 4,
+    "minuto": "1:38:37",
+    "afirmacion": "España no ha cambiado su posición sobre el Sáhara Occidental; es la ONU la que ha evolucionado después de 50 años.",
+    "veredicto_antes": "enganoso",
+    "veredicto_despues": "enganoso",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [],
+    "tiene_fuente_primaria": false,
+    "nota": "Verdicto sin cambios. Abro las tres fuentes y confirman lo que se les atribuye (carta de 2022, programa de 2019 y programa de 2024); la carta original no se ha podido abrir. Sube la confianza a alta por haber tres fuentes válidas y coincidentes, y quito la frase sobre 2018, que no pude comprobar."
+  },
+  {
+    "indice": 5,
+    "minuto": "1:38:37",
+    "afirmacion": "Sánchez no ha gobernado con EH Bildu.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": true,
+    "confianza_antes": "alta",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Maldita.es: La relación del PSOE y Bildu durante la XIV legislatura: preguntas y respuestas",
+        "url": "https://maldita.es/malditateexplica/20230623/pactos-psoe-bildu/",
+        "tipo": "verificador"
+      },
+      {
+        "titulo": "Orain: PSOE y Sumar pactan prorrogar dos años los alquileres (Gobierno de coalición PSOE-Sumar)",
+        "url": "https://orain.eus/en/politika/2026/07/22/psoe-sumar-pactan-prorrogar-2-anos-los-alquileres-acaban-antes-del-30-junio-2028/",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Pasa de «casi cierto» a «verdadero»: la frase es literal (Bildu no está en el Gobierno ni ha cogobernado con el PSOE) y el apoyo parlamentario que antes se usaba para rebajarla es otra cosa que Sánchez no niega. La composición del Gobierno en lamoncloa.gob.es no responde, por eso la confianza baja de alta a media."
+  },
+  {
+    "indice": 6,
+    "minuto": "1:38:37",
+    "afirmacion": "Sánchez (el PSOE) no ha pactado un gobierno con Bildu en Euskadi ni en Navarra.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": true,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Orain: Imanol Pradales, elegido lehendakari del Gobierno Vasco",
+        "url": "https://orain.eus/es/politica/2024/06/20/imanol-pradales-elegido-lehendakari-con-votos-del-pnv-y-pseee/",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Última Hora: María Chivite, investida presidenta de Navarra",
+        "url": "https://www.ultimahora.es/noticias/elecciones-23j/2023/08/15/1995081/maria-chivite-investida-presidenta-navarra.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Pasa de «casi cierto» a «verdadero»: dos fuentes abiertas confirman que ni en Euskadi (PNV-PSE) ni en Navarra (PSN-Geroa Bai-Contigo) hay gobierno con Bildu, que solo se abstuvo. Sin acceso a las actas del Parlamento Vasco y del de Navarra la confianza queda en media."
+  },
+  {
+    "indice": 7,
+    "minuto": "1:39:37",
+    "afirmacion": "Jordi Wild dice que el PSOE (PSN) pactó con Bildu la moción de censura que hizo alcalde de Pamplona a Joseba Asirón (EH Bildu), y Sánchez lo acepta con un «bueno, claro» sin negarlo.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Ayuntamiento de Pamplona: El Pleno del Ayuntamiento de Pamplona debatirá este jueves la moción de censura a la alcaldía",
+        "url": "https://www.pamplona.es/en/node/63968",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "elDiario.es: Entrevista al secretario de Organización del PSN, Ramón Alzórriz",
+        "url": "https://www.eldiario.es/navarra/ramon-alzorriz-numero-psn-acuerdo-firmado-eh-bildu-pamplona-avanza-etica-democracia_1_10770254.amp.html",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "The Objective: crónica de la moción de censura de Pamplona",
+        "url": "https://theobjective.com/espana/politica/2023-12-28/bildu-alcaldia-pamplona-mocion-psoe/",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "elDiario.es: artículo sobre la moción de censura de Pamplona y su resultado (15 a 11)",
+        "url": "https://www.eldiario.es/politica/perder-alcaldia-pamplona-reputacion-sola-frase_129_10800224.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "ATRIBUCIÓN: la frase «pactasteis con Bildu una moción» es de Jordi Wild y Sánchez solo responde «bueno, claro»; reformulo la afirmación para decirlo. El hecho es verdadero y ahora lo respalda el propio Ayuntamiento de Pamplona."
+  },
+  {
+    "indice": 8,
+    "minuto": "1:39:37",
+    "afirmacion": "Sánchez nunca dijo que no quería que Pablo Iglesias estuviera en el Gobierno.",
+    "veredicto_antes": "falso",
+    "veredicto_despues": "falso",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.moncloa.com/2019/07/18/sanchez-iglesias-gobierno-46184/",
+        "motivo": "moncloa.com es un medio privado, no es el Gobierno; fuente no válida según la política de fuentes."
+      },
+      {
+        "url": "https://www.lamoncloa.gob.es/presidente/intervenciones/Paginas/2019/prs18072019.aspx",
+        "motivo": "Oficial y válida, pero no responde desde esta conexión (ECONNREFUSED con WebFetch y tiempo agotado con curl); se cita la prensa que recoge la entrevista."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Última Hora: Sánchez permite la entrada en el Gobierno de miembros de Podemos pero no de Iglesias",
+        "url": "https://www.ultimahora.es/noticias/nacional/2019/07/18/1095221/sanchez-permite-entrada-gobierno-miembros-podemos-pero-iglesias.html",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Orain: Investidura: Pedro Sánchez veta a Pablo Iglesias",
+        "url": "https://orain.eus/es/politica/2019/07/18/investidura-pedro-sanchez-veta-pablo-iglesias-18-julio-2019/",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Verdicto sin cambios. Sustituyo moncloa.com (medio privado) por dos medios que citan la entrevista del 18-7-2019 y cuyo texto coincide con la frase que Jordi le lee; la transcripción oficial de La Moncloa no se pudo abrir."
+  },
+  {
+    "indice": 9,
+    "minuto": "1:39:37",
+    "afirmacion": "Lo que Sánchez dijo en 2019 es que le quitaba el sueño que Podemos llevara ministerios como la Seguridad Social o Hacienda.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.eldiario.es/politica/sanchez-entrevista_1_1351546.html",
+        "motivo": "Es una columna de opinión que solo parafrasea; la cita literal sale de la noticia de elDiario.es del mismo día."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "elDiario.es: Sánchez dice que «no dormiría» como presidente del Gobierno si hubiera cedido Hacienda o Energía a Iglesias",
+        "url": "https://www.eldiario.es/politica/pedro-sanchez_1_1351680.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Verdicto sin cambios; sustituyo la columna de opinión de elDiario.es por la noticia con la cita literal del 19-9-2019, y la confianza sube a alta porque Maldita y elDiario.es coinciden."
+  },
+  {
+    "indice": 10,
+    "minuto": "1:39:37",
+    "afirmacion": "Sánchez no dijo en 2019 lo de que no dormiría (por tener a Podemos en el Gobierno), y es un bulo.",
+    "veredicto_antes": "falso",
+    "veredicto_despues": "enganoso",
+    "cambia_veredicto": true,
+    "confianza_antes": "alta",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.eldiario.es/politica/sanchez-entrevista_1_1351546.html",
+        "motivo": "Columna de opinión; no recoge la cita literal que sí da la noticia de elDiario.es."
+      },
+      {
+        "url": "https://www.lamoncloa.gob.es/presidente/intervenciones/Documents/2019/ENTREVISTA. LA SEXTA. PRESIDENTE. 190919.pdf",
+        "motivo": "Oficial y válida, pero no responde desde esta conexión; la cita literal se toma de elDiario.es y Maldita."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "elDiario.es: Sánchez dice que «no dormiría» como presidente del Gobierno si hubiera cedido Hacienda o Energía a Iglesias",
+        "url": "https://www.eldiario.es/politica/pedro-sanchez_1_1351680.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Pasa de «falso» a «engañoso»: Sánchez sí dijo «no dormiría por la noche» (19-9-2019), pero con la condición de los ministerios clave, y Maldita califica de manipulada la versión viral; además la explicación anterior atribuía a 2023 un reconocimiento que Maldita no recoge (dijo «No dije exactamente eso»). La etiqueta automática pone la frase en el turno de Jordi, pero por contexto es de Sánchez."
+  },
+  {
+    "indice": 11,
+    "minuto": "1:40:39",
+    "afirmacion": "En 2019 el PSOE era la primera fuerza y el PP no apoyó ni facilitó la formación de gobierno, lo que llevó a la repetición electoral.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://es.wikipedia.org/wiki/XIII_Legislatura_de_España",
+        "motivo": "Wikipedia solo vale como apoyo para llegar a la fuente primaria; sustituida por fuentes primarias o de prensa abiertas en la auditoría."
+      },
+      {
+        "url": "https://es.wikipedia.org/wiki/Elecciones_generales_de_España_de_abril_de_2019",
+        "motivo": "Wikipedia solo vale como apoyo para llegar a la fuente primaria; sustituida por fuentes primarias o de prensa abiertas en la auditoría."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Congreso de los Diputados: Sesiones de investidura",
+        "url": "https://www.congreso.es/es/cem/sesiones-de-investidura",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Última Hora: Sánchez fracasa en la primera votación de investidura",
+        "url": "https://www.ultimahora.es/noticias/nacional/2019/07/23/1096209/sanchez-fracasa-primera-votacion-investidura-podemos-abstiene.html",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Público: El Congreso rechaza la investidura de Sánchez por segunda vez",
+        "url": "https://www.publico.es/politica/congreso-rechaza-investidura-sanchez-segunda-vez-124-sies-155-noes-67-abstenciones.html",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "The Objective: El PSOE gana las elecciones pero necesita a Podemos",
+        "url": "https://theobjective.com/el-psoe-gana-las-elecciones-pero-necesita-a-podemos-y-a-los-independentistas-para-gobernar/",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "El Salto: La derecha niega el voto a Sánchez",
+        "url": "https://www.elsaltodiario.com/congreso-de-los-diputados/derecha-niega-voto-sanchez-hasta-cuando-juego-trileros",
+        "tipo": "apoyo"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Verdicto sin cambios; sustituyo Wikipedia por el Congreso (votos de las dos investidura de julio de 2019) y prensa que confirma que PP, Cs y Vox votaron «no» y que el PSOE fue primera fuerza con 123 escaños. Queda sin primaria el resultado del 28-A (Interior y BOE no responden)."
+  },
+  {
+    "indice": 12,
+    "minuto": "1:40:39",
+    "afirmacion": "El Gobierno llevó al Congreso una propuesta de derogación de la ley mordaza, que ha decaído al acabar la legislatura, y el bloqueo es más cosa de los grupos parlamentarios que del Gobierno.",
+    "veredicto_antes": "enganoso",
+    "veredicto_despues": "enganoso",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.moncloa.com/2026/10/28/tercer-fracaso-reforma-ley-mordaza-3457130/",
+        "motivo": "moncloa.com es un medio privado, no es el Gobierno; fuente no válida según la política de fuentes."
+      },
+      {
+        "url": "https://es.wikipedia.org/wiki/XV_Legislatura_de_España",
+        "motivo": "Wikipedia solo vale como apoyo para llegar a la fuente primaria; sustituida por fuentes primarias o de prensa abiertas en la auditoría."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Congreso de los Diputados: BOCG serie B, núm. 148-4 (proposición de ley orgánica de protección de las libertades y seguridad ciudadana)",
+        "url": "https://www.congreso.es/public_oficiales/L15/CONG/BOCG/B/BOCG-15-B-148-4.PDF",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "El Independiente: El Congreso inicia la reforma de la ley mordaza",
+        "url": "https://www.elindependiente.com/espana/2024/10/29/el-congreso-inicia-la-reforma-de-la-ley-mordaza-con-la-negativa-del-pp-y-vox-dan-a-bildu-la-proteccion-de-la-policia/amp/",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Diario de León: El BOE publica el real decreto de disolución de las Cortes (RD 806/2026)",
+        "url": "https://www.diariodeleon.es/nacional/261006/2099432/boe-publica-rd-disolucion-cortes-convocatoria-electoral-29-noviembre.html",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Diario de León: La deuda que deja el adelanto electoral",
+        "url": "https://www.diariodeleon.es/nacional/261005/2099390/deuda-deja-adelanto-electoral.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Verdicto sin cambios; el BOCG del Congreso confirma que firmaron la proposición los grupos Socialista, Sumar, EH Bildu y PNV y no el Gobierno. Quito moncloa.com y Wikipedia, y la explicación ya no dice que sea «reforma parcial» porque El Independiente la describe como sustitución de la ley."
+  },
+  {
+    "indice": 13,
+    "minuto": "1:40:39",
+    "afirmacion": "El Gobierno de España es un gobierno de coalición que gobierna en minoría parlamentaria.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [
+      {
+        "url": "https://es.wikipedia.org/wiki/Elecciones_generales_de_España_de_2023",
+        "motivo": "Wikipedia solo vale como apoyo para llegar a la fuente primaria; sustituida por fuentes primarias o de prensa abiertas en la auditoría."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Congreso de los Diputados: Sesiones de investidura",
+        "url": "https://www.congreso.es/es/cem/sesiones-de-investidura",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Orain: PSOE y Sumar pactan prorrogar dos años los alquileres",
+        "url": "https://orain.eus/en/politika/2026/07/22/psoe-sumar-pactan-prorrogar-2-anos-los-alquileres-acaban-antes-del-30-junio-2028/",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Público: José Luis Ábalos renuncia a su escaño en el Congreso",
+        "url": "https://www.publico.es/politica/abalos-renuncia-escano-congreso.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Verdicto sin cambios; Wikipedia pasa a fuentes del Congreso (investidura con 179 votos) y a prensa que confirma el Gobierno PSOE-Sumar y su dependencia de Junts. No he podido abrir el número exacto de escaños de Sumar."
+  },
+  {
+    "indice": 14,
+    "minuto": "1:41:39",
+    "afirmacion": "Sánchez tiene 121 escaños en el Congreso desde 2023.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://es.wikipedia.org/wiki/Elecciones_generales_de_España_de_2023",
+        "motivo": "Wikipedia solo vale como apoyo para llegar a la fuente primaria; sustituida por fuentes primarias o de prensa abiertas en la auditoría."
+      },
+      {
+        "url": "https://www.noticiasdenavarra.com/politica/2026/01/28/psoe-recupera-escano-renuncia-abalos-10630708.html",
+        "motivo": "Devuelve 406 al abrirla; se sustituye por Público, que da la misma cifra."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Público: José Luis Ábalos renuncia a su escaño en el Congreso",
+        "url": "https://www.publico.es/politica/abalos-renuncia-escano-congreso.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Verdicto sin cambios; sustituyo Wikipedia y una página que no abría por Público (el PSOE «sumará 121 votos»). La composición oficial del Congreso se carga de forma dinámica y no la pude leer, así que no hay primaria."
+  },
+  {
+    "indice": 15,
+    "minuto": "1:42:40",
+    "afirmacion": "El PSC se ha visto respaldado electoralmente en Cataluña y en muchos municipios.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": true,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://es.wikipedia.org/wiki/Elecciones_al_Parlamento_de_Cataluña_de_2024",
+        "motivo": "Wikipedia solo vale como apoyo para llegar a la fuente primaria; sustituida por fuentes primarias o de prensa abiertas en la auditoría."
+      },
+      {
+        "url": "https://es.wikipedia.org/wiki/Elecciones_municipales_de_España_de_2023",
+        "motivo": "Wikipedia solo vale como apoyo para llegar a la fuente primaria; sustituida por fuentes primarias o de prensa abiertas en la auditoría."
+      },
+      {
+        "url": "https://www.moncloa.com/2026/07/12/barometro-ceo-2026-illa-escanos-independentismo-3397816/",
+        "motivo": "moncloa.com es un medio privado, no es el Gobierno; fuente no válida según la política de fuentes."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Ajuntament d'Abrera (copia de los resultados provisionales de la Generalitat): Resultats eleccions al Parlament 2024",
+        "url": "https://ajuntamentabrera.cat/files/doc6084/resultats-eleccions-al-parlament-de-catalunya-2024.pdf",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Orain: El PSC gana las elecciones en Cataluña y Junts supera a ERC",
+        "url": "https://orain.eus/es/politica/2024/05/12/resultados-de-elecciones-al-parlamento-de-cataluna-12-mayo-2024/",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "NacióDigital: El PSC recupera amb autoritat l'hegemonia municipal",
+        "url": "https://naciodigital.cat/politica/el-psc-recupera-amb-autoritat-lhegemonia-municipal.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Pasa de «casi cierto» a «verdadero»: lo que antes no se pudo comprobar («muchos municipios») lo cubre NacióDigital, según el cual el PSC fue la fuerza más votada en las municipales de 2023 por primera vez desde 2007. Quito Wikipedia y moncloa.com; la primaria es una copia de resultados provisionales de la Generalitat, por eso la confianza queda en media."
+  },
+  {
+    "indice": 16,
+    "minuto": "1:43:41",
+    "afirmacion": "En 2017 Sánchez advirtió a Rajoy de que judicializar la crisis catalana era un tremendo error cuando la Fiscalía General del Estado actuó contra los líderes del procés.",
+    "veredicto_antes": "no_verificable",
+    "veredicto_despues": "no_verificable",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.moncloa.com/2023/09/21/rajoy-sanchez-judicializacion-proces-2193613/",
+        "motivo": "moncloa.com es un medio privado, no es el Gobierno; fuente no válida según la política de fuentes."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Que.es: Rajoy asegura que Sánchez no le dijo que fuera un error la judicialización del 'procés'",
+        "url": "https://www.que.es/2023/09/21/rajoy-sanchez-judicializacion-proces/",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Verdicto sin cambios (no verificable): sustituyo moncloa.com por Que.es, que recoge el desmentido de Rajoy. Mantengo The Objective (2017) y OKDiario (medio alineado, solo como apoyo), que sí abren y muestran que entonces no hubo una advertencia pública; en 2023 Sánchez habló de «malestar» y no de «tremendo error»."
+  },
+  {
+    "indice": 17,
+    "minuto": "1:45:42",
+    "afirmacion": "Sánchez, en la oposición, apoyó al PP (y la aplicación del artículo 155) durante la crisis catalana de 2017.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "The Objective: El Senado aprueba la aplicación del artículo 155 en Cataluña",
+        "url": "https://theobjective.com/rajoy-defiende-ante-el-senado-la-aplicacion-del-articulo-155/",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Verdicto sin cambios; añado The Objective para el voto del Senado (214-47-1) y el apoyo del PSOE al 155. La confianza baja a media porque no he abierto el registro de votación del Senado, que sería la primaria."
+  },
+  {
+    "indice": 18,
+    "minuto": "1:45:42",
+    "afirmacion": "El PP no ha apoyado las propuestas políticas de Sánchez en Cataluña, pese a que él sí apoyó al PP en 2017.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://es.wikipedia.org/wiki/Ley_de_amnistía_de_España_de_2024",
+        "motivo": "Wikipedia solo vale como apoyo para llegar a la fuente primaria; sustituida por fuentes primarias o de prensa abiertas en la auditoría."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "The Objective: La ley de amnistía en el Congreso, en directo",
+        "url": "https://theobjective.com/politica/2024-05-30/ley-amnistia-congreso/directo/",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Menorca.info (Agencias): Ley de amnistía aprobada definitivamente por la mayoría del Congreso",
+        "url": "https://www.menorca.info/actualidad/nacional/2024/05/30/2174477/ley-amnistia-aprobada-definitivamente-mayoria-del-congreso.html",
+        "tipo": "agencia"
+      },
+      {
+        "titulo": "RTVC: El Constitucional avala la ley de amnistía",
+        "url": "https://rtvc.es/el-constitucional-avala-la-ley-de-amnistia-26-junio-2025/",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Ara: El Constitucional avala la amnistía: todas las claves de la sentencia",
+        "url": "https://es.ara.cat/politica/finalidad-legitima-explicita-razonable-claves-sentencia_1_5423708.html",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Ara: El PP recurre los indultos ante el Supremo",
+        "url": "https://es.ara.cat/politica/pp-recurre-indultos-supremo_1_4038288.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Verdicto sin cambios («casi cierto»): sustituyo Wikipedia por cinco fuentes de prensa que confirman el voto contrario del PP a la amnistía, su recurso y el recurso contra los indultos. Falta la votación nominal del Congreso y el apoyo del PP a otras propuestas, por eso sigue siendo «casi cierto» y con confianza media."
+  },
+  {
+    "indice": 19,
+    "minuto": "1:45:42",
+    "afirmacion": "El artículo 155 de la Constitución es un mecanismo político, no judicial, para responder a la declaración unilateral de independencia.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.elindependiente.com/politica/2017/10/13/acuerdo-rajoy-sanchez-dialogo-trabajo-codo-con-codo/amp/",
+        "motivo": "Habla del pacto Rajoy-Sánchez, no del carácter político o judicial del 155; no sostiene lo que se le atribuía."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Senado: Constitución Española, artículo 155",
+        "url": "https://www.senado.es/web/conocersenado/normas/constitucion/detalleconstitucioncompleta/index.html",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "The Objective: El Senado aprueba la aplicación del artículo 155 en Cataluña",
+        "url": "https://theobjective.com/rajoy-defiende-ante-el-senado-la-aplicacion-del-articulo-155/",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Que.es: Rajoy asegura que Sánchez no le dijo que fuera un error la judicialización del 'procés'",
+        "url": "https://www.que.es/2023/09/21/rajoy-sanchez-judicializacion-proces/",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Verdicto sin cambios; la confianza sube de media a alta porque ahora hay el texto del artículo 155 (publicado por el Senado). El enlace anterior de El Independiente no trataba el tema y lo sustituyo."
+  },
+  {
+    "indice": 20,
+    "minuto": "1:45:42",
+    "afirmacion": "Durante la legislatura se especuló con que Feijóo contactaría con Puigdemont para una moción de censura junto con Vox.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Orain: After the breakup of Junts, what now?",
+        "url": "https://orain.eus/en/politika/2025/10/28/after-the-breakup-of-junts-what-now/",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Verdicto sin cambios; añado Orain (Puigdemont descarta apoyar una moción de censura) como segunda fuente de que el escenario se discutió. No he encontrado otra fuente que cuente que Feijóo fuera a llamar a Puigdemont."
+  },
+  {
+    "indice": 21,
+    "minuto": "1:46:44",
+    "afirmacion": "En 2019 Sánchez fue a una repetición electoral por no pactar con Pablo Iglesias.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [
+      {
+        "url": "https://es.wikipedia.org/wiki/XIII_Legislatura_de_España",
+        "motivo": "Wikipedia solo vale como apoyo para llegar a la fuente primaria; sustituida por fuentes primarias o de prensa abiertas en la auditoría."
+      },
+      {
+        "url": "https://maldita.es/malditobulo/20230620/pedro-sanchez-dormir-tranquilo-ministros-unidas-podemos-gobierno",
+        "motivo": "Aclara qué dijo Sánchez sobre ministerios, pero no trata la repetición electoral; no sostiene lo que se le atribuía aquí."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Congreso de los Diputados: Sesiones de investidura",
+        "url": "https://www.congreso.es/es/cem/sesiones-de-investidura",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Última Hora: Sánchez fracasa en la primera votación de investidura",
+        "url": "https://www.ultimahora.es/noticias/nacional/2019/07/23/1096209/sanchez-fracasa-primera-votacion-investidura-podemos-abstiene.html",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Público: El Congreso rechaza la investidura de Sánchez por segunda vez",
+        "url": "https://www.publico.es/politica/congreso-rechaza-investidura-sanchez-segunda-vez-124-sies-155-noes-67-abstenciones.html",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "elDiario.es: Sánchez dice que «no dormiría» como presidente del Gobierno si hubiera cedido Hacienda o Energía a Iglesias",
+        "url": "https://www.eldiario.es/politica/pedro-sanchez_1_1351680.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Verdicto sin cambios; Wikipedia pasa a ser el Congreso (investiduras de julio de 2019 y de enero de 2020) más prensa y elDiario.es, que recoge que el 19-9-2019 rechazaba la coalición con Podemos de cara al 10-N."
+  },
+  {
+    "indice": 22,
+    "minuto": "1:46:44",
+    "afirmacion": "Sánchez prometió subir el salario mínimo interprofesional y lo ha subido.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Eurostat: Monthly minimum wages, bi-annual data (earn_mw_cur), España",
+        "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/earn_mw_cur?geo=ES&currency=EUR&format=JSON&lang=EN",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Verdicto sin cambios; añado la serie de Eurostat como fuente primaria (859 euros en 2018, 1.425 en 2026, ambos en doce pagas) y quito la referencia al «RD 126/2026», que no pude abrir en el BOE."
+  },
+  {
+    "indice": 23,
+    "minuto": "1:46:44",
+    "afirmacion": "Sánchez prometió revalorizar las pensiones conforme al IPC y lo ha hecho.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/inclusion/paginas/2026/subida-pensiones-2026.aspx",
+        "motivo": "Oficial y válida, pero no responde desde esta conexión (ECONNREFUSED); se cita la agencia que recoge el decreto-ley publicado en el BOE."
+      }
+    ],
+    "fuentes_nuevas": [],
+    "tiene_fuente_primaria": false,
+    "nota": "Verdicto sin cambios; la nota de La Moncloa no abre y solo queda Europa Press (vía Deia) como fuente, por lo que quito el dato de 2022 que no pude confirmar y dejo la confianza en media."
+  },
+  {
+    "indice": 24,
+    "minuto": "1:46:44",
+    "afirmacion": "Sánchez ha cumplido su promesa de apostar por la educación pública, la formación profesional y la sanidad pública.",
+    "veredicto_antes": "no_verificable",
+    "veredicto_despues": "no_verificable",
+    "cambia_veredicto": false,
+    "confianza_antes": "baja",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Eurostat: Government expenditure by function (COFOG), gov_10a_exp",
+        "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/gov_10a_exp?geo=ES&geo=EU27_2020&cofog99=GF09&cofog99=GF07&unit=PC_GDP&sector=S13&na_item=TE&format=JSON&lang=EN&sinceTimePeriod=2015",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Eurostat: Government expenditure on education",
+        "url": "https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Government_expenditure_on_education",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Sigue «no verificable»: busco indicadores y los de Eurostat dan una subida moderada del gasto en educación y sanidad (3,9 a 4,1 % y 6,0 a 6,5 % del PIB), pero sin umbral para «apostar». La confianza sube de baja a media porque ahora hay datos oficiales que explican por qué no hay veredicto."
+  },
+  {
+    "indice": 25,
+    "minuto": "1:46:44",
+    "afirmacion": "Sánchez dijo no al 5% de gasto en defensa que pedía Trump y mantiene ese rechazo.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://en.wikipedia.org/wiki/2025_NATO_summit",
+        "motivo": "Wikipedia solo vale como apoyo para llegar a la fuente primaria; sustituida por fuentes primarias o de prensa abiertas en la auditoría."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "OTAN: The Hague Summit Declaration (25-6-2025)",
+        "url": "https://www.nato.int/cps/en/natohq/official_texts_236705.htm",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "OTAN: Defence Investment of NATO Countries (2014-2026)",
+        "url": "https://www.nato.int/content/dam/nato/webready/documents/finance/def-exp-2026-en.pdf",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Verdicto sin cambios; sustituyo Wikipedia por la declaración de la OTAN y su informe de julio de 2026 (España, 2,00 % del PIB en defensa básica para 2026). La excepción española no figura en el texto abierto, por lo que sigue siendo «casi cierto» con confianza media."
+  },
+  {
+    "indice": 26,
+    "minuto": "1:46:44",
+    "afirmacion": "Sánchez dijo no al genocidio en Gaza y ha mantenido esa posición con medidas.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Spain–Israel_relations",
+        "motivo": "Wikipedia solo vale como apoyo para llegar a la fuente primaria; sustituida por fuentes primarias o de prensa abiertas en la auditoría."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Al Jazeera: Spain PM Sanchez imposes arms embargo on Israel to 'stop Gaza genocide'",
+        "url": "https://www.aljazeera.com/news/2025/9/8/spain-imposes-total-arms-embargo-on-israel-to-stop-genocide-in",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Catalan News (ACN): Spain announces arms embargo on Israel and entry ban on 'genocide promoters'",
+        "url": "https://www.catalannews.com/politics/item/spain-arms-embargo-israel-palestine-genocide-promoters-8-september-2025",
+        "tipo": "agencia"
+      },
+      {
+        "titulo": "La Voz de Lanzarote (EFE): Pedro Sánchez Announces Nine Measures Against Israel's \"Genocide\" in Gaza",
+        "url": "https://www.lavozdelanzarote.com/en/news/politics/pedro-sanchez-announces-nine-measures-against-israel-genocide-in-gaza_237636_102.html",
+        "tipo": "agencia"
+      },
+      {
+        "titulo": "Última Hora (EFE): El BOE lo confirma: El Gobierno cesa a la embajadora en Israel y rebaja la representación",
+        "url": "https://www.ultimahora.es/noticias/nacional/2026/03/11/2586875/boe-confirma-gobierno-cesa-embajadora-israel-rebaja-representacion.html",
+        "tipo": "agencia"
+      },
+      {
+        "titulo": "Al Jazeera: Spain removes ambassador from Israel in protest to Iran war, Gaza genocide",
+        "url": "https://www.aljazeera.com/news/2026/3/11/spain-removes-ambassador-from-israel-as-opposes-war-on-iran-gaza-genocide",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "The Objective: crónica del 8-9-2025 sobre las medidas de Sánchez y la embajadora en Israel",
+        "url": "https://theobjective.com/espana/politica/2025-09-08/espana-consultas-embajadora-israel/",
+        "tipo": "apoyo"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Veredicto y confianza sin cambios respecto al original («casi cierto», media): sustituyo Wikipedia por cuatro fuentes válidas e independientes (Al Jazeera, ACN, EFE, EFE vía Última Hora) y The Objective queda solo como apoyo. Sin fuente primaria (BOE y La Moncloa no abren) y sin confirmar el decreto-ley ni la propuesta de abril de 2026 sobre el acuerdo UE-Israel."
+  },
+  {
+    "indice": 27,
+    "minuto": "1:35:21",
+    "afirmacion": "Contexto (planteado por Jordi Wild, no respondido por Sánchez): en 2015-16 el PSOE defendía que el Gobierno dejara de proponer magistrados del Constitucional y luego el Gobierno propuso al exministro de Justicia Juan Carlos Campo; Sánchez también consideró inviables los topes al alquiler de Podemos.",
+    "veredicto_antes": "no_verificable",
+    "veredicto_despues": "no_verificable",
+    "cambia_veredicto": false,
+    "confianza_antes": "baja",
+    "confianza_despues": "baja",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [],
+    "tiene_fuente_primaria": false,
+    "nota": "ATRIBUCIÓN: la cita es de Jordi Wild y no de Sánchez, que no la responde; ya constaba así en la afirmación, la dejo como contexto sin veredicto. Sin fuentes porque lo dicho por el presentador no se ha verificado."
+  }
+]

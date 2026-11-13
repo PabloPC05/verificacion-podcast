@@ -4,11 +4,17 @@
     "cita": "a nuestros mitines viene Rajoy, viene Aznar. viene, por supuesto, Ayuso",
     "afirmacion": "A los actos del PP en esta precampaña y campaña de las elecciones generales de 2026 acuden los expresidentes Mariano Rajoy y José María Aznar y la presidenta madrileña Isabel Díaz Ayuso.",
     "veredicto": "mayormente_verdadero",
-    "explicacion": "Los tres acudieron al primer gran acto de precampaña del PP en Madrid el 10 de octubre de 2026, donde Feijóo agradeció su presencia. La campaña oficial solo empezaba a las 00:00 del 13 de noviembre (el día de la publicación), de modo que lo dicho es un balance de la precampaña y una previsión; el acto de apertura de campaña del 13 de noviembre contó con Ayuso, y en los textos consultados no constan Rajoy ni Aznar.",
+    "explicacion": "El 10 de octubre de 2026, en el primer acto de precampaña del PP en Ifema (Madrid), Feijóo compartió escenario con Ayuso y con el alcalde Almeida, y Aznar y Rajoy asistieron desde el público, a quienes Feijóo agradeció su presencia. Es el único acto documentado con los tres, así que decir «a nuestros mitines viene» generaliza un caso. La campaña oficial empezó a las 00:00 del 13 de noviembre y en las fuentes consultadas no consta ningún acto de ella con los tres.",
     "confianza": "media",
     "fuentes": [
-      {"titulo": "Feijóo arranca la precampaña arropado por Aznar, Rajoy y Ayuso (El Independiente, 10/10/2026)", "url": "https://www.elindependiente.com/espana/2026/10/10/aznar-rajoy-y-ayuso-arropan-a-feijoo-en-su-primer-acto-de-precampana/"},
-      {"titulo": "El PP arranca en Madrid la precampaña para las elecciones generales del 29 de noviembre (Infobae)", "url": "https://www.infobae.com/espana/2026/10/10/el-pp-arranca-en-madrid-la-precampana-para-las-elecciones-generales-del-29-de-noviembre-con-la-promesa-de-feijoo-de-ser-el-presidente-que-espana-esta-esperando/"}
+      {
+        "titulo": "El Independiente (10/10/2026): Feijóo arranca la precampaña arropado por Aznar, Rajoy y Ayuso",
+        "url": "https://www.elindependiente.com/espana/2026/10/10/aznar-rajoy-y-ayuso-arropan-a-feijoo-en-su-primer-acto-de-precampana/"
+      },
+      {
+        "titulo": "Infobae (10/10/2026): El PP arranca en Madrid la precampaña para las elecciones generales del 29 de noviembre",
+        "url": "https://www.infobae.com/espana/2026/10/10/el-pp-arranca-en-madrid-la-precampana-para-las-elecciones-generales-del-29-de-noviembre-con-la-promesa-de-feijoo-de-ser-el-presidente-que-espana-esta-esperando/"
+      }
     ]
   },
   {
@@ -16,10 +22,17 @@
     "cita": "yo he sido presidente de la Comunidad Autónoma Gallega, como sabes, mucho tiempo",
     "afirmacion": "Feijóo fue presidente de la Xunta de Galicia durante mucho tiempo.",
     "veredicto": "verdadero",
-    "explicacion": "Presidió la Xunta del 18 de abril de 2009 al 14 de mayo de 2022, es decir, algo más de 13 años y cuatro legislaturas.",
+    "explicacion": "La web oficial de la Xunta dice que Feijóo fue presidente «desde abril de 2009 ata maio de 2022», es decir, más de 13 años. La Consellería de Presidencia publica los escaños del PP en 2009, 2012, 2016 y 2020 (38, 41, 41 y 42 de 75, con mayoría absoluta en 38), cuatro legislaturas seguidas, así que «mucho tiempo» se ajusta a los datos.",
     "confianza": "alta",
     "fuentes": [
-      {"titulo": "Alberto Núñez Feijóo (Wikipedia)", "url": "https://es.wikipedia.org/wiki/Alberto_Núñez_Feijóo"}
+      {
+        "titulo": "Xunta de Galicia: Todos los presidentes",
+        "url": "https://www.xunta.gal/todos-os-presidentes"
+      },
+      {
+        "titulo": "Xunta de Galicia, Consellería de Presidencia: Informe de los resultados electorales",
+        "url": "https://conselleriadepresidencia.xunta.gal/es/relacions-institucionais-e-parlamentarias/informe-dos-resultados-electorais"
+      }
     ]
   },
   {
@@ -27,11 +40,21 @@
     "cita": "cuando critiqué lo que había hecho mi partido, cuando dije que había que haberlo detectado con anterioridad, que probablemente le reaccionamos tarde",
     "afirmacion": "Con ocasión del caso Gürtel, Feijóo criticó públicamente a su partido diciendo que había que haberlo detectado antes y que el PP reaccionó tarde.",
     "veredicto": "no_verificable",
-    "explicacion": "No he localizado ninguna declaración suya de ese tenor sobre la Gürtel. Lo documentado de septiembre de 2009 va en sentido contrario (defendió al partido: «un informe policial no es una decisión judicial», «que cada barco aguante su vela»); en marzo de 2013 sí pidió al PP que pidiera perdón por el caso Bárcenas. Como no señala fecha, no se puede confirmar ni descartar que lo dijera en otro momento.",
+    "explicacion": "No he localizado ninguna declaración de Feijóo en la que diga que el PP debió detectar antes la Gürtel o reaccionó tarde. Lo documentado va en otro sentido: en 2009 defendió que «un informe policial no es una decisión judicial», en marzo de 2013 pidió al PP que pidiera perdón por el caso Bárcenas y tras la sentencia de 2018 dijo que el partido debía «acatar, cumplir y seguir garantizando que esto no vuelva a suceder». Como no da fecha, no se puede confirmar ni descartar que lo dijera en otro momento.",
     "confianza": "baja",
     "fuentes": [
-      {"titulo": "elDiario.es: Feijóo y la corrupción, de «que cada barco aguante su vela» a hoy", "url": "https://www.eldiario.es/1_bd4047"},
-      {"titulo": "Público/EFE (24/03/2013): Feijóo insta al PP a pedir perdón por el caso Bárcenas", "url": "https://www.publico.es/actualidad/feijoo-insta-pp-pedir-perdon-caso-barcenas.amp.html"}
+      {
+        "titulo": "elDiario.es: artículo sobre las declaraciones de Feijóo ante la Gürtel (2009 y 2025)",
+        "url": "https://www.eldiario.es/1_bd4047"
+      },
+      {
+        "titulo": "Público (24/03/2013): Feijóo insta al PP a pedir perdón por el caso Bárcenas",
+        "url": "https://www.publico.es/actualidad/feijoo-insta-pp-pedir-perdon-caso-barcenas.amp.html"
+      },
+      {
+        "titulo": "Público (2018): Reacciones a la sentencia de la Gürtel, en directo",
+        "url": "https://www.publico.es/politica/directo-reacciones-gurtel.html"
+      }
     ]
   },
   {
@@ -39,12 +62,29 @@
     "cita": "yo no le digo a este señor lo expulso del partido al otro no vas a ser candidato a este que lo han elegido en primarias queda sin efecto el resultado de las primarias",
     "afirmacion": "Pedro Sánchez ha expulsado a gente del partido, ha vetado candidatos y ha dejado sin efecto resultados de primarias.",
     "veredicto": "enganoso",
-    "explicacion": "Es cierto que el PSOE expulsó a José Luis Ábalos (16 de junio de 2025, 15 meses después de abrirle expediente por el caso Koldo) y que Ferraz ha anulado o apartado procesos de primarias: Castilla y León (octubre de 2024, anuladas las bases y el calendario, sin candidato aún elegido) y Alcalá de Henares (septiembre de 2026, designación directa sin votación). Pero en las fuentes consultadas no consta ningún caso en que se anulase el resultado de unas primarias ya celebradas, que es lo que describe la frase, y la expulsión de Ábalos fue por un caso de corrupción, no una purga arbitraria.",
+    "explicacion": "Es cierto que el PSOE expulsó a José Luis Ábalos el 16 de junio de 2025, 15 meses después de abrirle expediente por el caso Koldo, y que Ferraz ha frenado procesos de primarias: en octubre de 2024 la Comisión Federal de Ética anuló las primarias del PSOE de Castilla y León antes de que se votaran, y en octubre de 2026 aparcó 124 candidaturas pendientes hasta después del 29-N. Pero no he encontrado ningún caso en que se dejara sin efecto el resultado de unas primarias ya celebradas, que es lo que dice Feijóo; lo más cercano es una resolución federal de 2024 que, en Cantabria, dio la victoria a otra candidatura al estimar un recurso sobre la elección de delegados.",
     "confianza": "media",
     "fuentes": [
-      {"titulo": "Orain: El PSOE expulsa a Ábalos 15 meses después de abrir el expediente", "url": "https://orain.eus/en/politika/2025/06/16/the-psoe-has-expelled-jose-luis-abalos-15-months-after-the-opening-of-the-file/"},
-      {"titulo": "The Objective (04/10/2024): Ferraz anula las primarias del PSOE de Castilla y León", "url": "https://theobjective.com/espana/politica/2024-10-04/ferraz-primarias-psoe-castilla-y-leon/"},
-      {"titulo": "Moncloa.com (02/09/2026): Óscar López anula las primarias del PSOE en Alcalá de Henares", "url": "https://www.moncloa.com/2026/09/02/oscar-lopez-primarias-psoe-alcala-3424594/"}
+      {
+        "titulo": "Orain: El PSOE expulsa a José Luis Ábalos 15 meses después de abrir el expediente (16/06/2025)",
+        "url": "https://orain.eus/en/politika/2025/06/16/the-psoe-has-expelled-jose-luis-abalos-15-months-after-the-opening-of-the-file/"
+      },
+      {
+        "titulo": "The Objective (04/10/2024): Ferraz anula las primarias del PSOE de Castilla y León",
+        "url": "https://theobjective.com/espana/politica/2024-10-04/ferraz-primarias-psoe-castilla-y-leon/"
+      },
+      {
+        "titulo": "elDiario.es (2024): Ferraz suspende las primarias del PSOE en Castilla y León",
+        "url": "https://www.eldiario.es/castilla-y-leon/politica/ferraz-suspende-legalidad-calendario-congreso-primarias-castilla-leon-psoe_1_11707887.html"
+      },
+      {
+        "titulo": "elDiario.es Cantabria (2024): Ferraz resuelve el conflicto y da ganadora a Herrán en la elección de delegados",
+        "url": "https://www.eldiario.es/cantabria/ultimas-noticias/ferraz-resuelve-conflicto-cantabria-da-ganadora-herran-eleccion-delegados-congreso-federal_1_11764101.amp.html"
+      },
+      {
+        "titulo": "Vozpópuli (06/10/2026): Sánchez cancela todos los procesos de primarias en el PSOE a la espera del 29-N",
+        "url": "https://www.vozpopuli.com/amp/espana/politica/sanchez-cancela-todos-los-procesos-de-primarias-en-el-psoe-a-la-espera-de-los-resultados-del-29-n.html"
+      }
     ]
   },
   {
@@ -52,12 +92,25 @@
     "cita": "Antes, que no había ganado con mayoría y que estaba dependiendo de Ciudadanos y de Vox",
     "afirmacion": "Antes de lograr la mayoría absoluta, Ayuso gobernaba en Madrid sin mayoría propia y dependiendo de Ciudadanos y de Vox.",
     "veredicto": "mayormente_verdadero",
-    "explicacion": "En 2019 Ayuso fue investida con los votos de PP (30), Ciudadanos (26) y Vox (12), gobernó en coalición con Ciudadanos y Vox le dio apoyo sin entrar en el Gobierno. Tras las elecciones de mayo de 2021 el PP subió a 65 escaños, sin llegar a la mayoría absoluta (69), y Ciudadanos desapareció, así que desde entonces dependía solo de Vox. La mayoría absoluta llegó en mayo de 2023.",
+    "explicacion": "En agosto de 2019 Ayuso fue investida con 68 votos (PP, Ciudadanos y Vox) y gobernó en coalición con Ciudadanos, con Vox fuera del Gobierno. Tras las elecciones del 4 de mayo de 2021 el PP tuvo 65 escaños, cuatro menos que la mayoría absoluta (69), Ciudadanos se quedó sin representación y Ayuso fue investida con los votos del PP (65) y Vox (12), de modo que desde entonces dependía solo de Vox. La mayoría absoluta llegó el 28 de mayo de 2023: 70 de 135 escaños según el acta de la Junta Electoral Provincial de Madrid.",
     "confianza": "alta",
     "fuentes": [
-      {"titulo": "Deia (2019): Ayuso es investida presidenta de Madrid con los votos de PP, Cs y Vox", "url": "https://www.deia.eus/actualidad/2019/08/14/isabel-diaz-ayuso-investida-presidenta-4763292.amp.html"},
-      {"titulo": "Orain (04/05/2021): Ayuso logra una contundente victoria y gobernará con el apoyo de Vox", "url": "https://orain.eus/es/politica/2021/05/04/resultados-elecciones-madrid-4-mayo-2021-victoria-pp/"},
-      {"titulo": "Maldita.es (29/05/2023): Resultados Comunidad de Madrid, Ayuso logra la mayoría absoluta", "url": "https://maldita.es/malditodato/20230529/resultados-comunidad-madrid/"}
+      {
+        "titulo": "Diario de León (15/08/2019): Ayuso logra su investidura tras prometer que cumplirá con Vox",
+        "url": "https://www.diariodeleon.es/nacional/190815/425609/ayuso-logra-investidura-prometer-cumplira-vox.html"
+      },
+      {
+        "titulo": "Orain (04/05/2021): Ayuso logra una contundente victoria y gobernará con el apoyo de Vox",
+        "url": "https://orain.eus/es/politica/2021/05/04/resultados-elecciones-madrid-4-mayo-2021-victoria-pp/"
+      },
+      {
+        "titulo": "The Objective (18/06/2021): Ayuso es investida presidenta de Madrid con los votos de PP y Vox",
+        "url": "https://theobjective.com/espana/2021-06-18/ayuso-es-investida-presidenta-de-madrid-con-los-votos-de-pp-y-vox/"
+      },
+      {
+        "titulo": "Junta Electoral Provincial de Madrid (02/06/2023): Elecciones a la Asamblea de Madrid 2023, datos definitivos",
+        "url": "https://elecciones.comunidad.madrid/sites/default/files/total-madrid.pdf"
+      }
     ]
   },
   {
@@ -65,12 +118,29 @@
     "cita": "Ayuso ha ganado como herida absoluta en Madrid y yo he dicho, oye, una vez que has ganado como herida absoluta, en mi opinión, tienes que ser la presidenta del partido",
     "afirmacion": "Ayuso ganó con mayoría absoluta en Madrid y, a partir de ese momento, Feijóo defendió que fuese presidenta del PP de Madrid.",
     "veredicto": "enganoso",
-    "explicacion": "Ayuso logró la mayoría absoluta el 28 de mayo de 2023, pero ya era presidenta del PP de Madrid desde el congreso del 21 de mayo de 2022 (99,12 % de los votos, con Feijóo presente), un año antes y sin mayoría absoluta (65 escaños de 136 en 2021). La secuencia que plantea Feijóo, primero mayoría absoluta y luego presidencia del partido, no se corresponde con los hechos, y no he localizado declaraciones suyas que condicionasen esa presidencia a la mayoría absoluta.",
+    "explicacion": "Ayuso ya era presidenta del PP de Madrid desde el congreso extraordinario del 20-21 de mayo de 2022 (99,12 % de los votos de los compromisarios, con Feijóo presente), un año antes de la mayoría absoluta del 28 de mayo de 2023 (70 de 135 escaños). En marzo de 2022, según fuentes del entorno de Ayuso, Feijóo ya prometía un congreso rápido para proclamarla, sin condicionarlo a resultados electorales. La secuencia que cuenta, primero mayoría absoluta y después presidencia del partido, no coincide con los hechos; lo que opinara antes de 2022 sobre sus méritos electorales no consta.",
     "confianza": "media",
     "fuentes": [
-      {"titulo": "The Objective (21/05/2022): Feijóo arropa a Ayuso en el congreso del PP de Madrid", "url": "https://theobjective.com/espana/2022-05-21/feijoo-arropa-a-ayuso-en-el-congreso-del-pp-de-madrid-isabel-es-mas-libre-es-la-presidenta-que-madrid-necesita/"},
-      {"titulo": "Maldita.es (29/05/2023): Ayuso logra la mayoría absoluta", "url": "https://maldita.es/malditodato/20230529/resultados-comunidad-madrid/"},
-      {"titulo": "Orain (04/05/2021): resultados de las elecciones de Madrid", "url": "https://orain.eus/es/politica/2021/05/04/resultados-elecciones-madrid-4-mayo-2021-victoria-pp/"}
+      {
+        "titulo": "The Objective (21/05/2022): Feijóo arropa a Ayuso en el congreso del PP de Madrid",
+        "url": "https://theobjective.com/espana/2022-05-21/feijoo-arropa-a-ayuso-en-el-congreso-del-pp-de-madrid-isabel-es-mas-libre-es-la-presidenta-que-madrid-necesita/"
+      },
+      {
+        "titulo": "El Español (21/05/2022): crónica del congreso del PP de Madrid con Feijóo y Ayuso",
+        "url": "https://www.elespanol.com/espana/20220521/congreso-pp-madrid-alberto-nunez-feijoo-isabel/674282567_10.html"
+      },
+      {
+        "titulo": "Vozpópuli (16/03/2022): crónica sobre Feijóo, Ayuso y el congreso del PP de Madrid",
+        "url": "https://www.vozpopuli.com/espana/feijoo-ayuso-madrid.html"
+      },
+      {
+        "titulo": "Junta Electoral Provincial de Madrid (02/06/2023): Elecciones a la Asamblea de Madrid 2023, datos definitivos",
+        "url": "https://elecciones.comunidad.madrid/sites/default/files/total-madrid.pdf"
+      },
+      {
+        "titulo": "Orain (04/05/2021): Ayuso logra una contundente victoria y gobernará con el apoyo de Vox",
+        "url": "https://orain.eus/es/politica/2021/05/04/resultados-elecciones-madrid-4-mayo-2021-victoria-pp/"
+      }
     ]
   },
   {
@@ -78,12 +148,33 @@
     "cita": "la comunidad adquiere un inmueble para provisionalmente ser la sede de la zona de presidencia",
     "afirmacion": "La Comunidad de Madrid ha adquirido un inmueble para que sea sede provisional de la Presidencia mientras se reforman sus instalaciones.",
     "veredicto": "verdadero",
-    "explicacion": "La empresa pública Planifica Madrid compró en abril de 2026 un ático de 485 m² en Chamberí como oficina temporal mientras se rehabilita la Real Casa de Correos. El expediente publicado por la Comunidad cifra la compra en 6,3 millones de euros (la cifra de 6,7 millones que cita Wild corresponde al precio de salida aproximado del anuncio); Feijóo no afirma el precio, solo dice que no lo discute.",
-    "confianza": "alta",
+    "explicacion": "Planifica Madrid, empresa pública de la Comunidad, compró el 14 de abril de 2026 un ático de 485 m² en Chamberí, que según El País costó 6,3 millones. El 29 de julio de 2026 Ayuso explicó que se usaría de forma temporal mientras se reforma la segunda planta de la Real Casa de Correos, y el consejero García Martín lo vinculó a esas obras el 31 de julio. La Comunidad anunció después su venta, y su expediente describe el uso como espacio institucional con zona de trabajo, descanso y alojamiento ocasional, con apoyo a las dependencias durante las obras. Los 6,7 millones de la pregunta de Wild no coinciden con lo pagado (el anuncio pedía unos 6,6) y Feijóo dice que no entra en el precio.",
+    "confianza": "media",
     "fuentes": [
-      {"titulo": "Ara: El Gobierno de Ayuso pagó 6,3 millones por el ático de lujo", "url": "https://es.ara.cat/politica/gobierno-ayuso-pago-6-3-millones-atico-lujo-madrid_1_5817231.html"},
-      {"titulo": "Menorca.info (29/07/2026): El PSOE pide explicaciones por la compra de un ático en Chamberí", "url": "https://www.menorca.info/actualidad/nacional/2026/07/29/2679311/psoe-pide-explicaciones-por-compra-atico-chamberi-para-oficina-temporal-ayuso.html"},
-      {"titulo": "Vozpópuli: La Comunidad publica el expediente del ático", "url": "https://www.vozpopuli.com/espana/madrid/la-comunidad-de-madrid-publica-el-expediente-del-atico-avala-su-uso-como-despacho-y-alojamiento-ocasional.html"}
+      {
+        "titulo": "EFE vía Menorca.info (29/07/2026): El PSOE pide explicaciones por la compra de un ático en Chamberí",
+        "url": "https://www.menorca.info/actualidad/nacional/2026/07/29/2679311/psoe-pide-explicaciones-por-compra-atico-chamberi-para-oficina-temporal-ayuso.html"
+      },
+      {
+        "titulo": "Ara (05/08/2026): El Gobierno de Ayuso pagó 6,3 millones por el ático de lujo (con datos de El País)",
+        "url": "https://es.ara.cat/politica/gobierno-ayuso-pago-6-3-millones-atico-lujo-madrid_1_5817231.html"
+      },
+      {
+        "titulo": "Europa Press vía Menorca.info (31/07/2026): El Gobierno de Ayuso defiende que con el ático se actuó con transparencia",
+        "url": "https://www.menorca.info/actualidad/nacional/2026/07/31/2681031/gobierno-ayuso-defiende-con-atico-chamberi-actuo-transparencia-siente-pleno-apoyo-del-pp.html"
+      },
+      {
+        "titulo": "Vozpópuli (17/09/2026): La Comunidad publica el expediente del ático",
+        "url": "https://www.vozpopuli.com/espana/madrid/la-comunidad-de-madrid-publica-el-expediente-del-atico-avala-su-uso-como-despacho-y-alojamiento-ocasional.html"
+      },
+      {
+        "titulo": "Vozpópuli: El Gobierno de Ayuso venderá el ático comprado como sede y dedicará el dinero a la reconstrucción tras los incendios",
+        "url": "https://www.vozpopuli.com/espana/madrid/el-gobierno-de-ayuso-vendera-el-atico-comprado-como-sede-y-dedicara-el-dinero-a-la-reconstruccion-tras-los-incendios.html"
+      },
+      {
+        "titulo": "Comunidad de Madrid, Portal de Transparencia: Planifica Madrid (enlace al expediente del inmueble de Martínez Campos, 35)",
+        "url": "https://www.comunidad.madrid/transparencia/unidad-organizativa-responsable/planifica-madrid-proyectos-y-obras-sa"
+      }
     ]
   },
   {
@@ -91,11 +182,25 @@
     "cita": "creemos que sí se puede utilizar como oficina",
     "afirmacion": "La Comunidad de Madrid sostiene que el inmueble adquirido sí puede utilizarse como oficina.",
     "veredicto": "mayormente_verdadero",
-    "explicacion": "La Comunidad defiende que el carácter residencial del inmueble no impide destinarlo en parte a despacho y cita informes de la Abogacía General y de Patrimonio (uso distinto del de vivienda); su propio expediente matiza que no puede convertirse en oficina pero sí en despacho. La oposición y elDiario.es sostienen que la norma urbanística municipal lo prohíbe en una novena planta residencial, y no consta resolución definitiva, de modo que la cuestión sigue disputada.",
+    "explicacion": "Al estallar la polémica la Comunidad habló de una «oficina temporal» (EFE, 29 de julio de 2026) y Ayuso lo matizó después como espacio para «reuniones profesionales». Su expediente, publicado en septiembre, dice que el inmueble no permite convertirlo en oficina pero sí en despacho, con informes de Patrimonio y de la Abogacía General sobre un «uso distinto del de vivienda». elDiario.es sostiene que la norma urbanística municipal impide oficinas por encima de la planta baja y no consta resolución definitiva, así que Feijóo traslada la postura de la Comunidad con algo de imprecisión (despacho, no oficina).",
     "confianza": "media",
     "fuentes": [
-      {"titulo": "Vozpópuli: La Comunidad publica el expediente del ático y avala su uso como despacho", "url": "https://www.vozpopuli.com/espana/madrid/la-comunidad-de-madrid-publica-el-expediente-del-atico-avala-su-uso-como-despacho-y-alojamiento-ocasional.html"},
-      {"titulo": "elDiario.es: El ático comprado por el Gobierno de Ayuso, para reuniones, no puede ser oficina", "url": "https://www.eldiario.es/madrid/somos/atico-comprado-gobierno-ayuso-reuniones-no-oficina-destinarse-vivienda_1_13414404.html"}
+      {
+        "titulo": "Vozpópuli (17/09/2026): La Comunidad publica el expediente del ático y avala su uso como despacho",
+        "url": "https://www.vozpopuli.com/espana/madrid/la-comunidad-de-madrid-publica-el-expediente-del-atico-avala-su-uso-como-despacho-y-alojamiento-ocasional.html"
+      },
+      {
+        "titulo": "elDiario.es (29/07/2026): El ático comprado por el Gobierno de Ayuso, para reuniones, no puede ser oficina",
+        "url": "https://www.eldiario.es/madrid/somos/atico-comprado-gobierno-ayuso-reuniones-no-oficina-destinarse-vivienda_1_13414404.html"
+      },
+      {
+        "titulo": "EFE vía Menorca.info (29/07/2026): El PSOE pide explicaciones por la compra de un ático en Chamberí",
+        "url": "https://www.menorca.info/actualidad/nacional/2026/07/29/2679311/psoe-pide-explicaciones-por-compra-atico-chamberi-para-oficina-temporal-ayuso.html"
+      },
+      {
+        "titulo": "Vozpópuli: El Gobierno de Ayuso venderá el ático comprado como sede y dedicará el dinero a la reconstrucción tras los incendios",
+        "url": "https://www.vozpopuli.com/espana/madrid/el-gobierno-de-ayuso-vendera-el-atico-comprado-como-sede-y-dedicara-el-dinero-a-la-reconstruccion-tras-los-incendios.html"
+      }
     ]
   },
   {
@@ -103,11 +208,25 @@
     "cita": "Yo viví en una residencia oficial 13 años, que no hice yo",
     "afirmacion": "Feijóo vivió 13 años en la residencia oficial del presidente de la Xunta (Monte Pío), que no construyó él.",
     "veredicto": "enganoso",
-    "explicacion": "Fue presidente 13 años (2009-2022) y la residencia, encargada bajo Manuel Fraga, no la construyó él. Pero elDiario.es (2022) recoge que se instaló al llegar al poder y que después dejó de frecuentarla y no la ocupó durante todos sus mandatos, pasando a vivir en su domicilio de A Coruña; por tanto «viví 13 años» exagera el tiempo real de residencia.",
+    "explicacion": "Feijóo presidió la Xunta de abril de 2009 a mayo de 2022 y la residencia de Monte Pío la encargó Manuel Fraga (obras de 2001-2002), no él. Pero El Correo Gallego informó el 17 de abril de 2009 de que se mudaría allí, e Infobae (2024) y elDiario.es (2022) cuentan que dejó de vivir en ella cuando se trasladó a su casa de A Coruña y que no la frecuentó en los últimos años de mandato. «Viví 13 años» exagera el tiempo que residió, que las fuentes no concretan.",
     "confianza": "media",
     "fuentes": [
-      {"titulo": "elDiario.es (30/05/2022): La «Moncloa gallega», residencia presidencial de 10 millones", "url": "https://www.eldiario.es/galicia/moncloa-gallega-residencia-presidencial-10-millones-euros-camino-casa-fantasma_1_9031243.html"},
-      {"titulo": "Alberto Núñez Feijóo (Wikipedia)", "url": "https://es.wikipedia.org/wiki/Alberto_Núñez_Feijóo"}
+      {
+        "titulo": "elDiario.es (30/05/2022): La «Moncloa gallega», residencia presidencial de 10 millones",
+        "url": "https://www.eldiario.es/galicia/moncloa-gallega-residencia-presidencial-10-millones-euros-camino-casa-fantasma_1_9031243.html"
+      },
+      {
+        "titulo": "Infobae (14/02/2024): La «Moncloa gallega»: una mansión ideada por Manuel Fraga para dignificar la Xunta y que Feijóo y Rueda abocaron al desuso",
+        "url": "https://www.infobae.com/espana/2024/02/14/la-moncloa-gallega-una-mansion-ideada-por-manuel-fraga-para-dignificar-la-xunta-y-que-feijoo-y-rueda-abocaron-al-desuso/"
+      },
+      {
+        "titulo": "El Correo Gallego (17/04/2009): Feijóo fijará su residencia habitual en Monte Pío",
+        "url": "https://www.elcorreogallego.es/hemeroteca/feijoo-fijara-residencia-habitual-monte-pio-IBCG417285"
+      },
+      {
+        "titulo": "Xunta de Galicia: Todos los presidentes",
+        "url": "https://www.xunta.gal/todos-os-presidentes"
+      }
     ]
   },
   {
@@ -115,23 +234,47 @@
     "cita": "Vivió también mi antecesor, el presidente socialista que tuvo Galicia durante cuatro años",
     "afirmacion": "Emilio Pérez Touriño, presidente socialista de la Xunta y predecesor de Feijóo, vivió también en la residencia oficial y gobernó cuatro años.",
     "veredicto": "mayormente_verdadero",
-    "explicacion": "Touriño presidió la Xunta desde 2005 hasta abril de 2009 (unos tres años y ocho meses, redondeable a cuatro) y, según elDiario.es, se instaló en la residencia oficial al llegar al cargo, aunque criticó su tamaño «desmedido».",
-    "confianza": "media",
+    "explicacion": "Según la web de la Xunta, Emilio Pérez Touriño presidió el Gobierno gallego de 2005 a 2009, una legislatura que se redondea a cuatro años. elDiario.es cuenta que, al suceder a Fraga, se instaló en la residencia oficial de Monte Pío aunque criticó su tamaño «desmedido», e Infobae lo sitúa allí tras Fraga y antes de Feijóo.",
+    "confianza": "alta",
     "fuentes": [
-      {"titulo": "elDiario.es (30/05/2022): La «Moncloa gallega»", "url": "https://www.eldiario.es/galicia/moncloa-gallega-residencia-presidencial-10-millones-euros-camino-casa-fantasma_1_9031243.html"},
-      {"titulo": "Alberto Núñez Feijóo (Wikipedia): cronología de cargos", "url": "https://es.wikipedia.org/wiki/Alberto_Núñez_Feijóo"}
+      {
+        "titulo": "Xunta de Galicia: Todos los presidentes",
+        "url": "https://www.xunta.gal/todos-os-presidentes"
+      },
+      {
+        "titulo": "elDiario.es (30/05/2022): La «Moncloa gallega», residencia presidencial de 10 millones",
+        "url": "https://www.eldiario.es/galicia/moncloa-gallega-residencia-presidencial-10-millones-euros-camino-casa-fantasma_1_9031243.html"
+      },
+      {
+        "titulo": "Infobae (14/02/2024): La «Moncloa gallega»: una mansión ideada por Manuel Fraga para dignificar la Xunta y que Feijóo y Rueda abocaron al desuso",
+        "url": "https://www.infobae.com/espana/2024/02/14/la-moncloa-gallega-una-mansion-ideada-por-manuel-fraga-para-dignificar-la-xunta-y-que-feijoo-y-rueda-abocaron-al-desuso/"
+      }
     ]
   },
   {
     "minuto": "1:17:07",
     "cita": "en el momento en el que se hizo, que fue en el año 2000, no estábamos mal",
     "afirmacion": "La residencia oficial del presidente de la Xunta se construyó en el año 2000.",
-    "veredicto": "no_verificable",
-    "explicacion": "Las fuentes consultadas confirman que la residencia se encargó con Fraga y que costó entre 7 y 10 millones (Touriño estimó unos 7), pero no dan el año de construcción. Solo consta que el contrato de urbanización del parque de Monte Pío se adjudicó en julio de 2001 y que Touriño la ocupó a partir de 2005, por lo que el año 2000 puede ser, como mucho, el del encargo o inicio del proyecto. Lo de que «costó mucho dinero» lo dice Wild, no Feijóo.",
-    "confianza": "baja",
+    "veredicto": "mayormente_verdadero",
+    "explicacion": "La residencia de Monte Pío no es del año 2000 exacto: el DOG del 24 de septiembre de 2001 publica la adjudicación de la urbanización del parque (julio de 2001), Infobae sitúa la adjudicación de la obra en agosto de 2001 y a Fraga viviendo allí en abril de 2002, y la revista Arquitectura (COAM, 2006) fecha el edificio en 2002. Feijóo se equivoca por uno o dos años, una imprecisión razonable en lenguaje oral. Que «ha costado mucho dinero» lo dice Wild; su valoración de que entonces «no estábamos mal» es una opinión que no se evalúa.",
+    "confianza": "media",
     "fuentes": [
-      {"titulo": "elDiario.es (30/05/2022): La «Moncloa gallega»", "url": "https://www.eldiario.es/galicia/moncloa-gallega-residencia-presidencial-10-millones-euros-camino-casa-fantasma_1_9031243.html"},
-      {"titulo": "DOG nº 185 (24/09/2001): adjudicación de la urbanización del predio de Monte Pío", "url": "https://www.xunta.gal/dog/Publicados/2001/20010924/AnuncioF2B2_gl.html"}
+      {
+        "titulo": "DOG nº 185 (24/09/2001): adjudicación de la urbanización del predio de Monte Pío",
+        "url": "https://www.xunta.gal/dog/Publicados/2001/20010924/AnuncioF2B2_gl.html"
+      },
+      {
+        "titulo": "Infobae (14/02/2024): La «Moncloa gallega»: una mansión ideada por Manuel Fraga para dignificar la Xunta y que Feijóo y Rueda abocaron al desuso",
+        "url": "https://www.infobae.com/espana/2024/02/14/la-moncloa-gallega-una-mansion-ideada-por-manuel-fraga-para-dignificar-la-xunta-y-que-feijoo-y-rueda-abocaron-al-desuso/"
+      },
+      {
+        "titulo": "Revista Arquitectura nº 344 (COAM, 2006, pp. 22-27): Presidencia de la Xunta de Galicia [2002], Manuel Gallego Jorreto",
+        "url": "https://www.coam.org/media/Default Files/fundacion/biblioteca/revista-arquitectura-100/2000-2008/docs/revista-articulos/revista-arquitectura-2006-n344-pag22-27.pdf"
+      },
+      {
+        "titulo": "elDiario.es (30/05/2022): La «Moncloa gallega», residencia presidencial de 10 millones",
+        "url": "https://www.eldiario.es/galicia/moncloa-gallega-residencia-presidencial-10-millones-euros-camino-casa-fantasma_1_9031243.html"
+      }
     ]
   },
   {
@@ -139,21 +282,43 @@
     "cita": "pues mira yo no sé inglés pero sé gobernar",
     "afirmacion": "Feijóo no sabe inglés.",
     "veredicto": "verdadero",
-    "explicacion": "En El Hormiguero (junio de 2026) admitió que no habla inglés, que su nivel es «mal» y que no lo practica porque el móvil «ya me lo traduce directamente». La segunda parte de la frase («sé gobernar») es una valoración propia.",
+    "explicacion": "En El Hormiguero (17 de junio de 2026) Feijóo contestó «mal» cuando Pablo Motos le preguntó por su inglés, y dijo que no lo practica porque «ahora esto ya me lo traduce directamente» el móvil. En la entrevista con Wild admite que no ha hecho esfuerzos por aprenderlo y que no es su caso saberlo con fluidez. «Sé gobernar» es una valoración propia, no un dato.",
     "confianza": "alta",
     "fuentes": [
-      {"titulo": "Ara (18/06/2026): Feijóo renuncia al inglés y confía en el móvil", "url": "https://es.ara.cat/politica/feijoo-renuncia-ingles-confia-movil-traduce-directamente_1_5773294.html"}
+      {
+        "titulo": "Ara (18/06/2026): Feijóo renuncia al inglés y confía en el móvil",
+        "url": "https://es.ara.cat/politica/feijoo-renuncia-ingles-confia-movil-traduce-directamente_1_5773294.html"
+      },
+      {
+        "titulo": "elDiario.es (18/06/2026): Feijóo culpa a la «escuela rural» de su mal inglés",
+        "url": "https://www.eldiario.es/politica/feijoo-culpa-escuela-rural-mal-ingles_1_13313786.html"
+      },
+      {
+        "titulo": "El Español (13/11/2026): Feijóo a Jordi Wild entre bromas y veras",
+        "url": "https://www.elespanol.com/espana/politica/20261113/feijoo-gusta-jordi-wild-ingles-importante-admito-no-hecho-esfuerzos-insulto-ningun-idioma/1003744456829_0.html"
+      }
     ]
   },
   {
     "minuto": "1:18:08",
     "cita": "yo he sido de la primera generación de la EGB y del BUP",
     "afirmacion": "Feijóo pertenece a la primera generación que cursó la EGB y el BUP.",
-    "veredicto": "no_verificable",
-    "explicacion": "La Ley General de Educación de 1970 creó la EGB (ocho cursos), pero en las fuentes consultadas no he podido confirmar el año de implantación del BUP ni qué cohortes cuentan como «primera generación»; sin la fecha de nacimiento y el calendario de implantación contrastados no se puede comprobar la afirmación, que es además una autodescripción imprecisa.",
-    "confianza": "baja",
+    "veredicto": "mayormente_verdadero",
+    "explicacion": "Feijóo nació en septiembre de 1961 (web de la Xunta). Los cuatro primeros cursos de EGB se implantaron en 1970-71, cuando tenía 9 años, y el primer curso de BUP se implantó con carácter general en 1975-76, según el BOE del 18 de abril de 1975, cuando cumplía 14. Por edad entra en las primeras cohortes de ambos ciclos; «primera generación» es una expresión laxa, y la deducción es de esta revisión, no de una fuente que lo diga de él.",
+    "confianza": "media",
     "fuentes": [
-      {"titulo": "Educación General Básica (Wikipedia)", "url": "https://es.wikipedia.org/wiki/Educación_General_Básica"}
+      {
+        "titulo": "Xunta de Galicia: Los anteriores presidentes (Feijóo, nacido en septiembre de 1961)",
+        "url": "https://www.xunta.gal/es/os-anteriores-presidentes"
+      },
+      {
+        "titulo": "BOE (copia archivada en Internet Archive): Orden de 22 de marzo de 1975, plan de estudios del Bachillerato (BOE núm. 93, 18/04/1975)",
+        "url": "https://web.archive.org/web/20240519175708/https://www.boe.es/boe/dias/1975/04/18/pdfs/A08049-08068.pdf"
+      },
+      {
+        "titulo": "Universitat Rovira i Virgili, Diccionario de historia de la enseñanza: Ley General de Educación de 1970",
+        "url": "https://www.grelinap.recerca.urv.cat/ca/projectes/diccionario-historia-ensenanza-frances-espana/entradas/130/ley-general-de-educacion-de-1970"
+      }
     ]
   },
   {
@@ -161,22 +326,35 @@
     "cita": "decía Felipe González hace poco, no porque la frase sea suya, pero decía que uno puede ser tonto en varios idiomas",
     "afirmacion": "Felipe González dijo hace poco que uno puede ser tonto en varios idiomas.",
     "veredicto": "no_verificable",
-    "explicacion": "No he encontrado ninguna fuente que atribuya esa frase a González. El propio Feijóo se cubre diciendo que la frase quizá no sea suya y que no está seguro de que sea del expresidente. En 2026 González sí ha hecho declaraciones sobre Trump («no hay nada peor que un tonto con poder»), pero no sobre idiomas.",
+    "explicacion": "Feijóo dice que González «decía hace poco» que uno puede ser tonto en varios idiomas, pero él mismo añade que no se apropia de la frase y que quizá no sea suya. No he encontrado ninguna declaración reciente de González con esa frase; la expresión «es posible ser tonto en varios idiomas» aparece sin atribuir en un artículo de Confilegal de 2016. Sin una cita de González localizable, no se puede confirmar ni negar.",
     "confianza": "baja",
     "fuentes": [
-      {"titulo": "Ara (18/06/2026): Feijóo renuncia al inglés (contexto de la polémica)", "url": "https://es.ara.cat/politica/feijoo-renuncia-ingles-confia-movil-traduce-directamente_1_5773294.html"}
+      {
+        "titulo": "El Español (13/11/2026): Feijóo a Jordi Wild entre bromas y veras",
+        "url": "https://www.elespanol.com/espana/politica/20261113/feijoo-gusta-jordi-wild-ingles-importante-admito-no-hecho-esfuerzos-insulto-ningun-idioma/1003744456829_0.html"
+      },
+      {
+        "titulo": "Confilegal (03/11/2016): Legal Management Forum, innovación, humor y el «paletismo» del inglés",
+        "url": "https://confilegal.com/20161103-legal-management-forum-innovacion-humor-paletismo-del-ingles/"
+      }
     ]
   },
   {
     "minuto": "1:19:09",
     "cita": "nuestros colegas polacos están con la frontera con Rusia",
-    "afirmacion": "Polonia tiene frontera con Rusia, en un contexto de enorme tensión, y algunos países europeos se plantean volver al servicio militar obligatorio.",
+    "afirmacion": "Polonia tiene frontera con Rusia, en una situación de enorme tensión.",
     "veredicto": "verdadero",
-    "explicacion": "Polonia limita con el óblast ruso de Kaliningrado (además de con Bielorrusia). La premisa de Wild, que varios países europeos recuperan o refuerzan el servicio militar, también es cierta: Lituania (2015), Suecia (2017) y Letonia (2023) lo reintrodujeron, Croacia prepara su vuelta y Alemania aplica desde el 1 de enero de 2026 un modelo mixto con cuestionario obligatorio; Polonia apuesta por instrucción militar, no por conscripción plena.",
+    "explicacion": "Polonia limita con el óblast ruso de Kaliningrado. La tensión que dice Feijóo se ve en la prensa de las semanas previas: el 4 de noviembre de 2026 el jefe de la OTAN en Europa advirtió a Polonia de posibles provocaciones rusas en su frontera nororiental y las autoridades polacas reforzaron la zona, y El Español recoge desde octubre el cierre de la mayoría de pasos fronterizos con Rusia, un vallado de más de 200 km y amenazas cruzadas sobre Kaliningrado.",
     "confianza": "alta",
     "fuentes": [
-      {"titulo": "Polonia (Wikipedia): fronteras", "url": "https://es.wikipedia.org/wiki/Polonia"},
-      {"titulo": "Hola (14/04/2026): qué hay de cierto en la vuelta de la mili y los modelos europeos", "url": "https://www.hola.com/al-dia/20260414895243/vuelta-mili-espana-sueldo-2600-euros-europa-modelo-alemania/"}
+      {
+        "titulo": "Stars and Stripes (04/11/2026): la OTAN advierte a Polonia de posibles provocaciones rusas cerca de Kaliningrado",
+        "url": "https://www.stripes.com/theaters/europe/2026-11-04/poland-russia-border-threat-eucom-23360076.html"
+      },
+      {
+        "titulo": "El Español (03/10/2026): Kaliningrado expone el punto ciego de la OTAN frente a Rusia",
+        "url": "https://www.elespanol.com/mundo/20261003/kaliningrado-expone-punto-ciego-otan-frente-rusia-cuestion-tiempo-bajas-suelo-ue/1003744405468_0.html"
+      }
     ]
   },
   {
@@ -184,10 +362,17 @@
     "cita": "Ucrania todavía no es un país de la Unión Europea",
     "afirmacion": "Ucrania todavía no es miembro de la Unión Europea.",
     "veredicto": "verdadero",
-    "explicacion": "A 3 de noviembre de 2026 Ucrania está en negociaciones de adhesión (cuatro de seis grupos temáticos abiertos) pero no es Estado miembro; Kyiv aspira a cerrar las negociaciones en 2027 o 2028.",
+    "explicacion": "Ucrania negocia su adhesión a la UE, pero no es Estado miembro. El 13 de octubre de 2026 la UE abrió con Kiev los grupos de mercado interior y de competitividad, que se suman al de fundamentales (junio) y al de relaciones exteriores (julio): cuatro de seis. Kiev aspira a cerrar las negociaciones en 2027 o 2028 (Euronews, 3 de noviembre de 2026).",
     "confianza": "alta",
     "fuentes": [
-      {"titulo": "Euronews (03/11/2026): Ucrania asegura que Hungría no bloquea las negociaciones de adhesión", "url": "https://es.euronews.com/2026/11/03/ucrania-asegura-que-hungria-no-bloquea-las-negociaciones-de-adhesion-a-la-union-europea"}
+      {
+        "titulo": "Comisión Europea (13/10/2026): EU opens accession negotiations with Ukraine on internal market, competitiveness and inclusive growth",
+        "url": "https://enlargement.ec.europa.eu/news/eu-opens-accession-negotiations-ukraine-internal-market-competitiveness-and-inclusive-growth-2026-10-13_en"
+      },
+      {
+        "titulo": "Euronews (03/11/2026): Ucrania asegura que Hungría no bloquea las negociaciones de adhesión",
+        "url": "https://es.euronews.com/2026/11/03/ucrania-asegura-que-hungria-no-bloquea-las-negociaciones-de-adhesion-a-la-union-europea"
+      }
     ]
   },
   {
@@ -195,11 +380,17 @@
     "cita": "Pues acaba de llevarse un buen varapalo",
     "afirmacion": "Donald Trump acaba de sufrir un duro revés electoral: los demócratas le han ganado ampliamente en las últimas elecciones (midterms del 3 de noviembre de 2026).",
     "veredicto": "verdadero",
-    "explicacion": "En las elecciones de mitad de mandato del 3 de noviembre de 2026 los demócratas se hicieron con el control de ambas cámaras del Congreso (en el recuento provisional, Senado 54-44 según NBC), y la prensa estadounidense lo interpreta como un rechazo a la agenda de Trump. Que las midterms no son una votación sobre Trump es matiz, no desmiente la afirmación.",
-    "confianza": "alta",
+    "explicacion": "En las elecciones de mitad de mandato del 3 de noviembre de 2026 los demócratas ganaron el control de ambas cámaras del Congreso, según la proyección de NBC News, que habla de una posible mayoría demócrata en la Cámara como la mayor en casi dos décadas y de la aprobación de Trump más baja en un día electoral en casi veinte años. Washington Examiner, de línea conservadora, lo describe como un rechazo a su agenda. Trump no estaba en la papeleta, pero eso es matiz. Los resultados aún no están certificados por fuentes oficiales.",
+    "confianza": "media",
     "fuentes": [
-      {"titulo": "Washington Examiner: Takeaways from the 2026 midterm elections", "url": "https://www.washingtonexaminer.com/news/campaigns/4791815/takeaways-2026-midterm-elections/"},
-      {"titulo": "WDBO: Election 2026, Democrats capture both chambers of Congress", "url": "https://www.wdbo.com/news/trending/election-2026-democrats-capture-both-houses-congress/5ILOWTVABVDPZFYP7VBBCX4EWE/?outputType=amp"}
+      {
+        "titulo": "NBC New York: Decision 2026, Democrats control of Congress",
+        "url": "https://www.nbcnewyork.com/elections/democrats-control-of-congress/6567437/"
+      },
+      {
+        "titulo": "Washington Examiner: Takeaways from the 2026 midterm elections",
+        "url": "https://www.washingtonexaminer.com/news/campaigns/4791815/takeaways-2026-midterm-elections/"
+      }
     ]
   },
   {
@@ -207,11 +398,25 @@
     "cita": "construir un partido político, él con otros, y en 10 años, 8 años, convertirse en la tercera fuerza política del país",
     "afirmacion": "Abascal, junto a otros, construyó un partido (Vox) que en 8-10 años se convirtió en la tercera fuerza política de España.",
     "veredicto": "mayormente_verdadero",
-    "explicacion": "Vox se registró como partido en diciembre de 2013, entró en un parlamento autonómico en las andaluzas de diciembre de 2018 (12 escaños) y fue la tercera fuerza del Congreso en noviembre de 2019 (52 diputados) y en 2023 (33 diputados, frente a 31 de Sumar). El plazo real hasta ser tercera fuerza nacional fue de unos seis años desde la fundación, algo menos de los 8-10 que dice. Que «muy pocos lo han logrado» es valoración.",
+    "explicacion": "Vox se registró como partido el 17 de diciembre de 2013 y Abascal ayudó a fundarlo. En las generales del 10 de noviembre de 2019 logró 52 escaños (BOE del 2 de diciembre de 2019) y fue la tercera fuerza, y en 2023 volvió a serlo con 33 diputados frente a los 31 de Sumar. Llegó a tercera fuerza en unos seis años desde su fundación, menos de los «8 o 10» que dice Feijóo; el resto del argumento es valoración.",
     "confianza": "alta",
     "fuentes": [
-      {"titulo": "Vox (partido político), Wikipedia", "url": "https://es.wikipedia.org/wiki/Vox_(partido_político)"},
-      {"titulo": "Elecciones generales de España de 2023, Wikipedia", "url": "https://es.wikipedia.org/wiki/Elecciones_generales_de_España_de_2023"}
+      {
+        "titulo": "Junta Electoral Central (BOE núm. 289, 02/12/2019): Resultados de las elecciones generales de 10 de noviembre de 2019",
+        "url": "https://www.juntaelectoralcentral.es/cs/jec/documentos/Generales_2019-R_Resultados.pdf"
+      },
+      {
+        "titulo": "Orain (10/11/2019): El PSOE gana las elecciones, pero la extrema derecha ya es la tercera fuerza",
+        "url": "https://orain.eus/es/politica/elecciones/elecciones-generales/2019/11/10/resultados-elecciones-generales-10n-el-psoe-gana-derecha-sube/"
+      },
+      {
+        "titulo": "Orain (23/07/2023): Resultados de las elecciones generales al Congreso y Senado 2023",
+        "url": "https://orain.eus/es/politica/2023/07/23/resultados-elecciones-generales-al-congreso-y-senado-en-espana-2023/"
+      },
+      {
+        "titulo": "Valencia Plaza: Vox, diez años con Abascal a punto de iniciar nuevo mandato y con dirigentes históricos fuera",
+        "url": "https://valenciaplaza.com/valenciaplaza/vox-diez-anos-abascal-punto-iniciar-nuevo-mandato-dirigentes-historicos-fuera"
+      }
     ]
   },
   {
@@ -219,11 +424,21 @@
     "cita": "No tienes un solo concejal de Vox en Galicia. Tenías uno en un ayuntamiento de Avión, que es un pueblo de ahí de la provincia de Orense, y ya se pasó el PP",
     "afirmacion": "Vox no tiene ni un solo concejal en Galicia; tenía uno en el ayuntamiento de Avión (Ourense) que se pasó al PP; tampoco tiene alcaldes ni diputados en Galicia.",
     "veredicto": "mayormente_verdadero",
-    "explicacion": "Público (10/10/2026) informa de que, tras dimitir la concejala de Vox en Avión, único cargo institucional que tenía el partido en Galicia, Vox no tiene concejales, alcaldes ni diputados en la comunidad, y no logró escaños en el Parlamento gallego (2,19 % en 2023) ni en el Congreso por Galicia en 2023. Las fuentes dicen que la concejala dimitió, pero no confirman que pasara al PP.",
+    "explicacion": "Público (10/10/2026) recoge que, tras dimitir la concejala de Vox en Avión (Ourense), el partido no tiene ninguna representación institucional en Galicia; en 2023 solo obtuvo un concejal en toda la comunidad y en las autonómicas de febrero de 2024 sacó 34.045 votos y ningún escaño, según el DOG del 6 de marzo de 2024. Que el concejal «se pasó al PP» no está confirmado: las fuentes dicen que dimitió, y no he hallado ninguna que hable de un cambio de partido.",
     "confianza": "media",
     "fuentes": [
-      {"titulo": "Público (10/10/2026): El anzuelo ultra, por qué Vox no cala en Galicia", "url": "https://www.publico.es/politica/anzuelo-ultra-vox-cala-galicia.amp.html"},
-      {"titulo": "Público: Galicia consolida su territorio hostil a Vox", "url": "https://www.publico.es/politica/galicia-consolida-territorio-hostil-vox.html"}
+      {
+        "titulo": "Público (10/10/2026): El anzuelo ultra, por qué Vox no cala en Galicia",
+        "url": "https://www.publico.es/politica/anzuelo-ultra-vox-cala-galicia.amp.html"
+      },
+      {
+        "titulo": "Público (19/02/2024): Galicia consolida su territorio hostil a Vox",
+        "url": "https://www.publico.es/politica/galicia-consolida-territorio-hostil-vox.html"
+      },
+      {
+        "titulo": "DOG nº 47 (06/03/2024): Resultados y diputados proclamados electos en las elecciones al Parlamento de Galicia del 18 de febrero de 2024",
+        "url": "https://www.xunta.gal/dog/Publicados/2024/20240306/AnuncioG2453-050324-1_es.html"
+      }
     ]
   },
   {
@@ -231,11 +446,17 @@
     "cita": "cuando llegué en el año 2022 intenté entenderme con él, intenté respetarle como presidente del gobierno, esto fue en el mes de mayo",
     "afirmacion": "Feijóo llegó a la presidencia del PP en 2022 y su primer encuentro con Sánchez, de tono normal, fue en mayo de ese año.",
     "veredicto": "mayormente_verdadero",
-    "explicacion": "Fue proclamado presidente del PP el 2 de abril de 2022 en el congreso de Sevilla, y su primera reunión con Sánchez en La Moncloa fue el 7 de abril de 2022, no en mayo, y se saldó con tono cordial sin acuerdos de calado. El error de un mes no altera lo sustancial: hubo un primer contacto normal antes de las elecciones andaluzas de junio.",
+    "explicacion": "Feijóo pasó a presidir el PP a comienzos de abril de 2022 y su primera reunión con Sánchez en La Moncloa fue el 7 de abril de 2022, no en mayo, con tono cordial por ambas partes. En mayo la relación ya se había enfriado: el 11 de mayo Feijóo decía que el Gobierno había rechazado otra vez su oferta de pacto de Estado en seguridad y lo ligaba al cese de la directora del CNI. El mes erróneo es una imprecisión menor; que las cosas fueran «normales» es una valoración difícil de medir.",
     "confianza": "media",
     "fuentes": [
-      {"titulo": "NacióDigital (07/04/2022): Feijóo estrena cordialidad con Sánchez", "url": "https://naciodigital.cat/politica/feijoo-enceta-cordialitat-amb-sanchez-sobre-a-renovar-el-cgpj-pero-refreda-el-pacte-economic.html"},
-      {"titulo": "Alberto Núñez Feijóo (Wikipedia)", "url": "https://es.wikipedia.org/wiki/Alberto_Núñez_Feijóo"}
+      {
+        "titulo": "NacióDigital (07/04/2022): Feijóo estrena cordialidad con Sánchez",
+        "url": "https://naciodigital.cat/politica/feijoo-enceta-cordialitat-amb-sanchez-sobre-a-renovar-el-cgpj-pero-refreda-el-pacte-economic.html"
+      },
+      {
+        "titulo": "El Independiente (11/05/2022): El Gobierno rechaza el pacto de Estado de Feijóo sobre la OTAN y la seguridad",
+        "url": "https://www.elindependiente.com/espana/2022/05/11/el-gobierno-rechaza-el-pacto-de-estado-de-feijoo-sobre-la-otan-y-la-seguridad/amp/"
+      }
     ]
   },
   {
@@ -243,11 +464,17 @@
     "cita": "en junio hay elecciones andaluzas, pierde la mayoría absoluta, perdón, el PP consigue la mayoría absoluta, la primera vez en la historia",
     "afirmacion": "En las elecciones andaluzas de junio de 2022 el PP logró mayoría absoluta por primera vez en la historia.",
     "veredicto": "verdadero",
-    "explicacion": "El 19 de junio de 2022 el PP de Juanma Moreno obtuvo 58 de los 109 escaños (mayoría absoluta: 55), la primera mayoría absoluta del PP en Andalucía.",
+    "explicacion": "El 19 de junio de 2022 el PP de Juanma Moreno obtuvo 58 de los 109 escaños del Parlamento de Andalucía (mayoría absoluta: 55), según la relación de diputados proclamados que publicó el BOJA en julio de 2022. RTVC la presenta como la primera mayoría absoluta del PP en esa comunidad.",
     "confianza": "alta",
     "fuentes": [
-      {"titulo": "RTVC: El PP logra por primera vez una mayoría absoluta en Andalucía", "url": "https://rtvc.es/el-pp-logra-mayoria-absoluta-en-andalucia/"},
-      {"titulo": "Ara: El PP arrasa y obtiene la mayoría absoluta en Andalucía", "url": "https://es.ara.cat/politica/pp-arrasa-obtiene-mayoria-absoluta-andalucia_1_4409041.html"}
+      {
+        "titulo": "BOJA nº 132 (julio de 2022): Resultados generales y por circunscripciones de las elecciones al Parlamento de Andalucía del 19 de junio de 2022",
+        "url": "https://www.juntadeandalucia.es/boja/2022/132/1"
+      },
+      {
+        "titulo": "RTVC: El PP logra por primera vez una mayoría absoluta en Andalucía",
+        "url": "https://rtvc.es/el-pp-logra-mayoria-absoluta-en-andalucia/"
+      }
     ]
   },
   {
@@ -255,11 +482,21 @@
     "cita": "Salieron 11 ministros del gobierno de España a decir que el jefe de la oposición o era un ignorante o tenía mala fe",
     "afirmacion": "En julio y agosto de 2022 el Gobierno lanzó una campaña contra Feijóo bajo la fórmula «ignorancia o mala fe», repetida por 11 ministros.",
     "veredicto": "no_verificable",
-    "explicacion": "Hay indicios de que ministros del Gobierno le atribuyeron «ignorancia o mala fe» (la ministra Montero lo dijo a propósito de sus cifras de deuda pública, y Feijóo ya se quejó de ello en julio de 2023 por lo ocurrido en agosto de 2022), pero ninguna fuente independiente consultada cuenta cuántos ministros lo repitieron ni acredita una campaña coordinada. La cifra de 11 solo procede de él.",
+    "explicacion": "Está documentado que la ministra de Hacienda, María Jesús Montero, dijo el 1 de agosto de 2022 que Feijóo mostraba «una total ignorancia o mala fe» sobre la deuda pública, y que el 13 de agosto el ministro Bolaños lo criticó con dureza. Ninguna fuente consultada cuenta cuántos ministros repitieron la fórmula ni acredita una campaña coordinada; la cifra de 11 solo procede del propio Feijóo (Servimedia, 2023).",
     "confianza": "baja",
     "fuentes": [
-      {"titulo": "Servimedia (13/07/2023): Feijóo y el «fuego a discreción» de ministros en agosto", "url": "https://www.servimedia.es/noticias/feijoo-tiene-11-folios-datos-falsos-sanchez-debate-ve-problemas-formacion-enormes/3751849"},
-      {"titulo": "El Plural: Montero responde al «pufo» de Feijóo", "url": "https://www.elplural.com/economia/montero-responde-feijoo-demuestra-total-ignorancia-mala-fe_295015102"}
+      {
+        "titulo": "El Plural (01/08/2022): Montero responde al «pufo» de Feijóo, «demuestra una total ignorancia o mala fe»",
+        "url": "https://www.elplural.com/economia/montero-responde-feijoo-demuestra-total-ignorancia-mala-fe_295015102"
+      },
+      {
+        "titulo": "El Debate (13/08/2022): Bolaños asegura que Feijóo baila al son de Ayuso en contra de Europa en asuntos energéticos",
+        "url": "https://www.eldebate.com/espana/20220813/bolanos-asegura-feijoo-baila-son-ayuso-contra-europa-asuntos-energeticos_54534.html"
+      },
+      {
+        "titulo": "Servimedia (13/07/2023): Feijóo tiene «11 folios de datos falsos» de Sánchez en el debate",
+        "url": "https://www.servimedia.es/noticias/feijoo-tiene-11-folios-datos-falsos-sanchez-debate-ve-problemas-formacion-enormes/3751849"
+      }
     ]
   },
   {
@@ -267,10 +504,21 @@
     "cita": "hasta las 12 de la noche no empieza la campaña electoral",
     "afirmacion": "La campaña electoral de las elecciones generales del 29 de noviembre de 2026 empieza a las 12 de la noche (la entrevista se grabó el día previo).",
     "veredicto": "verdadero",
-    "explicacion": "El Real Decreto 806/2026 (BOE, 6 de octubre de 2026) fija el inicio de la campaña a las 00:00 del viernes 13 de noviembre, con una duración de 15 días, hasta el 27 de noviembre. Coincide con lo dicho por Feijóo en la grabación del día anterior.",
+    "explicacion": "El Real Decreto 806/2026, de 5 de octubre (BOE del 6 de octubre), convocó las generales para el 29 de noviembre. El calendario oficial de la Junta Electoral Central fija la campaña del 13 al 27 de noviembre, y Euronews recoge que empieza a las 00:00 del viernes 13. Feijóo habla el día 12 («lo publico mañana», dice Wild), de modo que «hasta las 12 de la noche no empieza» es correcto.",
     "confianza": "alta",
     "fuentes": [
-      {"titulo": "Euronews (06/10/2026): Calendario de las elecciones generales del 29N", "url": "https://es.euronews.com/2026/10/06/calendario-elecciones-generales-29n-fechas-clave-voto-correo-campana"}
+      {
+        "titulo": "Junta Electoral Central: Calendario electoral de las elecciones generales del 29 de noviembre de 2026",
+        "url": "https://www.juntaelectoralcentral.es/cs/jec/documentos/eg2026_calendario.pdf"
+      },
+      {
+        "titulo": "Junta Electoral Central: Elecciones generales 2026 (cita el Real Decreto 806/2026, BOE núm. 248, 06/10/2026)",
+        "url": "https://www.juntaelectoralcentral.es/cs/jec/eleccionesEnCurso/Elecciones_generales_2026"
+      },
+      {
+        "titulo": "Euronews (06/10/2026): Calendario de las elecciones generales del 29N",
+        "url": "https://es.euronews.com/2026/10/06/calendario-elecciones-generales-29n-fechas-clave-voto-correo-campana"
+      }
     ]
   },
   {
@@ -278,10 +526,17 @@
     "cita": "Soy un político que ha gestionado durante los últimos 30 años de su vida, es decir, toda su vida",
     "afirmacion": "Feijóo lleva gestionando cargos públicos durante los últimos 30 años.",
     "veredicto": "mayormente_verdadero",
-    "explicacion": "Desde julio de 1991 ocupa cargos de gestión (secretario general en la Xunta, presidente del Insalud desde 1996, presidente de Correos 2000-2003, conselleiro y vicepresidente de la Xunta, presidente de la Xunta 2009-2022), es decir, unos 35 años; «30» es una cifra redondeada a la baja, y «toda su vida» es hipérbole.",
-    "confianza": "media",
+    "explicacion": "La web oficial de la Xunta sitúa su primer cargo de gestión en julio de 1991 (secretario general técnico de Agricultura y, tres meses después, secretario general de Sanidad), tras ingresar como funcionario en 1985. Después presidió el Insalud (1996-2000) y Correos (2000-2003), fue conselleiro y vicepresidente y presidió la Xunta (2009-2022). Son unos 35 años de gestión, así que «30 años» se queda corto y «toda su vida» es una hipérbole.",
+    "confianza": "alta",
     "fuentes": [
-      {"titulo": "Alberto Núñez Feijóo (Wikipedia): trayectoria", "url": "https://es.wikipedia.org/wiki/Alberto_Núñez_Feijóo"}
+      {
+        "titulo": "Xunta de Galicia: Los anteriores presidentes (trayectoria de Feijóo)",
+        "url": "https://www.xunta.gal/es/os-anteriores-presidentes"
+      },
+      {
+        "titulo": "elDiario.es: Alberto Núñez Feijóo, breve biografía de un no gallego",
+        "url": "https://www.eldiario.es/politica/alberto-nunez-feijoo-breve-biografia-no-gallegos_1_8901349.html"
+      }
     ]
   },
   {
@@ -289,11 +544,13 @@
     "cita": "me votaban además con mayorías absolutas consecutivas",
     "afirmacion": "En Galicia, Feijóo ganaba con mayorías absolutas consecutivas.",
     "veredicto": "verdadero",
-    "explicacion": "Como candidato del PP a la Xunta obtuvo mayoría absoluta en 2009 (38 de 75), 2012 (41), 2016 (41) y 2020 (42), cuatro consecutivas.",
+    "explicacion": "Como candidato del PP a la Xunta obtuvo mayoría absoluta en 2009 (38 de 75 escaños, mayoría absoluta), 2012 (41), 2016 (41) y 2020 (42), cuatro seguidas, según la tabla de resultados de la Consellería de Presidencia de la Xunta. El «donde me conocen» de la frase se refiere a Galicia.",
     "confianza": "alta",
     "fuentes": [
-      {"titulo": "Elecciones al Parlamento de Galicia de 2016 (Wikipedia)", "url": "https://es.wikipedia.org/wiki/Elecciones_al_Parlamento_de_Galicia_de_2016"},
-      {"titulo": "Alberto Núñez Feijóo (Wikipedia)", "url": "https://es.wikipedia.org/wiki/Alberto_Núñez_Feijóo"}
+      {
+        "titulo": "Xunta de Galicia, Consellería de Presidencia: Informe de los resultados electorales",
+        "url": "https://conselleriadepresidencia.xunta.gal/es/relacions-institucionais-e-parlamentarias/informe-dos-resultados-electorais"
+      }
     ]
   }
 ]

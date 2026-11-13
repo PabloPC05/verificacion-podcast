@@ -4,16 +4,16 @@
     "cita": "la financiación de un partido político de forma irregular está tipificada en el Código Penal",
     "afirmacion": "La financiación irregular de un partido político es delito tipificado en el Código Penal español.",
     "veredicto": "verdadero",
-    "explicacion": "Los artículos 304 bis (donaciones ilegales a partidos, con penas de prisión de 6 meses a 4 años en los casos agravados) y 304 ter (participar en estructuras para financiar ilegalmente partidos, de 1 a 5 años) se introdujeron en el Código Penal con la LO 1/2015, de 30 de marzo. Matiz: son posteriores a los hechos de la época Gürtel, que se juzgaron por otros delitos (cohecho, fraude fiscal, blanqueo, etc.) y por la vía de la participación a título lucrativo.",
+    "explicacion": "La LO 1/2015, de 30 de marzo (en vigor desde el 1 de julio de 2015), añadió al Código Penal el título XIII bis con los delitos de financiación ilegal de partidos, entre ellos el artículo 304 bis. El CGPJ lo aplica en una nota del 20/12/2024, en la que un juez de la Audiencia Nacional ve indicios de «delito de financiación ilegal del artículo 304 bis» en el caso del eurodiputado Alvise Pérez. Matiz: la tipificación es posterior a los hechos de Filesa y de Gürtel, y no toda irregularidad contable es delito. El BOE no respondió desde esta red, por eso el texto legal se cita a través del CGPJ y de prensa jurídica.",
     "confianza": "alta",
     "fuentes": [
       {
-        "titulo": "Código Penal, Título XIII bis: arts. 304 bis y 304 ter (papelea)",
-        "url": "https://papelea.com/es/leyes/codigo-penal/libro-ii_titulo-xiii-bis"
+        "titulo": "Poder Judicial (CGPJ): El juez de la Audiencia Nacional envía exposición razonada al Supremo para investigar a Luis Pérez «Alvise» por delito electoral y financiación ilegal de partidos (20/12/2024)",
+        "url": "https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Audiencia-Nacional/Oficina-de-Comunicacion/Notas-de-prensa/El-juez-de-la-Audiencia-Nacional-envia-exposicion-razonada-al-Tribunal-Supremo-para-investigar-al-diputado-del-Parlamento-Europeo-Luis-Perez--Alvise--por-delito-electoral-y-financiacion-ilegal-de-partidos-politicos--"
       },
       {
-        "titulo": "Los delitos de financiación ilegal de partidos políticos en España: estado de la cuestión (Univ. de Huelva)",
-        "url": "https://ariasmontano.uhu.es/entities/publication/f77935b1-be63-4b49-aba5-33f637ad2971"
+        "titulo": "Noticias Jurídicas: Las 15 claves de la reforma del Código Penal",
+        "url": "https://noticias.juridicas.com/actualidad/noticias/9285-las-15-claves-de-la-reforma-del-codigo-penal/"
       }
     ]
   },
@@ -22,19 +22,27 @@
     "cita": "El caso Gürtel se ha juzgado por arriba, por abajo, se han juzgado a todos los que han participado en él",
     "afirmacion": "El caso Gürtel ya se ha juzgado por completo y se ha juzgado a todos los que participaron en la trama.",
     "veredicto": "mayormente_verdadero",
-    "explicacion": "Las piezas principales de Gürtel se han juzgado y han dado lugar a condenas de cabecillas, tesorero y empresarios (Audiencia Nacional 2018, confirmada en lo esencial por el Supremo en octubre de 2020), y el último gran juicio quedó visto para sentencia en noviembre de 2025. Pero «a todos los que han participado» es excesivo: según resúmenes de prensa de 2026 hay piezas pendientes de sentencia firme o diligencias abiertas, y varios responsables políticos fueron absueltos o no llegaron a ser procesados.",
+    "explicacion": "La Audiencia Nacional condenó el 17/5/2018 (sentencia conocida el 24/5) a 29 de los 37 acusados de la primera época de Gürtel, y el Supremo lo confirmó en lo esencial el 14/10/2020. El último de los trece juicios de la macrocausa (fraude fiscal y blanqueo, 25 acusados, entre ellos Correa) quedó visto para sentencia el 12/11/2025, y no se ha hallado la sentencia. «A todos los que han participado» es una generalización: la prensa de 2026 recuerda que algunas piezas acabaron en absolución o archivo y que la sentencia de 2018 dejó fuera de su enjuiciamiento la caja B, que se investigó aparte.",
     "confianza": "media",
     "fuentes": [
       {
-        "titulo": "Visto para sentencia el último juicio de Gürtel (Noticias de Navarra, 12/11/2025)",
+        "titulo": "Poder Judicial (CGPJ): La Audiencia Nacional condena a penas de hasta 51 años de prisión a 29 de los 37 acusados en el «caso Gürtel» (24/5/2018)",
+        "url": "https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Audiencia-Nacional/Noticias-Judiciales/La-Audiencia-Nacional-condena-a-penas-de-hasta-51-anos-de-prision-a-29-de-los-37-acusados-en-el--caso-Gurtel-"
+      },
+      {
+        "titulo": "Poder Judicial (CGPJ): El Tribunal Supremo confirma penas de hasta 51 años de prisión para los procesados en el «caso Gürtel» (14/10/2020)",
+        "url": "https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Tribunal-Supremo/Noticias-Judiciales/El-Tribunal-Supremo-confirma-penas-de-hasta-51-anos-de-prision-para-los-procesados-en-el--caso-Gurtel-"
+      },
+      {
+        "titulo": "Noticias de Navarra/EFE: Visto para sentencia el último juicio del caso de corrupción Gürtel relacionada con el PP (12/11/2025)",
         "url": "https://www.noticiasdenavarra.com/politica/2025/11/12/visto-sentencia-ultimo-juicio-caso-10339452.html"
       },
       {
-        "titulo": "Macrocausas pendientes: el mapa judicial del PP (Onda Vasca, 9/7/2026)",
+        "titulo": "Onda Vasca: Macrocausas pendientes, el mapa judicial del PP (9/7/2026)",
         "url": "https://www.ondavasca.com/macrocausas-pendientes-el-mapa-judicial-del-pp/"
       },
       {
-        "titulo": "El Supremo confirma la condena al PP en Gürtel (Público, 14/10/2020)",
+        "titulo": "Público: El Supremo confirma la condena al PP en Gürtel (14/10/2020)",
         "url": "https://www.publico.es/politica/supremo-confirma-condena-al-pp-guertel.html"
       }
     ]
@@ -44,15 +52,27 @@
     "cita": "Si nos costó el gobierno",
     "afirmacion": "El caso Gürtel (la sentencia de 2018) costó al PP el Gobierno.",
     "veredicto": "mayormente_verdadero",
-    "explicacion": "La moción de censura que desalojó a Rajoy el 1 de junio de 2018 se presentó una semana después de la sentencia de Gürtel (24 de mayo de 2018) y Ábalos abrió su defensa citándola. La atribución causal es interpretativa (la moción necesitó el apoyo de otros grupos), pero que la sentencia fue el desencadenante declarado es un hecho.",
-    "confianza": "media",
+    "explicacion": "La sentencia de la Audiencia Nacional (17/5/2018, conocida el 24/5) fue el motivo declarado de la moción de censura: Ábalos la presentó el 31/5 invocando «una sentencia que condena por primera vez a un partido político por corrupción», y Margarita Robles dijo que la moción no estaba en su hoja de ruta hasta que se conoció el fallo del 24 de mayo. El Congreso la aprobó el 1/6/2018 con 180 votos a favor, 169 en contra y 1 abstención, y Rajoy dejó el Gobierno. Que la sentencia fuera la causa única es una interpretación, porque hicieron falta los votos de otros grupos.",
+    "confianza": "alta",
     "fuentes": [
       {
-        "titulo": "Moción de censura: el PSOE explica la moción (Orain, 31/5/2018)",
+        "titulo": "Congreso de los Diputados: Diario de Sesiones nº 126, 31/5/2018 (moción de censura, intervención de Ábalos)",
+        "url": "https://www.congreso.es/public_oficiales/L12/CONG/DS/PL/DSCD-12-PL-126.PDF"
+      },
+      {
+        "titulo": "Congreso de los Diputados: Diario de Sesiones nº 127, 1/6/2018 (votación de la moción de censura)",
+        "url": "https://www.congreso.es/docu/MocCens/10062018_XIILegMocCen.pdf"
+      },
+      {
+        "titulo": "Congreso de los Diputados: Mociones de censura (moción de 2018, resultado 180-169-1)",
+        "url": "https://www.congreso.es/es/cem/mociones-de-censura"
+      },
+      {
+        "titulo": "Orain: Moción de censura: el PSOE explica la moción (31/5/2018)",
         "url": "https://orain.eus/es/politica/2018/05/31/mocion-censura-rajoy-31-mayo-2018-el-psoe-explica-mocion/"
       },
       {
-        "titulo": "El tribunal cuestiona la credibilidad del testimonio de Rajoy (Última Hora, 24/5/2018)",
+        "titulo": "Última Hora: El tribunal cuestiona la credibilidad del testimonio de Rajoy (24/5/2018)",
         "url": "https://www.ultimahora.es/noticias/nacional/2018/05/24/1002441/tribunal-verosimil-cuestiona-credibilidad-del-testimonio-rajoy.html"
       }
     ]
@@ -62,20 +82,16 @@
     "cita": "¿tú te acuerdas de la financiación de Filesa, Tengen, Spor, etcétera, etcétera?",
     "afirmacion": "El PSOE protagonizó casos de financiación irregular como Filesa (y Time Export, parte del mismo entramado).",
     "veredicto": "verdadero",
-    "explicacion": "El Tribunal Supremo condenó el 28 de octubre de 1997 a ocho personas en el caso Filesa, el entramado de sociedades (Filesa, Malesa y Time Export) que facturaba supuestos informes para financiar al PSOE a finales de los 80. Las condenas fueron por falsedad y malversación, porque entonces la financiación ilegal no era delito; el Constitucional rebajó después alguna pena.",
+    "explicacion": "El Supremo condenó el 28/10/1997 (causa especial 880/91) a varios acusados del caso Filesa por falsedad en documento mercantil, asociación ilícita y delito fiscal, entre otros. Según los hechos probados que recoge la STC 125/2001 (BOE de 3/7/2001), Filesa, Malesa y Time Export se crearon desde 1988 para obtener fondos con los que pagar las campañas electorales de 1989 del PSOE, sorteando los límites de la LO 3/1987 mediante facturas falsas por informes inexistentes. Las condenas fueron a personas, no al partido, y entonces la financiación ilegal como tal no estaba tipificada. Los otros nombres de la cita (Tengen, Spor) no se han comprobado.",
     "confianza": "alta",
     "fuentes": [
       {
-        "titulo": "Se dicta sentencia por corrupción en el caso Filesa (Economist & Jurist)",
-        "url": "https://www.economistjurist.es/tal-dia-como-hoy/se-dicta-sentencia-por-corrupcion-en-el-caso-filesa/"
-      },
-      {
-        "titulo": "Sentencia del Tribunal Constitucional sobre Filesa (BOE)",
+        "titulo": "Tribunal Constitucional: STC 125/2001, de 4 de junio, sobre la condena en el caso Filesa (BOE 3/7/2001)",
         "url": "https://hj.tribunalconstitucional.es/HJ/docs/BOE/BOE-T-2001-12758.pdf"
       },
       {
-        "titulo": "Caso Filesa (derechos.org)",
-        "url": "https://derechos.org/nizkor/espana/doc/filesa2.html"
+        "titulo": "Economist & Jurist: Se dicta sentencia por corrupción en el caso Filesa",
+        "url": "https://www.economistjurist.es/tal-dia-como-hoy/se-dicta-sentencia-por-corrupcion-en-el-caso-filesa/"
       }
     ]
   },
@@ -84,16 +100,20 @@
     "cita": "Yo me avergoncé y lo dije.",
     "afirmacion": "Feijóo dijo públicamente en su día que se avergonzaba del caso Bárcenas y que le repugnaba la actitud del extesorero.",
     "veredicto": "mayormente_verdadero",
-    "explicacion": "En febrero de 2013 Feijóo declaró que «casos como el del señor Bárcenas me repugnan» y en marzo de 2013 pidió al PP «pedir perdón» y dijo sentirse «estafado y engañado» por el extesorero. No he localizado la palabra literal «vergüenza», pero el fondo (rechazo público y petición de perdón) está documentado.",
-    "confianza": "media",
+    "explicacion": "El 24/3/2013 Feijóo, entonces presidente de la Xunta, instó al PP a «pedir perdón por el caso Bárcenas» y dijo sentirse «estafado y engañado» por el extesorero, según un despacho de EFE publicado por Público. En febrero de 2013 habría dicho también que «casos como el del señor Bárcenas me repugnan» (La Marea) y que no se fiaba de él «nada» (Libertad Digital con datos de Europa Press), pero la repugnancia solo la recoge un medio de apoyo y la palabra «vergüenza» no aparece en ninguna fuente de la época. «Me avergoncé y lo dije» se acepta como resumen de ese rechazo público. No se localizó la transcripción íntegra de aquellas entrevistas.",
+    "confianza": "baja",
     "fuentes": [
       {
-        "titulo": "Alberto Núñez Feijóo (La Marea, 7/4/2013)",
+        "titulo": "Público/EFE: Feijóo insta al PP a pedir perdón por el caso Bárcenas (24/3/2013)",
+        "url": "https://www.publico.es/actualidad/feijoo-insta-pp-pedir-perdon-caso-barcenas.html"
+      },
+      {
+        "titulo": "La Marea: Alberto Núñez Feijóo (7/4/2013)",
         "url": "https://lamarea.com/2013/04/07/alberto-nunez-feijoo"
       },
       {
-        "titulo": "Feijóo insta al PP a pedir perdón por el caso Bárcenas (Público, 24/3/2013)",
-        "url": "https://www.publico.es/actualidad/feijoo-insta-pp-pedir-perdon-caso-barcenas.html"
+        "titulo": "Libertad Digital/Europa Press: Feijóo sobre Mato, «tiene que dar explicaciones, y contundentes» (9/2/2013; incluye sus palabras sobre Bárcenas)",
+        "url": "https://www.libertaddigital.com/espana/2013-02-09/feijoo-sobre-mato-tiene-que-dar-explicaciones-y-contundentes-1276481796/"
       }
     ]
   },
@@ -102,12 +122,20 @@
     "cita": "el que más enriqueció",
     "afirmacion": "Luis Bárcenas fue la persona que más se enriqueció de la trama.",
     "veredicto": "no_verificable",
-    "explicacion": "Está acreditado que Bárcenas tuvo millones en cuentas suizas (Feijóo habló en 2013 de 22 millones) y fue condenado en Gürtel, pero no hay una cuantificación comparada que permita afirmar que fue «el que más» se enriqueció frente a otros implicados como los cabecillas de la red Correa.",
+    "explicacion": "Feijóo habló en 2013 de 22 millones de euros de Bárcenas en una cuenta suiza, y la Fiscalía Anticorrupción sostiene en el último juicio de Gürtel que Correa percibió más de 31 millones por adjudicaciones irregulares. No hay ninguna cuantificación comparada: la pena mayor fue para Correa (51 años) frente a los 29 años y 1 mes de Bárcenas tras el Supremo (2020), pero las penas no miden el enriquecimiento de cada uno. Por eso no se puede confirmar ni negar que Bárcenas fuera «el que más» se enriqueció.",
     "confianza": "baja",
     "fuentes": [
       {
-        "titulo": "Feijóo sobre Bárcenas: «No me fío de él, nada» (Libertad Digital, 9/2/2013)",
+        "titulo": "Libertad Digital/Europa Press: Feijóo sobre Mato, «tiene que dar explicaciones, y contundentes» (9/2/2013; incluye sus palabras sobre Bárcenas)",
         "url": "https://www.libertaddigital.com/espana/2013-02-09/feijoo-sobre-mato-tiene-que-dar-explicaciones-y-contundentes-1276481796/"
+      },
+      {
+        "titulo": "Noticias de Navarra/EFE: Visto para sentencia el último juicio del caso de corrupción Gürtel relacionada con el PP (12/11/2025)",
+        "url": "https://www.noticiasdenavarra.com/politica/2025/11/12/visto-sentencia-ultimo-juicio-caso-10339452.html"
+      },
+      {
+        "titulo": "Poder Judicial (CGPJ): El Tribunal Supremo confirma penas de hasta 51 años de prisión para los procesados en el «caso Gürtel» (14/10/2020)",
+        "url": "https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Tribunal-Supremo/Noticias-Judiciales/El-Tribunal-Supremo-confirma-penas-de-hasta-51-anos-de-prision-para-los-procesados-en-el--caso-Gurtel-"
       }
     ]
   },
@@ -116,16 +144,16 @@
     "cita": "No, estuvo en la cárcel.",
     "afirmacion": "Luis Bárcenas ha estado en la cárcel.",
     "veredicto": "verdadero",
-    "explicacion": "Bárcenas fue condenado en Gürtel (33 años y 4 meses por la Audiencia Nacional en 2018, reducida después por el Supremo) y cumplió pena en prisión, con permisos penitenciarios desde 2021. Feijóo se corrige correctamente: ya no está en la cárcel en el sentido de cumplimiento ordinario.",
-    "confianza": "media",
+    "explicacion": "Bárcenas ingresó en prisión provisional en junio de 2013, volvió a prisión en 2018 tras la sentencia de Gürtel (condena de 29 años y 1 mes tras el Supremo en 2020), disfrutó de permisos desde 2021 y del tercer grado en marzo de 2024. El 17/12/2024 el Juzgado de Vigilancia Penitenciaria de la Audiencia Nacional le concedió la libertad condicional, tras cumplir dos tercios de la pena y pagar 4.535.254,92 euros de responsabilidad civil. Feijóo acierta al corregir «está» por «estuvo».",
+    "confianza": "alta",
     "fuentes": [
       {
-        "titulo": "La Audiencia Nacional concede a Bárcenas un permiso de 12 días (Moncloa.com, 17/3/2021)",
-        "url": "https://www.moncloa.com/2021/03/17/audiencia-nacional-barcenas-permiso-12-dias"
+        "titulo": "Poder Judicial (CGPJ): El Juzgado de Vigilancia Penitenciaria concede la libertad condicional al extesorero del Partido Popular Luis Bárcenas (17/12/2024)",
+        "url": "https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Audiencia-Nacional/Oficina-de-Comunicacion/Notas-de-prensa/El-Juzgado-de-Vigilancia-Penitenciaria-concede-la-libertad-condicional-al-extesorero-del-Partido-Popular-Luis-Barcenas"
       },
       {
-        "titulo": "Luis Bárcenas, ya más en la calle que en prisión (Izquierda Diario)",
-        "url": "https://www.izquierdadiario.es/Luis-Barcenas-ya-mas-en-la-calle-que-en-prision-y-cerca-de-la-libertad-condicional"
+        "titulo": "elDiario.es: La Audiencia Nacional deja en libertad condicional a Luis Bárcenas (17/12/2024)",
+        "url": "https://www.eldiario.es/politica/audiencia-nacional-deja-libertad-condicional-luis-barcenas_1_11907801.amp.html"
       }
     ]
   },
@@ -134,16 +162,20 @@
     "cita": "Yo llevo cuatro años y medio de presidente de mi partido. Si alguien puede decir que se ha cometido alguna irregularidad en mi partido, que lo diga.",
     "afirmacion": "Durante los cuatro años y medio que Feijóo lleva presidiendo el PP no se ha cometido ninguna irregularidad conocida en el partido.",
     "veredicto": "no_verificable",
-    "explicacion": "Feijóo preside el PP desde la primavera de 2022 (unos cuatro años y siete meses, «cuatro y medio» es razonable). No he encontrado ninguna causa ni sanción por financiación irregular del partido en ese periodo, pero la ausencia de pruebas no demuestra que no exista ninguna irregularidad, y la afirmación es demasiado amplia para verificarla. Además, a 13/11/2026 el PSOE ha presentado una denuncia ante la Fiscalía por los presuntos ofrecimientos a Koldo, que el PP niega y que no están probados.",
+    "explicacion": "Feijóo preside el PP desde la primavera de 2022 (unos cuatro años y siete meses, «cuatro y medio» es un redondeo razonable). En las fuentes consultadas no consta ninguna causa judicial por irregularidades en las cuentas del partido en ese periodo, pero que no se encuentre no prueba que no exista, y la frase es un reto genérico que no se puede comprobar. El 13/11/2026 el PSOE denunció ante la Fiscalía los presuntos ofrecimientos de dinero a Koldo García, algo que el PP niega y que no está probado.",
     "confianza": "baja",
     "fuentes": [
       {
-        "titulo": "Génova presenta sus cuentas anuales: beneficio de 9,6 millones en 2025 (Moncloa.com, 19/7/2026)",
-        "url": "https://www.moncloa.com/2026/07/19/cuentas-pp-2025-beneficio-96-millones-3402356/"
+        "titulo": "Infobae/EFE: El PSOE denuncia ante la Fiscalía los presuntos pagos del PP a Koldo que Feijóo niega (13/11/2026)",
+        "url": "https://www.infobae.com/espana/agencias/2026/11/13/el-psoe-denuncia-ante-la-fiscalia-los-presuntos-pagos-del-pp-a-koldo-que-feijoo-niega/"
       },
       {
-        "titulo": "El PSOE denuncia ante la Fiscalía los presuntos pagos del PP a Koldo que Feijóo niega (Infobae/EFE, 13/11/2026)",
-        "url": "https://www.infobae.com/espana/agencias/2026/11/13/el-psoe-denuncia-ante-la-fiscalia-los-presuntos-pagos-del-pp-a-koldo-que-feijoo-niega/"
+        "titulo": "Euronews: El PSOE denuncia en la Fiscalía supuestos pagos del PP a Koldo tras negarlos Feijóo (13/11/2026)",
+        "url": "https://es.euronews.com/2026/11/13/psoe-denuncia-fiscalia-supuestos-pagos-pp-koldo-negarlos-feijoo"
+      },
+      {
+        "titulo": "El Español: Feijóo acusa a Sánchez de no respetar «a los muertos» de Urda y denuncia la «difamación» de Koldo al PP ante los tribunales (10/11/2026)",
+        "url": "https://www.elespanol.com/espana/politica/20261110/feijoo-acusa-sanchez-no-respetar-muertos-urda-lleva-juez-difamacion-koldo-pp/1003744453358_0.html"
       }
     ]
   },
@@ -152,16 +184,24 @@
     "cita": "sin ninguna sentencia que afectase al presidente del partido",
     "afirmacion": "La moción de censura de 2018 se presentó sin ninguna sentencia que afectase a Rajoy como presidente del PP.",
     "veredicto": "mayormente_verdadero",
-    "explicacion": "Rajoy nunca fue imputado ni condenado en Gürtel; declaró como testigo en 2017. Matiz: la sentencia de la Audiencia Nacional de 24 de mayo de 2018 sí condenó al propio PP como partícipe a título lucrativo y el tribunal cuestionó la credibilidad del testimonio de Rajoy sobre la caja B, de modo que sí había una sentencia que afectaba al partido que presidía.",
+    "explicacion": "Rajoy declaró como testigo y no consta que fuera acusado ni condenado en Gürtel. La sentencia de la Audiencia Nacional (17/5/2018, conocida el 24/5) sí condenó al PP como partícipe a título lucrativo (133.628,48 € por Majadahonda y 111.864,32 € por Pozuelo) y puso en duda la credibilidad del testimonio de Rajoy sobre la caja B («no aparece como suficientemente verosímil»). Así, ninguna sentencia afectaba a Rajoy a título personal, pero sí una al partido que presidía y a su testimonio.",
     "confianza": "media",
     "fuentes": [
       {
-        "titulo": "El tribunal cuestiona la credibilidad del testimonio de Rajoy (Última Hora, 24/5/2018)",
-        "url": "https://www.ultimahora.es/noticias/nacional/2018/05/24/1002441/tribunal-verosimil-cuestiona-credibilidad-del-testimonio-rajoy.html"
+        "titulo": "Congreso de los Diputados: Diario de Sesiones nº 126, 31/5/2018 (moción de censura, intervención de Ábalos)",
+        "url": "https://www.congreso.es/public_oficiales/L12/CONG/DS/PL/DSCD-12-PL-126.PDF"
       },
       {
-        "titulo": "El Supremo confirma la condena al PP en Gürtel (Público, 14/10/2020)",
-        "url": "https://www.publico.es/politica/supremo-confirma-condena-al-pp-guertel.html"
+        "titulo": "Congreso de los Diputados: Diario de Sesiones nº 127, 1/6/2018 (votación de la moción de censura)",
+        "url": "https://www.congreso.es/docu/MocCens/10062018_XIILegMocCen.pdf"
+      },
+      {
+        "titulo": "Poder Judicial (CGPJ): La Audiencia Nacional condena a penas de hasta 51 años de prisión a 29 de los 37 acusados en el «caso Gürtel» (24/5/2018)",
+        "url": "https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Audiencia-Nacional/Noticias-Judiciales/La-Audiencia-Nacional-condena-a-penas-de-hasta-51-anos-de-prision-a-29-de-los-37-acusados-en-el--caso-Gurtel-"
+      },
+      {
+        "titulo": "Última Hora: El tribunal cuestiona la credibilidad del testimonio de Rajoy (24/5/2018)",
+        "url": "https://www.ultimahora.es/noticias/nacional/2018/05/24/1002441/tribunal-verosimil-cuestiona-credibilidad-del-testimonio-rajoy.html"
       }
     ]
   },
@@ -170,19 +210,31 @@
     "cita": "una sentencia que hablaba de que el PP era responsable del título lucrativo que posteriormente fue anulada por falta de prueba",
     "afirmacion": "La sentencia de 2018 que declaraba al PP responsable a título lucrativo fue posteriormente anulada por falta de prueba.",
     "veredicto": "falso",
-    "explicacion": "La condena al PP como partícipe a título lucrativo (245.492 euros por actos electorales en Majadahonda y Pozuelo pagados por la trama) no fue anulada: el Tribunal Supremo la confirmó el 14 de octubre de 2020, sin modificar los hechos probados. Lo que corrigió el Supremo fue la valoración de las referencias a la caja B, no la condena. Además, la Audiencia Nacional volvió a condenar al PP como partícipe a título lucrativo en 2022 por Gürtel en Boadilla.",
+    "explicacion": "El Supremo confirmó el 14/10/2020 la condena al PP como partícipe a título lucrativo (133.628,48 € por Majadahonda y 111.864,32 € por Pozuelo, unos 245.000 euros en total). Solo estimó en parte, con «efectos prácticos» nulos, el motivo del PP contra las alusiones de la Audiencia a una caja B, que consideró excesivas porque implicaban una responsabilidad penal que nadie había pedido; no anuló la condena ni la declaró sin prueba. La Audiencia Nacional volvió a condenar al PP a título lucrativo el 8/4/2022 por Gürtel en Boadilla (204.198,64 €).",
     "confianza": "alta",
     "fuentes": [
       {
-        "titulo": "El Supremo confirma la condena al PP en Gürtel (Público, 14/10/2020)",
+        "titulo": "Poder Judicial (CGPJ): El Tribunal Supremo confirma penas de hasta 51 años de prisión para los procesados en el «caso Gürtel» (14/10/2020)",
+        "url": "https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Tribunal-Supremo/Noticias-Judiciales/El-Tribunal-Supremo-confirma-penas-de-hasta-51-anos-de-prision-para-los-procesados-en-el--caso-Gurtel-"
+      },
+      {
+        "titulo": "elDiario.es: El Tribunal Supremo confirma la existencia de una financiación irregular en el PP durante dos décadas (14/10/2020)",
+        "url": "https://www.eldiario.es/politica/tribunal-supremo-consagra-existencia-financiacion-irregular-pp-durante-decadas_1_6293137.html"
+      },
+      {
+        "titulo": "Público: El Supremo confirma la condena al PP en Gürtel (14/10/2020)",
         "url": "https://www.publico.es/politica/supremo-confirma-condena-al-pp-guertel.html"
       },
       {
-        "titulo": "El Supremo confirma que el PP se lucró con la trama Gürtel (Deia, 14/10/2020)",
+        "titulo": "Deia: El Supremo confirma que el PP se lucró con la trama «Gürtel» (14/10/2020)",
         "url": "https://www.deia.eus/politica/2020/10/14/supremo-confirma-pp-lucro-trama-4674571.html"
       },
       {
-        "titulo": "La Audiencia Nacional condena por tercera vez al PP en Gürtel (Noticias de Navarra, 8/4/2022)",
+        "titulo": "Poder Judicial (CGPJ): La Audiencia Nacional condena a 23 personas en la pieza Gürtel Boadilla (8/4/2022)",
+        "url": "https://www.poderjudicial.es/cgpj/en/Judiciary/Novelties/La-Audiencia-Nacional-condena-a-23-personas-en-la-pieza-Gurtel-Boadilla"
+      },
+      {
+        "titulo": "Noticias de Navarra/EFE: La Audiencia Nacional condena por tercera vez al PP en Gürtel (8/4/2022)",
         "url": "https://www.noticiasdenavarra.com/actualidad/2022/04/08/audiencia-nacional-condena-tercera-vez-2086159.amp.html"
       }
     ]
@@ -192,16 +244,32 @@
     "cita": "el ponente de esa moción de censura sea el señor Ábalos, el señor Sánchez, que ya le conocía de las primarias que le acompañó, le nombra ministro de fomento",
     "afirmacion": "Ábalos fue quien defendió la moción de censura de 2018 y Sánchez, que lo conocía de las primarias, lo nombró ministro de Fomento.",
     "veredicto": "verdadero",
-    "explicacion": "Ábalos, entonces secretario de Organización del PSOE, defendió la moción en el Congreso los días 31 de mayo y 1 de junio de 2018, y fue ministro de Fomento desde el 7 de junio de 2018. Su cercanía con Sánchez desde las primarias de 2017 es de dominio público.",
+    "explicacion": "Ábalos presentó la moción en nombre de los diputados firmantes el 31/5/2018 y Sánchez lo llamó «diputado proponente» al agradecerle su papel el 1/6 (Diario de Sesiones del Congreso). Sánchez lo nombró ministro de Fomento (nombramiento del 6/6/2018 según el Supremo y toma de posesión ante el Rey el 7/6). Ábalos ya era su hombre de confianza: había coordinado su campaña en las primarias del PSOE de 2017.",
     "confianza": "alta",
     "fuentes": [
       {
-        "titulo": "El discurso que nadie debe olvidar: cuando Ábalos defendió la toma de poder de Sánchez (El Debate)",
-        "url": "https://www.eldebate.com/espana/20241220/discurso-nadie-debe-olvidar-cuando-abalos-defendio-toma-poder-sanchez-decencia_254942.html"
+        "titulo": "Congreso de los Diputados: Diario de Sesiones nº 126, 31/5/2018 (moción de censura, intervención de Ábalos)",
+        "url": "https://www.congreso.es/public_oficiales/L12/CONG/DS/PL/DSCD-12-PL-126.PDF"
       },
       {
-        "titulo": "José Luis Ábalos (Wikipedia)",
-        "url": "https://en.wikipedia.org/wiki/Jos%C3%A9_Luis_%C3%81balos"
+        "titulo": "Congreso de los Diputados: Diario de Sesiones nº 127, 1/6/2018 (votación de la moción de censura)",
+        "url": "https://www.congreso.es/docu/MocCens/10062018_XIILegMocCen.pdf"
+      },
+      {
+        "titulo": "LegalToday/Reuters: Sánchez elige un Gobierno «social galáctico» y de mayoría femenina (7/6/2018)",
+        "url": "https://www.legaltoday.com/rincon-de-reuters/sanchez-elige-un-gobierno-social-galactico-y-de-mayoria-femenina-2018-06-07/"
+      },
+      {
+        "titulo": "Abogacía Española: Nuevo Gobierno de Pedro Sánchez, 11 ministras y 6 ministros que toman posesión este jueves (7/6/2018)",
+        "url": "https://www.abogacia.es/actualidad/noticias/nuevo-gobierno-de-pedro-sanchez-11-ministras-y-6-ministros-que-toman-posesion-este-jueves/"
+      },
+      {
+        "titulo": "Valencia Plaza: El valenciano José Luis Ábalos, portavoz provisional del PSOE en el Congreso (24/5/2017)",
+        "url": "https://valenciaplaza.com/valenciaplaza/abalos-mano-derecha-de-pedro-sanchez-portavoz-interino-del-grupo-socialista"
+      },
+      {
+        "titulo": "Tribunal Supremo: Nota resumen de la sentencia de la causa especial 20775/2020, «caso Ábalos» o «caso mascarillas» (22/6/2026)",
+        "url": "https://www.poderjudicial.es/stfls/TRIBUNAL%20SUPREMO/DOCUMENTOS%20DE%20INTER%C3%89S/Nota%20resumen%20STS%20Causa%20Especial%2020775-2020%20Sala%20II%2022JUN26.docx"
       }
     ]
   },
@@ -209,17 +277,29 @@
     "minuto": "1:05:18",
     "cita": "a los 18 días hay un primer contrato de obra pública que ya está investigado en este momento en los juzgados",
     "afirmacion": "A los 18 días de ser nombrado ministro, Ábalos tuvo un primer contrato de obra pública que hoy se investiga judicialmente.",
-    "veredicto": "mayormente_verdadero",
-    "explicacion": "Según The Objective a partir de un informe de la UCO, Ábalos tomó posesión el 7 de junio de 2018 y el 25 de junio (18 días después) se abrió la licitación del tramo Pulpí-Vera, primera de las cinco obras que la UCO señala por presunta manipulación a favor de Acciona. Matiz: se trata de la licitación, no de la adjudicación (que fue posterior), y es una sospecha de la UCO dentro del caso Koldo, no una conclusión judicial. Procede de una sola fuente.",
+    "veredicto": "enganoso",
+    "explicacion": "Ábalos tomó posesión como ministro de Fomento el 7/6/2018. The Objective, a partir del informe de la UCO, sitúa la licitación del tramo Pulpí-Vera (171 millones) el 25/6/2018, 18 días después, pero Vozpópuli, citando también a la UCO, la fecha el 4/6/2018, antes de que fuera ministro, y la obra se adjudicó el 31/1/2019 a Acciona-Ferrovial: no hubo una «primera adjudicación» a los 18 días. La UCO plantea una sospecha de manipulación en una pieza que el Supremo envió a la Audiencia Nacional el 2/2/2026, sin conclusión judicial. El BOE no respondió desde esta red y no se pudo comprobar la fecha del anuncio oficial.",
     "confianza": "media",
     "fuentes": [
       {
-        "titulo": "Ábalos licitó la primera obra con mordidas 18 días después de tomar posesión (The Objective, 18/6/2025)",
+        "titulo": "The Objective: Ábalos licitó la primera obra con mordidas 18 días después de tomar posesión (18/6/2025)",
         "url": "https://theobjective.com/espana/2025-06-18/abalos-licito-primera-obra-mordidas-posesion-ministro/"
       },
       {
-        "titulo": "José Luis Ábalos (Wikipedia)",
-        "url": "https://en.wikipedia.org/wiki/Jos%C3%A9_Luis_%C3%81balos"
+        "titulo": "Vozpópuli: La UCO pone bajo sospecha dos megacontratos de Ferrovial y Acciona por 280 millones",
+        "url": "https://www.vozpopuli.com/economia/empresas/la-uco-pone-bajo-sospecha-dos-megacontratos-de-ferrovial-y-acciona-por-280-millones.html"
+      },
+      {
+        "titulo": "Abogacía Española: Nuevo Gobierno de Pedro Sánchez, 11 ministras y 6 ministros que toman posesión este jueves (7/6/2018)",
+        "url": "https://www.abogacia.es/actualidad/noticias/nuevo-gobierno-de-pedro-sanchez-11-ministras-y-6-ministros-que-toman-posesion-este-jueves/"
+      },
+      {
+        "titulo": "Poder Judicial (CGPJ): El instructor del Tribunal Supremo declara la pérdida de competencia en la pieza separada contra el exministro José Luis Ábalos por las adjudicaciones de obras públicas y la remite a la Audiencia Nacional (2/2/2026)",
+        "url": "https://www.poderjudicial.es/cgpj/en/Judiciary/Supreme-Court/Judicial-News/El-instructor-del-Tribunal-Supremo-declara-la-perdida-de-competencia-en-la-pieza-separada-contra-el-exministro-Jose-Luis-Abalos-por-las-adjudicaciones-de-obras-publicas-y-la-remite-a-la-Audiencia-Nacional"
+      },
+      {
+        "titulo": "Tribunal Supremo: Nota resumen de la sentencia de la causa especial 20775/2020, «caso Ábalos» o «caso mascarillas» (22/6/2026)",
+        "url": "https://www.poderjudicial.es/stfls/TRIBUNAL%20SUPREMO/DOCUMENTOS%20DE%20INTER%C3%89S/Nota%20resumen%20STS%20Causa%20Especial%2020775-2020%20Sala%20II%2022JUN26.docx"
       }
     ]
   },
@@ -228,20 +308,28 @@
     "cita": "el siguiente número dos del Partido Socialista, el señor Zerdán, tenga un 46% de una empresa constructora que tiene contratos con la administración pública",
     "afirmacion": "Santos Cerdán, secretario de Organización del PSOE, tiene un 46% de una empresa constructora con contratos públicos.",
     "veredicto": "enganoso",
-    "explicacion": "La UCO halló en casa del dueño de Servinabar un contrato privado de 1 de junio de 2016 por el que Cerdán compraba 1.350 de 3.000 participaciones (45%, no 46%) por 6.000 euros; Servinabar formó UTE con Acciona en obras públicas. Pero Cerdán dijo al juez que la operación nunca se completó, el propietario niega que fuese socio y no hay sentencia que fije la titularidad; Feijóo lo presenta como hecho firme y en presente. Cerdán era secretario de Organización (número tres) y dimitió en junio de 2025.",
+    "explicacion": "La UCO halló en casa del administrador de Servinabar un contrato privado fechado el 1/6/2016 por el que Cerdán compraba 1.350 de las 3.000 participaciones (el 45 %, no el 46 %) por 6.000 euros. Los investigadores describen a Servinabar como constructora, con obras junto a Acciona, y en julio de 2026 atribuyen a Cerdán y su familia beneficios de al menos 323.178 euros. Pero la defensa de Cerdán niega todo efecto jurídico al contrato, Antxon Alonso declaró en el Supremo que siempre fue el único socio y no hay sentencia que fije la titularidad; Feijóo lo presenta como un hecho cierto.",
     "confianza": "media",
     "fuentes": [
       {
-        "titulo": "La UCO halla un documento que revela que Cerdán poseía el 45% de Servinabar (Orain, 18/6/2025)",
+        "titulo": "Orain: La UCO halla un documento que revela que Cerdán poseía el 45 % de Servinabar (18/6/2025)",
         "url": "https://orain.eus/es/politica/2025/06/18/la-uco-halla-documento-que-revela-que-cerdan-poseia-45-servinabar/"
       },
       {
-        "titulo": "La UCO informa al Supremo de que Cerdán pagó 6.000 euros por el 45% de Servinabar (Noticias de Navarra, 24/6/2025)",
+        "titulo": "Noticias de Navarra: La UCO informa al Supremo de que Cerdán pagó 6.000 euros por el 45 % de Servinabar (24/6/2025)",
         "url": "https://www.noticiasdenavarra.com/politica/2025/06/24/uco-informa-supremo-cerdan-pago-9802027.amp.html"
       },
       {
-        "titulo": "Antxon Alonso niega que Cerdán fuese copropietario de Servinabar (VilaWeb)",
+        "titulo": "VilaWeb: Antxon Alonso niega que Cerdán fuese copropietario de Servinabar",
         "url": "https://www.vilaweb.cat/noticies/empresari-antxon-alonso-nega-cerdan-copropietari-servinabar/"
+      },
+      {
+        "titulo": "Diario de León/Agencias: La UCO detecta que Cerdán disfrutó con su familia de 323.000 euros de Servinabar (18/7/2026)",
+        "url": "https://www.diariodeleon.es/nacional/260718/2091573/uco-detecta-cerdan-disfruto-familia-323-000-euros-servinabars.html"
+      },
+      {
+        "titulo": "Poder Judicial (CGPJ): El instructor del Tribunal Supremo mantiene la prisión provisional de Santos Cerdán al persistir el riesgo de destrucción de pruebas (18/9/2025)",
+        "url": "https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Tribunal-Supremo/Noticias-Judiciales/El-instructor-del-Tribunal-Supremo-mantiene-la-prision-provisional-de-Santos-Cerdan-al-persistir-el-riesgo-de-destruccion-de-pruebas"
       }
     ]
   },
@@ -250,20 +338,40 @@
     "cita": "uno está en la cárcel con 25 años y otro está investigado",
     "afirmacion": "Ábalos está en la cárcel con una condena de 25 años y Cerdán está investigado.",
     "veredicto": "mayormente_verdadero",
-    "explicacion": "El Tribunal Supremo condenó a Ábalos el 22 de junio de 2026 a 24 años y 3 meses de prisión por el caso mascarillas (no 25), con cumplimiento efectivo máximo de unos 16 años; está en prisión provisional desde noviembre de 2025 y ha acudido al Constitucional. Cerdán sigue investigado en la Audiencia Nacional (pieza de obra pública y caso Leire Díez).",
+    "explicacion": "El Tribunal Supremo condenó a Ábalos el 22/6/2026 a 24 años y 3 meses de prisión (no 25) por organización criminal, cohecho, tráfico de influencias y malversación, con un máximo de cumplimiento efectivo de unos 16 años. Estaba en prisión provisional en Soto del Real desde el 27/11/2025 y, según la prensa del 5/11/2026, sigue allí mientras el Constitucional estudia su amparo. Cerdán sigue investigado en la pieza de obras públicas, que el Supremo remitió a la Audiencia Nacional el 2/2/2026. «25 años» exagera la pena en unos nueve meses.",
     "confianza": "alta",
     "fuentes": [
       {
-        "titulo": "El Supremo condena a Ábalos a 24 años y a Koldo a 19, y a Aldama a 4 (LegalToday, 22/6/2026)",
-        "url": "https://www.legaltoday.com/practica-juridica/derecho-penal/el-supremo-condena-a-abalos-a-24-anos-de-carcel-a-19-a-koldo-y-a-4-a-aldama-por-el-caso-mascarillas-2026-06-22/"
+        "titulo": "Tribunal Supremo: Nota resumen de la sentencia de la causa especial 20775/2020, «caso Ábalos» o «caso mascarillas» (22/6/2026)",
+        "url": "https://www.poderjudicial.es/stfls/TRIBUNAL%20SUPREMO/DOCUMENTOS%20DE%20INTER%C3%89S/Nota%20resumen%20STS%20Causa%20Especial%2020775-2020%20Sala%20II%2022JUN26.docx"
       },
       {
-        "titulo": "El Supremo condena a Ábalos a 24 años de cárcel y libra a Aldama de entrar en prisión (elDiario.es)",
+        "titulo": "Poder Judicial (CGPJ): El Tribunal Supremo condena al exministro José Luis Ábalos y a su exasesor Koldo García a 24 años y 19 años de prisión, respectivamente, por delitos de organización criminal, cohecho, malversación y tráfico de influencias (22/6/2026)",
+        "url": "https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Tribunal-Supremo/Noticias-Judiciales/El-Tribunal-Supremo-condena-al-exministro-Jose-Luis-Abalos-y-a-su-exasesor-Koldo-Garcia-a-24-anos-y-19-anos-de-prision--respectivamente--por-delitos-de-organizacion-criminal--cohecho--malversacion-y-trafico-de-influencias"
+      },
+      {
+        "titulo": "Poder Judicial (CGPJ): El instructor del Tribunal Supremo declara la pérdida de competencia en la pieza separada contra el exministro José Luis Ábalos por las adjudicaciones de obras públicas y la remite a la Audiencia Nacional (2/2/2026)",
+        "url": "https://www.poderjudicial.es/cgpj/en/Judiciary/Supreme-Court/Judicial-News/El-instructor-del-Tribunal-Supremo-declara-la-perdida-de-competencia-en-la-pieza-separada-contra-el-exministro-Jose-Luis-Abalos-por-las-adjudicaciones-de-obras-publicas-y-la-remite-a-la-Audiencia-Nacional"
+      },
+      {
+        "titulo": "elDiario.es: El Supremo condena a Ábalos a 24 años de cárcel y libra a Aldama de entrar en prisión (22/6/2026)",
         "url": "https://www.eldiario.es/politica/jose-luis-abalos-condenado-carcel-tribunal-supremo_1_13301658.html"
       },
       {
-        "titulo": "El Supremo envía a prisión a Ábalos y Koldo (Ara)",
+        "titulo": "LegalToday: El Supremo condena a Ábalos a 24 años, a Koldo a 19 y a Aldama a 4 (22/6/2026)",
+        "url": "https://www.legaltoday.com/practica-juridica/derecho-penal/el-supremo-condena-a-abalos-a-24-anos-de-carcel-a-19-a-koldo-y-a-4-a-aldama-por-el-caso-mascarillas-2026-06-22/"
+      },
+      {
+        "titulo": "Diario de León: ingreso de Ábalos y Koldo García en la cárcel de Soto del Real (27/11/2025)",
+        "url": "https://www.diariodeleon.es/nacional/251127/2067600/jose-luis-abalos-koldo-garcia-ingresan-carcel-soto-real.html"
+      },
+      {
+        "titulo": "Ara: El Supremo envía a prisión a Ábalos y Koldo García por un riesgo de fuga «extremo» (27/11/2025)",
         "url": "https://es.ara.cat/politica/supremo-decide-envia-abalos-koldo-carcel_1_5574849.html"
+      },
+      {
+        "titulo": "ESdiario: Ábalos, desesperado por salir de Soto del Real por ocho razones que pone sobre la mesa del Constitucional (5/11/2026)",
+        "url": "https://www.esdiario.com/nacional/261105/202179/abalos-desesperado-salir-soto-real-ocho-razones-pone-sobre-mesa-constitucional.html"
       }
     ]
   },
@@ -272,20 +380,20 @@
     "cita": "Y ha pasado por la cárcel y sigue investigado",
     "afirmacion": "Santos Cerdán ha pasado por la cárcel y sigue investigado.",
     "veredicto": "verdadero",
-    "explicacion": "Cerdán estuvo 142 días en prisión provisional en Soto del Real (junio-noviembre de 2025) hasta que el juez del Supremo lo dejó en libertad con medidas cautelares el 19 de noviembre de 2025. Sigue investigado: en 2026 la Audiencia Nacional mantiene la pieza de obra pública (14 investigados) y la UCO ha señalado ingresos de Servinabar a su entorno. No ha sido condenado.",
+    "explicacion": "Cerdán estuvo 142 días en prisión provisional en Soto del Real, desde el auto del juez Puente del 30/6/2025 hasta que lo dejó en libertad con medidas cautelares el 19/11/2025. Sigue investigado: su causa de obras públicas pasó el 2/2/2026 a la Audiencia Nacional, donde figura entre los investigados. No ha sido condenado.",
     "confianza": "alta",
     "fuentes": [
       {
-        "titulo": "El juez deja en libertad a Santos Cerdán tras 142 días en Soto del Real (El Independiente, 19/11/2025)",
+        "titulo": "El Independiente: El juez deja en libertad a Santos Cerdán tras 142 días en Soto del Real (19/11/2025)",
         "url": "https://www.elindependiente.com/espana/2025/11/19/el-juez-deja-en-libertad-a-santos-cerdan-tras-142-dias-en-soto-del-real/amp/"
       },
       {
-        "titulo": "El juez deja en 14 los investigados por los contratos de obra pública (Moncloa.com, 10/3/2026)",
-        "url": "https://www.moncloa.com/2026/03/10/santos-cerdan14-investigados-3364850/"
+        "titulo": "Poder Judicial (CGPJ): El instructor del Tribunal Supremo mantiene la prisión provisional de Santos Cerdán al persistir el riesgo de destrucción de pruebas (18/9/2025)",
+        "url": "https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Tribunal-Supremo/Noticias-Judiciales/El-instructor-del-Tribunal-Supremo-mantiene-la-prision-provisional-de-Santos-Cerdan-al-persistir-el-riesgo-de-destruccion-de-pruebas"
       },
       {
-        "titulo": "La UCO detecta que Cerdán disfrutó con su familia de 323.000 euros de Servinabar (Diario de León, 18/7/2026)",
-        "url": "https://www.diariodeleon.es/nacional/260718/2091573/uco-detecta-cerdan-disfruto-familia-323-000-euros-servinabars.html"
+        "titulo": "Poder Judicial (CGPJ): El instructor del Tribunal Supremo declara la pérdida de competencia en la pieza separada contra el exministro José Luis Ábalos por las adjudicaciones de obras públicas y la remite a la Audiencia Nacional (2/2/2026)",
+        "url": "https://www.poderjudicial.es/cgpj/en/Judiciary/Supreme-Court/Judicial-News/El-instructor-del-Tribunal-Supremo-declara-la-perdida-de-competencia-en-la-pieza-separada-contra-el-exministro-Jose-Luis-Abalos-por-las-adjudicaciones-de-obras-publicas-y-la-remite-a-la-Audiencia-Nacional"
       }
     ]
   },
@@ -294,19 +402,27 @@
     "cita": "al final el señor Rajoy nadie le pudo implicar en la financiación irregular del partido",
     "afirmacion": "A Rajoy nadie pudo implicarle judicialmente en la financiación irregular del PP.",
     "veredicto": "mayormente_verdadero",
-    "explicacion": "Rajoy nunca fue imputado ni procesado por la financiación del partido; declaró como testigo en Gürtel (2017), en la causa de los papeles de Bárcenas y en Kitchen (abril de 2026). Matiz: Bárcenas sí lo señaló (anotación «M. Rajoy» en sus papeles), la Audiencia Nacional ha dicho que debe valorarse con cautela, y en 2018 la sentencia de Gürtel puso en duda la credibilidad de su testimonio sobre la caja B.",
+    "explicacion": "Rajoy declaró como testigo en Gürtel (2017) y en el juicio de Kitchen (23/4/2026), y en ninguna fuente consultada figura como imputado o investigado por la financiación del PP. Matiz: Bárcenas lo señaló con la anotación «M. Rajoy», que la Audiencia Nacional no validó en 2021 por las discordancias entre copias de los papeles; y la sentencia de Gürtel de 2018 puso en duda la credibilidad de su testimonio sobre la caja B. Sin pruebas judiciales en su contra, «nadie le pudo implicar» es cierto en lo penal, no en lo político.",
     "confianza": "media",
     "fuentes": [
       {
-        "titulo": "La Audiencia Nacional pone en duda la veracidad del «M. Rajoy» de Bárcenas (Diario de León)",
+        "titulo": "Diario de León: La Audiencia Nacional pone en duda la veracidad del «M. Rajoy» de Bárcenas (30/10/2021)",
         "url": "https://www.diariodeleon.es/nacional/211030/900024/audiencia-nacional-pone-duda-veracidad-m-rajoy-barcenas_amp.html"
       },
       {
-        "titulo": "«M. Rajoy» y los papeles de Bárcenas (Maldita.es, 22/4/2026)",
-        "url": "https://maldita.es/malditobulo/20260422/m-rajoy-papeles-barcenas/"
+        "titulo": "RTVC/EFE: Rajoy niega que triturara en presencia de Bárcenas la última hoja de la contabilidad B del PP (23/4/2026)",
+        "url": "https://rtvc.es/rajoy-niega-que-triturara-la-ultima-hoja-de-la-contabilidad-b-del-pp-23-abril-2026/"
       },
       {
-        "titulo": "El tribunal cuestiona la credibilidad del testimonio de Rajoy (Última Hora, 24/5/2018)",
+        "titulo": "El Independiente: «Absolutamente falso»: Rajoy niega haber recibido sobres de Bárcenas y destruir pruebas de la caja B (23/4/2026)",
+        "url": "https://www.elindependiente.com/espana/2026/04/23/absolutamente-falso-rajoy-niega-haber-recibido-sobres-barcenas-destruir-pruebas-caja-b/"
+      },
+      {
+        "titulo": "Congreso de los Diputados: Diario de Sesiones nº 126, 31/5/2018 (moción de censura, intervención de Ábalos)",
+        "url": "https://www.congreso.es/public_oficiales/L12/CONG/DS/PL/DSCD-12-PL-126.PDF"
+      },
+      {
+        "titulo": "Última Hora: El tribunal cuestiona la credibilidad del testimonio de Rajoy (24/5/2018)",
         "url": "https://www.ultimahora.es/noticias/nacional/2018/05/24/1002441/tribunal-verosimil-cuestiona-credibilidad-del-testimonio-rajoy.html"
       }
     ]
@@ -316,24 +432,28 @@
     "cita": "el Partido Socialista está investigado en dos juzgados por financiación y legal",
     "afirmacion": "El PSOE está investigado en dos juzgados por financiación ilegal.",
     "veredicto": "enganoso",
-    "explicacion": "Dos magistrados de la Audiencia Nacional investigan las cuentas de Ferraz: Ismael Moreno (pagos en efectivo de 2017 a 2024, 940.388 euros, pieza abierta a raíz de los sobres de Ábalos y Koldo) y Santiago Pedraz (financiación de la trama de Leire Díez). Pero, según la prensa de septiembre de 2026, el PSOE como partido no está imputado ni se ha declarado caja B ni financiación ilegal; las responsabilidades recaen en personas físicas, y el PP ha pedido a Pedraz que lo impute. Presentar al partido como «investigado por financiación ilegal» adelanta lo que aún no ha decidido ningún juez.",
-    "confianza": "media",
+    "explicacion": "Dos jueces de la Audiencia Nacional investigan las cuentas de Ferraz: Ismael Moreno (efectivo de 2017 a 2024, 940.388 euros, pieza abierta a finales de 2025 por posibles conductas de blanqueo y un posible desfalco al partido) y Santiago Pedraz (si el PSOE pagó a la trama de Leire Díez, con seis cuentas del partido bajo análisis desde julio de 2026). Pero, según la prensa de agosto y octubre de 2026, ningún juez ha imputado al PSOE como partido ni ha declarado una caja B; el PP ha pedido a Pedraz que lo impute y el juez no lo ha acordado. Presentarlo como «investigado por financiación ilegal» adelanta lo que ningún juez ha decidido.",
+    "confianza": "baja",
     "fuentes": [
       {
-        "titulo": "El PSOE afronta el nuevo curso con las cuentas de Ferraz bajo dos investigaciones judiciales (Moncloa.com, 1/9/2026)",
-        "url": "https://www.moncloa.com/2026/09/01/psoe-cuentas-ferraz-investigaciones-judiciales-3424050/"
+        "titulo": "elDiario.es: El juez Pedraz abre la puerta a imputar al PSOE en el caso Leire Díez y permite analizar seis cuentas bancarias (31/7/2026)",
+        "url": "https://www.eldiario.es/politica/juez-pedraz-abre-puerta-imputar-psoe-caso-leire-diez-permitir-analisis-seis-cuentas-bancarias_1_13420318.html"
       },
       {
-        "titulo": "El PSOE afronta la vuelta con las cuentas de Ferraz bajo dos lupas judiciales (Diario de León, 31/8/2026)",
+        "titulo": "Ara: El juez pide información a doce bancos para rastrear los pagos del PSOE vinculados al caso Leire (31/7/2026)",
+        "url": "https://es.ara.cat/politica/juez-pide-informacion-doce-bancos-rastrear-pagos-psoe-vinculados-caso-leire_1_5813838.html"
+      },
+      {
+        "titulo": "Diario de León: El PSOE afronta la vuelta con las cuentas de Ferraz bajo dos lupas judiciales (31/8/2026)",
         "url": "https://www.diariodeleon.es/nacional/260831/2095650/psoe-afronta-vuelta-cuentas-ferraz-dos-lupas-judiciales.html"
       },
       {
-        "titulo": "El juez Moreno abre pieza separada sobre la financiación del PSOE (El Debate, 17/12/2025)",
+        "titulo": "El Debate: El juez Moreno abre pieza separada sobre la financiación del PSOE (17/12/2025)",
         "url": "https://www.eldebate.com/espana/20251217/juez-moreno-abre-pieza-separada-sobre-financiacion-ilegal-psoe-recibir-pen-drive-pagos-efectivo_366440.html"
       },
       {
-        "titulo": "El PP pide a la Audiencia Nacional la imputación del PSOE por financiación ilegal (Artículo 14)",
-        "url": "https://www.articulo14.es/politica/el-pp-pide-a-la-audiencia-nacional-la-imputacion-del-psoe-por-financiacion-ilegal-20261006.html"
+        "titulo": "Artículo 14: Pesquisas de Pedraz sobre el PSOE y la financiación irregular (7/10/2026)",
+        "url": "https://www.articulo14.es/politica/pesquisas-pedraz-sobre-psoe-y-financiacion-irregular-20261007.html"
       }
     ]
   },
@@ -342,16 +462,16 @@
     "cita": "una de las razones por las que se han adelantado las elecciones",
     "afirmacion": "Las elecciones generales se han adelantado (y, según Feijóo, para evitar responsabilidades penales).",
     "veredicto": "verdadero",
-    "explicacion": "Sánchez anunció el 5 de octubre de 2026 la disolución de las Cortes y elecciones el 29 de noviembre de 2026, cuando la legislatura, iniciada tras las generales de julio de 2023, duraba hasta 2027; hay por tanto adelanto. El motivo que atribuye Feijóo (evitar responsabilidades penales) es una valoración no comprobable: Sánchez alegó la necesidad de ampliar su apoyo parlamentario tras la derrota de dos decretos de vivienda.",
-    "confianza": "alta",
+    "explicacion": "Sánchez anunció el 5/10/2026 la disolución de las Cortes y elecciones generales el 29/11/2026, tras la derrota en el Congreso de dos decretos de vivienda; la legislatura, iniciada en 2023, terminaba en 2027, así que hay adelanto. Sánchez lo justificó por la necesidad de «renovar y ampliar el apoyo de la gente». El motivo que atribuye Feijóo (evitar responsabilidades penales) es una convicción suya («yo estoy convencido») que ninguna fuente confirma ni desmiente. El BOE no respondió desde esta red, por eso el adelanto se cita a través de prensa.",
+    "confianza": "media",
     "fuentes": [
       {
-        "titulo": "Pedro Sánchez convoca elecciones generales anticipadas para el 29 de noviembre (Artículo 14, 5/10/2026)",
+        "titulo": "Artículo 14: Pedro Sánchez convoca elecciones generales anticipadas para el 29 de noviembre (5/10/2026)",
         "url": "https://www.articulo14.es/politica/pedro-sanchez-convoca-elecciones-generales-anticipadas-el-29-de-noviembre-20261005.html"
       },
       {
-        "titulo": "Cuáles son los plazos si Sánchez convoca elecciones (Orain, 2/10/2026)",
-        "url": "https://orain.eus/es/politica/2026/10/02/cuales-son-los-plazos-sanchez-convoca-elecciones/"
+        "titulo": "Primicias: El presidente del Gobierno Pedro Sánchez adelanta las elecciones generales para el 29 de noviembre de 2026 (5/10/2026)",
+        "url": "https://primicias.ec/internacional/pedro-sanchez-convoca-elecciones-generales-espana-134126/"
       }
     ]
   },
@@ -360,16 +480,16 @@
     "cita": "esa foto famosa del siglo pasado, de hace 30 años",
     "afirmacion": "La foto de Feijóo con Marcial Dorado es de hace unos 30 años (años 1994-1996).",
     "veredicto": "verdadero",
-    "explicacion": "Las fotografías de Feijóo con Marcial Dorado en el yate que publicó El País en 2013 están fechadas en el verano de 1995 (hace unos 31 años); otra imagen publicada en 2015 se fecha en 1997. «Hace 30 años» es un redondeo razonable.",
+    "explicacion": "Reuters (2/4/2013) recoge que El País publicó entonces las fotografías de Feijóo con Marcial Dorado en un yate, que fechó en el verano de 1995; Ara las sitúa en los años 90, y el propio Feijóo dijo en la entrevista «del 94, del 95, del 96». De 1995 a 2026 pasan unos 31 años, así que «hace 30 años» es un redondeo razonable.",
     "confianza": "media",
     "fuentes": [
       {
-        "titulo": "Núñez Feijóo descarta dimitir por unas fotos antiguas con un narco (LegalToday/Reuters, 2/4/2013)",
+        "titulo": "LegalToday/Reuters: Núñez Feijóo descarta dimitir por unas fotos antiguas con un narco (2/4/2013)",
         "url": "https://www.legaltoday.com/rincon-de-reuters/nunez-feijoo-descarta-dimitir-por-unas-fotos-antiguas-con-un-narco-2013-04-02/"
       },
       {
-        "titulo": "Las fotografías de Feijóo y Marcial Dorado: cuáles son montajes y cuáles sí se han publicado (Maldita.es)",
-        "url": "https://maldita.es/malditobulo/20241029/fotografias-feijoo-dorado-montajes-falsas/"
+        "titulo": "Ara: Marcial Dorado y la relación que tenía Feijóo con él (serie «Hacia el 23-J»)",
+        "url": "https://es.ara.cat/politica/elecciones-generales/marcial-dorado-relacion-tenia-feijoo_1_4757899.html"
       }
     ]
   },
@@ -377,17 +497,25 @@
     "minuto": "1:08:43",
     "cita": "Cuca es la que lleva en el partido los asuntos relacionados con tribunales",
     "afirmacion": "Cuca Gamarra es quien lleva en el PP los asuntos relacionados con tribunales.",
-    "veredicto": "no_verificable",
-    "explicacion": "Gamarra es vicesecretaria de Regeneración Institucional del PP y habla con frecuencia de asuntos judiciales; en junio de 2025 se informó, citando fuentes del partido, de que llevaría el área de Justicia. No he encontrado una fuente que confirme que dirige los asuntos de tribunales (el área jurídica) del partido.",
-    "confianza": "baja",
+    "veredicto": "mayormente_verdadero",
+    "explicacion": "Gamarra es vicesecretaria de Regeneración Institucional del PP desde julio de 2025 (ficha del partido), y El Independiente (1/7/2025), El Español (14/6/2026) y Artículo 14 (7/11/2026) coinciden en que su área incluye Justicia (El Español y Artículo 14 añaden Interior y Defensa). Que «lleve los asuntos de tribunales» es una descripción razonable de ese cometido, aunque el PP no publica el reparto interno de las causas.",
+    "confianza": "media",
     "fuentes": [
       {
-        "titulo": "Cuca Gamarra abandonará la secretaría general del PP (Noticias de Navarra, 30/6/2025)",
-        "url": "https://www.noticiasdenavarra.com/politica/2025/06/30/cuca-gamarra-abandonara-secretaria-general-9822760.amp.html"
+        "titulo": "Partido Popular: María Concepción Gamarra Ruiz Clavijo (ficha de estructura)",
+        "url": "https://www.pp.es/estructura/maria-concepcion-gamarra-ruiz-clavijo/"
       },
       {
-        "titulo": "Gamarra reconoce una reunión entre el abogado del PP y Koldo (elDiario.es, 9/11/2026)",
-        "url": "https://www.eldiario.es/1_d0461b"
+        "titulo": "El Independiente: Feijóo compensará a Gamarra con un puesto destacado en un futuro Gobierno popular (1/7/2025)",
+        "url": "https://www.elindependiente.com/espana/2025/07/01/feijoo-compensara-a-gamarra-con-un-puesto-destacado-en-un-futuro-gobierno-popular/amp/"
+      },
+      {
+        "titulo": "El Español: Perfil de Cuca Gamarra (14/6/2026)",
+        "url": "https://www.elespanol.com/espana/politica/20260614/cuca-gamarra-sanchismo-estudiara-movimiento-ocupado-poder-lucrarse-tramas-criminales/1003744282442_0.html"
+      },
+      {
+        "titulo": "Artículo 14: El PP rechaza que el paso a un lado de Alberto Durán tenga relación con su reunión con Koldo García (7/11/2026)",
+        "url": "https://www.articulo14.es/politica/el-pp-rechaza-que-el-paso-a-un-lado-de-alberto-duran-tenga-relacion-con-su-reunion-con-koldo-garcia-20261107.html"
       }
     ]
   },
@@ -395,17 +523,21 @@
     "minuto": "1:09:47",
     "cita": "hablaba con distintos abogados de distintas partes",
     "afirmacion": "El abogado del PP (Alberto Durán) hablaba con abogados de otras partes del proceso, incluido el de Koldo, y Gamarra lo sabía.",
-    "veredicto": "mayormente_verdadero",
-    "explicacion": "El 9 de noviembre de 2026 Gamarra reconoció que hubo una reunión entre el abogado Alberto Durán y Koldo García, tras haberla negado otros portavoces del PP; Artículo 14 también la confirma por sus fuentes. Que Gamarra lo supiera de antemano no está acreditado, y Koldo afirma que en la reunión se le ofreció dinero, algo que el PP niega y que no está probado.",
+    "veredicto": "no_verificable",
+    "explicacion": "El 9/11/2026 Gamarra reconoció que hubo una reunión entre el abogado Alberto Durán y Koldo García, que otros dirigentes del PP habían negado antes (elDiario.es). Ninguna fuente prueba que Durán hablara con otros abogados de las partes ni que Gamarra lo supiera de antemano: lo único documentado es un contacto con el propio Koldo, quien dice que le ofrecieron dinero, algo que el PP niega y que no está probado. Artículo 14 recoge además fricciones internas entre Durán y Gamarra.",
     "confianza": "media",
     "fuentes": [
       {
-        "titulo": "Gamarra reconoce una reunión entre el abogado del PP y Koldo (elDiario.es, 9/11/2026)",
+        "titulo": "elDiario.es: Gamarra reconoce una reunión entre el abogado del PP y Koldo (9/11/2026)",
         "url": "https://www.eldiario.es/1_d0461b"
       },
       {
-        "titulo": "El PP rechaza que el paso a un lado de Alberto Durán tenga relación con su reunión con Koldo García (Artículo 14, 7/11/2026)",
+        "titulo": "Artículo 14: El PP rechaza que el paso a un lado de Alberto Durán tenga relación con su reunión con Koldo García (7/11/2026)",
         "url": "https://www.articulo14.es/politica/el-pp-rechaza-que-el-paso-a-un-lado-de-alberto-duran-tenga-relacion-con-su-reunion-con-koldo-garcia-20261107.html"
+      },
+      {
+        "titulo": "elDiario.es: Koldo García acusa al abogado del PP de ofrecerle un millón de euros (5/11/2026)",
+        "url": "https://www.eldiario.es/1_d01fa8"
       }
     ]
   },
@@ -414,12 +546,16 @@
     "cita": "Sí, sí, es un abogado del partido",
     "afirmacion": "El abogado del PP que habló con Koldo sigue en el partido.",
     "veredicto": "mayormente_verdadero",
-    "explicacion": "Según Artículo 14, Alberto Durán (unos 14 años vinculado al PP) sigue ligado al partido y Génova dice que mantiene buena relación con Tellado. Pero hace mes y medio fue apartado de las causas judiciales más mediáticas en las que el PP es acusación, y la prensa habla de que «dio un paso a un lado».",
-    "confianza": "media",
+    "explicacion": "Según Artículo 14 (7/11/2026), Génova dice que Alberto Durán, ligado al PP desde hace unos 14 años, «sigue ligado al partido» y mantiene buena relación con Tellado. Pero elDiario.es lo describe como «abogado del PP hasta hace unos meses» en los principales casos y recoge que el partido lo apartó de ellos. Solo consta la versión del propio partido y no hay documento que acredite su vínculo actual.",
+    "confianza": "baja",
     "fuentes": [
       {
-        "titulo": "El PP rechaza que el paso a un lado de Alberto Durán tenga relación con su reunión con Koldo García (Artículo 14, 7/11/2026)",
+        "titulo": "Artículo 14: El PP rechaza que el paso a un lado de Alberto Durán tenga relación con su reunión con Koldo García (7/11/2026)",
         "url": "https://www.articulo14.es/politica/el-pp-rechaza-que-el-paso-a-un-lado-de-alberto-duran-tenga-relacion-con-su-reunion-con-koldo-garcia-20261107.html"
+      },
+      {
+        "titulo": "elDiario.es: Koldo, el abogado Alberto Durán y el PP (5/11/2026, actualizado 6/11)",
+        "url": "https://www.eldiario.es/1_d02a9f"
       }
     ]
   },
@@ -428,15 +564,23 @@
     "cita": "este abogado con carácter general no llevaba los asuntos que afectaban a temas penales en la Audiencia Nacional y en el Tribunal Supremo",
     "afirmacion": "El abogado en cuestión, con carácter general, no llevaba los asuntos penales del PP en la Audiencia Nacional y el Tribunal Supremo.",
     "veredicto": "enganoso",
-    "explicacion": "Artículo 14 describe a Durán como el abogado que dirigió la acusación popular del PP en el caso Koldo y en el caso del hermano de Sánchez, y que fue apartado hace mes y medio de las principales causas penales en las que el PP es acusación; el PP dirige las acusaciones populares del caso Koldo tanto en el Supremo como en la Audiencia Nacional. Eso no encaja con que «con carácter general» no llevase esos asuntos. Reservas: el reparto interno de causas solo consta por prensa, no por documentos del partido, y por eso no se califica de falso.",
+    "explicacion": "Artículo 14 (7/11/2026) dice que Durán dirigió la acusación popular del PP en el caso Koldo y en el del hermano de Sánchez, y elDiario.es (5-6/11/2026) lo llama «abogado del PP hasta hace unos meses en los principales casos de corrupción que afectan al Gobierno y al PSOE» y dice que el partido lo apartó de las principales causas de la Audiencia Nacional. Además, un juez unificó en 2024 las acusaciones populares del caso Koldo bajo la dirección letrada del PP, tanto en el Supremo como en la Audiencia Nacional. Eso no encaja con que «con carácter general» no llevase esos asuntos, aunque el reparto interno solo consta por prensa y no por documentos del partido.",
     "confianza": "media",
     "fuentes": [
       {
-        "titulo": "El PP rechaza que el paso a un lado de Alberto Durán tenga relación con su reunión con Koldo García (Artículo 14, 7/11/2026)",
+        "titulo": "Artículo 14: El PP rechaza que el paso a un lado de Alberto Durán tenga relación con su reunión con Koldo García (7/11/2026)",
         "url": "https://www.articulo14.es/politica/el-pp-rechaza-que-el-paso-a-un-lado-de-alberto-duran-tenga-relacion-con-su-reunion-con-koldo-garcia-20261107.html"
       },
       {
-        "titulo": "El PP también dirigirá las acusaciones populares del caso Koldo en la Audiencia Nacional (Infobae/Europa Press, 30/12/2024)",
+        "titulo": "elDiario.es: el PP aparta a su abogado Alberto Durán de las principales causas de la Audiencia Nacional (5-6/11/2026)",
+        "url": "https://www.eldiario.es/1_d0246f"
+      },
+      {
+        "titulo": "elDiario.es: Koldo, el abogado Alberto Durán y el PP (5/11/2026, actualizado 6/11)",
+        "url": "https://www.eldiario.es/1_d02a9f"
+      },
+      {
+        "titulo": "Infobae/EFE: El PP también dirigirá las acusaciones populares del caso Koldo en la Audiencia Nacional (30/12/2024)",
         "url": "https://www.infobae.com/espana/agencias/2024/12/30/el-pp-tambien-dirigira-las-acusaciones-populares-del-caso-koldo-en-la-audiencia-nacional/"
       }
     ]
@@ -446,12 +590,20 @@
     "cita": "Pero es que hay 17 sumarios",
     "afirmacion": "El PP está personado en 17 sumarios.",
     "veredicto": "no_verificable",
-    "explicacion": "No he encontrado ninguna fuente independiente que cuantifique las causas en que el PP está personado. El único dato cercano es la web del PP sobre corrupción ligada al PSOE, que hablaba de 15 causas judiciales, una cifra propia del partido y anterior.",
+    "explicacion": "Ninguna fuente cuantifica en cuántas causas está personado el PP. Las cifras públicas son recuentos del propio partido sobre causas que afectan al PSOE (15 el 14/6/2026 en su web y «casi una veintena» el 29/6/2026), y no equivalen a causas con el PP personado. Sí consta que el PP dirige las acusaciones populares del caso Koldo en el Supremo y la Audiencia Nacional.",
     "confianza": "baja",
     "fuentes": [
       {
-        "titulo": "El PP crea una web con el mapa de la corrupción ligada al PSOE: 15 causas judiciales (Vozpópuli)",
+        "titulo": "Vozpópuli: El PP crea una web con el mapa de la corrupción ligada al PSOE, 15 causas (14/6/2026)",
         "url": "https://www.vozpopuli.com/espana/politica/el-pp-crea-una-web-con-el-mapa-de-la-corrupcion-ligada-al-psoe-15-causas-judiciales-94-investigados-y-1817-anos-de-carcel.html"
+      },
+      {
+        "titulo": "El Español: Tellado y los 121 imputados del PSOE en casi una veintena de causas (29/6/2026)",
+        "url": "https://www.elespanol.com/espana/politica/20260629/tellado-imputacion-presidenta-sepi-hoy-dia-psoe-imputados-diputados/1003744304113_0.html"
+      },
+      {
+        "titulo": "Infobae/EFE: El PP también dirigirá las acusaciones populares del caso Koldo en la Audiencia Nacional (30/12/2024)",
+        "url": "https://www.infobae.com/espana/agencias/2024/12/30/el-pp-tambien-dirigira-las-acusaciones-populares-del-caso-koldo-en-la-audiencia-nacional/"
       }
     ]
   },
@@ -460,20 +612,28 @@
     "cita": "No hay ningún ofrecimiento de dinero de mi partido a nadie",
     "afirmacion": "El PP no ha ofrecido dinero a Koldo García ni a nadie.",
     "veredicto": "no_verificable",
-    "explicacion": "Koldo García afirma que el abogado Alberto Durán le propuso pagarle la defensa, rebaja de pena y un millón de euros a cambio de declarar contra el Gobierno; el PP lo niega con rotundidad. La reunión sí está confirmada, pero no hay pruebas públicas de la oferta ni de su ausencia: el PSOE ha presentado una denuncia ante la Fiscalía (13/11/2026), de modo que es cuestión abierta.",
+    "explicacion": "Koldo García afirma que el abogado Alberto Durán le planteó pagar su defensa, rebajar su pena y darle un millón de euros a cambio de declarar contra el Gobierno; el PP lo niega y Durán lo rechaza ante elDiario.es. La reunión entre ambos la reconoció Gamarra el 9/11/2026, pero no hay pruebas públicas de la oferta ni de su ausencia, y el PSOE presentó el 13/11/2026 una denuncia ante la Fiscalía. Es una cuestión abierta.",
     "confianza": "media",
     "fuentes": [
       {
-        "titulo": "El PP rechaza que el paso a un lado de Alberto Durán tenga relación con su reunión con Koldo García (Artículo 14, 7/11/2026)",
+        "titulo": "Artículo 14: El PP rechaza que el paso a un lado de Alberto Durán tenga relación con su reunión con Koldo García (7/11/2026)",
         "url": "https://www.articulo14.es/politica/el-pp-rechaza-que-el-paso-a-un-lado-de-alberto-duran-tenga-relacion-con-su-reunion-con-koldo-garcia-20261107.html"
       },
       {
-        "titulo": "El PSOE denuncia ante la Fiscalía los presuntos pagos del PP a Koldo que Feijóo niega (Infobae/EFE, 13/11/2026)",
+        "titulo": "Infobae/EFE: El PSOE denuncia ante la Fiscalía los presuntos pagos del PP a Koldo que Feijóo niega (13/11/2026)",
         "url": "https://www.infobae.com/espana/agencias/2026/11/13/el-psoe-denuncia-ante-la-fiscalia-los-presuntos-pagos-del-pp-a-koldo-que-feijoo-niega/"
       },
       {
-        "titulo": "El PP niega la oferta de un millón a Koldo García y Ayuso le reta a mostrar las pruebas (Moncloa.com, 6/11/2026)",
-        "url": "https://www.moncloa.com/2026/11/06/pp-koldo-garcia-ayuso-pruebas-3463129"
+        "titulo": "Euronews: El PSOE denuncia en la Fiscalía supuestos pagos del PP a Koldo tras negarlos Feijóo (13/11/2026)",
+        "url": "https://es.euronews.com/2026/11/13/psoe-denuncia-fiscalia-supuestos-pagos-pp-koldo-negarlos-feijoo"
+      },
+      {
+        "titulo": "elDiario.es: Koldo García acusa al abogado del PP de ofrecerle un millón de euros (5/11/2026)",
+        "url": "https://www.eldiario.es/1_d01fa8"
+      },
+      {
+        "titulo": "elDiario.es: Gamarra reconoce una reunión entre el abogado del PP y Koldo (9/11/2026)",
+        "url": "https://www.eldiario.es/1_d0461b"
       }
     ]
   },
@@ -482,16 +642,20 @@
     "cita": "hemos tenido que pedir un acto de conciliación con el periodista que ha dicho que el PP le había ofrecido un millón de euros al señor Coldo y hemos tenido que también denunciar por responsabilidad subsidiaria a la televisión",
     "afirmacion": "El PP ha presentado un acto de conciliación contra el periodista que informó del supuesto ofrecimiento de un millón a Koldo y ha denunciado por responsabilidad subsidiaria a la televisión que lo emitió.",
     "veredicto": "no_verificable",
-    "explicacion": "Solo consta la afirmación del propio Feijóo en esta entrevista; la agencia que la recoge no cita ninguna fuente independiente ni identifica al periodista ni a la televisión, y no he encontrado el acto de conciliación ni la denuncia en ningún registro o información previa. La información original proviene de la Cadena SER.",
+    "explicacion": "Solo consta lo que dice Feijóo en esta entrevista: que el PP ha pedido «un acto de conciliación» contra el periodista que informó de la oferta y que ha denunciado «de forma subsidiaria» a la televisión que la emitió. Los dos medios que lo recogen (13/11/2026) no identifican al periodista ni a la cadena, y El Español (10/11/2026) cuenta que Feijóo dijo que el PP «ha denunciado al periodista», sin precisar la vía ni la fecha. No se ha localizado ningún registro judicial ni comunicado del PP que lo confirme.",
     "confianza": "baja",
     "fuentes": [
       {
-        "titulo": "El PSOE denuncia ante la Fiscalía los presuntos pagos del PP a Koldo que Feijóo niega (Infobae/EFE, 13/11/2026)",
+        "titulo": "Infobae/EFE: El PSOE denuncia ante la Fiscalía los presuntos pagos del PP a Koldo que Feijóo niega (13/11/2026)",
         "url": "https://www.infobae.com/espana/agencias/2026/11/13/el-psoe-denuncia-ante-la-fiscalia-los-presuntos-pagos-del-pp-a-koldo-que-feijoo-niega/"
       },
       {
-        "titulo": "Feijóo, en The Wild Project (Vozpópuli)",
-        "url": "https://www.vozpopuli.com/espana/politica/feijoo-en-the-wild-project-no-tengo-fotos-con-prostitutas-pagadas-con-fondos-publicos.html"
+        "titulo": "Euronews: El PSOE denuncia en la Fiscalía supuestos pagos del PP a Koldo tras negarlos Feijóo (13/11/2026)",
+        "url": "https://es.euronews.com/2026/11/13/psoe-denuncia-fiscalia-supuestos-pagos-pp-koldo-negarlos-feijoo"
+      },
+      {
+        "titulo": "El Español: Feijóo acusa a Sánchez de no respetar «a los muertos» de Urda y denuncia la «difamación» de Koldo al PP ante los tribunales (10/11/2026)",
+        "url": "https://www.elespanol.com/espana/politica/20261110/feijoo-acusa-sanchez-no-respetar-muertos-urda-lleva-juez-difamacion-koldo-pp/1003744453358_0.html"
       }
     ]
   },
@@ -500,15 +664,23 @@
     "cita": "un señor condenado a 19 años de cárcel",
     "afirmacion": "Koldo García ha sido condenado a 19 años de cárcel.",
     "veredicto": "verdadero",
-    "explicacion": "El Tribunal Supremo condenó el 22 de junio de 2026 a Koldo García a 19 años y 8 meses de prisión por organización criminal, cohecho, malversación y tráfico de influencias en el caso mascarillas, con cumplimiento efectivo máximo de unos 15 años. Los 19 años son un redondeo razonable; la defensa de Ábalos ha acudido al Constitucional, por lo que el procedimiento puede no estar agotado.",
+    "explicacion": "El Tribunal Supremo condenó el 22/6/2026 a Koldo García a 19 años, 8 meses y 1 día de prisión por organización criminal, cohecho, tráfico de influencias y malversación, con un máximo de cumplimiento efectivo de 15 años. La sentencia se adoptó por unanimidad. Los 19 años de Feijóo son un redondeo a la baja razonable; la defensa de Ábalos ha acudido al Constitucional.",
     "confianza": "alta",
     "fuentes": [
       {
-        "titulo": "El Supremo condena a Ábalos a 24 años y a Koldo a 19, y a Aldama a 4 (LegalToday, 22/6/2026)",
+        "titulo": "Tribunal Supremo: Nota resumen de la sentencia de la causa especial 20775/2020, «caso Ábalos» o «caso mascarillas» (22/6/2026)",
+        "url": "https://www.poderjudicial.es/stfls/TRIBUNAL%20SUPREMO/DOCUMENTOS%20DE%20INTER%C3%89S/Nota%20resumen%20STS%20Causa%20Especial%2020775-2020%20Sala%20II%2022JUN26.docx"
+      },
+      {
+        "titulo": "Poder Judicial (CGPJ): El Tribunal Supremo condena al exministro José Luis Ábalos y a su exasesor Koldo García a 24 años y 19 años de prisión, respectivamente, por delitos de organización criminal, cohecho, malversación y tráfico de influencias (22/6/2026)",
+        "url": "https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Tribunal-Supremo/Noticias-Judiciales/El-Tribunal-Supremo-condena-al-exministro-Jose-Luis-Abalos-y-a-su-exasesor-Koldo-Garcia-a-24-anos-y-19-anos-de-prision--respectivamente--por-delitos-de-organizacion-criminal--cohecho--malversacion-y-trafico-de-influencias"
+      },
+      {
+        "titulo": "LegalToday: El Supremo condena a Ábalos a 24 años, a Koldo a 19 y a Aldama a 4 (22/6/2026)",
         "url": "https://www.legaltoday.com/practica-juridica/derecho-penal/el-supremo-condena-a-abalos-a-24-anos-de-carcel-a-19-a-koldo-y-a-4-a-aldama-por-el-caso-mascarillas-2026-06-22/"
       },
       {
-        "titulo": "El Supremo condena a Ábalos a 24 años de cárcel y a Koldo García a 19 años (RTVC, 22/6/2026)",
+        "titulo": "RTVC: El Supremo condena a Ábalos a 24 años de cárcel y a Koldo García a 19 años (22/6/2026)",
         "url": "https://rtvc.es/el-supremo-condena-a-abalos-a-24-anos-de-carcel-22-junio-2026/"
       }
     ]
@@ -518,16 +690,20 @@
     "cita": "Y ahora resulta que le das verosimilitud cuando te interesa",
     "afirmacion": "Sánchez ignoraba las mordidas y ahora da verosimilitud a lo que dice Koldo cuando le interesa.",
     "veredicto": "no_verificable",
-    "explicacion": "Es una caracterización retórica dirigida a Sánchez. Lo comprobable es que el PSOE (Rebeca Torró) exigió a Feijóo explicaciones sobre la oferta que denuncia Koldo y que presentó una denuncia ante la Fiscalía; no he encontrado una declaración de Sánchez que dé «verosimilitud» a Koldo ni una que acredite que ignoraba las mordidas más allá de su negativa habitual.",
+    "explicacion": "Es una caracterización retórica de la actitud de Sánchez. Lo comprobable es que Rebeca Torró (PSOE) exigió el 5/11/2026 explicaciones a Feijóo, pero condicionó su juicio a que «se confirme el relato» de Koldo, y que el PSOE presentó el 13/11/2026 una denuncia ante la Fiscalía. No se ha hallado una declaración de Sánchez que dé «verosimilitud» a Koldo ni una que acredite que ignoraba las mordidas más allá de su negativa habitual.",
     "confianza": "baja",
     "fuentes": [
       {
-        "titulo": "El PSOE exige a Feijóo que aclare el supuesto pacto de un millón con Koldo (Onda Vasca, 5/11/2026)",
+        "titulo": "Onda Vasca: El PSOE exige a Feijóo que aclare el supuesto pacto de un millón con Koldo (5/11/2026)",
         "url": "https://www.ondavasca.com/el-psoe-exige-a-feijoo-que-aclare-el-supuesto-pacto-de-un-millon-de-euros-con-koldo/"
       },
       {
-        "titulo": "El PSOE denuncia ante la Fiscalía los presuntos pagos del PP a Koldo que Feijóo niega (Infobae/EFE, 13/11/2026)",
+        "titulo": "Infobae/EFE: El PSOE denuncia ante la Fiscalía los presuntos pagos del PP a Koldo que Feijóo niega (13/11/2026)",
         "url": "https://www.infobae.com/espana/agencias/2026/11/13/el-psoe-denuncia-ante-la-fiscalia-los-presuntos-pagos-del-pp-a-koldo-que-feijoo-niega/"
+      },
+      {
+        "titulo": "Euronews: El PSOE denuncia en la Fiscalía supuestos pagos del PP a Koldo tras negarlos Feijóo (13/11/2026)",
+        "url": "https://es.euronews.com/2026/11/13/psoe-denuncia-fiscalia-supuestos-pagos-pp-koldo-negarlos-feijoo"
       }
     ]
   },
@@ -536,16 +712,20 @@
     "cita": "El PP pide 30 años de cárcel para el señor Cordó",
     "afirmacion": "El PP, como acusación popular, pidió 30 años de cárcel para Koldo García.",
     "veredicto": "verdadero",
-    "explicacion": "En su escrito de acusación (noviembre de 2025) las acusaciones populares dirigidas por el PP pidieron 30 años para Ábalos y para Koldo, y mantuvieron la petición en mayo de 2026 en el juicio.",
-    "confianza": "alta",
+    "explicacion": "En su escrito de acusación, difundido el 20/11/2025, las acusaciones populares dirigidas por el PP pidieron 30 años de cárcel para Ábalos y para Koldo García, y mantuvieron esa petición en las conclusiones definitivas del juicio (4/5/2026). La vicesecretaria Carmen Fúnez lo repitió el 7/11/2026: «Lo que le pedimos fue 30 años de cárcel».",
+    "confianza": "media",
     "fuentes": [
       {
-        "titulo": "El PP pide 30 años de cárcel para Ábalos por la trama mascarillas (Menorca.info, 20/11/2025)",
+        "titulo": "Menorca.info/Europa Press: El PP pide 30 años de cárcel para Ábalos por la trama mascarillas del caso Koldo (20/11/2025)",
         "url": "https://www.menorca.info/actualidad/nacional/2025/11/20/2515917/pide-anos-carcel-para-abalos-por-trama-mascarillas-del-caso-koldo.html"
       },
       {
-        "titulo": "Anticorrupción mantiene las penas para Ábalos, Koldo y Aldama y el PP reduce a 5 los años para el empresario (Periódico de Ibiza, 4/5/2026)",
+        "titulo": "Periódico de Ibiza/Europa Press: Anticorrupción mantiene las penas para Ábalos, Koldo y Aldama (4/5/2026)",
         "url": "https://www.periodicodeibiza.es/noticias/nacional/2026/05/04/2622773/anticorrupcion-mantiene-penas-para-abalos-koldo-aldama-reduce-anos-carcel-para-empresario.html"
+      },
+      {
+        "titulo": "Artículo 14: El PP rechaza que el paso a un lado de Alberto Durán tenga relación con su reunión con Koldo García (7/11/2026)",
+        "url": "https://www.articulo14.es/politica/el-pp-rechaza-que-el-paso-a-un-lado-de-alberto-duran-tenga-relacion-con-su-reunion-con-koldo-garcia-20261107.html"
       }
     ]
   },
@@ -554,15 +734,23 @@
     "cita": "El fiscal 19 y al final tiene una sentencia de prisión de 19 años",
     "afirmacion": "La Fiscalía pidió 19 años para Koldo y la sentencia fue de 19 años.",
     "veredicto": "verdadero",
-    "explicacion": "Anticorrupción pidió 19 años y medio para Koldo y el Supremo le impuso 19 años y 8 meses, de modo que ambas cifras se ajustan a un redondeo razonable a 19 años.",
+    "explicacion": "Anticorrupción pidió 19 años y medio para Koldo (escrito de noviembre de 2025, mantenido en mayo de 2026) y el Supremo le impuso el 22/6/2026 19 años, 8 meses y 1 día, de modo que ambas cifras se ajustan a un redondeo razonable a 19 años.",
     "confianza": "alta",
     "fuentes": [
       {
-        "titulo": "El Supremo condena a Ábalos a 24 años y a Koldo a 19, y a Aldama a 4 (LegalToday, 22/6/2026)",
-        "url": "https://www.legaltoday.com/practica-juridica/derecho-penal/el-supremo-condena-a-abalos-a-24-anos-de-carcel-a-19-a-koldo-y-a-4-a-aldama-por-el-caso-mascarillas-2026-06-22/"
+        "titulo": "Tribunal Supremo: Nota resumen de la sentencia de la causa especial 20775/2020, «caso Ábalos» o «caso mascarillas» (22/6/2026)",
+        "url": "https://www.poderjudicial.es/stfls/TRIBUNAL%20SUPREMO/DOCUMENTOS%20DE%20INTER%C3%89S/Nota%20resumen%20STS%20Causa%20Especial%2020775-2020%20Sala%20II%2022JUN26.docx"
       },
       {
-        "titulo": "Anticorrupción mantiene las penas para Ábalos, Koldo y Aldama (Periódico de Ibiza, 4/5/2026)",
+        "titulo": "Poder Judicial (CGPJ): El Tribunal Supremo condena al exministro José Luis Ábalos y a su exasesor Koldo García a 24 años y 19 años de prisión, respectivamente, por delitos de organización criminal, cohecho, malversación y tráfico de influencias (22/6/2026)",
+        "url": "https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Tribunal-Supremo/Noticias-Judiciales/El-Tribunal-Supremo-condena-al-exministro-Jose-Luis-Abalos-y-a-su-exasesor-Koldo-Garcia-a-24-anos-y-19-anos-de-prision--respectivamente--por-delitos-de-organizacion-criminal--cohecho--malversacion-y-trafico-de-influencias"
+      },
+      {
+        "titulo": "Menorca.info/Europa Press: El PP pide 30 años de cárcel para Ábalos por la trama mascarillas del caso Koldo (20/11/2025)",
+        "url": "https://www.menorca.info/actualidad/nacional/2025/11/20/2515917/pide-anos-carcel-para-abalos-por-trama-mascarillas-del-caso-koldo.html"
+      },
+      {
+        "titulo": "Periódico de Ibiza/Europa Press: Anticorrupción mantiene las penas para Ábalos, Koldo y Aldama (4/5/2026)",
         "url": "https://www.periodicodeibiza.es/noticias/nacional/2026/05/04/2622773/anticorrupcion-mantiene-penas-para-abalos-koldo-aldama-reduce-anos-carcel-para-empresario.html"
       }
     ]
