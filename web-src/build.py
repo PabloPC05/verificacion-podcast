@@ -1851,7 +1851,7 @@ def comparativa(hechas):
     if len(hechas) < 2:
         return ""
     filas_v = [("falso", "Falsas"), ("enganoso", "Engañosas")]
-    resto_v = [("mayormente_verdadero", "Casi ciertas"), ("verdadero", "Verdaderas"), ("no_verificable", "No verificables")]
+    buenas_v = [("mayormente_verdadero", "Casi ciertas"), ("verdadero", "Verdaderas")]
 
     def pct(n, total):
         return f"{round(100 * n / total)} %" if total else "—"
@@ -1881,7 +1881,11 @@ def comparativa(hechas):
               for k, nombre in filas_v]
     filas.append(("Falsas o engañosas", "".join(celda_n(m, m["malas"]) for m in hechas), ' class="fuerte"'))
     filas += [(f'<i class="tono-{k}"></i>{nombre}', "".join(celda_n(m, m["total"][k]) for m in hechas), f' class="tono-{k}"')
-              for k, nombre in resto_v]
+              for k, nombre in buenas_v]
+    filas.append(("Verdaderas o casi ciertas", "".join(
+        celda_n(m, m["total"]["verdadero"] + m["total"]["mayormente_verdadero"]) for m in hechas), ' class="fuerte"'))
+    filas.append(('<i class="tono-no_verificable"></i>No verificables',
+                  "".join(celda_n(m, m["total"]["no_verificable"]) for m in hechas), ' class="tono-no_verificable"'))
     filas.append(("Reparto", "".join(
         '<td><div class="reparto">' + "".join(f'<i class="tono-{k}" style="flex:{m["total"][k]}"></i>' for k in ORDEN if m["total"][k])
         + "</div></td>" for m in hechas), ""))
