@@ -17,13 +17,12 @@ from pathlib import Path
 from urllib.parse import quote, urlparse
 
 import api_publica
-import panel as estadisticas
+import estadisticas
 
 RAIZ = Path(__file__).resolve().parent.parent
 ENTREVISTAS = RAIZ / "entrevistas"
 SALIDA = RAIZ / "web"
-# Datos estáticos de la API. Vercel no sirve ficheros estáticos dentro de web/api/ en cuanto ahí hay una función
-# (web/api/estadisticas.js), así que se guardan en web/datos/ y vercel.json los publica en /api y /api/v1/*.
+# Datos estáticos de la API: se guardan en web/datos/ y vercel.json los publica en /api y /api/v1/*.
 # En local (python3 -m http.server -d web) están en /datos/v1/.
 DATOS = SALIDA / "datos"
 REPO = "https://github.com/PabloPC05/verificacion-podcast"
@@ -154,7 +153,7 @@ SCALAR = "1.76.2"  # @scalar/api-reference, versión fijada: subirla a mano tras
 #     | openssl dgst -sha384 -binary | openssl base64 -A
 SCALAR_SRI = "sha384-mCh2A/B6vkfhiHyzwBZm7lbFmEK5fE/96Kbtk+RH1zei1P/XEt0I2MCiG6WfZdor"
 # Umami Cloud (estadísticas de visitas, sin cookies). Vacío = la web sale sin seguimiento.
-# El ID es público (va en el HTML); la clave de la API no: vive en Vercel como UMAMI_API_KEY.
+# El ID es público (va en el HTML). Las cifras se ven en el panel de Umami Cloud, no en la web.
 UMAMI_ID = "83bf64a7-e92e-4617-80d2-bb6a92bb2b8e"
 LOGOS = {"PSOE": "psoe.svg", "PP": "pp.svg", "Frente Amplio": "frente-amplio.svg"}
 # Retratos de web-src/fotos: recortes cuadrados de 320 px, centrados en la cara, de las miniaturas de Wikimedia Commons.
@@ -186,10 +185,20 @@ def retrato(m, extra=""):
             f'decoding="async"><span class="insignia" title="{e(m.get("partido") or "")}">{insignia(m)}</span></span>')
 
 
+def barra_reparto(m, clase="barra-reparto"):
+    """Barra del 100 % de las afirmaciones de una entrevista, partida por veredicto (en el orden de la leyenda)."""
+    total = m["suma"] or 1
+    trozos = [(k, m["total"][k]) for k in ORDEN if m["total"][k]]
+    pct = lambda n: f"{round(100 * n / total)} %"
+    etiqueta = ", ".join(f"{n} {PLURAL[k].lower()} ({pct(n)})" for k, n in trozos)
+    return (f'<div class="{clase}" role="img" aria-label="Reparto de las {m["suma"]} afirmaciones: {etiqueta}">'
+            + "".join(f'<i class="tono-{k}" style="flex:{n}" title="{PLURAL[k]}: {n} ({pct(n)})"></i>' for k, n in trozos) + "</div>")
+
+
 def creditos_fotos(entrevistas):
     partes = [f'<a href="{f["url"]}" target="_blank" rel="noopener noreferrer">{e(m["invitado"])}</a> ({e(f["autor"])}, {f["licencia"]})'
               for m in entrevistas if (f := FOTOS.get(m["slug"]))]
-    return f'<p class="creditos">Fotos vía Wikimedia Commons: {" · ".join(partes)}.</p>' if partes else ""
+    return f'<span class="creditos">Fotos vía Wikimedia Commons: {" · ".join(partes)}.</span>' if partes else ""
 DEFINICIONES = {
     "verdadero": "Los datos lo confirman.",
     "mayormente_verdadero": "Cierto en lo esencial, con una imprecisión menor.",
@@ -204,8 +213,8 @@ PIE = ('<p class="pie-quien"><a href="/quien">Proyecto personal e independiente 
 REPO_PABLO = "https://github.com/PabloPC05"
 
 
-def rellenar(plantilla, analitica=True, **valores):
-    plantilla = plantilla.replace("@@HEAD_MODO@@", HEAD_MODO + (estadisticas.seguimiento(UMAMI_ID, BASE) if analitica else "")).replace("@@PIE@@", PIE)
+def rellenar(plantilla, **valores):
+    plantilla = plantilla.replace("@@HEAD_MODO@@", HEAD_MODO + estadisticas.seguimiento(UMAMI_ID, BASE)).replace("@@PIE@@", PIE)
     for k, v in valores.items():
         plantilla = plantilla.replace(f"@@{k}@@", str(v))
     return plantilla
@@ -523,14 +532,19 @@ def menu(entrevistas, actual=None):
             partes.append(f'<span class="off" title="Verificación en curso">{e(m["invitado"])}</span>')
             continue
         s = e(m["slug"])
+        def malas(n):
+            return "1 falsa o engañosa" if n == 1 else f"{n} falsas o engañosas"
         temas = "".join(
-            f'<a href="/{s}#tema-{t["n"]}" data-tema="tema-{t["n"]}"><span>{e(t["titulo"])}</span>'
-            + (f'<b>{t["malas"]}</b>' if t["malas"] else "") + "</a>" for t in m["temas"] if t["total"])
+            f'<li><a href="/{s}#tema-{t["n"]}" data-tema="tema-{t["n"]}"><i aria-hidden="true">{t["n"]}</i><span>{e(t["titulo"])}</span>'
+            + (f'<b title="{malas(t["malas"])}"><span class="sr">, </span>{t["malas"]}<span class="sr"> {malas(t["malas"]).split(" ", 1)[1]}</span></b>'
+               if t["malas"] else "") + "</a></li>" for t in m["temas"] if t["total"])
         partes.append(
             f'<details class="desp{" actual" if m["slug"] == actual else ""}"><summary>{nombre_menu(m["invitado"])}</summary><div class="lista">'
-            f'<a class="fuerte" href="/{s}"><span>Línea temporal</span><small>{m["malas"]} falsas o engañosas de {m["suma"]}</small></a>'
-            f'<a class="fuerte" href="/{s}/transcripcion"><span>Transcripción completa</span></a>'
-            f'<p class="rot">Temas</p>{temas}</div></details>')
+            f'<div class="lista-cab">{retrato(m, " mini") or ""}<div><p class="nombre">{e(m["invitado"])}</p>'
+            f'<p class="cuanto">{e(m.get("partido") or "")} · <b>{m["malas"]}</b> falsas o engañosas de {m["suma"]}</p></div></div>'
+            f'<div class="lista-acc"><a class="principal" href="/{s}">{ICONO_LINEA}<span>Línea temporal</span></a>'
+            f'<a href="/{s}/transcripcion">{ICONO_TEXTO}<span>Transcripción</span></a></div>'
+            f'<p class="rot">Temas <span>· en rojo, cuántas falsas o engañosas</span></p><ol class="lista-temas">{temas}</ol></div></details>')
     return ('<header class="menu"><div class="ancho"><div class="m1"><a class="sello" href="/" title="Todas las entrevistas">Verificación</a>'
             + "".join(partes) + '<a class="dcha" href="/verificalo">Verifícalo tú</a><a href="/metodologia">Método</a><a href="/quien">Quién lo hace</a><a href="/api">API</a>'
             f'<a href="{REPO}" target="_blank" rel="noopener noreferrer">GitHub ↗</a>' + BOTON_MODO + '</div></div></header>' + JS_MENU)
@@ -540,9 +554,37 @@ JS_MENU = """<script>
 document.addEventListener("click", ev => document.querySelectorAll("details.desp[open]").forEach(d => {
   if (!d.contains(ev.target) || ev.target.closest(".lista a")) d.open = false;
 }));
-document.addEventListener("keydown", ev => { if (ev.key === "Escape") document.querySelectorAll("details.desp[open]").forEach(d => d.open = false); });
+document.addEventListener("keydown", ev => {
+  const abierto = document.querySelector("details.desp[open]");
+  if (ev.key === "Escape" && abierto) { abierto.open = false; abierto.querySelector("summary").focus(); return; }
+  if (!abierto || !["ArrowDown", "ArrowUp"].includes(ev.key)) return;
+  const enlaces = [...abierto.querySelectorAll(".lista a")], i = enlaces.indexOf(document.activeElement);
+  ev.preventDefault();
+  enlaces[ev.key === "ArrowDown" ? (i + 1) % enlaces.length : (i <= 0 ? enlaces.length - 1 : i - 1)].focus();
+});
+// El desplegable cuelga de la línea inferior del menú: se calcula dónde está esa línea respecto a su contenedor
+const colgar = d => {
+  const l = d.querySelector(".lista"), op = l.offsetParent; if (!op) return;
+  l.style.top = (document.querySelector(".menu").getBoundingClientRect().bottom - op.getBoundingClientRect().top) + "px";
+};
+document.querySelectorAll("details.desp").forEach(d => d.addEventListener("toggle", () => {
+  if (!d.open) return;
+  document.querySelectorAll("details.desp[open]").forEach(o => { if (o !== d) o.open = false; });
+  colgar(d);
+}));
+addEventListener("resize", () => document.querySelectorAll("details.desp[open]").forEach(colgar));
+const rutaActual = location.pathname.replace(/\\/$/, "");
+document.querySelectorAll(".lista-acc a").forEach(a => { if (a.pathname.replace(/\\/$/, "") === rutaActual) a.setAttribute("aria-current", "page"); });
 const medirMenu = () => document.documentElement.style.setProperty("--menu", document.querySelector(".menu").offsetHeight + "px");
 medirMenu(); addEventListener("resize", medirMenu);
+// Las cifras del hero cuentan de 0 a su valor al cargar (salvo con movimiento reducido)
+if (!matchMedia("(prefers-reduced-motion: reduce)").matches) addEventListener("DOMContentLoaded", () => document.querySelectorAll(".dato > b, .num > b").forEach((el, i) => {
+  const fin = parseInt(el.textContent, 10); if (!(fin > 0)) return;
+  el.style.minWidth = el.offsetWidth + "px"; el.style.display = "inline-block";
+  const t0 = performance.now() + 250 + i * 100, dur = 900;
+  const paso = t => { const x = Math.min(1, Math.max(0, (t - t0) / dur)); el.textContent = Math.round(fin * (1 - Math.pow(1 - x, 3))); if (x < 1) requestAnimationFrame(paso); };
+  el.textContent = "0"; requestAnimationFrame(paso);
+}));
 // Aviso breve para confirmar acciones; role=status hace que también lo lean los lectores de pantalla.
 const avisar = (texto, mal) => {
   let a = document.querySelector(".aviso");
@@ -598,6 +640,31 @@ ICONO_LINEA = ('<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d=
                '<circle cx="6" cy="6" r="2" class="lleno"/><circle cx="6" cy="12" r="2" class="lleno"/><circle cx="6" cy="18" r="2" class="lleno"/></svg>')
 ICONO_TEXTO = '<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l4 4v14H6zM14 3v5h5M9 12h7M9 16h7"/></svg>'
 ICONO_FLECHA = '<svg class="flecha" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>'
+# Botón flotante (abajo a la izquierda) que despliega la leyenda de veredictos. Lo usan la portada y las páginas de cada entrevista.
+FAB_LEYENDA = """<div class="fab" id="fab">
+<div class="fab-panel" id="fab-panel" role="dialog" aria-modal="false" aria-labelledby="fab-titulo" hidden>
+<p class="fab-titulo" id="fab-titulo" tabindex="-1">Qué significa cada color</p>
+@@LEYENDA_FAB@@
+</div>
+<button class="fab-boton" type="button" aria-expanded="false" aria-controls="fab-panel" aria-label="Ver la leyenda de veredictos">
+<span class="fab-ico" aria-hidden="true"><i class="tono-falso"></i><i class="tono-enganoso"></i><i class="tono-mayormente_verdadero"></i><i class="tono-verdadero"></i></span>
+<svg class="fab-x" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+<span class="fab-txt">Leyenda</span></button>
+</div>
+<script>
+(() => {
+  const fab = document.getElementById("fab"), boton = fab.querySelector(".fab-boton"), panel = document.getElementById("fab-panel");
+  const abrir = si => {
+    if (si === fab.classList.contains("abierto")) return;
+    boton.setAttribute("aria-expanded", si); boton.setAttribute("aria-label", si ? "Cerrar la leyenda" : "Ver la leyenda de veredictos");
+    if (si) { panel.hidden = false; requestAnimationFrame(() => { fab.classList.add("abierto"); panel.querySelector(".fab-titulo").focus({ preventScroll: true }); }); }
+    else { fab.classList.remove("abierto"); setTimeout(() => { if (!fab.classList.contains("abierto")) panel.hidden = true; }, 260); }
+  };
+  boton.onclick = () => abrir(!fab.classList.contains("abierto"));
+  document.addEventListener("keydown", ev => { if (ev.key === "Escape" && fab.classList.contains("abierto")) { abrir(false); boton.focus(); } });
+  document.addEventListener("click", ev => { if (!fab.contains(ev.target)) abrir(false); });
+})();
+</script>"""
 BOTON_MODO = ('<button class="modo" type="button" aria-label="Cambiar a modo oscuro" title="Cambiar a modo oscuro">'
               '<svg class="luna" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>'
               '<svg class="sol" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/>'
@@ -642,7 +709,7 @@ def pagina_entrevista(m, entrevistas):
         imagen_de(m["slug"]), titulo_social=f'{m["invitado"]} en The Wild Project, minuto a minuto',
         alt=f'Verificación dato a dato: {m["invitado"]} ({m.get("partido") or "sin partido"}) en {m["programa"]}')
     pagina = rellenar(
-        PLANTILLA, CABECERA=cab, RETRATO=retrato(m) or "", CREDITOS=creditos_fotos([m]), MENU=menu(entrevistas, m["slug"]), CSS_MENU=CSS_MENU, LEYENDA=LEYENDA, NOTA_EXCL=nota_excl,
+        PLANTILLA, CABECERA=cab, FAB=FAB_LEYENDA, BARRA=barra_reparto(m, "barra-reparto grande"), RETRATO=retrato(m) or "", CREDITOS=creditos_fotos([m]), MENU=menu(entrevistas, m["slug"]), CSS_MENU=CSS_MENU, LEYENDA=LEYENDA, NOTA_EXCL=nota_excl,
         FILTROS=filtros(m, '<span class="tema-actual" id="tema-actual"></span>'), SUMA=m["suma"], MALAS=m["malas"],
         FALSAS=m["total"]["falso"], ENGANOSAS=m["total"]["enganoso"], CASI=m["total"]["mayormente_verdadero"],
         VERDADERAS=m["total"]["verdadero"], NV=m["total"]["no_verificable"], FILAS="".join(filas),
@@ -797,7 +864,7 @@ def pagina_transcripcion(m, entrevistas):
         f'<li><a href="#tema-{t["n"]}"><span>{e(t["titulo"])}</span><small>{hms(t["ini"])}</small></a></li>'
         for t in m["temas"] if any(d.startswith(f'<h2 id="tema-{t["n"]}"') for d in cuerpo))
     pagina = rellenar(
-        TRANSCRIPCION, CABECERA=cab, INDICE=indice_temas, RETRATO=retrato(m, " peque") or "", MENU=menu(entrevistas, m["slug"]),
+        TRANSCRIPCION, CABECERA=cab, FAB=FAB_LEYENDA, INDICE=indice_temas, RETRATO=retrato(m, " peque") or "", MENU=menu(entrevistas, m["slug"]),
         CSS_MENU=CSS_MENU, LEYENDA=LEYENDA, FILTROS=filtros(m, solo), NOTA_VOCES=nota_voces,
         CUERPO=f'<div class="dialogo{" con-voces" if voces else ""}">{"".join(cuerpo)}</div>',
         INVITADO=e(m["invitado"]), PROGRAMA=e(m["programa"]), FECHA_VIDEO=e(m["fecha"]), DURACION=e(m["duracion"]),
@@ -969,10 +1036,9 @@ def escribir_json(ruta, datos):
 
 
 def generar_api(hechas):
-    # Restos de cuando los datos vivían en web/api/: ahí ahora solo va la función del panel.
-    shutil.rmtree(SALIDA / "api" / "v1", ignore_errors=True)
-    shutil.rmtree(SALIDA / "api" / "referencia", ignore_errors=True)
-    (SALIDA / "api" / "index.html").unlink(missing_ok=True)
+    # Restos de cuando los datos vivían en web/api/ y del panel privado de visitas, ya retirado.
+    shutil.rmtree(SALIDA / "api", ignore_errors=True)
+    shutil.rmtree(SALIDA / "panel", ignore_errors=True)
     api = DATOS / "v1"
     ahora = dt.datetime.now().astimezone().isoformat(timespec="seconds")
     aviso = ("Verificación asistida por IA, sin revisión de un equipo de periodistas. «falso» no implica intención de mentir. "
@@ -1034,7 +1100,6 @@ Los errores se comunican en {REPO}/issues.
                      {"source": "/api/", "destination": "/datos/index.html"},
                      {"source": "/api/v1/:ruta*", "destination": "/datos/v1/:ruta*"}],
         "headers": [
-        # Solo los datos: /api/estadisticas (el panel privado) no se cachea ni se abre a otros dominios.
         {"source": "/api/v1/(.*)", "headers": [{"key": "Access-Control-Allow-Origin", "value": "*"},
                                                {"key": "Cache-Control", "value": "public, max-age=300"}]},
         {"source": "/llms.txt", "headers": [{"key": "Access-Control-Allow-Origin", "value": "*"}]},
@@ -1429,7 +1494,7 @@ def main():
         f'<article class="entrevista">{retrato(m) or logo(m)}<div><h2><a href="/{e(m["slug"])}">{e(m["invitado"])}</a></h2>'
         f'<p class="partido">{e(m.get("partido") or "")}</p>'
         f'<p class="prog">{e(m["programa"])} · {e(m["fecha"])} · {e(m["duracion"])}</p>'
-        f'<p class="num"><b>{m["malas"]}</b> falsas o engañosas de {m["suma"]} afirmaciones comprobadas</p>'
+        f'<p class="num"><b>{m["malas"]}</b> falsas o engañosas de {m["suma"]} afirmaciones comprobadas</p>{barra_reparto(m)}'
         f'<p class="des">' + " · ".join(f'<span class="tono-{k}">{m["total"][k]} {PLURAL[k].lower()}</span>' for k in ORDEN) + "</p>"
         f'</div><p class="acc"><a class="btn principal" href="/{e(m["slug"])}">{ICONO_LINEA}<span>Línea temporal</span>{ICONO_FLECHA}</a>'
         f'<a class="btn" href="/{e(m["slug"])}/transcripcion">{ICONO_TEXTO}<span>Transcripción<span class="sr"> completa</span></span>{ICONO_FLECHA}</a></p></article>'
@@ -1439,7 +1504,7 @@ def main():
         f'<p class="prog">{e(m.get("programa", ""))}</p><p class="des">Verificación en curso.</p></div></article>'
         for m in entrevistas if not m.get("publicar"))
     (SALIDA / "index.html").write_text(rellenar(
-        PORTADA, CABECERA=cabecera(
+        PORTADA, FAB=FAB_LEYENDA, CABECERA=cabecera(
             "/", "Verificación de las entrevistas electorales de The Wild Project",
             "Las entrevistas de Jordi Wild a los candidatos a las elecciones generales de 2026, comprobadas dato a dato "
             "con el mismo método. Código y datos abiertos."), CREDITOS=creditos_fotos(hechas), MENU=menu(entrevistas), CSS_MENU=CSS_MENU, LEYENDA=LEYENDA, COMPARATIVA=comparativa(hechas), TARJETAS=tarjetas, REPO=REPO,
@@ -1471,12 +1536,6 @@ def main():
     (DATOS / "referencia").mkdir(exist_ok=True)
     (DATOS / "referencia" / "index.html").write_text(rellenar(REDIRIGE_API, CABECERA=cabecera(
         "/api", "API abierta · Verificación The Wild Project", "La referencia de la API está en /api.")), encoding="utf-8")
-    # Panel privado de estadísticas: la página es estática y los datos los sirve /api/estadisticas tras pedir contraseña.
-    (SALIDA / "panel").mkdir(exist_ok=True)
-    (SALIDA / "panel" / "index.html").write_text(
-        rellenar(estadisticas.PAGINA, analitica=False, CSS_MENU=CSS_MENU), encoding="utf-8")
-    (SALIDA / "api").mkdir(exist_ok=True)
-    shutil.copy(RAIZ / "web-src" / "estadisticas.js", SALIDA / "api" / "estadisticas.js")
 
 
 ANALITICA_QUIEN = (
@@ -1527,7 +1586,12 @@ html { scroll-behavior:smooth; scroll-padding-top:calc(var(--menu, 48px) + 64px)
 .menu .ancho { padding-top:9px; padding-bottom:9px; position:relative; }
 .m1 { display:flex; flex-wrap:wrap; align-items:center; gap:4px 24px; font-size:14.5px; }
 .m1 a, .desp summary { color:var(--tinta); text-decoration:none; font-weight:600; padding:3px 0; border-bottom:2px solid transparent; }
-.m1 > a:hover, .desp.actual summary, .desp[open] summary, .desp summary:hover { border-bottom-color:var(--tinta); }
+/* Subrayado del menú: se dibuja de izquierda a derecha al pasar el ratón y se recoge hacia la derecha al salir */
+.m1 > a:not(.sello), .desp summary { position:relative; border-bottom-color:transparent !important; }
+.m1 > a:not(.sello)::after, .desp summary::after { content:""; position:absolute; left:0; right:0; bottom:-1px; height:2px; background:var(--tinta);
+  transform:scaleX(0); transform-origin:right center; transition:transform .28s cubic-bezier(.4,0,.2,1); }
+.m1 > a:not(.sello):hover::after, .m1 > a:not(.sello):focus-visible::after, .desp summary:hover::after, .desp summary:focus-visible::after,
+.desp.actual summary::after, .desp[open] summary::after { transform:scaleX(1); transform-origin:left center; }
 .m1 .sello { font:700 17px/1.2 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; }
 .m1 .off { color:var(--gris-claro); } .m1 .dcha { margin-left:auto; }
 .modo { flex:none; display:inline-grid; place-items:center; width:26px; height:26px; padding:0; margin:0 0 0 -8px; cursor:pointer;
@@ -1540,17 +1604,37 @@ html { scroll-behavior:smooth; scroll-padding-top:calc(var(--menu, 48px) + 64px)
 .desp { position:relative; margin:0; padding:0; border:0; font-size:inherit; }
 .desp summary { list-style:none; cursor:pointer; user-select:none; }
 .desp summary::-webkit-details-marker { display:none; }
-.desp summary::after { content:"▾"; margin-left:.3em; } .desp[open] summary::after { content:"▴"; }
-.desp .lista { position:absolute; top:calc(100% + 10px); left:0; z-index:20; background:var(--fondo); border:2px solid var(--tinta); box-shadow:var(--flota);
+
+.desp .lista { position:absolute; top:calc(100% + 12px); left:-14px; z-index:20; background:var(--fondo); border:2px solid var(--tinta); box-shadow:var(--flota);
   width:max-content; min-width:260px; max-width:min(92vw,470px); max-height:74vh; overflow-y:auto; padding:6px 0; }
-.desp .lista a { display:flex; justify-content:space-between; align-items:baseline; gap:16px; padding:7px 16px;
-  font-size:14.5px; font-weight:500; border:0; line-height:1.35; }
-.desp .lista a.fuerte { font-weight:700; padding:9px 16px; }
-.desp .lista a.fuerte small { font-weight:500; color:var(--gris); font-size:12px; white-space:nowrap; }
-.desp .lista .rot { margin:8px 0 2px; padding:9px 16px 0; border-top:1px solid var(--tinta); }
-.desp .lista a:hover { background:var(--tinta); color:var(--fondo); } .desp .lista a:hover small { color:var(--inv-suave); }
-.desp .lista b { color:var(--v-falso); font-weight:700; font-variant-numeric:tabular-nums; }
-.desp .lista a:hover b { color:var(--fondo); } .desp .lista a.off { opacity:.4; }
+/* Desplegable de cada candidato: cabecera con su foto, dos accesos grandes y la lista de temas numerada como en la línea temporal */
+.desp .lista a { border:0; padding:0; }
+.lista-cab { display:flex; align-items:center; gap:12px; padding:6px 6px 12px; }
+.lista-cab .retrato { width:46px; height:46px; } .lista-cab .retrato .insignia { display:none; }
+.lista-cab p { margin:0; } .lista-cab .nombre { font:700 18px/1.2 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; }
+.lista-cab .cuanto { font-size:12.5px; color:var(--gris); margin-top:2px; } .lista-cab .cuanto b { color:var(--v-falso); }
+.lista-acc { display:grid; grid-template-columns:1fr 1fr; gap:8px; padding:0 0 12px; margin:0 0 4px; border-bottom:1px solid var(--claro); }
+.desp .lista-acc a { display:flex; align-items:center; gap:9px; min-height:44px; padding:0 12px; border:1.5px solid var(--tinta); border-radius:var(--r-boton);
+  font-size:14px; font-weight:700; color:var(--tinta); background:var(--fondo); transition:background-color .15s ease-out, color .15s ease-out; }
+.desp .lista-acc a.principal { background:var(--tinta); color:var(--fondo); }
+.desp .lista-acc a:hover, .desp .lista-acc a:focus-visible { background:var(--tinta); color:var(--fondo); }
+.desp .lista-acc a.principal:hover, .desp .lista-acc a.principal:focus-visible { background:var(--fondo); color:var(--tinta); }
+.desp .lista-acc a[aria-current] { box-shadow:inset 0 0 0 1.5px var(--fondo), 0 0 0 1.5px var(--tinta); }
+.lista-acc svg { display:block; flex:none; width:17px; height:17px; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+.lista-acc svg .lleno { fill:currentColor; stroke:none; }
+.desp .lista .rot { margin:0; padding:10px 6px 6px; border:0; }
+.desp .lista .rot span { text-transform:none; letter-spacing:0; font-weight:500; }
+.lista-temas { list-style:none; margin:0; padding:0; }
+.desp .lista-temas a { display:grid; grid-template-columns:24px minmax(0,1fr) auto; align-items:center; gap:10px; padding:7px 6px; border-radius:var(--r-boton);
+  font-size:14.5px; font-weight:500; line-height:1.3; color:var(--tinta); transition:background-color .12s ease-out; }
+.lista-temas i { width:24px; height:24px; border-radius:50%; border:1.5px solid var(--tinta); display:grid; place-items:center; line-height:0;
+  font:700 11.5px/1 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; font-style:normal; font-variant-numeric:tabular-nums; transition:background-color .12s, color .12s; }
+.lista-temas b { min-width:24px; height:22px; padding:0 7px; border-radius:999px; display:grid; place-items:center; line-height:0;
+  background:var(--v-falso); color:var(--sobre-tono); font-size:12px; font-weight:700; font-variant-numeric:tabular-nums; }
+.lista-temas b .sr { position:absolute; }
+.desp .lista-temas a:hover, .desp .lista-temas a:focus-visible { background:var(--resalte); outline-offset:-2px; }
+.desp .lista-temas a:hover i, .desp .lista-temas a:focus-visible i { background:var(--tinta); color:var(--fondo); }
+.desp .lista-temas a.off { opacity:.4; }
 .leyenda-f h2 { font:700 22px/1.2 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; margin:0 0 4px; padding:0; border:0; }
 .ley-intro { margin:0 0 14px; font-size:14.5px; color:var(--suave); }
 .leyenda-f dl { margin:0 0 16px; border-top:2px solid var(--tinta); }
@@ -1587,14 +1671,16 @@ footer .pie-quien { margin-top:18px; }
   .m1::-webkit-scrollbar, .fila::-webkit-scrollbar { display:none; }
   .m1 { gap:0 18px; font-size:14px; } .m1 .dcha { margin-left:0; }
   .m1 > a, .desp summary { display:inline-flex; align-items:center; min-height:36px; }
+  .m1 > a:not(.sello)::after, .desp summary::after { bottom:5px; }
   .m1 { padding-right:72px; }
   .modo { position:absolute; right:12px; top:calc(50% - 16px); margin:0; width:32px; height:32px; }
   .modo svg { width:17px; height:17px; }
   .menu .ancho::after { content:""; position:absolute; top:0; bottom:0; right:52px; width:28px; pointer-events:none;
     background:linear-gradient(to right, transparent, var(--fondo)); }
-  .menu .ancho::before { content:""; position:absolute; top:0; bottom:0; right:0; width:52px; background:var(--fondo); pointer-events:none; }
+  .menu .ancho::before { content:""; position:absolute; top:0; bottom:0; right:0; width:52px; background:var(--fondo); pointer-events:none; z-index:1; }
+  .menu .ancho::after { z-index:1; } .modo { z-index:2; }
   .menu .ancho { padding-top:4px; padding-bottom:4px; }
-  .desp { position:static; } .desp .lista { left:12px; right:12px; top:100%; width:auto; max-width:none; max-height:calc(100dvh - var(--menu, 48px) - 24px); }
+  .desp { position:static; } .desp .lista { left:12px; right:12px; top:calc(100% + 6px); width:auto; max-width:none; max-height:calc(100dvh - var(--menu, 48px) - 24px); }
   .filtros { padding:7px 0; }
   .fila .rot { display:none; } .fila button { flex:none; font-size:13px; padding:0 12px; min-height:34px; } .fila button[data-solo] { margin-left:0; } }
 /* En móvil cada fila de tabla se apila (primero qué es, debajo su dirección o sus datos) en vez de obligar a deslizar en horizontal */
@@ -1616,8 +1702,8 @@ button, summary, select, .chip, .repo, .botones a, .minuto, .modo { transition:b
 button:active, .repo:active, .botones a:active, .chip:active, .fila button:active { transform:translateY(1px) scale(.98); }
 select { cursor:pointer; } select:hover { box-shadow:inset 0 0 0 1px var(--tinta); }
 .m1 > a, .desp summary { transition:border-color .15s ease-out; }
-.desp[open] .lista { animation:caer .16s ease-out; }
-@keyframes caer { from { opacity:0; transform:translateY(-6px); } }
+.desp[open] .lista { animation:caer .2s cubic-bezier(.2,.7,.2,1); }
+@keyframes caer { from { clip-path:inset(0 0 100% 0); } to { clip-path:inset(0 0 0 0); } }
 .fila button:not([aria-pressed=true]):hover { background:color-mix(in srgb, var(--tono, var(--tinta)) 13%, var(--fondo)); }
 .fila button[aria-pressed=true]:hover { box-shadow:0 0 0 2px var(--fondo), 0 0 0 3.5px var(--tono, var(--tinta)); }
 .fila .cuenta { margin-left:auto; font-size:12.5px; color:var(--gris); font-variant-numeric:tabular-nums; white-space:nowrap; }
@@ -1648,8 +1734,8 @@ select { cursor:pointer; } select:hover { box-shadow:inset 0 0 0 1px var(--tinta
 CSS_MENU += """
 /* ── Esquinas suaves y contenidas, para que sigan leyéndose como recuadros de periódico: 14 px en contenedores, 9 px en botones y cajas, 5 px en etiquetas */
 :root { --r-caja:14px; --r-boton:9px; --r-mini:5px; --flota:0 10px 28px -8px rgba(0,0,0,.28); }
-.panel, .entrevista, .explorador, .vias li, .desp .lista { border-radius:var(--r-caja); }
-.desp .lista { overflow-x:hidden; }
+.panel, .entrevista, .explorador, .vias li, .desp .lista, .agentes { border-radius:var(--r-caja); }
+.desp .lista { border-top:0 !important; border-radius:0 0 var(--r-caja) var(--r-caja) !important; overflow-x:hidden; overflow-y:auto; overscroll-behavior:contain; width:min(440px, calc(100vw - 24px)); min-width:0; max-width:none; max-height:min(78vh, 680px); padding:10px; }
 .tu, .abrir, pre, .btn, .repo, .botones button, .botones a, #api-ir, .copiar, select, .opciones select, .logo.sin, #api-res .vacio { border-radius:var(--r-boton); }
 .ficha, .leyenda-f dt, code, .chip-mini, .par:target, .indice a { border-radius:var(--r-mini); }
 .hito:target .panel { outline-offset:4px; }
@@ -1669,6 +1755,65 @@ CSS_MENU += """
 .titular .retrato.peque { width:clamp(52px,6vw,76px); height:clamp(52px,6vw,76px); }
 .creditos { font-size:12.5px; color:var(--gris); }
 .creditos a { color:inherit; }
+"""
+CSS_MENU += """
+/* Botón flotante de la leyenda: círculo abajo a la izquierda que se ensancha al pasar el ratón y abre un panel con un revelado circular */
+.fab { position:fixed; left:calc(16px + env(safe-area-inset-left)); bottom:calc(16px + env(safe-area-inset-bottom)); z-index:45; }
+.fab-boton { position:relative; display:flex; align-items:center; gap:0; height:52px; min-width:52px; padding:0 14px; cursor:pointer;
+  border-radius:999px; border:2px solid var(--tinta); background:var(--fondo); color:var(--tinta); box-shadow:var(--flota);
+  font:700 14.5px/1 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; transition:background-color .15s ease-out, color .15s ease-out, gap .2s ease-out; }
+.fab-ico { display:grid; grid-template-columns:repeat(2,8px); gap:4px; flex:none; width:20px; place-content:center; }
+.fab-ico i { display:block; width:8px; height:8px; border-radius:50%; background:var(--tono); }
+.fab-x { display:none; flex:none; width:20px; height:20px; fill:none; stroke:currentColor; stroke-width:2.4; stroke-linecap:round; }
+.fab-txt { max-width:0; overflow:hidden; white-space:nowrap; opacity:0; transition:max-width .22s ease-out, opacity .15s ease-out; }
+.fab-boton:hover, .fab-boton:focus-visible { gap:10px; }
+.fab-boton:hover .fab-txt, .fab-boton:focus-visible .fab-txt { max-width:90px; opacity:1; }
+.fab.abierto .fab-boton { background:var(--tinta); color:var(--fondo); gap:0; }
+.fab.abierto .fab-ico { display:none; } .fab.abierto .fab-x { display:block; }
+.fab.abierto .fab-txt { max-width:0; opacity:0; }
+.fab-panel { position:absolute; left:0; bottom:64px; width:min(420px, calc(100vw - 32px)); max-height:calc(100dvh - var(--menu, 48px) - 100px); overflow-y:auto;
+  overscroll-behavior:contain; padding:16px 16px 14px; background:var(--fondo); color:var(--tinta); border:2px solid var(--tinta); border-radius:var(--r-caja);
+  box-shadow:var(--flota); clip-path:circle(0 at 26px calc(100% + 38px)); opacity:.4;
+  transition:clip-path .32s cubic-bezier(.4,0,.2,1), opacity .2s ease-out; }
+.fab.abierto .fab-panel { clip-path:circle(150% at 26px calc(100% + 38px)); opacity:1; }
+.fab-titulo { margin:0 0 10px; font:700 19px/1.2 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; outline:none; }
+.fab-panel .leyenda-f h2, .fab-panel .ley-intro { display:none; }
+.fab-panel .leyenda-f dl { margin:0 0 12px; }
+.fab-panel .leyenda-f dl div { grid-template-columns:104px minmax(0,1fr); gap:0 12px; padding:8px 0; }
+.fab-panel .leyenda-f dt { justify-self:stretch; font-size:11px; padding:5px 6px; }
+.fab-panel .leyenda-f dd { font-size:13.5px; line-height:1.38; }
+.fab-panel .ley-notas { font-size:13px; gap:5px; }
+@media (prefers-reduced-motion:reduce) { .fab-panel { clip-path:none !important; } }
+"""
+FAB_LEYENDA = FAB_LEYENDA.replace("@@LEYENDA_FAB@@", LEYENDA)
+CSS_MENU += """
+/* Barra de reparto: el 100 % de las afirmaciones, un tramo por veredicto con su color */
+.barra-reparto { display:flex; gap:2px; height:10px; margin:8px 0 2px; border-radius:999px; overflow:hidden; background:var(--claro); }
+.barra-reparto i { display:block; min-width:4px; background:var(--tono); transition:filter .15s ease-out; }
+.barra-reparto i:hover { filter:brightness(1.15) saturate(1.1); }
+.barra-reparto.grande { height:14px; margin:12px 0 0; }
+"""
+CSS_MENU += """
+/* Entrada del hero: aparece por capas (título, texto, cifras, tarjetas), la barra de reparto se rellena y los números cuentan hacia arriba.
+   «backwards» solo aplica el estado inicial durante la espera, así no pisa los hovers cuando termina. */
+@keyframes subir { from { opacity:0; transform:translateY(16px); } }
+@keyframes asomar { from { opacity:0; transform:scale(.82); } }
+@keyframes rellenar { from { clip-path:inset(0 100% 0 0 round 999px); } to { clip-path:inset(0 0 0 0 round 999px); } }
+.cabeza h1, .titular h1 { animation:subir .7s cubic-bezier(.2,.7,.2,1) backwards; }
+.cabeza .entrada, .portada .intro { animation:subir .7s .1s cubic-bezier(.2,.7,.2,1) backwards; }
+.cabeza .tu { animation:subir .7s .18s cubic-bezier(.2,.7,.2,1) backwards; }
+.portada .cifras { animation:subir .7s .16s cubic-bezier(.2,.7,.2,1) backwards; }
+.tarjetas .entrevista { animation:subir .7s cubic-bezier(.2,.7,.2,1) backwards; }
+.tarjetas .entrevista:nth-child(1) { animation-delay:.22s; } .tarjetas .entrevista:nth-child(2) { animation-delay:.32s; } .tarjetas .entrevista:nth-child(3) { animation-delay:.42s; }
+.titular .retrato, .tarjetas .retrato { animation:asomar .55s .05s cubic-bezier(.3,1.4,.5,1) backwards; }
+.tarjetas .entrevista:nth-child(2) .retrato { animation-delay:.36s; } .tarjetas .entrevista:nth-child(3) .retrato { animation-delay:.46s; }
+.tarjetas .entrevista:nth-child(1) .retrato { animation-delay:.26s; }
+.retrato .insignia { animation:asomar .4s .5s cubic-bezier(.3,1.5,.5,1) backwards; }
+.barra-reparto { animation:rellenar .9s .55s cubic-bezier(.4,0,.2,1) backwards; }
+.tarjetas .entrevista:nth-child(2) .barra-reparto { animation-delay:.65s; } .tarjetas .entrevista:nth-child(3) .barra-reparto { animation-delay:.75s; }
+.barra-reparto.grande { animation-delay:.4s; }
+@media (prefers-reduced-motion:reduce) {
+  .cabeza h1, .titular h1, .cabeza .entrada, .portada .intro, .cabeza .tu, .portada .cifras, .tarjetas .entrevista, .retrato, .retrato .insignia, .barra-reparto { animation:none !important; } }
 """
 CSS_MENU = (CSS_MENU.replace("@@CLARO@@", _CLARO).replace("@@OSCURO@@", _OSCURO)
             .replace("@@CLASES_TONO@@", "\n".join(f"[data-v={k}], .tono-{k} {{ --tono:var(--v-{k}); }}" for k in ORDEN)))
@@ -2043,6 +2188,16 @@ body.light-mode, body.dark-mode, body .scalar-app {
     metaData: { title: "API abierta · Verificación The Wild Project" },
   };
   Scalar.createApiReference("#referencia", { ...config, forceDarkModeState: tema() });
+  // En el buscador de Scalar la X solo borra el texto aunque parece cerrar: la convertimos en «Cerrar», que es lo que se espera.
+  new MutationObserver(() => document.querySelectorAll(".scalar-modal-search .scalar-icon-button:not([data-cerrar])").forEach(b => {
+    b.dataset.cerrar = ""; b.setAttribute("aria-label", "Cerrar buscador"); b.title = "Cerrar (Esc)";
+    b.querySelector(".sr-only")?.replaceChildren("Cerrar buscador");
+    b.addEventListener("click", ev => {
+      ev.preventDefault(); ev.stopImmediatePropagation();
+      const campo = b.closest(".scalar-modal")?.querySelector("input") || document.activeElement;
+      campo.dispatchEvent(new KeyboardEvent("keydown", { key: "Escape", code: "Escape", bubbles: true }));
+    }, true);
+  })).observe(document.body, { childList: true, subtree: true });
   // Botón «Copiar prompt» encima del bloque del prompt para agentes (Scalar no pone botón en los bloques de la descripción)
   const ANCLA_PROMPT = "api-1/description/prompt-para-agentes-de-ia";
   const prepararPrompt = () => {
@@ -2117,8 +2272,8 @@ h1 { font:700 clamp(30px,5.2vw,58px)/1.05 var(--serif); letter-spacing:-0.02em; 
 .entrevista { position:relative; border:2px solid var(--tinta); padding:22px 24px; display:grid; grid-template-columns:76px minmax(0,1fr); gap:0 22px; align-items:start; }
 .entrevista > div { min-width:0; }
 /* En tres columnas la cabecera (logo, nombre, partido) va arriba y el resto aprovecha todo el ancho de la tarjeta */
-@media (min-width:1100px) { .tarjetas { grid-template-columns:repeat(3,minmax(0,1fr)); }
-  .tarjetas .entrevista { grid-template-columns:76px minmax(0,1fr); grid-template-rows:auto auto auto auto auto 1fr; gap:0 18px; }
+@media (min-width:1000px) { .tarjetas { grid-template-columns:repeat(3,minmax(0,1fr)); }
+  .tarjetas .entrevista { grid-template-columns:76px minmax(0,1fr); grid-template-rows:auto auto auto auto auto auto 1fr; gap:0 18px; }
   .tarjetas .entrevista > div { display:contents; } .tarjetas .entrevista > div > * { grid-column:1 / -1; }
   .tarjetas .entrevista .logo { grid-column:1; grid-row:1 / span 3; width:76px; height:76px; align-self:start; }
   .tarjetas .entrevista h2, .tarjetas .entrevista .partido { grid-column:2; }
@@ -2165,8 +2320,49 @@ img.logo { background:var(--logo-fondo); box-shadow:0 0 0 6px var(--logo-fondo);
 .btn:hover .flecha, .btn:focus-visible .flecha { transform:translateX(3px); }
 .btn:active { transform:translateY(1px) scale(.99); }
 .sr { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; }
-@media (min-width:1100px) { .acc { max-width:none; margin-top:18px; } }
+@media (min-width:1000px) { .acc { max-width:none; margin-top:18px; } }
 @media (max-width:560px) { .acc { grid-column:1 / -1; max-width:none; } }
+footer { border-top:3px solid var(--tinta); margin-top:48px; padding:28px 0 64px; font-size:14.5px; }
+.pie-corto p { margin:0 0 6px; max-width:none; font-size:12.5px; line-height:1.5; color:var(--suave); }
+.pie-corto .final { color:var(--gris); }
+.pie-corto { padding-bottom:76px; }
+/* Escritorio: la portada cabe en una pantalla. El cuerpo es una columna de alto completo y los tamaños se atan al alto de la ventana. */
+@media (min-width:1000px) and (min-height:640px) {
+  .primera { min-height:calc(100dvh - var(--menu, 48px)); display:flex; flex-direction:column; justify-content:center; gap:clamp(10px,2.4vh,40px);
+    padding-top:clamp(8px,2vh,32px); padding-bottom:clamp(4px,1vh,12px); }
+  .primera .seguir { margin-top:0; }
+  .cabeza { padding:0; grid-template-columns:minmax(0,1.25fr) minmax(0,1fr); grid-template-rows:auto auto; gap:10px clamp(32px,4vw,72px); align-items:end; }
+  .cabeza h1 { grid-column:1; grid-row:1 / span 2; max-width:none; margin:0; font-size:clamp(32px, min(3.7vw, 6vh), 60px); }
+  .cabeza .entrada { grid-column:2; grid-row:1; font-size:clamp(14px,1.95vh,17px); line-height:1.5; }
+  .cabeza .tu { grid-column:2; grid-row:2; font-size:clamp(13px,1.8vh,14.5px); padding:clamp(7px,1.2vh,11px) 14px; }
+  .tarjetas .entrevista { padding:clamp(14px,2.2vh,22px) 20px; }
+  .des { font-size:clamp(12.5px,1.75vh,13.5px); }
+  .tarjetas .entrevista .prog { margin:clamp(6px,1.2vh,12px) 0 clamp(4px,1vh,10px); font-size:11px; letter-spacing:.05em; }
+  .tarjetas .entrevista h2 { font-size:clamp(23px, min(2.1vw, 3.6vh), 32px); }
+  .tarjetas .entrevista { grid-template-columns:clamp(60px,8vh,76px) minmax(0,1fr); }
+  .tarjetas .entrevista .logo { width:clamp(60px,8vh,76px); height:clamp(60px,8vh,76px); }
+  .des { margin-bottom:0; }
+  .acc { grid-template-columns:repeat(auto-fit,minmax(min(100%,140px),1fr)); } .btn .flecha { display:none; } .btn { padding:0 12px; font-size:14.5px; }
+  .num { font-size:16px; } .num b { font-size:30px; }
+  .tarjetas .entrevista .acc { margin-top:clamp(10px,1.6vh,18px); gap:8px; }
+  .btn { min-height:clamp(40px,5.2vh,46px); }
+  .ancho.pie-corto { padding-left:max(88px, clamp(16px,4vw,48px)); padding-bottom:0; line-height:1.45; }
+  .pie-corto p { display:inline; margin:0; font-size:clamp(11px,1.6vh,12px); }
+  .pie-corto .final::before { content:" "; } }
+/* Entre 1000 y 1200 px de ancho las tarjetas son estrechas: botones sin icono para que vayan en una fila, y menos relleno */
+@media (min-width:1000px) and (max-width:1199px) and (min-height:640px) {
+  .tarjetas .entrevista { padding:14px 16px; gap:0 14px; }
+  .tarjetas .entrevista .acc { grid-template-columns:1fr 1fr; } .btn .ico { display:none; } .btn { justify-content:center; padding:0 8px; font-size:14px; }
+  .tarjetas .entrevista .prog { font-size:10.5px; letter-spacing:.03em; }
+  .tarjetas .entrevista .num { font-size:15px; } .tarjetas .entrevista .num b { font-size:26px; }
+  .tarjetas .entrevista { grid-template-columns:56px minmax(0,1fr); } .tarjetas .entrevista .logo { width:56px; height:56px; }
+  .cabeza h1 { font-size:clamp(30px,3.4vw,40px); grid-row:1; } .cabeza .tu { display:none; } }
+/* Enlace al final de la primera pantalla que invita a bajar a la comparativa (deja sitio al botón de la leyenda) */
+.seguir { align-self:center; display:inline-flex; align-items:center; gap:8px; min-height:44px; padding:0 14px; margin:18px 0 0;
+  font-size:14px; font-weight:700; text-decoration:none; color:var(--gris); }
+.seguir:hover { color:var(--tinta); } .seguir svg { display:block; width:16px; height:16px; fill:none; stroke:currentColor; stroke-width:2.2; stroke-linecap:round; transition:transform .2s ease-out; }
+.seguir:hover svg { transform:translateY(3px); }
+.compara { scroll-margin-top:calc(var(--menu, 48px) + 16px); }
 .seccion-t, .compara h2 { font:700 27px/1.2 var(--serif); margin:44px 0 14px; padding-top:12px; border-top:3px solid var(--tinta); }
 .compara { margin-bottom:8px; }
 .tabla-c { overflow-x:auto; }
@@ -2190,7 +2386,6 @@ img.logo { background:var(--logo-fondo); box-shadow:0 0 0 6px var(--logo-fondo);
 @media (max-width:560px) { .compara table { min-width:0; font-size:12.5px; } .compara thead td { width:27%; }
   .cand { font-size:15px; } .par { font-size:11px; } .compara th, .compara td { padding:7px 4px; } .compara tbody th { font-size:12px; }
   .compara .pc { display:block; margin-left:0; font-size:11.5px; } .compara tr.fuerte td b { font-size:20px; } }
-footer { border-top:3px solid var(--tinta); margin-top:48px; padding:28px 0 64px; font-size:14.5px; }
 footer p { max-width:68ch; }
 footer .leyenda-f { max-width:820px; }
 @media (min-width:1080px) { .pie { display:grid; grid-template-columns:minmax(0,1.2fr) minmax(0,1fr); gap:0 clamp(40px,5vw,80px); align-items:start; }
@@ -2202,23 +2397,23 @@ footer .leyenda-f { max-width:820px; }
 <body>
 @@MENU@@
 <main class="ancho">
+<div class="primera">
 <div class="cabeza">
 <h1>Las entrevistas de The Wild Project, comprobadas dato a dato</h1>
 <p class="entrada">Jordi Wild ha entrevistado a los candidatos a la presidencia del Gobierno para las elecciones del 29 de noviembre de 2026. Transcribimos cada entrevista entera, separamos las afirmaciones que se pueden comprobar y las contrastamos con fuentes públicas, con el mismo método y la misma vara de medir para todos.</p>
 <p class="tu"><a href="/verificalo"><b>Puedes verificarlo tú</b> →</a> Cada dato enlaza su fuente y el minuto del vídeo, y hay un encargo listo para que cualquier IA lo revise por su cuenta.</p>
 </div>
 <div class="tarjetas">@@TARJETAS@@</div>
+<a class="seguir" href="#compara-t">Comparativa de los candidatos<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg></a>
+</div>
 @@COMPARATIVA@@
 </main>
-<footer><div class="ancho pie">
-@@LEYENDA@@
-<div>
-<p style="margin-top:22px">Verificación asistida por IA (transcripción con Whisper, contraste con modelos Claude y búsqueda web), sin revisión de un equipo de periodistas. Cada afirmación enlaza el segundo exacto del vídeo y sus fuentes, y el código, las transcripciones y los datos están publicados en <a href="@@REPO@@" target="_blank" rel="noopener noreferrer">GitHub</a>. «Falso» no implica intención de mentir: incluye errores y lapsus. El número de afirmaciones falsas depende también de cuánto habla cada invitado y de cuántos datos da, así que las cifras no son un ranking. En rojo, junto a cada tema, cuántas afirmaciones falsas o engañosas contiene.</p>
-<p>Última actualización: @@FECHA@@.</p>
-@@CREDITOS@@
-</div>
+<footer><div class="ancho pie-corto">
+<p>Verificación asistida por IA (transcripción con Whisper, contraste con modelos Claude y búsqueda web), sin revisión de un equipo de periodistas. Cada afirmación enlaza el segundo exacto del vídeo y sus fuentes, y el código, las transcripciones y los datos están publicados en <a href="@@REPO@@" target="_blank" rel="noopener noreferrer">GitHub</a>. «Falso» no implica intención de mentir: incluye errores y lapsus. El número de afirmaciones falsas depende también de cuánto habla cada invitado y de cuántos datos da, así que las cifras no son un ranking. En rojo, junto a cada tema, cuántas afirmaciones falsas o engañosas contiene.</p>
+<p class="final">Última actualización: @@FECHA@@. @@CREDITOS@@</p>
 @@PIE@@
 </div></footer>
+@@FAB@@
 </body>
 </html>
 """
@@ -2258,6 +2453,7 @@ h2 { font:700 23px/1.2 var(--serif); margin:44px 0 14px; padding-top:12px; borde
 .par:target { background:var(--resalte); }
 .minuto { font-size:13px; font-weight:700; font-variant-numeric:tabular-nums; text-underline-offset:3px; padding-top:4px; align-self:start; justify-self:start; }
 .minuto:hover { background:var(--tinta); color:var(--fondo); text-decoration:none; }
+.par:target { animation:destello 1.6s ease-out; }
 .par p { margin:0; padding-bottom:10px; font:17px/1.65 var(--serif); }
 /* Con voces, tres columnas como en un guion: minuto · quién habla (al empezar cada intervención) · texto.
    Lo del candidato va en serif con una raya vertical continua; lo demás, en palo seco y más apagado. */
@@ -2333,7 +2529,7 @@ function pintar() {
     const visible = t.querySelector(".par:not([hidden])");
     celdas.forEach(c => { c.innerHTML = visible && c.parentNode === visible ? t.dataset.ficha : ""; });
   });
-  const marcas = document.querySelectorAll(".par:not([hidden]) .subr:not(.apagada)").length;
+  const marcas = document.querySelectorAll(".par:not([hidden]) .et:not(.apagada)").length;
   document.querySelector("#filtros .cuenta").textContent = `${marcas} afirmaciones marcadas`;
 }
 botones.forEach(b => b.onclick = () => {
@@ -2355,6 +2551,7 @@ if (enIndice.size && "IntersectionObserver" in window) {
   enIndice.forEach((a, id) => { const h = document.getElementById(id); if (h) obs.observe(h); });
 }
 </script>
+@@FAB@@
 </body>
 </html>
 """
@@ -2524,6 +2721,7 @@ footer .leyenda-f { margin-bottom:34px; max-width:820px; }
   </div>
   <div class="cifras">
   <div class="dato"><b>@@MALAS@@</b><span>afirmaciones falsas (@@FALSAS@@) o engañosas (@@ENGANOSAS@@) de @@SUMA@@ comprobadas</span></div>
+  @@BARRA@@
   <p class="resto">El resto: @@VERDADERAS@@ verdaderas, @@CASI@@ casi ciertas y @@NV@@ que no se han podido verificar.@@NOTA_EXCL@@</p>
   </div>
 </div>
@@ -2543,7 +2741,7 @@ footer .leyenda-f { margin-bottom:34px; max-width:820px; }
   <a class="repo" href="@@REPO@@" target="_blank" rel="noopener noreferrer">Código, transcripción y datos en GitHub ↗</a>
   <a class="repo claro" href="/api">API abierta</a>
   <p>¿Ves un error? Abre una incidencia en el repositorio. Última actualización: @@FECHA@@.</p>
-  @@CREDITOS@@
+  <p>@@CREDITOS@@</p>
   </div>
 @@PIE@@
 </div></footer>
@@ -2628,6 +2826,7 @@ No inventes enlaces. Si no puedes abrir una fuente o no hay pruebas suficientes,
   copiarTexto(texto, "Encargo copiado. Pégalo en Claude, ChatGPT o la IA que uses.");
 });
 </script>
+@@FAB@@
 </body>
 </html>
 """
