@@ -138,6 +138,7 @@ body.light-mode, body.dark-mode, body .scalar-app {
 .scalar-modal { border:2px solid var(--tinta); border-radius:var(--r-caja) !important; box-shadow:var(--flota) !important; overflow:hidden; }
 .scalar-modal-search label { height:auto !important; min-height:56px; padding:8px 8px 8px 16px !important; gap:10px !important; border-bottom:1px solid var(--claro); }
 .scalar-modal-search input { font-size:17px; }
+.scalar-app input:focus, .scalar-app input:focus-visible, .scalar-modal-search label:focus-within { outline:none !important; box-shadow:none !important; }
 /* Botón de cerrar: redondo como el de tema, 40 px de diana, icono centrado sin depender de la altura de línea */
 .scalar-modal-search .scalar-icon-button { flex:none; width:40px !important; height:40px !important; margin:0 !important; padding:0 !important;
   display:grid !important; place-items:center; line-height:0; font-size:0; border-radius:50% !important; border:1.5px solid var(--tinta);
@@ -280,6 +281,8 @@ footer .pie-quien { margin-top:18px; }
 /* ── Interacción: estados hover, foco, pulsación y avisos, iguales en todas las páginas */
 html { -webkit-tap-highlight-color:transparent; }
 :focus-visible { outline:3px solid var(--tinta); outline-offset:2px; }
+/* Los campos de texto no llevan anillo de foco: el cursor ya dice dónde se escribe */
+:is(input, textarea):focus, :is(input, textarea):focus-visible { outline:none; box-shadow:none; }
 a { text-underline-offset:3px; text-decoration-thickness:1px; transition:text-decoration-thickness .15s ease-out, color .15s ease-out, background-color .15s ease-out; }
 a:hover { text-decoration-thickness:2px; }
 button, summary, select, .chip, .repo, .botones a, .minuto, .modo { transition:background-color .15s ease-out, color .15s ease-out, border-color .15s ease-out, box-shadow .18s ease-out, transform .12s ease-out; }
