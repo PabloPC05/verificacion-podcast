@@ -404,7 +404,7 @@
     ],
     "operationId": "transcripcionSegmentos",
     "summary": "Transcripción por segmentos",
-    "description": "La transcripción automática partida en segmentos con su segundo de inicio y de fin. No distingue quién habla.",
+    "description": "La transcripción automática partida en segmentos con su segundo de inicio y de fin, y quién habla en cada uno según el reconocimiento automático de voces.",
     "responses": {
      "200": {
       "description": "Transcripción por segmentos.",
@@ -476,16 +476,18 @@
            }
           ]
          },
-         "nota": "Transcripción automática (Whisper): no distingue hablantes y puede tener errores en nombres y cifras.",
+         "nota": "Transcripción automática (Whisper), que puede tener errores en nombres y cifras. El hablante de cada segmento sale de un reconocimiento automático de voces (acierto medido del 97 %; falla sobre todo en frases muy cortas).",
          "segmentos": [
           {
            "inicio_s": 0.0,
            "fin_s": 5.9,
+           "hablante": "Jordi Wild",
            "texto": "¿Qué tal mi gente? ¿Cómo estamos? Esta es una breve introducción a las tres entrevistas con los candidatos a la presidencia de España."
           },
           {
            "inicio_s": 6.12,
            "fin_s": 11.04,
+           "hablante": "Jordi Wild",
            "texto": "Hago la misma introducción para todos, simplemente para explicaros el formato, por si no lo sabíais."
           }
          ]
@@ -967,6 +969,13 @@
       "type": "number",
       "minimum": 0,
       "description": "Segundo de fin."
+     },
+     "hablante": {
+      "type": [
+       "string",
+       "null"
+      ],
+      "description": "Quién habla según el reconocimiento automático de voces: «Jordi Wild», el nombre del invitado, «Verificadores del programa» o «Voz sin identificar». Acierto medido del 97 %."
      },
      "texto": {
       "type": "string"

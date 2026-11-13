@@ -6,6 +6,7 @@ y, opcionalmente, resumenes/*.json (un resumen por afirmación, en el mismo orde
 
 Uso: python3 web-src/build.py
 """
+import bisect
 import datetime as dt
 import html
 import json
@@ -301,30 +302,122 @@ def pagina_entrevista(m, entrevistas):
     print(f'{m["slug"]}: {m["suma"]} afirmaciones · {m["total"]}')
 
 
+def tramo_cita(a, indice):
+    """Segmentos (índices de segmentos.json) que ocupa la cita de una afirmación, o None si no se encuentra."""
+    texto, posiciones = indice
+    inicios = [p for p, _ in posiciones]
+    partes = [x for x in re.split(r"\[\s*(?:\.\.\.|…)\s*\]", a.get("cita", "")) if _norm(x)]
+    if not partes:
+        return None
+
+    def ocurrencias(palabras, desde_el_final):
+        for tam in (6, 5, 4, 3):
+            if len(palabras) < tam:
+                continue
+            orden = range(len(palabras) - tam, -1, -1) if desde_el_final else range(len(palabras) - tam + 1)
+            for k in orden:
+                trozo = " ".join(palabras[k:k + tam])
+                if len(trozo) < 10:
+                    continue
+                sitios = [mt.start() for mt in re.finditer(re.escape(trozo), texto)]
+                if sitios:
+                    return [(x, x + len(trozo)) for x in sitios]
+        return []
+
+    def segmento(pos):
+        return max(0, bisect.bisect_right(inicios, pos) - 1)
+
+    primeras = ocurrencias(_norm(partes[0]).split(), False)
+    if not primeras:
+        return None
+    objetivo = a["_t"] + 2  # momento_exacto devuelve el inicio del segmento menos 2 s
+    ini = min(primeras, key=lambda x: abs(posiciones[segmento(x[0])][1] - objetivo))[0]
+    ultimas = [x for x in ocurrencias(_norm(partes[-1]).split(), True) if x[0] >= ini]
+    fin = min(ultimas)[1] - 1 if ultimas else ini
+    desde, hasta = segmento(ini), segmento(fin)
+    return desde, min(hasta, desde + 25)
+
+
 def pagina_transcripcion(m, entrevistas):
-    parrafos = []
-    for linea in (m["carpeta"] / "transcripcion.txt").read_text(encoding="utf-8").splitlines():
-        r = re.match(r"\[(\d+:\d\d:\d\d)\]\s*(.*)", linea)
-        if r:
-            parrafos.append((segundos(r.group(1)), r.group(2)))
+    """Transcripción por intervenciones (quién habla) con el tramo de cada afirmación subrayado en su color."""
+    segmentos = json.loads((m["carpeta"] / "segmentos.json").read_text(encoding="utf-8"))
+    ruta_h = m["carpeta"] / "hablantes.json"
+    hablantes = json.loads(ruta_h.read_text(encoding="utf-8")) if ruta_h.exists() else None
+    voces = [x["voz"] for x in hablantes["segmentos"]] if hablantes and len(hablantes["segmentos"]) == len(segmentos) else None
+    nombres = hablantes["nombres"] if voces else {}
+
+    # qué afirmación subraya cada segmento (si se solapan, la de peor veredicto)
+    indice = indice_segmentos(m["carpeta"])
+    marca, cierre, sin_tramo = {}, {}, 0
+    for a in sorted(m["todas"], key=lambda a: ORDEN.index(a["veredicto"]), reverse=True):
+        tramo = tramo_cita(a, indice)
+        if tramo is None:
+            sin_tramo += 1
+            k = max(0, bisect.bisect_right([x["i"] for x in segmentos], a["_t"] + 2) - 1)
+            tramo = (k, k)
+        for k in range(tramo[0], tramo[1] + 1):
+            marca[k] = a
+        cierre.setdefault(tramo[1], []).append(a)
+    if sin_tramo:
+        print(f'{m["slug"]}: {sin_tramo} citas sin localizar en la transcripción (se marca el segmento de su minuto)')
+
+    def texto_marcado(ks):
+        """HTML de unos segmentos seguidos, agrupando en un solo subrayado los que son de la misma afirmación."""
+        trozos, k0 = [], 0
+        while k0 < len(ks):
+            a = marca.get(ks[k0])
+            k1 = k0
+            while k1 + 1 < len(ks) and marca.get(ks[k1 + 1]) is a:
+                k1 += 1
+            texto = e(" ".join(segmentos[k]["t"].strip() for k in ks[k0:k1 + 1]))
+            if a is None:
+                trozos.append(texto)
+            else:
+                titulo = e(f'{NOMBRE[a["veredicto"]]}: {a.get("afirmacion", "")}', quote=True)
+                trozos.append(f'<a class="subr" data-v="{a["veredicto"]}" href="/{m["slug"]}#{a["_id"]}" title="{titulo}">{texto}</a>')
+            # una etiqueta por cada afirmación que termina en estos segmentos (aunque compartan subrayado con otra)
+            for k in ks[k0:k1 + 1]:
+                for b in sorted(cierre.get(k, []), key=lambda b: ORDEN.index(b["veredicto"])):
+                    tit = e(f'{NOMBRE[b["veredicto"]]}: {b.get("afirmacion", "")}', quote=True)
+                    trozos.append(f'<a class="et" data-v="{b["veredicto"]}" href="/{m["slug"]}#{b["_id"]}" title="{tit}">'
+                                  f'{NOMBRE[b["veredicto"]]} ↗</a>')
+            k0 = k1 + 1
+        return " ".join(trozos)
+
+    # intervenciones: segmentos seguidos de la misma voz, partidas en párrafos de ~1 minuto
+    bloques, actual = [], None
+    for k, sg in enumerate(segmentos):
+        v = voces[k] if voces else None
+        if actual is None or (voces and v != actual["voz"]):
+            actual = {"voz": v, "parrafos": [[k]]}
+            bloques.append(actual)
+            continue
+        parrafo = actual["parrafos"][-1]
+        if sg["i"] - segmentos[parrafo[0]]["i"] >= 60 and segmentos[k - 1]["t"].rstrip()[-1:] in ".?!":
+            actual["parrafos"].append([k])
+        else:
+            parrafo.append(k)
     pendientes = list(m["temas"])
     cuerpo = []
-    for k, (t, texto) in enumerate(parrafos):
-        fin = parrafos[k + 1][0] if k + 1 < len(parrafos) else 10 ** 9
-        while pendientes and pendientes[0]["ini"] < fin:
+    for b in bloques:
+        while pendientes and pendientes[0]["ini"] <= segmentos[b["parrafos"][0][0]]["i"] + 0.5:
             tema = pendientes.pop(0)
             cuerpo.append(f'<h2 id="tema-{tema["n"]}">{e(tema["titulo"])}</h2>')
-        marcas = "".join(
-            f'<a class="chip" data-v="{a["veredicto"]}" href="/{m["slug"]}#{a["_id"]}" '
-            f'title="{e(a.get("afirmacion", ""), quote=True)}">{hms(a["_t"])} · {NOMBRE[a["veredicto"]]}</a>'
-            for a in m["todas"] if t <= a["_t"] < fin)
-        cuerpo.append(
-            f'<div class="par" id="t{t}"><a class="minuto" href="https://www.youtube.com/watch?v={m["video"]}&t={t}s" '
-            f'target="_blank" rel="noopener noreferrer">{hms(t)}</a><div><p>{e(texto)}</p>'
-            + (f'<p class="chips">{marcas}</p>' if marcas else "") + "</div></div>")
+        voz = b["voz"] or ""
+        cuerpo.append(f'<div class="turno" data-voz="{voz}">')
+        for n, p in enumerate(b["parrafos"]):
+            t = int(segmentos[p[0]]["i"])
+            quien = (f'<span class="quien">{e(nombres.get(voz, ""))}</span> ' if voces and n == 0 else "")
+            cuerpo.append(
+                f'<div class="par" id="t{t}"><a class="minuto" href="https://www.youtube.com/watch?v={m["video"]}&t={t}s" '
+                f'target="_blank" rel="noopener noreferrer">{hms(t)}</a><p>{quien}{texto_marcado(p)}</p></div>')
+        cuerpo.append("</div>")
+    nota_voces = ("Las intervenciones se han atribuido a cada voz con reconocimiento automático de hablantes "
+                  "(acierto medido del 97 %; las frases muy cortas son las que más fallan). " if voces else "")
     solo = '<button data-solo aria-pressed="false">Solo párrafos con afirmaciones</button>'
     pagina = rellenar(
-        TRANSCRIPCION, MENU=menu(entrevistas, m["slug"]), CSS_MENU=CSS_MENU, LEYENDA=LEYENDA, FILTROS=filtros(m, solo), CUERPO="".join(cuerpo),
+        TRANSCRIPCION, MENU=menu(entrevistas, m["slug"]), CSS_MENU=CSS_MENU, LEYENDA=LEYENDA, FILTROS=filtros(m, solo),
+        NOTA_VOCES=nota_voces, CUERPO="".join(cuerpo),
         INVITADO=e(m["invitado"]), PROGRAMA=e(m["programa"]), FECHA_VIDEO=e(m["fecha"]), DURACION=e(m["duracion"]),
         VIDEO=m["video"], SLUG=m["slug"], REPO=REPO)
     destino = SALIDA / m["slug"] / "transcripcion"
@@ -384,10 +477,15 @@ def generar_api(hechas):
             excluidas=[dict(x, id=f'{m["slug"]}-{x["id"]}') for x in m.get("excluidas", [])]))
         api_publica.escribir_csv(api / f'{m["slug"]}.csv', suyas)
         segs = json.loads((m["carpeta"] / "segmentos.json").read_text(encoding="utf-8"))
+        ruta_h = m["carpeta"] / "hablantes.json"
+        h = json.loads(ruta_h.read_text(encoding="utf-8")) if ruta_h.exists() else None
+        voces = ([h["nombres"][x["voz"]] for x in h["segmentos"]] if h and len(h["segmentos"]) == len(segs)
+                 else [None] * len(segs))
         escribir_json(api / m["slug"] / "transcripcion.json", dict(
             comun, entrevista=ficha_api(m),
-            nota="Transcripción automática (Whisper): no distingue hablantes y puede tener errores en nombres y cifras.",
-            segmentos=[{"inicio_s": round(x["i"], 2), "fin_s": round(x["f"], 2), "texto": x["t"].strip()} for x in segs]))
+            nota="Transcripción automática (Whisper), que puede tener errores en nombres y cifras. El hablante de cada segmento sale de un reconocimiento automático de voces (acierto medido del 97 %; falla sobre todo en frases muy cortas).",
+            segmentos=[{"inicio_s": round(x["i"], 2), "fin_s": round(x["f"], 2), "hablante": v, "texto": x["t"].strip()}
+                       for x, v in zip(segs, voces)]))
         (api / m["slug"] / "transcripcion.txt").write_text(
             (m["carpeta"] / "transcripcion.txt").read_text(encoding="utf-8"), encoding="utf-8")
     escribir_json(api / "afirmaciones.json", dict(comun, total=len(todas), afirmaciones=todas))
@@ -439,7 +537,7 @@ def especificacion_openapi(hechas, ejemplo, aviso, comun):
     segs_ej = []
     if m_ej:
         segs = json.loads((m_ej["carpeta"] / "segmentos.json").read_text(encoding="utf-8"))[:2]
-        segs_ej = [{"inicio_s": round(x["i"], 2), "fin_s": round(x["f"], 2), "texto": x["t"].strip()} for x in segs]
+        segs_ej = [{"inicio_s": round(x["i"], 2), "fin_s": round(x["f"], 2), "hablante": "Jordi Wild", "texto": x["t"].strip()} for x in segs]
     comun_ej = dict(comun, generado="2026-11-13T20:00:00+01:00")
     ref = lambda n: {"$ref": f"#/components/schemas/{n}"}
     url = {"type": "string", "format": "uri"}
@@ -537,11 +635,11 @@ trae cada campo y cómo citar (id, minuto con su vídeo y fuentes). La guía bre
                 "responses": dict({"200": {"description": "CSV en UTF-8 con BOM.", "content": {"text/csv": {"schema": {"type": "string"}, "example": csv_ej}}}}, **no_existe)}},
             "/{slug}/transcripcion.json": {"parameters": par, "get": {
                 "tags": ["Transcripciones"], "operationId": "transcripcionSegmentos", "summary": "Transcripción por segmentos",
-                "description": "La transcripción automática partida en segmentos con su segundo de inicio y de fin. "
-                               "No distingue quién habla.",
+                "description": "La transcripción automática partida en segmentos con su segundo de inicio y de fin, "
+                               "y quién habla en cada uno según el reconocimiento automático de voces.",
                 "responses": dict(respuesta("Transcripción por segmentos.", "Transcripcion", dict(
                     comun_ej, entrevista=ficha_ej,
-                    nota="Transcripción automática (Whisper): no distingue hablantes y puede tener errores en nombres y cifras.",
+                    nota="Transcripción automática (Whisper), que puede tener errores en nombres y cifras. El hablante de cada segmento sale de un reconocimiento automático de voces (acierto medido del 97 %; falla sobre todo en frases muy cortas).",
                     segmentos=segs_ej)), **no_existe)}},
             "/{slug}/transcripcion.txt": {"parameters": par, "get": {
                 "tags": ["Transcripciones"], "operationId": "transcripcionTexto", "summary": "Transcripción en texto plano",
@@ -636,6 +734,10 @@ trae cada campo y cómo citar (id, minuto con su vídeo y fuentes). La guía bre
                 "Segmento": {"type": "object", "required": ["inicio_s", "fin_s", "texto"],
                              "properties": {"inicio_s": {"type": "number", "minimum": 0, "description": "Segundo de inicio, con dos decimales."},
                                             "fin_s": {"type": "number", "minimum": 0, "description": "Segundo de fin."},
+                                            "hablante": {"type": ["string", "null"],
+                                                         "description": "Quién habla según el reconocimiento automático de voces: "
+                                                                        "«Jordi Wild», el nombre del invitado, «Verificadores del programa» "
+                                                                        "o «Voz sin identificar». Acierto medido del 97 %."},
                                             "texto": {"type": "string"}}},
                 "ListaEntrevistas": {"allOf": [ref("Comun"), {"type": "object", "required": ["entrevistas"],
                                      "properties": {"entrevistas": {"type": "array", "items": ref("Entrevista")}}}]},
@@ -1236,13 +1338,25 @@ main.ancho { max-width:820px; padding-bottom:72px; }
 h1 { font:700 clamp(28px,5.5vw,42px)/1.08 var(--serif); letter-spacing:-0.02em; margin:36px 0 12px; text-wrap:balance; }
 .entrada { font-size:16px; color:var(--suave); max-width:64ch; margin:0 0 8px; }
 h2 { font:700 23px/1.2 var(--serif); margin:44px 0 14px; padding-top:12px; border-top:3px solid var(--tinta); text-wrap:balance; }
-.par { display:grid; grid-template-columns:74px minmax(0,1fr); gap:0 14px; margin-bottom:16px; }
+.turno { margin:0 0 18px; }
+.turno[data-voz=J] .par p { color:var(--suave); }
+.par { display:grid; grid-template-columns:74px minmax(0,1fr); gap:0 14px; margin-bottom:8px; }
 .par:target { background:var(--resalte); }
-.minuto { font-size:13px; font-weight:700; font-variant-numeric:tabular-nums; text-underline-offset:3px; padding-top:3px; }
-.par p { margin:0; font:17px/1.6 var(--serif); }
-.par .chips { margin-top:6px; display:flex; flex-wrap:wrap; gap:6px; font:600 12px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
-.chip { color:var(--tono); border:1.5px solid var(--tono); border-radius:999px; padding:1px 9px; text-decoration:none; }
-.chip:hover { background:var(--tono); color:var(--sobre-tono); }
+.minuto { font-size:13px; font-weight:700; font-variant-numeric:tabular-nums; text-underline-offset:3px; padding-top:4px; }
+.par p { margin:0; font:17px/1.65 var(--serif); }
+.quien { font:700 11.5px/1 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; text-transform:uppercase; letter-spacing:.07em;
+  color:var(--tinta); margin-right:6px; vertical-align:2px; }
+.turno[data-voz=J] .quien { color:var(--gris); }
+.turno[data-voz=V] .quien, .turno[data-voz=O] .quien { color:var(--gris); font-style:italic; }
+/* el tramo de cada afirmación analizada, subrayado con el color de su veredicto y enlazado a su tarjeta */
+.subr { color:inherit; text-decoration:underline; text-decoration-color:var(--tono); text-decoration-thickness:3px;
+  text-underline-offset:4px; text-decoration-skip-ink:none; }
+.subr:hover { background:color-mix(in srgb, var(--tono) 18%, transparent); }
+.et { font:700 10.5px/1 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; text-transform:uppercase; letter-spacing:.06em;
+  color:var(--sobre-tono); background:var(--tono); padding:2px 6px 3px; border-radius:3px; text-decoration:none; white-space:nowrap;
+  vertical-align:2px; margin-left:2px; }
+.et:hover { filter:brightness(1.1); }
+.apagada.subr { text-decoration:none; pointer-events:none; } .apagada.et { display:none; }
 @media (max-width:600px) { .par { grid-template-columns:1fr; } .par p { font-size:16.5px; } }
 @@CSS_MENU@@
 </style>
@@ -1252,7 +1366,7 @@ h2 { font:700 23px/1.2 var(--serif); margin:44px 0 14px; padding-top:12px; borde
 @@FILTROS@@
 <main class="ancho">
 <h1>Transcripción completa: @@INVITADO@@ con Jordi Wild</h1>
-<p class="entrada">@@PROGRAMA@@ · @@FECHA_VIDEO@@ · @@DURACION@@. Transcripción automática (Whisper): no distingue quién habla y puede tener errores en nombres y cifras. Cada minuto abre el <a href="https://www.youtube.com/watch?v=@@VIDEO@@" target="_blank" rel="noopener noreferrer">vídeo</a> en ese punto; las etiquetas de color llevan a la afirmación verificada en la <a href="/@@SLUG@@">línea temporal</a>.</p>
+<p class="entrada">@@PROGRAMA@@ · @@FECHA_VIDEO@@ · @@DURACION@@. Transcripción automática (Whisper), que puede tener errores en nombres y cifras. @@NOTA_VOCES@@Cada minuto abre el <a href="https://www.youtube.com/watch?v=@@VIDEO@@" target="_blank" rel="noopener noreferrer">vídeo</a> en ese punto. <b>Lo subrayado es una afirmación analizada</b>: el color es su veredicto, y al pulsarla vas a su tarjeta en la <a href="/@@SLUG@@">línea temporal</a>, con la justificación y las fuentes.</p>
 @@CUERPO@@
 <div style="border-top:3px solid var(--tinta); margin-top:48px; padding-top:22px">@@LEYENDA@@</div>
 </main>
@@ -1267,9 +1381,14 @@ function pintar() {
   soloB.setAttribute("aria-pressed", solo);
   document.querySelectorAll(".par").forEach(p => {
     let n = 0;
-    p.querySelectorAll(".chip").forEach(c => { c.hidden = !activos.has(c.dataset.v); if (!c.hidden) n++; });
+    p.querySelectorAll(".subr, .et").forEach(c => {
+      const on = activos.has(c.dataset.v);
+      c.classList.toggle("apagada", !on);
+      if (on && c.classList.contains("subr")) n++;
+    });
     p.hidden = solo && n === 0;
   });
+  document.querySelectorAll(".turno").forEach(t => { t.hidden = solo && !t.querySelector(".par:not([hidden])"); });
 }
 botones.forEach(b => b.onclick = () => {
   const v = b.dataset.v;

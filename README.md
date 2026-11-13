@@ -19,6 +19,8 @@ Todo está aquí para que cualquiera pueda revisarlo, discutirlo y corregirlo.
 | `entrevistas/<slug>/resultados/*.json` | Las afirmaciones verificadas, un fichero por bloque temático: cita literal, veredicto, explicación, confianza y fuentes. |
 | `entrevistas/<slug>/resumenes/*.json` | Resumen de una frase de cada explicación (el texto corto que muestra la web). |
 | `herramientas/transcribir.py` | Descarga el audio y lo transcribe en local con Whisper. |
+| `herramientas/hablantes.py` | Reconoce quién habla en cada segmento (Jordi, el invitado o los verificadores), en local. |
+| `entrevistas/<slug>/hablantes.json`, `transcripcion-hablantes.txt` | La voz de cada segmento y la transcripción por intervenciones. |
 | `web-src/build.py` | Genera la web estática (`web/`) a partir de los datos. Sin dependencias. |
 | `en-directo/` | Experimento: graba el micrófono, transcribe y verifica en directo. Sin terminar de probar. |
 | `METODO.md` | El procedimiento exacto, los criterios de cada veredicto y los límites. |
