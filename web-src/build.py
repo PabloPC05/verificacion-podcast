@@ -171,7 +171,7 @@ def main():
         hechas.append(pagina_entrevista(carpeta, json.loads(ruta_meta.read_text(encoding="utf-8"))))
     hechas.sort(key=lambda m: m["programa"], reverse=True)
     tarjetas = "".join(
-        f'<a class="entrevista" href="{e(m["slug"])}/"><p class="prog">{e(m["programa"])} · {e(m["fecha"])} · {e(m["duracion"])}</p>'
+        f'<a class="entrevista" href="/{e(m["slug"])}"><p class="prog">{e(m["programa"])} · {e(m["fecha"])} · {e(m["duracion"])}</p>'
         f'<h2>{e(m["invitado"])}</h2><p class="num"><b>{m["malas"]}</b> falsas o engañosas de {m["suma"]} afirmaciones comprobadas</p>'
         f'<p class="des">{m["total"]["falso"]} falsas · {m["total"]["enganoso"]} engañosas · {m["total"]["mayormente_verdadero"]} casi ciertas · '
         f'{m["total"]["verdadero"]} verdaderas · {m["total"]["no_verificable"]} no verificables</p><span>Ver la línea temporal →</span></a>'
@@ -329,7 +329,7 @@ footer p { max-width:68ch; }
 </style>
 </head>
 <body>
-<div class="ancho cima"><span><a href="../">Todas las entrevistas</a> · @@PROGRAMA@@ · @@FECHA_VIDEO@@</span><a href="@@REPO@@" target="_blank" rel="noopener noreferrer">Código y datos en GitHub ↗</a></div>
+<div class="ancho cima"><span><a href="/">Todas las entrevistas</a> · @@PROGRAMA@@ · @@FECHA_VIDEO@@</span><a href="@@REPO@@" target="_blank" rel="noopener noreferrer">Código y datos en GitHub ↗</a></div>
 <div class="ancho portada">
   <h1>@@INVITADO@@ con Jordi Wild, minuto a minuto</h1>
   <p class="entrada">Hemos transcrito la <a href="https://www.youtube.com/watch?v=@@VIDEO@@" target="_blank" rel="noopener noreferrer">entrevista completa</a> (@@DURACION@@) y contrastado con fuentes públicas las @@SUMA@@ afirmaciones que se pueden comprobar. Esta es la línea temporal: pulsa cualquier minuto para ver ese momento del vídeo.</p>
