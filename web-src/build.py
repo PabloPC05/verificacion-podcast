@@ -1729,9 +1729,8 @@ footer .leyenda-f { max-width:820px; }
 <p class="entrada">Jordi Wild ha entrevistado a los candidatos a la presidencia del Gobierno para las elecciones del 29 de noviembre de 2026. Transcribimos cada entrevista entera, separamos las afirmaciones que se pueden comprobar y las contrastamos con fuentes públicas, con el mismo método y la misma vara de medir para todos.</p>
 <p class="tu"><a href="/verificalo"><b>Puedes verificarlo tú</b> →</a> Cada dato enlaza su fuente y el minuto del vídeo, y hay un encargo listo para que cualquier IA lo revise por su cuenta.</p>
 </div>
-@@COMPARATIVA@@
-<h2 class="seccion-t">Las entrevistas</h2>
 <div class="tarjetas">@@TARJETAS@@</div>
+@@COMPARATIVA@@
 </main>
 <footer><div class="ancho pie">
 @@LEYENDA@@
