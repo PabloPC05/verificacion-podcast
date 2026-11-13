@@ -215,6 +215,17 @@ DEFINICIONES = {
 PIE = ('<p class="pie-quien"><a href="/quien">Proyecto personal e independiente de Pablo Pardo Cotos y Diego Cristóbal Andaluz, '
        'sin relación con The Wild Project ni con ningún partido.</a></p>')
 REPO_PABLO = "https://github.com/PabloPC05"
+# Ficha de Pablo en /quien. Solo datos públicos (su perfil de LinkedIn y lo publicado sobre Gara); sin foto.
+BIO_PABLO = ("<p>Estudia el doble grado de Matemáticas e Ingeniería Informática en la Universidad Complutense de Madrid "
+             "y este curso está de intercambio SICUE en la Universidade de Santiago de Compostela.</p>"
+             "<p>Es uno de los creadores de Gara, una plataforma que lleva los modelos de inteligencia artificial que predicen "
+             "la estructura de las proteínas al supercomputador del CESGA. Nació en el Impacthón 2026, donde su equipo ganó el "
+             "reto de la Cátedra CAMELIA de Medicina Personalizada, y sigue adelante con el apoyo de esa cátedra y del CiTIUS.</p>"
+             "<p>En esta web ha hecho la transcripción, la verificación de las entrevistas y el método; mantiene los datos y "
+             "decide qué cambios entran.</p>")
+ENLACES_PABLO = (f'<li><a href="{REPO_PABLO}" target="_blank" rel="noopener noreferrer">GitHub</a></li>'
+                 '<li><a href="https://www.linkedin.com/in/pablo-pardo-cotos" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>'
+                 '<li><a href="https://gara.bio" target="_blank" rel="noopener noreferrer">Gara</a></li>')
 # Ficha de Diego en /quien. Solo datos con fuente pública; sin foto.
 BIO_DIEGO = ("<p>Cofundador e ingeniero full stack de aplicaciones móviles en OSIX Tech Development, una empresa de software e "
              "inteligencia artificial de Santiago de Compostela, y organizador de GDG Santiago de Compostela. Su trabajo de fin de grado "
@@ -1540,7 +1551,7 @@ def main():
         QUIEN, ANALITICA=ANALITICA_QUIEN if UMAMI_ID else SIN_ANALITICA_QUIEN, CABECERA=cabecera(
             "/quien", "Quién hace esto · Verificación The Wild Project",
             "Quién hace esta verificación, su independencia, quién la paga, cómo se hace y cómo se corrigen los errores."),
-        MENU=menu(entrevistas), CSS_MENU=CSS_MENU, REPO=REPO, REPO_PABLO=REPO_PABLO, BIO_DIEGO=BIO_DIEGO, ENLACES_DIEGO=ENLACES_DIEGO), encoding="utf-8")
+        MENU=menu(entrevistas), CSS_MENU=CSS_MENU, REPO=REPO, REPO_PABLO=REPO_PABLO, BIO_PABLO=BIO_PABLO, ENLACES_PABLO=ENLACES_PABLO, BIO_DIEGO=BIO_DIEGO, ENLACES_DIEGO=ENLACES_DIEGO), encoding="utf-8")
     pagina_metodologia(entrevistas)
     DATOS.mkdir(exist_ok=True)
     (DATOS / "index.html").write_text(rellenar(
@@ -2036,8 +2047,8 @@ h1 { font:700 clamp(30px,5.2vw,58px)/1.05 var(--serif); letter-spacing:-0.02em; 
 <span class="inicial" aria-hidden="true">PP</span>
 <h3>Pablo Pardo Cotos</h3>
 <p class="rol">Autor y mantenedor</p>
-<div class="bio"><p>Estudiante del doble grado de Matemáticas e Ingeniería Informática de la Universidad Complutense de Madrid. Hace la verificación, mantiene los datos y decide qué cambios entran.</p></div>
-<ul class="enlaces"><li><a href="@@REPO_PABLO@@" target="_blank" rel="noopener noreferrer">GitHub</a></li></ul>
+<div class="bio">@@BIO_PABLO@@</div>
+<ul class="enlaces">@@ENLACES_PABLO@@</ul>
 </article>
 <article class="persona">
 <span class="inicial" aria-hidden="true">DC</span>
