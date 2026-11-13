@@ -1307,9 +1307,8 @@ footer p { max-width:68ch; }
 <h1>Las entrevistas de The Wild Project, comprobadas dato a dato</h1>
 <p class="entrada">Jordi Wild ha entrevistado a los candidatos a la presidencia del Gobierno para las elecciones del 29 de noviembre de 2026. Transcribimos cada entrevista entera, separamos las afirmaciones que se pueden comprobar y las contrastamos con fuentes públicas, con el mismo método y la misma vara de medir para todos.</p>
 <p class="tu"><a href="/verificalo"><b>Puedes verificarlo tú</b> →</a> Cada dato enlaza su fuente y el minuto del vídeo, y hay un encargo listo para que cualquier IA lo revise por su cuenta.</p>
-@@COMPARATIVA@@
-<h2 class="seccion-t">Las entrevistas</h2>
 @@TARJETAS@@
+@@COMPARATIVA@@
 </main>
 <footer><div class="ancho">
 @@LEYENDA@@
