@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.m4a
+*.aac
+*.wav
+en-directo/sesiones/
+.vercel/
+node_modules/
+.DS_Store

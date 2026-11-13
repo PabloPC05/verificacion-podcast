@@ -1,0 +1,171 @@
+[
+  {
+    "minuto": "0:03:31",
+    "cita": "Yo tengo 54 años, con 15 años, 16 años.",
+    "afirmacion": "Pedro Sánchez tiene 54 años (a fecha de la entrevista, noviembre de 2026).",
+    "veredicto": "verdadero",
+    "explicacion": "La biografía oficial de La Moncloa lo da como nacido en Madrid el 29 de febrero de 1972, de modo que en noviembre de 2026 tiene 54 años. Un perfil de El Español de octubre de 2026 también lo sitúa en 54 años.",
+    "confianza": "alta",
+    "fuentes": [
+      {"titulo": "La Moncloa: Biografía de Pedro Sánchez", "url": "https://www.lamoncloa.gob.es/presidente/biografia/Paginas/index.aspx"},
+      {"titulo": "El Español: Pedro Sánchez, años de infancia (12/10/2026)", "url": "https://www.elespanol.com/corazon/20261012/pedro-sanchez-anos-infancia-hijo-clase-media-madre-padre/1003744410192_0.html"}
+    ]
+  },
+  {
+    "minuto": "0:04:35",
+    "cita": "mi madre me tuvo con 18 años, mi padre me tuvo con 20 años Se casaron, ya embarazada ella",
+    "afirmacion": "La madre de Sánchez lo tuvo con 18 años y su padre tenía 20 cuando nació.",
+    "veredicto": "no_verificable",
+    "explicacion": "No he encontrado fechas de nacimiento de sus padres en fuentes documentales. Las edades solo constan por boca del propio Sánchez: en El Español (octubre de 2026) dice 18 y 20, pero otro titular de Semana lo cita diciendo que su madre lo tuvo «a los 20 años». La discrepancia entre sus propias versiones y la falta de registro impiden confirmarlo (es una anécdota familiar plausible, no desmentida).",
+    "confianza": "baja",
+    "fuentes": [
+      {"titulo": "El Español: Pedro Sánchez, años de infancia (12/10/2026)", "url": "https://www.elespanol.com/corazon/20261012/pedro-sanchez-anos-infancia-hijo-clase-media-madre-padre/1003744410192_0.html"},
+      {"titulo": "Semana: «Mi madre me tuvo a los 20 años...»", "url": "https://www.semana.es/corazon/pedro-sanchez-soy-hijo-de-clase-media-mi-madre-me-tuvo-a-los-20-anos-yo-he-tenido-una-madre-muy-joven-cuando-cumplio-los-40-se-saco-el-acceso-a-la-universidad_2821550"}
+    ]
+  },
+  {
+    "minuto": "0:04:35",
+    "cita": "mi abuelo estuvo 40 años trabajando fuera, en la migración, durante la dictadura franquista En Alemania",
+    "afirmacion": "Un abuelo de Sánchez trabajó 40 años emigrado en Alemania durante el franquismo.",
+    "veredicto": "no_verificable",
+    "explicacion": "Que su abuelo paterno (Juan Sánchez, natural de Anchuras, Ciudad Real, pastor) emigró a Alemania en los años sesenta, y que su padre le acompañó antes de asentarse en Madrid, aparece en prensa (Infobae, El Español) y en sus propias declaraciones. Lo de «40 años» solo consta por el propio Sánchez (Semana) y ninguna fuente independiente lo confirma; además no encaja bien con una emigración en los sesenta si se entiende «durante la dictadura», que terminó en 1975. Puede ser redondeo oral, pero no hay prueba de la cifra.",
+    "confianza": "baja",
+    "fuentes": [
+      {"titulo": "Semana: «Muchas veces pienso en mi abuelo, que estuvo viviendo durante 40 años en Alemania...»", "url": "https://www.semana.es/corazon/pedro-sanchez-muchas-veces-pienso-mi-abuelo-que-estuvo-viviendo-durante-40-anos-alemania-durante-dictadura-franquista-para-poder-alimentar-mi-padre_2821908"},
+      {"titulo": "Infobae: Los orígenes de Pedro Sánchez se remontan a un pequeño pueblo de Ciudad Real (12/11/2026)", "url": "https://www.infobae.com/espana/viajes/2026/11/12/los-origenes-de-pedro-sanchez-se-remontan-a-un-pequeno-pueblo-de-ciudad-real-de-265-habitantes-un-paraje-virgen-hasta-el-siglo-xiv/"},
+      {"titulo": "El Español: El refugio familiar de Pedro Sánchez (26/10/2026)", "url": "https://www.elespanol.com/eldigitalcastillalamancha/sociedad/20261026/refugio-familiar-pedro-sanchez-pueblo-abuela-juan-padre-guarda-grandes-amigos-trt/1003744434476_0.html"}
+    ]
+  },
+  {
+    "minuto": "0:04:35",
+    "cita": "Mis abuelos no sabían leer ni escribir.",
+    "afirmacion": "Los abuelos de Sánchez no sabían leer ni escribir.",
+    "veredicto": "no_verificable",
+    "explicacion": "Hay indicios a favor: en 2014 dijo que sus abuelos fallecieron «sin saber leer ni escribir correctamente» y los acompañaba a clases de adultos. En contra, El Debate (a partir de documentos de OK Diario, medios críticos con Sánchez) publicó en noviembre de 2025 el acta de filiación del abuelo materno en el Ejército republicano, donde constaría que sabía leer y escribir; Maldita lo recoge como caso aún no verificado. Un acta de filiación es una declaración, no una prueba de alfabetización, y no hay datos del resto de abuelos, así que no se puede dar un veredicto firme.",
+    "confianza": "baja",
+    "fuentes": [
+      {"titulo": "El Debate: Otra mentira de Sánchez: su abuelo materno sabía leer y escribir (19/11/2025)", "url": "https://www.eldebate.com/espana/20251119/otra-mentira-sanchez-abuelo-materno-sabia-leer-escribir_356355.html"},
+      {"titulo": "Maldita.es: ¿Sánchez dice que su abuelo franquista «no sabía leer ni escribir»...? (caso no verificado)", "url": "https://maldita.es/buloteca/claim/sanchez-dice-sanchez-dice-que-su-abuelo-franquista-no-sabia-leer-ni-escribir-pero-este-documento-demuestra-que-miente"},
+      {"titulo": "Trendencias: Pedro Sánchez 2014, sus abuelos y la escuela de mayores", "url": "https://www.trendencias.com/celebrities/pedro-sanchez-2014-cuando-era-pequeno-mis-abuelos-vivian-aluche-cuando-mis-padres-estaban-trabajando-yo-les-acompanaba-a-escuela-mayores-para-aprender-a-leer-escribir"}
+    ]
+  },
+  {
+    "minuto": "0:06:39",
+    "cita": "estos ocho años que llevo al frente del gobierno de España",
+    "afirmacion": "Sánchez lleva ocho años al frente del Gobierno de España (desde 2018).",
+    "veredicto": "verdadero",
+    "explicacion": "La moción de censura contra Rajoy prosperó el 1 de junio de 2018 y Sánchez tomó posesión el 2 de junio de 2018. Ha seguido en el cargo desde entonces (en funciones en 2019 y 2023), es decir, ocho años y cinco meses en noviembre de 2026.",
+    "confianza": "alta",
+    "fuentes": [
+      {"titulo": "La Moncloa: Pedro Sánchez, nuevo presidente del Gobierno (1/6/2018)", "url": "https://www.lamoncloa.gob.es/presidente/actividades/Paginas/2018/010618pedrosanchez.aspx"},
+      {"titulo": "The Objective: Pedro Sánchez toma posesión de su cargo como presidente del Gobierno", "url": "https://theobjective.com/toma-posesion-sanchez/"}
+    ]
+  },
+  {
+    "minuto": "0:08:41",
+    "cita": "Hasta incluso Abascal ha dicho a este señor hay que colgarle de los pies.",
+    "afirmacion": "Santiago Abascal dijo que a Sánchez «hay que colgarle de los pies».",
+    "veredicto": "mayormente_verdadero",
+    "explicacion": "El 10 de diciembre de 2023, en una entrevista con Clarín (audio publicado por The Objective), Abascal dijo: «Habrá un momento dado en el que el pueblo querrá colgarlo de los pies, pero hasta ahora eso le ha valido». Es una predicción (no un «hay que»), y Abascal alegó después que se manipularon sus palabras sin retractarse. La imagen violenta es real, pero Sánchez la parafrasea como una orden.",
+    "confianza": "alta",
+    "fuentes": [
+      {"titulo": "The Objective: Las palabras exactas de Abascal sobre Pedro Sánchez (11/12/2023)", "url": "https://theobjective.com/espana/politica/2023-12-11/palabras-exactamente-abascal-pedro-sanchez/"},
+      {"titulo": "Público: El PSOE denunciará ante la Fiscalía el ataque de Abascal a Sánchez", "url": "https://www.publico.es/politica/psoe-denunciara-fiscalia-ataque-abascal-sanchez.html"}
+    ]
+  },
+  {
+    "minuto": "0:08:41",
+    "cita": "A mí me han llamado dictador, me han llamado psicópata",
+    "afirmacion": "Responsables políticos han llamado «dictador» y «psicópata» a Sánchez.",
+    "veredicto": "verdadero",
+    "explicacion": "Abascal lo llamó «dictador» el 9 de noviembre de 2023 («O el dictador acaba en el banquillo...») y, según Sánchez, de nuevo «autócrata y dictador» (sesión de control del 9 de septiembre de 2026). Jorge Buxadé (Vox) lo llamó «un auténtico psicópata» el 12 de julio de 2021, y Abascal «psicópata peligroso» en otra ocasión; el propio Sánchez ya citaba estos insultos en diciembre de 2023, junto al «enfermo mental» atribuido a Feijóo.",
+    "confianza": "alta",
+    "fuentes": [
+      {"titulo": "VilaWeb: Abascal titlla Sánchez de dictador (9/11/2023)", "url": "https://www.vilaweb.cat/noticies/abascal-sanchez-dictador-banc-acusats/"},
+      {"titulo": "eldiario.es/EFE: Vox anima al PP a una moción de censura: Sánchez es un psicópata (12/7/2021)", "url": "https://www.eldiario.es/politica/vox-anima-pp-mocion-censura-sanchez-psicopata_1_8127719.html"},
+      {"titulo": "Democrata: Abascal tacha a Sánchez de «un psicópata peligroso»", "url": "https://www.democrata.es/politica/abascal-tacha-a-sanchez-de-un-psicopata-peligroso-y-le-acusa-de-traicionar-a-los-ceuties/"},
+      {"titulo": "Diari de Tarragona/EFE: Sánchez a Abascal: «yo seré un perro, pero no tengo amo» (9/9/2026)", "url": "https://www.diaridetarragona.com/espana/270259/sanchez-abascal-diferencia-sere-perro-amo.html"}
+    ]
+  },
+  {
+    "minuto": "0:10:43",
+    "cita": "los 11 puntos de la comunicación fascista de Goebbels, hay tres que me gustaría compartir contigo [...] La simplificación [...] la transposición [...] la verosimilitud",
+    "afirmacion": "Entre los «11 principios de la propaganda de Goebbels» figuran la simplificación y el enemigo único, la transposición (cargar al adversario con lo propio) y la verosimilitud (mezclar elementos ciertos para construir una mentira), tal como los describe Sánchez.",
+    "veredicto": "mayormente_verdadero",
+    "explicacion": "La lista divulgada de 11 principios incluye «simplificación (enemigo único)», «transposición» y «verosimilitud», con descripciones que coinciden en lo esencial con las de Sánchez. Matices: la «deshumanización» con la que arranca no es uno de los 11 principios de esa lista, y la atribución a Goebbels es discutida: fuentes divulgativas la vinculan al análisis de Leonard Doob (1950) sobre sus diarios y a la sistematización de Domenach, no a un manual escrito por él (no he podido comprobarlo en el original).",
+    "confianza": "media",
+    "fuentes": [
+      {"titulo": "Psicología y Mente: Los 11 principios de la propaganda de Goebbels", "url": "https://psicologiaymente.com/social/principios-propaganda-goebbels"},
+      {"titulo": "Actually Notes: Los 11 principios de Goebbels aplicados a la política española (origen de la lista)", "url": "https://www.actuallynotes.com/propaganda-11-principios-goebbels-aplicados-politica-actual-espanola/"},
+      {"titulo": "SMU: Goebbels' Principles (Doob, 1950)", "url": "https://www.physics.smu.edu/pseudo/Propaganda/principles.html"}
+    ]
+  },
+  {
+    "minuto": "0:11:52",
+    "cita": "a propósito de la ley de amnistía durante toda esta legislatura, empezamos con cánticos fascistas, con agresiones a militantes del Partido Socialista, a casas del pueblo del Partido Socialista, a la sede del Partido Socialista en Ferraz.",
+    "afirmacion": "Desde la ley de amnistía hubo cánticos fascistas, agresiones a militantes del PSOE, ataques a casas del pueblo y a la sede de Ferraz.",
+    "veredicto": "mayormente_verdadero",
+    "explicacion": "El 7 de noviembre de 2023 se oyeron el «Cara al sol» y el himno de la División Azul en las protestas ante Ferraz (La Marea), con cargas policiales y heridos esos días. Según fuentes de Ferraz (EFE, abril de 2024) hubo más de 200 ataques a sedes socialistas desde noviembre de 2023 y dos agresiones físicas a cargos del PSOE (Sanlúcar de Barrameda y Ponferrada). Las cifras proceden del propio partido y las agresiones físicas confirmadas son pocas; los «ataques» a Ferraz fueron sobre todo concentraciones con disturbios.",
+    "confianza": "media",
+    "fuentes": [
+      {"titulo": "La Marea: Qué grupos neonazis y ultras se han concentrado en Ferraz (8/11/2023)", "url": "https://www.lamarea.com/2023/11/08/que-grupos-neonazis-y-ultras-se-han-concentrado-en-ferraz"},
+      {"titulo": "The Objective/EFE: PSOE, más de 200 ataques a sedes y agresiones (17/4/2024)", "url": "https://theobjective.com/espana/politica/2024-04-17/psoe-200-ataques-sedes-agresiones/"},
+      {"titulo": "eldiario.es: Agreden al líder del PSOE en Sanlúcar de Barrameda al grito de «traidor»", "url": "https://www.eldiario.es/andalucia/cadiz/agreden-lider-psoe-sanlucar-barrameda-grito-traidor_1_10671364.amp.html"},
+      {"titulo": "Infobae: Cientos de manifestantes se concentran en Ferraz por decimoséptimo día", "url": "https://www.infobae.com/espana/2023/11/19/cientos-de-manifestantes-se-concentran-en-ferraz-por-decimoseptimo-dia-consecutivo/"}
+    ]
+  },
+  {
+    "minuto": "0:11:52",
+    "cita": "En campaña han tenido problemas incluso de intentos de asalto durante sus meetings [...] Y nosotros las hemos condenado.",
+    "afirmacion": "El PSOE (y Sánchez) ha condenado los intentos de asalto y la violencia contra los mítines de Vox en campaña.",
+    "veredicto": "no_verificable",
+    "explicacion": "Sí consta que Sánchez condenó en el Congreso (14 de abril de 2021) la violencia sufrida por Vox en Vallecas: «condenamos todo tipo de violencia». Para los incidentes de la actual precampaña (A Coruña el 21 de octubre y Maó el 23 de octubre de 2026) no he hallado ninguna condena del PSOE ni del Gobierno: el PP la exigió el 22 de octubre y Abascal acusó a Sánchez el 27 de octubre de ser incapaz de condenarla; en A Coruña participaron Juventudes Socialistas en la marcha. Falta una búsqueda en declaraciones orales o en redes que podría desmentir o confirmar la afirmación.",
+    "confianza": "baja",
+    "fuentes": [
+      {"titulo": "Que.es: Sánchez acusa a Vox de ir a Vallecas a «montar bronca» (14/4/2021)", "url": "https://www.que.es/2021/04/14/sanchez-vox-vallecas-montar-bronca/"},
+      {"titulo": "Moncloa.com: La protesta contra Abascal en A Coruña (21/10/2026)", "url": "https://www.moncloa.com/2026/10/21/abascal-protesta-coruna-detenidos-3452951/"},
+      {"titulo": "PressDigital: Sémper pide al PSOE que condene la violencia contra Vox (22/10/2026)", "url": "https://www.pressdigital.es/articulo/politica/2026-10-22/6062203-semper-pide-psoe-condene-violencia-contra-vox-no-puede-callar-afecta-partido-derechas"},
+      {"titulo": "Infobae/EFE: Abascal acusa a Sánchez de favorecer un clima de violencia contra Vox (27/10/2026)", "url": "https://www.infobae.com/espana/agencias/2026/10/27/abascal-acusa-a-sanchez-de-favorecer-un-clima-de-violencia-contra-vox/"}
+    ]
+  },
+  {
+    "minuto": "0:12:53",
+    "cita": "por mi parte, no ha habido insultos al jefe de la oposición ni tampoco al líder de Vox",
+    "afirmacion": "Sánchez no ha insultado ni al jefe de la oposición (Feijóo) ni al líder de Vox (Abascal).",
+    "veredicto": "enganoso",
+    "explicacion": "No he encontrado insultos soeces de Sánchez a ambos, pero sí descalificaciones personales recientes. El 9 de septiembre de 2026 dijo en el Congreso a Abascal que es quien va «con una correa al cuello» y que, a diferencia de él, «yo seré un perro, pero no tengo amo». A Feijóo le dijo el 19 de febrero de 2025 que es «para la política española lo que la criptomoneda de Milei para los votantes argentinos» y en febrero de 2024 que «todo en usted es mentira»; el 17 de junio de 2026 lo llamó «Torquemada de la vida». Que sean «insultos» o dureza política es opinable, pero la afirmación categórica omite estos hechos.",
+    "confianza": "media",
+    "fuentes": [
+      {"titulo": "Diari de Tarragona/EFE: Sánchez a Abascal: «yo seré un perro, pero no tengo amo» (9/9/2026)", "url": "https://www.diaridetarragona.com/espana/270259/sanchez-abascal-diferencia-sere-perro-amo.html"},
+      {"titulo": "Diario de Cuyo: Sánchez contra Feijóo: «es usted lo que la criptomoneda de Milei...» (19/2/2025)", "url": "https://www.diariodecuyo.com.ar/mundo/pedro-sanchez-contra-feijoo-es-usted-para-la-politica-espanola-lo-que-la-criptomoneda-de-milei-para-los-votantes-argentinos-1705585.html"},
+      {"titulo": "Vozpópuli: Sánchez y Feijóo, insultado menos, elecciones gallegas (21/2/2024)", "url": "https://www.vozpopuli.com/espana/politica/sanchez-feijoo-insultado-menos-elecciones-galicia.html"},
+      {"titulo": "Público: Feijóo llama «cobarde» a Sánchez y este lo tacha de «Torquemada» (17/6/2026)", "url": "https://www.publico.es/politica/feijoo-llama-cobarde-sanchez-permitir-congreso-vota-debe-adelantar-elecciones.html"}
+    ]
+  },
+  {
+    "minuto": "0:09:42",
+    "cita": "yo no digo me gusta la fruta, por ejemplo no digo hijo de puta a una persona ni a un adversario político.",
+    "afirmacion": "Sánchez nunca ha llamado «hijo de puta» a una persona ni a un adversario político; «me gusta la fruta» es el eufemismo asociado a ese insulto.",
+    "veredicto": "no_verificable",
+    "explicacion": "La referencia es correcta: «me gusta la fruta» es la frase con que el equipo de Isabel Díaz Ayuso encubrió, en el debate de investidura de noviembre de 2023, lo que un vídeo sin sonido parecía ser un «hijo de puta» dirigido a Sánchez; ella reconoció después que lo dijo «por lo bajo». Que Sánchez nunca haya usado ese insulto no se puede probar, aunque no he encontrado ningún caso documentado.",
+    "confianza": "media",
+    "fuentes": [
+      {"titulo": "Menorca.info/EFE: Ayuso reconoce que insultó a Sánchez (16/11/2023)", "url": "https://www.menorca.info/actualidad/elecciones-23j/2023/11/16/2051241/ayuso-reconoce-insulto-sanchez-aprovecho-para-insultar-familia.html"},
+      {"titulo": "The Objective: Ayuso acusa a Sánchez de difamarla (16/11/2023)", "url": "https://theobjective.com/espana/politica/2023-11-16/ayuso-acusa-sanchez-difarmarla/"}
+    ]
+  },
+  {
+    "minuto": "1:50:50",
+    "cita": "Yo diría, oye, hasta el Papa ha votado. No sé qué ha votado el Papa, ni tampoco Pati Smith, pero sé que votar ahora mismo es importante",
+    "afirmacion": "El Papa ha votado (en las elecciones de Estados Unidos), y Patti Smith también se ha pronunciado a favor de votar.",
+    "veredicto": "verdadero",
+    "explicacion": "El 30 de octubre de 2026 la Oficina de Prensa de la Santa Sede confirmó que León XIV (ciudadano estadounidense) votó por correo en las elecciones intermedias del 3 de noviembre, algo inédito en un papa; no se ha revelado su voto. Patti Smith, que se reunió con él el 31 de julio de 2026, instó en Oviedo (octubre de 2026) a los estadounidenses a votar para cambiar el país. No consta si ella votó, pero Sánchez no afirma qué votó.",
+    "confianza": "alta",
+    "fuentes": [
+      {"titulo": "Vatican News: Pope Leo XIV votes in USA midterm elections", "url": "https://www.vaticannews.va/en/pope/news/2026-10/pope-leo-xiv-votes-usa-midterm-elections.html"},
+      {"titulo": "Euronews: Pope Leo XIV has voted in US midterm elections, Vatican says (30/10/2026)", "url": "https://www.euronews.com/2026/10/30/pope-leo-xiv-has-voted-in-us-midterm-elections-vatican-says"},
+      {"titulo": "Crónica: Patti Smith insta a los estadounidenses a unirse con sus votos (20/10/2026)", "url": "https://www.cronica.com.mx/cultura/2026/10/20/patti-smith-insta-a-los-estadounidenses-a-unirse-con-sus-votos-para-impulsar-un-cambio/"},
+      {"titulo": "America Magazine: Patti Smith y el papa León XIV (31/7/2026)", "url": "https://www.americamagazine.org/news/2026/07/31/patti-smith-pope-leo/"}
+    ]
+  }
+]

@@ -1,0 +1,96 @@
+# Método de verificación
+
+Este es el procedimiento exacto con el que se ha verificado cada entrevista. Está escrito para que
+cualquiera (una persona o una sesión de Claude Code) lo repita con otra entrevista y obtenga un resultado
+comparable. La regla principal: **la misma vara de medir para todos los invitados, sea cual sea su partido.**
+
+## 1. Descargar y transcribir
+
+```sh
+.venv/bin/python herramientas/transcribir.py <slug> <url-de-youtube> "<Nombre del invitado>" "<glosario opcional>"
+```
+
+Crea `entrevistas/<slug>/` con la transcripción (`transcripcion.txt`, párrafos de ~1 minuto con marca
+`[h:mm:ss]`), los segmentos con tiempos (`segmentos.json`), los capítulos del vídeo (`capitulos.json`) y
+`meta.json`. Revisa `meta.json` (nombre del invitado, programa, fecha, duración). El audio no se sube al repo.
+
+Si el entorno `.venv` no existe: `uv venv --python 3.12 && uv pip install mlx-whisper`.
+
+## 2. Repartir por temas
+
+Lee la transcripción entera y `capitulos.json`. Agrupa los capítulos en bloques temáticos (en la entrevista
+de Sánchez fueron 8 bloques para 12 capítulos: los capítulos sin datos comprobables se juntan). Para cada
+bloque, anota el tramo de tiempo, las líneas del fichero y la lista de afirmaciones comprobables que haces
+a primera lectura.
+
+## 3. Verificar: un subagente Sonnet por bloque
+
+Lanza en paralelo un subagente (modelo Sonnet, con WebSearch y WebFetch) por bloque, con este encargo
+(sustituye lo que va entre `<>`):
+
+> Eres verificador de datos (fact-checker) riguroso e imparcial. Hoy es `<fecha>`. `<Contexto: programa,
+> invitado, fecha de publicación, elecciones>`. Tengo la transcripción automática (Whisper, sin etiquetas de
+> hablante y con algún error de reconocimiento) en `<ruta>/transcripcion.txt`, con marcas [h:mm:ss] al inicio
+> de cada párrafo.
+>
+> TU PARTE: el capítulo `<título>` (`<tramo>`, líneas `<a–b>` del fichero). Lee esas líneas enteras.
+>
+> TAREA: comprueba con búsqueda web cada afirmación FACTUAL COMPROBABLE que haga `<INVITADO>` (no las de
+> Jordi Wild; deduce quién habla por el contexto). No evalúes opiniones, valoraciones, promesas ni anécdotas
+> privadas imposibles de comprobar.
+>
+> Afirmaciones que ya he localizado (comprueba estas y añade cualquier otra comprobable que veas en tu
+> tramo): `<lista numerada>`
+>
+> MÉTODO: usa WebSearch y WebFetch. Muchos hechos son recientes: NO te fíes de tu memoria, búscalo. Prioriza
+> fuentes primarias y oficiales (INE, Eurostat, BOE, Banco de España, Congreso, ministerios, resoluciones
+> judiciales) y prensa de distintas líneas editoriales; verificadores (Newtral, Maldita, EFE Verifica) como
+> apoyo. Aplica la misma vara de medir que a cualquier político de cualquier partido. Admite el redondeo
+> razonable del lenguaje oral. Respeta la presunción de inocencia de los no condenados. Cita solo URLs que
+> hayas visto de verdad; nunca inventes una URL ni un dato. Si no encuentras prueba suficiente, el veredicto
+> es «no_verificable»: no fuerces ni «falso» ni «verdadero».
+>
+> VEREDICTOS: verdadero | mayormente_verdadero | enganoso (dato real pero sin contexto, mezcla de periodos o
+> conclusión que no se sigue) | falso | no_verificable.
+>
+> ENTREGA: escribe el fichero `entrevistas/<slug>/resultados/<NN-tema>.json` con un array JSON de objetos:
+> `{"minuto": "h:mm:ss", "cita": "literal de la transcripción", "afirmacion": "reformulada y autocontenida",
+> "veredicto": "...", "explicacion": "2-4 frases con el dato real, su fecha y de dónde sale",
+> "confianza": "alta|media|baja", "fuentes": [{"titulo": "...", "url": "https://..."}]}`. Todo en español.
+> Como respuesta final dame solo el recuento por veredicto y una línea por cada «falso» o «enganoso».
+
+La `cita` debe ser literal: la web la usa para encontrar el segundo exacto del vídeo.
+
+## 4. Resumir las justificaciones
+
+Un subagente Sonnet por fichero de resultados. Para cada afirmación, en el mismo orden, un resumen de la
+explicación: una frase (dos como mucho), máximo 30 palabras, que empiece por el dato real y no añada nada
+que no esté en la explicación. Se guarda como array de cadenas en
+`entrevistas/<slug>/resumenes/<NN-tema>.json` (misma longitud y orden que el fichero de resultados).
+
+## 5. Generar la web y publicar
+
+```sh
+python3 web-src/build.py                                  # genera web/index.html y web/<slug>/index.html
+git add entrevistas/<slug> web && git commit -m "Verificación de la entrevista a <invitado>" && git push
+cd web && npx vercel deploy --prod --yes --scope pablopc05s-projects
+```
+
+## Qué significa cada veredicto
+
+| Veredicto | Criterio |
+|---|---|
+| Verdadero | Los datos lo confirman. |
+| Casi cierto | Cierto en lo esencial, con una imprecisión menor. |
+| Engañoso | Se apoya en algo real pero omite contexto, mezcla periodos o lleva a una conclusión que no se sigue. |
+| Falso | Los datos lo contradicen. No implica intención de mentir: incluye errores y lapsus. |
+| No verificable | No hay prueba pública suficiente, o la búsqueda se quedó corta. |
+
+## Límites conocidos
+
+- La verificación la hacen modelos de IA y no la revisa un equipo de periodistas.
+- Los subagentes tienen un cupo de búsquedas; cuando se agota, lo que queda sin contrastar se marca «no
+  verificable», no «verdadero».
+- Algunas páginas oficiales no se dejan abrir de forma automática y se citan a través de prensa.
+- La transcripción automática no distingue hablantes y a veces confunde nombres.
+- El número de afirmaciones falsas depende de cuánto habla cada invitado y de cuántos datos da: no es un ranking.

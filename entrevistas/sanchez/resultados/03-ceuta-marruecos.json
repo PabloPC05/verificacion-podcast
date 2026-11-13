@@ -1,0 +1,374 @@
+[
+  {
+    "minuto": "0:29:57",
+    "cita": "yo soy el presidente del gobierno que más veces ha ido en ejercicio a Ceuta y a Melilla",
+    "afirmacion": "Pedro Sánchez es el presidente del Gobierno que, estando en el cargo, más veces ha visitado Ceuta y Melilla (lo repite en 0:42:49 y 0:45:10).",
+    "veredicto": "verdadero",
+    "explicacion": "Un recuento de Europa Press (1-oct-2026) da a Sánchez 6 visitas oficiales a las dos ciudades (Ceuta y Melilla el 18-mar-2021, ambas el 23-mar-2022, Ceuta 1-mar-2023, Melilla 2-jun-2025, Ceuta 20-nov-2025 y Ceuta 31-jul-2026), frente a 2 de Zapatero (2006), 2 de Suárez (1980), 1 documentada de Rajoy (Ceuta, 2016) y ninguna de González y Aznar. Matiz: el recuento incluye la visita del 31 de julio de 2026 y el dato procede de una sola agencia, pero ningún presidente anterior alcanza esa cifra.",
+    "confianza": "media",
+    "fuentes": [
+      {"titulo": "Infobae/Europa Press: El viaje de los Reyes a Ceuta y Melilla, segundo de la monarquía en democracia (tabla de visitas de presidentes)", "url": "https://www.infobae.com/espana/agencias/2026/10/01/el-viaje-de-los-reyes-a-ceuta-y-melilla-segundo-de-la-monarquia-en-democracia/"},
+      {"titulo": "El Debate: Ceuta y Melilla, unas grandes desconocidas para los ministros de Sánchez", "url": "https://www.eldebate.com/espana/20260805/ceuta-melilla-grandes-desconocidas-ministros-sanchez_446543.html"}
+    ]
+  },
+  {
+    "minuto": "0:29:57",
+    "cita": "Estamos hablando a lo mejor de llegadas de 1.000, 1.200 migrantes",
+    "afirmacion": "En los cinco días previos al 30 de julio de 2026 hubo un pico de llegadas irregulares a Ceuta de unos 1.000-1.200 migrantes.",
+    "veredicto": "no_verificable",
+    "explicacion": "No hay un dato público para esa ventana de cinco días. Interior (Marlaska, comparecencia de finales de agosto) contabilizó 1.026 entradas a nado en todo julio hasta el día 29; Vivas habló de unas 1.500 en la última quincena (29-jul) y una nota de la Guardia Civil registró 205 entradas a nado en Ceuta del 20 al 26 de julio. Ninguna cifra respalda 1.000-1.200 en cinco días, aunque la formulación es dubitativa («a lo mejor»).",
+    "confianza": "baja",
+    "fuentes": [
+      {"titulo": "Articulo14: Marlaska reconoce que había muchos informes y preocupación (1.026 entradas a nado y 2.857 interceptaciones hasta el 30-jul)", "url": "https://www.articulo14.es/politica/marlaska-reconoce-que-habia-muchos-informes-y-preocupacion-sobre-la-llegada-de-inmigrantes-a-ceuta-pero-como-la-del-ano-pasado-20260828.html"},
+      {"titulo": "El Independiente (29-jul-2026): Colapso en Ceuta por las más de 1.500 entradas a nado", "url": "https://www.elindependiente.com/espana/2026/07/29/colapso-ceuta-crisis-migratoria-1500-entradas-nado-marruecos/"},
+      {"titulo": "Infobae: Guardia Civil registró un incremento reseñable en las llegadas a nado la semana previa", "url": "https://www.infobae.com/espana/agencias/2026/09/09/guardia-civil-registro-un-incremento-resenable-en-las-llegadas-a-nado-la-semana-previa-a-la-entrada-masiva-a-ceuta/"}
+    ]
+  },
+  {
+    "minuto": "0:29:57",
+    "cita": "no en absoluto los más de 80.000 que el 30 y el 31 de julio entraron en Ceuta",
+    "afirmacion": "El 30 y 31 de julio de 2026 entraron en Ceuta más de 80.000 personas.",
+    "veredicto": "mayormente_verdadero",
+    "explicacion": "La cifra oficial de Interior (Marlaska, 4-ago-2026, reiterada el 11-ago) es de 72.000 entradas, es decir, algo por debajo de «más de 80.000». Vivas habló de hasta 80.000 y Robles y Torres llegaron a citar 80.000 en declaraciones iniciales; el Gobierno de Ceuta calculó al menos 96.058 en un informe de octubre. El orden de magnitud es correcto, pero el dato de su propio Gobierno es 72.000.",
+    "confianza": "media",
+    "fuentes": [
+      {"titulo": "Ceuta TV: Las cifras de Interior: 72.000 entradas y 75 fallecidos", "url": "https://www.ceutatv.com/articulo/politica/cifras-interior-72000-entradas-75-fallecidos-crisis-migratoria/20260804164717250844.html"},
+      {"titulo": "El Debate: ¿Cuáles son las verdaderas cifras de la crisis de Ceuta?", "url": "https://www.eldebate.com/espana/20260917/cuales-son-verdaderas-cifras-invasion-ceuta-numero-entradas-salidas-alojados-calle_459327.html"},
+      {"titulo": "Wikipedia: Crisis migratoria de Ceuta de 2026 (recopilación de cifras)", "url": "https://es.wikipedia.org/wiki/Crisis_migratoria_de_Ceuta_de_2026"}
+    ]
+  },
+  {
+    "minuto": "0:34:24",
+    "cita": "nosotros no recibimos ningún aviso de ningún servicio de inteligencia",
+    "afirmacion": "El Gobierno no recibió ningún aviso de ningún servicio de inteligencia (CNI incluido) de una entrada de la escala de la del 30-31 de julio; sí hubo reuniones con el gobierno ceutí y se aumentó la seguridad en frontera.",
+    "veredicto": "enganoso",
+    "explicacion": "Su propia ministra de Defensa afirmó en el Congreso (25-ago-2026) que el CNI informó el 29 de julio a la Delegación del Gobierno en Ceuta de una convocatoria para entrar a nado al día siguiente aprovechando la fiesta marroquí, y que antes hubo una reunión el 27 de julio con el presidente ceutí, el delegado y el CNI. Interior, la Delegación y Moncloa lo niegan o dicen que ningún informe anticipaba una entrada de esa magnitud; Marlaska reconoció «muchos informes y preocupación», pero «como los del año pasado». Hay, por tanto, avisos de una convocatoria concreta (según Robles), aunque no de la escala de 72.000, y la versión del Gobierno es contradictoria; el aumento de seguridad en frontera no he podido confirmarlo con fuentes.",
+    "confianza": "media",
+    "fuentes": [
+      {"titulo": "elDiario.es: Robles asegura que el CNI advirtió el día previo de la entrada a nado y Marlaska insiste en que no había informes", "url": "https://www.eldiario.es/politica/robles-defiende-labor-cni-ceuta-descarta-marruecos-participase-asalto-autogestion-individuos_1_13465716.html"},
+      {"titulo": "The Objective: Robles insiste en que el CNI avisó un día antes de la entrada a nado", "url": "https://theobjective.com/espana/2026-08-25/robles-cni-aviso-entrada-inmigrantes-ceuta/"},
+      {"titulo": "Democrata: Choque en el Gobierno por el CNI en Ceuta (versiones de Robles, Marlaska, Delegación y Moncloa)", "url": "https://www.democrata.es/en/society/crisis-in-the-government-over-ceuta-robles-marlaska-and-the-delegation-offer-their-versions-on-the-warnings-from-the-cni/"},
+      {"titulo": "Articulo14: Marlaska reconoce que había muchos informes y preocupación", "url": "https://www.articulo14.es/politica/marlaska-reconoce-que-habia-muchos-informes-y-preocupacion-sobre-la-llegada-de-inmigrantes-a-ceuta-pero-como-la-del-ano-pasado-20260828.html"}
+    ]
+  },
+  {
+    "minuto": "0:31:09",
+    "cita": "hubo un bulo, una lectura interesada de una sentencia del Tribunal Supremo que decía lo siguiente [...] Si tú entras a Nado en España, no te pueden echar. [...] Eso se multiplicó en redes sociales",
+    "afirmacion": "Antes de la entrada masiva circuló en redes una lectura interesada y falsa de una sentencia del Tribunal Supremo (que quien entra a nado no puede ser devuelto), que contribuyó a la movilización.",
+    "veredicto": "mayormente_verdadero",
+    "explicacion": "El Supremo dictó a finales de junio de 2026 una sentencia (hecha pública el 8 de julio) que dice que el rechazo en frontera no es aplicable a quien es interceptado a nado, pero que la devolución sigue siendo posible por el procedimiento ordinario; el mensaje difundido omitía esto. Maldita documentó 215 publicaciones idénticas en Facebook en árabe el 30 de julio. Sánchez lo presenta como uno de tres factores, no como causa única, y es discutido que fuera el detonante: la Policía y Golden Owl apuntan a una movilización coordinada y la UE no halló pruebas concluyentes de un desencadenante externo.",
+    "confianza": "media",
+    "fuentes": [
+      {"titulo": "Maldita.es: De la sentencia del Tribunal Supremo sobre Ceuta a la idea de una frontera abierta: cómo un mismo mensaje la disparó en Facebook en Marruecos el 30J", "url": "https://maldita.es/investigaciones/20260806/tribunal-supremo-sentencia-ceuta-marruecos-facebook/"},
+      {"titulo": "Confilegal: La sentencia del Supremo que estableció que entrar en Ceuta nadando no activa la devolución en caliente", "url": "https://confilegal.com/20260730-sts-2965-2026-ceuta-rechazo-frontera-cruces-nado/"},
+      {"titulo": "Confilegal: Félix Bolaños califica de bulo la interpretación de la sentencia del Tribunal Supremo", "url": "https://confilegal.com/20260827-felix-bolanos-califica-de-bulo-la-interpretacion-de-la-sentencia-del-tribunal-supremo/"},
+      {"titulo": "Wikipedia: Crisis migratoria de Ceuta de 2026", "url": "https://es.wikipedia.org/wiki/Crisis_migratoria_de_Ceuta_de_2026"}
+    ]
+  },
+  {
+    "minuto": "0:32:14",
+    "cita": "Y lo hizo además un día, que es la fiesta del trono, que es un día muy especial para Marruecos",
+    "afirmacion": "La entrada masiva coincidió con la Fiesta del Trono de Marruecos (30 de julio).",
+    "veredicto": "verdadero",
+    "explicacion": "La Fiesta del Trono se celebra en Marruecos cada 30 de julio (Mohamed VI asumió el trono el 30-jul-1999) y la entrada masiva comenzó la mañana del 30 de julio de 2026. Robles dijo en el Congreso que el CNI avisó de una convocatoria para entrar a nado «aprovechando una fiesta» en Marruecos. Que la seguridad marroquí estuviera más centrada en proteger a sus autoridades es una interpretación no verificada.",
+    "confianza": "alta",
+    "fuentes": [
+      {"titulo": "Wikipedia: Fiesta del Trono (Marruecos), 30 de julio", "url": "https://es.wikipedia.org/wiki/Fiesta_del_Trono"},
+      {"titulo": "The Objective: Robles insiste en que el CNI avisó un día antes (aprovechando una fiesta en el país vecino)", "url": "https://theobjective.com/espana/2026-08-25/robles-cni-aviso-entrada-inmigrantes-ceuta/"}
+    ]
+  },
+  {
+    "minuto": "0:32:14",
+    "cita": "el salto de renta per cápita que hay entre un lado y otro, estamos hablando de que se multiplica por ocho",
+    "afirmacion": "La renta per cápita se multiplica por ocho entre el lado marroquí y el español de la frontera de Ceuta y Melilla (dijo «una de las fronteras más complejas del mundo», no «más desiguales»).",
+    "veredicto": "mayormente_verdadero",
+    "explicacion": "El PIB per cápita de España es unas 8-9 veces el de Marruecos en dólares corrientes (Banco Mundial 2024: unos 35.300 frente a 4.000-4.150 USD), y un cálculo con datos del Banco Mundial da 8,26. Para Ceuta en concreto, el INE da 23.228 euros en 2024 (la segunda región española más pobre), lo que equivale a unas 6 veces el PIB per cápita marroquí; en paridad de poder adquisitivo la brecha España-Marruecos baja a unas 6 veces. La cifra de 8 es razonable para España-Marruecos, algo alta para Ceuta, y Maldita desmontó en 2021 que sea la frontera más desigual del mundo (cosa que Sánchez no dice).",
+    "confianza": "media",
+    "fuentes": [
+      {"titulo": "INE: Contabilidad Regional de España 2024 (PIB per cápita Ceuta 23.228 euros)", "url": "https://ine.es/dyngs/Prensa/avCRE2024.htm"},
+      {"titulo": "GeoRank (datos Banco Mundial): Marruecos vs España", "url": "https://georank.org/economy/morocco/spain"},
+      {"titulo": "El Salto: Lecciones sobre Ceuta (ratio de renta 8,26 con datos del Banco Mundial)", "url": "https://www.elsaltodiario.com/opinion-socias/lecciones-ceuta"},
+      {"titulo": "Maldita.es: Por qué la frontera de España y Marruecos no es la más desigual del mundo", "url": "https://maldita.es/malditateexplica/20210525/ceuta-melilla-fronteras-mas-desiguales/"}
+    ]
+  },
+  {
+    "minuto": "0:34:24",
+    "cita": "tuvimos más de 140 muertos",
+    "afirmacion": "La crisis de Ceuta de julio-agosto de 2026 causó más de 140 fallecidos.",
+    "veredicto": "enganoso",
+    "explicacion": "La cifra de 141 (4-ago-2026) es de la ONG Caminando Fronteras y suma ambos lados de la frontera (78 en aguas españolas, 63 en Marruecos); la ONG la elevó después a 145. Las cifras oficiales son menores: Interior confirmó 75 muertes en el lado español (más 11 reconocidas por Marruecos, 86 en total) y el Instituto de Medicina Legal de Ceuta había recibido 82 cuerpos a 6 de agosto. Sánchez la presenta como dato propio, sin decir que no es oficial ni que incluye el lado marroquí.",
+    "confianza": "media",
+    "fuentes": [
+      {"titulo": "Infobae: El número de fallecidos se eleva a 141, según la ONG Caminando Fronteras", "url": "https://www.infobae.com/espana/2026/08/05/el-numero-de-fallecidos-durante-la-entrada-masiva-a-ceuta-se-eleva-a-141-segun-la-ong-caminando-fronteras/"},
+      {"titulo": "Ceuta TV: Las cifras de Interior: 72.000 entradas y 75 fallecidos", "url": "https://www.ceutatv.com/articulo/politica/cifras-interior-72000-entradas-75-fallecidos-crisis-migratoria/20260804164717250844.html"},
+      {"titulo": "El Pueblo de Ceuta: Crisis migratoria en Ceuta, las cifras que explican su magnitud (82 cuerpos en Medicina Legal)", "url": "https://www.elpueblodeceuta.es/sec/politica/inmigracion/numeros-crisis-ceuta-sigue-batallando_1_1185686.html"}
+    ]
+  },
+  {
+    "minuto": "0:37:26",
+    "cita": "aún teniendo a más de 140, sobre todo, menores muertos hoy",
+    "afirmacion": "La mayoría de los más de 140 fallecidos en la crisis de Ceuta eran menores de edad.",
+    "veredicto": "no_verificable",
+    "explicacion": "No he encontrado ningún desglose por edad de los fallecidos, ni oficial (Interior, Delegación, Medicina Legal) ni de Caminando Fronteras; a principios de agosto solo se había identificado a media docena de los cuerpos recibidos por Medicina Legal. Un chequeo de Facthem sobre la frase equivalente de Sánchez en el Congreso (3-sep-2026) tampoco halló ninguna fuente que confirme que la mayoría fueran menores. Las informaciones sobre desaparecidos adolescentes no equivalen a fallecidos confirmados.",
+    "confianza": "media",
+    "fuentes": [
+      {"titulo": "Facthem: Sánchez, «141 fallecidos, en su mayoría niños y niñas»", "url": "https://facthem.es/claim/la-crisis-migratoria-de-ceuta-causo-141-fallecidos-1ff35556.html"},
+      {"titulo": "El Pueblo de Ceuta: Crisis migratoria en Ceuta, las cifras que explican su magnitud", "url": "https://www.elpueblodeceuta.es/sec/politica/inmigracion/numeros-crisis-ceuta-sigue-batallando_1_1185686.html"}
+    ]
+  },
+  {
+    "minuto": "0:33:20",
+    "cita": "la gente que está llegando son sobre todo menores",
+    "afirmacion": "Las personas que entraron en Ceuta el 30-31 de julio de 2026 eran sobre todo menores (lo repite en 0:50:42: «los que entraron eran, sobre todo, menores»).",
+    "veredicto": "falso",
+    "explicacion": "Interior identificó 1.898 menores (cifra de principios de agosto; 2.048 filiados a mediados de septiembre), es decir, un 2-3 % de las 72.000 entradas oficiales; las ONG elevan la cifra a unos 4.000 (5 %). El informe policial citado por Infobae describe en la primera y tercera oleadas a varones jóvenes de 15 a 25 años, casi todos marroquíes, y en la segunda a familias, con niños entre el 18 % y el 25 % de ese tramo. El 90 % se fue en pocas horas sin filiar, por lo que no hay un censo por edades, pero ningún dato respalda que los menores fueran mayoría; sí son una parte relevante de los que se quedaron.",
+    "confianza": "media",
+    "fuentes": [
+      {"titulo": "El Pueblo de Ceuta: Crisis migratoria en Ceuta, las cifras (1.898 menores según Interior, ~4.000 según ONG)", "url": "https://www.elpueblodeceuta.es/sec/politica/inmigracion/numeros-crisis-ceuta-sigue-batallando_1_1185686.html"},
+      {"titulo": "Infobae: De jóvenes con neopreno y aletas a familias con niños: así fue la entrada masiva (informe policial)", "url": "https://www.infobae.com/espana/2026/09/02/de-jovenes-con-neopreno-y-aletas-a-familias-con-ninos-en-ropa-deportiva-y-chancletas-asi-fue-la-entrada-masiva-de-los-migrantes-en-ceuta/"},
+      {"titulo": "El Debate: ¿Cuáles son las verdaderas cifras de la crisis de Ceuta? (2.048 menores filiados)", "url": "https://www.eldebate.com/espana/20260917/cuales-son-verdaderas-cifras-invasion-ceuta-numero-entradas-salidas-alojados-calle_459327.html"}
+    ]
+  },
+  {
+    "minuto": "0:37:26",
+    "cita": "sobre todo las 48 primeras horas de esa crisis, es que 9 de cada 10 migrantes que entraron salieron",
+    "afirmacion": "En las primeras 48 horas de la crisis salieron de Ceuta 9 de cada 10 de los migrantes que habían entrado.",
+    "veredicto": "mayormente_verdadero",
+    "explicacion": "Los recuentos del propio Gobierno lo respaldan: 48.300 retornos a las 18:00 del 31 de julio, unos 69.500 a 1 de agosto según fuentes policiales citadas por EFE y 70.000 de 72.000 el 4 de agosto (Marlaska); Torres habló de un 90-95 % en 24-48 horas y un informe policial estima que ~90 % no se quedó. Matiz: es un conteo de salidas por la frontera de las fuerzas de seguridad, no verificado de forma independiente, y no cuadra del todo con otras cifras (el Gobierno de Ceuta calculaba 10.000-12.000 personas aún en la ciudad el 31 de agosto frente a las 5.000 de Interior; la Guardia Civil habla de 88.146 retornos, más que las entradas).",
+    "confianza": "media",
+    "fuentes": [
+      {"titulo": "Menorca.info (EP): El Gobierno eleva a 48.300 los inmigrantes que han regresado a Marruecos desde Ceuta (31-jul)", "url": "https://www.menorca.info/actualidad/nacional/2026/07/31/2681077/gobierno-estima-25000-inmigrantes-han-retornado-marruecos-desde-ceuta-hasta-este-mediodia.html"},
+      {"titulo": "Orain/EFE: Marlaska asegura que han regresado 70.000 de las 72.000 personas que entraron (4-ago)", "url": "https://orain.eus/es/politica/2026/08/04/marlaska-asegura-han-regresado-marruecos-70-000-las-72-000-personas-entraron-ceuta/"},
+      {"titulo": "El Debate: La Guardia Civil estima que 88.146 personas han regresado a Marruecos (cita a Torres: 90-95 % en 24-48 h)", "url": "https://www.eldebate.com/espana/20261106/guardia-civil-estima-88146-personas-han-regresado-marruecos-invasion-ceuta_478298.html"},
+      {"titulo": "Infobae: De jóvenes con neopreno y aletas a familias con niños (informe policial: ~90 % no se quedó)", "url": "https://www.infobae.com/espana/2026/09/02/de-jovenes-con-neopreno-y-aletas-a-familias-con-ninos-en-ropa-deportiva-y-chancletas-asi-fue-la-entrada-masiva-de-los-migrantes-en-ceuta/"}
+    ]
+  },
+  {
+    "minuto": "0:38:31",
+    "cita": "desde el 20 de agosto que empezamos a hacer todas estas alojamientos temporales, de acogida temporal, han salido de Ceuta de manera voluntaria más de 15.000 personas",
+    "afirmacion": "Desde el 20 de agosto de 2026 han salido voluntariamente de Ceuta más de 15.000 personas.",
+    "veredicto": "enganoso",
+    "explicacion": "El ministro Torres cifró el 4-nov-2026 en «más de 15.000» los retornos a Marruecos desde el 10 de agosto, de los que unos 2.000 fueron antes del 20 de agosto: desde el 20 de agosto serían «cerca de 13.000». Además esa cifra no separa voluntarios de expulsiones: el desglose del 10-nov es de 14.180 voluntarios y 638 expulsiones. Sánchez mezcla el periodo (20-ago en lugar de 10-ago) y atribuye todo a salidas voluntarias.",
+    "confianza": "media",
+    "fuentes": [
+      {"titulo": "Ceuta al Día: Torres cifra en más de 15.000 los retornos y anuncia el desmantelamiento de campamentos (4-nov-2026)", "url": "https://www.ceutaldia.com/al-dia/administracion/torres-cifra-mas-15000-retornos-anuncia-desmantelamiento-campamentos/20261104173700323546.html"},
+      {"titulo": "Euronews: El desmantelamiento del campamento del puerto de Ceuta acelera los retornos (14.180 voluntarios, 638 expulsiones)", "url": "https://es.euronews.com/2026/11/10/desmantelamiento-campamento-puerto-ceuta-acelera-retornos-marruecos"},
+      {"titulo": "Democrata: Elma Saiz avanza el cierre gradual de plazas temporales (≈13.000 retornos a 2-nov)", "url": "https://www.democrata.es/politica/elma-saiz-avanza-que-el-gobierno-prepara-el-cierre-gradual-de-plazas-temporales-para-inmigrantes-en-ceuta/"}
+    ]
+  },
+  {
+    "minuto": "0:46:12",
+    "cita": "nosotros en un tiempo récord aumentamos la capacidad de acogida temporal a más de 7000 plazas",
+    "afirmacion": "El Gobierno amplió la capacidad de acogida temporal en Ceuta hasta más de 7.000 plazas «en tiempo récord».",
+    "veredicto": "mayormente_verdadero",
+    "explicacion": "Torres habló el 4-nov-2026 de 7.000 plazas en los dispositivos del Gobierno (5.800 ocupadas) y Elma Saiz, el 2-nov, de pasar de unas 500 a más de 7.500. La progresión fue de unas 1.500 plazas el 17-ago a 3.300 el 31-ago y ~6.000 a mediados de septiembre, es decir, unos tres meses para llegar a 7.000. Lo de «récord» es una valoración sin término de comparación.",
+    "confianza": "media",
+    "fuentes": [
+      {"titulo": "Ceuta al Día: Torres cifra en más de 15.000 los retornos (7.000 plazas, 5.800 ocupadas)", "url": "https://www.ceutaldia.com/al-dia/administracion/torres-cifra-mas-15000-retornos-anuncia-desmantelamiento-campamentos/20261104173700323546.html"},
+      {"titulo": "Democrata: Elma Saiz, de unas 500 a más de 7.500 plazas temporales", "url": "https://www.democrata.es/politica/elma-saiz-avanza-que-el-gobierno-prepara-el-cierre-gradual-de-plazas-temporales-para-inmigrantes-en-ceuta/"},
+      {"titulo": "Wikipedia: Crisis migratoria de Ceuta de 2026 (evolución de plazas)", "url": "https://es.wikipedia.org/wiki/Crisis_migratoria_de_Ceuta_de_2026"}
+    ]
+  },
+  {
+    "minuto": "0:38:31",
+    "cita": "esta semana, por ejemplo, [...] alojamientos o centros de acogida temporal en el puerto de Ceuta, pues los estamos desmantelando ya",
+    "afirmacion": "Esta semana (10-13 de noviembre de 2026) el Gobierno está desmantelando los centros de acogida temporal del puerto de Ceuta.",
+    "veredicto": "verdadero",
+    "explicacion": "El 8-10 de noviembre de 2026 la Policía Nacional desalojó el campamento temporal del muelle de Poniente del puerto de Ceuta (unas 50 tiendas de la AECID y cerca de un millar de personas, trasladadas a otros centros) y comenzó su desmontaje, según EFE y Euronews. El Gobierno prevé cerrar progresivamente el resto de instalaciones temporales.",
+    "confianza": "alta",
+    "fuentes": [
+      {"titulo": "Infobae/EFE: El Gobierno empieza a desmantelar el primer gran centro de acogida temporal en Ceuta (10-nov-2026)", "url": "https://www.infobae.com/espana/agencias/2026/11/10/el-gobierno-empieza-a-desmantelar-el-primer-gran-centro-de-acogida-temporal-en-ceuta/"},
+      {"titulo": "Euronews: El desmantelamiento del campamento del puerto de Ceuta acelera los retornos a Marruecos", "url": "https://es.euronews.com/2026/11/10/desmantelamiento-campamento-puerto-ceuta-acelera-retornos-marruecos"}
+    ]
+  },
+  {
+    "minuto": "0:35:25",
+    "cita": "Yo no tengo información para acusar a todo un gobierno de esto",
+    "afirmacion": "Sánchez afirma que no tiene información que permita acusar al Gobierno de Marruecos de haber provocado la entrada masiva en Ceuta.",
+    "veredicto": "no_verificable",
+    "explicacion": "Es una declaración sobre su propio conocimiento, coherente con lo que dijo antes (Cadena SER, 31-ago: «niego la mayor precisamente porque no tengo esa información»; Congreso, 3-sep: «nadie ha entregado al Gobierno evidencias sólidas»). No es comprobable desde fuera: un informe policial citado por Infobae atribuye a agentes marroquíes un papel de monitorización e impulso del flujo, y la Audiencia Nacional investiga, pero no hay conclusión judicial ni prueba pública definitiva de implicación del Estado marroquí.",
+    "confianza": "media",
+    "fuentes": [
+      {"titulo": "La República (Reuters): Presidente de España acusa a Rusia e Israel de difundir desinformación (cita SER: «yo niego la mayor...»)", "url": "https://www.larepublica.co/globoeconomia/presidente-de-espana-acusa-a-rusia-e-israel-de-difundir-desinformacion-en-crisis-de-ceuta-4470759"},
+      {"titulo": "Infobae: Sánchez rebaja el papel de Rusia e Israel y dice que no hay evidencias (Congreso, 3-sep)", "url": "https://www.infobae.com/espana/2026/09/03/pedro-sanchez-rebaja-el-papel-de-rusia-e-israel-en-la-avalancha-migratoria-en-ceuta-y-dice-ahora-que-no-hay-evidencias-de-que-la-coordinasen/"},
+      {"titulo": "Infobae: Informe policial sobre la entrada masiva (agentes marroquíes no uniformados)", "url": "https://www.infobae.com/espana/2026/09/02/de-jovenes-con-neopreno-y-aletas-a-familias-con-ninos-en-ropa-deportiva-y-chancletas-asi-fue-la-entrada-masiva-de-los-migrantes-en-ceuta/"}
+    ]
+  },
+  {
+    "minuto": "0:35:25",
+    "cita": "en esa misma frase, culpaste a Rusia y a Israel. No, no, no. Sí, bueno, dijiste que estaban detrás.",
+    "afirmacion": "Sánchez niega haber culpado a Rusia e Israel de estar detrás de la crisis de Ceuta (la frase inicial es de Jordi Wild; el «No, no, no» es de Sánchez).",
+    "veredicto": "enganoso",
+    "explicacion": "El 31-ago-2026 en la Cadena SER Sánchez dijo que el Servicio Europeo de Acción Exterior había señalado que «hubo redes rusas e israelíes que propagaron estas falsedades», es decir, les atribuyó la difusión de los bulos (no la entrada misma), junto a la ultraderecha internacional. El 3-sep, en el Congreso, matizó que ningún análisis vincula a Marruecos, Rusia o Israel con la entrada. La UE detectó canales rusos que amplificaron la crisis desde el 30-jul pero sin pruebas concluyentes de que la desencadenaran, y sobre Israel no hay pruebas públicas (ambos países lo niegan). Su «no, no» es cierto si se entiende como «no dije que provocaran la entrada», pero sí vinculó a ambos con la campaña de desinformación.",
+    "confianza": "media",
+    "fuentes": [
+      {"titulo": "ElNacional.cat: ¿Qué pruebas hay de la campaña de desinformación sobre Ceuta que Sánchez atribuye a Rusia e Israel?", "url": "https://www.elnacional.cat/es/internacional/que-pruebas-hay-campana-desinformacion-sobre-ceuta-sanchez-atribuye-rusia-israel_1688587_102.html"},
+      {"titulo": "El Español: La UE desmiente a Sánchez: no hay evidencias de que Rusia, Israel u otro Estado extranjero provocaran la crisis", "url": "https://www.elespanol.com/mundo/europa/20260901/informe-ue-ceuta-detecto-injerencia-rusia-no-israel-alla-cuentas-puntuales/1003744369476_0.html"},
+      {"titulo": "Infobae: Sánchez rebaja el papel de Rusia e Israel (Congreso, 3-sep-2026)", "url": "https://www.infobae.com/espana/2026/09/03/pedro-sanchez-rebaja-el-papel-de-rusia-e-israel-en-la-avalancha-migratoria-en-ceuta-y-dice-ahora-que-no-hay-evidencias-de-que-la-coordinasen/"},
+      {"titulo": "La República (Reuters): Presidente de España acusa a Rusia e Israel de difundir desinformación", "url": "https://www.larepublica.co/globoeconomia/presidente-de-espana-acusa-a-rusia-e-israel-de-difundir-desinformacion-en-crisis-de-ceuta-4470759"}
+    ]
+  },
+  {
+    "minuto": "0:40:45",
+    "cita": "a mí me hackearon el móvil, lo denuncié ante la Audiencia Nacional, también la ministra de Defensa, el ministro del Interior",
+    "afirmacion": "El móvil de Sánchez fue infectado con Pegasus y se denunció ante la Audiencia Nacional, igual que los de la ministra de Defensa y el ministro del Interior.",
+    "veredicto": "verdadero",
+    "explicacion": "En mayo de 2022 la Abogacía del Estado denunció ante la Audiencia Nacional el espionaje con Pegasus a los móviles de Sánchez y Robles (el CCN constató infecciones de Sánchez entre octubre de 2020 y diciembre de 2021); el juez Calama amplió la causa a los móviles de Marlaska y Planas. La causa se archivó provisionalmente en 2023, se reabrió en 2024 y volvió a archivarse en enero de 2026 por la falta de cooperación de Israel, sin identificar al autor. Matiz menor: la denuncia la presentó la Abogacía del Estado en nombre del Gobierno.",
+    "confianza": "alta",
+    "fuentes": [
+      {"titulo": "Última Hora/EP: Caso Pegasus, amplían denuncia a los móviles de Marlaska y Planas (11-may-2022)", "url": "https://www.ultimahora.es/noticias/nacional/2022/05/11/1732329/caso-pegasus-amplian-denuncia-moviles-marlaska-planas.html"},
+      {"titulo": "Orain: El software Pegasus también infectó los teléfonos de Sánchez y Robles (2-may-2022)", "url": "https://orain.eus/es/politica/2022/05/02/espionaje-politico-de-pegasus-los-telefonos-moviles-de-pedro-sanchez-y-margarita-robles-infectados/"},
+      {"titulo": "Economist & Jurist: Archivada la investigación del caso Pegasus ante la falta de cooperación de Israel (ene-2026)", "url": "https://www.economistjurist.es/actualidad-juridica/archivada-la-investigacion-por-el-caso-pegasus-ante-la-falta-de-cooperacion-de-israel/"}
+    ]
+  },
+  {
+    "minuto": "0:41:49",
+    "cita": "Pegasus, que yo sepa, es un sistema informático de Israel",
+    "afirmacion": "Pegasus es un sistema (software espía) de origen israelí.",
+    "veredicto": "verdadero",
+    "explicacion": "Pegasus es el software espía de la empresa israelí NSO Group; por eso la Audiencia Nacional ha pedido cooperación judicial a Israel y el caso se archivó por falta de colaboración de ese país. Es un producto que NSO vende a gobiernos, como señala el propio entrevistador.",
+    "confianza": "alta",
+    "fuentes": [
+      {"titulo": "Economist & Jurist: Archivada la investigación del caso Pegasus ante la falta de cooperación de Israel (NSO Group)", "url": "https://www.economistjurist.es/actualidad-juridica/archivada-la-investigacion-por-el-caso-pegasus-ante-la-falta-de-cooperacion-de-israel/"},
+      {"titulo": "Ara: El Gobierno español denuncia espionaje Pegasus en los móviles de Sánchez y Robles", "url": "https://es.ara.cat/politica/gobierno-espanol-denuncia-espionaje-pegasus-moviles-pedro-sanchez-margarita-robles_1_4357938.html"}
+    ]
+  },
+  {
+    "minuto": "0:42:49",
+    "cita": "Nosotros hemos sido el gobierno que más recursos económicos hemos invertido de la historia democrática en nuestro país en Ceuta y en Melilla",
+    "afirmacion": "El Gobierno de Sánchez es el que más recursos económicos ha invertido en Ceuta y Melilla de toda la historia democrática.",
+    "veredicto": "no_verificable",
+    "explicacion": "No he encontrado ninguna serie histórica de inversión estatal en Ceuta y Melilla que permita comparar gobiernos. Solo constan cifras del actual Ejecutivo: planes integrales de desarrollo socioeconómico por 711 millones (2023-2026), unos 79 millones en refuerzo de fronteras desde 2019 y el plan de choque de 309 millones de septiembre de 2026, sin comparación con los anteriores.",
+    "confianza": "media",
+    "fuentes": [
+      {"titulo": "Plan de Recuperación: Planes Integrales para Ceuta y Melilla con una inversión de 711 millones", "url": "https://planderecuperacion.gob.es/noticias/el-gobierno-aprueba-planes-integrales-de-desarrollo-socioeconomico-para-ceuta-y-melilla"},
+      {"titulo": "El Correo Gallego: El Gobierno ha invertido 79 millones en reforzar las fronteras de Ceuta y Melilla", "url": "https://www.elcorreogallego.es/espana/2026/08/10/gobierno-invertido-79-millones-reforzar-fronteras-ceuta-melilla-133225236.html"}
+    ]
+  },
+  {
+    "minuto": "0:47:14",
+    "cita": "la terminal en Ceuta la hemos modernizado de arriba abajo, la he inaugurado además con Vivas",
+    "afirmacion": "El Gobierno modernizó la terminal marítima de Ceuta y Sánchez la inauguró junto al presidente de la Ciudad, Juan Vivas.",
+    "veredicto": "verdadero",
+    "explicacion": "Moncloa informa de que el 20-nov-2025 Sánchez presidió con Vivas la presentación de la nueva terminal marítima de Ceuta (obra de Puertos del Estado, que comunicó su puesta en funcionamiento el 2-dic-2025). Ese mismo día visitó también la subestación de la interconexión eléctrica con la península.",
+    "confianza": "alta",
+    "fuentes": [
+      {"titulo": "La Moncloa: Presentación de la nueva terminal marítima de Ceuta (20-nov-2025)", "url": "https://www.lamoncloa.gob.es/lang/en/presidente/news/Paginas/2025/20251120-ceuta-maritime-terminal.aspx"},
+      {"titulo": "Puertos del Estado: reafirma su compromiso con la cohesión territorial con la apertura de la nueva estación marítima de Ceuta", "url": "https://www.puertos.es/en/comunication/puertos-del-estado-reaffirms-its-commitment-territorial-cohesion-opening-new-maritime-station-ceuta"}
+    ]
+  },
+  {
+    "minuto": "0:47:14",
+    "cita": "hemos diversificado sus fuentes de energía con un cable de electricidad de la península a la ciudad autónoma de Ceuta",
+    "afirmacion": "El Gobierno ha dotado a Ceuta de una conexión eléctrica por cable con la península.",
+    "veredicto": "mayormente_verdadero",
+    "explicacion": "Red Eléctrica ejecuta desde junio de 2024 el cable submarino de 132 kV Cádiz-Ceuta (con autorización del Ministerio de Transición Ecológica); en septiembre de 2025 llegó a Ceuta el primer cable y Sánchez visitó la subestación Virgen de África el 20-nov-2025. Una fuente especializada indica que ya está energizado y en servicio, pero no he podido confirmar la fecha oficial de entrada en servicio, que se retrasó respecto a lo previsto, y el proyecto viene de la planificación de 2022; lo ejecuta Redeia, no directamente el Gobierno.",
+    "confianza": "media",
+    "fuentes": [
+      {"titulo": "Red Eléctrica: Comienzan las obras de la interconexión eléctrica entre la península y Ceuta (jun-2024)", "url": "https://ree.es/en/press-office/news/press-release/2024/06/work-begins-on-electrical-interconnection-project-between-spanish-mainland-and-ceuta"},
+      {"titulo": "Red Eléctrica: Llega a Ceuta el primer cable submarino de la interconexión con la península (sep-2025)", "url": "https://www.ree.es/sites/default/files/2025-09/NP_Llega_Ceuta_primer_cable_submarino_interconexi%C3%B3n_Pen%C3%ADnsula.pdf"},
+      {"titulo": "DataCenterDynamics: Redeia activa el cable submarino que conecta Ceuta con la península", "url": "https://www.datacenterdynamics.com/es/noticias/redeia-activa-el-cable-submarino-que-conecta-ceuta-con-la-pen%C3%ADnsula/"}
+    ]
+  },
+  {
+    "minuto": "0:47:14",
+    "cita": "hemos invertido recursos económicos también ahora precisamente para los autónomos",
+    "afirmacion": "El Gobierno ha aprobado recursos económicos para los autónomos de Ceuta tras la crisis.",
+    "veredicto": "verdadero",
+    "explicacion": "El Consejo de Ministros aprobó el 1-sep-2026 un real decreto-ley con un plan de choque de 309 millones para Ceuta, uno de cuyos ejes es el apoyo a la actividad económica (80 millones), con ayudas directas de 5.000 euros para autónomos solicitables en la Agencia Tributaria (plazo hasta el 30 de noviembre), además de mejoras fiscales para autónomos y una línea ICO de avales.",
+    "confianza": "alta",
+    "fuentes": [
+      {"titulo": "La Moncloa: Nota de prensa del plan de choque para Ceuta (1-sep-2026)", "url": "https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/presidencia/Paginas/2026/010926-plan-choque-ceuta.aspx"},
+      {"titulo": "Euronews: Así son las ayudas económicas que España ofrecerá a Ceuta: desglose de los 309 millones", "url": "https://es.euronews.com/2026/09/05/asi-son-las-ayudas-economicas-que-espana-ofrecera-ceuta-desglose-de-los-309-millones-de-eu"},
+      {"titulo": "Onda Vasca: Las ayudas directas a empresas y autónomos de Ceuta podrán pedirse hasta el 30 de noviembre", "url": "https://www.ondavasca.com/las-ayudas-directas-a-empresas-y-autonomos-de-ceuta-podran-pedirse-hasta-el-30-de-noviembre/"}
+    ]
+  },
+  {
+    "minuto": "0:45:10",
+    "cita": "el día siguiente estaba en Ceuta dando la cara",
+    "afirmacion": "Al día siguiente de la entrada masiva (31 de julio de 2026) Sánchez viajó a Ceuta.",
+    "veredicto": "verdadero",
+    "explicacion": "Sánchez visitó la frontera del Tarajal el 31 de julio de 2026 junto a Marlaska y compareció con Vivas, según La Moncloa y la prensa; allí prometió «todos los recursos del Estado» y condenó el ataque a la integridad territorial.",
+    "confianza": "alta",
+    "fuentes": [
+      {"titulo": "La Moncloa: Sánchez reitera que se desplegarán «todos los recursos del Estado» en Ceuta (31-jul-2026)", "url": "https://www.lamoncloa.gob.es/lang/en/presidente/news/paginas/2026/20260731-visit-to-ceuta.aspx"},
+      {"titulo": "Press Digital: Pedro Sánchez visita este viernes Ceuta para abordar la crisis migratoria", "url": "https://www.pressdigital.es/articulo/politica/2026-07-31/5971247-pedro-sanchez-visita-viernes-ceuta-abordar-crisis-migratoria"}
+    ]
+  },
+  {
+    "minuto": "0:45:10",
+    "cita": "yo no me fui de vacaciones [...] Yo estuve trabajando todos los días",
+    "afirmacion": "Sánchez no se fue de vacaciones durante la crisis de Ceuta: estuvo con su familia en otra residencia oficial (La Mareta) trabajando a tiempo completo (repetido en 0:49:32).",
+    "veredicto": "enganoso",
+    "explicacion": "Es cierto que estuvo en una residencia oficial (La Mareta, Lanzarote), pero EFE informó el 1-ago-2026 de que «ha iniciado sus vacaciones de verano» allí con su familia (la prensa habla de 22-27 días; el primer Consejo de Ministros tras la pausa fue el 25 de agosto), y el 31-ago el propio Sánchez defendió en la SER su derecho a tener vacaciones («he trabajado y he descansado, son mis derechos»). Que trabajara a diario no se puede comprobar. Negar que se fuera de vacaciones contradice cómo lo contó la prensa y lo que él mismo dijo después.",
+    "confianza": "media",
+    "fuentes": [
+      {"titulo": "Diario de Lanzarote: Pedro Sánchez comienza sus vacaciones de verano en La Mareta (1-ago-2026)", "url": "https://www.diariodelanzarote.com/noticia/pedro-s%C3%A1nchez-comienza-sus-vacaciones-de-verano-en-la-residencia-de-la-mareta-en-lanzarote"},
+      {"titulo": "El Independiente: Pedro Sánchez se va de vacaciones a La Mareta en plena crisis de Ceuta (1-ago-2026)", "url": "https://www.elindependiente.com/espana/2026/08/01/pedro-sanchez-se-va-de-vacaciones-a-la-mareta-lanzarote-en-plena-crisis-de-ceuta/amp/"},
+      {"titulo": "Esdiario: Sánchez, Marruecos, Ceuta y su derecho a vacaciones (SER, 31-ago-2026)", "url": "https://www.esdiario.com/nacional/260831/196508/sanchez-marruecos-ceuta-derecho-vacaciones.html"},
+      {"titulo": "El Debate: Moncloa asegura que las vacaciones de Sánchez en La Mareta solo costaron 271 euros (cita «he trabajado y he descansado»)", "url": "https://www.eldebate.com/espana/20260921/moncloa-rie-todos-asegura-vacaciones-sanchez-mareta-mientras-ceuta-invadida-solo-costaron-271-euros_460682.html"}
+    ]
+  },
+  {
+    "minuto": "0:49:32",
+    "cita": "yo no había anunciado que estabas de vacaciones",
+    "afirmacion": "Sánchez no había anunciado que estaba de vacaciones.",
+    "veredicto": "no_verificable",
+    "explicacion": "No he encontrado un comunicado ni anuncio oficial de Moncloa sobre las vacaciones: la prensa (EFE) informó del viaje a Lanzarote el 1 de agosto al presenciar su llegada, sin citar una fuente gubernamental. Tampoco hay prueba de lo contrario, por lo que no puedo confirmar ni desmentir que no lo anunciara.",
+    "confianza": "baja",
+    "fuentes": [
+      {"titulo": "El Independiente: Pedro Sánchez se va de vacaciones a La Mareta (sin comunicación oficial citada)", "url": "https://www.elindependiente.com/espana/2026/08/01/pedro-sanchez-se-va-de-vacaciones-a-la-mareta-lanzarote-en-plena-crisis-de-ceuta/amp/"},
+      {"titulo": "Diario de Lanzarote: Pedro Sánchez comienza sus vacaciones de verano en La Mareta", "url": "https://www.diariodelanzarote.com/noticia/pedro-s%C3%A1nchez-comienza-sus-vacaciones-de-verano-en-la-residencia-de-la-mareta-en-lanzarote"}
+    ]
+  },
+  {
+    "minuto": "0:48:30",
+    "cita": "yo no lo convoqué porque, a ver, creo honestamente que la capacidad que teníamos nosotros para responder a esa crisis no era necesario convocar el Consejo de Seguridad Nacional",
+    "afirmacion": "Sánchez no convocó el Consejo de Seguridad Nacional por la crisis de Ceuta porque no era necesario (Jordi Wild plantea que tardó unos 25 días).",
+    "veredicto": "enganoso",
+    "explicacion": "El Consejo de Seguridad Nacional sí se reunió por la crisis de Ceuta: el 25-ago-2026, presidido por Sánchez, 26 días después de la entrada masiva, y en él se acordó la declaración de situación de interés para la Seguridad Nacional y el mando único. Es lo que apunta Wild (unos 25 días), de modo que lo que Sánchez justifica es no haberlo convocado de inmediato; dicho en pasado simple, «no lo convoqué», da una imagen incorrecta, y la afirmación de que no hacía falta se contradice con su convocatoria posterior.",
+    "confianza": "alta",
+    "fuentes": [
+      {"titulo": "Aragón Play: El Consejo de Seguridad Nacional ratifica crear un mando único para abordar la crisis de Ceuta (reunión del 25-ago, presidida por Sánchez)", "url": "https://www.aragonplay.es/aragonnoticias/espana/consejo-seguridad-nacional-ratifica-crear-mando-unico-abordar-crisis-ceuta.html"},
+      {"titulo": "Civio: El Gobierno declara la situación de interés para la seguridad nacional por la crisis de Ceuta casi un mes después (BOE 26-ago)", "url": "https://civio.es/el-boe-nuestro-de-cada-dia/2026/08/26/el-gobierno-declara-situacion-de-interes-para-la-seguridad-nacional-la-crisis-de-ceuta-casi-un-mes-despues/"}
+    ]
+  },
+  {
+    "minuto": "0:48:30",
+    "cita": "el presidente de Ciudad Autónoma de Ceuta me pidió el que pudiéramos crear un mando único, que es lo que hemos hecho y que está ahora mismo en vigor [...] esos 20 y tantos días",
+    "afirmacion": "El presidente de Ceuta pidió un mando único, el Gobierno lo creó a los veintitantos días de la crisis y sigue en vigor.",
+    "veredicto": "verdadero",
+    "explicacion": "Vivas pidió un «mando único» el 29-jul-2026 y de nuevo a mediados de agosto. El Consejo de Ministros declaró el 25-ago la situación de interés para la Seguridad Nacional, con mando único bajo el ministro Torres, publicada en el BOE el 26-ago (unos 26 días tras la entrada) y vigente hasta el 31 de diciembre de 2026, prorrogable. No consta que haya sido levantado a fecha de hoy.",
+    "confianza": "alta",
+    "fuentes": [
+      {"titulo": "El Español: Vivas reclama al Gobierno un mando único (29-jul-2026)", "url": "https://www.elespanol.com/espana/politica/20260729/vivas-reclama-gobierno-mando-unico-desbordarse-ceuta-migrantes-semana/1003744337847_0.html"},
+      {"titulo": "Civio: El Gobierno declara la situación de interés para la Seguridad Nacional casi un mes después (BOE 26-ago-2026, hasta el 31-dic)", "url": "https://civio.es/el-boe-nuestro-de-cada-dia/2026/08/26/el-gobierno-declara-situacion-de-interes-para-la-seguridad-nacional-la-crisis-de-ceuta-casi-un-mes-despues/"},
+      {"titulo": "Press Digital: El mando único en Ceuta se extiende hasta el 31 de diciembre, con posibilidad de prórroga", "url": "https://www.pressdigital.es/articulo/politica/2026-08-26/5993768-mando-unico-ceuta-extiende-hasta-31-diciembre-posibilidad-prorroga"}
+    ]
+  },
+  {
+    "minuto": "0:49:32",
+    "cita": "cada día, Jordi, cada día hubo un ministro o ministra que estuvo en ceuta",
+    "afirmacion": "Durante la crisis de Ceuta hubo cada día un ministro o ministra presente en la ciudad.",
+    "veredicto": "no_verificable",
+    "explicacion": "Constan visitas puntuales de ministros (Sánchez y Marlaska el 31-jul, Albares el 11-ago, Robles el 12-ago, Mónica García el 16-ago, Torres el 25-ago) pero no hay ningún calendario ni recuento que acredite una presencia diaria; elDiario.es señala expresamente que habla de visitas separadas y no de presencia continua. Tampoco hay prueba de que hubiera días sin ministro, por lo que no puedo confirmarlo ni desmentirlo (no pude completar la búsqueda de visitas día a día).",
+    "confianza": "baja",
+    "fuentes": [
+      {"titulo": "elDiario.es: El Gobierno refuerza su presencia en Ceuta por el temor a una nueva crisis fronteriza", "url": "https://www.eldiario.es/politica/gobierno-refuerza-presencia-ceuta-temor-nueva-crisis-fronteriza_1_13441327.html"},
+      {"titulo": "Wikipedia: Crisis migratoria de Ceuta de 2026 (cronología de visitas)", "url": "https://es.wikipedia.org/wiki/Crisis_migratoria_de_Ceuta_de_2026"}
+    ]
+  },
+  {
+    "minuto": "0:50:42",
+    "cita": "Sí, que es competencia, en este caso, de las comunidades autónomas y que desde el gobierno de España también.",
+    "afirmacion": "La atención a los menores migrantes no acompañados es competencia de las comunidades autónomas (con colaboración del Gobierno de España).",
+    "veredicto": "verdadero",
+    "explicacion": "En España la tutela de los menores extranjeros no acompañados corresponde a los servicios de protección de las comunidades autónomas; en el caso de Ceuta la ejerce la Ciudad Autónoma (Vivas cifraba unos 2.000 menores atendidos en centros de la ciudad en septiembre de 2026). El Gobierno central colabora (traslado a la península de unos 500 menores vulnerables, anunciado el 19-ago, y fondos para menores en el real decreto-ley de 309 millones). No he podido consultar el texto del BOE, por lo que la confianza es media.",
+    "confianza": "media",
+    "fuentes": [
+      {"titulo": "Wikipedia: Menor extranjero no acompañado (tutela por las comunidades autónomas)", "url": "https://es.wikipedia.org/wiki/Menor_extranjero_no_acompa%C3%B1ado"},
+      {"titulo": "El Debate: ¿Cuáles son las verdaderas cifras de la crisis de Ceuta? (menores atendidos en centros de la ciudad)", "url": "https://www.eldebate.com/espana/20260917/cuales-son-verdaderas-cifras-invasion-ceuta-numero-entradas-salidas-alojados-calle_459327.html"},
+      {"titulo": "Wikipedia: Crisis migratoria de Ceuta de 2026 (traslado de 500 menores, 19-ago)", "url": "https://es.wikipedia.org/wiki/Crisis_migratoria_de_Ceuta_de_2026"}
+    ]
+  }
+]

@@ -1,0 +1,262 @@
+[
+  {
+    "minuto": "0:14:55",
+    "cita": "hemos tenido que revertir la infradotación que había presupuestaria en la anterior administración [...] me refiero a la administración de Mariano Rajoy. 15 años hemos tardado en revertir esos recortes en lo que es la inversión en el sistema ferroviario.",
+    "afirmacion": "La inversión ferroviaria sufrió recortes durante el Gobierno de Rajoy (2011-2018) y ha hecho falta llegar a 2025-2026 (unos 15 años) para revertirlos.",
+    "veredicto": "enganoso",
+    "explicacion": "Los recortes son reales: según series de Adif, la inversión ferroviaria cayó de unos 5.585 M€ en 2011 a un mínimo de 2.112 M€ en 2016, y siguió en 2.4-2.7 mil M€ hasta 2021, es decir, también durante los primeros años de Sánchez. Solo en 2025 (5.816 M€ nominales) se supera el nivel de 2011, y únicamente en euros corrientes: deflactada, la inversión de 2025 sigue en torno a un 19% por debajo de 2011, y el mantenimiento acumula un déficit estimado por el IEE de 3.600 M€. Presentarlo como recortes ya 'revertidos' mezcla euros nominales con reales y omite que la recuperación llegó en 2023-2025.",
+    "confianza": "media",
+    "fuentes": [
+      {"titulo": "Bilbao Hiria: La inversión ferroviaria se hundió con Rajoy y en 2025 supera ya la de 2011 (serie anual 2011-2025)", "url": "https://bilbaohiria.com/actualidad/inversion-ferroviaria-espana-por-anos-rajoy-sanchez/"},
+      {"titulo": "El Observador: La inversión en la red ferroviaria de España cayó casi un 20% en los últimos 15 años (análisis con datos de Adif, en términos reales)", "url": "https://www.elobservador.com.uy/espana/economia-y-finanzas/en-la-tragedia-toledo-tambien-fallo-la-economia-la-inversion-la-red-ferroviaria-espana-cayo-casi-un-20-los-ultimos-15-anos-n6062101"}
+    ]
+  },
+  {
+    "minuto": "0:14:55",
+    "cita": "Yo he inaugurado el AVE Madrid-Ourense, el AVE Madrid-Murcia.",
+    "afirmacion": "Pedro Sánchez, como presidente del Gobierno, inauguró la línea de alta velocidad Madrid-Ourense (Galicia) y la línea Madrid-Murcia.",
+    "veredicto": "verdadero",
+    "explicacion": "La Moncloa registra que Sánchez inauguró junto al rey Felipe VI el último tramo del AVE a Galicia (Pedralba de la Pradería-Ourense) el 20 de diciembre de 2021, y la línea Madrid-Murcia el 19 de diciembre de 2022. Son obras iniciadas por gobiernos anteriores, pero él las inauguró, que es lo que afirma.",
+    "confianza": "alta",
+    "fuentes": [
+      {"titulo": "La Moncloa: Inauguración del tramo Pedralba de la Pradería-Ourense (20/12/2021)", "url": "https://www.lamoncloa.gob.es/presidente/actividades/Paginas/2021/201221-sanchez_ave-galicia.aspx"},
+      {"titulo": "La Moncloa: Pedro Sánchez inaugura, junto al rey Felipe VI, la Línea de Alta Velocidad Madrid-Murcia (19/12/2022)", "url": "https://www.lamoncloa.gob.es/presidente/actividades/Paginas/2022/191222-sanchez-murcia-ave.aspx"}
+    ]
+  },
+  {
+    "minuto": "0:15:57",
+    "cita": "en la línea en la que se han concentrado los dos desgraciados accidentes ferroviarios, nosotros hemos multiplicado por 20 durante estos últimos ocho años, por 20, la inversión.",
+    "afirmacion": "En la línea de alta velocidad Madrid-Sevilla, donde ocurrieron los accidentes de Adamuz y Urda, la inversión se ha multiplicado por 20 en los últimos ocho años respecto al periodo anterior.",
+    "veredicto": "no_verificable",
+    "explicacion": "No se encontró ningún dato oficial (Adif, Transportes, PGE) que dé la base de comparación del 'x20'. Las cifras disponibles son de renovación de la línea: Transportes habló de 700 M€ (abril de 2025), Puente de 780 M€ en el Senado (29/01/2026) y después de 189 M€ para el tramo de Adamuz, con cifras discutidas por Newtral y Maldita; el proyecto europeo suma unos 801 M€ con 110 M€ del FEDER. Sin la inversión del periodo previo no se puede confirmar ni desmentir el múltiplo, y el propio Sánchez lo presenta sin año base. Además, el gasto de mantenimiento de alta velocidad crecía un 70% nominal desde 2017 según el Gobierno, pero cayó por pasajero según Verificat.",
+    "confianza": "baja",
+    "fuentes": [
+      {"titulo": "Wikipedia: Accidente ferroviario de Adamuz (700 M€ frente a 189 M€ de inversión en la vía)", "url": "https://es.wikipedia.org/wiki/Accidente_ferroviario_de_Adamuz"},
+      {"titulo": "Adif: renovación integral de la LAV Madrid-Sevilla, inversión global de 650-700 M€", "url": "https://www.adif.es/w/adif-contrata-m%C3%A1s-proyectos-de-la-renovaci%C3%B3n-integral-de-la-lav-madrid-sevilla-de-la-que-est%C3%A1-ya-en-marcha-una-inversi%C3%B3n-de-580-m%E2%82%AC"},
+      {"titulo": "Newtral: Datos y contexto de la comparecencia de Sánchez por el accidente en Adamuz", "url": "https://www.newtral.es/comparecencia-sanchez-adamuz-datos/20260211/"},
+      {"titulo": "Verificat: ¿Ha crecido el gasto en mantenimiento de la alta velocidad tanto como dice el Gobierno?", "url": "https://www.verificat.cat/es/crecido-gasto-mantenimiento-alta-velocidad/"}
+    ]
+  },
+  {
+    "minuto": "0:17:02",
+    "cita": "hemos hecho con esto ha sido aumentar exponencialmente el uso por parte de los ciudadanos de la alta velocidad, también una rebaja sustantiva del precio de la alta velocidad del billete para los ciudadanos",
+    "afirmacion": "Con su Gobierno ha aumentado de forma muy notable el número de viajeros de alta velocidad y ha bajado de forma sustancial el precio del billete.",
+    "veredicto": "mayormente_verdadero",
+    "explicacion": "Según el INE, la alta velocidad cerró 2025 con un récord de 43,78 millones de viajeros (+12,2%), y la CNMC cifra en el doble los viajeros respecto a 2019 y en una bajada media de precios del 33% (44% descontada la inflación) entre 2019 y 2024, hasta un 40% en varios corredores. 'Exponencialmente' es hipérbole oral (es un crecimiento de aproximadamente el doble, con un hundimiento previo por la pandemia). Y el abaratamiento lo atribuye la CNMC sobre todo a la liberalización y la competencia (Ouigo, Iryo), no a una decisión tarifaria del Gobierno; además en Madrid-Barcelona los viajeros cayeron en 2025.",
+    "confianza": "media",
+    "fuentes": [
+      {"titulo": "Servimedia (datos INE): La alta velocidad ganó un 12,2% de viajeros en 2025 y alcanzó el récord de 43,78 millones", "url": "https://www.servimedia.es/noticias/alta-velocidad-gano-12-2-viajeros-2025-alcanzo-record-43-78-millones/1412715698"},
+      {"titulo": "El Español: La alta velocidad duplica el número de viajeros en 2025 y rebaja los precios hasta un 40% desde la liberalización", "url": "https://www.elespanol.com/invertia/observatorios/movilidad/20260717/alta-velocidad-duplica-numero-viajeros-rebaja-precios-liberalizacion/1003744325128_0.html"},
+      {"titulo": "Merca2: La CNMC revela que la alta velocidad duplicó viajeros y abarató precios un 40% tras la liberalización", "url": "https://www.merca2.es/2026/07/17/liberalizacion-ferroviaria-cnmc-viajeros-precios-2419507/"}
+    ]
+  },
+  {
+    "minuto": "0:17:02",
+    "cita": "creo también que es justo decir que el sistema ferroviario en nuestro país, pese a las dificultades, es un sistema seguro.",
+    "afirmacion": "El sistema ferroviario español es seguro (según estadísticas de siniestralidad, pese a los dos accidentes de 2026).",
+    "veredicto": "enganoso",
+    "explicacion": "Hay datos que lo respaldan: Eurostat registra 18 fallecidos en accidentes ferroviarios en España en 2024 (todos por atropello o pasos a nivel), de las cifras más bajas de la UE, y la ERA indica que los accidentes significativos bajan desde 2010. Pero en 2026 los accidentes de Adamuz (18/01, 46 muertos) y Urda (28/10, 69 muertos) suman unos 115 fallecidos en alta velocidad en nueve meses, y análisis con metodología ERA de media móvil por viajero-km sitúan a España por encima de la media europea y con un 19% de las muertes ferroviarias de la UE en 2003-2023. Afirmarlo sin esos matices (y con ambas investigaciones abiertas) es una valoración que los datos de 2026 contradicen en parte.",
+    "confianza": "media",
+    "fuentes": [
+      {"titulo": "Infobae: La red ferroviaria española vista desde Europa (datos Eurostat 2024)", "url": "https://www.infobae.com/espana/2026/01/21/la-red-ferroviaria-espanola-vista-desde-europa-menos-accidentes-que-otros-paises-pero-dudas-con-su-estado-y-la-independencia-en-otras-investigaciones/"},
+      {"titulo": "El Español: España ya lideraba las muertes ferroviarias en la UE con el 19% de las víctimas antes de Adamuz y Gelida", "url": "https://www.elespanol.com/invertia/economia/macroeconomia/20260125/espana-lideraba-muertes-ferroviarias-ue-victimas-siniestros-adamuz-gelida/1003744098545_0.html"},
+      {"titulo": "Eurostat: Railway safety statistics in the EU", "url": "https://ec.europa.eu/eurostat/statistics-explained/index.php/Railway_safety_statistics_in_the_EU"},
+      {"titulo": "Wikipedia: Accidente ferroviario de Urda", "url": "https://es.wikipedia.org/wiki/Accidente_ferroviario_de_Urda"}
+    ]
+  },
+  {
+    "minuto": "0:17:02",
+    "cita": "Hoy en el Consejo de Ministros, lo que estamos haciendo es negociar con los maquinistas coeficientes reductores de la seguridad social,",
+    "afirmacion": "El Consejo de Ministros de ese día ha aprobado/impulsado coeficientes reductores de jubilación para los maquinistas.",
+    "veredicto": "verdadero",
+    "explicacion": "El Consejo de Ministros del 10 de noviembre de 2026 aprobó un real decreto-ley de medidas urgentes de seguridad ferroviaria que extiende los coeficientes reductores de la edad de jubilación al personal ferroviario que desempeña las mismas funciones (pendiente de convalidación en el Congreso), coincidiendo con la huelga de maquinistas de Semaf. Sánchez habla de 'negociar', pero la medida está aprobada. Supuesto: 'hoy' es el 10 de noviembre, día de la grabación; no se pudo abrir la referencia oficial de La Moncloa y se contrastó con prensa.",
+    "confianza": "media",
+    "fuentes": [
+      {"titulo": "Artículo 14: El Gobierno refuerza la seguridad en los trenes y la protección de los profesionales tras Urda", "url": "https://www.articulo14.es/economia/gobierno-refuerza-seguridad-trenes-proteccion-profesionales-urda-tragedia-20261110.html"},
+      {"titulo": "Euronews: El Gobierno español aprueba nuevas medidas para reforzar la seguridad ferroviaria (10/11/2026)", "url": "https://es.euronews.com/2026/11/10/gobierno-espanol-aprueba-nuevas-medidas-reforzar-la-seguridad-ferroviaria"},
+      {"titulo": "La Moncloa: Consejo de Ministros 10/11/2026 (referencia oficial, no accesible al verificar)", "url": "https://www.lamoncloa.gob.es/consejodeministros/resumenes/Paginas/2026/101126-rueda-prensa-ministros.aspx"}
+    ]
+  },
+  {
+    "minuto": "0:18:09",
+    "cita": "mayores tiempos de descanso, también para los controladores del centro de operaciones que hay en Atocha, una auditoría extraordinaria de seguridad de la línea Madrid-Sevilla [...] por ejemplo con una doble firma",
+    "afirmacion": "El Gobierno ha adoptado o propuesto más descanso para los controladores del centro de control de Atocha, una auditoría extraordinaria de seguridad de la línea Madrid-Sevilla y una doble firma (validación) en las decisiones de los controladores.",
+    "veredicto": "mayormente_verdadero",
+    "explicacion": "El plan extraordinario anunciado tras el Consejo de Ministros del 3 de noviembre de 2026 incluía cambios en la regulación de descansos de los controladores, una revisión extraordinaria de los sistemas de seguridad de la línea Madrid-Sevilla por la AESF y una validación por al menos un segundo controlador cuando no haya bloqueo automático (lo más parecido a la 'doble firma'). Es decir, las medidas existen, pero se anunciaron una semana antes de la grabación y no el mismo día; además la 'doble firma' sigue siendo una propuesta y la 'auditoría' es una revisión de la AESF.",
+    "confianza": "media",
+    "fuentes": [
+      {"titulo": "Diari de Tarragona (EFE): Frecuencias, control e IA, medidas para reforzar la seguridad ferroviaria (03/11/2026)", "url": "https://www.diaridetarragona.com/espana/274769/frecuencias-control-e-ia-medidas-reforzar-seguridad-ferroviaria.html"},
+      {"titulo": "Diari de Tarragona: Puente anuncia inteligencia artificial para reducir errores humanos en la red ferroviaria", "url": "https://www.diaridetarragona.com/espana/274761/puente-anuncia-inteligencia-artificial-reducir-errores-humanos-red-ferroviaria.html"}
+    ]
+  },
+  {
+    "minuto": "0:18:09",
+    "cita": "un compromiso de 2026 a 2030 que en función de los criterios técnicos que nos han dicho, vamos a invertir 19.000 millones de euros en el mantenimiento y la seguridad de las vías ferroviarias.",
+    "afirmacion": "El Gobierno se ha comprometido a invertir 19.000 millones de euros entre 2026 y 2030 en mantenimiento y seguridad de las vías ferroviarias.",
+    "veredicto": "no_verificable",
+    "explicacion": "No se encontró en ninguna fuente oficial ni en prensa previa a la entrevista el compromiso de 19.000 M€ para 2026-2030; la prensa solo lo recoge como declaración de Sánchez, sin desglose. Las cifras públicas previas son menores: los convenios con Adif y Adif AV pactados en febrero de 2026 suman unos 8.150 M€ de mantenimiento en 2026-2030 (5.266 M€ y 2.887 M€ según Deia), y un plan de transportes de hasta 20.000 M€ en cinco años (abril de 2026, aún sin cerrar con Hacienda) abarca también carreteras y autobuses. Es una promesa y su base no está documentada.",
+    "confianza": "baja",
+    "fuentes": [
+      {"titulo": "La Moncloa: Transportes y sindicatos ferroviarios, acuerdo del 9/02/2026 (1.800 M€ más en mantenimiento, convenios Adif 2026-2030)", "url": "https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/transportes-movilidad-sostenible/Paginas/2026/090226-transportes-acuerdo-sindicatos-ferroviarios.aspx"},
+      {"titulo": "Deia: Las claves del acuerdo entre Transportes y los maquinistas para desconvocar la huelga", "url": "https://www.deia.eus/economia/2026/02/09/claves-acuerdo-transportes-maquinistas-desconvocar-renfe-10680263.html"},
+      {"titulo": "El Cronista: El Gobierno prepara inversiones de 20.000 millones en transporte (24/04/2026)", "url": "https://www.cronista.com/espana/politica-es/oficial-el-gobierno-prepara-inversiones-de-20000-millones-en-transporte-el-plan-preve-mantenimiento-de-carreteras-mejoras-para-los-trenes-y-autobuses/"},
+      {"titulo": "Artículo 14: Sánchez admite algo inédito en The Wild Project (cita la cifra sin contrastarla)", "url": "https://www.articulo14.es/politica/sanchez-admite-algo-inedito-en-the-wild-project-oscar-puente-ha-hecho-bien-en-dimitir-20261113.html"}
+    ]
+  },
+  {
+    "minuto": "0:19:10",
+    "cita": "realmente no se sabe exactamente qué es lo que sucedió en Amuz. Y por tanto, bueno, pues hay una autoridad independiente del transporte ferroviario que está viendo exactamente qué es lo que ha sucedido y también la autoridad judicial.",
+    "afirmacion": "Casi un año después del accidente de Adamuz (18/01/2026) no se conoce con exactitud qué ocurrió, y siguen abiertas la investigación técnica independiente y la judicial.",
+    "veredicto": "mayormente_verdadero",
+    "explicacion": "Lo esencial es cierto: el informe de la CIAF de 28/04/2026 apunta a la rotura de un carril (soldadura) y descarta fallos de los trenes, y la Guardia Civil ha informado de una fractura en una soldadura que habría ocurrido unas 22 horas antes, pero sigue sin determinarse por qué se rompió ni si la rotura fue causa o consecuencia; el informe final no está publicado y el juzgado de Montoro mantiene abierta la instrucción. Matiz: la causa inmediata (rotura de carril) sí está bastante apuntada, y desde julio de 2026 la nueva autoridad AITAT sustituye a la CIAF (Sánchez cita a esta última).",
+    "confianza": "media",
+    "fuentes": [
+      {"titulo": "Noticias de Navarra: La rotura de un carril produjo el accidente de Adamuz (informe CIAF, 28/04/2026)", "url": "https://www.noticiasdenavarra.com/sucesos/2026/04/28/rotura-carril-produjo-accidente-adamuz-10997155.html"},
+      {"titulo": "Wikipedia: Accidente ferroviario de Adamuz (CIAF, Guardia Civil y juzgado de Montoro)", "url": "https://es.wikipedia.org/wiki/Accidente_ferroviario_de_Adamuz"},
+      {"titulo": "Wikipedia: Accidente ferroviario de Urda (AITAT sustituye a la CIAF desde julio de 2026)", "url": "https://es.wikipedia.org/wiki/Accidente_ferroviario_de_Urda"}
+    ]
+  },
+  {
+    "minuto": "0:18:09",
+    "cita": "si cae un sistema operativo, como fue el caso de este último accidente",
+    "afirmacion": "En el accidente de Urda (28/10/2026) cayó el sistema de seguridad de la línea (LZB) antes de la colisión.",
+    "veredicto": "verdadero",
+    "explicacion": "Según la reconstrucción de prensa y los datos publicados, el LZB de la línea Madrid-Sevilla cayó a las 8:30 del 28 de octubre de 2026 por un fallo de comunicación entre ordenadores de la central técnica de Urda, y minutos después el AVE 2080 alcanzó al Iryo 6076 detenido. La causa definitiva está bajo investigación (AITAT y juzgado de Orgaz).",
+    "confianza": "alta",
+    "fuentes": [
+      {"titulo": "Wikipedia: Accidente ferroviario de Urda", "url": "https://es.wikipedia.org/wiki/Accidente_ferroviario_de_Urda"},
+      {"titulo": "El Economista: La cadena de fallos más allá del error humano que provocaron el accidente ferroviario de Toledo", "url": "https://www.eleconomista.es/transportes-turismo/noticias/14024493/10/26/la-cadena-de-fallos-mas-alla-del-error-humano-que-provocaron-el-accidente-ferroviario-de-toledo.html"}
+    ]
+  },
+  {
+    "minuto": "0:21:14",
+    "cita": "el protocolo era muy claro. El protocolo lo que te dice es que si el sistema operativo falla y entra el sistema ASFA, la velocidad tiene que ser de 40 kilómetros por hora. que no fue lo que sucedió por desgracia.",
+    "afirmacion": "El protocolo vigente en Urda obligaba a circular a 40 km/h cuando fallaba el sistema operativo (LZB) y entraba el ASFA, y eso no se cumplió.",
+    "veredicto": "no_verificable",
+    "explicacion": "Está respaldado que el centro de control de Atocha ordenó al AVE reanudar con 'marcha normal' (8:36) en lugar de 'marcha a la vista' (máx. 40 km/h), y Transportes sostiene que contravino la norma. Pero la afirmación de un protocolo 'muy claro' de 40 km/h con ASFA es discutible: Puente llegó a decir que la velocidad máxima autorizable en régimen degradado era 200 km/h, y Renfe (instrucción en vigor el 1/11/2026), Iryo y Semaf pidieron fijar los 40 km/h tras el accidente, lo que sugiere un vacío en el caso de fallo parcial del LZB. La investigación de la AITAT y la judicial siguen abiertas.",
+    "confianza": "baja",
+    "fuentes": [
+      {"titulo": "Wikipedia: Accidente ferroviario de Urda (cronología del LZB y 'marcha a la vista' de 40 km/h)", "url": "https://es.wikipedia.org/wiki/Accidente_ferroviario_de_Urda"},
+      {"titulo": "Democrata: Renfe fija un máximo de 40 km/h ante ciertos fallos del LZB en la línea Madrid-Sevilla tras Urda", "url": "https://www.democrata.es/en/current-events/renfe-sets-a-maximum-of-40-km-h-in-response-to-certain-lzb-failures-on-the-madrid-seville-line-after-urda/"},
+      {"titulo": "Democrata: Iryo reclama a la Seguridad Ferroviaria fijar 40 km/h si se avería el sistema LZB", "url": "https://www.democrata.es/economia/iryo-reclama-a-la-seguridad-ferroviaria-fijar-40-km-h-si-se-averia-el-sistema-lzb/"},
+      {"titulo": "Orain: Atocha control center to AVE driver 'restart with normal gear'", "url": "https://orain.eus/en/current-events/society-and-social-news-now/2026/10/29/atocha-control-center-to-ave-driver-restart-with-normal-gear/"}
+    ]
+  },
+  {
+    "minuto": "0:20:11",
+    "cita": "las decisiones que ha tomado el gobierno de España y en particular el ministro de Transportes han afectado directamente en esta catástrofe o en esta tragedia. A mi juicio, no.",
+    "afirmacion": "Las decisiones del Gobierno y del ministro de Transportes no influyeron directamente en el segundo accidente. (Nota: Wild le recuerda el aviso por escrito de un sindicato de maquinistas en agosto de 2025; la transcripción dice 'Magnesis', pero la carta fue de Semaf y pedía bajar de 300 a 250 km/h en cuatro líneas por vibraciones; Sánchez responde con el protocolo, sin negarlo.)",
+    "veredicto": "no_verificable",
+    "explicacion": "Es una valoración causal ('a mi juicio') con las investigaciones técnica y judicial abiertas. Hay elementos en ambos sentidos: Transportes atribuye el siniestro a una orden indebida del centro de control de Atocha, pero la sustitución del LZB de 1992 por ERTMS acumulaba retraso respecto a la fecha prevista (abril de 2026) y la Fiscalía Europea investiga desde el 6/11/2026 posible malversación de fondos europeos (111,6 M€) en la renovación de la línea. Semaf pidió en agosto de 2025 reducir la velocidad por 'botes' en la vía, aunque aclaró que no estaba en riesgo la seguridad y Adif respondió que las líneas eran seguras.",
+    "confianza": "baja",
+    "fuentes": [
+      {"titulo": "Wikipedia: Accidente ferroviario de Urda (retraso del ERTMS, Fiscalía Europea, versión de Transportes)", "url": "https://es.wikipedia.org/wiki/Accidente_ferroviario_de_Urda"},
+      {"titulo": "El Debate (09/08/2025): Los maquinistas piden bajar la velocidad del AVE por el mal estado de las vías", "url": "https://www.eldebate.com/economia/20250809/maquinistas-piden-bajar-velocidad-ave-mal-estado-vias_324568.html"},
+      {"titulo": "Maldita: Los maquinistas pidieron hace cinco meses reducir la velocidad en el tramo del accidente de Adamuz", "url": "https://maldita.es/malditobulo/20260120/los-maquinistas-pidieron-hace-cinco-meses-reducir-la-velocidad-en-el-tramo-en-el-que-se-ha-producido-el-accidente-de-adamuz-por-el-estado-de-la-via/"}
+    ]
+  },
+  {
+    "minuto": "0:22:15",
+    "cita": "en un momento en el que la plantilla de ADIF y sobre todo de los controladores del sistema ferroviario estaba bajo mínimos, es que lo hemos elevado de manera sustantiva.",
+    "afirmacion": "Cuando llegó al Gobierno la plantilla de Adif y de los controladores de circulación estaba bajo mínimos y su Gobierno la ha elevado de manera sustancial.",
+    "veredicto": "no_verificable",
+    "explicacion": "No se localizaron series oficiales de plantilla de Adif ni de controladores de 2018 a 2026 que permitan comprobar el aumento. Lo documentado es prospectivo: el acuerdo de febrero de 2026 prevé 2.400 plazas más en Adif en 2026-2030 (3.650 empleos en total) y Adif ha convocado más de 500 plazas de factor de circulación para 2026. Un sindicato de circulación describe hoy la plantilla como 'absolutamente mermada' y con carga 'insoportable', lo que no cuadra con una elevación ya 'sustantiva'.",
+    "confianza": "baja",
+    "fuentes": [
+      {"titulo": "La Moncloa: Transportes y sindicatos ferroviarios, acuerdo del 9/02/2026 (empleo y mantenimiento 2026-2030)", "url": "https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/transportes-movilidad-sostenible/Paginas/2026/090226-transportes-acuerdo-sindicatos-ferroviarios.aspx"},
+      {"titulo": "Vozpópuli: Hablan los operarios de Adif señalados por Puente (carga de trabajo y plazas convocadas)", "url": "https://www.vozpopuli.com/economia/transporte/hablan-los-operarios-de-adif-senalados-por-puente-la-carga-de-trabajo-es-insoportable-casi-ni-podemos-ir-al-bano.html"}
+    ]
+  },
+  {
+    "minuto": "0:20:11",
+    "cita": "Oscar Puente, después de haber estado con las víctimas y haber aprobado el Real Decreto Ley de Intiminizaciones Materiales y Ayuda Psicológica, después de haber dado la cara en el Congreso de los Diputados",
+    "afirmacion": "Óscar Puente aprobó un real decreto-ley de indemnizaciones y ayuda a las víctimas (con atención psicológica) y compareció en el Congreso tras los accidentes.",
+    "veredicto": "mayormente_verdadero",
+    "explicacion": "El Gobierno aprobó el Real Decreto-ley 1/2026, de 27 de enero, de ayudas a las víctimas de Adamuz y Gelida (20 M€: 72.000 € por fallecido más otros 72.000 € de anticipo del seguro), convalidado por unanimidad el 26 de febrero, y tras Urda aprobó otro paquete el 3 de noviembre (30 M€) con comparecencia de Puente ante la Diputación Permanente del Congreso. Matices: lo aprueba el Consejo de Ministros, no el ministro a título individual, y el texto de enero es sobre todo económico: la prensa solo recoge menciones del ministro al apoyo psicológico, y la atención psicológica se incorpora con más detalle en las medidas de noviembre.",
+    "confianza": "media",
+    "fuentes": [
+      {"titulo": "elDiario.es: El Gobierno aprueba ayudas de 20 millones a las víctimas de los accidentes de tren de Adamuz y Gelida", "url": "https://www.eldiario.es/economia/gobierno-aprueba-ayudas-20-millones-euros-victimas-accidentes-tren-adamuz-gelida_1_12939163.amp.html"},
+      {"titulo": "Congreso (convalidación del RDL 1/2026)", "url": "https://www.congreso.es/docu/tramit/LegXV/AT/ATCD_15_PL_20260226.pdf"},
+      {"titulo": "Diari de Tarragona: Puente dimite por sorpresa seis días después de Urda tras una dura comparecencia en el Congreso", "url": "https://www.diaridetarragona.com/espana/274817/puente-dimite-sorpresa-6-dias-despues-urda-dura-comparecencia-congreso.html"}
+    ]
+  },
+  {
+    "minuto": "0:25:30",
+    "cita": "dar la cara en los medios de comunicación donde se cascó Oscar Puente más de dos horas y media de rueda de prensa.",
+    "afirmacion": "Óscar Puente dio una rueda de prensa de más de dos horas y media tras los accidentes.",
+    "veredicto": "no_verificable",
+    "explicacion": "La nota oficial de Transportes del 23 de enero de 2026 habla de una rueda de prensa sobre la vía de Adamuz de 'casi dos horas, sin limitación de preguntas', y Puente mencionó ruedas de prensa 'de dos horas' y cuatro desde el accidente (más 16 entrevistas); su comparecencia en el Senado duró casi tres horas y la del Congreso del 3/11/2026 más de cuatro. No se encontró ninguna rueda de prensa documentada de más de 2 h 30 min, por lo que lo más próximo es 'casi dos horas'.",
+    "confianza": "baja",
+    "fuentes": [
+      {"titulo": "La Moncloa (Transportes): Óscar Puente detalla las obras, revisiones e inspecciones realizadas en el tramo de Adamuz (23/01/2026)", "url": "https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/transportes-movilidad-sostenible/Paginas/2026/230126-obras-inspecciones-adamuz-accidente.aspx"},
+      {"titulo": "La Moncloa (Transportes): Explicación sobre el accidente de Adamuz ante la Cámara Alta (29/01/2026)", "url": "https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/transportes-movilidad-sostenible/Paginas/2026/290126-oscar-puente-comparecencia-senado.aspx"}
+    ]
+  },
+  {
+    "minuto": "0:27:33",
+    "cita": "Óscar Puente fue el que tomó la decisión y el que lo hizo. [...] Oscar Puente me dijo yo creo que tengo que dimitir.",
+    "afirmacion": "La dimisión de Óscar Puente fue decisión propia, no un cese ordenado por Sánchez.",
+    "veredicto": "mayormente_verdadero",
+    "explicacion": "Puente anunció su dimisión el 3 de noviembre de 2026 al final de su comparecencia en el Congreso, dijo que la decidió en cuanto supo del accidente de Urda y que informó a Sánchez 'unos minutos' antes. Todo descansa en el relato de Puente y de Sánchez: no hay constancia independiente de si hubo presión previa del presidente, y el 30 de octubre Puente había descartado dimitir.",
+    "confianza": "media",
+    "fuentes": [
+      {"titulo": "Diari de Tarragona: Puente dimite por sorpresa seis días después de Urda tras una dura comparecencia en el Congreso", "url": "https://www.diaridetarragona.com/espana/274817/puente-dimite-sorpresa-6-dias-despues-urda-dura-comparecencia-congreso.html"},
+      {"titulo": "Euronews: El ministro de Transportes descarta dimitir por el accidente de Urda (30/10/2026)", "url": "https://es.euronews.com/2026/10/30/el-ministro-de-transportes-descarta-dimitir-accidente-urda"},
+      {"titulo": "RTVC: Óscar Puente anuncia su dimisión como ministro de Transportes (3/11/2026)", "url": "https://rtvc.es/oscar-puente-anuncia-su-dimision-como-ministro-de-transportes-3-noviembre-2026/"}
+    ]
+  },
+  {
+    "minuto": "0:25:30",
+    "cita": "el accidente de Angrois, el Partido Socialista, estando en la oposición, no pidió la dimisión de Ana Pastor, que era la ministra de Transportes del momento.",
+    "afirmacion": "Tras el accidente de Angrois (24/07/2013), el PSOE, entonces en la oposición, no pidió la dimisión de la ministra de Fomento Ana Pastor.",
+    "veredicto": "mayormente_verdadero",
+    "explicacion": "Ni el PSOE ni el PP discuten que el PSOE no pidió su dimisión: el PP lo reconoce y alega que el PSOE concentró sus críticas en José Blanco, y Pastor compareció el 9/08/2013 en la comisión del Congreso a petición del grupo socialista y del mixto. No se localizó hemeroteca de 2013 que lo confirme directamente (las fuentes de 2026 son declaraciones de Puente y Lastra), y Newtral recuerda que sí pidieron dimisiones los familiares de las víctimas.",
+    "confianza": "media",
+    "fuentes": [
+      {"titulo": "Galicia Press: Lastra afirma que 'algunos deberían aprender' de Rubalcaba, que no pidió la dimisión de Pastor por Angrois", "url": "https://www.galiciapress.es/articulo/politica/2026-11-03/6076340-lastra-afirma-algunos-deberian-aprender-rubalcaba-no-pidio-dimision-pastor-angrois"},
+      {"titulo": "El Español: La última trampa de Puente: alardea de que el PSOE no pidió la dimisión de Ana Pastor por Angrois", "url": "https://www.elespanol.com/espana/politica/20261030/ultima-trampa-puente-alardea-psoe-no-pidio-dimision-ana-pastor-angrois-oculta-tapar-jose-blanco/1003744441295_0.html"},
+      {"titulo": "Newtral: La exministra Ana Pastor compareció por el accidente de Angrois", "url": "https://www.newtral.es/pastor-angrois-puente-factcheck/20260219/"},
+      {"titulo": "Newtral: Las víctimas de Angrois sí pidieron dimisiones", "url": "https://www.newtral.es/archivo-caso-angrois/20261030/"}
+    ]
+  },
+  {
+    "minuto": "0:25:30",
+    "cita": "Por cierto, Fijo, era el presidente de la Junta y acusó al trabajador, al maquinista.",
+    "afirmacion": "Alberto Núñez Feijóo, presidente de la Xunta en 2013, atribuyó el accidente de Angrois al maquinista.",
+    "veredicto": "mayormente_verdadero",
+    "explicacion": "Feijóo era presidente de la Xunta y ha sostenido que el accidente fue un 'fallo humano', 'determinante' en el descarrilamiento; en octubre de 2026 defendió que su 'tesis fue respaldada judicialmente'. La sentencia de la Audiencia de A Coruña dejó al maquinista como único condenado, aunque también constató que el ERTMS se desconectó sin valorar el riesgo. 'Acusó' es un verbo cargado: la fuente de la cita de 2013 es una recopilación en redes sin fecha completa, y Feijóo la niega como acusación personal.",
+    "confianza": "media",
+    "fuentes": [
+      {"titulo": "El Ideal Gallego: Feijóo, ante quienes recuerdan que habló de fallo humano en Angrois: 'Mi tesis fue respaldada judicialmente'", "url": "https://www.elidealgallego.com/actualidad/sociedad/2026-10-30/feijoo-ante-quienes-recuerdan-que-hablo-de-fallo-humano-en-angrois-mi-tesis-fue-respaldada-judicialmente-888043.html"},
+      {"titulo": "Público: Feijóo acusa a Puente de 'echar la culpa' a un operador de Atocha y las redes rescatan lo que dijo sobre el maquinista de Angrois", "url": "https://www.publico.es/tremending/feijoo-acusa-puente-echar-culpa-operador-atocha-redes-rescatan-dijo-sobre-maquinista-angrois.html"},
+      {"titulo": "elDiario.es: Dos hombres frente a la responsabilidad de la tragedia de Angrois: el maquinista y el exjefe de seguridad de Adif", "url": "https://www.eldiario.es/galicia/hombres-frente-responsabilidad-tragedia-angrois-maquinista-exjefe-seguridad-adif_1_9620730.html"}
+    ]
+  },
+  {
+    "minuto": "0:23:20",
+    "cita": "Yo he sido el presidente de la pandemia. He sido el presidente de dos guerras, una en Irán y otra en Ucrania. He sido el presidente de múltiples danas, de múltiples incendios, hasta incluso de un volcán. Y de, por desgracia, dos accidentes ferroviarios.",
+    "afirmacion": "Durante sus más de ocho años como presidente del Gobierno han coincidido la pandemia, las guerras de Ucrania e Irán, varias danas e incendios, una erupción volcánica y dos accidentes ferroviarios mortales.",
+    "veredicto": "verdadero",
+    "explicacion": "Sánchez gobierna desde junio de 2018 y todos esos sucesos ocurrieron en su mandato: la pandemia de COVID-19 (2020), la erupción de La Palma (2021), la invasión de Ucrania (2022), la ofensiva de EE. UU. e Israel contra Irán (marzo de 2026), las danas y los incendios, y los accidentes de Adamuz (18/01/2026) y Urda (28/10/2026). 'Presidente de dos guerras' es una figura retórica: España no es parte beligerante y su postura fue 'no a la guerra'. Los hechos de 2020-2024 son de dominio público y no se consultó fuente específica para ellos.",
+    "confianza": "media",
+    "fuentes": [
+      {"titulo": "La Moncloa: Pedro Sánchez, 'La posición del Gobierno de España se resume en cuatro palabras: No a la guerra' (4/03/2026)", "url": "https://www.lamoncloa.gob.es/presidente/actividades/Paginas/2026/040326-sanchez-declaracion-situacion-internacional.aspx"},
+      {"titulo": "Wikipedia: Accidente ferroviario de Adamuz", "url": "https://es.wikipedia.org/wiki/Accidente_ferroviario_de_Adamuz"},
+      {"titulo": "Wikipedia: Accidente ferroviario de Urda", "url": "https://es.wikipedia.org/wiki/Accidente_ferroviario_de_Urda"}
+    ]
+  },
+  {
+    "minuto": "0:21:14",
+    "cita": "Esto no es, por ejemplo, como sucedió con Ayuso y las residencias de mayores durante la pandemia. Dos, por omisión. Bueno, puedes decir por omisión, como hizo por ejemplo Mazón.",
+    "afirmacion": "La responsabilidad de Ayuso en las residencias durante la pandemia fue por una decisión, y la de Mazón en la dana fue por omisión, a diferencia de la del ministro Puente.",
+    "veredicto": "no_verificable",
+    "explicacion": "Es una calificación política de responsabilidades, no un hecho comprobable. Lo documentado: varios juzgados investigan a ex altos cargos de Ayuso por los protocolos de no derivación en residencias (con reaperturas y archivos contradictorios), y la jueza de la dana pidió investigar a Mazón por 'inactividad negligente' (homicidio imprudente), pero el TSJCV rechazó imputarlo y excluyó su responsabilidad por omisión por no ostentar posición de garante. No hay sentencia firme en ninguno de los dos casos.",
+    "confianza": "media",
+    "fuentes": [
+      {"titulo": "elDiario.es: Las investigaciones por las muertes en residencias de Madrid avanzan", "url": "https://www.eldiario.es/madrid/investigaciones-muertes-residencias-madrid-avanzan-ayuso-insulta-familiares_1_12946573.amp.html"},
+      {"titulo": "El Salto: La Audiencia Provincial de Madrid reabre una causa contra Ayuso por las muertes en las residencias", "url": "https://www.elsaltodiario.com/residencias-mayores/audiencia-provincial-madrid-reabre-una-causa-ayuso-muertes-residencias"},
+      {"titulo": "Deia: La jueza de la dana pide al fiscal que aclare si considera que se investigue a Mazón (5/05/2026)", "url": "https://www.deia.eus/sucesos/2026/05/05/jueza-dana-pide-fiscal-aclare-11026509.html"},
+      {"titulo": "Público: La jueza de la DANA pide imputar a Mazón por su 'inactividad negligente'", "url": "https://www.publico.es/politica/jueza-dana-pide-imputar-mazon.amp.html"}
+    ]
+  }
+]
