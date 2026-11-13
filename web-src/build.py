@@ -18,6 +18,7 @@ from urllib.parse import quote, urlparse
 
 import api_publica
 import estadisticas
+import transiciones
 
 RAIZ = Path(__file__).resolve().parent.parent
 ENTREVISTAS = RAIZ / "entrevistas"
@@ -240,7 +241,7 @@ ENLACES_DIEGO = ('<li><a href="https://github.com/2cristo7" target="_blank" rel=
 
 
 def rellenar(plantilla, **valores):
-    plantilla = plantilla.replace("@@HEAD_MODO@@", HEAD_MODO + estadisticas.seguimiento(UMAMI_ID, BASE)).replace("@@PIE@@", PIE)
+    plantilla = plantilla.replace("@@HEAD_MODO@@", HEAD_MODO + transiciones.HEAD + estadisticas.seguimiento(UMAMI_ID, BASE)).replace("@@PIE@@", PIE)
     plantilla = plantilla.replace("@@REPRODUCTOR@@", JS_REPRODUCTOR)
     for k, v in valores.items():
         plantilla = plantilla.replace(f"@@{k}@@", str(v))
