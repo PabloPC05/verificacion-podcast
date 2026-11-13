@@ -59,9 +59,11 @@ Esto es una verificación asistida por IA, no revisada por un equipo de periodis
 los datos contradicen lo dicho, no que haya intención de mentir. Una parte de las afirmaciones queda como
 «no verificable» porque la búsqueda automática se quedó corta. Los detalles están en [METODO.md](METODO.md).
 
-## Corregir un error
+## Corregir un error o contribuir
 
-Abre una incidencia indicando la entrevista, el minuto y la fuente que contradice el veredicto.
+- **Incidencia:** usa la plantilla «Corregir una afirmación» con el identificador o el minuto y una fuente.
+- **Pull request:** se abre desde tu propio fork (no se puede subir directamente a este repositorio). Los pasos,
+  qué ficheros tocar y qué no, están en [CONTRIBUTING.md](CONTRIBUTING.md). Cada PR pasa una comprobación automática.
 
 ## Reproducirlo
 
