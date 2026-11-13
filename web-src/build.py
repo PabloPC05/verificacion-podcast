@@ -313,7 +313,7 @@ def copiar_compartir():
 
 def indexacion(hechas):
     """robots.txt y sitemap.xml con las páginas publicadas."""
-    rutas = (["/", "/buscar", "/verificalo", "/metodologia", "/quien", "/api"]
+    rutas = (["/", "/buscar", "/metodologia", "/quien", "/api"]
              + [r for m in hechas for r in (f'/{m["slug"]}', f'/{m["slug"]}/transcripcion')]
              + [f'/{m["slug"]}/{a["_id"]}' for m in hechas for a in m["todas"]])
     (SALIDA / "sitemap.xml").write_text(
@@ -582,7 +582,7 @@ def menu(entrevistas, actual=None):
     aqui_buscar = ' aria-current="page"' if actual == "buscar" else ""
     return ('<header class="menu"><div class="ancho"><div class="m1"><a class="sello" href="/" title="Todas las entrevistas">Verificación</a>'
             + "".join(partes) + f'<a class="dcha buscar"{aqui_buscar} href="/buscar" title="Buscar una afirmación (tecla /)">{ICONO_LUPA}<span>Buscar</span></a>'
-            '<a href="/verificalo">Verifícalo tú</a><a href="/metodologia">Método</a><a href="/quien">Quién lo hace</a><a href="/api">API</a>'
+            '<a href="/api">Verifícalo tú</a><a href="/metodologia">Método</a><a href="/quien">Quién lo hace</a>'
             f'<a href="{REPO}" target="_blank" rel="noopener noreferrer">GitHub ↗</a>' + BOTON_MODO + '</div></div></header>' + JS_MENU)
 
 
@@ -1444,7 +1444,9 @@ Para volver a comprobar una afirmación: lee `cita` y `afirmacion`, abre cada `f
 Los errores se comunican en {REPO}/issues.
 """, encoding="utf-8")
     (SALIDA / "vercel.json").write_text(json.dumps({
-        "redirects": [{"source": "/api/referencia", "destination": "/api", "permanent": True}],
+        "redirects": [{"source": "/api/referencia", "destination": "/api", "permanent": True},
+                      {"source": "/verificalo", "destination": "/api#verificalo", "permanent": True},
+                      {"source": "/verificalo/", "destination": "/api#verificalo", "permanent": True}],
         # Las URL públicas siguen siendo /api y /api/v1/*; los ficheros están en web/datos/ (ver DATOS).
         "rewrites": [{"source": "/api", "destination": "/datos/index.html"},
                      {"source": "/api/", "destination": "/datos/index.html"},
@@ -1481,6 +1483,7 @@ def especificacion_openapi(hechas, ejemplo, aviso, comun):
                      "example": m_ej["total"] if m_ej else None}
     tabla_veredictos = "\n".join(f"| `{k}` | {DEFINICIONES[k]} |" for k in ORDEN)
     prompt = prompt_agente(hechas)
+    encargo = encargo_auditoria()
     descripcion = f"""API estática de solo lectura con todas las afirmaciones verificadas de las entrevistas de Jordi Wild a los
 candidatos a las elecciones generales del 29 de noviembre de 2026: la cita literal, el veredicto, la explicación, las fuentes y el
 segundo exacto del vídeo. También publica las transcripciones completas.
@@ -1500,7 +1503,7 @@ cada campo y cómo citar (id, minuto con su vídeo y fuentes).
 {prompt}
 ```
 
-Para auditar los veredictos uno a uno hay otro encargo, configurable por entrevista, en [Verifícalo tú]({BASE}/verificalo).
+Para auditar los veredictos uno a uno hay otro encargo más abajo, en «Verifícalo tú».
 Una IA también se equivoca: pídele siempre los enlaces y ábrelos.
 
 ## Cómo se usa
@@ -1530,6 +1533,66 @@ Una IA también se equivoca: pídele siempre los enlaces y ábrelos.
 Una ruta que no existe (por ejemplo, un `slug` desconocido) devuelve `404` con una página HTML, no con JSON.
 Si encuentras un dato mal verificado, abre una incidencia en [GitHub]({REPO}/issues).
 
+## Verifícalo tú
+
+No hace falta que te creas esta verificación: está hecha con IA y no la ha revisado un equipo de periodistas. Todo está
+publicado para que lo compruebes a mano, con los datos de esta API o con tu propia IA.
+
+1. **Mira el momento exacto.** En la [línea temporal]({BASE}/) de cada entrevista, el minuto de cada afirmación abre el vídeo
+   en ese segundo. Escucha la frase y su contexto.
+2. **Abre las fuentes.** Cada afirmación lista sus fuentes con su enlace, y su página explica qué dato sale de cada una.
+3. **Pásaselo a una IA.** Cada afirmación tiene un botón que copia un encargo para revisarla. Para auditar entrevistas
+   enteras, usa el encargo de abajo.
+4. **Usa los datos.** Todo está en esta API, en JSON y CSV, sin clave. El [método]({BASE}/metodologia) explica cómo se hizo,
+   y el código y los datos están en [GitHub]({REPO}).
+
+### Encargo para auditar la verificación con una IA
+
+Pégalo en un asistente que pueda navegar por internet (Claude, ChatGPT, Gemini, Perplexity…). Revisa las afirmaciones
+falsas y engañosas de todas las entrevistas; para una sola, pídele que use `{{slug}}.json` (por ejemplo, `sanchez.json`).
+
+**[Abrir en Claude](https://claude.ai/new?q={quote(encargo)})** · **[Abrir en ChatGPT](https://chatgpt.com/?q={quote(encargo)})**
+
+```text
+{encargo}
+```
+
+Una IA también se equivoca: pídele siempre los enlaces y ábrelos. Si su respuesta contradice un veredicto con una fuente
+sólida, [avísanos]({REPO}/issues/new?template=correccion.yml) con esa fuente y lo revisamos.
+
+### Con una hoja de cálculo
+
+En Google Sheets, pega esto en una celda para cargar todas las afirmaciones:
+
+```text
+=IMPORTDATA("{BASE}/api/v1/afirmaciones.csv")
+```
+
+En Excel: *Datos → Obtener datos → Desde la web*, y pega `{BASE}/api/v1/afirmaciones.csv`.
+
+### Con la terminal, Python o JavaScript
+
+Las afirmaciones falsas de una entrevista, con sus fuentes:
+
+```bash
+curl -s {BASE}/api/v1/{ejemplo}.json \\
+  | jq '.afirmaciones[] | select(.veredicto == "falso") | {{minuto, cita, resumen, fuentes}}'
+```
+
+```python
+import json, urllib.request
+
+datos = json.load(urllib.request.urlopen("{BASE}/api/v1/afirmaciones.json"))
+for a in datos["afirmaciones"]:
+    if a["veredicto"] in ("falso", "enganoso"):
+        print(a["invitado"], a["minuto"], a["veredicto"], a["afirmacion"])
+```
+
+```javascript
+const r = await fetch("{BASE}/api/v1/entrevistas.json");
+const {{ entrevistas }} = await r.json();
+entrevistas.forEach(e => console.log(e.invitado, e.por_veredicto));
+```
 """
     def respuesta(desc, esquema, ejemplo_json):
         return {"200": {"description": desc, "content": {"application/json": {"schema": ref(esquema), "example": ejemplo_json}}}}
@@ -1719,6 +1782,37 @@ Si encuentras un dato mal verificado, abre una incidencia en [GitHub]({REPO}/iss
     }
 
 
+def encargo_auditoria():
+    """Encargo para que una IA audite los veredictos (antes en /verificalo). Va en la sección «Verifícalo tú» de /api."""
+    return f"""Eres un verificador de datos independiente, riguroso e imparcial. Vas a auditar una verificación hecha con IA de las entrevistas de Jordi Wild (The Wild Project) a los candidatos a las elecciones generales españolas del 29 de noviembre de 2026.
+
+DATOS (JSON público, sin clave)
+- Guía de la API: {BASE}/llms.txt
+- Afirmaciones verificadas: {BASE}/api/v1/afirmaciones.json (o una sola entrevista: {BASE}/api/v1/{{slug}}.json)
+- Transcripción con marcas de tiempo: {BASE}/api/v1/{{entrevista}}/transcripcion.txt (el campo "entrevista" de cada afirmación da el nombre)
+Cada afirmación trae: id, minuto, video_url, cita (literal), afirmacion, veredicto, explicacion, confianza y fuentes[{{titulo, url}}]. Las definiciones de los veredictos están en el campo "veredictos" del JSON.
+
+TAREA
+Descarga las afirmaciones y revisa las que tienen "veredicto" igual a "falso" o "enganoso". Para cada una:
+1. Cita: localízala en la transcripción cerca de su minuto. Comprueba que es literal, que la dice el entrevistado y no Jordi Wild, y que el contexto no le cambia el sentido.
+2. Fuentes: abre cada fuentes[].url. Anota si existe y si dice de verdad lo que la explicacion le atribuye.
+3. Contraste: busca al menos dos fuentes independientes más. Prioriza las primarias y oficiales (INE, Eurostat, BOE, Banco de España, Congreso, ministerios, resoluciones judiciales) y prensa de distintas líneas editoriales.
+4. Veredicto: decide el tuyo con las mismas definiciones y compáralo con el publicado.
+
+REGLAS
+- La misma vara de medir para todos los partidos.
+- No te fíes de tu memoria para hechos de 2025 y 2026: búscalos.
+- No inventes enlaces ni datos. Si no puedes abrir una fuente, dilo.
+- Si no hay prueba suficiente, el veredicto es "no_verificable"; no fuerces ni "falso" ni "verdadero".
+- Admite el redondeo normal del lenguaje oral. "Falso" no implica intención de mentir.
+
+ENTREGA
+1. Una tabla: id | minuto | veredicto publicado | tu veredicto | ¿coinciden? | motivo en una frase | enlaces.
+2. Las discrepancias, de más a menos grave, con la fuente que las sustenta.
+3. Las fuentes rotas, inaccesibles o mal atribuidas.
+4. Una frase final: cuántas has revisado, en cuántas coincides y cuánto te fías del conjunto."""
+
+
 def prompt_agente(hechas):
     """Prompt listo para que un agente de IA use la API. Se muestra en /api y se copia tal cual."""
     invitados = ", ".join(f'{m["invitado"]} ({m.get("partido") or "sin partido"})' for m in hechas)
@@ -1861,15 +1955,13 @@ def main():
             "Las entrevistas de Jordi Wild a los candidatos a las elecciones generales de 2026, comprobadas dato a dato "
             "con el mismo método. Código y datos abiertos."), CREDITOS=creditos_fotos(hechas), MENU=menu(entrevistas), CSS_MENU=CSS_MENU, LEYENDA=LEYENDA, COMPARATIVA=comparativa(hechas), TARJETAS=tarjetas, REPO=REPO,
         FECHA=dt.datetime.now().strftime("%d/%m/%Y")), encoding="utf-8")
-    (SALIDA / "verificalo").mkdir(exist_ok=True)
+    # «Verifícalo tú» vive ahora al final de la introducción de /api; /verificalo redirige allí (aquí y en vercel.json)
     opciones = "".join(f'<option value="{e(m["slug"])}">{e(m["invitado"])}</option>' for m in hechas)
-    (SALIDA / "verificalo" / "index.html").write_text(rellenar(
-        VERIFICALO, CABECERA=cabecera(
-            "/verificalo", "Verifícalo tú · Verificación The Wild Project",
-            "Cómo comprobar por tu cuenta cada veredicto: vídeo, fuentes, datos abiertos y un encargo listo para que "
-            "cualquier IA audite la verificación."), SECCION_API=api_publica.SECCION_API, JS_API=api_publica.JS_API, CSS_API=api_publica.CSS_API,
-        MENU=menu(entrevistas), CSS_MENU=CSS_MENU, LEYENDA=LEYENDA, BASE=BASE, REPO=REPO, OPCIONES=opciones,
-        EJ=ejemplo, SLUGS=", ".join(f"<code>{x}</code>" for x in slugs)), encoding="utf-8")
+    (SALIDA / "verificalo").mkdir(exist_ok=True)
+    (SALIDA / "verificalo" / "index.html").write_text(
+        '<!doctype html><html lang="es"><head><meta charset="utf-8"><meta http-equiv="refresh" content="0; url=/api#verificalo">'
+        '<link rel="canonical" href="' + BASE + '/api"><meta name="robots" content="noindex"><title>Verifícalo tú</title></head>'
+        '<body><p>«Verifícalo tú» está ahora en <a href="/api#verificalo">la página de la API</a>.</p></body></html>\n', encoding="utf-8")
     (SALIDA / "quien").mkdir(exist_ok=True)
     (SALIDA / "quien" / "index.html").write_text(rellenar(
         QUIEN, ANALITICA=ANALITICA_QUIEN if UMAMI_ID else SIN_ANALITICA_QUIEN, CABECERA=cabecera(
@@ -1880,9 +1972,9 @@ def main():
     DATOS.mkdir(exist_ok=True)
     (DATOS / "index.html").write_text(rellenar(
         PAGINA_API, CABECERA=cabecera(
-            "/api", "API abierta · Verificación The Wild Project",
-            "API JSON y CSV de solo lectura, sin clave y con CORS abierto: referencia completa de cada ruta y cada campo, "
-            "y un prompt listo para agentes de IA."), PROMPT=e(prompt_agente(hechas)), MENU=menu(entrevistas), CSS_MENU=CSS_MENU, BASE=BASE, REPO=REPO,
+            "/api", "Verifícalo tú · API abierta · Verificación The Wild Project",
+            "Cómo comprobar por tu cuenta cada veredicto, con la API abierta en JSON y CSV (sin clave), un encargo para que "
+            "cualquier IA audite la verificación y un prompt listo para agentes de IA."), PROMPT=e(prompt_agente(hechas)), MENU=menu(entrevistas), CSS_MENU=CSS_MENU, BASE=BASE, REPO=REPO,
         SCALAR=SCALAR, SCALAR_SRI=SCALAR_SRI), encoding="utf-8")
     # La referencia vivió unas horas en /api/referencia: se redirige (aquí y en vercel.json).
     (DATOS / "referencia").mkdir(exist_ok=True)
@@ -2220,138 +2312,6 @@ html.con-repro .arriba { bottom:calc(var(--repro-h, 0px) + 28px + env(safe-area-
 CSS_MENU = (CSS_MENU.replace("@@CLARO@@", _CLARO).replace("@@OSCURO@@", _OSCURO)
             .replace("@@CLASES_TONO@@", "\n".join(f"[data-v={k}], .tono-{k} {{ --tono:var(--v-{k}); }}" for k in ORDEN)))
 
-VERIFICALO = """<!doctype html>
-<html lang="es">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-@@HEAD_MODO@@
-@@CABECERA@@
-<style>
-:root { --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; }
-* { box-sizing:border-box; }
-body { margin:0; background:var(--fondo); color:var(--tinta); font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; }
-a { color:var(--tinta); }
-main.ancho { padding-bottom:72px; }
-main > * { max-width:900px; }
-h1 { font:700 clamp(30px,5.2vw,56px)/1.05 var(--serif); letter-spacing:-0.02em; margin:clamp(28px,5vw,48px) 0 12px; text-wrap:balance; }
-.entrada { font-size:17px; max-width:62ch; }
-main > h2 { font:700 24px/1.2 var(--serif); margin:44px 0 10px; padding-top:12px; border-top:3px solid var(--tinta); }
-p, li { max-width:68ch; }
-.vias { list-style:none; padding:0; margin:18px 0 0; display:grid; gap:12px; }
-main > .vias, main > .leyenda-f { max-width:none; }
-@media (min-width:860px) { main > .vias { grid-template-columns:repeat(2,minmax(0,1fr)); } }
-@media (min-width:1240px) { main > .vias { grid-template-columns:repeat(4,minmax(0,1fr)); } .vias li { grid-template-columns:1fr; gap:10px 0; } }
-.vias li { border:2px solid var(--tinta); padding:14px 16px; max-width:none; display:grid; grid-template-columns:44px minmax(0,1fr); gap:0 14px; }
-.vias li > b { font:700 34px/1 var(--serif); }
-.vias h3 { margin:0 0 2px; font-size:17px; } .vias p { margin:0; font-size:15px; }
-.opciones { display:flex; flex-wrap:wrap; gap:10px 18px; margin:14px 0; font-size:14.5px; font-weight:600; }
-.opciones select { font:inherit; font-weight:500; color:var(--tinta); border:1.5px solid var(--tinta); background:var(--fondo); padding:5px 8px; margin-left:6px; border-radius:0; }
-pre { background:var(--pre-fondo); color:var(--pre-tinta); outline:1px solid var(--pre-borde); outline-offset:-1px; padding:16px 18px; white-space:pre-wrap; overflow-wrap:anywhere; font:13px/1.6 ui-monospace,SFMono-Regular,Menlo,monospace; margin:0 0 12px; }
-.botones { display:flex; flex-wrap:wrap; gap:8px; }
-.botones button, .botones a { font:inherit; font-size:14px; font-weight:600; background:var(--fondo); color:var(--tinta); border:2px solid var(--tinta); padding:7px 14px; cursor:pointer; text-decoration:none; }
-.botones button { background:var(--tinta); color:var(--fondo); }
-.botones a:hover { background:var(--tinta); color:var(--fondo); }
-.nota { font-size:14px; color:var(--suave); }
-code { font:13.5px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace; background:var(--codigo); padding:1px 5px; }
-@@CSS_API@@
-@@CSS_MENU@@
-</style>
-</head>
-<body>
-@@MENU@@
-<main class="ancho">
-<h1>Verifícalo tú</h1>
-<p class="entrada">Esta verificación la han hecho modelos de IA y no la ha revisado un equipo de periodistas. No hace falta que te la creas: todo está publicado para que lo compruebes a mano, con los datos de la API o con tu propia IA.</p>
-
-<ol class="vias">
-<li><b>1</b><div><h3>Mira el momento exacto</h3><p>En la línea temporal, el minuto de cada afirmación abre el vídeo de YouTube en ese segundo. Escucha la frase y su contexto.</p></div></li>
-<li><b>2</b><div><h3>Abre las fuentes</h3><p>Cada panel lista las fuentes con su enlace. «Explicación completa» detalla qué dato sale de cada una.</p></div></li>
-<li><b>3</b><div><h3>Pásaselo a una IA</h3><p>Cada panel tiene un botón que copia un encargo para esa afirmación concreta. Para auditar una entrevista entera, usa el encargo de abajo.</p></div></li>
-<li><b>4</b><div><h3>Consulta la API</h3><p>Afirmaciones, veredictos, fuentes y transcripciones, en JSON y CSV, sin clave. Está <a href="#api">aquí abajo</a>, con ejemplos para hoja de cálculo, terminal y programación. El <a href="/metodologia">método</a>, con los encargos originales, tiene su propia página; el código y los datos están en <a href="@@REPO@@" target="_blank" rel="noopener noreferrer">GitHub</a>.</p></div></li>
-</ol>
-
-@@SECCION_API@@
-
-<h2>Encargo para auditar una entrevista con una IA</h2>
-<p>Elige qué quieres revisar, copia el texto y pégalo en un asistente que pueda navegar por internet (Claude, ChatGPT, Gemini, Perplexity…). Lee los datos directamente de la API.</p>
-<div class="opciones">
-<label>Entrevista<select id="cual">@@OPCIONES@@<option value="">Todas</option></select></label>
-<label>Qué revisar<select id="alcance">
-<option value="malas">Solo falsas y engañosas</option>
-<option value="nv">Solo las no verificables</option>
-<option value="todas">Todas las afirmaciones</option>
-<option value="muestra">Una muestra al azar de 15</option>
-</select></label>
-</div>
-<pre id="encargo"></pre>
-<div class="botones"><button id="copiar" type="button">Copiar encargo</button><a id="claude" target="_blank" rel="noopener noreferrer">Abrir en Claude ↗</a><a id="chatgpt" target="_blank" rel="noopener noreferrer">Abrir en ChatGPT ↗</a></div>
-<p class="nota">Una IA también se equivoca: pídele siempre los enlaces y ábrelos. Si su respuesta contradice un veredicto con una fuente sólida, <a href="@@REPO@@/issues/new?template=correccion.yml" target="_blank" rel="noopener noreferrer">avísanos</a> con esa fuente y lo revisamos.</p>
-
-<h2>Qué significa cada veredicto</h2>
-@@LEYENDA@@
-</main>
-<footer class="pie-solo"><div class="ancho">@@PIE@@</div></footer>
-@@JS_API@@
-<script>
-const B = "@@BASE@@";
-const ALCANCE = {
-  malas: 'las que tienen "veredicto" igual a "falso" o "enganoso"',
-  nv: 'las que tienen "veredicto" igual a "no_verificable" (intenta encontrar la prueba que faltó)',
-  todas: "todas",
-  muestra: "una muestra al azar de 15, con al menos 5 falsas o engañosas",
-};
-function encargo() {
-  const slug = document.getElementById("cual").value, alcance = document.getElementById("alcance").value;
-  const datos = slug ? `${B}/api/v1/${slug}.json` : `${B}/api/v1/afirmaciones.json`;
-  const texto = slug ? `${B}/api/v1/${slug}/transcripcion.txt` : `${B}/api/v1/{entrevista}/transcripcion.txt (el campo "entrevista" de cada afirmación da el nombre)`;
-  return `Eres un verificador de datos independiente, riguroso e imparcial. Vas a auditar una verificación hecha con IA de las entrevistas de Jordi Wild (The Wild Project) a los candidatos a las elecciones generales españolas del 29 de noviembre de 2026.
-
-DATOS (JSON público, sin clave)
-- Guía de la API: ${B}/llms.txt
-- Afirmaciones verificadas: ${datos}
-- Transcripción con marcas de tiempo: ${texto}
-Cada afirmación trae: id, minuto, video_url, cita (literal), afirmacion, veredicto, explicacion, confianza y fuentes[{titulo, url}]. Las definiciones de los veredictos están en el campo "veredictos" del JSON.
-
-TAREA
-Descarga las afirmaciones y revisa ${ALCANCE[alcance]}. Para cada una:
-1. Cita: localízala en la transcripción cerca de su minuto. Comprueba que es literal, que la dice el entrevistado y no Jordi Wild, y que el contexto no le cambia el sentido.
-2. Fuentes: abre cada fuentes[].url. Anota si existe y si dice de verdad lo que la explicacion le atribuye.
-3. Contraste: busca al menos dos fuentes independientes más. Prioriza las primarias y oficiales (INE, Eurostat, BOE, Banco de España, Congreso, ministerios, resoluciones judiciales) y prensa de distintas líneas editoriales.
-4. Veredicto: decide el tuyo con las mismas definiciones y compáralo con el publicado.
-
-REGLAS
-- La misma vara de medir para todos los partidos.
-- No te fíes de tu memoria para hechos de 2025 y 2026: búscalos.
-- No inventes enlaces ni datos. Si no puedes abrir una fuente, dilo.
-- Si no hay prueba suficiente, el veredicto es "no_verificable"; no fuerces ni "falso" ni "verdadero".
-- Admite el redondeo normal del lenguaje oral. "Falso" no implica intención de mentir.
-
-ENTREGA
-1. Una tabla: id | minuto | veredicto publicado | tu veredicto | ¿coinciden? | motivo en una frase | enlaces.
-2. Las discrepancias, de más a menos grave, con la fuente que las sustenta.
-3. Las fuentes rotas, inaccesibles o mal atribuidas.
-4. Una frase final: cuántas has revisado, en cuántas coincides y cuánto te fías del conjunto.
-Si encuentras un error claro, redacta la incidencia para @@REPO@@/issues con el id, el minuto y la fuente.`;
-}
-function pintar() {
-  const t = encargo();
-  document.getElementById("encargo").textContent = t;
-  document.getElementById("claude").href = "https://claude.ai/new?q=" + encodeURIComponent(t);
-  document.getElementById("chatgpt").href = "https://chatgpt.com/?q=" + encodeURIComponent(t);
-}
-document.getElementById("cual").onchange = pintar;
-document.getElementById("alcance").onchange = pintar;
-document.getElementById("copiar").onclick = ev => {
-  const b = ev.currentTarget, t = encargo();
-  b.textContent = "Copiado ✓"; setTimeout(() => b.textContent = "Copiar encargo", 2200);
-  copiarTexto(t, "Encargo copiado. Pégalo en una IA que pueda navegar por internet.");
-};
-pintar();
-</script>
-</body>
-</html>
-"""
 
 QUIEN = """<!doctype html>
 <html lang="es">
@@ -2446,7 +2406,7 @@ h1 { font:700 clamp(30px,5.2vw,58px)/1.05 var(--serif); letter-spacing:-0.02em; 
 <li>Modelos de IA de Claude (Sonnet), con búsqueda web, contrastan cada afirmación con fuentes públicas y le ponen un veredicto.</li>
 <li>Ninguna persona periodista ha revisado los veredictos.</li>
 </ul>
-<p>El procedimiento completo está en el <a href="/metodologia">método</a>. En <a href="/verificalo">Verifícalo tú</a> puedes comprobar cada veredicto por tu cuenta.</p>
+<p>El procedimiento completo está en el <a href="/metodologia">método</a>. En <a href="/api#verificalo">Verifícalo tú</a> puedes comprobar cada veredicto por tu cuenta.</p>
 </section>
 
 <section>
@@ -2617,9 +2577,9 @@ body.light-mode, body.dark-mode, body .scalar-app {
 <body>
 @@MENU@@
 <header class="api-cab"><div class="ancho">
-<h1>API abierta</h1>
-<p>Todos los datos de la web en JSON y CSV: afirmaciones, veredictos, fuentes y transcripciones. Sin registro ni clave, con CORS abierto y de solo lectura. Base: <code>@@BASE@@/api/v1</code>.</p>
-<p class="saltos"><a href="#referencia" id="ir-agentes">Prompt para agentes de IA ↓</a><a href="#referencia">Referencia completa ↓</a><a href="/api/v1/openapi.json">openapi.json</a><a href="/llms.txt">llms.txt</a><a href="/verificalo#api">Ejemplos para hoja de cálculo y programación</a></p>
+<h1>Verifícalo tú</h1>
+<p>No hace falta que te creas esta verificación: todo está abierto para que lo compruebes tú. Afirmaciones, veredictos, fuentes y transcripciones, en una API pública en JSON y CSV, sin registro ni clave. Base: <code>@@BASE@@/api/v1</code>.</p>
+<p class="saltos"><a href="#verificalo" data-ancla="verifícalo-tú">Cómo comprobarlo ↓</a><a href="#agentes" data-ancla="prompt-para-agentes-de-ia">Prompt para agentes de IA ↓</a><a href="#referencia">Referencia de la API ↓</a><a href="/api/v1/openapi.json">openapi.json</a><a href="/llms.txt">llms.txt</a></p>
 </div></header>
 <div id="referencia"></div>
 <footer class="pie-solo"><div class="ancho">@@PIE@@</div></footer>
@@ -2652,27 +2612,30 @@ body.light-mode, body.dark-mode, body .scalar-app {
       campo.dispatchEvent(new KeyboardEvent("keydown", { key: "Escape", code: "Escape", bubbles: true }));
     }, true);
   })).observe(document.body, { childList: true, subtree: true });
-  // Botón «Copiar prompt» encima del bloque del prompt para agentes (Scalar no pone botón en los bloques de la descripción)
-  const ANCLA_PROMPT = "api-1/description/prompt-para-agentes-de-ia";
-  const prepararPrompt = () => {
-    const pre = [...document.querySelectorAll(".introduction-description pre")].find(x => x.textContent.trim().startsWith("Tienes acceso"));
-    if (!pre || pre.dataset.listo) return;
+  // Botón de copiar encima de cada bloque de la descripción (prompt, encargo y ejemplos): Scalar no lo pone en ella
+  const COPIAS = [["Tienes acceso", "Copiar prompt", "Prompt copiado. Pégalo en tu agente y escribe tu pregunta al final."],
+                  ["Eres un verificador", "Copiar encargo", "Encargo copiado. Pégalo en una IA que pueda navegar por internet."]];
+  const prepararCopias = () => document.querySelectorAll(".introduction-description pre:not([data-listo])").forEach(pre => {
     pre.dataset.listo = "1";
+    const t = pre.textContent.trim(), [, rotulo, aviso] = COPIAS.find(([ini]) => t.startsWith(ini)) || [, "Copiar", "Copiado."];
     const b = document.createElement("button");
-    b.type = "button"; b.className = "copiar-prompt"; b.textContent = "Copiar prompt";
+    b.type = "button"; b.className = "copiar-prompt"; b.textContent = rotulo;
     b.onclick = () => {
-      const t = pre.textContent.trim();
-      if (typeof copiarTexto === "function") copiarTexto(t, "Prompt copiado. Pégalo en tu agente y escribe tu pregunta al final.");
-      else if (navigator.clipboard) navigator.clipboard.writeText(t);
-      b.textContent = "Copiado ✓"; setTimeout(() => b.textContent = "Copiar prompt", 2200);
+      if (typeof copiarTexto === "function") copiarTexto(t, aviso); else if (navigator.clipboard) navigator.clipboard.writeText(t);
+      b.textContent = "Copiado ✓"; setTimeout(() => b.textContent = rotulo, 2200);
     };
     pre.before(b);
-  };
-  new MutationObserver(prepararPrompt).observe(document.getElementById("referencia"), { childList: true, subtree: true });
-  document.getElementById("ir-agentes").addEventListener("click", ev => {
-    const h = document.getElementById(ANCLA_PROMPT);
-    if (h) { ev.preventDefault(); h.scrollIntoView(); }
   });
+  // Saltos a secciones de la descripción: #verificalo (adonde redirige /verificalo) y #agentes
+  const ANCLAS = { verificalo: "verifícalo-tú", agentes: "prompt-para-agentes-de-ia" };  // Scalar conserva las tildes
+  const destino = slug => document.getElementById("api-1/description/" + slug);
+  let pendiente = ANCLAS[location.hash.slice(1)];
+  const irPendiente = () => { const h = pendiente && destino(pendiente); if (h) { pendiente = null; h.scrollIntoView(); } };
+  new MutationObserver(() => { prepararCopias(); irPendiente(); }).observe(document.getElementById("referencia"), { childList: true, subtree: true });
+  document.querySelectorAll(".saltos a[data-ancla]").forEach(a => a.addEventListener("click", ev => {
+    const h = destino(a.dataset.ancla);
+    if (h) { ev.preventDefault(); h.scrollIntoView(); history.replaceState(null, "", a.hash); }
+  }));
   // updateConfiguration no aplica forceDarkModeState en caliente; Scalar pinta el tema según la clase del <body>.
   const sincronizar = () => {
     const oscuro = tema() === "dark";
@@ -2864,7 +2827,7 @@ footer .leyenda-f { max-width:820px; }
 <div class="cabeza">
 <h1>Las entrevistas de The Wild Project, comprobadas dato a dato</h1>
 <p class="entrada">Jordi Wild ha entrevistado a los candidatos a la presidencia del Gobierno para las elecciones del 29 de noviembre de 2026. Transcribimos cada entrevista entera, separamos las afirmaciones que se pueden comprobar y las contrastamos con fuentes públicas, con el mismo método y la misma vara de medir para todos.</p>
-<p class="tu"><a href="/verificalo"><b>Puedes verificarlo tú</b> →</a> Cada dato enlaza su fuente y el minuto del vídeo, y hay un encargo listo para que cualquier IA lo revise por su cuenta.</p>
+<p class="tu"><a href="/api#verificalo"><b>Puedes verificarlo tú</b> →</a> Cada dato enlaza su fuente y el minuto del vídeo, y hay un encargo listo para que cualquier IA lo revise por su cuenta.</p>
 </div>
 <div class="tarjetas">@@TARJETAS@@</div>
 @@LEYENDA_LINEA@@
