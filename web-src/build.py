@@ -492,11 +492,11 @@ def muestra_hero(hechas, por_veredicto=(("falso", "enganoso"), ("verdadero",), (
     items = "".join(item(i, m, a) for i, (m, a) in enumerate(elegidas))
     return ('<section class="muestra" aria-roledescription="carrusel" aria-label="Afirmaciones verificadas, de muestra">'
             '<p class="muestra-rot">Así se ve una afirmación comprobada</p><div class="muestra-barra">'
-            '<button class="muestra-pausa" type="button" aria-label="Pausar el carrusel" title="Pausar">'
-            '<svg viewBox="0 0 24 24" aria-hidden="true"><path class="ico-pausa" d="M9 5v14M15 5v14"/><path class="ico-play" d="M8 5l11 7-11 7z"/></svg></button>'
-            '<button class="muestra-sig" type="button" aria-label="Siguiente afirmación" title="Siguiente">'
+            '<button class="muestra-ant" type="button" aria-label="Afirmación anterior" title="Anterior">'
+            '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>'
+            '<button class="muestra-sig" type="button" aria-label="Afirmación siguiente" title="Siguiente">'
             '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button></div>'
-            f'<ul class="muestra-lista" aria-live="off">{items}</ul><span class="muestra-tiempo" aria-hidden="true"></span></section>')
+            f'<ul class="muestra-lista" aria-live="off">{items}</ul></section>')
 
 
 def creditos_fotos(entrevistas):
@@ -3040,7 +3040,6 @@ a { color:var(--tinta); }
 .cabeza { padding:clamp(28px,5vw,56px) 0 clamp(24px,3vw,36px); }
 h1 { font:700 clamp(30px,5.2vw,58px)/1.05 var(--serif); letter-spacing:-0.02em; margin:0 0 16px; text-wrap:balance; max-width:20ch; }
 .entrada { font-size:17px; max-width:62ch; margin:0 0 20px; }
-.tu { margin:0; padding:12px 14px; border:1.5px solid var(--tinta); font-size:15px; max-width:62ch; }
 @media (min-width:1000px) {
   .cabeza { display:grid; grid-template-columns:minmax(0,1.5fr) minmax(280px,1fr); gap:0 clamp(32px,5vw,80px); align-items:end; }
   .cabeza h1 { grid-column:1 / -1; max-width:24ch; } .cabeza .entrada { margin:0; } }
@@ -3110,7 +3109,6 @@ footer { border-top:3px solid var(--tinta); margin-top:48px; padding:28px 0 64px
   .cabeza { padding:0; grid-template-columns:minmax(0,1.25fr) minmax(0,1fr); grid-template-rows:auto auto; gap:10px clamp(32px,4vw,72px); align-items:end; }
   .cabeza h1 { grid-column:1; grid-row:1 / span 2; max-width:none; margin:0; font-size:clamp(32px, min(3.7vw, 6vh), 60px); }
   .cabeza .entrada { grid-column:2; grid-row:1; font-size:clamp(14px,1.95vh,17px); line-height:1.5; }
-  .cabeza .tu { grid-column:2; grid-row:2; font-size:clamp(13px,1.8vh,14.5px); padding:clamp(7px,1.2vh,11px) 14px; }
   .tarjetas .entrevista { padding:clamp(14px,2.2vh,22px) 20px; }
   .des { font-size:clamp(12.5px,1.75vh,13.5px); }
   .tarjetas .entrevista .prog { margin:clamp(6px,1.2vh,12px) 0 clamp(4px,1vh,10px); font-size:11px; letter-spacing:.05em; }
@@ -3132,7 +3130,7 @@ footer { border-top:3px solid var(--tinta); margin-top:48px; padding:28px 0 64px
   .tarjetas .entrevista .prog { font-size:10.5px; letter-spacing:.03em; }
   .tarjetas .entrevista .num { font-size:15px; } .tarjetas .entrevista .num b { font-size:26px; }
   .tarjetas .entrevista { grid-template-columns:56px minmax(0,1fr); } .tarjetas .entrevista .logo { width:56px; height:56px; }
-  .cabeza h1 { font-size:clamp(30px,3.4vw,40px); grid-row:1; } .cabeza .tu { display:none; } }
+  .cabeza h1 { font-size:clamp(30px,3.4vw,40px); grid-row:1; } }
 /* Leyenda en texto bajo las tarjetas: una fila que se parte en varias en pantallas estrechas */
 .ley-linea { display:flex; flex-wrap:wrap; gap:6px clamp(14px,2vw,28px); margin:18px 0 0; padding:0; list-style:none; font-size:13.5px; line-height:1.4; color:var(--suave); }
 .ley-linea li { display:flex; align-items:baseline; gap:7px; }
@@ -3148,6 +3146,13 @@ footer { border-top:3px solid var(--tinta); margin-top:48px; padding:28px 0 64px
 .seguir:hover { color:var(--tinta); } .seguir svg { display:block; width:16px; height:16px; fill:none; stroke:currentColor; stroke-width:2.2; stroke-linecap:round; transition:transform .2s ease-out; }
 .seguir:hover svg { transform:translateY(3px); }
 .compara { scroll-margin-top:calc(var(--menu, 48px) + 16px); }
+/* «Puedes verificarlo tú», después de la comparativa: tres vías cortas en fichas */
+.verifica-entrada { margin:0 0 16px; max-width:62ch; font-size:17px; }
+.verifica-vias { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr)); gap:clamp(14px,2vw,22px); margin:0; padding:0; list-style:none; }
+.verifica-vias li { display:flex; flex-direction:column; gap:8px; min-width:0; padding:clamp(16px,2vw,22px); border:2px solid var(--tinta); border-radius:var(--r-caja); }
+.verifica-vias h3 { margin:0; font:700 20px/1.25 var(--serif); text-wrap:balance; }
+.verifica-vias p { margin:0; font-size:15px; color:var(--suave); max-width:62ch; }
+.verifica-vias a { margin-top:auto; padding-top:4px; font-weight:700; text-underline-offset:3px; }
 .seccion-t, .compara h2 { font:700 27px/1.2 var(--serif); margin:44px 0 14px; padding-top:12px; border-top:3px solid var(--tinta); }
 .compara { margin-bottom:8px; }
 .tabla-c { overflow-x:auto; }
@@ -3180,50 +3185,46 @@ footer .leyenda-f { max-width:820px; }
 /* ── Hero con GSAP: el titular sube por líneas y se subraya «dato a dato»; debajo, un carrusel de afirmaciones reales que reciben su veredicto como un sello */
 .subraya { font-style:normal; background:linear-gradient(var(--tinta),var(--tinta)) no-repeat 0 96% / var(--subrayado,100%) .075em;
   -webkit-box-decoration-break:clone; box-decoration-break:clone; }
-.muestra { position:relative; margin-top:20px; border:2px solid var(--tinta); border-radius:var(--r-caja); padding:12px 16px 16px; overflow:hidden; max-width:62ch; }
-.muestra-barra { position:absolute; top:8px; right:10px; z-index:1; display:flex; gap:6px; margin:0; }
-.muestra-rot { margin:0 0 6px; padding-right:84px; font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--gris); }
-.muestra-barra button { display:grid; place-items:center; width:36px; height:36px; padding:0; cursor:pointer; border:1.5px solid var(--tinta); border-radius:var(--r-boton);
-  background:var(--fondo); color:var(--tinta); transition:background-color .15s ease-out, color .15s ease-out, transform .12s ease-out; }
-.muestra-barra button:hover { background:var(--tinta); color:var(--fondo); }
-.muestra-barra button:active { transform:scale(.94); }
-.muestra-barra button:focus-visible { outline:2px solid var(--tinta); outline-offset:2px; }
-.muestra-barra svg { width:16px; height:16px; fill:none; stroke:currentColor; stroke-width:2.2; stroke-linecap:round; stroke-linejoin:round; }
-.muestra-pausa .ico-play { display:none; fill:currentColor; stroke:none; }
-.muestra.parada .muestra-pausa .ico-pausa { display:none; } .muestra.parada .muestra-pausa .ico-play { display:block; }
-.muestra:not(.auto) .muestra-pausa { display:none; }
+/* Sin marco: la etiqueta de quién y cuándo lleva delante las flechas, la cita debajo y el sello del veredicto a la derecha */
+.muestra { position:relative; margin-top:20px; max-width:62ch; }
+.muestra-rot { margin:0 0 8px; font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--gris); }
+.muestra-barra { position:absolute; left:-8px; z-index:1; display:flex; gap:2px; margin:0; transform:translateY(-6px); }
+.muestra-barra button { display:grid; place-items:center; width:36px; height:36px; padding:0; cursor:pointer; border:0; border-radius:var(--r-boton);
+  background:transparent; color:var(--tinta); transition:background-color .15s ease-out, transform .12s ease-out; }
+.muestra-barra button:hover { background:var(--claro); }
+.muestra-barra button:active { transform:scale(.92); }
+.muestra-barra button:focus-visible { outline:2px solid var(--tinta); outline-offset:0; }
+.muestra-barra svg { width:18px; height:18px; fill:none; stroke:currentColor; stroke-width:2.4; stroke-linecap:round; stroke-linejoin:round; }
 .muestra-lista { list-style:none; margin:0; padding:0; display:grid; }
 .muestra-item { grid-area:1 / 1; visibility:hidden; min-width:0; }
 .muestra-item.activa { visibility:visible; }
-.muestra-item a { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:4px 18px; align-items:center; color:inherit; text-decoration:none; }
-.muestra-quien { grid-column:1; padding-right:84px; font-size:12.5px; font-weight:700; color:var(--suave); }
+.muestra-item a { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:6px 20px; align-items:center; color:inherit; text-decoration:none; }
+.muestra-quien { grid-column:1; padding-left:70px; font-size:12.5px; font-weight:700; line-height:24px; color:var(--suave); }
 .muestra-cita { grid-column:1; font:italic 400 clamp(17px,1.55vw,21px)/1.3 var(--serif); text-wrap:pretty; }
 .muestra-item a:hover .muestra-cita { text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:3px; }
 .muestra-item a:focus-visible { outline:2px solid var(--tinta); outline-offset:4px; border-radius:var(--r-mini); }
-.estampa { grid-column:2; grid-row:1 / span 2; justify-self:end; padding:7px 10px; border:2.5px solid currentColor; border-radius:var(--r-mini);
+.estampa { grid-column:2; grid-row:1 / span 2; justify-self:end; align-self:center; padding:7px 10px; border:2.5px solid currentColor; border-radius:var(--r-mini);
   color:var(--tono); background:color-mix(in srgb, var(--tono) 8%, var(--fondo)); transform:rotate(-4deg);
   font:800 12.5px/1 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; letter-spacing:.09em; text-transform:uppercase; white-space:nowrap; }
-.muestra-tiempo { position:absolute; left:0; right:0; bottom:0; height:3px; background:var(--tinta); transform-origin:0 50%; transform:scaleX(0); }
-@media (max-width:560px) { .muestra { padding:12px 14px 16px; } .muestra-rot { min-height:36px; }
-  .muestra-item a { grid-template-columns:minmax(0,1fr); } .estampa { grid-column:1; grid-row:auto; justify-self:start; margin-top:8px; } }
+@media (max-width:560px) { .muestra-item a { column-gap:12px; } .estampa { padding:6px 8px; font-size:11px; } }
 /* Escritorio sin el ajuste a una pantalla: el carrusel ocupa la columna derecha bajo el titular */
 @media (min-width:1000px) {
-  .cabeza .entrada { grid-column:1; grid-row:2; } .cabeza .tu { grid-column:1; grid-row:3; margin-top:16px; }
-  .cabeza .muestra { grid-column:2; grid-row:2 / span 2; margin:0; align-self:end; } }
-/* Escritorio a una pantalla: titular y carrusel a la izquierda, entradilla y «verifícalo tú» a la derecha */
+  .cabeza .entrada { grid-column:1; grid-row:2; }
+  .cabeza .muestra { grid-column:2; grid-row:2; margin:0; align-self:end; } }
+/* Escritorio a una pantalla: titular y carrusel a la izquierda, entradilla a la derecha */
 @media (min-width:1000px) and (min-height:640px) {
   .cabeza { grid-template-rows:auto auto; row-gap:clamp(12px,2.2vh,24px); }
   .cabeza h1 { grid-row:1; align-self:end; }
-  .cabeza .entrada { grid-column:2; grid-row:1; align-self:end; } .cabeza .tu { grid-column:2; grid-row:2; margin:0; align-self:end; }
-  .cabeza .muestra { grid-column:1; grid-row:2; max-width:none; padding:clamp(6px,1vh,10px) 16px clamp(10px,1.6vh,16px); }
-  .muestra-rot { display:none; } .muestra-quien { padding-right:0; } .muestra-barra { top:8px; } .muestra-cita { line-height:1.24; }
+  .cabeza .entrada { grid-column:2; grid-row:1 / span 2; align-self:center; }
+  .cabeza .muestra { grid-column:1; grid-row:2; max-width:none; }
+  .muestra-rot { display:none; } .muestra-cita { line-height:1.24; }
   .cabeza h1 { font-size:clamp(30px, min(3.5vw, 5.4vh), 58px); }
   main.ancho { gap:clamp(8px,1.6vh,28px); } .cabeza { row-gap:clamp(8px,1.4vh,18px); }
-  .muestra-item a { align-items:end; min-height:64px; } .estampa { align-self:end; margin-bottom:2px; } .muestra-barra button { width:32px; height:32px; }
+  .muestra-item a { min-height:64px; }
   .muestra-cita { font-size:clamp(16px, min(1.5vw, 2.5vh), 21px); } }
-@media (min-width:1000px) and (max-width:1199px) and (min-height:640px) { .cabeza .entrada { grid-row:1 / span 2; } .muestra-cita { font-size:16px; } .cabeza .muestra { padding-top:4px; padding-bottom:8px; } }
+@media (min-width:1000px) and (max-width:1199px) and (min-height:640px) { .muestra-cita { font-size:16px; } }
 /* Mientras carga GSAP (como mucho 2,5 s) lo que va a animar no se pinta; luego sus animaciones sustituyen a las de CSS */
-.con-gsap .cabeza h1, .con-gsap .cabeza .entrada, .con-gsap .cabeza .tu, .con-gsap .muestra, .con-gsap .tarjetas .entrevista { visibility:hidden; }
+.con-gsap .cabeza h1, .con-gsap .cabeza .entrada, .con-gsap .muestra, .con-gsap .tarjetas .entrevista { visibility:hidden; }
 .gsap-listo .cabeza *, .gsap-listo .tarjetas .entrevista, .gsap-listo .tarjetas .entrevista * { animation:none !important; }
 </style>
 </head>
@@ -3233,8 +3234,7 @@ footer .leyenda-f { max-width:820px; }
 <div class="primera">
 <div class="cabeza">
 <h1>Las entrevistas de The Wild Project, comprobadas <em class="subraya">dato a dato</em></h1>
-<p class="entrada">Jordi Wild ha entrevistado a los candidatos a la presidencia del Gobierno para las elecciones del 29 de noviembre de 2026. Transcribimos cada entrevista entera, separamos las afirmaciones que se pueden comprobar y las contrastamos con fuentes públicas, con el mismo método y la misma vara de medir para todos.</p>
-<p class="tu"><a href="/api#verificalo"><b>Puedes verificarlo tú</b> →</a> Cada dato enlaza su fuente y el minuto del vídeo, y hay un encargo listo para que cualquier IA lo revise por su cuenta. ¿Ves un error o falta algo? <a href="/participa">Participa</a>.</p>
+<p class="entrada">Jordi Wild ha entrevistado a los candidatos a las elecciones generales del 29 de noviembre. Comprobamos cada dato que dan con fuentes públicas, con el mismo método y la misma vara de medir para todos.</p>
 @@MUESTRA@@
 </div>
 <div class="tarjetas">@@TARJETAS@@</div>
@@ -3242,6 +3242,15 @@ footer .leyenda-f { max-width:820px; }
 <a class="seguir" href="#compara-t">Comparativa de los candidatos<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg></a>
 </div>
 @@COMPARATIVA@@
+<section class="verifica" aria-labelledby="verifica-t">
+<h2 class="seccion-t" id="verifica-t">Puedes verificarlo tú</h2>
+<p class="verifica-entrada">No hace falta que te fíes: todo está a la vista para que lo compruebes.</p>
+<ul class="verifica-vias">
+<li><h3>El vídeo y las fuentes</h3><p>Cada afirmación abre el vídeo en el segundo exacto y enlaza las fuentes con las que se comprobó.</p><a href="/metodologia">Cómo se verifica →</a></li>
+<li><h3>Tu propia IA</h3><p>Hay un encargo listo para que cualquier IA revise la verificación por su cuenta, y todos los datos están en abierto.</p><a href="/api#verificalo">Copiar el encargo →</a></li>
+<li><h3>¿Un error o algo que falta?</h3><p>Mándanos el enlace a una fuente y lo revisamos con el mismo criterio para todos.</p><a href="/participa">Participa →</a></li>
+</ul>
+</section>
 </main>
 <footer><div class="ancho pie-corto">
 <p>Verificación asistida por IA (transcripción con Whisper, contraste con modelos Claude y búsqueda web), sin revisión de un equipo de periodistas. Cada afirmación enlaza el segundo exacto del vídeo y sus fuentes, y el código, las transcripciones y los datos están publicados en <a href="@@REPO@@" target="_blank" rel="noopener noreferrer">GitHub</a>. «Falso» no implica intención de mentir: incluye errores y lapsus. El número de afirmaciones falsas depende también de cuánto habla cada invitado y de cuántos datos da, así que las cifras no son un ranking. En rojo, junto a cada tema, cuántas afirmaciones falsas o engañosas contiene.</p>
@@ -3263,7 +3272,7 @@ addEventListener("DOMContentLoaded", () => {
   const lineas = SplitText.create(h1, { type: "lines", mask: "lines" });
   tl.from(lineas.lines, { yPercent: 115, stagger: .09, onComplete: () => lineas.revert() })
     .fromTo(".subraya", { "--subrayado": "0%" }, { "--subrayado": "100%", duration: .7, ease: "power3.inOut" }, "-=.3")
-    .from([".cabeza .entrada", ".cabeza .tu"], { autoAlpha: 0, y: 18, stagger: .08, duration: .8, ease: "power3.out", clearProps: "transform,opacity,visibility" }, .2);
+    .from(".cabeza .entrada", { autoAlpha: 0, y: 18, duration: .8, ease: "power3.out", clearProps: "transform,opacity,visibility" }, .2);
   if (muestra) tl.from(muestra, { autoAlpha: 0, y: 18, duration: .8, ease: "power3.out", clearProps: "transform,opacity,visibility",
                                   onStart: () => carrusel(muestra, true) }, .35);
   tl.from(".tarjetas .entrevista", { autoAlpha: 0, y: 28, stagger: .1, duration: .85, ease: "power3.out", clearProps: "transform,opacity,visibility" }, .4)
@@ -3279,7 +3288,6 @@ addEventListener("DOMContentLoaded", () => {
 
 function carrusel(muestra, animado) {
   const items = [...muestra.querySelectorAll(".muestra-item")], lista = muestra.querySelector(".muestra-lista");
-  const barra = muestra.querySelector(".muestra-tiempo"), botonPausa = muestra.querySelector(".muestra-pausa");
   const ESPERA = 5.5;
   let actual = 0, paso = null, espera = null, parado = !animado, encima = false;
   const partes = it => ["muestra-quien", "estampa"].map(c => it.querySelector("." + c));
@@ -3308,10 +3316,12 @@ function carrusel(muestra, animado) {
       .to(partes(it), { autoAlpha: 0, duration: .22, ease: "power1.in" }, "<")
       .add(() => { it._split.revert(); it._split = null; gsap.set(partes(it), { clearProps: "all" }); });
   };
+  // Pasa sola cada ESPERA segundos; se para con el ratón o el foco encima, y del todo en cuanto alguien usa las flechas
   const esperar = () => {
-    espera?.kill();
-    espera = gsap.fromTo(barra, { scaleX: 0 }, { scaleX: 1, duration: ESPERA, ease: "none", onComplete: () => ir(actual + 1) });
-    if (parado || encima) espera.pause();
+    espera?.kill(); espera = null;
+    if (parado) return;
+    espera = gsap.delayedCall(ESPERA, () => ir(actual + 1));
+    if (encima) espera.pause();
   };
   function ir(n) {
     n = (n + items.length) % items.length;
@@ -3319,20 +3329,14 @@ function carrusel(muestra, animado) {
     const viejo = items[actual], nuevo = items[n];
     actual = n;
     if (!animado) { activar(viejo, nuevo); return; }
-    paso?.progress(1).kill(); espera?.kill(); gsap.set(barra, { scaleX: 0 });
+    paso?.progress(1).kill(); espera?.kill();
     paso = gsap.timeline({ onComplete: esperar }).add(salir(viejo)).add(() => activar(viejo, nuevo)).add(entrar(nuevo));
   }
-  muestra.querySelector(".muestra-sig").onclick = () => { lista.setAttribute("aria-live", "polite"); ir(actual + 1); };
+  const mano = d => { parado = true; espera?.kill(); espera = null; lista.setAttribute("aria-live", "polite"); ir(actual + d); };
+  muestra.querySelector(".muestra-ant").onclick = () => mano(-1);
+  muestra.querySelector(".muestra-sig").onclick = () => mano(1);
   if (!animado) return;
-  muestra.classList.add("auto");
-  botonPausa.onclick = () => {
-    parado = !parado; muestra.classList.toggle("parada", parado);
-    const t = parado ? "Reanudar el carrusel" : "Pausar el carrusel";
-    botonPausa.setAttribute("aria-label", t); botonPausa.title = parado ? "Reanudar" : "Pausar";
-    lista.setAttribute("aria-live", parado ? "polite" : "off");
-    if (!encima && espera) parado ? espera.pause() : espera.resume();
-  };
-  const sobre = v => { encima = v; if (espera) (v || parado) ? espera.pause() : espera.resume(); };
+  const sobre = v => { encima = v; if (espera) v ? espera.pause() : espera.resume(); };
   muestra.addEventListener("pointerenter", e => e.pointerType === "mouse" && sobre(true));
   muestra.addEventListener("pointerleave", e => e.pointerType === "mouse" && sobre(false));
   muestra.addEventListener("focusin", () => sobre(true));
