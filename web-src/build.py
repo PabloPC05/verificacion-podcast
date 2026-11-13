@@ -17,6 +17,7 @@ from pathlib import Path
 from urllib.parse import quote, urlparse
 
 import api_publica
+import avisos
 import estadisticas
 import transiciones
 
@@ -1251,11 +1252,9 @@ def pagina_afirmacion(m, a, entrevistas, anterior, siguiente):
     contexto = (f'<section class="seccion"><h2>Contexto en la entrevista</h2><div class="contexto">{contexto_cita(m, a)}</div>'
                 f'<p class="mas"><a href="{ver_tema}">Leer la transcripción completa</a></p></section>')
 
-    # formulario «Avisar de un error» (.github/ISSUE_TEMPLATE/correccion.yml) con la afirmación ya rellenada:
-    # a quien avisa solo le queda pegar las fuentes
-    titulo_error = "Error en: " + m["invitado"] + ", " + minuto
-    afirmacion_error = m["invitado"] + ", " + minuto + " · " + BASE + ruta
-    url_error = f"{REPO}/issues/new?template=correccion.yml&title={quote(titulo_error)}&afirmacion={quote(afirmacion_error)}"
+    # formulario «Avisar de un error» de la propia web (/avisar) con la afirmación ya rellenada:
+    # a quien avisa solo le queda pegar las fuentes. Lo publica como incidencia la función web-src/avisar.js
+    url_error = f"/avisar?ruta={quote(ruta)}&a={quote(m['invitado'] + ', ' + minuto)}"
 
     def vecina(b, clase, rotulo):
         if not b:
@@ -1531,7 +1530,7 @@ Una IA también se equivoca: pídele siempre los enlaces y ábrelos.
 ## Errores
 
 Una ruta que no existe (por ejemplo, un `slug` desconocido) devuelve `404` con una página HTML, no con JSON.
-Si encuentras un dato mal verificado, abre una incidencia en [GitHub]({REPO}/issues).
+Si encuentras un dato mal verificado, avísanos con el [formulario]({BASE}/avisar), y si echas en falta algo que se dijo, [propón un hecho para verificar]({BASE}/proponer). En los dos hace falta un enlace a una fuente.
 
 ## Verifícalo tú
 
@@ -1558,7 +1557,8 @@ falsas y engañosas de todas las entrevistas; para una sola, pídele que use `{{
 ```
 
 Una IA también se equivoca: pídele siempre los enlaces y ábrelos. Si su respuesta contradice un veredicto con una fuente
-sólida, [avísanos]({REPO}/issues/new?template=correccion.yml) con esa fuente y lo revisamos.
+sólida, [avísanos]({BASE}/avisar) con esa fuente y lo revisamos. Si encuentras algo que se dijo y no está verificado,
+[propónlo]({BASE}/proponer).
 
 ### Con una hoja de cálculo
 
@@ -1968,6 +1968,18 @@ def main():
             "/quien", "Quién hace esto · Verificación The Wild Project",
             "Quién hace esta verificación, su independencia, quién la paga, cómo se hace y cómo se corrigen los errores."),
         MENU=menu(entrevistas), CSS_MENU=CSS_MENU, REPO=REPO, REPO_PABLO=REPO_PABLO, BIO_PABLO=BIO_PABLO, ENLACES_PABLO=ENLACES_PABLO, BIO_DIEGO=BIO_DIEGO, ENLACES_DIEGO=ENLACES_DIEGO), encoding="utf-8")
+    # formularios que no salen de la web (avisar de un error y proponer un hecho) y su función de Vercel
+    for ruta_f, plantilla_f, titulo_f, desc_f in (
+            ("avisar", avisos.PAGINA, "Avisar de un error",
+             "Si crees que una afirmación está mal verificada, mándanos el enlace a una web que muestre el dato correcto."),
+            ("proponer", avisos.PROPONER, "Proponer un hecho para verificar",
+             "Cuéntanos algo que se dijo en una entrevista y no hemos comprobado, con un enlace para contrastarlo.")):
+        (SALIDA / ruta_f).mkdir(exist_ok=True)
+        (SALIDA / ruta_f / "index.html").write_text(rellenar(
+            plantilla_f, ESTILO_FORM=avisos.ESTILO, CABECERA=cabecera(f"/{ruta_f}", f"{titulo_f} · Verificación The Wild Project", desc_f),
+            MENU=menu(entrevistas), CSS_MENU=CSS_MENU, OPCIONES=opciones), encoding="utf-8")
+    (SALIDA / "api").mkdir(exist_ok=True)  # web/api/ solo tiene funciones; los datos estáticos están en web/datos/
+    shutil.copy(RAIZ / "web-src" / "avisar.js", SALIDA / "api" / "avisar.js")
     pagina_metodologia(entrevistas)
     DATOS.mkdir(exist_ok=True)
     (DATOS / "index.html").write_text(rellenar(
@@ -2411,10 +2423,11 @@ h1 { font:700 clamp(30px,5.2vw,58px)/1.05 var(--serif); letter-spacing:-0.02em; 
 
 <section>
 <h2 id="errores">Errores y correcciones</h2>
-<p>Si ves un error, abre la afirmación y pulsa «Avisar de un error», o <a href="@@REPO@@/issues/new?template=correccion.yml" target="_blank" rel="noopener noreferrer">avisa directamente</a>. Solo te pediremos un enlace a una fuente que muestre el dato correcto. El aviso se envía desde GitHub, donde está publicado el proyecto, y hace falta una cuenta gratuita.</p>
+<p>Si ves un error, abre la afirmación y pulsa «Avisar de un error», o <a href="/avisar">usa el formulario</a>. Solo te pediremos un enlace a una web que muestre el dato correcto. No hace falta cuenta.</p>
+<p>Si echas en falta algo que se dijo en una entrevista, <a href="/proponer">propón un hecho para verificar</a>, también con un enlace para contrastarlo.</p>
 <p>Una corrección se acepta por la fuente, no por el partido. Se aplica la misma vara de medir a todos.</p>
 <p>Los cambios en los datos quedan registrados y se pueden consultar públicamente en el <a href="@@REPO@@/commits/main/entrevistas" target="_blank" rel="noopener noreferrer">historial de cambios</a>.</p>
-<p>El contacto es solo por GitHub.</p>
+<p>Para cualquier otra cosa, el contacto es por GitHub.</p>
 </section>
 </div>
 </main>
@@ -2922,7 +2935,7 @@ img.cara { border:0; background:var(--claro); }
 <nav class="indice" aria-label="Temas de la entrevista"><p>Temas</p><ol>@@INDICE@@</ol></nav>
 <div class="lectura">
 <div class="titular">@@RETRATO@@<h1>Transcripción completa: @@INVITADO@@ con Jordi Wild</h1></div>
-<p class="entrada">@@PROGRAMA@@ · @@FECHA_VIDEO@@ · @@DURACION@@. Transcripción automática (Whisper), que puede tener errores en nombres y cifras. @@NOTA_VOCES@@Cada minuto abre el <a href="https://www.youtube.com/watch?v=@@VIDEO@@" target="_blank" rel="noopener noreferrer">vídeo</a> en ese punto. <b>Lo subrayado es una afirmación analizada</b>: el color es su veredicto, y al pulsarla vas a su tarjeta en la <a href="/@@SLUG@@">línea temporal</a>, con la justificación y las fuentes.</p>
+<p class="entrada">@@PROGRAMA@@ · @@FECHA_VIDEO@@ · @@DURACION@@. Transcripción automática (Whisper), que puede tener errores en nombres y cifras. @@NOTA_VOCES@@Cada minuto abre el <a href="https://www.youtube.com/watch?v=@@VIDEO@@" target="_blank" rel="noopener noreferrer">vídeo</a> en ese punto. <b>Lo subrayado es una afirmación analizada</b>: el color es su veredicto, y al pulsarla vas a su tarjeta en la <a href="/@@SLUG@@">línea temporal</a>, con la justificación y las fuentes. Si ves algo sin subrayar que habría que comprobar, <a href="/proponer?e=@@SLUG@@">propónlo</a>.</p>
 @@CUERPO@@
 <div style="border-top:3px solid var(--tinta); margin-top:48px; padding-top:22px">@@LEYENDA@@</div>
 </div>
@@ -3165,7 +3178,7 @@ footer .leyenda-f { margin-bottom:34px; max-width:820px; }
   <div class="titular">@@RETRATO@@<h1>@@INVITADO@@ con Jordi Wild, minuto a minuto</h1></div>
   <div class="intro">
   <p class="entrada">Hemos transcrito la <a href="https://www.youtube.com/watch?v=@@VIDEO@@" target="_blank" rel="noopener noreferrer">entrevista completa</a> (@@DURACION@@) y contrastado con fuentes públicas las @@SUMA@@ afirmaciones que se pueden comprobar. Esta es la línea temporal: pulsa cualquier minuto para ver ese momento del vídeo, o lee la <a href="/@@SLUG@@/transcripcion">transcripción completa</a>.</p>
-  <p class="abrir"><b>Contrástalo tú mismo.</b> Cada panel enlaza el vídeo y sus fuentes, y trae un botón que copia un encargo listo para pegar en cualquier IA. También puedes descargar <a href="/api/v1/@@SLUG@@.json">todos los datos de esta entrevista (JSON)</a>, usar la <a href="/api">API abierta</a> o leer el <a href="/metodologia">método</a>.</p>
+  <p class="abrir"><b>Contrástalo tú mismo.</b> Cada panel enlaza el vídeo y sus fuentes, y trae un botón que copia un encargo listo para pegar en cualquier IA. También puedes descargar <a href="/api/v1/@@SLUG@@.json">todos los datos de esta entrevista (JSON)</a>, usar la <a href="/api">API abierta</a> o leer el <a href="/metodologia">método</a>. ¿Falta algo que se dijo? <a href="/proponer?e=@@SLUG@@">Propón un hecho para verificar</a>.</p>
   </div>
   <div class="cifras">
   <div class="dato"><b>@@MALAS@@</b><span>afirmaciones falsas (@@FALSAS@@) o engañosas (@@ENGANOSAS@@) de @@SUMA@@ comprobadas</span></div>
@@ -3369,8 +3382,8 @@ footer { border-top:3px solid var(--tinta); margin-top:48px; padding:24px 0 72px
 </div>
 <section class="seccion corregir"><h2>¿Crees que está mal?</h2>
 <p>Si tienes una fuente que dice otra cosa, mándanosla y lo revisamos con el mismo criterio para todos. Solo hace falta pegar el enlace.</p>
-<p><a class="btn" href="@@URL_ERROR@@" target="_blank" rel="noopener noreferrer">Avisar de un error</a></p>
-<p class="nota-corregir">Se abre un formulario en GitHub, la web donde está publicado todo el proyecto. Para enviarlo hace falta una cuenta gratuita.</p>
+<p><a class="btn" href="@@URL_ERROR@@">Avisar de un error</a></p>
+<p class="nota-corregir">Es un formulario de esta web: no hace falta cuenta. Solo te pedimos el enlace a la fuente.</p>
 </section>
 <nav class="vecinas" aria-label="Afirmaciones de la misma entrevista">@@ANTERIOR@@@@SIGUIENTE@@</nav>
 </main>
