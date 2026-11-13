@@ -64,11 +64,15 @@ los datos contradicen lo dicho, no que haya intención de mentir. Una parte de l
 
 ## Quién lo hace
 
-Proyecto personal de [Pablo Pardo Cotos](https://github.com/PabloPC05), estudiante del doble grado de Matemáticas e
-Ingeniería Informática de la Universidad Complutense de Madrid. No milita ni ha militado en ningún partido y no ha
-trabajado ni colaborado con ningún partido, ni con Jordi Wild, ni con The Wild Project; nadie le ha encargado esto, y
-The Wild Project y Jordi Wild no participan en la web ni la respaldan. No tiene financiación ni apoyo de nadie: paga
-los costes (sus suscripciones de IA) y la web está en el plan gratuito de Vercel, sin publicidad. Las visitas
+Proyecto independiente de [Pablo Pardo Cotos](https://github.com/PabloPC05) y [Diego Cristóbal Andaluz](https://github.com/2cristo7).
+Pablo, estudiante del doble grado de Matemáticas e Ingeniería Informática de la Universidad Complutense de Madrid, es el
+autor y mantenedor: transcripción, verificación, método y web. Diego, cofundador de OSIX Tech, ha hecho el rediseño
+visual y responsive, la leyenda flotante, las estadísticas de visitas y la referencia interactiva de la API.
+
+Ninguno de los dos milita ni ha militado en ningún partido, ni ha trabajado o colaborado con ningún partido, con Jordi
+Wild o con The Wild Project; nadie les ha encargado esto, y The Wild Project y Jordi Wild no participan en la web ni la
+respaldan. No hay financiación ni apoyo de nadie: los únicos costes son las suscripciones de IA, que cada uno paga de
+su bolsillo, y la web está en el plan gratuito de Vercel, sin publicidad. Las visitas
 se cuentan con Umami, que no usa cookies y, según su documentación, no recoge datos personales. Los vídeos se reproducen con el reproductor de YouTube (youtube-nocookie.com), que solo se carga al pulsar un minuto; a partir de ahí se aplica la política de privacidad de Google. Más detalle en https://verificacion-podcast.vercel.app/quien.
 
 ## Corregir un error o contribuir

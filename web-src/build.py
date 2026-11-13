@@ -219,7 +219,7 @@ DEFINICIONES = {
 }
 
 
-PIE = ('<p class="pie-quien"><a href="/quien">Proyecto personal e independiente de Pablo Pardo Cotos y Diego Cristóbal Andaluz, '
+PIE = ('<p class="pie-quien"><a href="/quien">Proyecto independiente de Pablo Pardo Cotos y Diego Cristóbal Andaluz, '
        'sin relación con The Wild Project ni con ningún partido.</a></p>')
 REPO_PABLO = "https://github.com/PabloPC05"
 # Ficha de Pablo en /quien. Solo datos públicos (su perfil de LinkedIn y lo publicado sobre Gara); sin foto.
@@ -228,17 +228,19 @@ BIO_PABLO = ("<p>Estudia el doble grado de Matemáticas e Ingeniería Informáti
              "<p>Es uno de los creadores de Gara, una plataforma que lleva los modelos de inteligencia artificial que predicen "
              "la estructura de las proteínas al supercomputador del CESGA. Nació en el Impacthón 2026, donde su equipo ganó el "
              "reto de la Cátedra CAMELIA de Medicina Personalizada, y sigue adelante con el apoyo de esa cátedra y del CiTIUS.</p>"
-             "<p>En esta web ha hecho la transcripción, la verificación de las entrevistas y el método; mantiene los datos y "
+             "<p>En esta web ha hecho la transcripción y la verificación de las entrevistas, el método y la propia web: la línea "
+             "temporal, las transcripciones con quién habla, la página de cada afirmación y la API abierta. Mantiene los datos y "
              "decide qué cambios entran.</p>")
 ENLACES_PABLO = (f'<li><a href="{REPO_PABLO}" target="_blank" rel="noopener noreferrer">GitHub</a></li>'
                  '<li><a href="https://www.linkedin.com/in/pablo-pardo-cotos" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>'
                  '<li><a href="https://gara.bio" target="_blank" rel="noopener noreferrer">Gara</a></li>')
 # Ficha de Diego en /quien. Solo datos con fuente pública; sin foto.
 BIO_DIEGO = ("<p>Cofundador e ingeniero full stack de aplicaciones móviles en OSIX Tech Development, una empresa de software e "
-             "inteligencia artificial de Santiago de Compostela, y organizador de GDG Santiago de Compostela. Su trabajo de fin de grado "
-             "de Ingeniería Informática en la Universidad de Santiago de Compostela es MydIAgram, un agente que genera diagramas de "
-             "software a partir de texto.</p><p>En esta web ha hecho el diseño responsive, la leyenda de veredictos, las estadísticas "
-             "de visitas sin cookies y la referencia interactiva de la API.</p>")
+             "inteligencia artificial de Santiago de Compostela, y secretario y organizador de GDG Santiago de Compostela. Su trabajo "
+             "de fin de grado de Ingeniería Informática en la Universidade de Santiago de Compostela es MydIAgram, un agente que genera "
+             "diagramas de software a partir de texto.</p><p>En esta web ha hecho el rediseño visual y responsive (esquinas, menú, "
+             "desplegables y fotos de los candidatos), la leyenda flotante de veredictos, las estadísticas de visitas sin cookies, "
+             "la referencia interactiva de la API y la maquetación de esta página.</p>")
 ENLACES_DIEGO = ('<li><a href="https://github.com/2cristo7" target="_blank" rel="noopener noreferrer">GitHub</a></li>'
                  '<li><a href="https://www.linkedin.com/in/diego-cristobal-andaluz-3a5580304" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>'
                  '<li><a href="https://osix.tech/nosotros/" target="_blank" rel="noopener noreferrer">OSIX</a></li>')
@@ -2421,7 +2423,7 @@ h1 { font:700 clamp(30px,5.2vw,58px)/1.05 var(--serif); letter-spacing:-0.02em; 
 <ul class="enlaces">@@ENLACES_DIEGO@@</ul>
 </article>
 </div>
-<p class="nota">Es un proyecto personal. Cualquiera puede proponer cambios en el <a href="@@REPO@@" target="_blank" rel="noopener noreferrer">repositorio</a>, y los que se aceptan quedan en su <a href="@@REPO@@/commits/main" target="_blank" rel="noopener noreferrer">historial público</a>.</p>
+<p class="nota">Es un proyecto independiente. Cualquiera puede proponer cambios en el <a href="@@REPO@@" target="_blank" rel="noopener noreferrer">repositorio</a>, y los que se aceptan quedan en su <a href="@@REPO@@/commits/main" target="_blank" rel="noopener noreferrer">historial público</a>.</p>
 </section>
 
 <div class="bloques">
@@ -2433,7 +2435,7 @@ h1 { font:700 clamp(30px,5.2vw,58px)/1.05 var(--serif); letter-spacing:-0.02em; 
 
 <section>
 <h2 id="financiacion">Financiación</h2>
-<p>Esta web no tiene financiación ni apoyo de nadie. Pablo paga los costes, que son sus suscripciones de IA, y la web está alojada en el plan gratuito de Vercel. @@ANALITICA@@
+<p>Esta web no tiene financiación ni apoyo de nadie. Los únicos costes son las suscripciones de IA, y Pablo y Diego pagan cada uno las suyas; la web está alojada en el plan gratuito de Vercel. @@ANALITICA@@
 <p>Los vídeos de las entrevistas se reproducen con el reproductor de YouTube (youtube-nocookie.com), que solo se carga cuando pulsas un minuto y puede mostrar su propia publicidad. A partir de ahí se aplica la <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">política de privacidad de Google</a>.</p>
 </section>
 

@@ -6,8 +6,9 @@ Web estática de verificación de las entrevistas electorales de The Wild Projec
 ## Cómo se trabaja
 
 - **No edites `web/` a mano.** Cambia `web-src/build.py` y regenera con `python3 web-src/build.py`. Sin dependencias.
-- Regenerar reescribe la fecha `generado` de los JSON de `web/datos/`. Si tu cambio no toca datos, deshazlo antes
-  de hacer commit: `git checkout -- web/datos`.
+- Regenerar reescribe la fecha `generado` de los JSON de `web/datos/v1/`. Si tu cambio no toca datos, deshazlo antes
+  de hacer commit: `git checkout -- web/datos/v1`. No deshagas todo `web/datos`: ahí están también las páginas HTML
+  de la documentación de la API, que llevan el menú y el pie y se quedarían sin tus cambios.
 - Cada página es una plantilla en mayúsculas dentro de `build.py` (`PORTADA`, `QUIEN`, `METODOLOGIA`, `VERIFICALO`…)
   con huecos `@@NOMBRE@@`, que rellena `rellenar()`. `@@HEAD_MODO@@` y `@@PIE@@` se rellenan solos.
 - Todas las páginas incluyen `@@CSS_MENU@@` al final de su `<style>`. Ahí viven los colores, el contenedor `.ancho`,
