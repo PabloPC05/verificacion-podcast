@@ -12,12 +12,24 @@
 * { box-sizing:border-box; }
 body { margin:0; background:var(--fondo); color:var(--tinta); font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; }
 a { color:var(--tinta); }
-.ancho { max-width:1120px; margin:0 auto; padding:0 16px; }
-main.ancho { max-width:860px; }
-h1 { font:700 clamp(30px,6vw,48px)/1.06 var(--serif); letter-spacing:-0.02em; margin:40px 0 14px; text-wrap:balance; }
-.entrada { font-size:17px; max-width:62ch; margin:0 0 30px; }
-.tu { margin:-10px 0 30px; padding:12px 14px; border:1.5px solid var(--tinta); font-size:15px; max-width:62ch; }
-.entrevista { border:2px solid var(--tinta); padding:22px 24px; margin-bottom:18px; display:grid; grid-template-columns:76px minmax(0,1fr); gap:0 22px; align-items:start; }
+.cabeza { padding:clamp(28px,5vw,56px) 0 clamp(24px,3vw,36px); }
+h1 { font:700 clamp(30px,5.2vw,58px)/1.05 var(--serif); letter-spacing:-0.02em; margin:0 0 16px; text-wrap:balance; max-width:20ch; }
+.entrada { font-size:17px; max-width:62ch; margin:0 0 20px; }
+.tu { margin:0; padding:12px 14px; border:1.5px solid var(--tinta); font-size:15px; max-width:62ch; }
+@media (min-width:1000px) {
+  .cabeza { display:grid; grid-template-columns:minmax(0,1.5fr) minmax(280px,1fr); gap:0 clamp(32px,5vw,80px); align-items:end; }
+  .cabeza h1 { grid-column:1 / -1; max-width:24ch; } .cabeza .entrada { margin:0; } }
+.tarjetas { display:grid; gap:18px; }
+.entrevista { position:relative; border:2px solid var(--tinta); padding:22px 24px; display:grid; grid-template-columns:76px minmax(0,1fr); gap:0 22px; align-items:start; }
+.entrevista > div { min-width:0; }
+/* En tres columnas la cabecera (logo, nombre, partido) va arriba y el resto aprovecha todo el ancho de la tarjeta */
+@media (min-width:1100px) { .tarjetas { grid-template-columns:repeat(3,minmax(0,1fr)); }
+  .tarjetas .entrevista { grid-template-columns:76px minmax(0,1fr); grid-template-rows:auto auto auto auto auto 1fr; gap:0 18px; }
+  .tarjetas .entrevista > div { display:contents; } .tarjetas .entrevista > div > * { grid-column:1 / -1; }
+  .tarjetas .entrevista .logo { grid-column:1; grid-row:1 / span 3; width:76px; height:76px; align-self:start; }
+  .tarjetas .entrevista h2, .tarjetas .entrevista .partido { grid-column:2; }
+  .tarjetas .entrevista h2 { font-size:clamp(26px,2.2vw,32px); align-self:end; text-wrap:balance; }
+  .tarjetas .entrevista .prog { margin-top:8px; } .tarjetas .entrevista .acc { grid-column:1 / -1; align-self:end; } }
 .logo { width:76px; height:76px; object-fit:contain; display:block; }
 /* en oscuro, los logotipos llevan una placa clara detrás (el azul del PP casi desaparece sobre fondo oscuro); en claro no hay placa */
 img.logo { background:var(--logo-fondo); box-shadow:0 0 0 6px var(--logo-fondo); border-radius:var(--logo-radio); }
@@ -27,6 +39,12 @@ img.logo { background:var(--logo-fondo); box-shadow:0 0 0 6px var(--logo-fondo);
 .entrevista.off { border:1px dashed var(--gris-claro); color:var(--gris); }
 .prog { margin:0 0 12px; font-size:12px; text-transform:uppercase; letter-spacing:.08em; color:var(--gris); }
 .entrevista h2 { font:700 32px/1.1 var(--serif); margin:0 0 2px; } .entrevista h2 a { text-decoration:none; }
+.entrevista h2 a::after { content:""; position:absolute; inset:0; }
+
+.entrevista:not(.off) { transition:transform .18s ease-out, box-shadow .18s ease-out; }
+@media (hover:hover) { .entrevista:not(.off):hover { transform:translateY(-3px); box-shadow:inset 0 0 0 1px var(--tinta); }
+  .entrevista:not(.off):hover h2 a { text-decoration:underline; text-decoration-thickness:2px; } }
+.entrevista:not(.off):active { transform:translateY(-1px); }
 .num { margin:0; font-size:17px; } .num b { font:700 34px/1 var(--serif); margin-right:4px; }
 .des { margin:4px 0 14px; font-size:13.5px; font-weight:600; } .des span { color:var(--tono); }
 .entrevista ul { list-style:none; margin:6px 0 16px; padding:0; columns:2; column-gap:28px; font-size:14.5px; }
@@ -37,10 +55,30 @@ img.logo { background:var(--logo-fondo); box-shadow:0 0 0 6px var(--logo-fondo);
 .contrastar pre { background:var(--pre-fondo); color:var(--pre-tinta); outline:1px solid var(--pre-borde); outline-offset:-1px; padding:14px 16px; overflow-x:auto; white-space:pre-wrap; font:13px/1.55 ui-monospace,SFMono-Regular,Menlo,monospace; margin:6px 0 10px; }
 .copiar { font:inherit; font-size:13px; font-weight:600; background:var(--fondo); color:var(--tinta); border:1.5px solid var(--tinta); padding:5px 12px; cursor:pointer; }
 .copiar:hover { background:var(--tinta); color:var(--fondo); }
-.acc { margin:0; display:flex; flex-wrap:wrap; gap:8px 22px; } .acc a { font-weight:700; text-underline-offset:3px; }
-footer { border-top:3px solid var(--tinta); margin-top:48px; padding:24px 0 64px; font-size:14.5px; }
+/* Botones de cada tarjeta: la línea temporal es la acción principal (rellena) y la transcripción la secundaria (con borde) */
+/* Lado a lado si cada botón cabe en una línea (≥ 200 px); si no, uno debajo de otro a todo el ancho */
+.acc { grid-column:2; margin:16px 0 0; display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr)); gap:10px; max-width:520px; }
+.btn span { white-space:nowrap; }
+.btn { position:relative; z-index:1; display:flex; align-items:center; gap:10px; min-height:46px; padding:0 14px;
+  border:2px solid var(--tinta); background:var(--fondo); color:var(--tinta); font-size:15px; font-weight:700; line-height:1.2; text-decoration:none;
+  transition:background-color .15s ease-out, color .15s ease-out, box-shadow .18s ease-out, transform .12s ease-out; }
+.btn.principal { background:var(--tinta); color:var(--fondo); }
+.btn svg { display:block; flex:none; width:18px; height:18px; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+.btn svg .lleno { fill:currentColor; stroke:none; }
+.btn .flecha { margin-left:auto; transition:transform .18s ease-out; }
+.btn:hover { background:var(--tinta); color:var(--fondo); }
+.btn.principal:hover { background:var(--fondo); color:var(--tinta); }
+.btn:hover .flecha, .btn:focus-visible .flecha { transform:translateX(3px); }
+.btn:active { transform:translateY(1px) scale(.99); }
+.sr { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; }
+@media (min-width:1100px) { .acc { max-width:none; margin-top:18px; } }
+@media (max-width:560px) { .acc { grid-column:1 / -1; max-width:none; } }
+footer { border-top:3px solid var(--tinta); margin-top:48px; padding:28px 0 64px; font-size:14.5px; }
 footer p { max-width:68ch; }
-@media (max-width:560px) { .entrevista { grid-template-columns:52px minmax(0,1fr); gap:0 14px; padding:16px; } .logo { width:52px; height:52px; } .entrevista h2 { font-size:26px; } }
+footer .leyenda-f { max-width:820px; }
+@media (min-width:1080px) { .pie { display:grid; grid-template-columns:minmax(0,1.2fr) minmax(0,1fr); gap:0 clamp(40px,5vw,80px); align-items:start; }
+  .pie > div > p:first-child { margin-top:0 !important; } }
+@media (max-width:560px) { .entrevista { grid-template-columns:60px minmax(0,1fr); gap:0 14px; padding:16px; } .logo { width:60px; height:60px; } .entrevista h2 { font-size:26px; } }
 
 :root { --fondo:#fff; --tinta:#000; --suave:#444; --gris:#666; --gris-claro:#999; --claro:#d9d9d9; --codigo:#f2f2f2; --resalte:#f3f3f3; --pre-fondo:#000; --pre-tinta:#fff; --pre-borde:transparent; --sombra:#000; --inv-suave:#ccc; --sobre-tono:#fff; --logo-fondo:transparent; --logo-radio:0; --luna:block; --sol:none; color-scheme:light; --v-falso:#c0271e; --v-enganoso:#c26a00; --v-mayormente_verdadero:#5a7d10; --v-verdadero:#1c7c45; --v-no_verificable:#777; }
 @media (prefers-color-scheme:dark) { :root:not([data-modo=claro]) { --fondo:#121214; --tinta:#ececee; --suave:#bdbdc4; --gris:#a3a3aa; --gris-claro:#7c7c84; --claro:#3a3a40; --codigo:#26262b; --resalte:#26262b; --pre-fondo:#1c1c20; --pre-tinta:#ececee; --pre-borde:#3a3a40; --sombra:#55555c; --inv-suave:#55555c; --sobre-tono:#121214; --logo-fondo:#fff; --logo-radio:4px; --luna:none; --sol:block; color-scheme:dark; --v-falso:#ff6b5e; --v-enganoso:#ff9a2e; --v-mayormente_verdadero:#b8d63c; --v-verdadero:#3fd083; --v-no_verificable:#a4a4ac; } }
@@ -53,6 +91,8 @@ footer p { max-width:68ch; }
 ::view-transition-old(root), ::view-transition-new(root) { animation:none; mix-blend-mode:normal; }
 html { scroll-behavior:smooth; scroll-padding-top:calc(var(--menu, 48px) + 64px); }
 [hidden] { display:none !important; }
+/* Un solo contenedor para todas las páginas: el menú, los títulos y el contenido arrancan en el mismo borde */
+.ancho { max-width:1360px; margin:0 auto; padding-left:clamp(16px,4vw,48px); padding-right:clamp(16px,4vw,48px); }
 .menu { position:sticky; top:0; z-index:10; background:var(--fondo); border-bottom:2px solid var(--tinta); }
 .menu .ancho { padding-top:9px; padding-bottom:9px; position:relative; }
 .m1 { display:flex; flex-wrap:wrap; align-items:center; gap:4px 24px; font-size:14.5px; }
@@ -63,14 +103,15 @@ html { scroll-behavior:smooth; scroll-padding-top:calc(var(--menu, 48px) + 64px)
 .modo { flex:none; display:inline-grid; place-items:center; width:26px; height:26px; padding:0; margin:0 0 0 -8px; cursor:pointer;
   color:var(--tinta); background:var(--fondo); border:1.5px solid var(--tinta); border-radius:50%; }
 .modo:hover { background:var(--tinta); color:var(--fondo); }
-.modo svg { width:15px; height:15px; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+.modo { line-height:0; font-size:0; }
+.modo svg { display:block; width:15px; height:15px; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
 .modo .luna { display:var(--luna); } .modo .sol { display:var(--sol); }
 .rot { font-size:10.5px; font-weight:700; text-transform:uppercase; letter-spacing:.09em; color:var(--gris); flex:none; }
 .desp { position:relative; margin:0; padding:0; border:0; font-size:inherit; }
 .desp summary { list-style:none; cursor:pointer; user-select:none; }
 .desp summary::-webkit-details-marker { display:none; }
-.desp summary::after { content:" ▾"; } .desp[open] summary::after { content:" ▴"; }
-.desp .lista { position:absolute; top:calc(100% + 10px); left:0; z-index:20; background:var(--fondo); border:2px solid var(--tinta); box-shadow:5px 5px 0 var(--sombra);
+.desp summary::after { content:"▾"; margin-left:.3em; } .desp[open] summary::after { content:"▴"; }
+.desp .lista { position:absolute; top:calc(100% + 10px); left:0; z-index:20; background:var(--fondo); border:2px solid var(--tinta); box-shadow:var(--flota);
   width:max-content; min-width:260px; max-width:min(92vw,470px); max-height:74vh; overflow-y:auto; padding:6px 0; }
 .desp .lista a { display:flex; justify-content:space-between; align-items:baseline; gap:16px; padding:7px 16px;
   font-size:14.5px; font-weight:500; border:0; line-height:1.35; }
@@ -99,20 +140,131 @@ html { scroll-behavior:smooth; scroll-padding-top:calc(var(--menu, 48px) + 64px)
 .fila button[aria-pressed=true] { background:var(--tinta); color:var(--fondo); }
 .fila button[data-v][aria-pressed=true] { background:var(--tono); color:var(--sobre-tono); }
 .fila button[data-solo] { margin-left:auto; }
-@media (max-width:700px) { .m1 { gap:4px 16px; font-size:14px; } .m1 .dcha { margin-left:0; }
-  .desp { position:static; } .desp .lista { left:16px; right:16px; top:auto; margin-top:10px; width:auto; max-width:none; }
-  .fila .rot { display:none; } .fila button { font-size:12px; padding:2px 9px; } .fila button[data-solo] { margin-left:0; } }
+.m1 > a, .desp summary, .fila button { white-space:nowrap; }
+@media (max-width:1000px) { .m1 .largo { display:none; } }
+/* En móvil el menú y los filtros ocupan una sola fila que se desliza en horizontal; el botón de modo se queda fijo a la derecha */
+@media (max-width:760px) {
+  .menu .ancho, .filtros .ancho { padding-left:0; padding-right:0; }
+  .filtros .ancho { position:relative; }
+  .filtros .ancho::after { content:""; position:absolute; top:0; bottom:0; right:0; width:28px; pointer-events:none;
+    background:linear-gradient(to right, transparent, var(--fondo) 85%); }
+  .m1, .fila { flex-wrap:nowrap; overflow-x:auto; scrollbar-width:none; overscroll-behavior-x:contain; padding-left:16px; padding-right:16px; }
+  .fila { padding-right:28px; }
+  .m1::-webkit-scrollbar, .fila::-webkit-scrollbar { display:none; }
+  .m1 { gap:0 18px; font-size:14px; } .m1 .dcha { margin-left:0; }
+  .m1 > a, .desp summary { display:inline-flex; align-items:center; min-height:36px; }
+  .m1 { padding-right:72px; }
+  .modo { position:absolute; right:12px; top:calc(50% - 16px); margin:0; width:32px; height:32px; }
+  .modo svg { width:17px; height:17px; }
+  .menu .ancho::after { content:""; position:absolute; top:0; bottom:0; right:52px; width:28px; pointer-events:none;
+    background:linear-gradient(to right, transparent, var(--fondo)); }
+  .menu .ancho::before { content:""; position:absolute; top:0; bottom:0; right:0; width:52px; background:var(--fondo); pointer-events:none; }
+  .menu .ancho { padding-top:4px; padding-bottom:4px; }
+  .desp { position:static; } .desp .lista { left:12px; right:12px; top:100%; width:auto; max-width:none; max-height:calc(100dvh - var(--menu, 48px) - 24px); }
+  .filtros { padding:7px 0; }
+  .fila .rot { display:none; } .fila button { flex:none; font-size:13px; padding:0 12px; min-height:34px; } .fila button[data-solo] { margin-left:0; } }
+/* En móvil cada fila de tabla se apila (primero qué es, debajo su dirección o sus datos) en vez de obligar a deslizar en horizontal */
+@media (max-width:640px) {
+  .tabla table, .tabla-api table { min-width:0; } .tabla thead, .tabla-api thead { display:none; }
+  .tabla table, .tabla tbody, .tabla tr, .tabla td, .tabla-api table, .tabla-api tbody, .tabla-api tr, .tabla-api td { display:block; width:100%; }
+  .tabla tr, .tabla-api tr { padding:10px 0; border-bottom:1px solid var(--tinta); }
+  .tabla tr:first-child, .tabla-api tr:first-child { border-top:2px solid var(--tinta); }
+  .tabla td, .tabla-api td { border:0 !important; padding:2px 0 !important; } .tabla td:first-child, .tabla-api td:first-child { font-weight:600; }
+  .tabla-api td[data-l]::before { content:attr(data-l) ": "; font-weight:500; color:var(--gris); } }
+
+/* ── Interacción: estados hover, foco, pulsación y avisos, iguales en todas las páginas */
+html { -webkit-tap-highlight-color:transparent; }
+:focus-visible { outline:3px solid var(--tinta); outline-offset:2px; }
+a { text-underline-offset:3px; text-decoration-thickness:1px; transition:text-decoration-thickness .15s ease-out, color .15s ease-out, background-color .15s ease-out; }
+a:hover { text-decoration-thickness:2px; }
+button, summary, select, .chip, .repo, .botones a, .minuto, .modo { transition:background-color .15s ease-out, color .15s ease-out, border-color .15s ease-out, box-shadow .18s ease-out, transform .12s ease-out; }
+button:active, .repo:active, .botones a:active, .chip:active, .fila button:active { transform:translateY(1px) scale(.98); }
+select { cursor:pointer; } select:hover { box-shadow:inset 0 0 0 1px var(--tinta); }
+.m1 > a, .desp summary { transition:border-color .15s ease-out; }
+.desp[open] .lista { animation:caer .16s ease-out; }
+@keyframes caer { from { opacity:0; transform:translateY(-6px); } }
+.fila button:not([aria-pressed=true]):hover { background:color-mix(in srgb, var(--tono, var(--tinta)) 13%, var(--fondo)); }
+.fila button[aria-pressed=true]:hover { box-shadow:0 0 0 2px var(--fondo), 0 0 0 3.5px var(--tono, var(--tinta)); }
+.fila .cuenta { margin-left:auto; font-size:12.5px; color:var(--gris); font-variant-numeric:tabular-nums; white-space:nowrap; }
+.fila button[data-solo] + .cuenta { margin-left:12px; }
+.botones button:hover, #api-ir:hover { background:var(--fondo); color:var(--tinta); }
+.botones button:disabled, #api-ir:disabled { opacity:.55; cursor:progress; }
+.repo:hover { background:var(--fondo); color:var(--tinta); box-shadow:inset 0 0 0 2px var(--tinta); }
+.repo.claro:hover { background:var(--tinta); color:var(--fondo); }
+/* Aviso flotante: confirma una acción (copiar, descargar) y se va solo; lo leen también los lectores de pantalla */
+.aviso { position:fixed; left:50%; bottom:calc(20px + env(safe-area-inset-bottom)); z-index:50; max-width:calc(100vw - 32px);
+  transform:translate(-50%, 16px); opacity:0; pointer-events:none; background:var(--tinta); color:var(--fondo);
+  border:2px solid var(--tinta); border-radius:var(--r-caja); box-shadow:var(--flota); padding:10px 16px; font-size:14.5px; font-weight:600;
+  transition:opacity .2s ease-out, transform .2s ease-out; }
+.aviso.ver { opacity:1; transform:translate(-50%, 0); }
+.aviso.mal { background:var(--fondo); color:var(--tinta); }
+/* Botón para volver arriba en las páginas largas */
+.arriba { position:fixed; right:calc(16px + env(safe-area-inset-right)); bottom:calc(16px + env(safe-area-inset-bottom)); z-index:40;
+  width:44px; height:44px; display:grid; place-items:center; padding:0; cursor:pointer; line-height:0; font-size:0;
+  color:var(--tinta); background:var(--fondo); border:2px solid var(--tinta); border-radius:50%; box-shadow:var(--flota);
+  opacity:0; transform:translateY(10px); pointer-events:none; transition:opacity .2s ease-out, transform .2s ease-out, background-color .15s, color .15s; }
+.arriba svg { display:block; width:20px; height:20px; fill:none; stroke:currentColor; stroke-width:2.5; stroke-linecap:square; }
+.arriba.ver { opacity:1; transform:none; pointer-events:auto; }
+.arriba:hover { background:var(--tinta); color:var(--fondo); }
+.sr { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; }
+@media (max-width:760px) { .fila .cuenta { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); } }
+@media (prefers-reduced-motion:reduce) { *, ::before, ::after { transition-duration:0s !important; animation-duration:0s !important; } html { scroll-behavior:auto; } }
+
+/* ── Esquinas suaves y contenidas, para que sigan leyéndose como recuadros de periódico: 14 px en contenedores, 9 px en botones y cajas, 5 px en etiquetas */
+:root { --r-caja:14px; --r-boton:9px; --r-mini:5px; --flota:0 10px 28px -8px rgba(0,0,0,.28); }
+.panel, .entrevista, .explorador, .vias li, .desp .lista { border-radius:var(--r-caja); }
+.desp .lista { overflow-x:hidden; }
+.tu, .abrir, pre, .btn, .repo, .botones button, .botones a, #api-ir, .copiar, select, .opciones select, .logo.sin, #api-res .vacio { border-radius:var(--r-boton); }
+.ficha, .leyenda-f dt, code, .chip-mini, .par:target, .indice a { border-radius:var(--r-mini); }
+.hito:target .panel { outline-offset:4px; }
+
+/* Retrato: foto redonda con borde de tinta y el logotipo del partido en una insignia blanca abajo a la derecha */
+.retrato { position:relative; display:block; flex:none; border-radius:50%; align-self:start; justify-self:start; }
+.retrato > img { display:block; width:100%; height:100%; object-fit:cover; border-radius:50%; border:2px solid var(--tinta); background:var(--claro); }
+.retrato .insignia { position:absolute; right:-4%; bottom:-4%; width:42%; aspect-ratio:1; border-radius:50%; overflow:hidden;
+  display:grid; place-items:center; background:#fff; border:2px solid var(--tinta); line-height:0; font-size:0; }
+.retrato .insignia img { display:block; width:72%; height:72%; object-fit:contain; }
+.retrato .insignia b { font:700 11px/1 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; color:#000; }
+.titular { display:flex; align-items:flex-start; gap:clamp(14px,2vw,24px); margin:0 0 18px; }
+.titular .retrato { margin-top:.2em; }
+.titular h1 { margin:0 !important; }
+.titular .retrato { width:clamp(64px,8vw,104px); height:clamp(64px,8vw,104px); }
+.titular .retrato.peque { width:clamp(52px,6vw,76px); height:clamp(52px,6vw,76px); }
+.creditos { font-size:12.5px; color:var(--gris); }
+.creditos a { color:inherit; }
 
 </style>
 </head>
 <body>
-<header class="menu"><div class="ancho"><div class="m1"><a class="sello" href="/" title="Todas las entrevistas">Verificación</a><details class="desp"><summary>Pedro Sánchez</summary><div class="lista"><a class="fuerte" href="/sanchez"><span>Línea temporal</span><small>30 falsas o engañosas de 147</small></a><a class="fuerte" href="/sanchez/transcripcion"><span>Transcripción completa</span></a><p class="rot">Temas</p><a href="/sanchez#tema-3" data-tema="tema-3"><span>Insultos, polarización y crispación en la política española</span><b>1</b></a><a href="/sanchez#tema-4" data-tema="tema-4"><span>Accidentes ferroviarios y responsabilidades del Gobierno</span><b>2</b></a><a href="/sanchez#tema-5" data-tema="tema-5"><span>Crisis de Ceuta, Marruecos y gestión de la frontera</span><b>7</b></a><a href="/sanchez#tema-6" data-tema="tema-6"><span>Inmigración, integración y futuro demográfico de España</span><b>3</b></a><a href="/sanchez#tema-7" data-tema="tema-7"><span>Ábalos, Koldo, Cerdán y los casos que afectan al PSOE</span><b>3</b></a><a href="/sanchez#tema-8" data-tema="tema-8"><span>Leire Díez, Zapatero y las investigaciones abiertas</span><b>3</b></a><a href="/sanchez#tema-9" data-tema="tema-9"><span>Vivienda, alquileres y acceso de los jóvenes a una casa</span><b>6</b></a><a href="/sanchez#tema-10" data-tema="tema-10"><span>Amnistía, Bildu, Pablo Iglesias y los cambios de opinión de Sánchez</span><b>5</b></a></div></details><details class="desp"><summary>Alberto Núñez Feijóo</summary><div class="lista"><a class="fuerte" href="/feijoo"><span>Línea temporal</span><small>31 falsas o engañosas de 153</small></a><a class="fuerte" href="/feijoo/transcripcion"><span>Transcripción completa</span></a><p class="rot">Temas</p><a href="/feijoo#tema-2" data-tema="tema-2"><span>Vox, polarización y un posible gobierno de coalición</span><b>4</b></a><a href="/feijoo#tema-3" data-tema="tema-3"><span>Economía, pensiones y futuro del sistema público</span><b>1</b></a><a href="/feijoo#tema-4" data-tema="tema-4"><span>Autónomos, impuestos y propuestas económicas del PP</span></a><a href="/feijoo#tema-5" data-tema="tema-5"><span>Deuda pública, déficit y gasto en defensa</span><b>4</b></a><a href="/feijoo#tema-6" data-tema="tema-6"><span>Ceuta, Marruecos y la gestión de la frontera</span><b>4</b></a><a href="/feijoo#tema-7" data-tema="tema-7"><span>Inmigración, ayudas sociales, integración y expulsiones</span><b>5</b></a><a href="/feijoo#tema-8" data-tema="tema-8"><span>Feijóo explica su relación con Marcial Dorado</span><b>6</b></a><a href="/feijoo#tema-9" data-tema="tema-9"><span>Corrupción, Gürtel y los casos que afectan al PSOE y al PP</span><b>4</b></a><a href="/feijoo#tema-10" data-tema="tema-10"><span>Isabel Díaz Ayuso y su relación dentro del Partido Popular</span><b>3</b></a><a href="/feijoo#tema-11" data-tema="tema-11"><span>Inglés, servicio militar, Trump y política internacional</span></a><a href="/feijoo#tema-12" data-tema="tema-12"><span>Feijóo define a Colau, Abascal y Pedro Sánchez y cierra la entrevist</span></a></div></details><details class="desp"><summary>Ada Colau</summary><div class="lista"><a class="fuerte" href="/colau"><span>Línea temporal</span><small>29 falsas o engañosas de 153</small></a><a class="fuerte" href="/colau/transcripcion"><span>Transcripción completa</span></a><p class="rot">Temas</p><a href="/colau#tema-3" data-tema="tema-3"><span>Twitter, redes sociales y polarización política</span></a><a href="/colau#tema-4" data-tema="tema-4"><span>Por qué Ada Colau vuelve a la política y se presenta a las elecciones</span><b>1</b></a><a href="/colau#tema-5" data-tema="tema-5"><span>Frente Amplio, Podemos y la división de la izquierda</span><b>2</b></a><a href="/colau#tema-6" data-tema="tema-6"><span>PSOE, Sumar, corrupción y responsabilidad política</span><b>2</b></a><a href="/colau#tema-7" data-tema="tema-7"><span>Accidentes ferroviarios y gestión del sistema de trenes</span><b>5</b></a><a href="/colau#tema-8" data-tema="tema-8"><span>Ceuta, Marruecos y la política migratoria de España</span><b>2</b></a><a href="/colau#tema-9" data-tema="tema-9"><span>Inmigración, integración y choque cultural</span><b>1</b></a><a href="/colau#tema-10" data-tema="tema-10"><span>Natalidad, demografía y el futuro de la población española</span></a><a href="/colau#tema-11" data-tema="tema-11"><span>Su gestión de Barcelona: seguridad, limpieza y errores como alcaldesa</span><b>7</b></a><a href="/colau#tema-12" data-tema="tema-12"><span>Vivienda, alquileres, grandes propietarios y especulación</span><b>4</b></a><a href="/colau#tema-13" data-tema="tema-13"><span>Ocupación, pequeños propietarios e impagos</span></a><a href="/colau#tema-14" data-tema="tema-14"><span>Trump, Israel, la flotilla y sus rivales políticos</span><b>5</b></a></div></details><a class="dcha" href="/verificalo">Verifícalo tú</a><a href="/api">API</a><a href="https://github.com/PabloPC05/verificacion-podcast" target="_blank" rel="noopener noreferrer">GitHub ↗</a><button class="modo" type="button" aria-label="Cambiar a modo oscuro" title="Cambiar a modo oscuro"><svg class="luna" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="sol" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button></div></div></header><script>
+<header class="menu"><div class="ancho"><div class="m1"><a class="sello" href="/" title="Todas las entrevistas">Verificación</a><details class="desp"><summary><span class="largo">Pedro </span>Sánchez</summary><div class="lista"><a class="fuerte" href="/sanchez"><span>Línea temporal</span><small>30 falsas o engañosas de 147</small></a><a class="fuerte" href="/sanchez/transcripcion"><span>Transcripción completa</span></a><p class="rot">Temas</p><a href="/sanchez#tema-3" data-tema="tema-3"><span>Insultos, polarización y crispación en la política española</span><b>1</b></a><a href="/sanchez#tema-4" data-tema="tema-4"><span>Accidentes ferroviarios y responsabilidades del Gobierno</span><b>2</b></a><a href="/sanchez#tema-5" data-tema="tema-5"><span>Crisis de Ceuta, Marruecos y gestión de la frontera</span><b>7</b></a><a href="/sanchez#tema-6" data-tema="tema-6"><span>Inmigración, integración y futuro demográfico de España</span><b>3</b></a><a href="/sanchez#tema-7" data-tema="tema-7"><span>Ábalos, Koldo, Cerdán y los casos que afectan al PSOE</span><b>3</b></a><a href="/sanchez#tema-8" data-tema="tema-8"><span>Leire Díez, Zapatero y las investigaciones abiertas</span><b>3</b></a><a href="/sanchez#tema-9" data-tema="tema-9"><span>Vivienda, alquileres y acceso de los jóvenes a una casa</span><b>6</b></a><a href="/sanchez#tema-10" data-tema="tema-10"><span>Amnistía, Bildu, Pablo Iglesias y los cambios de opinión de Sánchez</span><b>5</b></a></div></details><details class="desp"><summary><span class="largo">Alberto Núñez </span>Feijóo</summary><div class="lista"><a class="fuerte" href="/feijoo"><span>Línea temporal</span><small>31 falsas o engañosas de 153</small></a><a class="fuerte" href="/feijoo/transcripcion"><span>Transcripción completa</span></a><p class="rot">Temas</p><a href="/feijoo#tema-2" data-tema="tema-2"><span>Vox, polarización y un posible gobierno de coalición</span><b>4</b></a><a href="/feijoo#tema-3" data-tema="tema-3"><span>Economía, pensiones y futuro del sistema público</span><b>1</b></a><a href="/feijoo#tema-4" data-tema="tema-4"><span>Autónomos, impuestos y propuestas económicas del PP</span></a><a href="/feijoo#tema-5" data-tema="tema-5"><span>Deuda pública, déficit y gasto en defensa</span><b>4</b></a><a href="/feijoo#tema-6" data-tema="tema-6"><span>Ceuta, Marruecos y la gestión de la frontera</span><b>4</b></a><a href="/feijoo#tema-7" data-tema="tema-7"><span>Inmigración, ayudas sociales, integración y expulsiones</span><b>5</b></a><a href="/feijoo#tema-8" data-tema="tema-8"><span>Feijóo explica su relación con Marcial Dorado</span><b>6</b></a><a href="/feijoo#tema-9" data-tema="tema-9"><span>Corrupción, Gürtel y los casos que afectan al PSOE y al PP</span><b>4</b></a><a href="/feijoo#tema-10" data-tema="tema-10"><span>Isabel Díaz Ayuso y su relación dentro del Partido Popular</span><b>3</b></a><a href="/feijoo#tema-11" data-tema="tema-11"><span>Inglés, servicio militar, Trump y política internacional</span></a><a href="/feijoo#tema-12" data-tema="tema-12"><span>Feijóo define a Colau, Abascal y Pedro Sánchez y cierra la entrevist</span></a></div></details><details class="desp"><summary><span class="largo">Ada </span>Colau</summary><div class="lista"><a class="fuerte" href="/colau"><span>Línea temporal</span><small>29 falsas o engañosas de 153</small></a><a class="fuerte" href="/colau/transcripcion"><span>Transcripción completa</span></a><p class="rot">Temas</p><a href="/colau#tema-3" data-tema="tema-3"><span>Twitter, redes sociales y polarización política</span></a><a href="/colau#tema-4" data-tema="tema-4"><span>Por qué Ada Colau vuelve a la política y se presenta a las elecciones</span><b>1</b></a><a href="/colau#tema-5" data-tema="tema-5"><span>Frente Amplio, Podemos y la división de la izquierda</span><b>2</b></a><a href="/colau#tema-6" data-tema="tema-6"><span>PSOE, Sumar, corrupción y responsabilidad política</span><b>2</b></a><a href="/colau#tema-7" data-tema="tema-7"><span>Accidentes ferroviarios y gestión del sistema de trenes</span><b>5</b></a><a href="/colau#tema-8" data-tema="tema-8"><span>Ceuta, Marruecos y la política migratoria de España</span><b>2</b></a><a href="/colau#tema-9" data-tema="tema-9"><span>Inmigración, integración y choque cultural</span><b>1</b></a><a href="/colau#tema-10" data-tema="tema-10"><span>Natalidad, demografía y el futuro de la población española</span></a><a href="/colau#tema-11" data-tema="tema-11"><span>Su gestión de Barcelona: seguridad, limpieza y errores como alcaldesa</span><b>7</b></a><a href="/colau#tema-12" data-tema="tema-12"><span>Vivienda, alquileres, grandes propietarios y especulación</span><b>4</b></a><a href="/colau#tema-13" data-tema="tema-13"><span>Ocupación, pequeños propietarios e impagos</span></a><a href="/colau#tema-14" data-tema="tema-14"><span>Trump, Israel, la flotilla y sus rivales políticos</span><b>5</b></a></div></details><a class="dcha" href="/verificalo">Verifícalo tú</a><a href="/api">API</a><a href="https://github.com/PabloPC05/verificacion-podcast" target="_blank" rel="noopener noreferrer">GitHub ↗</a><button class="modo" type="button" aria-label="Cambiar a modo oscuro" title="Cambiar a modo oscuro"><svg class="luna" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="sol" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button></div></div></header><script>
 document.addEventListener("click", ev => document.querySelectorAll("details.desp[open]").forEach(d => {
   if (!d.contains(ev.target) || ev.target.closest(".lista a")) d.open = false;
 }));
 document.addEventListener("keydown", ev => { if (ev.key === "Escape") document.querySelectorAll("details.desp[open]").forEach(d => d.open = false); });
 const medirMenu = () => document.documentElement.style.setProperty("--menu", document.querySelector(".menu").offsetHeight + "px");
 medirMenu(); addEventListener("resize", medirMenu);
+// Aviso breve para confirmar acciones; role=status hace que también lo lean los lectores de pantalla.
+const avisar = (texto, mal) => {
+  let a = document.querySelector(".aviso");
+  if (!a) { a = document.createElement("p"); a.className = "aviso"; a.setAttribute("role", "status"); document.body.append(a); }
+  a.textContent = texto; a.classList.toggle("mal", !!mal);
+  requestAnimationFrame(() => a.classList.add("ver"));
+  clearTimeout(avisar.t); avisar.t = setTimeout(() => a.classList.remove("ver"), 3200);
+};
+// Copia al portapapeles con aviso; si el navegador no deja, se ofrece el texto para copiarlo a mano.
+const copiarTexto = (texto, ok) => {
+  const fallo = () => { avisar("No se ha podido copiar automáticamente: cópialo del cuadro.", true); prompt("Copia este texto:", texto); };
+  if (navigator.clipboard) navigator.clipboard.writeText(texto).then(() => { avisar(ok); }, fallo); else fallo();
+};
+(() => {
+  const b = document.createElement("button");
+  b.className = "arriba"; b.type = "button";
+  b.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20V5M5 11l7-7 7 7"/></svg>'; b.setAttribute("aria-label", "Volver arriba"); b.title = "Volver arriba";
+  b.onclick = () => { scrollTo({ top: 0 }); document.querySelector(".sello")?.focus({ preventScroll: true }); };
+  document.body.append(b);
+  const mirar = () => b.classList.toggle("ver", scrollY > innerHeight * 1.5 && document.documentElement.scrollHeight > innerHeight * 3);
+  addEventListener("scroll", mirar, { passive: true }); mirar();
+})();
 // Modo claro/oscuro. Sin preferencia guardada manda el sistema (lo resuelve el CSS); al pulsar se guarda y manda sobre el sistema.
 const RAIZ = document.documentElement, botonModo = document.querySelector(".modo"), sistemaOscuro = matchMedia("(prefers-color-scheme: dark)");
 const hayOscuro = () => (RAIZ.dataset.modo || (sistemaOscuro.matches ? "oscuro" : "claro")) === "oscuro";
@@ -138,12 +290,14 @@ sistemaOscuro.addEventListener("change", etiquetarModo);
 etiquetarModo();
 </script>
 <main class="ancho">
+<div class="cabeza">
 <h1>Las entrevistas de The Wild Project, comprobadas dato a dato</h1>
 <p class="entrada">Jordi Wild ha entrevistado a los candidatos a la presidencia del Gobierno para las elecciones del 29 de noviembre de 2026. Transcribimos cada entrevista entera, separamos las afirmaciones que se pueden comprobar y las contrastamos con fuentes públicas, con el mismo método y la misma vara de medir para todos.</p>
 <p class="tu"><a href="/verificalo"><b>Puedes verificarlo tú</b> →</a> Cada dato enlaza su fuente y el minuto del vídeo, y hay un encargo listo para que cualquier IA lo revise por su cuenta.</p>
-<article class="entrevista"><img class="logo" src="/logos/psoe.svg" alt="Logotipo de PSOE" width="76" height="76"><div><h2><a href="/sanchez">Pedro Sánchez</a></h2><p class="partido">PSOE</p><p class="prog">The Wild Project #393 · 13 nov 2026 · 1 h 52 min</p><p class="num"><b>30</b> falsas o engañosas de 147 afirmaciones comprobadas</p><p class="des"><span class="tono-falso">7 falsas</span> · <span class="tono-enganoso">23 engañosas</span> · <span class="tono-mayormente_verdadero">53 casi ciertas</span> · <span class="tono-verdadero">29 verdaderas</span> · <span class="tono-no_verificable">35 no verificables</span></p><p class="acc"><a href="/sanchez">Línea temporal →</a><a href="/sanchez/transcripcion">Transcripción completa →</a></p></div></article><article class="entrevista"><img class="logo" src="/logos/pp.svg" alt="Logotipo de PP" width="76" height="76"><div><h2><a href="/feijoo">Alberto Núñez Feijóo</a></h2><p class="partido">PP</p><p class="prog">The Wild Project #392 · 13 nov 2026 · 1 h 28 min</p><p class="num"><b>31</b> falsas o engañosas de 153 afirmaciones comprobadas</p><p class="des"><span class="tono-falso">4 falsas</span> · <span class="tono-enganoso">27 engañosas</span> · <span class="tono-mayormente_verdadero">52 casi ciertas</span> · <span class="tono-verdadero">41 verdaderas</span> · <span class="tono-no_verificable">29 no verificables</span></p><p class="acc"><a href="/feijoo">Línea temporal →</a><a href="/feijoo/transcripcion">Transcripción completa →</a></p></div></article><article class="entrevista"><img class="logo" src="/logos/frente-amplio.svg" alt="Logotipo de Frente Amplio" width="76" height="76"><div><h2><a href="/colau">Ada Colau</a></h2><p class="partido">Frente Amplio</p><p class="prog">The Wild Project #391 · 13 nov 2026 · 2 h 14 min</p><p class="num"><b>29</b> falsas o engañosas de 153 afirmaciones comprobadas</p><p class="des"><span class="tono-falso">5 falsas</span> · <span class="tono-enganoso">24 engañosas</span> · <span class="tono-mayormente_verdadero">73 casi ciertas</span> · <span class="tono-verdadero">36 verdaderas</span> · <span class="tono-no_verificable">15 no verificables</span></p><p class="acc"><a href="/colau">Línea temporal →</a><a href="/colau/transcripcion">Transcripción completa →</a></p></div></article>
+</div>
+<div class="tarjetas"><article class="entrevista"><span class="logo retrato"><img src="/fotos/sanchez.jpg" alt="Pedro Sánchez" width="160" height="160" decoding="async"><span class="insignia" title="PSOE"><img src="/logos/psoe.svg" alt="" width="40" height="40"></span></span><div><h2><a href="/sanchez">Pedro Sánchez</a></h2><p class="partido">PSOE</p><p class="prog">The Wild Project #393 · 13 nov 2026 · 1 h 52 min</p><p class="num"><b>30</b> falsas o engañosas de 147 afirmaciones comprobadas</p><p class="des"><span class="tono-falso">7 falsas</span> · <span class="tono-enganoso">23 engañosas</span> · <span class="tono-mayormente_verdadero">53 casi ciertas</span> · <span class="tono-verdadero">29 verdaderas</span> · <span class="tono-no_verificable">35 no verificables</span></p></div><p class="acc"><a class="btn principal" href="/sanchez"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3v18M10 6h9M10 12h6M10 18h8"/><circle cx="6" cy="6" r="2" class="lleno"/><circle cx="6" cy="12" r="2" class="lleno"/><circle cx="6" cy="18" r="2" class="lleno"/></svg><span>Línea temporal</span><svg class="flecha" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="btn" href="/sanchez/transcripcion"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l4 4v14H6zM14 3v5h5M9 12h7M9 16h7"/></svg><span>Transcripción<span class="sr"> completa</span></span><svg class="flecha" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></p></article><article class="entrevista"><span class="logo retrato"><img src="/fotos/feijoo.jpg" alt="Alberto Núñez Feijóo" width="160" height="160" decoding="async"><span class="insignia" title="PP"><img src="/logos/pp.svg" alt="" width="40" height="40"></span></span><div><h2><a href="/feijoo">Alberto Núñez Feijóo</a></h2><p class="partido">PP</p><p class="prog">The Wild Project #392 · 13 nov 2026 · 1 h 28 min</p><p class="num"><b>31</b> falsas o engañosas de 153 afirmaciones comprobadas</p><p class="des"><span class="tono-falso">4 falsas</span> · <span class="tono-enganoso">27 engañosas</span> · <span class="tono-mayormente_verdadero">52 casi ciertas</span> · <span class="tono-verdadero">41 verdaderas</span> · <span class="tono-no_verificable">29 no verificables</span></p></div><p class="acc"><a class="btn principal" href="/feijoo"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3v18M10 6h9M10 12h6M10 18h8"/><circle cx="6" cy="6" r="2" class="lleno"/><circle cx="6" cy="12" r="2" class="lleno"/><circle cx="6" cy="18" r="2" class="lleno"/></svg><span>Línea temporal</span><svg class="flecha" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="btn" href="/feijoo/transcripcion"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l4 4v14H6zM14 3v5h5M9 12h7M9 16h7"/></svg><span>Transcripción<span class="sr"> completa</span></span><svg class="flecha" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></p></article><article class="entrevista"><span class="logo retrato"><img src="/fotos/colau.jpg" alt="Ada Colau" width="160" height="160" decoding="async"><span class="insignia" title="Frente Amplio"><img src="/logos/frente-amplio.svg" alt="" width="40" height="40"></span></span><div><h2><a href="/colau">Ada Colau</a></h2><p class="partido">Frente Amplio</p><p class="prog">The Wild Project #391 · 13 nov 2026 · 2 h 14 min</p><p class="num"><b>29</b> falsas o engañosas de 153 afirmaciones comprobadas</p><p class="des"><span class="tono-falso">5 falsas</span> · <span class="tono-enganoso">24 engañosas</span> · <span class="tono-mayormente_verdadero">73 casi ciertas</span> · <span class="tono-verdadero">36 verdaderas</span> · <span class="tono-no_verificable">15 no verificables</span></p></div><p class="acc"><a class="btn principal" href="/colau"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3v18M10 6h9M10 12h6M10 18h8"/><circle cx="6" cy="6" r="2" class="lleno"/><circle cx="6" cy="12" r="2" class="lleno"/><circle cx="6" cy="18" r="2" class="lleno"/></svg><span>Línea temporal</span><svg class="flecha" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="btn" href="/colau/transcripcion"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l4 4v14H6zM14 3v5h5M9 12h7M9 16h7"/></svg><span>Transcripción<span class="sr"> completa</span></span><svg class="flecha" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></p></article></div>
 </main>
-<footer><div class="ancho">
+<footer><div class="ancho pie">
 <section class="leyenda-f" aria-label="Leyenda de veredictos">
 <h2>Leyenda</h2>
 <p class="ley-intro">El color del minuto, del punto de la línea y de la etiqueta indica el veredicto de cada afirmación.</p>
@@ -160,8 +314,11 @@ etiquetarModo();
 <li><b>Confianza</b> (alta, media, baja): cuánta prueba respalda el veredicto.</li>
 </ul>
 </section>
+<div>
 <p style="margin-top:22px">Verificación asistida por IA (transcripción con Whisper, contraste con modelos Claude y búsqueda web), sin revisión de un equipo de periodistas. Cada afirmación enlaza el segundo exacto del vídeo y sus fuentes, y el código, las transcripciones y los datos están publicados en <a href="https://github.com/PabloPC05/verificacion-podcast" target="_blank" rel="noopener noreferrer">GitHub</a>. «Falso» no implica intención de mentir: incluye errores y lapsus. El número de afirmaciones falsas depende también de cuánto habla cada invitado y de cuántos datos da, así que las cifras no son un ranking. En rojo, junto a cada tema, cuántas afirmaciones falsas o engañosas contiene.</p>
 <p>Última actualización: 13/11/2026.</p>
+<p class="creditos">Fotos vía Wikimedia Commons: <a href="https://commons.wikimedia.org/wiki/File:Pedro_S%C3%A1nchez_in_2026.jpg" target="_blank" rel="noopener noreferrer">Pedro Sánchez</a> (Pool Moncloa / Carlos Spottorno, uso libre citando la fuente) · <a href="https://commons.wikimedia.org/wiki/File:ALBERTO_N%C3%9A%C3%91EZ_FEIJ%C3%93O.jpg" target="_blank" rel="noopener noreferrer">Alberto Núñez Feijóo</a> (Partido Popular, CC0) · <a href="https://commons.wikimedia.org/wiki/File:Ada-Colau-Encuentro-2024.jpg" target="_blank" rel="noopener noreferrer">Ada Colau</a> (Robo71, CC0).</p>
+</div>
 </div></footer>
 </body>
 </html>

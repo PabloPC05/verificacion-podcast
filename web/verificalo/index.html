@@ -12,13 +12,16 @@
 * { box-sizing:border-box; }
 body { margin:0; background:var(--fondo); color:var(--tinta); font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; }
 a { color:var(--tinta); }
-.ancho { max-width:1120px; margin:0 auto; padding:0 16px; }
-main.ancho { max-width:820px; padding-bottom:72px; }
-h1 { font:700 clamp(30px,6vw,48px)/1.06 var(--serif); letter-spacing:-0.02em; margin:38px 0 12px; text-wrap:balance; }
+main.ancho { padding-bottom:72px; }
+main > * { max-width:900px; }
+h1 { font:700 clamp(30px,5.2vw,56px)/1.05 var(--serif); letter-spacing:-0.02em; margin:clamp(28px,5vw,48px) 0 12px; text-wrap:balance; }
 .entrada { font-size:17px; max-width:62ch; }
 main > h2 { font:700 24px/1.2 var(--serif); margin:44px 0 10px; padding-top:12px; border-top:3px solid var(--tinta); }
 p, li { max-width:68ch; }
 .vias { list-style:none; padding:0; margin:18px 0 0; display:grid; gap:12px; }
+main > .vias, main > .leyenda-f { max-width:none; }
+@media (min-width:860px) { main > .vias { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media (min-width:1240px) { main > .vias { grid-template-columns:repeat(4,minmax(0,1fr)); } .vias li { grid-template-columns:1fr; gap:10px 0; } }
 .vias li { border:2px solid var(--tinta); padding:14px 16px; max-width:none; display:grid; grid-template-columns:44px minmax(0,1fr); gap:0 14px; }
 .vias li > b { font:700 34px/1 var(--serif); }
 .vias h3 { margin:0 0 2px; font-size:17px; } .vias p { margin:0; font-size:15px; }
@@ -46,6 +49,8 @@ h3.sub { font-size:17px; margin:26px 0 8px; }
 .explorador .botones { margin:10px 0 0; }
 .explorador .tabla-api td { font-size:13.5px; }
 #api-res td[data-v] { color:var(--tono, inherit); white-space:nowrap; }
+#api-res .vacio { margin:6px 0; padding:12px 14px; border:1.5px dashed var(--gris); color:var(--gris); }
+#api-csv { cursor:pointer; }
 
 
 :root { --fondo:#fff; --tinta:#000; --suave:#444; --gris:#666; --gris-claro:#999; --claro:#d9d9d9; --codigo:#f2f2f2; --resalte:#f3f3f3; --pre-fondo:#000; --pre-tinta:#fff; --pre-borde:transparent; --sombra:#000; --inv-suave:#ccc; --sobre-tono:#fff; --logo-fondo:transparent; --logo-radio:0; --luna:block; --sol:none; color-scheme:light; --v-falso:#c0271e; --v-enganoso:#c26a00; --v-mayormente_verdadero:#5a7d10; --v-verdadero:#1c7c45; --v-no_verificable:#777; }
@@ -59,6 +64,8 @@ h3.sub { font-size:17px; margin:26px 0 8px; }
 ::view-transition-old(root), ::view-transition-new(root) { animation:none; mix-blend-mode:normal; }
 html { scroll-behavior:smooth; scroll-padding-top:calc(var(--menu, 48px) + 64px); }
 [hidden] { display:none !important; }
+/* Un solo contenedor para todas las páginas: el menú, los títulos y el contenido arrancan en el mismo borde */
+.ancho { max-width:1360px; margin:0 auto; padding-left:clamp(16px,4vw,48px); padding-right:clamp(16px,4vw,48px); }
 .menu { position:sticky; top:0; z-index:10; background:var(--fondo); border-bottom:2px solid var(--tinta); }
 .menu .ancho { padding-top:9px; padding-bottom:9px; position:relative; }
 .m1 { display:flex; flex-wrap:wrap; align-items:center; gap:4px 24px; font-size:14.5px; }
@@ -69,14 +76,15 @@ html { scroll-behavior:smooth; scroll-padding-top:calc(var(--menu, 48px) + 64px)
 .modo { flex:none; display:inline-grid; place-items:center; width:26px; height:26px; padding:0; margin:0 0 0 -8px; cursor:pointer;
   color:var(--tinta); background:var(--fondo); border:1.5px solid var(--tinta); border-radius:50%; }
 .modo:hover { background:var(--tinta); color:var(--fondo); }
-.modo svg { width:15px; height:15px; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+.modo { line-height:0; font-size:0; }
+.modo svg { display:block; width:15px; height:15px; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
 .modo .luna { display:var(--luna); } .modo .sol { display:var(--sol); }
 .rot { font-size:10.5px; font-weight:700; text-transform:uppercase; letter-spacing:.09em; color:var(--gris); flex:none; }
 .desp { position:relative; margin:0; padding:0; border:0; font-size:inherit; }
 .desp summary { list-style:none; cursor:pointer; user-select:none; }
 .desp summary::-webkit-details-marker { display:none; }
-.desp summary::after { content:" ▾"; } .desp[open] summary::after { content:" ▴"; }
-.desp .lista { position:absolute; top:calc(100% + 10px); left:0; z-index:20; background:var(--fondo); border:2px solid var(--tinta); box-shadow:5px 5px 0 var(--sombra);
+.desp summary::after { content:"▾"; margin-left:.3em; } .desp[open] summary::after { content:"▴"; }
+.desp .lista { position:absolute; top:calc(100% + 10px); left:0; z-index:20; background:var(--fondo); border:2px solid var(--tinta); box-shadow:var(--flota);
   width:max-content; min-width:260px; max-width:min(92vw,470px); max-height:74vh; overflow-y:auto; padding:6px 0; }
 .desp .lista a { display:flex; justify-content:space-between; align-items:baseline; gap:16px; padding:7px 16px;
   font-size:14.5px; font-weight:500; border:0; line-height:1.35; }
@@ -105,20 +113,131 @@ html { scroll-behavior:smooth; scroll-padding-top:calc(var(--menu, 48px) + 64px)
 .fila button[aria-pressed=true] { background:var(--tinta); color:var(--fondo); }
 .fila button[data-v][aria-pressed=true] { background:var(--tono); color:var(--sobre-tono); }
 .fila button[data-solo] { margin-left:auto; }
-@media (max-width:700px) { .m1 { gap:4px 16px; font-size:14px; } .m1 .dcha { margin-left:0; }
-  .desp { position:static; } .desp .lista { left:16px; right:16px; top:auto; margin-top:10px; width:auto; max-width:none; }
-  .fila .rot { display:none; } .fila button { font-size:12px; padding:2px 9px; } .fila button[data-solo] { margin-left:0; } }
+.m1 > a, .desp summary, .fila button { white-space:nowrap; }
+@media (max-width:1000px) { .m1 .largo { display:none; } }
+/* En móvil el menú y los filtros ocupan una sola fila que se desliza en horizontal; el botón de modo se queda fijo a la derecha */
+@media (max-width:760px) {
+  .menu .ancho, .filtros .ancho { padding-left:0; padding-right:0; }
+  .filtros .ancho { position:relative; }
+  .filtros .ancho::after { content:""; position:absolute; top:0; bottom:0; right:0; width:28px; pointer-events:none;
+    background:linear-gradient(to right, transparent, var(--fondo) 85%); }
+  .m1, .fila { flex-wrap:nowrap; overflow-x:auto; scrollbar-width:none; overscroll-behavior-x:contain; padding-left:16px; padding-right:16px; }
+  .fila { padding-right:28px; }
+  .m1::-webkit-scrollbar, .fila::-webkit-scrollbar { display:none; }
+  .m1 { gap:0 18px; font-size:14px; } .m1 .dcha { margin-left:0; }
+  .m1 > a, .desp summary { display:inline-flex; align-items:center; min-height:36px; }
+  .m1 { padding-right:72px; }
+  .modo { position:absolute; right:12px; top:calc(50% - 16px); margin:0; width:32px; height:32px; }
+  .modo svg { width:17px; height:17px; }
+  .menu .ancho::after { content:""; position:absolute; top:0; bottom:0; right:52px; width:28px; pointer-events:none;
+    background:linear-gradient(to right, transparent, var(--fondo)); }
+  .menu .ancho::before { content:""; position:absolute; top:0; bottom:0; right:0; width:52px; background:var(--fondo); pointer-events:none; }
+  .menu .ancho { padding-top:4px; padding-bottom:4px; }
+  .desp { position:static; } .desp .lista { left:12px; right:12px; top:100%; width:auto; max-width:none; max-height:calc(100dvh - var(--menu, 48px) - 24px); }
+  .filtros { padding:7px 0; }
+  .fila .rot { display:none; } .fila button { flex:none; font-size:13px; padding:0 12px; min-height:34px; } .fila button[data-solo] { margin-left:0; } }
+/* En móvil cada fila de tabla se apila (primero qué es, debajo su dirección o sus datos) en vez de obligar a deslizar en horizontal */
+@media (max-width:640px) {
+  .tabla table, .tabla-api table { min-width:0; } .tabla thead, .tabla-api thead { display:none; }
+  .tabla table, .tabla tbody, .tabla tr, .tabla td, .tabla-api table, .tabla-api tbody, .tabla-api tr, .tabla-api td { display:block; width:100%; }
+  .tabla tr, .tabla-api tr { padding:10px 0; border-bottom:1px solid var(--tinta); }
+  .tabla tr:first-child, .tabla-api tr:first-child { border-top:2px solid var(--tinta); }
+  .tabla td, .tabla-api td { border:0 !important; padding:2px 0 !important; } .tabla td:first-child, .tabla-api td:first-child { font-weight:600; }
+  .tabla-api td[data-l]::before { content:attr(data-l) ": "; font-weight:500; color:var(--gris); } }
+
+/* ── Interacción: estados hover, foco, pulsación y avisos, iguales en todas las páginas */
+html { -webkit-tap-highlight-color:transparent; }
+:focus-visible { outline:3px solid var(--tinta); outline-offset:2px; }
+a { text-underline-offset:3px; text-decoration-thickness:1px; transition:text-decoration-thickness .15s ease-out, color .15s ease-out, background-color .15s ease-out; }
+a:hover { text-decoration-thickness:2px; }
+button, summary, select, .chip, .repo, .botones a, .minuto, .modo { transition:background-color .15s ease-out, color .15s ease-out, border-color .15s ease-out, box-shadow .18s ease-out, transform .12s ease-out; }
+button:active, .repo:active, .botones a:active, .chip:active, .fila button:active { transform:translateY(1px) scale(.98); }
+select { cursor:pointer; } select:hover { box-shadow:inset 0 0 0 1px var(--tinta); }
+.m1 > a, .desp summary { transition:border-color .15s ease-out; }
+.desp[open] .lista { animation:caer .16s ease-out; }
+@keyframes caer { from { opacity:0; transform:translateY(-6px); } }
+.fila button:not([aria-pressed=true]):hover { background:color-mix(in srgb, var(--tono, var(--tinta)) 13%, var(--fondo)); }
+.fila button[aria-pressed=true]:hover { box-shadow:0 0 0 2px var(--fondo), 0 0 0 3.5px var(--tono, var(--tinta)); }
+.fila .cuenta { margin-left:auto; font-size:12.5px; color:var(--gris); font-variant-numeric:tabular-nums; white-space:nowrap; }
+.fila button[data-solo] + .cuenta { margin-left:12px; }
+.botones button:hover, #api-ir:hover { background:var(--fondo); color:var(--tinta); }
+.botones button:disabled, #api-ir:disabled { opacity:.55; cursor:progress; }
+.repo:hover { background:var(--fondo); color:var(--tinta); box-shadow:inset 0 0 0 2px var(--tinta); }
+.repo.claro:hover { background:var(--tinta); color:var(--fondo); }
+/* Aviso flotante: confirma una acción (copiar, descargar) y se va solo; lo leen también los lectores de pantalla */
+.aviso { position:fixed; left:50%; bottom:calc(20px + env(safe-area-inset-bottom)); z-index:50; max-width:calc(100vw - 32px);
+  transform:translate(-50%, 16px); opacity:0; pointer-events:none; background:var(--tinta); color:var(--fondo);
+  border:2px solid var(--tinta); border-radius:var(--r-caja); box-shadow:var(--flota); padding:10px 16px; font-size:14.5px; font-weight:600;
+  transition:opacity .2s ease-out, transform .2s ease-out; }
+.aviso.ver { opacity:1; transform:translate(-50%, 0); }
+.aviso.mal { background:var(--fondo); color:var(--tinta); }
+/* Botón para volver arriba en las páginas largas */
+.arriba { position:fixed; right:calc(16px + env(safe-area-inset-right)); bottom:calc(16px + env(safe-area-inset-bottom)); z-index:40;
+  width:44px; height:44px; display:grid; place-items:center; padding:0; cursor:pointer; line-height:0; font-size:0;
+  color:var(--tinta); background:var(--fondo); border:2px solid var(--tinta); border-radius:50%; box-shadow:var(--flota);
+  opacity:0; transform:translateY(10px); pointer-events:none; transition:opacity .2s ease-out, transform .2s ease-out, background-color .15s, color .15s; }
+.arriba svg { display:block; width:20px; height:20px; fill:none; stroke:currentColor; stroke-width:2.5; stroke-linecap:square; }
+.arriba.ver { opacity:1; transform:none; pointer-events:auto; }
+.arriba:hover { background:var(--tinta); color:var(--fondo); }
+.sr { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; }
+@media (max-width:760px) { .fila .cuenta { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); } }
+@media (prefers-reduced-motion:reduce) { *, ::before, ::after { transition-duration:0s !important; animation-duration:0s !important; } html { scroll-behavior:auto; } }
+
+/* ── Esquinas suaves y contenidas, para que sigan leyéndose como recuadros de periódico: 14 px en contenedores, 9 px en botones y cajas, 5 px en etiquetas */
+:root { --r-caja:14px; --r-boton:9px; --r-mini:5px; --flota:0 10px 28px -8px rgba(0,0,0,.28); }
+.panel, .entrevista, .explorador, .vias li, .desp .lista { border-radius:var(--r-caja); }
+.desp .lista { overflow-x:hidden; }
+.tu, .abrir, pre, .btn, .repo, .botones button, .botones a, #api-ir, .copiar, select, .opciones select, .logo.sin, #api-res .vacio { border-radius:var(--r-boton); }
+.ficha, .leyenda-f dt, code, .chip-mini, .par:target, .indice a { border-radius:var(--r-mini); }
+.hito:target .panel { outline-offset:4px; }
+
+/* Retrato: foto redonda con borde de tinta y el logotipo del partido en una insignia blanca abajo a la derecha */
+.retrato { position:relative; display:block; flex:none; border-radius:50%; align-self:start; justify-self:start; }
+.retrato > img { display:block; width:100%; height:100%; object-fit:cover; border-radius:50%; border:2px solid var(--tinta); background:var(--claro); }
+.retrato .insignia { position:absolute; right:-4%; bottom:-4%; width:42%; aspect-ratio:1; border-radius:50%; overflow:hidden;
+  display:grid; place-items:center; background:#fff; border:2px solid var(--tinta); line-height:0; font-size:0; }
+.retrato .insignia img { display:block; width:72%; height:72%; object-fit:contain; }
+.retrato .insignia b { font:700 11px/1 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; color:#000; }
+.titular { display:flex; align-items:flex-start; gap:clamp(14px,2vw,24px); margin:0 0 18px; }
+.titular .retrato { margin-top:.2em; }
+.titular h1 { margin:0 !important; }
+.titular .retrato { width:clamp(64px,8vw,104px); height:clamp(64px,8vw,104px); }
+.titular .retrato.peque { width:clamp(52px,6vw,76px); height:clamp(52px,6vw,76px); }
+.creditos { font-size:12.5px; color:var(--gris); }
+.creditos a { color:inherit; }
 
 </style>
 </head>
 <body>
-<header class="menu"><div class="ancho"><div class="m1"><a class="sello" href="/" title="Todas las entrevistas">Verificación</a><details class="desp"><summary>Pedro Sánchez</summary><div class="lista"><a class="fuerte" href="/sanchez"><span>Línea temporal</span><small>30 falsas o engañosas de 147</small></a><a class="fuerte" href="/sanchez/transcripcion"><span>Transcripción completa</span></a><p class="rot">Temas</p><a href="/sanchez#tema-3" data-tema="tema-3"><span>Insultos, polarización y crispación en la política española</span><b>1</b></a><a href="/sanchez#tema-4" data-tema="tema-4"><span>Accidentes ferroviarios y responsabilidades del Gobierno</span><b>2</b></a><a href="/sanchez#tema-5" data-tema="tema-5"><span>Crisis de Ceuta, Marruecos y gestión de la frontera</span><b>7</b></a><a href="/sanchez#tema-6" data-tema="tema-6"><span>Inmigración, integración y futuro demográfico de España</span><b>3</b></a><a href="/sanchez#tema-7" data-tema="tema-7"><span>Ábalos, Koldo, Cerdán y los casos que afectan al PSOE</span><b>3</b></a><a href="/sanchez#tema-8" data-tema="tema-8"><span>Leire Díez, Zapatero y las investigaciones abiertas</span><b>3</b></a><a href="/sanchez#tema-9" data-tema="tema-9"><span>Vivienda, alquileres y acceso de los jóvenes a una casa</span><b>6</b></a><a href="/sanchez#tema-10" data-tema="tema-10"><span>Amnistía, Bildu, Pablo Iglesias y los cambios de opinión de Sánchez</span><b>5</b></a></div></details><details class="desp"><summary>Alberto Núñez Feijóo</summary><div class="lista"><a class="fuerte" href="/feijoo"><span>Línea temporal</span><small>31 falsas o engañosas de 153</small></a><a class="fuerte" href="/feijoo/transcripcion"><span>Transcripción completa</span></a><p class="rot">Temas</p><a href="/feijoo#tema-2" data-tema="tema-2"><span>Vox, polarización y un posible gobierno de coalición</span><b>4</b></a><a href="/feijoo#tema-3" data-tema="tema-3"><span>Economía, pensiones y futuro del sistema público</span><b>1</b></a><a href="/feijoo#tema-4" data-tema="tema-4"><span>Autónomos, impuestos y propuestas económicas del PP</span></a><a href="/feijoo#tema-5" data-tema="tema-5"><span>Deuda pública, déficit y gasto en defensa</span><b>4</b></a><a href="/feijoo#tema-6" data-tema="tema-6"><span>Ceuta, Marruecos y la gestión de la frontera</span><b>4</b></a><a href="/feijoo#tema-7" data-tema="tema-7"><span>Inmigración, ayudas sociales, integración y expulsiones</span><b>5</b></a><a href="/feijoo#tema-8" data-tema="tema-8"><span>Feijóo explica su relación con Marcial Dorado</span><b>6</b></a><a href="/feijoo#tema-9" data-tema="tema-9"><span>Corrupción, Gürtel y los casos que afectan al PSOE y al PP</span><b>4</b></a><a href="/feijoo#tema-10" data-tema="tema-10"><span>Isabel Díaz Ayuso y su relación dentro del Partido Popular</span><b>3</b></a><a href="/feijoo#tema-11" data-tema="tema-11"><span>Inglés, servicio militar, Trump y política internacional</span></a><a href="/feijoo#tema-12" data-tema="tema-12"><span>Feijóo define a Colau, Abascal y Pedro Sánchez y cierra la entrevist</span></a></div></details><details class="desp"><summary>Ada Colau</summary><div class="lista"><a class="fuerte" href="/colau"><span>Línea temporal</span><small>29 falsas o engañosas de 153</small></a><a class="fuerte" href="/colau/transcripcion"><span>Transcripción completa</span></a><p class="rot">Temas</p><a href="/colau#tema-3" data-tema="tema-3"><span>Twitter, redes sociales y polarización política</span></a><a href="/colau#tema-4" data-tema="tema-4"><span>Por qué Ada Colau vuelve a la política y se presenta a las elecciones</span><b>1</b></a><a href="/colau#tema-5" data-tema="tema-5"><span>Frente Amplio, Podemos y la división de la izquierda</span><b>2</b></a><a href="/colau#tema-6" data-tema="tema-6"><span>PSOE, Sumar, corrupción y responsabilidad política</span><b>2</b></a><a href="/colau#tema-7" data-tema="tema-7"><span>Accidentes ferroviarios y gestión del sistema de trenes</span><b>5</b></a><a href="/colau#tema-8" data-tema="tema-8"><span>Ceuta, Marruecos y la política migratoria de España</span><b>2</b></a><a href="/colau#tema-9" data-tema="tema-9"><span>Inmigración, integración y choque cultural</span><b>1</b></a><a href="/colau#tema-10" data-tema="tema-10"><span>Natalidad, demografía y el futuro de la población española</span></a><a href="/colau#tema-11" data-tema="tema-11"><span>Su gestión de Barcelona: seguridad, limpieza y errores como alcaldesa</span><b>7</b></a><a href="/colau#tema-12" data-tema="tema-12"><span>Vivienda, alquileres, grandes propietarios y especulación</span><b>4</b></a><a href="/colau#tema-13" data-tema="tema-13"><span>Ocupación, pequeños propietarios e impagos</span></a><a href="/colau#tema-14" data-tema="tema-14"><span>Trump, Israel, la flotilla y sus rivales políticos</span><b>5</b></a></div></details><a class="dcha" href="/verificalo">Verifícalo tú</a><a href="/api">API</a><a href="https://github.com/PabloPC05/verificacion-podcast" target="_blank" rel="noopener noreferrer">GitHub ↗</a><button class="modo" type="button" aria-label="Cambiar a modo oscuro" title="Cambiar a modo oscuro"><svg class="luna" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="sol" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button></div></div></header><script>
+<header class="menu"><div class="ancho"><div class="m1"><a class="sello" href="/" title="Todas las entrevistas">Verificación</a><details class="desp"><summary><span class="largo">Pedro </span>Sánchez</summary><div class="lista"><a class="fuerte" href="/sanchez"><span>Línea temporal</span><small>30 falsas o engañosas de 147</small></a><a class="fuerte" href="/sanchez/transcripcion"><span>Transcripción completa</span></a><p class="rot">Temas</p><a href="/sanchez#tema-3" data-tema="tema-3"><span>Insultos, polarización y crispación en la política española</span><b>1</b></a><a href="/sanchez#tema-4" data-tema="tema-4"><span>Accidentes ferroviarios y responsabilidades del Gobierno</span><b>2</b></a><a href="/sanchez#tema-5" data-tema="tema-5"><span>Crisis de Ceuta, Marruecos y gestión de la frontera</span><b>7</b></a><a href="/sanchez#tema-6" data-tema="tema-6"><span>Inmigración, integración y futuro demográfico de España</span><b>3</b></a><a href="/sanchez#tema-7" data-tema="tema-7"><span>Ábalos, Koldo, Cerdán y los casos que afectan al PSOE</span><b>3</b></a><a href="/sanchez#tema-8" data-tema="tema-8"><span>Leire Díez, Zapatero y las investigaciones abiertas</span><b>3</b></a><a href="/sanchez#tema-9" data-tema="tema-9"><span>Vivienda, alquileres y acceso de los jóvenes a una casa</span><b>6</b></a><a href="/sanchez#tema-10" data-tema="tema-10"><span>Amnistía, Bildu, Pablo Iglesias y los cambios de opinión de Sánchez</span><b>5</b></a></div></details><details class="desp"><summary><span class="largo">Alberto Núñez </span>Feijóo</summary><div class="lista"><a class="fuerte" href="/feijoo"><span>Línea temporal</span><small>31 falsas o engañosas de 153</small></a><a class="fuerte" href="/feijoo/transcripcion"><span>Transcripción completa</span></a><p class="rot">Temas</p><a href="/feijoo#tema-2" data-tema="tema-2"><span>Vox, polarización y un posible gobierno de coalición</span><b>4</b></a><a href="/feijoo#tema-3" data-tema="tema-3"><span>Economía, pensiones y futuro del sistema público</span><b>1</b></a><a href="/feijoo#tema-4" data-tema="tema-4"><span>Autónomos, impuestos y propuestas económicas del PP</span></a><a href="/feijoo#tema-5" data-tema="tema-5"><span>Deuda pública, déficit y gasto en defensa</span><b>4</b></a><a href="/feijoo#tema-6" data-tema="tema-6"><span>Ceuta, Marruecos y la gestión de la frontera</span><b>4</b></a><a href="/feijoo#tema-7" data-tema="tema-7"><span>Inmigración, ayudas sociales, integración y expulsiones</span><b>5</b></a><a href="/feijoo#tema-8" data-tema="tema-8"><span>Feijóo explica su relación con Marcial Dorado</span><b>6</b></a><a href="/feijoo#tema-9" data-tema="tema-9"><span>Corrupción, Gürtel y los casos que afectan al PSOE y al PP</span><b>4</b></a><a href="/feijoo#tema-10" data-tema="tema-10"><span>Isabel Díaz Ayuso y su relación dentro del Partido Popular</span><b>3</b></a><a href="/feijoo#tema-11" data-tema="tema-11"><span>Inglés, servicio militar, Trump y política internacional</span></a><a href="/feijoo#tema-12" data-tema="tema-12"><span>Feijóo define a Colau, Abascal y Pedro Sánchez y cierra la entrevist</span></a></div></details><details class="desp"><summary><span class="largo">Ada </span>Colau</summary><div class="lista"><a class="fuerte" href="/colau"><span>Línea temporal</span><small>29 falsas o engañosas de 153</small></a><a class="fuerte" href="/colau/transcripcion"><span>Transcripción completa</span></a><p class="rot">Temas</p><a href="/colau#tema-3" data-tema="tema-3"><span>Twitter, redes sociales y polarización política</span></a><a href="/colau#tema-4" data-tema="tema-4"><span>Por qué Ada Colau vuelve a la política y se presenta a las elecciones</span><b>1</b></a><a href="/colau#tema-5" data-tema="tema-5"><span>Frente Amplio, Podemos y la división de la izquierda</span><b>2</b></a><a href="/colau#tema-6" data-tema="tema-6"><span>PSOE, Sumar, corrupción y responsabilidad política</span><b>2</b></a><a href="/colau#tema-7" data-tema="tema-7"><span>Accidentes ferroviarios y gestión del sistema de trenes</span><b>5</b></a><a href="/colau#tema-8" data-tema="tema-8"><span>Ceuta, Marruecos y la política migratoria de España</span><b>2</b></a><a href="/colau#tema-9" data-tema="tema-9"><span>Inmigración, integración y choque cultural</span><b>1</b></a><a href="/colau#tema-10" data-tema="tema-10"><span>Natalidad, demografía y el futuro de la población española</span></a><a href="/colau#tema-11" data-tema="tema-11"><span>Su gestión de Barcelona: seguridad, limpieza y errores como alcaldesa</span><b>7</b></a><a href="/colau#tema-12" data-tema="tema-12"><span>Vivienda, alquileres, grandes propietarios y especulación</span><b>4</b></a><a href="/colau#tema-13" data-tema="tema-13"><span>Ocupación, pequeños propietarios e impagos</span></a><a href="/colau#tema-14" data-tema="tema-14"><span>Trump, Israel, la flotilla y sus rivales políticos</span><b>5</b></a></div></details><a class="dcha" href="/verificalo">Verifícalo tú</a><a href="/api">API</a><a href="https://github.com/PabloPC05/verificacion-podcast" target="_blank" rel="noopener noreferrer">GitHub ↗</a><button class="modo" type="button" aria-label="Cambiar a modo oscuro" title="Cambiar a modo oscuro"><svg class="luna" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="sol" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button></div></div></header><script>
 document.addEventListener("click", ev => document.querySelectorAll("details.desp[open]").forEach(d => {
   if (!d.contains(ev.target) || ev.target.closest(".lista a")) d.open = false;
 }));
 document.addEventListener("keydown", ev => { if (ev.key === "Escape") document.querySelectorAll("details.desp[open]").forEach(d => d.open = false); });
 const medirMenu = () => document.documentElement.style.setProperty("--menu", document.querySelector(".menu").offsetHeight + "px");
 medirMenu(); addEventListener("resize", medirMenu);
+// Aviso breve para confirmar acciones; role=status hace que también lo lean los lectores de pantalla.
+const avisar = (texto, mal) => {
+  let a = document.querySelector(".aviso");
+  if (!a) { a = document.createElement("p"); a.className = "aviso"; a.setAttribute("role", "status"); document.body.append(a); }
+  a.textContent = texto; a.classList.toggle("mal", !!mal);
+  requestAnimationFrame(() => a.classList.add("ver"));
+  clearTimeout(avisar.t); avisar.t = setTimeout(() => a.classList.remove("ver"), 3200);
+};
+// Copia al portapapeles con aviso; si el navegador no deja, se ofrece el texto para copiarlo a mano.
+const copiarTexto = (texto, ok) => {
+  const fallo = () => { avisar("No se ha podido copiar automáticamente: cópialo del cuadro.", true); prompt("Copia este texto:", texto); };
+  if (navigator.clipboard) navigator.clipboard.writeText(texto).then(() => { avisar(ok); }, fallo); else fallo();
+};
+(() => {
+  const b = document.createElement("button");
+  b.className = "arriba"; b.type = "button";
+  b.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20V5M5 11l7-7 7 7"/></svg>'; b.setAttribute("aria-label", "Volver arriba"); b.title = "Volver arriba";
+  b.onclick = () => { scrollTo({ top: 0 }); document.querySelector(".sello")?.focus({ preventScroll: true }); };
+  document.body.append(b);
+  const mirar = () => b.classList.toggle("ver", scrollY > innerHeight * 1.5 && document.documentElement.scrollHeight > innerHeight * 3);
+  addEventListener("scroll", mirar, { passive: true }); mirar();
+})();
 // Modo claro/oscuro. Sin preferencia guardada manda el sistema (lo resuelve el CSS); al pulsar se guarda y manda sobre el sistema.
 const RAIZ = document.documentElement, botonModo = document.querySelector(".modo"), sistemaOscuro = matchMedia("(prefers-color-scheme: dark)");
 const hayOscuro = () => (RAIZ.dataset.modo || (sistemaOscuro.matches ? "oscuro" : "claro")) === "oscuro";
@@ -164,9 +283,10 @@ etiquetarModo();
 <tr><td>Todas las afirmaciones</td><td><a href="/api/v1/afirmaciones.json">/api/v1/afirmaciones.json</a> · <a href="/api/v1/afirmaciones.csv">.csv</a></td></tr>
 <tr><td>Afirmaciones de una entrevista</td><td><a href="/api/v1/sanchez.json">/api/v1/{entrevista}.json</a> · <a href="/api/v1/sanchez.csv">.csv</a></td></tr>
 <tr><td>Transcripción con tiempos</td><td><a href="/api/v1/sanchez/transcripcion.json">/api/v1/{entrevista}/transcripcion.json</a> · <a href="/api/v1/sanchez/transcripcion.txt">.txt</a></td></tr>
+<tr><td>Referencia completa (cada ruta y cada campo)</td><td><a href="/api/referencia">/api/referencia</a></td></tr>
 <tr><td>Especificación OpenAPI 3.1</td><td><a href="/api/v1/openapi.json">/api/v1/openapi.json</a></td></tr>
 </tbody></table></div>
-<p class="nota">Base: <code>https://verificacion-podcast.vercel.app/api/v1</code>. Entrevistas disponibles: <code>sanchez</code>, <code>feijoo</code>, <code>colau</code>. Descripción de cada campo en la <a href="/api">documentación de la API</a>.</p>
+<p class="nota">Base: <code>https://verificacion-podcast.vercel.app/api/v1</code>. Entrevistas disponibles: <code>sanchez</code>, <code>feijoo</code>, <code>colau</code>. Descripción de cada campo en la <a href="/api/referencia">referencia completa de la API</a>.</p>
 
 <h3 class="sub">Pruébala</h3>
 <div class="explorador">
@@ -256,6 +376,8 @@ entrevistas.forEach(e =&gt; console.log(e.invitado, e.por_veredicto));</pre>
   async function consultar() {
     pintarUrl();
     const ver = $("api-ver").value;
+    const boton = $("api-ir");
+    boton.disabled = true; boton.textContent = "Consultando…"; $("api-res").setAttribute("aria-busy", "true");
     $("api-estado").textContent = "Consultando…";
     $("api-res").innerHTML = "";
     try {
@@ -263,15 +385,20 @@ entrevistas.forEach(e =&gt; console.log(e.invitado, e.por_veredicto));</pre>
       const lista = datos.afirmaciones.filter(a => !ver || a.veredicto === ver);
       $("api-estado").textContent = lista.length + " de " + datos.afirmaciones.length + " afirmaciones"
         + (ver ? " (filtradas por veredicto = \"" + ver + "\")" : "") + ". Se muestran las 25 primeras.";
-      $("api-res").innerHTML = "<table><thead><tr><th>Invitado</th><th>Minuto</th><th>Veredicto</th><th>Afirmación</th><th>Fuentes</th></tr></thead><tbody>"
-        + lista.slice(0, 25).map(a => "<tr><td>" + esc(a.invitado) + "</td><td><a href=\"" + esc(a.web_url) + "\">" + esc(a.minuto)
-          + "</a></td><td data-v=\"" + esc(a.veredicto) + "\"><b>" + esc(NOMBRE[a.veredicto] || a.veredicto) + "</b></td><td>" + esc(a.afirmacion)
-          + "</td><td>" + a.fuentes.length + "</td></tr>").join("") + "</tbody></table>";
+      $("api-res").innerHTML = lista.length ? "<table><thead><tr><th>Invitado</th><th>Minuto</th><th>Veredicto</th><th>Afirmación</th><th>Fuentes</th></tr></thead><tbody>"
+        + lista.slice(0, 25).map(a => "<tr><td>" + esc(a.invitado) + "</td><td data-l=\"Minuto\"><a href=\"" + esc(a.web_url) + "\">" + esc(a.minuto)
+          + "</a></td><td data-l=\"Veredicto\" data-v=\"" + esc(a.veredicto) + "\"><b>" + esc(NOMBRE[a.veredicto] || a.veredicto) + "</b></td><td>" + esc(a.afirmacion)
+          + "</td><td data-l=\"Fuentes\">" + a.fuentes.length + "</td></tr>").join("") + "</tbody></table>"
+        : "<p class=\"vacio\">Ninguna afirmación cumple ese filtro.</p>";
     } catch (err) {
-      $("api-estado").textContent = "No se ha podido consultar la API: " + err.message;
+      $("api-estado").textContent = "No se ha podido consultar la API: " + err.message + ". Prueba de nuevo en unos segundos.";
+      avisar("No se ha podido consultar la API.", true);
+    } finally {
+      boton.disabled = false; boton.textContent = "Consultar"; $("api-res").removeAttribute("aria-busy");
     }
   }
   $("api-cual").onchange = pintarUrl;
+  $("api-csv").addEventListener("click", () => avisar("Descargando el CSV…"));
   $("api-ir").onclick = consultar;
   pintarUrl();
 })();
@@ -327,8 +454,8 @@ document.getElementById("cual").onchange = pintar;
 document.getElementById("alcance").onchange = pintar;
 document.getElementById("copiar").onclick = ev => {
   const b = ev.currentTarget, t = encargo();
-  const hecho = () => { b.textContent = "Copiado: pégalo en tu IA"; setTimeout(() => b.textContent = "Copiar encargo", 2200); };
-  if (navigator.clipboard) navigator.clipboard.writeText(t).then(hecho, () => prompt("Copia este texto:", t)); else prompt("Copia este texto:", t);
+  b.textContent = "Copiado ✓"; setTimeout(() => b.textContent = "Copiar encargo", 2200);
+  copiarTexto(t, "Encargo copiado. Pégalo en una IA que pueda navegar por internet.");
 };
 pintar();
 </script>

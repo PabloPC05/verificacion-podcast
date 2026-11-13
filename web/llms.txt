@@ -10,7 +10,7 @@ API de solo lectura, JSON estático, sin clave, CORS abierto. Base: https://veri
 - [Afirmaciones de una entrevista](https://verificacion-podcast.vercel.app/api/v1/sanchez.json): sustituye el slug (sanchez, feijoo, colau).
 - [Transcripción con tiempos](https://verificacion-podcast.vercel.app/api/v1/sanchez/transcripcion.json) y [en texto](https://verificacion-podcast.vercel.app/api/v1/sanchez/transcripcion.txt).
 - [Todas las afirmaciones en CSV](https://verificacion-podcast.vercel.app/api/v1/afirmaciones.csv) y por entrevista: https://verificacion-podcast.vercel.app/api/v1/sanchez.csv
-- [OpenAPI](https://verificacion-podcast.vercel.app/api/v1/openapi.json)
+- [OpenAPI](https://verificacion-podcast.vercel.app/api/v1/openapi.json): esquemas de cada respuesta y ejemplos. Versión legible: https://verificacion-podcast.vercel.app/api/referencia
 - [Método y criterios](https://github.com/PabloPC05/verificacion-podcast/blob/main/METODO.md)
 
 Campos de cada afirmación: id, entrevista, invitado, tema, segundo, minuto, video_url, web_url, cita (literal de la
