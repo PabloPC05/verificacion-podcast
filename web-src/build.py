@@ -548,6 +548,21 @@ def pagina_transcripcion(m, entrevistas):
             actual["parrafos"].append([k])
         else:
             parrafo.append(k)
+    def ficha_voz(voz):
+        """Quién habla al empezar una intervención: cara (foto o iniciales), nombre y a quién representa."""
+        nombre = nombres.get(voz, "")
+        iniciales = "".join(w[0] for w in nombre.split()[:2]).upper()
+        if voz == "G":
+            cara = (f'<img class="cara" src="/fotos/{m["slug"]}.jpg" alt="" width="34" height="34" loading="lazy" decoding="async">'
+                    if FOTOS.get(m["slug"]) else f'<span class="cara">{e(iniciales)}</span>')
+            detalle = m.get("partido") or ""
+        elif voz == "J":
+            cara, detalle = f'<span class="cara">{e(iniciales)}</span>', "The Wild Project"
+        else:
+            cara, detalle = f'<span class="cara">{"V" if voz == "V" else "?"}</span>', ""
+        return (f'<div class="quien">{cara}<span class="nom"><b>{e(nombre)}</b>'
+                + (f'<small>{e(detalle)}</small>' if detalle else "") + "</span></div>")
+
     pendientes = list(m["temas"])
     cuerpo = []
     for b in bloques:
@@ -558,13 +573,16 @@ def pagina_transcripcion(m, entrevistas):
         cuerpo.append(f'<div class="turno" data-voz="{voz}">')
         for n, p in enumerate(b["parrafos"]):
             t = int(segmentos[p[0]]["i"])
-            quien = (f'<span class="quien">{e(nombres.get(voz, ""))}</span> ' if voces and n == 0 else "")
+            # con voces, tres columnas como en un guion: minuto · quién habla (solo al empezar la intervención) · texto
+            celda = (ficha_voz(voz) if n == 0 else '<div class="quien"></div>') if voces else ""
             cuerpo.append(
                 f'<div class="par" id="t{t}"><a class="minuto" href="https://www.youtube.com/watch?v={m["video"]}&t={t}s" '
-                f'target="_blank" rel="noopener noreferrer">{hms(t)}</a><p>{quien}{texto_marcado(p)}</p></div>')
+                f'target="_blank" rel="noopener noreferrer">{hms(t)}</a>{celda}<p>{texto_marcado(p)}</p></div>')
         cuerpo.append("</div>")
     nota_voces = ("Las intervenciones se han atribuido a cada voz con reconocimiento automático de hablantes "
-                  "(acierto medido del 97 %; las frases muy cortas son las que más fallan). " if voces else "")
+                  "(acierto medido del 97 %; las frases muy cortas son las que más fallan). "
+                  f"Cada intervención empieza con quién habla, y la raya vertical marca lo que dice {e(m['invitado'])}. "
+                  if voces else "")
     solo = '<button data-solo aria-pressed="false">Solo párrafos con afirmaciones</button>'
     cab = cabecera(
         f'/{m["slug"]}/transcripcion', f'Transcripción completa: {m["invitado"]} en The Wild Project',
@@ -576,7 +594,8 @@ def pagina_transcripcion(m, entrevistas):
         for t in m["temas"] if any(d.startswith(f'<h2 id="tema-{t["n"]}"') for d in cuerpo))
     pagina = rellenar(
         TRANSCRIPCION, CABECERA=cab, INDICE=indice_temas, RETRATO=retrato(m, " peque") or "", MENU=menu(entrevistas, m["slug"]),
-        CSS_MENU=CSS_MENU, LEYENDA=LEYENDA, FILTROS=filtros(m, solo), NOTA_VOCES=nota_voces, CUERPO="".join(cuerpo),
+        CSS_MENU=CSS_MENU, LEYENDA=LEYENDA, FILTROS=filtros(m, solo), NOTA_VOCES=nota_voces,
+        CUERPO=f'<div class="dialogo{" con-voces" if voces else ""}">{"".join(cuerpo)}</div>',
         INVITADO=e(m["invitado"]), PROGRAMA=e(m["programa"]), FECHA_VIDEO=e(m["fecha"]), DURACION=e(m["duracion"]),
         VIDEO=m["video"], SLUG=m["slug"], REPO=REPO)
     destino = SALIDA / m["slug"] / "transcripcion"
@@ -1815,17 +1834,27 @@ main.ancho { padding-bottom:72px; }
 h1 { font:700 clamp(28px,4.6vw,44px)/1.08 var(--serif); letter-spacing:-0.02em; margin:36px 0 12px; text-wrap:balance; }
 .entrada { font-size:16px; color:var(--suave); max-width:64ch; margin:0 0 8px; }
 h2 { font:700 23px/1.2 var(--serif); margin:44px 0 14px; padding-top:12px; border-top:3px solid var(--tinta); text-wrap:balance; }
-.turno { margin:0 0 18px; }
-.turno[data-voz=J] .par p { color:var(--suave); }
-.par { display:grid; grid-template-columns:74px minmax(0,1fr); gap:0 14px; margin-bottom:8px; }
+.turno { margin:0 0 16px; }
+.par { display:grid; grid-template-columns:74px minmax(0,1fr); gap:0 14px; }
 .par:target { background:var(--resalte); }
 .minuto { font-size:13px; font-weight:700; font-variant-numeric:tabular-nums; text-underline-offset:3px; padding-top:4px; align-self:start; justify-self:start; }
 .minuto:hover { background:var(--tinta); color:var(--fondo); text-decoration:none; }
-.par p { margin:0; font:17px/1.65 var(--serif); }
-.quien { font:700 11.5px/1 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; text-transform:uppercase; letter-spacing:.07em;
-  color:var(--tinta); margin-right:6px; vertical-align:2px; }
-.turno[data-voz=J] .quien { color:var(--gris); }
-.turno[data-voz=V] .quien, .turno[data-voz=O] .quien { color:var(--gris); font-style:italic; }
+.par p { margin:0; padding-bottom:10px; font:17px/1.65 var(--serif); }
+/* Con voces, tres columnas como en un guion: minuto · quién habla (al empezar cada intervención) · texto.
+   Lo del candidato va en serif con una raya vertical continua; lo demás, en palo seco y más apagado. */
+.con-voces .par { grid-template-columns:64px 168px minmax(0,1fr); gap:0 12px; }
+.quien { display:flex; align-items:flex-start; gap:9px; padding-top:1px; min-width:0;
+  font:700 13.5px/1.25 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; color:var(--tinta); }
+.nom { display:flex; flex-direction:column; gap:2px; min-width:0; padding-top:1px; overflow-wrap:anywhere; }
+.quien small { font-size:12px; font-weight:500; color:var(--gris); }
+.cara { width:34px; height:34px; flex:none; border-radius:50%; display:grid; place-items:center; object-fit:cover;
+  font:700 12px/1 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; letter-spacing:.02em; border:1.5px solid currentColor; }
+img.cara { border:0; background:var(--claro); }
+.turno[data-voz=G] .par p { border-left:3px solid var(--tinta); padding-left:16px; }
+.turno:not([data-voz=G]) .par p { padding-left:19px; color:var(--suave); font:15.5px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; padding-bottom:10px; }
+.turno:not([data-voz=G]) .quien { color:var(--suave); }
+.turno[data-voz=V] .par p, .turno[data-voz=O] .par p { font-style:italic; }
+.turno[data-voz=""] .par p { padding-left:0; color:var(--tinta); font:17px/1.65 var(--serif); }
 /* el tramo de cada afirmación analizada, subrayado con el color de su veredicto y enlazado a su tarjeta */
 .subr { color:inherit; text-decoration:underline; text-decoration-color:var(--tono); text-decoration-thickness:3px;
   text-underline-offset:4px; text-decoration-skip-ink:none; }
@@ -1835,7 +1864,13 @@ h2 { font:700 23px/1.2 var(--serif); margin:44px 0 14px; padding-top:12px; borde
   vertical-align:2px; margin-left:2px; }
 .et:hover { filter:brightness(1.1); }
 .apagada.subr { text-decoration:none; pointer-events:none; } .apagada.et { display:none; }
-@media (max-width:600px) { .par { grid-template-columns:1fr; } .par p { font-size:16.5px; } }
+@media (max-width:600px) { .par { grid-template-columns:1fr; } .par p { font-size:16.5px; }
+  /* en móvil, el minuto y quién habla comparten fila encima del texto */
+  .con-voces .par { grid-template-columns:auto minmax(0,1fr); align-items:center; }
+  .con-voces .par p { grid-column:1 / -1; margin-top:4px; }
+  .quien { align-items:center; gap:8px; padding-top:0; } .nom { flex-direction:row; align-items:baseline; gap:6px; padding-top:0; }
+  .cara { width:28px; height:28px; font-size:11px; }
+  .turno[data-voz=G] .par p { padding-left:12px; } .turno:not([data-voz=G]) .par p { padding-left:0; } }
 @@CSS_MENU@@
 </style>
 </head>
@@ -1870,7 +1905,15 @@ function pintar() {
     });
     p.hidden = solo && n === 0;
   });
-  document.querySelectorAll(".turno").forEach(t => { t.hidden = solo && !t.querySelector(".par:not([hidden])"); });
+  document.querySelectorAll(".turno").forEach(t => {
+    t.hidden = solo && !t.querySelector(".par:not([hidden])");
+    // quién habla va en el primer párrafo visible de la intervención (al filtrar, el primero puede quedar oculto)
+    const celdas = t.querySelectorAll(".par > .quien");
+    if (!celdas.length) return;
+    if (t.dataset.ficha === undefined) t.dataset.ficha = celdas[0].innerHTML;
+    const visible = t.querySelector(".par:not([hidden])");
+    celdas.forEach(c => { c.innerHTML = visible && c.parentNode === visible ? t.dataset.ficha : ""; });
+  });
   const marcas = document.querySelectorAll(".par:not([hidden]) .subr:not(.apagada)").length;
   document.querySelector("#filtros .cuenta").textContent = `${marcas} afirmaciones marcadas`;
 }
