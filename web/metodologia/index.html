@@ -95,26 +95,43 @@ document.addEventListener("click", function (ev) {
 body { margin:0; background:var(--fondo); color:var(--tinta); font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; }
 a { color:var(--tinta); text-underline-offset:3px; }
 main.ancho { padding-bottom:72px; }
-.lectura { max-width:780px; min-width:0; }
-.indice { display:none; }
-/* En pantallas anchas, un índice de secciones fijo a la izquierda acompaña la lectura y marca la sección en curso */
-@media (min-width:1180px) {
-  main.ancho { display:grid; grid-template-columns:minmax(220px,300px) minmax(0,780px); gap:0 clamp(40px,5vw,88px); }
-  .indice { display:block; position:sticky; top:calc(var(--menu, 48px) + 64px); align-self:start; margin-top:44px;
-    max-height:calc(100vh - var(--menu, 48px) - 96px); overflow-y:auto; scrollbar-width:thin; }
-  .indice p { margin:0 0 8px; font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.09em; color:var(--gris); }
-  .indice ol { list-style:none; margin:0; padding:0; border-top:2px solid var(--tinta); }
-  .indice a { display:flex; justify-content:space-between; gap:12px; padding:8px 10px; margin:0 -10px; border-bottom:1px solid var(--claro);
-    font-size:14px; line-height:1.35; text-decoration:none; }
+.lectura { min-width:0; }
+/* El índice: plegable arriba en móvil y tableta; columna fija a la izquierda en cuanto hay sitio */
+.indice { margin:clamp(20px,4vw,32px) 0 0; border:2px solid var(--tinta); border-radius:var(--r-caja,14px); }
+.indice summary { list-style:none; cursor:pointer; display:flex; justify-content:space-between; align-items:center; gap:12px;
+  min-height:44px; padding:8px 14px; font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:.09em; }
+.indice summary::-webkit-details-marker { display:none; }
+.indice summary::after { content:""; width:8px; height:8px; border:solid var(--tinta); border-width:0 2px 2px 0; transform:translateY(-2px) rotate(45deg); transition:transform .18s ease-out; }
+.indice[open] summary::after { transform:translateY(2px) rotate(-135deg); }
+.indice summary:focus-visible { outline:2px solid var(--tinta); outline-offset:2px; }
+.indice ol { list-style:none; margin:0; padding:0 14px 6px; border-top:1px solid var(--claro); }
+.indice a { display:grid; grid-template-columns:3.6em minmax(0,1fr); align-items:baseline; padding:10px 0; border-bottom:1px solid var(--claro);
+  font-size:15px; line-height:1.35; text-decoration:none; }
+.indice .n { color:var(--gris); font-variant-numeric:tabular-nums; }
+.indice li:last-child a { border-bottom:0; }
+.indice a:hover .t { text-decoration:underline; }
+.indice a.aqui, .indice a.aqui .n { font-weight:700; color:var(--tinta); }
+@media (min-width:1024px) {
+  main.ancho { display:grid; grid-template-columns:minmax(220px,264px) minmax(0,1fr); gap:0; }
+  /* Una raya a toda altura separa el índice de la lectura */
+  .lectura { border-left:1px solid var(--claro); padding-left:clamp(36px,4.5vw,72px); margin-left:clamp(28px,3vw,48px); }
+  .indice { position:sticky; top:calc(var(--menu, 48px) + 32px); align-self:start; margin-top:clamp(28px,5vw,44px); border:0; border-radius:0;
+    max-height:calc(100vh - var(--menu, 48px) - 64px); overflow-y:auto; scrollbar-width:thin; }
+  .indice summary { pointer-events:none; min-height:0; padding:0 0 10px; font-size:11px; color:var(--gris); }
+  .indice summary::after { display:none; }
+  .indice ol { padding:0; border-top:2px solid var(--tinta); }
+  .indice a { grid-template-columns:3.4em minmax(0,1fr); padding:11px 12px; margin:0 -12px; font-size:14px; }
+  .indice li:last-child a { border-bottom:1px solid var(--claro); }
   .indice a:hover { background:var(--resalte); }
-  .indice a.aqui { font-weight:700; box-shadow:inset 3px 0 0 var(--tinta); } }
+  .indice a:hover .t { text-decoration:none; }
+  .indice a.aqui { background:var(--resalte); box-shadow:inset 3px 0 0 var(--tinta); } }
 h1 { font:700 clamp(30px,5.2vw,52px)/1.05 var(--serif); letter-spacing:-0.02em; margin:clamp(28px,5vw,44px) 0 14px; text-wrap:balance; }
-.entrada { font-size:15px; color:var(--suave); max-width:64ch; margin:0 0 22px; padding:10px 14px; border:2px solid var(--tinta); border-radius:var(--r-caja,14px); }
+.entrada { font-size:15px; color:var(--suave); max-width:none; margin:0 0 22px; padding:10px 14px; border:2px solid var(--tinta); border-radius:var(--r-caja,14px); }
 .entrada a { font-weight:600; }
 .texto > p:first-child { font-size:17px; }
 .texto h2 { font:700 23px/1.2 var(--serif); margin:44px 0 14px; padding-top:12px; border-top:3px solid var(--tinta); text-wrap:balance; }
 .texto h3 { font:700 18px/1.3 var(--serif); margin:28px 0 8px; }
-.texto p, .texto li { max-width:68ch; }
+.texto p, .texto li { max-width:82ch; }
 .texto ul, .texto ol { padding-left:24px; margin:12px 0; }
 .texto li { margin:6px 0; }
 .texto li > ul, .texto li > ol { margin:6px 0; }
@@ -265,6 +282,8 @@ footer .pie-quien { margin-top:18px; }
 /* ── Interacción: estados hover, foco, pulsación y avisos, iguales en todas las páginas */
 html { -webkit-tap-highlight-color:transparent; }
 :focus-visible { outline:3px solid var(--tinta); outline-offset:2px; }
+/* Los campos de texto no llevan anillo de foco: el cursor ya dice dónde se escribe */
+:is(input, textarea):focus, :is(input, textarea):focus-visible { outline:none; box-shadow:none; }
 a { text-underline-offset:3px; text-decoration-thickness:1px; transition:text-decoration-thickness .15s ease-out, color .15s ease-out, background-color .15s ease-out; }
 a:hover { text-decoration-thickness:2px; }
 button, summary, select, .chip, .repo, .botones a, .minuto, .modo { transition:background-color .15s ease-out, color .15s ease-out, border-color .15s ease-out, box-shadow .18s ease-out, transform .12s ease-out; }
@@ -507,7 +526,7 @@ sistemaOscuro.addEventListener("change", etiquetarModo);
 etiquetarModo();
 </script>
 <main class="ancho">
-<nav class="indice" aria-label="Secciones del método"><p>Secciones</p><ol><li><a href="#descargar-y-transcribir"><span>1. Descargar y transcribir</span></a></li><li><a href="#reconocer-quien-habla"><span>1 bis. Reconocer quién habla</span></a></li><li><a href="#repartir-por-temas"><span>2. Repartir por temas</span></a></li><li><a href="#verificar-un-subagente-sonnet-por-bloque"><span>3. Verificar: un subagente Sonnet por bloque</span></a></li><li><a href="#resumir-las-justificaciones"><span>4. Resumir las justificaciones</span></a></li><li><a href="#excluir-lo-que-no-aporta-al-debate-publico"><span>4 bis. Excluir lo que no aporta al debate público</span></a></li><li><a href="#generar-la-web-y-publicar"><span>5. Generar la web y publicar</span></a></li><li><a href="#que-significa-cada-veredicto"><span>Qué significa cada veredicto</span></a></li><li><a href="#limites-conocidos"><span>Límites conocidos</span></a></li></ol></nav>
+<details class="indice" aria-label="Secciones del método"><summary>Secciones</summary><ol><li><a href="#descargar-y-transcribir"><span class="n">1.</span><span class="t">Descargar y transcribir</span></a></li><li><a href="#reconocer-quien-habla"><span class="n">1 bis.</span><span class="t">Reconocer quién habla</span></a></li><li><a href="#repartir-por-temas"><span class="n">2.</span><span class="t">Repartir por temas</span></a></li><li><a href="#verificar-un-subagente-sonnet-por-bloque"><span class="n">3.</span><span class="t">Verificar: un subagente Sonnet por bloque</span></a></li><li><a href="#resumir-las-justificaciones"><span class="n">4.</span><span class="t">Resumir las justificaciones</span></a></li><li><a href="#excluir-lo-que-no-aporta-al-debate-publico"><span class="n">4 bis.</span><span class="t">Excluir lo que no aporta al debate público</span></a></li><li><a href="#generar-la-web-y-publicar"><span class="n">5.</span><span class="t">Generar la web y publicar</span></a></li><li><a href="#que-significa-cada-veredicto"><span class="n"></span><span class="t">Qué significa cada veredicto</span></a></li><li><a href="#limites-conocidos"><span class="n"></span><span class="t">Límites conocidos</span></a></li></ol></details>
 <div class="lectura">
 <h1>Método de verificación</h1>
 <p class="entrada">Esta página es el texto de <a href="https://github.com/PabloPC05/verificacion-podcast/blob/main/METODO.md" target="_blank" rel="noopener noreferrer"><code>METODO.md</code></a> del repositorio, tal cual está hoy. Cada cambio queda en su <a href="https://github.com/PabloPC05/verificacion-podcast/commits/main/METODO.md" target="_blank" rel="noopener noreferrer">historial de cambios</a>.</p>
@@ -562,6 +581,12 @@ cd web &amp;&amp; npx vercel deploy --prod --yes --scope pablopc05s-projects</co
 </main>
 <footer class="pie-solo"><div class="ancho"><p class="pie-quien"><a href="/quien">Proyecto independiente de Pablo Pardo Cotos y Diego Cristóbal Andaluz, sin relación con The Wild Project ni con ningún partido.</a></p></div></footer>
 <script>
+const indice = document.querySelector("details.indice");
+const ancho = matchMedia("(min-width:1024px)");
+const fijarIndice = () => { indice.open = ancho.matches; indice.querySelector("summary").tabIndex = ancho.matches ? -1 : 0; };
+fijarIndice(); ancho.addEventListener("change", fijarIndice);
+indice.addEventListener("toggle", () => { if (ancho.matches && !indice.open) indice.open = true; });
+indice.addEventListener("click", ev => { if (ev.target.closest("a") && !ancho.matches) indice.open = false; });
 const enIndice = new Map([...document.querySelectorAll(".indice a")].map(a => [a.hash.slice(1), a]));
 if (enIndice.size && "IntersectionObserver" in window) {
   const obs = new IntersectionObserver(es => es.forEach(x => {

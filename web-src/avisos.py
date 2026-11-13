@@ -23,7 +23,6 @@ form { display:grid; gap:20px; }
 input, textarea { font:inherit; font-weight:400; color:var(--tinta); background:var(--fondo); width:100%; min-height:46px;
   border:2px solid var(--tinta); border-radius:var(--r-boton); padding:10px 12px; }
 textarea { resize:vertical; line-height:1.5; }
-input:focus-visible, textarea:focus-visible { outline:3px solid var(--tinta); outline-offset:2px; }
 [aria-invalid=true] { border-color:var(--v-falso); }
 .error { margin:-10px 0 0; color:var(--v-falso); font-weight:600; font-size:15px; }
 .trampa { position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden; }
