@@ -100,7 +100,8 @@ def panel(a):
         + f'<p class="que">{e(a.get("afirmacion", ""))}</p>'
         f'<p class="porque"><b>Por qué:</b> {e(resumen)}</p>'
         + (f'<p class="rotulo">Fuentes</p><ol class="fuentes">{lista}</ol>' if lista else "")
-        + detalle + "</article></li>"
+        + detalle + '<p class="contrasta"><button class="copiar" type="button">Copiar encargo para contrastarlo con una IA</button></p>'
+        + "</article></li>"
     )
 
 
@@ -225,7 +226,7 @@ def pagina_entrevista(m, entrevistas):
         FALSAS=m["total"]["falso"], ENGANOSAS=m["total"]["enganoso"], CASI=m["total"]["mayormente_verdadero"],
         VERDADERAS=m["total"]["verdadero"], NV=m["total"]["no_verificable"], FILAS="".join(filas),
         INVITADO=e(m["invitado"]), PROGRAMA=e(m["programa"]), FECHA_VIDEO=e(m["fecha"]), DURACION=e(m["duracion"]),
-        FECHA=dt.datetime.now().strftime("%d/%m/%Y"), VIDEO=m["video"], SLUG=m["slug"], REPO=REPO)
+        FECHA=dt.datetime.now().strftime("%d/%m/%Y"), VIDEO=m["video"], SLUG=m["slug"], REPO=REPO, BASE=BASE)
     destino = SALIDA / m["slug"]
     destino.mkdir(parents=True, exist_ok=True)
     (destino / "index.html").write_text(pagina, encoding="utf-8")
@@ -554,6 +555,12 @@ h1 { font:700 clamp(30px,6vw,48px)/1.06 var(--serif); letter-spacing:-0.02em; ma
 .des { margin:4px 0 14px; font-size:13.5px; font-weight:600; }
 .entrevista ul { list-style:none; margin:6px 0 16px; padding:0; columns:2; column-gap:28px; font-size:14.5px; }
 .entrevista li { margin:0 0 5px; break-inside:avoid; } .entrevista li b { color:#c0271e; }
+.contrastar { border-top:3px solid #000; margin-top:40px; padding-top:6px; }
+.contrastar h2 { font:700 26px/1.2 var(--serif); margin:18px 0 6px; }
+.contrastar li { margin-bottom:8px; max-width:68ch; }
+.contrastar pre { background:#000; color:#fff; padding:14px 16px; overflow-x:auto; white-space:pre-wrap; font:13px/1.55 ui-monospace,SFMono-Regular,Menlo,monospace; margin:6px 0 10px; }
+.copiar { font:inherit; font-size:13px; font-weight:600; background:#fff; color:#000; border:1.5px solid #000; padding:5px 12px; cursor:pointer; }
+.copiar:hover { background:#000; color:#fff; }
 .acc { margin:0; display:flex; flex-wrap:wrap; gap:8px 22px; } .acc a { font-weight:700; text-underline-offset:3px; }
 footer { border-top:3px solid #000; margin-top:48px; padding:24px 0 64px; font-size:14.5px; }
 footer p { max-width:68ch; }
@@ -567,6 +574,22 @@ footer p { max-width:68ch; }
 <h1>Las entrevistas de The Wild Project, comprobadas dato a dato</h1>
 <p class="entrada">Jordi Wild ha entrevistado a los candidatos a la presidencia del Gobierno para las elecciones del 29 de noviembre de 2026. Transcribimos cada entrevista entera, separamos las afirmaciones que se pueden comprobar y las contrastamos con fuentes públicas, con el mismo método y la misma vara de medir para todos.</p>
 @@TARJETAS@@
+<section class="contrastar">
+<h2>Contrástalo tú mismo</h2>
+<p>No te fíes de nosotros: todo lo que hay aquí se puede comprobar.</p>
+<ol>
+<li><b>En cada afirmación.</b> El minuto abre el vídeo en el segundo exacto, las fuentes están enlazadas una a una y un botón copia un encargo listo para pegar en cualquier IA y que la revise por su cuenta.</li>
+<li><b>Con la API abierta.</b> Todas las afirmaciones, veredictos, fuentes y transcripciones en JSON, sin clave: <a href="/api">documentación</a> · <a href="/api/v1/afirmaciones.json">afirmaciones.json</a> · <a href="/llms.txt">llms.txt</a>.</li>
+<li><b>Con el código.</b> El método, los encargos literales que recibieron los agentes de IA y los datos en bruto están en <a href="@@REPO@@" target="_blank" rel="noopener noreferrer">GitHub</a>. Si encuentras un error, <a href="@@REPO@@/issues" target="_blank" rel="noopener noreferrer">abre una incidencia</a>.</li>
+</ol>
+<p class="rot">Encargo para un agente de IA</p>
+<pre id="encargo">Descarga https://verificacion-podcast.vercel.app/api/v1/afirmaciones.json.
+Para cada afirmación con veredicto "falso" o "enganoso": abre cada fuentes[].url y
+comprueba si de verdad respalda la explicacion, busca al menos una fuente independiente
+más y dime en cuáles discrepas del veredicto y por qué, con enlaces. Usa video_url para
+oír el contexto si la cita es ambigua. Aplica la misma vara de medir a todos los invitados.</pre>
+<button class="copiar" type="button" onclick="navigator.clipboard.writeText(document.getElementById('encargo').textContent).then(()=>{this.textContent='Copiado'})">Copiar encargo</button>
+</section>
 </main>
 <footer><div class="ancho">
 <p>Verificación asistida por IA (transcripción con Whisper, contraste con modelos Claude y búsqueda web), sin revisión de un equipo de periodistas. Cada afirmación enlaza el segundo exacto del vídeo y sus fuentes, y el código, las transcripciones y los datos están publicados en <a href="@@REPO@@" target="_blank" rel="noopener noreferrer">GitHub</a>. «Falso» no implica intención de mentir: incluye errores y lapsus. El número de afirmaciones falsas depende también de cuánto habla cada invitado y de cuántos datos da, así que las cifras no son un ranking. En rojo, junto a cada tema, cuántas afirmaciones falsas o engañosas contiene.</p>
@@ -743,6 +766,10 @@ footer p { max-width:68ch; }
   .dicho { padding-right:10px; } .dicho blockquote { display:none; } .panel blockquote.movil { display:block; }
   .flecha { margin-left:8px; margin-right:8px; } .panel { padding:13px 13px; } blockquote { font-size:17px; }
   .capitulo > div { padding-left:16px; } h2 { font-size:20px; } }
+.abrir { margin:14px 0 0; padding:12px 14px; border:1.5px solid #000; font-size:14.5px; max-width:78ch; }
+.contrasta { margin:12px 0 0; }
+.copiar { font:inherit; font-size:12.5px; font-weight:600; background:#fff; color:#000; border:1.5px solid #000; padding:4px 11px; cursor:pointer; }
+.copiar:hover, .copiar.hecho { background:#000; color:#fff; }
 .hito:target .panel { outline:3px solid var(--tono); outline-offset:3px; }
 @@CSS_MENU@@
 </style>
@@ -754,6 +781,7 @@ footer p { max-width:68ch; }
   <p class="entrada">Hemos transcrito la <a href="https://www.youtube.com/watch?v=@@VIDEO@@" target="_blank" rel="noopener noreferrer">entrevista completa</a> (@@DURACION@@) y contrastado con fuentes públicas las @@SUMA@@ afirmaciones que se pueden comprobar. Esta es la línea temporal: pulsa cualquier minuto para ver ese momento del vídeo, o lee la <a href="/@@SLUG@@/transcripcion">transcripción completa</a>.</p>
   <div class="dato"><b>@@MALAS@@</b><span>afirmaciones falsas (@@FALSAS@@) o engañosas (@@ENGANOSAS@@) de @@SUMA@@ comprobadas</span></div>
   <p class="resto">El resto: @@VERDADERAS@@ verdaderas, @@CASI@@ casi ciertas y @@NV@@ que no se han podido verificar.</p>
+  <p class="abrir"><b>Contrástalo tú mismo.</b> Cada panel enlaza el vídeo y sus fuentes, y trae un botón que copia un encargo listo para pegar en cualquier IA. También puedes descargar <a href="/api/v1/@@SLUG@@.json">todos los datos de esta entrevista (JSON)</a>, usar la <a href="/api">API abierta</a> o leer el <a href="@@REPO@@/blob/main/METODO.md" target="_blank" rel="noopener noreferrer">método</a>.</p>
 </div>
 @@FILTROS@@
 <main class="ancho"><ol class="linea">@@FILAS@@</ol></main>
@@ -768,7 +796,7 @@ footer p { max-width:68ch; }
 const activos = new Set(["falso", "enganoso"]);
 const botones = document.querySelectorAll("#filtros button[data-v]");
 const todas = document.querySelector("#filtros [data-todas]");
-const aqui = location.pathname.replace(/\/$/, "");
+const aqui = location.pathname.replace(/\\/$/, "");
 function pintar() {
   botones.forEach(b => b.setAttribute("aria-pressed", activos.has(b.dataset.v)));
   todas.setAttribute("aria-pressed", activos.size === botones.length);
@@ -779,7 +807,7 @@ function pintar() {
   });
   if (cap) cap.hidden = n === 0;
   document.querySelectorAll(".lista a[data-tema]").forEach(a => {
-    if (a.pathname.replace(/\/$/, "") === aqui) a.classList.toggle("off", document.getElementById(a.dataset.tema).hidden);
+    if (a.pathname.replace(/\\/$/, "") === aqui) a.classList.toggle("off", document.getElementById(a.dataset.tema).hidden);
   });
 }
 function verTodo() { botones.forEach(b => activos.add(b.dataset.v)); }
@@ -800,6 +828,30 @@ function irAlAncla() {
 }
 pintar(); irAlAncla();
 addEventListener("hashchange", irAlAncla);
+document.addEventListener("click", ev => {
+  const b = ev.target.closest(".copiar");
+  if (!b) return;
+  const h = b.closest(".hito"), t = sel => (h.querySelector(sel)?.textContent || "").trim();
+  const fuentes = [...h.querySelectorAll(".fuentes a")].map(a => "- " + a.textContent.trim() + ": " + a.href).join("\\n");
+  const texto = `Actúa como verificador de datos riguroso e imparcial.
+
+En la entrevista de Jordi Wild a @@INVITADO@@ (@@PROGRAMA@@, @@FECHA_VIDEO@@), en el minuto ${t(".minuto")} (${h.querySelector(".minuto").href}), se dijo literalmente:
+${t(".dicho blockquote")}
+
+Afirmación que se comprueba: ${t(".que")}
+
+Una verificación automática (@@BASE@@/@@SLUG@@#${h.id}) la calificó como «${t(".ficha")}». Su justificación:
+${t("details p") || t(".porque")}
+
+Fuentes que cita:
+${fuentes || "(ninguna)"}
+
+Comprueba por tu cuenta si ese veredicto es correcto: abre esas fuentes y mira si de verdad dicen lo que se les atribuye, busca al menos dos fuentes independientes más (mejor primarias y oficiales) y ten en cuenta el contexto de la frase. Dime si estás de acuerdo con el veredicto, en qué discrepas y con qué enlaces lo sustentas. Si no hay pruebas suficientes, dilo.`;
+  const hecho = () => { b.textContent = "Copiado: pégalo en tu IA"; b.classList.add("hecho");
+    setTimeout(() => { b.textContent = "Copiar encargo para contrastarlo con una IA"; b.classList.remove("hecho"); }, 2200); };
+  if (navigator.clipboard) navigator.clipboard.writeText(texto).then(hecho, () => prompt("Copia este texto:", texto));
+  else prompt("Copia este texto:", texto);
+});
 </script>
 </body>
 </html>
