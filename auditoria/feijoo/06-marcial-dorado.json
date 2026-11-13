@@ -1,0 +1,361 @@
+[
+  {
+    "indice": 0,
+    "minuto": "0:56:55",
+    "afirmacion": "La crema que Feijóo lleva en una de las fotos con Marcial Dorado (de 1995) era para tratar un herpes zóster y evitar que le diera el sol directamente.",
+    "veredicto_antes": "no_verificable",
+    "veredicto_despues": "no_verificable",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio de veredicto. Se quita «verano» de la afirmación porque ninguna fuente fija la estación, y Libertad Digital queda como apoyo: solo repite lo dicho en la entrevista."
+  },
+  {
+    "indice": 1,
+    "minuto": "0:57:57",
+    "afirmacion": "Tras publicarse las fotos con Marcial Dorado en 2013, Feijóo dio una rueda de prensa en el Parlamento de Galicia y compareció en el Pleno de la cámara para dar explicaciones.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [],
+    "tiene_fuente_primaria": false,
+    "nota": "Veredicto sin cambio. Confianza de alta a media: no se pudo abrir el Diario de Sesións del Parlamento de Galicia y el hecho institucional se apoya solo en EFE, Reuters y prensa."
+  },
+  {
+    "indice": 2,
+    "minuto": "0:57:57",
+    "afirmacion": "Feijóo pidió por iniciativa propia comparecer en el Parlamento de Galicia para explicar las fotos con Marcial Dorado.",
+    "veredicto_antes": "enganoso",
+    "veredicto_despues": "enganoso",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "baja",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "LegalToday (Reuters): Núñez Feijoo descarta dimitir por unas fotos antiguas con un narco",
+        "url": "https://www.legaltoday.com/rincon-de-reuters/nunez-feijoo-descarta-dimitir-por-unas-fotos-antiguas-con-un-narco-2013-04-02/",
+        "tipo": "agencia"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Veredicto sin cambio. Confianza de media a baja: solo hay una fuente válida (elDiario.es) que cuente que la oposición forzó la comparecencia, no se alcanza el mínimo de fuentes y el Diario de Sesións del Parlamento de Galicia no se pudo abrir (acceso denegado). EFE y Reuters, añadidos, no dicen quién la pidió."
+  },
+  {
+    "indice": 3,
+    "minuto": "0:57:57",
+    "afirmacion": "Feijóo conoció a Marcial Dorado en un contexto político del Ayuntamiento de A Illa de Arousa, donde vivía Dorado.",
+    "veredicto_antes": "no_verificable",
+    "veredicto_despues": "no_verificable",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "elDiario.es: Marcial Dorado en el pleno del Congreso: los años de amistad entre el narco y Núñez Feijóo siempre vuelven",
+        "url": "https://www.eldiario.es/galicia/marcial-dorado-pleno-congreso-anos-amistad-narco-nunez-feijoo-vuelven_1_10021515.amp.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Veredicto sin cambio. Se añade elDiario.es (marzo de 2023), que recoge a Manuel Cruz como intermediario y su muerte en 1999."
+  },
+  {
+    "indice": 4,
+    "minuto": "0:59:00",
+    "afirmacion": "Cuando Feijóo conoció a Marcial Dorado (hacia 1994), Dorado no tenía nada que ver con el narcotráfico: solo había tenido contrabando de tabaco.",
+    "veredicto_antes": "enganoso",
+    "veredicto_despues": "enganoso",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "baja",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "elDiario.es: Feijóo felicitó las navidades al 'narco' cuando supuestamente había roto la relación",
+        "url": "https://www.eldiario.es/galicia/tain-revela-feijoo-hablo-narco_1_5627704.amp.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Veredicto sin cambio. Confianza de media a baja por falta de fuente primaria (las sentencias no se pudieron abrir); se añade elDiario.es (Taín, 2013) para la fecha de inicio de la investigación."
+  },
+  {
+    "indice": 5,
+    "minuto": "0:59:00",
+    "afirmacion": "A Marcial Dorado se le imputaron asuntos de narcotráfico tres o cuatro años después de que Feijóo dejase de tener relación con él.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "baja",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Europa Press (vía Iustel): El Supremo confirma la condena de 6 años para el 'narco' Marcial Dorado por blanquear dinero de la droga",
+        "url": "https://www.iustel.com/diario_del_derecho/noticia.asp?ref_iustel=1149930",
+        "tipo": "agencia"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Veredicto sin cambio. Se añade Europa Press (agencia) para la detención de noviembre de 2003 y la condena de 2009. El inicio de la investigación en 2001 y las llamadas de 2001 a 2003 siguen descansando en elDiario.es, infoLibre y Público (El Economista, que recoge a Taín, da 403) y no se halló otra fuente de otra línea; confianza baja."
+  },
+  {
+    "indice": 6,
+    "minuto": "0:59:00",
+    "afirmacion": "Marcial Dorado asistía a mítines de otros partidos políticos y existen fotos suyas con líderes de otros partidos.",
+    "veredicto_antes": "no_verificable",
+    "veredicto_despues": "no_verificable",
+    "cambia_veredicto": false,
+    "confianza_antes": "baja",
+    "confianza_despues": "baja",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio. La nueva lectura de Maldita.es y ARA no encuentra fotos ni mítines con otros partidos, y se ajusta el texto de la explicación a lo que dicen esas fuentes."
+  },
+  {
+    "indice": 7,
+    "minuto": "1:00:01",
+    "afirmacion": "Feijóo lleva unos 30 años en política.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "El Español: Este es el origen de las fotos de Feijóo con el narcotraficante gallego Marcial Dorado",
+        "url": "https://elespanol.com/espana/politica/20230719/origen-fotos-feijoo-narco-marcial-dorado/780172272_0.amp.html",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "elDiario.es: Las noticias sobre Marcial Dorado que Feijóo dice que no leyó cuando era número dos en la Sanidad de Galicia",
+        "url": "https://www.eldiario.es/galicia/noticias-marcial-dorado-feijoo-dice-no-leyo-numero-sanidad-galicia_1_10392267.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Veredicto sin cambio. Confianza de alta a media: la fecha de 1991 solo tenía Wikipedia como base y no se pudo abrir el BOE; la prensa corrobora que en 1995 ya era alto cargo."
+  },
+  {
+    "indice": 8,
+    "minuto": "1:00:01",
+    "afirmacion": "A Marcial Dorado se lo presentó a Feijóo un compañero de la Xunta de Galicia que era amigo de Dorado.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "El Español: Este es el origen de las fotos de Feijóo con el narcotraficante gallego Marcial Dorado",
+        "url": "https://elespanol.com/espana/politica/20230719/origen-fotos-feijoo-narco-marcial-dorado/780172272_0.amp.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Veredicto sin cambio. Se corrige la atribución de «testaferro»: la usa El Español, no Público, y se añade esa fuente."
+  },
+  {
+    "indice": 9,
+    "minuto": "1:00:01",
+    "afirmacion": "Feijóo cortó la relación con Marcial Dorado de forma inmediata al saber que tenía un juicio pendiente por contrabando.",
+    "veredicto_antes": "enganoso",
+    "veredicto_despues": "enganoso",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "baja",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.eleconomista.es/legislacion/noticias/4720869/04/13/El-juez-Tain-asegura-que-Feijoo-y-Dorado-no-se-vieron-entre-2001-y-2003.html",
+        "motivo": "No se pudo abrir (HTTP 403); no se puede comprobar lo que dice."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "El Salto: Grande-Marlaska desestimó un recurso de Fiscalía contrario a la absolución del narco relacionado con Feijóo",
+        "url": "https://www.elsaltodiario.com/corrupcion/grande-marlaska-desestimo-recurso-fiscalia-absolucion-narco-relacionado-feijoo",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "El Español: Este es el origen de las fotos de Feijóo con el narcotraficante gallego Marcial Dorado",
+        "url": "https://elespanol.com/espana/politica/20230719/origen-fotos-feijoo-narco-marcial-dorado/780172272_0.amp.html",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "elDiario.es (EFE): Feijóo pide disculpas por el error de las fotos con el contrabandista",
+        "url": "https://www.eldiario.es/politica/feijoo-disculpas-error-infamia-acabo_1_5635076.html",
+        "tipo": "agencia"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Veredicto sin cambio. Se descarta El Economista (403) y se añaden El Salto (proceso pendiente desde 1992), El Español (versión de 1997) y la crónica de EFE; confianza de media a baja por falta de fuente primaria."
+  },
+  {
+    "indice": 10,
+    "minuto": "1:01:07",
+    "afirmacion": "Marcial Dorado fue absuelto en ese juicio por contrabando.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "no_verificable",
+    "cambia_veredicto": true,
+    "confianza_antes": "alta",
+    "confianza_despues": "baja",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Europa Press (vía Iustel): El Supremo confirma la condena de 6 años para el 'narco' Marcial Dorado por blanquear dinero de la droga",
+        "url": "https://www.iustel.com/diario_del_derecho/noticia.asp?ref_iustel=1149930",
+        "tipo": "agencia"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Veredicto de verdadero a no_verificable: la absolución de 1999 solo la recoge El Salto, que es medio de apoyo; Público no la menciona y El País 1999 y La Voz 2001 no se pudieron abrir. Europa Press solo respalda la condena de 2005 por cohecho. Confianza baja."
+  },
+  {
+    "indice": 11,
+    "minuto": "1:01:07",
+    "afirmacion": "Frente a las fotos de Feijóo con Dorado, Feijóo insinúa que en el entorno de Pedro Sánchez (caso Ábalos/Koldo) hubo prostitutas financiadas con fondos públicos.",
+    "veredicto_antes": "enganoso",
+    "veredicto_despues": "enganoso",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "baja",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "El Independiente: El Supremo condena a Ábalos y a Koldo a 24 y 19 años de prisión por las mordidas en contratos de mascarillas",
+        "url": "https://www.elindependiente.com/espana/2026/06/22/supremo-condena-abalos-koldo-prision-por-mordidas-contratos-mascarillas/",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "LegalToday: El Tribunal Supremo condena a Ábalos a 24 años de cárcel, a 19 a Koldo y a 4 a Aldama por el ‘caso mascarillas’",
+        "url": "https://www.legaltoday.com/practica-juridica/derecho-penal/el-supremo-condena-a-abalos-a-24-anos-de-carcel-a-19-a-koldo-y-a-4-a-aldama-por-el-caso-mascarillas-2026-06-22/",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Veredicto sin cambio. Se añaden El Independiente y LegalToday (otras líneas editoriales), que confirman la sentencia y no mencionan prostitución. Las fiestas pagadas por Ruz siguen en una sola fuente anónima (The Objective) y la sentencia completa no se pudo abrir; confianza baja."
+  },
+  {
+    "indice": 12,
+    "minuto": "1:01:07",
+    "afirmacion": "Tras explicar las fotos en 2013, Feijóo volvió a ganar las elecciones gallegas de 2016 y de 2020 con mayoría absoluta ampliada.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [
+      {
+        "url": "https://es.wikipedia.org/wiki/Elecciones_al_Parlamento_de_Galicia_de_2016",
+        "motivo": "Wikipedia solo vale como apoyo; se sustituye por la página oficial de resultados de la Xunta."
+      },
+      {
+        "url": "https://es.wikipedia.org/wiki/Elecciones_al_Parlamento_de_Galicia_de_2020",
+        "motivo": "Wikipedia solo vale como apoyo; se sustituye por los datos oficiales de la Xunta, y su cifra de votos perdidos en 2020 (56.968) no coincide con la oficial (54.388)."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Xunta de Galicia: Galicia - Resultados definitivos - Eleccións ao Parlamento de Galicia 2016",
+        "url": "http://resultados2016.xunta.gal/11AU/DAU11999CM.htm?lang=es",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Xunta de Galicia: Eleccións 2020 Parlamento de Galicia",
+        "url": "https://resultados2020.xunta.gal/resultados/0/galicia",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Veredicto sin cambio. Se sustituye Wikipedia por los resultados oficiales de la Xunta (escaños y porcentajes de 2016 y 2020 comprobados), que añaden el dato de los votos absolutos de 2020."
+  },
+  {
+    "indice": 13,
+    "minuto": "1:01:07",
+    "afirmacion": "El contrabando de tabaco es un delito fiscal.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://es.wikipedia.org/wiki/Contrabando",
+        "motivo": "Wikipedia solo vale como apoyo y no recoge la ley española; se sustituye por el texto de la LO 12/1995 publicado por el Congreso."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Congreso de los Diputados: Ley Orgánica 12/1995, de 12 de diciembre, de Represión del Contrabando",
+        "url": "https://www.congreso.es/constitucion/ficheros/leyes_espa/lo_012_1995.pdf",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Wikipedia: Delito fiscal",
+        "url": "https://es.wikipedia.org/wiki/Delito_fiscal",
+        "tipo": "apoyo"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Veredicto sin cambio. Se sustituye Wikipedia por el texto original de la LO 12/1995 en la web del Congreso (PDF con texto, leído con pdftotext porque WebFetch no lo descifra; el BOE rechaza la conexión). Wikipedia: Delito fiscal queda como apoyo solo para el artículo 305 del Código Penal."
+  },
+  {
+    "indice": 14,
+    "minuto": "1:02:10",
+    "afirmacion": "Feijóo pregunta si las primarias de Pedro Sánchez se financiaron con dinero de la prostitución (en alusión a las saunas de su suegro) y dice que Sánchez no ha respondido a esa pregunta.",
+    "veredicto_antes": "no_verificable",
+    "veredicto_despues": "no_verificable",
+    "cambia_veredicto": false,
+    "confianza_antes": "baja",
+    "confianza_despues": "baja",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio de veredicto. Se reformula la afirmación como pregunta, que es lo que dice Feijóo, y se aclara que Newtral y Cuatro dan el contexto de las saunas pero no hablan de las primarias."
+  },
+  {
+    "indice": 15,
+    "minuto": "1:02:10",
+    "afirmacion": "Pedro Sánchez fue quien empezó a utilizar las fotos de Feijóo con Marcial Dorado contra él.",
+    "veredicto_antes": "enganoso",
+    "veredicto_despues": "enganoso",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "El Español: Este es el origen de las fotos de Feijóo con el narcotraficante gallego Marcial Dorado",
+        "url": "https://elespanol.com/espana/politica/20230719/origen-fotos-feijoo-narco-marcial-dorado/780172272_0.amp.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Veredicto sin cambio. Se añade El Español (19/7/2023) para la cita de Sánchez en el Congreso y se precisa que fue la oposición gallega, no el PSOE federal, quien usó primero las fotos en 2013."
+  },
+  {
+    "indice": 16,
+    "minuto": "1:02:10",
+    "afirmacion": "Según Feijóo, Sánchez prometió abolir la prostitución mientras su familia política (el suegro, con saunas) ha vivido o formado su patrimonio de negocios de prostitución.",
+    "veredicto_antes": "enganoso",
+    "veredicto_despues": "enganoso",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [],
+    "tiene_fuente_primaria": false,
+    "nota": "Veredicto sin cambio. Se comprueba Newtral (abierto con curl tras un 403 de WebFetch): confirma los autos de 2024 que califican las saunas de lícitas. Se reformula la afirmación para atribuirla a Feijóo."
+  }
+]

@@ -1,0 +1,299 @@
+[
+  {
+    "indice": 0,
+    "minuto": "1:19:50",
+    "afirmacion": "Los 43.225 euros que la UCO atribuye al PSOE como pagos que llegaron a Leire Díez corresponden a servicios de varios despachos de abogados contratados por el partido, y el PSOE desconocía que esos despachos contrataran después a Leire Díez.",
+    "veredicto_antes": "enganoso",
+    "veredicto_despues": "enganoso",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://es.wikipedia.org/wiki/Caso_Leire_D%C3%ADez",
+        "motivo": "Wikipedia: solo apoyo, nunca base única; se sustituye por la nota del CGPJ y por prensa."
+      },
+      {
+        "url": "https://www.vozpopuli.com/espana/politica/sanchez-reconoce-ante-jordi-wild-que-contrato-a-los-despachos-que-pagaron-a-leire-diez.html",
+        "motivo": "Medio de línea editorial marcada que solo recoge lo que dijo Sánchez en esta entrevista; ese dato se cubre con Europa Press (Infobae)."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Poder Judicial (CGPJ): El juez de la Audiencia Nacional rechaza atribuir por el momento la condición de investigado al PSOE",
+        "url": "https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Audiencia-Nacional/Noticias-Judiciales/El-juez-de-la-Audiencia-Nacional-rechaza-atribuir-por-el-momento-la-condicion-de-investigado-al-PSOE",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Euronews (14-7-2026): Caso Leire Díez, la UCO confirma pagos del PSOE por valor de 43.225 euros",
+        "url": "https://es.euronews.com/my-europe/2026/07/14/caso-leire-diez-la-uco-confirma-pagos-del-psoe-por-valor-de-43225-euros-a-traves-de-interm",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Infobae (Europa Press): Sánchez afirma que \"no sabe muy bien\" cuál es el \"delito\" de Leire Díez y reitera que no tuvo ninguna reunión con ella",
+        "url": "https://www.infobae.com/espana/agencias/2026/11/13/sanchez-afirma-que-no-sabe-muy-bien-cual-es-el-delito-de-leire-diez-y-reitera-que-no-tuvo-ninguna-reunion-con-ella/",
+        "tipo": "agencia"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Se mantiene «enganoso» y la confianza. Se añade la nota del CGPJ del 9-10-2026 (primaria), Euronews y Europa Press, y se precisa que 16.000 € pasaron por una consultora y no por un despacho y que el juez aún no ha determinado qué sabía el partido; se descartan Wikipedia y Vozpópuli."
+  },
+  {
+    "indice": 1,
+    "minuto": "1:20:52",
+    "afirmacion": "Pedro Sánchez nunca ha mantenido ninguna reunión con Leire Díez.",
+    "veredicto_antes": "no_verificable",
+    "veredicto_despues": "no_verificable",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Maldita.es: Qué sabemos de la supuesta \"reunión con P.S.\" anotada en una agenda atribuida a Leire Díez",
+        "url": "https://maldita.es/desinfo/20260608/leire-diez-se-reunio-con-pedro-sanchez-en-febrero-de-2025-segun-una-de-sus-agendas/",
+        "tipo": "verificador"
+      },
+      {
+        "titulo": "El Español: Las notas de Leire Díez \"reunión con P. S.\" y \"reunión con ZP\"",
+        "url": "https://www.elespanol.com/espana/tribunales/20260606/notas-leire-reunion-zp-refuerzan-teoria-acceso-sanchez-zapatero/1003744275987_0.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Se mantiene «no_verificable». Se añade Maldita.es (verificador) con la agenda oficial del 3-2-2025 y El Español con el matiz de que no consta asistencia; atribución comprobada (lo dice Sánchez; «Lady Di» en la transcripción es Leire Díez)."
+  },
+  {
+    "indice": 2,
+    "minuto": "1:20:52",
+    "afirmacion": "Leire Díez ha declarado en el Senado y ante la justicia que nunca tuvo una reunión con Pedro Sánchez.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "baja",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://es-us.noticias.yahoo.com/leire-d%C3%ADez-niega-v%C3%ADnculos-santos-131226617.html",
+        "motivo": "agregador: reproduce una pieza de Euronews (su versión canónica); se cita en su lugar el original en es.euronews.com."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Euronews: Leire Díez niega tener vínculos con Santos Cerdán y Pedro Sánchez en la comisión del caso Koldo",
+        "url": "https://es.euronews.com/2025/09/08/leire-diez-niega-tener-vinculos-con-santos-cerdan-y-pedro-sanchez-en-la-comision-del-caso-",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "elDiario.es: Leire Díez declara que mantuvo dos reuniones con Cerdán como “periodista” pero niega tener vinculación con el PSOE",
+        "url": "https://www.eldiario.es/politica/leire-diez-declara-mantuvo-reuniones-cerdan-periodista-niega-vinculacion-psoe_1_12775483.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Se sustituye Yahoo Noticias (agregador) por su original en Euronews y se añade elDiario.es con la declaración judicial del 17-11-2025, que antes no se localizaba: el veredicto vuelve a «mayormente_verdadero» (sin cambio frente al original) y la confianza sube de baja a media. No hay fuente primaria (diario de sesiones del Senado o acta judicial)."
+  },
+  {
+    "indice": 3,
+    "minuto": "1:19:50",
+    "afirmacion": "Pedro Sánchez dice no saber con exactitud qué ha hecho Leire Díez desde el punto de vista del delito, dando a entender que no está claro de qué se la investiga.",
+    "veredicto_antes": "enganoso",
+    "veredicto_despues": "enganoso",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://es.wikipedia.org/wiki/Caso_Leire_D%C3%ADez",
+        "motivo": "Wikipedia: solo apoyo, nunca base única; se sustituye por la nota del CGPJ y por prensa."
+      },
+      {
+        "url": "https://www.vozpopuli.com/espana/politica/sanchez-reconoce-ante-jordi-wild-que-contrato-a-los-despachos-que-pagaron-a-leire-diez.html",
+        "motivo": "Medio de línea editorial marcada que solo recoge lo que dijo Sánchez en esta entrevista; ese dato se cubre con Europa Press (Infobae)."
+      },
+      {
+        "url": "https://www.publico.es/politica/uco-confirma-psoe-realizo-pagos-total-43-225-euros-leire-diez.html",
+        "motivo": "Válido, pero trata de los pagos del PSOE y no de los delitos que se investigan a Díez; no respalda esta afirmación."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Poder Judicial (CGPJ): El juez de la Audiencia Nacional rechaza atribuir por el momento la condición de investigado al PSOE",
+        "url": "https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Audiencia-Nacional/Noticias-Judiciales/El-juez-de-la-Audiencia-Nacional-rechaza-atribuir-por-el-momento-la-condicion-de-investigado-al-PSOE",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "elDiario.es: El primer juez el caso Leire Díez lo eleva a la Audiencia Nacional porque allí se investiga a personas con más “jerarquía” en la trama",
+        "url": "https://www.eldiario.es/politica/primer-juez-caso-leire-diez-eleva-audiencia-nacional-investiga-personas-jerarquia-trama_1_13445330.html",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Orain: ¿Qué es el caso Leire Díez y de qué acusa ahora el juez Pedraz al PSOE?",
+        "url": "https://orain.eus/es/politica/2026/05/27/es-el-caso-leire-diez-investiga-el-juez-pedraz/",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Infobae (Europa Press): Sánchez afirma que \"no sabe muy bien\" cuál es el \"delito\" de Leire Díez y reitera que no tuvo ninguna reunión con ella",
+        "url": "https://www.infobae.com/espana/agencias/2026/11/13/sanchez-afirma-que-no-sabe-muy-bien-cual-es-el-delito-de-leire-diez-y-reitera-que-no-tuvo-ninguna-reunion-con-ella/",
+        "tipo": "agencia"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "ATRIBUCIÓN: la afirmación original convertía en hecho objetivo («no está claro de qué delito se acusa») lo que Sánchez dijo sobre su propio conocimiento; se reformula. Se mantiene «enganoso» por lo que consta en la causa y se sustituye Wikipedia por el CGPJ (primaria), elDiario.es y Orain."
+  },
+  {
+    "indice": 4,
+    "minuto": "1:20:52",
+    "afirmacion": "Pedro Sánchez dice haber consultado a los asesores jurídicos del PSOE sobre una acción judicial contra Leire Díez y que el partido no descarta ninguna si se prueba que fue afectado por una actividad ilícita.",
+    "veredicto_antes": "no_verificable",
+    "veredicto_despues": "no_verificable",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.vozpopuli.com/espana/politica/sanchez-reconoce-ante-jordi-wild-que-contrato-a-los-despachos-que-pagaron-a-leire-diez.html",
+        "motivo": "Medio de línea editorial marcada que solo recoge lo que dijo Sánchez en esta entrevista; ese dato se cubre con Europa Press (Infobae)."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Infobae (Europa Press): Sánchez afirma que \"no sabe muy bien\" cuál es el \"delito\" de Leire Díez y reitera que no tuvo ninguna reunión con ella",
+        "url": "https://www.infobae.com/espana/agencias/2026/11/13/sanchez-afirma-que-no-sabe-muy-bien-cual-es-el-delito-de-leire-diez-y-reitera-que-no-tuvo-ninguna-reunion-con-ella/",
+        "tipo": "agencia"
+      },
+      {
+        "titulo": "Orain: Sánchez says he didn't support Díez's \"walks\", he didn't know about them, and if he had, he wouldn't have accepted them",
+        "url": "https://orain.eus/en/politika/2026/06/05/sanchez-says-he-didnt-support-diezs-walks-he-didnt-know-about-them-and-even-if-he-had-he-wouldnt-have-accepted-them/",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "The Objective (29-6-2026): sobre la falta de querella del PSOE contra Leire Díez",
+        "url": "https://theobjective.com/espana/politica/2026-06-29/alusion-abogado-psoe-agenda-leire-partido-querelle/",
+        "tipo": "apoyo"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Se mantiene «no_verificable». Se reformula la afirmación para ajustarla a lo que dijo Sánchez («he preguntado a los asesores jurídicos», no «han estudiado emprender acciones») y se añaden Europa Press, Orain y The Objective; se descarta Vozpópuli."
+  },
+  {
+    "indice": 5,
+    "minuto": "1:21:53",
+    "afirmacion": "El Gobierno, a través del fondo de rescate de la SEPI durante la pandemia, rescató a todas las aerolíneas.",
+    "veredicto_antes": "falso",
+    "veredicto_despues": "falso",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.eleconomista.es/empresas-finanzas/noticias/10517586/05/20/Iberia-y-Vueling-logran-creditos-por-1010-millones-a-la-espera-del-ICO.html",
+        "motivo": "No se pudo abrir (acceso denegado, error 403 y también por curl), así que no se puede comprobar lo que dice; se retira la mención a los créditos con aval del ICO."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "SEPI: El Fondo de Solvencia ha recuperado el 66% de la financiación pública temporal (29-9-2026)",
+        "url": "https://www.sepi.es/es/sala-de-prensa/noticias/el-fondo-de-solvencia-ha-recuperado-el-66-de-la-financiacion-publica",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Se mantiene «falso» y se sube la confianza a alta: la nota de SEPI (29-9-2026) confirma las 28 beneficiarias y las listas de SEPI y Forbes no incluyen otras aerolíneas. Se descarta elEconomista (no se pudo abrir) y se retira la afirmación sobre los créditos ICO de Iberia y Vueling, que no se pudo comprobar."
+  },
+  {
+    "indice": 6,
+    "minuto": "1:21:53",
+    "afirmacion": "Las ayudas a las aerolíneas del fondo de la SEPI no fueron a fondo perdido sino préstamos.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "SEPI: El Fondo de Solvencia ha recuperado el 66% de la financiación pública temporal (29-9-2026)",
+        "url": "https://www.sepi.es/es/sala-de-prensa/noticias/el-fondo-de-solvencia-ha-recuperado-el-66-de-la-financiacion-publica",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Infobae (EFE): Plus Ultra, una de las 4 aerolíneas a las que la SEPI concedió préstamos durante la covid",
+        "url": "https://www.infobae.com/espana/agencias/2026/05/20/plus-ultra-una-de-las-4-aerolineas-a-las-que-la-sepi-concedio-prestamos-durante-la-covid/",
+        "tipo": "agencia"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Se mantiene «verdadero» y la confianza alta; se añade la nota de SEPI (primaria) y EFE, que confirman que son préstamos con devolución e intereses."
+  },
+  {
+    "indice": 7,
+    "minuto": "1:21:53",
+    "afirmacion": "El rescate de las compañías aéreas con el fondo de la SEPI salvó casi 8.500 puestos de trabajo.",
+    "veredicto_antes": "no_verificable",
+    "veredicto_despues": "no_verificable",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "SEPI: El Fondo de Solvencia ha recuperado el 66% de la financiación pública temporal (29-9-2026)",
+        "url": "https://www.sepi.es/es/sala-de-prensa/noticias/el-fondo-de-solvencia-ha-recuperado-el-66-de-la-financiacion-publica",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Se mantiene «no_verificable». Se añade la nota de SEPI (60.000 empleos en total, sin desglose por aerolínea); no se ha encontrado en SEPI, Moncloa (que no respondió) ni en prensa una cifra de empleos por aerolínea que permita comprobar los 8.500."
+  },
+  {
+    "indice": 8,
+    "minuto": "1:22:54",
+    "afirmacion": "Zapatero está investigado por dos asuntos: el rescate (préstamo) a Plus Ultra y unas joyas que aparecieron cuando la UDEF de la Policía Nacional registró su despacho.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Poder Judicial (CGPJ): La Audiencia Nacional cita al expresidente José Luis Rodríguez Zapatero como investigado por delitos de tráfico de influencias y otros conexos",
+        "url": "https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Audiencia-Nacional/Noticias-Judiciales/----La-Audiencia-Nacional-cita-al-expresidente-Jose-Luis-Rodriguez-Zapatero-como-investigado-por-delitos-de-trafico-de-influencias-y-otros-conexos",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Poder Judicial (CGPJ): El juez de la Audiencia Nacional abre una pieza separada para investigar al expresidente José Luis Rodríguez Zapatero en relación con las joyas halladas en el registro de su oficina de Ferraz",
+        "url": "https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Audiencia-Nacional/Noticias-Judiciales/El-juez-de-la-Audiencia-Nacional-abre-una-pieza-separada-para-investigar-al-expresidente-Jose-Luis-Rodriguez-Zapatero-en-relacion-con-las-joyas-halladas-en-el-registro-de-su-oficina-de-Ferraz",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Poder Judicial (CGPJ): El juez de la Audiencia Nacional del caso Plus Ultra rechaza investigar al expresidente del Gobierno José Luis Rodríguez Zapatero por malversación por quedarse con las joyas",
+        "url": "https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Audiencia-Nacional/Noticias-Judiciales/El-juez-de-la-Audiencia-Nacional-del-caso-Plus-Ultra-rechaza-investigar-al-expresidente-del-Gobierno-Jose-Luis-Rodriguez-Zapatero-por-malversacion-por-quedarse-con-las-joyas",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Se mantiene «mayormente_verdadero» y la confianza alta, ahora con tres notas del CGPJ (primarias): lo investigado en la causa principal es la presunta influencia en el rescate y no el préstamo, y las joyas van en una pieza separada."
+  },
+  {
+    "indice": 9,
+    "minuto": "1:22:54",
+    "afirmacion": "José Luis Rodríguez Zapatero nunca preguntó a Pedro Sánchez por Plus Ultra ni por ninguna empresa en sus conversaciones.",
+    "veredicto_antes": "no_verificable",
+    "veredicto_despues": "no_verificable",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Poder Judicial (CGPJ): La Audiencia Nacional cita al expresidente José Luis Rodríguez Zapatero como investigado por delitos de tráfico de influencias y otros conexos",
+        "url": "https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Audiencia-Nacional/Noticias-Judiciales/----La-Audiencia-Nacional-cita-al-expresidente-Jose-Luis-Rodriguez-Zapatero-como-investigado-por-delitos-de-trafico-de-influencias-y-otros-conexos",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Se mantiene «no_verificable». Se añade el auto descrito por el CGPJ (primaria), que no atribuye a Sánchez ningún contacto, y se retira de la explicación la mención a Ábalos y Koldo, que no se pudo comprobar."
+  }
+]

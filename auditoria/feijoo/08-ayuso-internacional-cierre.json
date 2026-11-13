@@ -1,0 +1,711 @@
+[
+  {
+    "indice": 0,
+    "minuto": "1:12:51",
+    "afirmacion": "A los actos del PP en esta precampaña y campaña de las elecciones generales de 2026 acuden los expresidentes Mariano Rajoy y José María Aznar y la presidenta madrileña Isabel Díaz Ayuso.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [],
+    "tiene_fuente_primaria": false,
+    "nota": "Veredicto igual. Acorto la explicación: quito la mención al acto del 13 de noviembre, que no he podido comprobar, y precisé que Aznar y Rajoy estaban en el público."
+  },
+  {
+    "indice": 1,
+    "minuto": "1:12:51",
+    "afirmacion": "Feijóo fue presidente de la Xunta de Galicia durante mucho tiempo.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [
+      {
+        "url": "https://es.wikipedia.org/wiki/Alberto_Núñez_Feijóo",
+        "motivo": "Wikipedia solo vale como apoyo y no se abrió; se sustituye por la web oficial de la Xunta."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Xunta de Galicia: Todos los presidentes",
+        "url": "https://www.xunta.gal/todos-os-presidentes",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Xunta de Galicia, Consellería de Presidencia: Informe de los resultados electorales",
+        "url": "https://conselleriadepresidencia.xunta.gal/es/relacions-institucionais-e-parlamentarias/informe-dos-resultados-electorais",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Veredicto igual. La única fuente era Wikipedia; la sustituyo por fuentes oficiales de la Xunta con las fechas del mandato."
+  },
+  {
+    "indice": 2,
+    "minuto": "1:13:56",
+    "afirmacion": "Con ocasión del caso Gürtel, Feijóo criticó públicamente a su partido diciendo que había que haberlo detectado antes y que el PP reaccionó tarde.",
+    "veredicto_antes": "no_verificable",
+    "veredicto_despues": "no_verificable",
+    "cambia_veredicto": false,
+    "confianza_antes": "baja",
+    "confianza_despues": "baja",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Público (2018): Reacciones a la sentencia de la Gürtel, en directo",
+        "url": "https://www.publico.es/politica/directo-reacciones-gurtel.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Veredicto igual (no verificable, baja). Abrí las dos fuentes y las dos confirman que no hay autocrítica de ese tipo; añado la reacción de 2018 y dejo de llamar EFE a la nota de Público de 2013 porque no lo comprobé."
+  },
+  {
+    "indice": 3,
+    "minuto": "1:13:56",
+    "afirmacion": "Pedro Sánchez ha expulsado a gente del partido, ha vetado candidatos y ha dejado sin efecto resultados de primarias.",
+    "veredicto_antes": "enganoso",
+    "veredicto_despues": "enganoso",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.moncloa.com/2026/09/02/oscar-lopez-primarias-psoe-alcala-3424594/",
+        "motivo": "Moncloa.com es un medio privado, no el Gobierno; fuente no válida según la política (además, el caso de Alcalá de Henares fue una designación directa sin votación previa)."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "elDiario.es (2024): Ferraz suspende las primarias del PSOE en Castilla y León",
+        "url": "https://www.eldiario.es/castilla-y-leon/politica/ferraz-suspende-legalidad-calendario-congreso-primarias-castilla-leon-psoe_1_11707887.html",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "elDiario.es Cantabria (2024): Ferraz resuelve el conflicto y da ganadora a Herrán en la elección de delegados",
+        "url": "https://www.eldiario.es/cantabria/ultimas-noticias/ferraz-resuelve-conflicto-cantabria-da-ganadora-herran-eleccion-delegados-congreso-federal_1_11764101.amp.html",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Vozpópuli (06/10/2026): Sánchez cancela todos los procesos de primarias en el PSOE a la espera del 29-N",
+        "url": "https://www.vozpopuli.com/amp/espana/politica/sanchez-cancela-todos-los-procesos-de-primarias-en-el-psoe-a-la-espera-de-los-resultados-del-29-n.html",
+        "tipo": "apoyo"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Veredicto igual (engañoso). Descarto Moncloa.com por ser un medio privado y sustituyo el ejemplo de Alcalá de Henares por casos que sí he podido abrir (Castilla y León y Cantabria, 2024); sigo sin hallar una anulación del resultado de primarias ya votadas."
+  },
+  {
+    "indice": 4,
+    "minuto": "1:13:56",
+    "afirmacion": "Antes de lograr la mayoría absoluta, Ayuso gobernaba en Madrid sin mayoría propia y dependiendo de Ciudadanos y de Vox.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.deia.eus/actualidad/2019/08/14/isabel-diaz-ayuso-investida-presidenta-4763292.amp.html",
+        "motivo": "No pudo abrirse (HTTP 406); sustituida por Diario de León, que sí se abrió."
+      },
+      {
+        "url": "https://maldita.es/malditodato/20230529/resultados-comunidad-madrid/",
+        "motivo": "La página abierta solo muestra el titular, sin escaños legibles; sustituida por el acta oficial de la Junta Electoral Provincial."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Diario de León (15/08/2019): Ayuso logra su investidura tras prometer que cumplirá con Vox",
+        "url": "https://www.diariodeleon.es/nacional/190815/425609/ayuso-logra-investidura-prometer-cumplira-vox.html",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "The Objective (18/06/2021): Ayuso es investida presidenta de Madrid con los votos de PP y Vox",
+        "url": "https://theobjective.com/espana/2021-06-18/ayuso-es-investida-presidenta-de-madrid-con-los-votos-de-pp-y-vox/",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Junta Electoral Provincial de Madrid (02/06/2023): Elecciones a la Asamblea de Madrid 2023, datos definitivos",
+        "url": "https://elecciones.comunidad.madrid/sites/default/files/total-madrid.pdf",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Veredicto y confianza iguales. Añado el acta oficial de 2023 (PP 70 de 135) y las investiduras de 2019 y 2021, y cambio dos fuentes que no se podían abrir o no mostraban cifras."
+  },
+  {
+    "indice": 5,
+    "minuto": "1:13:56",
+    "afirmacion": "Ayuso ganó con mayoría absoluta en Madrid y, a partir de ese momento, Feijóo defendió que fuese presidenta del PP de Madrid.",
+    "veredicto_antes": "enganoso",
+    "veredicto_despues": "enganoso",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://maldita.es/malditodato/20230529/resultados-comunidad-madrid/",
+        "motivo": "La página abierta solo muestra el titular, sin escaños legibles; sustituida por el acta oficial de la Junta Electoral Provincial."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "El Español (21/05/2022): crónica del congreso del PP de Madrid con Feijóo y Ayuso",
+        "url": "https://www.elespanol.com/espana/20220521/congreso-pp-madrid-alberto-nunez-feijoo-isabel/674282567_10.html",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Vozpópuli (16/03/2022): crónica sobre Feijóo, Ayuso y el congreso del PP de Madrid",
+        "url": "https://www.vozpopuli.com/espana/feijoo-ayuso-madrid.html",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Junta Electoral Provincial de Madrid (02/06/2023): Elecciones a la Asamblea de Madrid 2023, datos definitivos",
+        "url": "https://elecciones.comunidad.madrid/sites/default/files/total-madrid.pdf",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Veredicto igual (engañoso). Añado el acta oficial de 2023 y dos fuentes que muestran que Feijóo promovió la presidencia de Ayuso en marzo-mayo de 2022 sin citar la mayoría absoluta; el Vozpópuli de marzo de 2022 recoge fuentes del entorno de Ayuso, no citas directas."
+  },
+  {
+    "indice": 6,
+    "minuto": "1:15:04",
+    "afirmacion": "La Comunidad de Madrid ha adquirido un inmueble para que sea sede provisional de la Presidencia mientras se reforman sus instalaciones.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Europa Press vía Menorca.info (31/07/2026): El Gobierno de Ayuso defiende que con el ático se actuó con transparencia",
+        "url": "https://www.menorca.info/actualidad/nacional/2026/07/31/2681031/gobierno-ayuso-defiende-con-atico-chamberi-actuo-transparencia-siente-pleno-apoyo-del-pp.html",
+        "tipo": "agencia"
+      },
+      {
+        "titulo": "Vozpópuli: El Gobierno de Ayuso venderá el ático comprado como sede y dedicará el dinero a la reconstrucción tras los incendios",
+        "url": "https://www.vozpopuli.com/espana/madrid/el-gobierno-de-ayuso-vendera-el-atico-comprado-como-sede-y-dedicara-el-dinero-a-la-reconstruccion-tras-los-incendios.html",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Comunidad de Madrid, Portal de Transparencia: Planifica Madrid",
+        "url": "https://www.comunidad.madrid/transparencia/unidad-organizativa-responsable/planifica-madrid-proyectos-y-obras-sa",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Veredicto igual (verdadero) pero bajo la confianza a media: no pude abrir el expediente de la Comunidad (el portal solo enlaza a él) y las cifras salen de prensa y agencias; añado los motivos que dio la Comunidad (obras de la Real Casa de Correos) y la venta posterior."
+  },
+  {
+    "indice": 7,
+    "minuto": "1:16:06",
+    "afirmacion": "La Comunidad de Madrid sostiene que el inmueble adquirido sí puede utilizarse como oficina.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "EFE vía Menorca.info (29/07/2026): El PSOE pide explicaciones por la compra de un ático en Chamberí",
+        "url": "https://www.menorca.info/actualidad/nacional/2026/07/29/2679311/psoe-pide-explicaciones-por-compra-atico-chamberi-para-oficina-temporal-ayuso.html",
+        "tipo": "agencia"
+      },
+      {
+        "titulo": "Vozpópuli: El Gobierno de Ayuso venderá el ático comprado como sede y dedicará el dinero a la reconstrucción tras los incendios",
+        "url": "https://www.vozpopuli.com/espana/madrid/el-gobierno-de-ayuso-vendera-el-atico-comprado-como-sede-y-dedicara-el-dinero-a-la-reconstruccion-tras-los-incendios.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Veredicto igual. Matizo la explicación: la Comunidad llamó «oficina» al ático al principio, pero su expediente solo defiende el uso como despacho; añado la fuente de agencia del 29 de julio."
+  },
+  {
+    "indice": 8,
+    "minuto": "1:16:06",
+    "afirmacion": "Feijóo vivió 13 años en la residencia oficial del presidente de la Xunta (Monte Pío), que no construyó él.",
+    "veredicto_antes": "enganoso",
+    "veredicto_despues": "enganoso",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://es.wikipedia.org/wiki/Alberto_Núñez_Feijóo",
+        "motivo": "Wikipedia solo vale como apoyo y no se abrió; no documenta dónde vivía."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Infobae (14/02/2024): La «Moncloa gallega»: una mansión ideada por Manuel Fraga para dignificar la Xunta y que Feijóo y Rueda abocaron al desuso",
+        "url": "https://www.infobae.com/espana/2024/02/14/la-moncloa-gallega-una-mansion-ideada-por-manuel-fraga-para-dignificar-la-xunta-y-que-feijoo-y-rueda-abocaron-al-desuso/",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "El Correo Gallego (17/04/2009): Feijóo fijará su residencia habitual en Monte Pío",
+        "url": "https://www.elcorreogallego.es/hemeroteca/feijoo-fijara-residencia-habitual-monte-pio-IBCG417285",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Xunta de Galicia: Todos los presidentes",
+        "url": "https://www.xunta.gal/todos-os-presidentes",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Veredicto y confianza iguales (engañoso, media). Sustituyo Wikipedia por dos fuentes más que confirman que se mudó en 2009 pero dejó de residir allí; las fechas exactas de ese traslado no constan."
+  },
+  {
+    "indice": 9,
+    "minuto": "1:16:06",
+    "afirmacion": "Emilio Pérez Touriño, presidente socialista de la Xunta y predecesor de Feijóo, vivió también en la residencia oficial y gobernó cuatro años.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [
+      {
+        "url": "https://es.wikipedia.org/wiki/Alberto_Núñez_Feijóo",
+        "motivo": "Wikipedia solo vale como apoyo y no se abrió; no trata de Touriño."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Xunta de Galicia: Todos los presidentes",
+        "url": "https://www.xunta.gal/todos-os-presidentes",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Infobae (14/02/2024): La «Moncloa gallega»: una mansión ideada por Manuel Fraga para dignificar la Xunta y que Feijóo y Rueda abocaron al desuso",
+        "url": "https://www.infobae.com/espana/2024/02/14/la-moncloa-gallega-una-mansion-ideada-por-manuel-fraga-para-dignificar-la-xunta-y-que-feijoo-y-rueda-abocaron-al-desuso/",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Veredicto igual. Subo la confianza a alta porque ahora hay fuente oficial de las fechas de Touriño y dos medios que confirman que vivió en Monte Pío; sustituyo Wikipedia."
+  },
+  {
+    "indice": 10,
+    "minuto": "1:17:07",
+    "afirmacion": "La residencia oficial del presidente de la Xunta se construyó en el año 2000.",
+    "veredicto_antes": "no_verificable",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": true,
+    "confianza_antes": "baja",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Infobae (14/02/2024): La «Moncloa gallega»: una mansión ideada por Manuel Fraga para dignificar la Xunta y que Feijóo y Rueda abocaron al desuso",
+        "url": "https://www.infobae.com/espana/2024/02/14/la-moncloa-gallega-una-mansion-ideada-por-manuel-fraga-para-dignificar-la-xunta-y-que-feijoo-y-rueda-abocaron-al-desuso/",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Revista Arquitectura nº 344 (COAM, 2006, pp. 22-27): Presidencia de la Xunta de Galicia [2002], Manuel Gallego Jorreto",
+        "url": "https://www.coam.org/media/Default Files/fundacion/biblioteca/revista-arquitectura-100/2000-2008/docs/revista-articulos/revista-arquitectura-2006-n344-pag22-27.pdf",
+        "tipo": "apoyo"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Cambia de no verificable a casi cierto: ahora hay fechas (obras adjudicadas en 2001, edificio de 2002), así que «2000» es una aproximación con un error de uno o dos años. El DOG que ya estaba es oficial pero solo cubre la urbanización del parque."
+  },
+  {
+    "indice": 11,
+    "minuto": "1:18:08",
+    "afirmacion": "Feijóo no sabe inglés.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "elDiario.es (18/06/2026): Feijóo culpa a la «escuela rural» de su mal inglés",
+        "url": "https://www.eldiario.es/politica/feijoo-culpa-escuela-rural-mal-ingles_1_13313786.html",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "El Español (13/11/2026): Feijóo a Jordi Wild entre bromas y veras",
+        "url": "https://www.elespanol.com/espana/politica/20261113/feijoo-gusta-jordi-wild-ingles-importante-admito-no-hecho-esfuerzos-insulto-ningun-idioma/1003744456829_0.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Veredicto igual. Añado un segundo medio sobre El Hormiguero y la crónica de esta misma entrevista, donde Feijóo admite que no ha hecho esfuerzos por aprender inglés."
+  },
+  {
+    "indice": 12,
+    "minuto": "1:18:08",
+    "afirmacion": "Feijóo pertenece a la primera generación que cursó la EGB y el BUP.",
+    "veredicto_antes": "no_verificable",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": true,
+    "confianza_antes": "baja",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://es.wikipedia.org/wiki/Educación_General_Básica",
+        "motivo": "Wikipedia solo vale como apoyo y no se abrió; no dice nada de Feijóo ni del calendario de BUP."
+      },
+      {
+        "url": "https://www.mclibre.org/consultar/legislacion/files/boe/BOE-1975-03-22-O-plan-estudios-bachillerato.pdf",
+        "motivo": "mclibre.org es una web personal con contenido copiado y la política no la admite; se sustituye por una copia archivada de boe.es en Internet Archive, que sí se abrió."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Xunta de Galicia: Los anteriores presidentes",
+        "url": "https://www.xunta.gal/es/os-anteriores-presidentes",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "BOE (copia archivada en Internet Archive): Orden de 22 de marzo de 1975, plan de estudios del Bachillerato (BOE núm. 93, 18/04/1975)",
+        "url": "https://web.archive.org/web/20240519175708/https://www.boe.es/boe/dias/1975/04/18/pdfs/A08049-08068.pdf",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Universitat Rovira i Virgili, Diccionario de historia de la enseñanza: Ley General de Educación de 1970",
+        "url": "https://www.grelinap.recerca.urv.cat/ca/projectes/diccionario-historia-ensenanza-frances-espana/entradas/130/ley-general-de-educacion-de-1970",
+        "tipo": "apoyo"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Cambia de no verificable a casi cierto: con su fecha de nacimiento (Xunta) y los calendarios de EGB (1970-71) y de BUP (1975-76) encaja en las primeras cohortes. El BOE núm. 93 de 1975 lo leí en una copia archivada de boe.es en Internet Archive (boe.es no respondía) y dice «Año académico 1975-76: se implantará con carácter general el primer curso del Bachillerato»; la confianza queda en media por ser una deducción."
+  },
+  {
+    "indice": 13,
+    "minuto": "1:19:09",
+    "afirmacion": "Felipe González dijo hace poco que uno puede ser tonto en varios idiomas.",
+    "veredicto_antes": "no_verificable",
+    "veredicto_despues": "no_verificable",
+    "cambia_veredicto": false,
+    "confianza_antes": "baja",
+    "confianza_despues": "baja",
+    "fuentes_descartadas": [
+      {
+        "url": "https://es.ara.cat/politica/feijoo-renuncia-ingles-confia-movil-traduce-directamente_1_5773294.html",
+        "motivo": "Trata del inglés de Feijóo en El Hormiguero y no atribuye la frase a Felipe González."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "El Español (13/11/2026): Feijóo a Jordi Wild entre bromas y veras",
+        "url": "https://www.elespanol.com/espana/politica/20261113/feijoo-gusta-jordi-wild-ingles-importante-admito-no-hecho-esfuerzos-insulto-ningun-idioma/1003744456829_0.html",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Confilegal (03/11/2016): Legal Management Forum, innovación, humor y el «paletismo» del inglés",
+        "url": "https://confilegal.com/20161103-legal-management-forum-innovacion-humor-paletismo-del-ingles/",
+        "tipo": "apoyo"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Veredicto igual (no verificable, baja). Cambio una fuente que no mencionaba a González por otras dos: una confirma que Feijóo lo dijo en la entrevista y otra muestra que la frase circula sin atribución desde 2016."
+  },
+  {
+    "indice": 14,
+    "minuto": "1:19:09",
+    "afirmacion": "Polonia tiene frontera con Rusia, en una situación de enorme tensión.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [
+      {
+        "url": "https://es.wikipedia.org/wiki/Polonia",
+        "motivo": "Wikipedia solo vale como apoyo y no se abrió; sustituida por prensa reciente."
+      },
+      {
+        "url": "https://www.hola.com/al-dia/20260414895243/vuelta-mili-espana-sueldo-2600-euros-europa-modelo-alemania/",
+        "motivo": "Se abrió: solo trata del servicio militar en Europa, que era la premisa de Wild y se retira de la afirmación; no sirve para la frontera polaca."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Stars and Stripes (04/11/2026): la OTAN advierte a Polonia de posibles provocaciones rusas cerca de Kaliningrado",
+        "url": "https://www.stripes.com/theaters/europe/2026-11-04/poland-russia-border-threat-eucom-23360076.html",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "El Español (03/10/2026): Kaliningrado expone el punto ciego de la OTAN frente a Rusia",
+        "url": "https://www.elespanol.com/mundo/20261003/kaliningrado-expone-punto-ciego-otan-frente-rusia-cuestion-tiempo-bajas-suelo-ue/1003744405468_0.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "ATRIBUCIÓN: la segunda mitad de la afirmación original (varios países europeos se plantean volver al servicio militar) la planteó Wild, no Feijóo, y la retiro; el veredicto sobre la frontera no cambia. No pude abrir gov.pl (agotó el tiempo de espera), así que no hay fuente primaria polaca."
+  },
+  {
+    "indice": 15,
+    "minuto": "1:20:12",
+    "afirmacion": "Ucrania todavía no es miembro de la Unión Europea.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Comisión Europea (13/10/2026): EU opens accession negotiations with Ukraine on internal market, competitiveness and inclusive growth",
+        "url": "https://enlargement.ec.europa.eu/news/eu-opens-accession-negotiations-ukraine-internal-market-competitiveness-and-inclusive-growth-2026-10-13_en",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Veredicto igual. Añado la nota oficial de la Comisión Europea del 13 de octubre de 2026; la página no usa la palabra «candidato», pero sí habla del proceso de adhesión abierto."
+  },
+  {
+    "indice": 16,
+    "minuto": "1:21:15",
+    "afirmacion": "Donald Trump acaba de sufrir un duro revés electoral: los demócratas le han ganado ampliamente en las últimas elecciones (midterms del 3 de noviembre de 2026).",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.wdbo.com/news/trending/election-2026-democrats-capture-both-houses-congress/5ILOWTVABVDPZFYP7VBBCX4EWE/?outputType=amp",
+        "motivo": "La página no cargó desde la ubicación del auditor («This website is unavailable in your location») y no se pudo comprobar."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "NBC New York: Decision 2026, Democrats control of Congress",
+        "url": "https://www.nbcnewyork.com/elections/democrats-control-of-congress/6567437/",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Veredicto igual (verdadero). Bajo la confianza a media porque no encontré resultados oficiales certificados (diez días después de la votación) y el recuento de escaños de la explicación anterior (54-44) no pude reproducirlo en las fuentes abiertas, así que lo quito."
+  },
+  {
+    "indice": 17,
+    "minuto": "1:22:17",
+    "afirmacion": "Abascal, junto a otros, construyó un partido (Vox) que en 8-10 años se convirtió en la tercera fuerza política de España.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [
+      {
+        "url": "https://es.wikipedia.org/wiki/Vox_(partido_político)",
+        "motivo": "Wikipedia solo vale como apoyo y no se abrió; sustituida por BOE y prensa."
+      },
+      {
+        "url": "https://es.wikipedia.org/wiki/Elecciones_generales_de_España_de_2023",
+        "motivo": "Wikipedia solo vale como apoyo y no se abrió; sustituida por prensa que sí se abrió."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Junta Electoral Central (BOE núm. 289, 02/12/2019): Resultados de las elecciones generales de 10 de noviembre de 2019",
+        "url": "https://www.juntaelectoralcentral.es/cs/jec/documentos/Generales_2019-R_Resultados.pdf",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Orain (10/11/2019): El PSOE gana las elecciones, pero la extrema derecha ya es la tercera fuerza",
+        "url": "https://orain.eus/es/politica/elecciones/elecciones-generales/2019/11/10/resultados-elecciones-generales-10n-el-psoe-gana-derecha-sube/",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Orain (23/07/2023): Resultados de las elecciones generales al Congreso y Senado 2023",
+        "url": "https://orain.eus/es/politica/2023/07/23/resultados-elecciones-generales-al-congreso-y-senado-en-espana-2023/",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Valencia Plaza: Vox, diez años con Abascal a punto de iniciar nuevo mandato y con dirigentes históricos fuera",
+        "url": "https://valenciaplaza.com/valenciaplaza/vox-diez-anos-abascal-punto-iniciar-nuevo-mandato-dirigentes-historicos-fuera",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Veredicto y confianza iguales. Cambio las dos Wikipedias por el BOE de 2019 (52 escaños de Vox), prensa de 2019 y 2023 para el puesto de tercera fuerza, y una crónica con la fecha de registro de 2013."
+  },
+  {
+    "indice": 18,
+    "minuto": "1:23:17",
+    "afirmacion": "Vox no tiene ni un solo concejal en Galicia; tenía uno en el ayuntamiento de Avión (Ourense) que se pasó al PP; tampoco tiene alcaldes ni diputados en Galicia.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "DOG nº 47 (06/03/2024): Resultados y diputados proclamados electos en las elecciones al Parlamento de Galicia del 18 de febrero de 2024",
+        "url": "https://www.xunta.gal/dog/Publicados/2024/20240306/AnuncioG2453-050324-1_es.html",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Veredicto y confianza iguales. Añado el DOG oficial (Vox, 34.045 votos y ningún escaño); lo de «ni concejales ni alcaldes» sigue apoyándose solo en Público, y la lista oficial de concejales no pude abrirla."
+  },
+  {
+    "indice": 19,
+    "minuto": "1:23:17",
+    "afirmacion": "Feijóo llegó a la presidencia del PP en 2022 y su primer encuentro con Sánchez, de tono normal, fue en mayo de ese año.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://es.wikipedia.org/wiki/Alberto_Núñez_Feijóo",
+        "motivo": "Wikipedia solo vale como apoyo y no se abrió."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "El Independiente (11/05/2022): El Gobierno rechaza el pacto de Estado de Feijóo sobre la OTAN y la seguridad",
+        "url": "https://www.elindependiente.com/espana/2022/05/11/el-gobierno-rechaza-el-pacto-de-estado-de-feijoo-sobre-la-otan-y-la-seguridad/amp/",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Veredicto igual. Añado la fuente que muestra tensión en mayo de 2022 y quito Wikipedia; sin fuente primaria (la nota de La Moncloa del 7 de abril no respondió)."
+  },
+  {
+    "indice": 20,
+    "minuto": "1:23:17",
+    "afirmacion": "En las elecciones andaluzas de junio de 2022 el PP logró mayoría absoluta por primera vez en la historia.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [
+      {
+        "url": "https://es.ara.cat/politica/pp-arrasa-obtiene-mayoria-absoluta-andalucia_1_4409041.html",
+        "motivo": "Recoge solo una proyección con el 55 % del voto (55 escaños) y no dice que sea la primera mayoría absoluta del PP."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "BOJA nº 132 (julio de 2022): Resultados generales y por circunscripciones de las elecciones al Parlamento de Andalucía del 19 de junio de 2022",
+        "url": "https://www.juntadeandalucia.es/boja/2022/132/1",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Veredicto igual. Sustituyo Ara (solo daba una proyección) por el BOJA oficial, donde se cuentan 58 diputados del PP de 109; «la primera vez» descansa en RTVC."
+  },
+  {
+    "indice": 21,
+    "minuto": "1:24:33",
+    "afirmacion": "En julio y agosto de 2022 el Gobierno lanzó una campaña contra Feijóo bajo la fórmula «ignorancia o mala fe», repetida por 11 ministros.",
+    "veredicto_antes": "no_verificable",
+    "veredicto_despues": "no_verificable",
+    "cambia_veredicto": false,
+    "confianza_antes": "baja",
+    "confianza_despues": "baja",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "El Debate (13/08/2022): Bolaños asegura que Feijóo baila al son de Ayuso en contra de Europa en asuntos energéticos",
+        "url": "https://www.eldebate.com/espana/20220813/bolanos-asegura-feijoo-baila-son-ayuso-contra-europa-asuntos-energeticos_54534.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Veredicto igual (no verificable, baja). Fecho el origen de la fórmula (Montero, 1 de agosto de 2022) y añado un ataque ministerial de agosto, pero sigo sin hallar el recuento de 11 ministros."
+  },
+  {
+    "indice": 22,
+    "minuto": "1:26:34",
+    "afirmacion": "La campaña electoral de las elecciones generales del 29 de noviembre de 2026 empieza a las 12 de la noche (la entrevista se grabó el día previo).",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Junta Electoral Central: Calendario electoral de las elecciones generales del 29 de noviembre de 2026",
+        "url": "https://www.juntaelectoralcentral.es/cs/jec/documentos/eg2026_calendario.pdf",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Junta Electoral Central: Elecciones generales 2026",
+        "url": "https://www.juntaelectoralcentral.es/cs/jec/eleccionesEnCurso/Elecciones_generales_2026",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Veredicto igual. Añado el calendario oficial de la Junta Electoral Central; el BOE no respondió desde mi acceso, así que el número del Real Decreto sale de la página de la Junta Electoral."
+  },
+  {
+    "indice": 23,
+    "minuto": "1:26:34",
+    "afirmacion": "Feijóo lleva gestionando cargos públicos durante los últimos 30 años.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [
+      {
+        "url": "https://es.wikipedia.org/wiki/Alberto_Núñez_Feijóo",
+        "motivo": "Wikipedia solo vale como apoyo y no se abrió; sustituida por la biografía oficial de la Xunta."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Xunta de Galicia: Los anteriores presidentes (trayectoria de Feijóo)",
+        "url": "https://www.xunta.gal/es/os-anteriores-presidentes",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "elDiario.es: Alberto Núñez Feijóo, breve biografía de un no gallego",
+        "url": "https://www.eldiario.es/politica/alberto-nunez-feijoo-breve-biografia-no-gallegos_1_8901349.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Veredicto igual; subo la confianza a alta porque ahora la biografía oficial de la Xunta confirma las fechas (desde julio de 1991)."
+  },
+  {
+    "indice": 24,
+    "minuto": "1:27:41",
+    "afirmacion": "En Galicia, Feijóo ganaba con mayorías absolutas consecutivas.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [
+      {
+        "url": "https://es.wikipedia.org/wiki/Elecciones_al_Parlamento_de_Galicia_de_2016",
+        "motivo": "Wikipedia solo vale como apoyo y no se abrió; sustituida por la tabla oficial de la Xunta."
+      },
+      {
+        "url": "https://es.wikipedia.org/wiki/Alberto_Núñez_Feijóo",
+        "motivo": "Wikipedia solo vale como apoyo y no se abrió."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Xunta de Galicia, Consellería de Presidencia: Informe de los resultados electorales",
+        "url": "https://conselleriadepresidencia.xunta.gal/es/relacions-institucionais-e-parlamentarias/informe-dos-resultados-electorais",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Veredicto igual. Sustituyo dos páginas de Wikipedia por la tabla oficial de la Xunta con los escaños del PP de 2009 a 2024."
+  }
+]
