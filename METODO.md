@@ -70,6 +70,9 @@ que no esté en la explicación. Se guarda como array de cadenas en
 
 ## 5. Generar la web y publicar
 
+Cuando todos los bloques y resúmenes estén completos, añade `"publicar": true` a `entrevistas/<slug>/meta.json`
+(el generador ignora las entrevistas que no lo tienen, para no publicar verificaciones a medias).
+
 ```sh
 python3 web-src/build.py                                  # genera web/index.html y web/<slug>/index.html
 git add entrevistas/<slug> web && git commit -m "Verificación de la entrevista a <invitado>" && git push

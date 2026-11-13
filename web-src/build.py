@@ -168,7 +168,11 @@ def main():
         if not any((carpeta / "resultados").glob("*.json")):
             print(f"{carpeta.name}: sin resultados todavía, se omite")
             continue
-        hechas.append(pagina_entrevista(carpeta, json.loads(ruta_meta.read_text(encoding="utf-8"))))
+        meta = json.loads(ruta_meta.read_text(encoding="utf-8"))
+        if not meta.get("publicar"):
+            print(f"{carpeta.name}: meta.json sin \"publicar\": true (verificación en curso), se omite")
+            continue
+        hechas.append(pagina_entrevista(carpeta, meta))
     hechas.sort(key=lambda m: m["programa"], reverse=True)
     tarjetas = "".join(
         f'<a class="entrevista" href="/{e(m["slug"])}"><p class="prog">{e(m["programa"])} · {e(m["fecha"])} · {e(m["duracion"])}</p>'
