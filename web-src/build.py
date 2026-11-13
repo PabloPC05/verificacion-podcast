@@ -17,6 +17,7 @@ from pathlib import Path
 from urllib.parse import urlparse
 
 import api_publica
+import panel as estadisticas
 
 RAIZ = Path(__file__).resolve().parent.parent
 ENTREVISTAS = RAIZ / "entrevistas"
@@ -146,6 +147,9 @@ SCALAR = "1.76.2"  # @scalar/api-reference, versión fijada: subirla a mano tras
 #   curl -s https://cdn.jsdelivr.net/npm/@scalar/api-reference@<versión>/dist/browser/standalone.js \
 #     | openssl dgst -sha384 -binary | openssl base64 -A
 SCALAR_SRI = "sha384-mCh2A/B6vkfhiHyzwBZm7lbFmEK5fE/96Kbtk+RH1zei1P/XEt0I2MCiG6WfZdor"
+# Umami Cloud (estadísticas de visitas, sin cookies). Vacío = la web sale sin seguimiento.
+# El ID es público (va en el HTML); la clave de la API no: vive en Vercel como UMAMI_API_KEY.
+UMAMI_ID = ""
 LOGOS = {"PSOE": "psoe.svg", "PP": "pp.svg", "Frente Amplio": "frente-amplio.svg"}
 # Retratos de web-src/fotos: recortes cuadrados de 320 px, centrados en la cara, de las miniaturas de Wikimedia Commons.
 FOTOS = {
@@ -199,11 +203,82 @@ DEFINICIONES = {
 }
 
 
-def rellenar(plantilla, **valores):
-    plantilla = plantilla.replace("@@HEAD_MODO@@", HEAD_MODO)
+PIE = ('<p class="pie-quien"><a href="/quien">Proyecto personal e independiente de Pablo Pardo Cotos, '
+       'sin relación con The Wild Project ni con ningún partido.</a></p>')
+REPO_PABLO = "https://github.com/PabloPC05"
+
+
+def rellenar(plantilla, analitica=True, **valores):
+    plantilla = plantilla.replace("@@HEAD_MODO@@", HEAD_MODO + (estadisticas.seguimiento(UMAMI_ID, BASE) if analitica else "")).replace("@@PIE@@", PIE)
     for k, v in valores.items():
         plantilla = plantilla.replace(f"@@{k}@@", str(v))
     return plantilla
+
+
+ICONOS = ("favicon.svg", "favicon-32.png", "apple-touch-icon.png")  # van a la raíz de web/; el resto de web-src/compartir/ a web/compartir/
+IMAGEN_GENERAL = "general"
+IMAGEN_ANCHO, IMAGEN_ALTO = 1200, 630
+NOMBRE_SITIO = "Verificación de las entrevistas de The Wild Project"
+
+
+def cabecera(ruta, titulo, descripcion, imagen=IMAGEN_GENERAL, titulo_social=None, alt=None):
+    """Bloque del <head> de cada página: <title>, descripción, canonical, Open Graph, Twitter Card e iconos.
+
+    `ruta` es la ruta de la página en el sitio ("/", "/sanchez"...); las URL salen absolutas con BASE.
+    `imagen` es el nombre (sin .png) de una imagen de web/compartir/. Todo se escapa aquí."""
+    url = BASE + ruta
+    foto = f"{BASE}/compartir/{imagen}.png"
+    social = titulo_social or titulo
+    alt = alt or "Verificación dato a dato de las entrevistas electorales de The Wild Project"
+
+    def meta(clave, valor, atributo="property"):
+        return f'<meta {atributo}="{clave}" content="{e(str(valor), quote=True)}">'
+
+    lineas = [
+        f"<title>{e(titulo)}</title>",
+        meta("description", descripcion, "name"),
+        f'<link rel="canonical" href="{e(url, quote=True)}">',
+        meta("og:type", "website"), meta("og:site_name", NOMBRE_SITIO), meta("og:locale", "es_ES"),
+        meta("og:title", social), meta("og:description", descripcion), meta("og:url", url),
+        meta("og:image", foto), meta("og:image:width", IMAGEN_ANCHO), meta("og:image:height", IMAGEN_ALTO),
+        meta("og:image:alt", alt),
+        meta("twitter:card", "summary_large_image", "name"), meta("twitter:title", social, "name"),
+        meta("twitter:description", descripcion, "name"), meta("twitter:image", foto, "name"),
+        meta("twitter:image:alt", alt, "name"),
+        '<link rel="icon" href="/favicon.svg" type="image/svg+xml">',
+        '<link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">',
+        '<link rel="apple-touch-icon" href="/apple-touch-icon.png">',
+    ]
+    return "\n".join(lineas)
+
+
+def imagen_de(slug):
+    """Imagen para compartir de una entrevista; si falta, la general (y se avisa)."""
+    if (RAIZ / "web-src" / "compartir" / f"{slug}.png").exists():
+        return slug
+    print(f"AVISO: falta web-src/compartir/{slug}.png; se usa la imagen general. "
+          "Ejecuta: uv run --with pillow python herramientas/imagenes_compartir.py")
+    return IMAGEN_GENERAL
+
+
+def copiar_compartir():
+    """Copia a web/ las imágenes y los iconos generados por herramientas/imagenes_compartir.py."""
+    origen = RAIZ / "web-src" / "compartir"
+    (SALIDA / "compartir").mkdir(parents=True, exist_ok=True)
+    for f in sorted(origen.glob("*")) if origen.is_dir() else []:
+        shutil.copy(f, SALIDA / ("" if f.name in ICONOS else "compartir") / f.name)
+    if not (SALIDA / "compartir" / f"{IMAGEN_GENERAL}.png").exists():
+        print("AVISO: falta web-src/compartir/general.png: las páginas apuntarán a una imagen que no existe. "
+              "Ejecuta: uv run --with pillow python herramientas/imagenes_compartir.py")
+
+
+def indexacion(hechas):
+    """robots.txt y sitemap.xml con las páginas publicadas."""
+    rutas = ["/", "/verificalo", "/quien", "/api"] + [r for m in hechas for r in (f'/{m["slug"]}', f'/{m["slug"]}/transcripcion')]
+    (SALIDA / "sitemap.xml").write_text(
+        '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+        + "".join(f"  <url><loc>{e(BASE + r)}</loc></url>\n" for r in rutas) + "</urlset>\n", encoding="utf-8")
+    (SALIDA / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {BASE}/sitemap.xml\n", encoding="utf-8")
 
 
 def preparar(meta):
@@ -267,7 +342,7 @@ def menu(entrevistas, actual=None):
             f'<a href="/{s}/transcripcion">{ICONO_TEXTO}<span>Transcripción</span></a></div>'
             f'<p class="rot">Temas <span>· en rojo, cuántas falsas o engañosas</span></p><ol class="lista-temas">{temas}</ol></div></details>')
     return ('<header class="menu"><div class="ancho"><div class="m1"><a class="sello" href="/" title="Todas las entrevistas">Verificación</a>'
-            + "".join(partes) + '<a class="dcha" href="/verificalo">Verifícalo tú</a><a href="/api">API</a>'
+            + "".join(partes) + '<a class="dcha" href="/verificalo">Verifícalo tú</a><a href="/quien">Quién lo hace</a><a href="/api">API</a>'
             f'<a href="{REPO}" target="_blank" rel="noopener noreferrer">GitHub ↗</a>' + BOTON_MODO + '</div></div></header>' + JS_MENU)
 
 
@@ -423,8 +498,14 @@ def pagina_entrevista(m, entrevistas):
     nota_excl = (f' Se han dejado fuera {excl} afirmaciones sin interés para el debate público (datos personales, anécdotas, '
                  f'duración de cargos); están en <a href="{REPO}/blob/main/entrevistas/{m["slug"]}/excluidas.json" target="_blank" '
                  f'rel="noopener noreferrer">esta lista</a>.') if excl else ""
+    cab = cabecera(
+        f'/{m["slug"]}', f'Verificación: {m["invitado"]} en The Wild Project',
+        f'{m["malas"]} de {m["suma"]} afirmaciones de {m["invitado"]} en {m["programa"]} son falsas o engañosas. '
+        'Cada una enlaza al minuto exacto del vídeo, con su justificación y sus fuentes.',
+        imagen_de(m["slug"]), titulo_social=f'{m["invitado"]} en The Wild Project, minuto a minuto',
+        alt=f'Verificación dato a dato: {m["invitado"]} ({m.get("partido") or "sin partido"}) en {m["programa"]}')
     pagina = rellenar(
-        PLANTILLA, FAB=FAB_LEYENDA, BARRA=barra_reparto(m, "barra-reparto grande"), RETRATO=retrato(m) or "", CREDITOS=creditos_fotos([m]), MENU=menu(entrevistas, m["slug"]), CSS_MENU=CSS_MENU, LEYENDA=LEYENDA, NOTA_EXCL=nota_excl,
+        PLANTILLA, CABECERA=cab, FAB=FAB_LEYENDA, BARRA=barra_reparto(m, "barra-reparto grande"), RETRATO=retrato(m) or "", CREDITOS=creditos_fotos([m]), MENU=menu(entrevistas, m["slug"]), CSS_MENU=CSS_MENU, LEYENDA=LEYENDA, NOTA_EXCL=nota_excl,
         FILTROS=filtros(m, '<span class="tema-actual" id="tema-actual"></span>'), SUMA=m["suma"], MALAS=m["malas"],
         FALSAS=m["total"]["falso"], ENGANOSAS=m["total"]["enganoso"], CASI=m["total"]["mayormente_verdadero"],
         VERDADERAS=m["total"]["verdadero"], NV=m["total"]["no_verificable"], FILAS="".join(filas),
@@ -549,12 +630,17 @@ def pagina_transcripcion(m, entrevistas):
     nota_voces = ("Las intervenciones se han atribuido a cada voz con reconocimiento automático de hablantes "
                   "(acierto medido del 97 %; las frases muy cortas son las que más fallan). " if voces else "")
     solo = '<button data-solo aria-pressed="false">Solo párrafos con afirmaciones</button>'
-    indice = "".join(
+    cab = cabecera(
+        f'/{m["slug"]}/transcripcion', f'Transcripción completa: {m["invitado"]} en The Wild Project',
+        f'Transcripción completa de la entrevista de Jordi Wild a {m["invitado"]} ({m["programa"]}), con marcas de tiempo '
+        'enlazadas al vídeo y a cada afirmación verificada.', imagen_de(m["slug"]),
+        alt=f'Verificación dato a dato: {m["invitado"]} ({m.get("partido") or "sin partido"}) en {m["programa"]}')
+    indice_temas = "".join(
         f'<li><a href="#tema-{t["n"]}"><span>{e(t["titulo"])}</span><small>{hms(t["ini"])}</small></a></li>'
         for t in m["temas"] if any(d.startswith(f'<h2 id="tema-{t["n"]}"') for d in cuerpo))
     pagina = rellenar(
-        TRANSCRIPCION, FAB=FAB_LEYENDA, INDICE=indice, RETRATO=retrato(m, " peque") or "", MENU=menu(entrevistas, m["slug"]), CSS_MENU=CSS_MENU, LEYENDA=LEYENDA, FILTROS=filtros(m, solo),
-        NOTA_VOCES=nota_voces, CUERPO="".join(cuerpo),
+        TRANSCRIPCION, CABECERA=cab, FAB=FAB_LEYENDA, INDICE=indice_temas, RETRATO=retrato(m, " peque") or "", MENU=menu(entrevistas, m["slug"]),
+        CSS_MENU=CSS_MENU, LEYENDA=LEYENDA, FILTROS=filtros(m, solo), NOTA_VOCES=nota_voces, CUERPO="".join(cuerpo),
         INVITADO=e(m["invitado"]), PROGRAMA=e(m["programa"]), FECHA_VIDEO=e(m["fecha"]), DURACION=e(m["duracion"]),
         VIDEO=m["video"], SLUG=m["slug"], REPO=REPO)
     destino = SALIDA / m["slug"] / "transcripcion"
@@ -655,7 +741,8 @@ Los errores se comunican en {REPO}/issues.
     (SALIDA / "vercel.json").write_text(json.dumps({
         "redirects": [{"source": "/api/referencia", "destination": "/api", "permanent": True}],
         "headers": [
-        {"source": "/api/(.*)", "headers": [{"key": "Access-Control-Allow-Origin", "value": "*"},
+        # /api/estadisticas (el panel privado) queda fuera: no se cachea ni se abre a otros dominios.
+        {"source": "/api/((?!estadisticas).*)", "headers": [{"key": "Access-Control-Allow-Origin", "value": "*"},
                                             {"key": "Cache-Control", "value": "public, max-age=300"}]},
         {"source": "/llms.txt", "headers": [{"key": "Access-Control-Allow-Origin", "value": "*"}]}]}, indent=1) + "\n")
     return ejemplo, slugs
@@ -1006,6 +1093,8 @@ def main():
         pagina_entrevista(m, entrevistas)
         pagina_transcripcion(m, entrevistas)
     ejemplo, slugs = generar_api(hechas)
+    copiar_compartir()
+    indexacion(hechas)
     (SALIDA / "fotos").mkdir(exist_ok=True)
     for f in (RAIZ / "web-src" / "fotos").glob("*.jpg"):
         shutil.copy(f, SALIDA / "fotos" / f.name)
@@ -1036,21 +1125,47 @@ def main():
         f'<p class="prog">{e(m.get("programa", ""))}</p><p class="des">Verificación en curso.</p></div></article>'
         for m in entrevistas if not m.get("publicar"))
     (SALIDA / "index.html").write_text(rellenar(
-        PORTADA, FAB=FAB_LEYENDA, CREDITOS=creditos_fotos(hechas), MENU=menu(entrevistas), CSS_MENU=CSS_MENU, LEYENDA=LEYENDA, COMPARATIVA=comparativa(hechas), TARJETAS=tarjetas, REPO=REPO,
+        PORTADA, FAB=FAB_LEYENDA, CABECERA=cabecera(
+            "/", "Verificación de las entrevistas electorales de The Wild Project",
+            "Las entrevistas de Jordi Wild a los candidatos a las elecciones generales de 2026, comprobadas dato a dato "
+            "con el mismo método. Código y datos abiertos."), CREDITOS=creditos_fotos(hechas), MENU=menu(entrevistas), CSS_MENU=CSS_MENU, LEYENDA=LEYENDA, COMPARATIVA=comparativa(hechas), TARJETAS=tarjetas, REPO=REPO,
         FECHA=dt.datetime.now().strftime("%d/%m/%Y")), encoding="utf-8")
     (SALIDA / "verificalo").mkdir(exist_ok=True)
     opciones = "".join(f'<option value="{e(m["slug"])}">{e(m["invitado"])}</option>' for m in hechas)
     (SALIDA / "verificalo" / "index.html").write_text(rellenar(
-        VERIFICALO, SECCION_API=api_publica.SECCION_API, JS_API=api_publica.JS_API, CSS_API=api_publica.CSS_API,
+        VERIFICALO, CABECERA=cabecera(
+            "/verificalo", "Verifícalo tú · Verificación The Wild Project",
+            "Cómo comprobar por tu cuenta cada veredicto: vídeo, fuentes, datos abiertos y un encargo listo para que "
+            "cualquier IA audite la verificación."), SECCION_API=api_publica.SECCION_API, JS_API=api_publica.JS_API, CSS_API=api_publica.CSS_API,
         MENU=menu(entrevistas), CSS_MENU=CSS_MENU, LEYENDA=LEYENDA, BASE=BASE, REPO=REPO, OPCIONES=opciones,
         EJ=ejemplo, SLUGS=", ".join(f"<code>{x}</code>" for x in slugs)), encoding="utf-8")
+    (SALIDA / "quien").mkdir(exist_ok=True)
+    (SALIDA / "quien" / "index.html").write_text(rellenar(
+        QUIEN, ANALITICA=ANALITICA_QUIEN if UMAMI_ID else SIN_ANALITICA_QUIEN, CABECERA=cabecera(
+            "/quien", "Quién hace esto · Verificación The Wild Project",
+            "Quién hace esta verificación, su independencia, quién la paga, cómo se hace y cómo se corrigen los errores."),
+        MENU=menu(entrevistas), CSS_MENU=CSS_MENU, REPO=REPO, REPO_PABLO=REPO_PABLO), encoding="utf-8")
     (SALIDA / "api").mkdir(exist_ok=True)
     (SALIDA / "api" / "index.html").write_text(rellenar(
-        PAGINA_API, PROMPT=e(prompt_agente(hechas)), MENU=menu(entrevistas), CSS_MENU=CSS_MENU, BASE=BASE, REPO=REPO,
+        PAGINA_API, CABECERA=cabecera(
+            "/api", "API abierta · Verificación The Wild Project",
+            "API JSON y CSV de solo lectura, sin clave y con CORS abierto: referencia completa de cada ruta y cada campo, "
+            "y un prompt listo para agentes de IA."), PROMPT=e(prompt_agente(hechas)), MENU=menu(entrevistas), CSS_MENU=CSS_MENU, BASE=BASE, REPO=REPO,
         SCALAR=SCALAR, SCALAR_SRI=SCALAR_SRI), encoding="utf-8")
     # La referencia vivió unas horas en /api/referencia: se redirige (aquí y en vercel.json).
     (SALIDA / "api" / "referencia").mkdir(exist_ok=True)
-    (SALIDA / "api" / "referencia" / "index.html").write_text(REDIRIGE_API, encoding="utf-8")
+    (SALIDA / "api" / "referencia" / "index.html").write_text(rellenar(REDIRIGE_API, CABECERA=cabecera(
+        "/api", "API abierta · Verificación The Wild Project", "La referencia de la API está en /api.")), encoding="utf-8")
+    # Panel privado de estadísticas: la página es estática y los datos los sirve /api/estadisticas tras pedir contraseña.
+    (SALIDA / "panel").mkdir(exist_ok=True)
+    (SALIDA / "panel" / "index.html").write_text(
+        rellenar(estadisticas.PAGINA, analitica=False, CSS_MENU=CSS_MENU), encoding="utf-8")
+    shutil.copy(RAIZ / "web-src" / "estadisticas.js", SALIDA / "api" / "estadisticas.js")
+
+
+ANALITICA_QUIEN = (
+    'No hay publicidad.</p>\n<p>Las visitas se cuentan con <a href="https://umami.is/docs" target="_blank" rel="noopener noreferrer">Umami</a>, un servicio de estadísticas que no usa cookies y que, según su documentación, no recoge datos personales. También cuenta qué enlaces se pulsan (vídeos, fuentes y descargas), sin saber quién los pulsa. Esas cifras solo las ve Pablo.</p>')
+SIN_ANALITICA_QUIEN = "No hay publicidad ni seguimiento de visitas.</p>"
 
 
 LEYENDA = """<section class="leyenda-f" aria-label="Leyenda de veredictos">
@@ -1164,6 +1279,10 @@ html { scroll-behavior:smooth; scroll-padding-top:calc(var(--menu, 48px) + 64px)
 .fila button[aria-pressed=true] { background:var(--tinta); color:var(--fondo); }
 .fila button[data-v][aria-pressed=true] { background:var(--tono); color:var(--sobre-tono); }
 .fila button[data-solo] { margin-left:auto; }
+.pie-solo { border-top:1px solid var(--tinta); padding:18px 0 44px; }
+.pie-quien { margin:0; font-size:13.5px; color:var(--suave); max-width:none; }
+footer .pie-quien { margin-top:18px; }
+.pie-quien a { color:var(--suave); text-underline-offset:3px; }
 .m1 > a, .desp summary, .fila button { white-space:nowrap; }
 @media (max-width:1000px) { .m1 .largo { display:none; } }
 /* En móvil el menú y los filtros ocupan una sola fila que se desliza en horizontal; el botón de modo se queda fijo a la derecha */
@@ -1330,8 +1449,7 @@ VERIFICALO = """<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 @@HEAD_MODO@@
-<title>Verifícalo tú · Verificación The Wild Project</title>
-<meta name="description" content="Cómo comprobar por tu cuenta cada veredicto: vídeo, fuentes, datos abiertos y un encargo listo para que cualquier IA audite la verificación.">
+@@CABECERA@@
 <style>
 :root { --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; }
 * { box-sizing:border-box; }
@@ -1396,6 +1514,7 @@ code { font:13.5px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace; background:v
 <h2>Qué significa cada veredicto</h2>
 @@LEYENDA@@
 </main>
+<footer class="pie-solo"><div class="ancho">@@PIE@@</div></footer>
 @@JS_API@@
 <script>
 const B = "@@BASE@@";
@@ -1457,25 +1576,82 @@ pintar();
 </html>
 """
 
+QUIEN = """<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+@@HEAD_MODO@@
+@@CABECERA@@
+<style>
+:root { --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--fondo); color:var(--tinta); font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; }
+a { color:var(--tinta); text-underline-offset:3px; }
+.ancho { max-width:1120px; margin:0 auto; padding:0 16px; }
+main.ancho { max-width:820px; padding-bottom:72px; }
+h1 { font:700 clamp(30px,6vw,48px)/1.06 var(--serif); letter-spacing:-0.02em; margin:38px 0 12px; text-wrap:balance; }
+.entrada { font-size:17px; max-width:62ch; }
+main > h2 { font:700 24px/1.2 var(--serif); margin:44px 0 10px; padding-top:12px; border-top:3px solid var(--tinta); }
+p, li { max-width:68ch; }
+main ul { padding-left:22px; } main li { margin:4px 0; }
+@@CSS_MENU@@
+</style>
+</head>
+<body>
+@@MENU@@
+<main class="ancho">
+<h1>Quién hace esto</h1>
+<p class="entrada">Quién está detrás de esta web, de quién es independiente, quién la paga y cómo se corrigen los errores.</p>
+
+<h2 id="quien">Quién lo hace</h2>
+<p>Esta web la hace Pablo Pardo Cotos, estudiante del doble grado de Matemáticas e Ingeniería Informática de la Universidad Complutense de Madrid. Su perfil está en <a href="@@REPO_PABLO@@" target="_blank" rel="noopener noreferrer">GitHub</a>.</p>
+<p>Es un proyecto personal. Cualquiera puede proponer cambios en el <a href="@@REPO@@" target="_blank" rel="noopener noreferrer">repositorio</a>, y los que se aceptan quedan en su <a href="@@REPO@@/commits/main" target="_blank" rel="noopener noreferrer">historial público</a>.</p>
+
+<h2 id="independencia">Independencia</h2>
+<p>Pablo no milita ni ha militado en ningún partido. No ha trabajado ni colaborado con ningún partido, ni con Jordi Wild, ni con The Wild Project. Nadie le ha encargado este trabajo.</p>
+<p>The Wild Project y Jordi Wild no participan en esta web ni la respaldan.</p>
+
+<h2 id="financiacion">Financiación</h2>
+<p>Esta web no tiene financiación ni apoyo de nadie. Pablo paga los costes, que son sus suscripciones de IA, y la web está alojada en el plan gratuito de Vercel. @@ANALITICA@@
+
+<h2 id="como">Cómo se hace</h2>
+<ul>
+<li>El audio de cada entrevista se transcribe con Whisper, un programa de transcripción automática.</li>
+<li>Modelos de IA de Claude (Sonnet), con búsqueda web, contrastan cada afirmación con fuentes públicas y le ponen un veredicto.</li>
+<li>Ninguna persona periodista ha revisado los veredictos.</li>
+</ul>
+<p>El procedimiento completo está en el <a href="@@REPO@@/blob/main/METODO.md" target="_blank" rel="noopener noreferrer">método, en GitHub</a>. En <a href="/verificalo">Verifícalo tú</a> puedes comprobar cada veredicto por tu cuenta.</p>
+
+<h2 id="errores">Errores y correcciones</h2>
+<p>Si ves un error, abre una incidencia en GitHub con la plantilla «Corregir una afirmación»: <a href="@@REPO@@/issues/new/choose" target="_blank" rel="noopener noreferrer">abrir una incidencia</a>. Indica el identificador de la afirmación o el minuto, y una fuente.</p>
+<p>Una corrección se acepta por la fuente, no por el partido. Se aplica la misma vara de medir a todos.</p>
+<p>Los cambios en los datos quedan registrados y se pueden consultar públicamente en el <a href="@@REPO@@/commits/main/entrevistas" target="_blank" rel="noopener noreferrer">historial de cambios</a>.</p>
+<p>El contacto es solo por GitHub.</p>
+</main>
+<footer class="pie-solo"><div class="ancho">@@PIE@@</div></footer>
+</body>
+</html>
+"""
+
 PAGINA_API = """<!doctype html>
 <html lang="es">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 @@HEAD_MODO@@
-<title>API abierta · Verificación The Wild Project</title>
-<meta name="description" content="API JSON y CSV de solo lectura, sin clave y con CORS abierto: referencia completa de cada ruta y cada campo, y un prompt listo para agentes de IA.">
+@@CABECERA@@
 <style>
 :root { --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; --scalar-custom-header-height:var(--menu, 48px); }
 * { box-sizing:border-box; }
 body { margin:0; background:var(--fondo); color:var(--tinta); font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; }
 a { color:var(--tinta); }
-.api-cab { padding:34px 0 30px; border-bottom:3px solid var(--tinta); }
-.api-cab h1 { font:700 clamp(30px,6vw,48px)/1.06 var(--serif); letter-spacing:-0.02em; margin:0 0 12px; }
+.api-cab { padding:clamp(28px,5vw,48px) 0 30px; border-bottom:3px solid var(--tinta); }
+.api-cab h1 { font:700 clamp(30px,5.2vw,56px)/1.05 var(--serif); letter-spacing:-0.02em; margin:0 0 12px; }
 .api-cab > .ancho > p { font-size:17px; max-width:70ch; margin:0 0 10px; }
 .api-cab code { font:14px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace; background:var(--codigo); padding:1px 5px; }
 .saltos { display:flex; flex-wrap:wrap; gap:8px 22px; margin:14px 0 26px; font-weight:700; font-size:15px; }
-.agentes { border:2px solid var(--tinta); padding:18px 20px; }
+.agentes { border:2px solid var(--tinta); border-radius:var(--r-caja); padding:18px 20px; }
 .agentes h2 { font:700 25px/1.2 var(--serif); margin:0 0 6px; }
 .agentes > p { margin:0 0 12px; font-size:15px; max-width:76ch; }
 .agentes pre { background:var(--pre-fondo); color:var(--pre-tinta); outline:1px solid var(--pre-borde); outline-offset:-1px; margin:0 0 12px;
@@ -1536,6 +1712,7 @@ body.light-mode, body.dark-mode, body .scalar-app {
 </section>
 </div></header>
 <div id="referencia"></div>
+<footer class="pie-solo"><div class="ancho">@@PIE@@</div></footer>
 <noscript><p>La referencia interactiva necesita JavaScript. Tienes la misma información en <a href="/api/v1/openapi.json">openapi.json</a>.</p></noscript>
 <script src="https://cdn.jsdelivr.net/npm/@scalar/api-reference@@@SCALAR@@/dist/browser/standalone.js" integrity="@@SCALAR_SRI@@" crossorigin="anonymous"></script>
 <script>
@@ -1581,6 +1758,16 @@ body.light-mode, body.dark-mode, body .scalar-app {
   };
   new MutationObserver(sincronizar).observe(raiz, { attributes: true, attributeFilter: ["data-modo"] });
   sistema.addEventListener("change", sincronizar);
+  // En el buscador, la X de Scalar solo borra el texto aunque parece cerrar. La convertimos en «Cerrar», que es lo que se espera.
+  new MutationObserver(() => document.querySelectorAll(".scalar-modal-search .scalar-icon-button:not([data-cerrar])").forEach(b => {
+    b.dataset.cerrar = ""; b.setAttribute("aria-label", "Cerrar buscador"); b.title = "Cerrar (Esc)";
+    b.querySelector(".sr-only")?.replaceChildren("Cerrar buscador");
+    b.addEventListener("click", ev => {
+      ev.preventDefault(); ev.stopImmediatePropagation();
+      const campo = b.closest(".scalar-modal")?.querySelector("input") || document.activeElement;
+      campo.dispatchEvent(new KeyboardEvent("keydown", { key: "Escape", code: "Escape", bubbles: true }));
+    }, true);
+  })).observe(document.body, { childList: true, subtree: true });
 })();
 </script>
 </body>
@@ -1588,8 +1775,9 @@ body.light-mode, body.dark-mode, body .scalar-app {
 """
 
 REDIRIGE_API = """<!doctype html>
-<html lang="es"><head><meta charset="utf-8"><meta http-equiv="refresh" content="0; url=/api"><link rel="canonical" href="/api">
-<title>API abierta</title></head><body><p>La referencia de la API está ahora en <a href="/api">/api</a>.</p></body></html>
+<html lang="es"><head><meta charset="utf-8"><meta http-equiv="refresh" content="0; url=/api">
+@@CABECERA@@
+</head><body><p>La referencia de la API está ahora en <a href="/api">/api</a>.</p>@@PIE@@</body></html>
 """
 
 PORTADA = """<!doctype html>
@@ -1598,8 +1786,7 @@ PORTADA = """<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 @@HEAD_MODO@@
-<title>Verificación de las entrevistas electorales de The Wild Project</title>
-<meta name="description" content="Las entrevistas de Jordi Wild a los candidatos a las elecciones generales de 2026, comprobadas dato a dato con el mismo método. Código y datos abiertos.">
+@@CABECERA@@
 <style>
 :root { --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; }
 * { box-sizing:border-box; }
@@ -1755,6 +1942,7 @@ footer .leyenda-f { max-width:820px; }
 <footer><div class="ancho pie-corto">
 <p>Verificación asistida por IA (transcripción con Whisper, contraste con modelos Claude y búsqueda web), sin revisión de un equipo de periodistas. Cada afirmación enlaza el segundo exacto del vídeo y sus fuentes, y el código, las transcripciones y los datos están publicados en <a href="@@REPO@@" target="_blank" rel="noopener noreferrer">GitHub</a>. «Falso» no implica intención de mentir: incluye errores y lapsus. El número de afirmaciones falsas depende también de cuánto habla cada invitado y de cuántos datos da, así que las cifras no son un ranking. En rojo, junto a cada tema, cuántas afirmaciones falsas o engañosas contiene.</p>
 <p class="final">Última actualización: @@FECHA@@. @@CREDITOS@@</p>
+@@PIE@@
 </div></footer>
 @@FAB@@
 </body>
@@ -1767,8 +1955,7 @@ TRANSCRIPCION = """<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 @@HEAD_MODO@@
-<title>Transcripción completa: @@INVITADO@@ en The Wild Project</title>
-<meta name="description" content="Transcripción completa de la entrevista de Jordi Wild a @@INVITADO@@ (@@PROGRAMA@@), con marcas de tiempo enlazadas al vídeo y a cada afirmación verificada.">
+@@CABECERA@@
 <style>
 :root { --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; }
 * { box-sizing:border-box; }
@@ -1829,6 +2016,7 @@ h2 { font:700 23px/1.2 var(--serif); margin:44px 0 14px; padding-top:12px; borde
 <div style="border-top:3px solid var(--tinta); margin-top:48px; padding-top:22px">@@LEYENDA@@</div>
 </div>
 </main>
+<footer class="pie-solo"><div class="ancho">@@PIE@@</div></footer>
 <script>
 const botones = document.querySelectorAll("#filtros button[data-v]");
 const todas = document.querySelector("#filtros [data-todas]"), soloB = document.querySelector("#filtros [data-solo]");
@@ -1881,10 +2069,7 @@ PLANTILLA = """<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 @@HEAD_MODO@@
-<title>Verificación: @@INVITADO@@ en The Wild Project</title>
-<meta name="description" content="Línea temporal de la entrevista de Jordi Wild a @@INVITADO@@: @@MALAS@@ afirmaciones falsas o engañosas, cada una con su minuto, su justificación y sus fuentes.">
-<meta property="og:title" content="@@INVITADO@@ en The Wild Project, minuto a minuto">
-<meta property="og:description" content="@@MALAS@@ de @@SUMA@@ afirmaciones son falsas o engañosas. Cada una enlaza al segundo exacto del vídeo y a sus fuentes.">
+@@CABECERA@@
 <style>
 :root { --col:40%; --hueco:56px;
   --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; }
@@ -2064,6 +2249,7 @@ footer .leyenda-f { margin-bottom:34px; max-width:820px; }
   <p>¿Ves un error? Abre una incidencia en el repositorio. Última actualización: @@FECHA@@.</p>
   <p>@@CREDITOS@@</p>
   </div>
+@@PIE@@
 </div></footer>
 <script>
 const activos = new Set(["falso", "enganoso"]);
