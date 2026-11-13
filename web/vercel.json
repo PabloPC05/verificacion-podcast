@@ -4,6 +4,16 @@
    "source": "/api/referencia",
    "destination": "/api",
    "permanent": true
+  },
+  {
+   "source": "/verificalo",
+   "destination": "/api#verificalo",
+   "permanent": true
+  },
+  {
+   "source": "/verificalo/",
+   "destination": "/api#verificalo",
+   "permanent": true
   }
  ],
  "rewrites": [
