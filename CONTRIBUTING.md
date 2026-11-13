@@ -2,11 +2,13 @@
 
 Gracias por querer mejorar la verificación. Las correcciones con fuente son lo más valioso que puedes aportar.
 
-## La forma más rápida: abrir una incidencia
+## La forma más rápida: avisar de un error
 
 Si has visto un veredicto que crees que está mal, una fuente rota o una cita mal transcrita, no hace falta que
-toques código: abre una incidencia con la plantilla **«Corregir una afirmación»**. Necesitamos el identificador
-de la afirmación (aparece en la API, por ejemplo `sanchez-m6003`) o el minuto, y una fuente que respalde la corrección.
+toques código: en la página de la afirmación, pulsa **«Avisar de un error»**. Se abre el formulario con la afirmación
+ya rellenada y solo hay que pegar una fuente que respalde la corrección. También se puede abrir
+[directamente](https://github.com/PabloPC05/verificacion-podcast/issues/new?template=correccion.yml) indicando quién
+lo dijo y el minuto.
 
 ## Abrir una pull request
 

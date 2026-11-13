@@ -73,7 +73,8 @@ se cuentan con Umami, que no usa cookies y, según su documentación, no recoge 
 
 ## Corregir un error o contribuir
 
-- **Incidencia:** usa la plantilla «Corregir una afirmación» con el identificador o el minuto y una fuente.
+- **Avisar de un error:** en la página de cada afirmación, el botón «Avisar de un error» abre el formulario con la
+  afirmación ya rellenada; solo pide una fuente.
 - **Pull request:** se abre desde tu propio fork (no se puede subir directamente a este repositorio). Los pasos,
   qué ficheros tocar y qué no, están en [CONTRIBUTING.md](CONTRIBUTING.md). Cada PR pasa una comprobación automática.
 

@@ -979,8 +979,11 @@ def pagina_afirmacion(m, a, entrevistas, anterior, siguiente):
     contexto = (f'<section class="seccion"><h2>Contexto en la entrevista</h2><div class="contexto">{contexto_cita(m, a)}</div>'
                 f'<p class="mas"><a href="{ver_tema}">Leer la transcripción completa</a></p></section>')
 
-    titulo_error = f"Corregir {slug}-{idx}"
-    url_error = f"{REPO}/issues/new?template=correccion.yml&title={quote(titulo_error)}"
+    # formulario «Avisar de un error» (.github/ISSUE_TEMPLATE/correccion.yml) con la afirmación ya rellenada:
+    # a quien avisa solo le queda pegar las fuentes
+    titulo_error = "Error en: " + m["invitado"] + ", " + minuto
+    afirmacion_error = m["invitado"] + ", " + minuto + " · " + BASE + ruta
+    url_error = f"{REPO}/issues/new?template=correccion.yml&title={quote(titulo_error)}&afirmacion={quote(afirmacion_error)}"
 
     def vecina(b, clase, rotulo):
         if not b:
@@ -1889,7 +1892,7 @@ code { font:13.5px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace; background:v
 </div>
 <pre id="encargo"></pre>
 <div class="botones"><button id="copiar" type="button">Copiar encargo</button><a id="claude" target="_blank" rel="noopener noreferrer">Abrir en Claude ↗</a><a id="chatgpt" target="_blank" rel="noopener noreferrer">Abrir en ChatGPT ↗</a></div>
-<p class="nota">Una IA también se equivoca: pídele siempre los enlaces y ábrelos. Si su respuesta contradice un veredicto con una fuente sólida, <a href="@@REPO@@/issues" target="_blank" rel="noopener noreferrer">abre una incidencia</a> con el identificador de la afirmación y lo corregimos.</p>
+<p class="nota">Una IA también se equivoca: pídele siempre los enlaces y ábrelos. Si su respuesta contradice un veredicto con una fuente sólida, <a href="@@REPO@@/issues/new?template=correccion.yml" target="_blank" rel="noopener noreferrer">avísanos</a> con esa fuente y lo revisamos.</p>
 
 <h2>Qué significa cada veredicto</h2>
 @@LEYENDA@@
@@ -2004,7 +2007,7 @@ main ul { padding-left:22px; } main li { margin:4px 0; }
 <p>El procedimiento completo está en el <a href="/metodologia">método</a>. En <a href="/verificalo">Verifícalo tú</a> puedes comprobar cada veredicto por tu cuenta.</p>
 
 <h2 id="errores">Errores y correcciones</h2>
-<p>Si ves un error, abre una incidencia en GitHub con la plantilla «Corregir una afirmación»: <a href="@@REPO@@/issues/new/choose" target="_blank" rel="noopener noreferrer">abrir una incidencia</a>. Indica el identificador de la afirmación o el minuto, y una fuente.</p>
+<p>Si ves un error, abre la afirmación y pulsa «Avisar de un error», o <a href="@@REPO@@/issues/new?template=correccion.yml" target="_blank" rel="noopener noreferrer">avisa directamente</a>. Solo te pediremos un enlace a una fuente que muestre el dato correcto. El aviso se envía desde GitHub, donde está publicado el proyecto, y hace falta una cuenta gratuita.</p>
 <p>Una corrección se acepta por la fuente, no por el partido. Se aplica la misma vara de medir a todos.</p>
 <p>Los cambios en los datos quedan registrados y se pueden consultar públicamente en el <a href="@@REPO@@/commits/main/entrevistas" target="_blank" rel="noopener noreferrer">historial de cambios</a>.</p>
 <p>El contacto es solo por GitHub.</p>
@@ -2754,7 +2757,7 @@ footer .leyenda-f { margin-bottom:34px; max-width:820px; }
   <p><b>Límite importante:</b> no lo ha revisado un equipo de periodistas. Es un punto de partida; por eso todo el material está publicado.</p>
   <a class="repo" href="@@REPO@@" target="_blank" rel="noopener noreferrer">Código, transcripción y datos en GitHub ↗</a>
   <a class="repo claro" href="/api">API abierta</a>
-  <p>¿Ves un error? Abre una incidencia en el repositorio. Última actualización: @@FECHA@@.</p>
+  <p>¿Ves un error? Abre la afirmación y pulsa «Avisar de un error»: solo te pediremos un enlace a una fuente. Última actualización: @@FECHA@@.</p>
   <p>@@CREDITOS@@</p>
   </div>
 @@PIE@@
@@ -2893,6 +2896,10 @@ img.cara { border:0; background:var(--claro); }
 mark { background:var(--tono); color:var(--sobre-tono); padding:1px 3px; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
 .mas { margin:12px 0 0; font-size:15px; font-weight:600; }
 .acciones { display:flex; flex-wrap:wrap; gap:10px; margin-top:34px; padding-top:18px; border-top:2px solid var(--tinta); }
+.corregir p { margin:0 0 12px; max-width:62ch; }
+.corregir .btn { display:inline-block; background:var(--tinta); color:var(--fondo); }
+.corregir .btn:hover { background:var(--fondo); color:var(--tinta); }
+.nota-corregir { font-size:13.5px; color:var(--suave); }
 .btn { font:inherit; font-size:14.5px; font-weight:600; color:var(--tinta); background:var(--fondo); border:2px solid var(--tinta); padding:7px 14px; cursor:pointer; text-decoration:none; line-height:1.4; }
 .btn:hover { background:var(--tinta); color:var(--fondo); }
 .vecinas { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:30px; }
@@ -2926,8 +2933,12 @@ footer { border-top:3px solid var(--tinta); margin-top:48px; padding:24px 0 72px
 <div class="acciones">
 <a class="btn" href="@@VER_LINEA@@">Ver en la línea temporal</a>
 <button class="btn" type="button" data-copiar data-enlace="@@URL_PAGINA@@">Copiar enlace</button>
-<a class="btn" href="@@URL_ERROR@@" target="_blank" rel="noopener noreferrer">¿Ves un error?</a>
 </div>
+<section class="seccion corregir"><h2>¿Crees que está mal?</h2>
+<p>Si tienes una fuente que dice otra cosa, mándanosla y lo revisamos con el mismo criterio para todos. Solo hace falta pegar el enlace.</p>
+<p><a class="btn" href="@@URL_ERROR@@" target="_blank" rel="noopener noreferrer">Avisar de un error</a></p>
+<p class="nota-corregir">Se abre un formulario en GitHub, la web donde está publicado todo el proyecto. Para enviarlo hace falta una cuenta gratuita.</p>
+</section>
 <nav class="vecinas" aria-label="Afirmaciones de la misma entrevista">@@ANTERIOR@@@@SIGUIENTE@@</nav>
 </main>
 <footer class="pie-solo"><div class="ancho">@@PIE@@</div></footer>
