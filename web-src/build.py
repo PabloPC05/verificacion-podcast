@@ -493,6 +493,23 @@ def tramo_cita(a, indice):
     return desde, min(hasta, desde + 25)
 
 
+def ficha_voz(m, nombres, voz):
+    """Quién habla al empezar una intervención: cara (foto o iniciales), nombre y a quién representa.
+    La usan la transcripción y el contexto de cada página de afirmación (`nombres` sale de hablantes.json)."""
+    nombre = nombres.get(voz, "")
+    iniciales = "".join(w[0] for w in nombre.split()[:2]).upper()
+    if voz == "G":
+        cara = (f'<img class="cara" src="/fotos/{m["slug"]}.jpg" alt="" width="34" height="34" loading="lazy" decoding="async">'
+                if FOTOS.get(m["slug"]) else f'<span class="cara">{e(iniciales)}</span>')
+        detalle = m.get("partido") or ""
+    elif voz == "J":
+        cara, detalle = f'<span class="cara">{e(iniciales)}</span>', "The Wild Project"
+    else:
+        cara, detalle = f'<span class="cara">{"V" if voz == "V" else "?"}</span>', ""
+    return (f'<div class="quien">{cara}<span class="nom"><b>{e(nombre)}</b>'
+            + (f'<small>{e(detalle)}</small>' if detalle else "") + "</span></div>")
+
+
 def pagina_transcripcion(m, entrevistas):
     """Transcripción por intervenciones (quién habla) con el tramo de cada afirmación subrayado en su color."""
     segmentos = json.loads((m["carpeta"] / "segmentos.json").read_text(encoding="utf-8"))
@@ -552,20 +569,6 @@ def pagina_transcripcion(m, entrevistas):
             actual["parrafos"].append([k])
         else:
             parrafo.append(k)
-    def ficha_voz(voz):
-        """Quién habla al empezar una intervención: cara (foto o iniciales), nombre y a quién representa."""
-        nombre = nombres.get(voz, "")
-        iniciales = "".join(w[0] for w in nombre.split()[:2]).upper()
-        if voz == "G":
-            cara = (f'<img class="cara" src="/fotos/{m["slug"]}.jpg" alt="" width="34" height="34" loading="lazy" decoding="async">'
-                    if FOTOS.get(m["slug"]) else f'<span class="cara">{e(iniciales)}</span>')
-            detalle = m.get("partido") or ""
-        elif voz == "J":
-            cara, detalle = f'<span class="cara">{e(iniciales)}</span>', "The Wild Project"
-        else:
-            cara, detalle = f'<span class="cara">{"V" if voz == "V" else "?"}</span>', ""
-        return (f'<div class="quien">{cara}<span class="nom"><b>{e(nombre)}</b>'
-                + (f'<small>{e(detalle)}</small>' if detalle else "") + "</span></div>")
 
     pendientes = list(m["temas"])
     cuerpo = []
@@ -578,7 +581,7 @@ def pagina_transcripcion(m, entrevistas):
         for n, p in enumerate(b["parrafos"]):
             t = int(segmentos[p[0]]["i"])
             # con voces, tres columnas como en un guion: minuto · quién habla (solo al empezar la intervención) · texto
-            celda = (ficha_voz(voz) if n == 0 else '<div class="quien"></div>') if voces else ""
+            celda = (ficha_voz(m, nombres, voz) if n == 0 else '<div class="quien"></div>') if voces else ""
             cuerpo.append(
                 f'<div class="par" id="t{t}"><a class="minuto" href="https://www.youtube.com/watch?v={m["video"]}&t={t}s" '
                 f'target="_blank" rel="noopener noreferrer">{hms(t)}</a>{celda}<p>{texto_marcado(p)}</p></div>')
@@ -661,11 +664,12 @@ def contexto_cita(m, a):
         if dentro:
             out += "</mark>"
         t0 = int(segmentos[ks[0]]["i"])
-        quien = ctx["nombres"].get(voz, "") if voces else ""
+        # mismo lenguaje visual que la transcripción: quién habla arriba, raya vertical en lo que dice el candidato
         parrafos.append(
-            f'<p class="par"><a class="minuto" href="https://www.youtube.com/watch?v={m["video"]}&t={t0}s" '
-            f'target="_blank" rel="noopener noreferrer">{hms(t0)}</a> '
-            + (f'<span class="quien">{e(quien)}</span> ' if quien else "") + out + "</p>")
+            f'<div class="turno" data-voz="{voz or ""}"><div class="cab-turno">'
+            + (ficha_voz(m, ctx["nombres"], voz) if voces else "")
+            + f'<a class="minuto" href="https://www.youtube.com/watch?v={m["video"]}&t={t0}s" '
+            f'target="_blank" rel="noopener noreferrer">{hms(t0)}</a></div><p>{out}</p></div>')
     return "".join(parrafos)
 
 
@@ -2377,11 +2381,22 @@ blockquote { margin:0; padding-left:16px; border-left:4px solid var(--tono); fon
 .fuentes { margin:0; padding-left:22px; font-size:15px; }
 .fuentes li { margin:6px 0; overflow-wrap:anywhere; }
 .fuentes span { color:var(--gris); font-size:13px; white-space:nowrap; }
-.contexto { border-left:2px solid var(--claro); padding-left:16px; }
-.par { margin:0 0 14px; font:17px/1.6 var(--serif); }
-.par .minuto { font:700 13px/1 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; font-variant-numeric:tabular-nums; color:var(--gris); margin-right:6px; }
-.par .minuto:hover { background:var(--tinta); color:var(--fondo); text-decoration:none; }
-.quien { font:700 11.5px/1 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; text-transform:uppercase; letter-spacing:.07em; color:var(--gris); margin-right:4px; }
+/* contexto: el mismo lenguaje visual que la transcripción (quién habla, raya vertical en lo que dice el candidato) */
+.contexto .turno { margin:0 0 18px; }
+.cab-turno { display:flex; align-items:center; justify-content:space-between; gap:12px; margin:0 0 6px; }
+.cab-turno .minuto { font:700 13px/1 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; font-variant-numeric:tabular-nums; color:var(--gris); }
+.cab-turno .minuto:hover { background:var(--tinta); color:var(--fondo); text-decoration:none; }
+.quien { display:flex; align-items:center; gap:9px; min-width:0; font:700 13.5px/1.25 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; color:var(--tinta); }
+.nom { display:flex; flex-wrap:wrap; align-items:baseline; gap:2px 6px; min-width:0; }
+.quien small { font-size:12px; font-weight:500; color:var(--gris); }
+.cara { width:30px; height:30px; flex:none; border-radius:50%; display:grid; place-items:center; object-fit:cover;
+  font:700 11px/1 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; border:1.5px solid currentColor; }
+img.cara { border:0; background:var(--claro); }
+.contexto p { margin:0; font:17px/1.6 var(--serif); }
+.turno[data-voz=G] p { border-left:3px solid var(--tinta); padding-left:14px; }
+.turno[data-voz=J] p, .turno[data-voz=V] p, .turno[data-voz=O] p { padding-left:17px; color:var(--suave);
+  font:15.5px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+.turno:not([data-voz=G]) .quien { color:var(--suave); }
 mark { background:var(--tono); color:var(--sobre-tono); padding:1px 3px; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
 .mas { margin:12px 0 0; font-size:15px; font-weight:600; }
 .acciones { display:flex; flex-wrap:wrap; gap:10px; margin-top:34px; padding-top:18px; border-top:2px solid var(--tinta); }
