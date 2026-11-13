@@ -60,6 +60,15 @@ Esto es una verificación asistida por IA, no revisada por un equipo de periodis
 los datos contradicen lo dicho, no que haya intención de mentir. Una parte de las afirmaciones queda como
 «no verificable» porque la búsqueda automática se quedó corta. Los detalles están en [METODO.md](METODO.md).
 
+## Quién lo hace
+
+Proyecto personal de [Pablo Pardo Cotos](https://github.com/PabloPC05), estudiante del doble grado de Matemáticas e
+Ingeniería Informática de la Universidad Complutense de Madrid. No milita ni ha militado en ningún partido y no ha
+trabajado ni colaborado con ningún partido, ni con Jordi Wild, ni con The Wild Project; nadie le ha encargado esto, y
+The Wild Project y Jordi Wild no participan en la web ni la respaldan. No tiene financiación ni apoyo de nadie: paga
+los costes (sus suscripciones de IA) y la web está en el plan gratuito de Vercel, sin publicidad ni seguimiento de
+visitas. Más detalle en https://verificacion-podcast.vercel.app/quien.
+
 ## Corregir un error o contribuir
 
 - **Incidencia:** usa la plantilla «Corregir una afirmación» con el identificador o el minuto y una fuente.

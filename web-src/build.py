@@ -155,8 +155,13 @@ DEFINICIONES = {
 }
 
 
+PIE = ('<p class="pie-quien"><a href="/quien">Proyecto personal e independiente de Pablo Pardo Cotos, '
+       'sin relación con The Wild Project ni con ningún partido.</a></p>')
+REPO_PABLO = "https://github.com/PabloPC05"
+
+
 def rellenar(plantilla, **valores):
-    plantilla = plantilla.replace("@@HEAD_MODO@@", HEAD_MODO)
+    plantilla = plantilla.replace("@@HEAD_MODO@@", HEAD_MODO).replace("@@PIE@@", PIE)
     for k, v in valores.items():
         plantilla = plantilla.replace(f"@@{k}@@", str(v))
     return plantilla
@@ -221,7 +226,7 @@ def copiar_compartir():
 
 def indexacion(hechas):
     """robots.txt y sitemap.xml con las páginas publicadas."""
-    rutas = ["/", "/verificalo", "/api"] + [r for m in hechas for r in (f'/{m["slug"]}', f'/{m["slug"]}/transcripcion')]
+    rutas = ["/", "/verificalo", "/quien", "/api"] + [r for m in hechas for r in (f'/{m["slug"]}', f'/{m["slug"]}/transcripcion')]
     (SALIDA / "sitemap.xml").write_text(
         '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
         + "".join(f"  <url><loc>{e(BASE + r)}</loc></url>\n" for r in rutas) + "</urlset>\n", encoding="utf-8")
@@ -278,7 +283,7 @@ def menu(entrevistas, actual=None):
             f'<a class="fuerte" href="/{s}/transcripcion"><span>Transcripción completa</span></a>'
             f'<p class="rot">Temas</p>{temas}</div></details>')
     return ('<header class="menu"><div class="ancho"><div class="m1"><a class="sello" href="/" title="Todas las entrevistas">Verificación</a>'
-            + "".join(partes) + '<a class="dcha" href="/verificalo">Verifícalo tú</a><a href="/api">API</a>'
+            + "".join(partes) + '<a class="dcha" href="/verificalo">Verifícalo tú</a><a href="/quien">Quién lo hace</a><a href="/api">API</a>'
             f'<a href="{REPO}" target="_blank" rel="noopener noreferrer">GitHub ↗</a>' + BOTON_MODO + '</div></div></header>' + JS_MENU)
 
 
@@ -887,6 +892,12 @@ def main():
             "cualquier IA audite la verificación."), SECCION_API=api_publica.SECCION_API, JS_API=api_publica.JS_API, CSS_API=api_publica.CSS_API,
         MENU=menu(entrevistas), CSS_MENU=CSS_MENU, LEYENDA=LEYENDA, BASE=BASE, REPO=REPO, OPCIONES=opciones,
         EJ=ejemplo, SLUGS=", ".join(f"<code>{x}</code>" for x in slugs)), encoding="utf-8")
+    (SALIDA / "quien").mkdir(exist_ok=True)
+    (SALIDA / "quien" / "index.html").write_text(rellenar(
+        QUIEN, CABECERA=cabecera(
+            "/quien", "Quién hace esto · Verificación The Wild Project",
+            "Quién hace esta verificación, su independencia, quién la paga, cómo se hace y cómo se corrigen los errores."),
+        MENU=menu(entrevistas), CSS_MENU=CSS_MENU, REPO=REPO, REPO_PABLO=REPO_PABLO), encoding="utf-8")
     (SALIDA / "api").mkdir(exist_ok=True)
     (SALIDA / "api" / "index.html").write_text(rellenar(
         PAGINA_API, CABECERA=cabecera(
@@ -983,6 +994,10 @@ html { scroll-behavior:smooth; scroll-padding-top:calc(var(--menu, 48px) + 64px)
 .fila button[aria-pressed=true] { background:var(--tinta); color:var(--fondo); }
 .fila button[data-v][aria-pressed=true] { background:var(--tono); color:var(--sobre-tono); }
 .fila button[data-solo] { margin-left:auto; }
+.pie-solo { border-top:1px solid var(--tinta); padding:18px 0 44px; }
+.pie-quien { margin:0; font-size:13.5px; color:var(--suave); max-width:none; }
+footer .pie-quien { margin-top:18px; }
+.pie-quien a { color:var(--suave); text-underline-offset:3px; }
 @media (max-width:700px) { .m1 { gap:4px 16px; font-size:14px; } .m1 .dcha { margin-left:0; }
   .desp { position:static; } .desp .lista { left:16px; right:16px; top:auto; margin-top:10px; width:auto; max-width:none; }
   .fila .rot { display:none; } .fila button { font-size:12px; padding:2px 9px; } .fila button[data-solo] { margin-left:0; } }
@@ -1058,6 +1073,7 @@ code { font:13.5px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace; background:v
 <h2>Qué significa cada veredicto</h2>
 @@LEYENDA@@
 </main>
+<footer class="pie-solo"><div class="ancho">@@PIE@@</div></footer>
 @@JS_API@@
 <script>
 const B = "@@BASE@@";
@@ -1119,6 +1135,64 @@ pintar();
 </html>
 """
 
+QUIEN = """<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+@@HEAD_MODO@@
+@@CABECERA@@
+<style>
+:root { --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--fondo); color:var(--tinta); font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; }
+a { color:var(--tinta); text-underline-offset:3px; }
+.ancho { max-width:1120px; margin:0 auto; padding:0 16px; }
+main.ancho { max-width:820px; padding-bottom:72px; }
+h1 { font:700 clamp(30px,6vw,48px)/1.06 var(--serif); letter-spacing:-0.02em; margin:38px 0 12px; text-wrap:balance; }
+.entrada { font-size:17px; max-width:62ch; }
+main > h2 { font:700 24px/1.2 var(--serif); margin:44px 0 10px; padding-top:12px; border-top:3px solid var(--tinta); }
+p, li { max-width:68ch; }
+main ul { padding-left:22px; } main li { margin:4px 0; }
+@@CSS_MENU@@
+</style>
+</head>
+<body>
+@@MENU@@
+<main class="ancho">
+<h1>Quién hace esto</h1>
+<p class="entrada">Quién está detrás de esta web, de quién es independiente, quién la paga y cómo se corrigen los errores.</p>
+
+<h2 id="quien">Quién lo hace</h2>
+<p>Esta web la hace Pablo Pardo Cotos, estudiante del doble grado de Matemáticas e Ingeniería Informática de la Universidad Complutense de Madrid. Su perfil está en <a href="@@REPO_PABLO@@" target="_blank" rel="noopener noreferrer">GitHub</a>.</p>
+<p>Es un proyecto personal. Cualquiera puede proponer cambios en el <a href="@@REPO@@" target="_blank" rel="noopener noreferrer">repositorio</a>, y los que se aceptan quedan en su <a href="@@REPO@@/commits/main" target="_blank" rel="noopener noreferrer">historial público</a>.</p>
+
+<h2 id="independencia">Independencia</h2>
+<p>Pablo no milita ni ha militado en ningún partido. No ha trabajado ni colaborado con ningún partido, ni con Jordi Wild, ni con The Wild Project. Nadie le ha encargado este trabajo.</p>
+<p>The Wild Project y Jordi Wild no participan en esta web ni la respaldan.</p>
+
+<h2 id="financiacion">Financiación</h2>
+<p>Esta web no tiene financiación ni apoyo de nadie. Pablo paga los costes, que son sus suscripciones de IA, y la web está alojada en el plan gratuito de Vercel. No hay publicidad ni seguimiento de visitas.</p>
+
+<h2 id="como">Cómo se hace</h2>
+<ul>
+<li>El audio de cada entrevista se transcribe con Whisper, un programa de transcripción automática.</li>
+<li>Modelos de IA de Claude (Sonnet), con búsqueda web, contrastan cada afirmación con fuentes públicas y le ponen un veredicto.</li>
+<li>Ninguna persona periodista ha revisado los veredictos.</li>
+</ul>
+<p>El procedimiento completo está en el <a href="@@REPO@@/blob/main/METODO.md" target="_blank" rel="noopener noreferrer">método, en GitHub</a>. En <a href="/verificalo">Verifícalo tú</a> puedes comprobar cada veredicto por tu cuenta.</p>
+
+<h2 id="errores">Errores y correcciones</h2>
+<p>Si ves un error, abre una incidencia en GitHub con la plantilla «Corregir una afirmación»: <a href="@@REPO@@/issues/new/choose" target="_blank" rel="noopener noreferrer">abrir una incidencia</a>. Indica el identificador de la afirmación o el minuto, y una fuente.</p>
+<p>Una corrección se acepta por la fuente, no por el partido. Se aplica la misma vara de medir a todos.</p>
+<p>Los cambios en los datos quedan registrados y se pueden consultar públicamente en el <a href="@@REPO@@/commits/main/entrevistas" target="_blank" rel="noopener noreferrer">historial de cambios</a>.</p>
+<p>El contacto es solo por GitHub.</p>
+</main>
+<footer class="pie-solo"><div class="ancho">@@PIE@@</div></footer>
+</body>
+</html>
+"""
+
 PAGINA_API = """<!doctype html>
 <html lang="es">
 <head>
@@ -1172,6 +1246,7 @@ noscript p { max-width:68ch; margin:24px 16px; }
 </section>
 </div></header>
 <div id="referencia"></div>
+<footer class="pie-solo"><div class="ancho">@@PIE@@</div></footer>
 <noscript><p>La referencia interactiva necesita JavaScript. Tienes la misma información en <a href="/api/v1/openapi.json">openapi.json</a>.</p></noscript>
 <script src="https://cdn.jsdelivr.net/npm/@scalar/api-reference@@@SCALAR@@/dist/browser/standalone.js" integrity="@@SCALAR_SRI@@" crossorigin="anonymous"></script>
 <script>
@@ -1216,7 +1291,7 @@ noscript p { max-width:68ch; margin:24px 16px; }
 REDIRIGE_API = """<!doctype html>
 <html lang="es"><head><meta charset="utf-8"><meta http-equiv="refresh" content="0; url=/api">
 @@CABECERA@@
-</head><body><p>La referencia de la API está ahora en <a href="/api">/api</a>.</p></body></html>
+</head><body><p>La referencia de la API está ahora en <a href="/api">/api</a>.</p>@@PIE@@</body></html>
 """
 
 PORTADA = """<!doctype html>
@@ -1300,6 +1375,7 @@ footer p { max-width:68ch; }
 @@LEYENDA@@
 <p style="margin-top:22px">Verificación asistida por IA (transcripción con Whisper, contraste con modelos Claude y búsqueda web), sin revisión de un equipo de periodistas. Cada afirmación enlaza el segundo exacto del vídeo y sus fuentes, y el código, las transcripciones y los datos están publicados en <a href="@@REPO@@" target="_blank" rel="noopener noreferrer">GitHub</a>. «Falso» no implica intención de mentir: incluye errores y lapsus. El número de afirmaciones falsas depende también de cuánto habla cada invitado y de cuántos datos da, así que las cifras no son un ranking. En rojo, junto a cada tema, cuántas afirmaciones falsas o engañosas contiene.</p>
 <p>Última actualización: @@FECHA@@.</p>
+@@PIE@@
 </div></footer>
 </body>
 </html>
@@ -1342,6 +1418,7 @@ h2 { font:700 23px/1.2 var(--serif); margin:44px 0 14px; padding-top:12px; borde
 @@CUERPO@@
 <div style="border-top:3px solid var(--tinta); margin-top:48px; padding-top:22px">@@LEYENDA@@</div>
 </main>
+<footer class="pie-solo"><div class="ancho">@@PIE@@</div></footer>
 <script>
 const botones = document.querySelectorAll("#filtros button[data-v]");
 const todas = document.querySelector("#filtros [data-todas]"), soloB = document.querySelector("#filtros [data-solo]");
@@ -1516,6 +1593,7 @@ footer .leyenda-f { margin-bottom:34px; max-width:820px; }
   <a class="repo" href="@@REPO@@" target="_blank" rel="noopener noreferrer">Código, transcripción y datos en GitHub ↗</a>
   <a class="repo claro" href="/api">API abierta</a>
   <p>¿Ves un error? Abre una incidencia en el repositorio. Última actualización: @@FECHA@@.</p>
+@@PIE@@
 </div></footer>
 <script>
 const activos = new Set(["falso", "enganoso"]);

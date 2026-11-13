@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<script>try{var m=localStorage.getItem("modo");if(m==="claro"||m==="oscuro")document.documentElement.dataset.modo=m}catch(e){}</script>
+<title>Quién hace esto · Verificación The Wild Project</title>
+<meta name="description" content="Quién hace esta verificación, su independencia, quién la paga, cómo se hace y cómo se corrigen los errores.">
+<link rel="canonical" href="https://verificacion-podcast.vercel.app/quien">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Verificación de las entrevistas de The Wild Project">
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="Quién hace esto · Verificación The Wild Project">
+<meta property="og:description" content="Quién hace esta verificación, su independencia, quién la paga, cómo se hace y cómo se corrigen los errores.">
+<meta property="og:url" content="https://verificacion-podcast.vercel.app/quien">
+<meta property="og:image" content="https://verificacion-podcast.vercel.app/compartir/general.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Verificación dato a dato de las entrevistas electorales de The Wild Project">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Quién hace esto · Verificación The Wild Project">
+<meta name="twitter:description" content="Quién hace esta verificación, su independencia, quién la paga, cómo se hace y cómo se corrigen los errores.">
+<meta name="twitter:image" content="https://verificacion-podcast.vercel.app/compartir/general.png">
+<meta name="twitter:image:alt" content="Verificación dato a dato de las entrevistas electorales de The Wild Project">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<style>
+:root { --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--fondo); color:var(--tinta); font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; }
+a { color:var(--tinta); text-underline-offset:3px; }
+.ancho { max-width:1120px; margin:0 auto; padding:0 16px; }
+main.ancho { max-width:820px; padding-bottom:72px; }
+h1 { font:700 clamp(30px,6vw,48px)/1.06 var(--serif); letter-spacing:-0.02em; margin:38px 0 12px; text-wrap:balance; }
+.entrada { font-size:17px; max-width:62ch; }
+main > h2 { font:700 24px/1.2 var(--serif); margin:44px 0 10px; padding-top:12px; border-top:3px solid var(--tinta); }
+p, li { max-width:68ch; }
+main ul { padding-left:22px; } main li { margin:4px 0; }
+
+:root { --fondo:#fff; --tinta:#000; --suave:#444; --gris:#666; --gris-claro:#999; --claro:#d9d9d9; --codigo:#f2f2f2; --resalte:#f3f3f3; --pre-fondo:#000; --pre-tinta:#fff; --pre-borde:transparent; --sombra:#000; --inv-suave:#ccc; --sobre-tono:#fff; --logo-fondo:transparent; --logo-radio:0; --luna:block; --sol:none; color-scheme:light; --v-falso:#c0271e; --v-enganoso:#c26a00; --v-mayormente_verdadero:#5a7d10; --v-verdadero:#1c7c45; --v-no_verificable:#777; }
+@media (prefers-color-scheme:dark) { :root:not([data-modo=claro]) { --fondo:#121214; --tinta:#ececee; --suave:#bdbdc4; --gris:#a3a3aa; --gris-claro:#7c7c84; --claro:#3a3a40; --codigo:#26262b; --resalte:#26262b; --pre-fondo:#1c1c20; --pre-tinta:#ececee; --pre-borde:#3a3a40; --sombra:#55555c; --inv-suave:#55555c; --sobre-tono:#121214; --logo-fondo:#fff; --logo-radio:4px; --luna:none; --sol:block; color-scheme:dark; --v-falso:#ff6b5e; --v-enganoso:#ff9a2e; --v-mayormente_verdadero:#b8d63c; --v-verdadero:#3fd083; --v-no_verificable:#a4a4ac; } }
+:root[data-modo=oscuro] { --fondo:#121214; --tinta:#ececee; --suave:#bdbdc4; --gris:#a3a3aa; --gris-claro:#7c7c84; --claro:#3a3a40; --codigo:#26262b; --resalte:#26262b; --pre-fondo:#1c1c20; --pre-tinta:#ececee; --pre-borde:#3a3a40; --sombra:#55555c; --inv-suave:#55555c; --sobre-tono:#121214; --logo-fondo:#fff; --logo-radio:4px; --luna:none; --sol:block; color-scheme:dark; --v-falso:#ff6b5e; --v-enganoso:#ff9a2e; --v-mayormente_verdadero:#b8d63c; --v-verdadero:#3fd083; --v-no_verificable:#a4a4ac; }
+[data-v=falso], .tono-falso { --tono:var(--v-falso); }
+[data-v=enganoso], .tono-enganoso { --tono:var(--v-enganoso); }
+[data-v=mayormente_verdadero], .tono-mayormente_verdadero { --tono:var(--v-mayormente_verdadero); }
+[data-v=verdadero], .tono-verdadero { --tono:var(--v-verdadero); }
+[data-v=no_verificable], .tono-no_verificable { --tono:var(--v-no_verificable); }
+::view-transition-old(root), ::view-transition-new(root) { animation:none; mix-blend-mode:normal; }
+html { scroll-behavior:smooth; scroll-padding-top:calc(var(--menu, 48px) + 64px); }
+[hidden] { display:none !important; }
+.menu { position:sticky; top:0; z-index:10; background:var(--fondo); border-bottom:2px solid var(--tinta); }
+.menu .ancho { padding-top:9px; padding-bottom:9px; position:relative; }
+.m1 { display:flex; flex-wrap:wrap; align-items:center; gap:4px 24px; font-size:14.5px; }
+.m1 a, .desp summary { color:var(--tinta); text-decoration:none; font-weight:600; padding:3px 0; border-bottom:2px solid transparent; }
+.m1 > a:hover, .desp.actual summary, .desp[open] summary, .desp summary:hover { border-bottom-color:var(--tinta); }
+.m1 .sello { font:700 17px/1.2 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; }
+.m1 .off { color:var(--gris-claro); } .m1 .dcha { margin-left:auto; }
+.modo { flex:none; display:inline-grid; place-items:center; width:26px; height:26px; padding:0; margin:0 0 0 -8px; cursor:pointer;
+  color:var(--tinta); background:var(--fondo); border:1.5px solid var(--tinta); border-radius:50%; }
+.modo:hover { background:var(--tinta); color:var(--fondo); }
+.modo svg { width:15px; height:15px; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+.modo .luna { display:var(--luna); } .modo .sol { display:var(--sol); }
+.rot { font-size:10.5px; font-weight:700; text-transform:uppercase; letter-spacing:.09em; color:var(--gris); flex:none; }
+.desp { position:relative; margin:0; padding:0; border:0; font-size:inherit; }
+.desp summary { list-style:none; cursor:pointer; user-select:none; }
+.desp summary::-webkit-details-marker { display:none; }
+.desp summary::after { content:" ▾"; } .desp[open] summary::after { content:" ▴"; }
+.desp .lista { position:absolute; top:calc(100% + 10px); left:0; z-index:20; background:var(--fondo); border:2px solid var(--tinta); box-shadow:5px 5px 0 var(--sombra);
+  width:max-content; min-width:260px; max-width:min(92vw,470px); max-height:74vh; overflow-y:auto; padding:6px 0; }
+.desp .lista a { display:flex; justify-content:space-between; align-items:baseline; gap:16px; padding:7px 16px;
+  font-size:14.5px; font-weight:500; border:0; line-height:1.35; }
+.desp .lista a.fuerte { font-weight:700; padding:9px 16px; }
+.desp .lista a.fuerte small { font-weight:500; color:var(--gris); font-size:12px; white-space:nowrap; }
+.desp .lista .rot { margin:8px 0 2px; padding:9px 16px 0; border-top:1px solid var(--tinta); }
+.desp .lista a:hover { background:var(--tinta); color:var(--fondo); } .desp .lista a:hover small { color:var(--inv-suave); }
+.desp .lista b { color:var(--v-falso); font-weight:700; font-variant-numeric:tabular-nums; }
+.desp .lista a:hover b { color:var(--fondo); } .desp .lista a.off { opacity:.4; }
+.leyenda-f h2 { font:700 22px/1.2 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; margin:0 0 4px; padding:0; border:0; }
+.ley-intro { margin:0 0 14px; font-size:14.5px; color:var(--suave); }
+.leyenda-f dl { margin:0 0 16px; border-top:2px solid var(--tinta); }
+.leyenda-f dl div { display:grid; grid-template-columns:150px minmax(0,1fr); gap:0 16px; align-items:center; padding:9px 0; border-bottom:1px solid var(--tinta); }
+.leyenda-f dt { background:var(--tono); color:var(--sobre-tono); font-size:12.5px; font-weight:700; text-transform:uppercase; letter-spacing:.07em;
+  padding:7px 10px; text-align:center; }
+.leyenda-f dd { margin:0; font-size:15px; line-height:1.4; }
+.ley-notas { list-style:none; margin:0; padding:0; font-size:14.5px; display:grid; gap:4px; }
+@media (max-width:560px) { .leyenda-f dl div { grid-template-columns:1fr; gap:6px; } .leyenda-f dt { justify-self:start; } }
+.filtros { position:sticky; top:var(--menu, 48px); z-index:5; background:var(--fondo); border-bottom:1px solid var(--tinta); padding:9px 0; }
+.fila { display:flex; flex-wrap:wrap; align-items:center; gap:6px 8px; }
+.fila button { font:inherit; font-size:12.5px; font-weight:600; color:var(--tinta); background:var(--fondo); border:1.5px solid var(--tinta);
+  border-radius:999px; padding:3px 11px; cursor:pointer; display:inline-flex; align-items:center; gap:6px; }
+.fila b { font-weight:500; opacity:.7; font-variant-numeric:tabular-nums; }
+.fila button[data-v] { color:var(--tono); border-color:var(--tono); }
+.fila button[data-v] i { width:8px; height:8px; border-radius:50%; background:currentColor; }
+.fila button[aria-pressed=true] { background:var(--tinta); color:var(--fondo); }
+.fila button[data-v][aria-pressed=true] { background:var(--tono); color:var(--sobre-tono); }
+.fila button[data-solo] { margin-left:auto; }
+.pie-solo { border-top:1px solid var(--tinta); padding:18px 0 44px; }
+.pie-quien { margin:0; font-size:13.5px; color:var(--suave); max-width:none; }
+footer .pie-quien { margin-top:18px; }
+.pie-quien a { color:var(--suave); text-underline-offset:3px; }
+@media (max-width:700px) { .m1 { gap:4px 16px; font-size:14px; } .m1 .dcha { margin-left:0; }
+  .desp { position:static; } .desp .lista { left:16px; right:16px; top:auto; margin-top:10px; width:auto; max-width:none; }
+  .fila .rot { display:none; } .fila button { font-size:12px; padding:2px 9px; } .fila button[data-solo] { margin-left:0; } }
+
+</style>
+</head>
+<body>
+<header class="menu"><div class="ancho"><div class="m1"><a class="sello" href="/" title="Todas las entrevistas">Verificación</a><details class="desp"><summary>Pedro Sánchez</summary><div class="lista"><a class="fuerte" href="/sanchez"><span>Línea temporal</span><small>30 falsas o engañosas de 147</small></a><a class="fuerte" href="/sanchez/transcripcion"><span>Transcripción completa</span></a><p class="rot">Temas</p><a href="/sanchez#tema-3" data-tema="tema-3"><span>Insultos, polarización y crispación en la política española</span><b>1</b></a><a href="/sanchez#tema-4" data-tema="tema-4"><span>Accidentes ferroviarios y responsabilidades del Gobierno</span><b>2</b></a><a href="/sanchez#tema-5" data-tema="tema-5"><span>Crisis de Ceuta, Marruecos y gestión de la frontera</span><b>7</b></a><a href="/sanchez#tema-6" data-tema="tema-6"><span>Inmigración, integración y futuro demográfico de España</span><b>3</b></a><a href="/sanchez#tema-7" data-tema="tema-7"><span>Ábalos, Koldo, Cerdán y los casos que afectan al PSOE</span><b>3</b></a><a href="/sanchez#tema-8" data-tema="tema-8"><span>Leire Díez, Zapatero y las investigaciones abiertas</span><b>3</b></a><a href="/sanchez#tema-9" data-tema="tema-9"><span>Vivienda, alquileres y acceso de los jóvenes a una casa</span><b>6</b></a><a href="/sanchez#tema-10" data-tema="tema-10"><span>Amnistía, Bildu, Pablo Iglesias y los cambios de opinión de Sánchez</span><b>5</b></a></div></details><details class="desp"><summary>Alberto Núñez Feijóo</summary><div class="lista"><a class="fuerte" href="/feijoo"><span>Línea temporal</span><small>31 falsas o engañosas de 153</small></a><a class="fuerte" href="/feijoo/transcripcion"><span>Transcripción completa</span></a><p class="rot">Temas</p><a href="/feijoo#tema-2" data-tema="tema-2"><span>Vox, polarización y un posible gobierno de coalición</span><b>4</b></a><a href="/feijoo#tema-3" data-tema="tema-3"><span>Economía, pensiones y futuro del sistema público</span><b>1</b></a><a href="/feijoo#tema-4" data-tema="tema-4"><span>Autónomos, impuestos y propuestas económicas del PP</span></a><a href="/feijoo#tema-5" data-tema="tema-5"><span>Deuda pública, déficit y gasto en defensa</span><b>4</b></a><a href="/feijoo#tema-6" data-tema="tema-6"><span>Ceuta, Marruecos y la gestión de la frontera</span><b>4</b></a><a href="/feijoo#tema-7" data-tema="tema-7"><span>Inmigración, ayudas sociales, integración y expulsiones</span><b>5</b></a><a href="/feijoo#tema-8" data-tema="tema-8"><span>Feijóo explica su relación con Marcial Dorado</span><b>6</b></a><a href="/feijoo#tema-9" data-tema="tema-9"><span>Corrupción, Gürtel y los casos que afectan al PSOE y al PP</span><b>4</b></a><a href="/feijoo#tema-10" data-tema="tema-10"><span>Isabel Díaz Ayuso y su relación dentro del Partido Popular</span><b>3</b></a><a href="/feijoo#tema-11" data-tema="tema-11"><span>Inglés, servicio militar, Trump y política internacional</span></a><a href="/feijoo#tema-12" data-tema="tema-12"><span>Feijóo define a Colau, Abascal y Pedro Sánchez y cierra la entrevist</span></a></div></details><details class="desp"><summary>Ada Colau</summary><div class="lista"><a class="fuerte" href="/colau"><span>Línea temporal</span><small>29 falsas o engañosas de 153</small></a><a class="fuerte" href="/colau/transcripcion"><span>Transcripción completa</span></a><p class="rot">Temas</p><a href="/colau#tema-3" data-tema="tema-3"><span>Twitter, redes sociales y polarización política</span></a><a href="/colau#tema-4" data-tema="tema-4"><span>Por qué Ada Colau vuelve a la política y se presenta a las elecciones</span><b>1</b></a><a href="/colau#tema-5" data-tema="tema-5"><span>Frente Amplio, Podemos y la división de la izquierda</span><b>2</b></a><a href="/colau#tema-6" data-tema="tema-6"><span>PSOE, Sumar, corrupción y responsabilidad política</span><b>2</b></a><a href="/colau#tema-7" data-tema="tema-7"><span>Accidentes ferroviarios y gestión del sistema de trenes</span><b>5</b></a><a href="/colau#tema-8" data-tema="tema-8"><span>Ceuta, Marruecos y la política migratoria de España</span><b>2</b></a><a href="/colau#tema-9" data-tema="tema-9"><span>Inmigración, integración y choque cultural</span><b>1</b></a><a href="/colau#tema-10" data-tema="tema-10"><span>Natalidad, demografía y el futuro de la población española</span></a><a href="/colau#tema-11" data-tema="tema-11"><span>Su gestión de Barcelona: seguridad, limpieza y errores como alcaldesa</span><b>7</b></a><a href="/colau#tema-12" data-tema="tema-12"><span>Vivienda, alquileres, grandes propietarios y especulación</span><b>4</b></a><a href="/colau#tema-13" data-tema="tema-13"><span>Ocupación, pequeños propietarios e impagos</span></a><a href="/colau#tema-14" data-tema="tema-14"><span>Trump, Israel, la flotilla y sus rivales políticos</span><b>5</b></a></div></details><a class="dcha" href="/verificalo">Verifícalo tú</a><a href="/quien">Quién lo hace</a><a href="/api">API</a><a href="https://github.com/PabloPC05/verificacion-podcast" target="_blank" rel="noopener noreferrer">GitHub ↗</a><button class="modo" type="button" aria-label="Cambiar a modo oscuro" title="Cambiar a modo oscuro"><svg class="luna" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="sol" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button></div></div></header><script>
+document.addEventListener("click", ev => document.querySelectorAll("details.desp[open]").forEach(d => {
+  if (!d.contains(ev.target) || ev.target.closest(".lista a")) d.open = false;
+}));
+document.addEventListener("keydown", ev => { if (ev.key === "Escape") document.querySelectorAll("details.desp[open]").forEach(d => d.open = false); });
+const medirMenu = () => document.documentElement.style.setProperty("--menu", document.querySelector(".menu").offsetHeight + "px");
+medirMenu(); addEventListener("resize", medirMenu);
+// Modo claro/oscuro. Sin preferencia guardada manda el sistema (lo resuelve el CSS); al pulsar se guarda y manda sobre el sistema.
+const RAIZ = document.documentElement, botonModo = document.querySelector(".modo"), sistemaOscuro = matchMedia("(prefers-color-scheme: dark)");
+const hayOscuro = () => (RAIZ.dataset.modo || (sistemaOscuro.matches ? "oscuro" : "claro")) === "oscuro";
+function etiquetarModo() {
+  const t = hayOscuro() ? "Cambiar a modo claro" : "Cambiar a modo oscuro";
+  botonModo.setAttribute("aria-label", t); botonModo.title = t;
+}
+// Revelado circular desde el botón (View Transitions API); sin la API o con poco movimiento, el cambio es instantáneo.
+function revelarModo(cambiar) {
+  if (!document.startViewTransition || matchMedia("(prefers-reduced-motion: reduce)").matches) { cambiar(); return; }
+  const c = botonModo.getBoundingClientRect(), x = c.left + c.width / 2, y = c.top + c.height / 2;
+  const r = Math.hypot(Math.max(x, innerWidth - x), Math.max(y, innerHeight - y));
+  document.startViewTransition(cambiar).ready.then(() => RAIZ.animate(
+    { clipPath: [`circle(0px at ${x}px ${y}px)`, `circle(${r}px at ${x}px ${y}px)`] },
+    { duration: 420, easing: "cubic-bezier(0.4, 0, 0.2, 1)", pseudoElement: "::view-transition-new(root)" })).catch(() => {});
+}
+botonModo.onclick = () => {
+  const nuevo = hayOscuro() ? "claro" : "oscuro";
+  revelarModo(() => { RAIZ.dataset.modo = nuevo; etiquetarModo(); });
+  try { localStorage.setItem("modo", nuevo); } catch (e) {}
+};
+sistemaOscuro.addEventListener("change", etiquetarModo);
+etiquetarModo();
+</script>
+<main class="ancho">
+<h1>Quién hace esto</h1>
+<p class="entrada">Quién está detrás de esta web, de quién es independiente, quién la paga y cómo se corrigen los errores.</p>
+
+<h2 id="quien">Quién lo hace</h2>
+<p>Esta web la hace Pablo Pardo Cotos, estudiante del doble grado de Matemáticas e Ingeniería Informática de la Universidad Complutense de Madrid. Su perfil está en <a href="https://github.com/PabloPC05" target="_blank" rel="noopener noreferrer">GitHub</a>.</p>
+<p>Es un proyecto personal. Cualquiera puede proponer cambios en el <a href="https://github.com/PabloPC05/verificacion-podcast" target="_blank" rel="noopener noreferrer">repositorio</a>, y los que se aceptan quedan en su <a href="https://github.com/PabloPC05/verificacion-podcast/commits/main" target="_blank" rel="noopener noreferrer">historial público</a>.</p>
+
+<h2 id="independencia">Independencia</h2>
+<p>Pablo no milita ni ha militado en ningún partido. No ha trabajado ni colaborado con ningún partido, ni con Jordi Wild, ni con The Wild Project. Nadie le ha encargado este trabajo.</p>
+<p>The Wild Project y Jordi Wild no participan en esta web ni la respaldan.</p>
+
+<h2 id="financiacion">Financiación</h2>
+<p>Esta web no tiene financiación ni apoyo de nadie. Pablo paga los costes, que son sus suscripciones de IA, y la web está alojada en el plan gratuito de Vercel. No hay publicidad ni seguimiento de visitas.</p>
+
+<h2 id="como">Cómo se hace</h2>
+<ul>
+<li>El audio de cada entrevista se transcribe con Whisper, un programa de transcripción automática.</li>
+<li>Modelos de IA de Claude (Sonnet), con búsqueda web, contrastan cada afirmación con fuentes públicas y le ponen un veredicto.</li>
+<li>Ninguna persona periodista ha revisado los veredictos.</li>
+</ul>
+<p>El procedimiento completo está en el <a href="https://github.com/PabloPC05/verificacion-podcast/blob/main/METODO.md" target="_blank" rel="noopener noreferrer">método, en GitHub</a>. En <a href="/verificalo">Verifícalo tú</a> puedes comprobar cada veredicto por tu cuenta.</p>
+
+<h2 id="errores">Errores y correcciones</h2>
+<p>Si ves un error, abre una incidencia en GitHub con la plantilla «Corregir una afirmación»: <a href="https://github.com/PabloPC05/verificacion-podcast/issues/new/choose" target="_blank" rel="noopener noreferrer">abrir una incidencia</a>. Indica el identificador de la afirmación o el minuto, y una fuente.</p>
+<p>Una corrección se acepta por la fuente, no por el partido. Se aplica la misma vara de medir a todos.</p>
+<p>Los cambios en los datos quedan registrados y se pueden consultar públicamente en el <a href="https://github.com/PabloPC05/verificacion-podcast/commits/main/entrevistas" target="_blank" rel="noopener noreferrer">historial de cambios</a>.</p>
+<p>El contacto es solo por GitHub.</p>
+</main>
+<footer class="pie-solo"><div class="ancho"><p class="pie-quien"><a href="/quien">Proyecto personal e independiente de Pablo Pardo Cotos, sin relación con The Wild Project ni con ningún partido.</a></p></div></footer>
+</body>
+</html>
