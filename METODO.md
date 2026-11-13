@@ -16,6 +16,23 @@ Crea `entrevistas/<slug>/` con la transcripción (`transcripcion.txt`, párrafos
 
 Si el entorno `.venv` no existe: `uv venv --python 3.12 && uv pip install mlx-whisper`.
 
+## 1 bis. Reconocer quién habla
+
+```sh
+.venv/bin/python herramientas/hablantes.py <slug>
+```
+
+Necesita `sherpa-onnx` y el modelo de huella de voz TitaNet-large en `.modelos/` (el enlace está en la cabecera del
+script). Antes hay que añadir en `MUESTRAS` dos fragmentos escuchados a mano en los que hable una sola persona: Jordi
+presentando el programa y una respuesta larga del invitado. Cada segmento de la transcripción se compara con esas dos
+muestras (recalibradas con los segmentos más claros) y con una de los verificadores del programa; si no se parece a
+ninguna queda como «Voz sin identificar».
+
+Escribe `hablantes.json` (la voz de cada segmento, con sus puntuaciones) y `transcripcion-hablantes.txt`. Con 125
+segmentos etiquetados a mano de la entrevista de Sánchez acertó el 96,8 %; los fallos son frases de menos de un
+segundo y segmentos en los que Whisper juntó a los dos hablantes. El agrupamiento automático sin muestras dio
+resultados mucho peores (partía a cada persona en varias voces) y se descartó.
+
 ## 2. Repartir por temas
 
 Lee la transcripción entera y `capitulos.json`. Agrupa los capítulos en bloques temáticos (en la entrevista
