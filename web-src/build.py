@@ -208,9 +208,18 @@ DEFINICIONES = {
 }
 
 
-PIE = ('<p class="pie-quien"><a href="/quien">Proyecto personal e independiente de Pablo Pardo Cotos, '
+PIE = ('<p class="pie-quien"><a href="/quien">Proyecto personal e independiente de Pablo Pardo Cotos y Diego Cristóbal Andaluz, '
        'sin relación con The Wild Project ni con ningún partido.</a></p>')
 REPO_PABLO = "https://github.com/PabloPC05"
+# Ficha de Diego en /quien. Solo datos con fuente pública; sin foto.
+BIO_DIEGO = ("<p>Cofundador e ingeniero full stack de aplicaciones móviles en OSIX Tech Development, una empresa de software e "
+             "inteligencia artificial de Santiago de Compostela, y organizador de GDG Santiago de Compostela. Su trabajo de fin de grado "
+             "de Ingeniería Informática en la Universidad de Santiago de Compostela es MydIAgram, un agente que genera diagramas de "
+             "software a partir de texto.</p><p>En esta web ha hecho el diseño responsive, la leyenda de veredictos, las estadísticas "
+             "de visitas sin cookies y la referencia interactiva de la API.</p>")
+ENLACES_DIEGO = ('<li><a href="https://github.com/2cristo7" target="_blank" rel="noopener noreferrer">GitHub</a></li>'
+                 '<li><a href="https://www.linkedin.com/in/diego-cristobal-andaluz-3a5580304" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>'
+                 '<li><a href="https://osix.tech/nosotros/" target="_blank" rel="noopener noreferrer">OSIX</a></li>')
 
 
 def rellenar(plantilla, **valores):
@@ -1504,7 +1513,7 @@ def main():
         f'<p class="prog">{e(m.get("programa", ""))}</p><p class="des">Verificación en curso.</p></div></article>'
         for m in entrevistas if not m.get("publicar"))
     (SALIDA / "index.html").write_text(rellenar(
-        PORTADA, FAB=FAB_LEYENDA, CABECERA=cabecera(
+        PORTADA, LEYENDA_LINEA=LEYENDA_LINEA, CABECERA=cabecera(
             "/", "Verificación de las entrevistas electorales de The Wild Project",
             "Las entrevistas de Jordi Wild a los candidatos a las elecciones generales de 2026, comprobadas dato a dato "
             "con el mismo método. Código y datos abiertos."), CREDITOS=creditos_fotos(hechas), MENU=menu(entrevistas), CSS_MENU=CSS_MENU, LEYENDA=LEYENDA, COMPARATIVA=comparativa(hechas), TARJETAS=tarjetas, REPO=REPO,
@@ -1523,7 +1532,7 @@ def main():
         QUIEN, ANALITICA=ANALITICA_QUIEN if UMAMI_ID else SIN_ANALITICA_QUIEN, CABECERA=cabecera(
             "/quien", "Quién hace esto · Verificación The Wild Project",
             "Quién hace esta verificación, su independencia, quién la paga, cómo se hace y cómo se corrigen los errores."),
-        MENU=menu(entrevistas), CSS_MENU=CSS_MENU, REPO=REPO, REPO_PABLO=REPO_PABLO), encoding="utf-8")
+        MENU=menu(entrevistas), CSS_MENU=CSS_MENU, REPO=REPO, REPO_PABLO=REPO_PABLO, BIO_DIEGO=BIO_DIEGO, ENLACES_DIEGO=ENLACES_DIEGO), encoding="utf-8")
     pagina_metodologia(entrevistas)
     DATOS.mkdir(exist_ok=True)
     (DATOS / "index.html").write_text(rellenar(
@@ -1559,6 +1568,15 @@ LEYENDA = """<section class="leyenda-f" aria-label="Leyenda de veredictos">
 <li><b>Confianza</b> (alta, media, baja): cuánta prueba respalda el veredicto.</li>
 </ul>
 </section>"""
+
+# Leyenda en una línea de texto para la portada: el color, el nombre y qué significa, sin botón flotante.
+LEYENDA_LINEA = ('<ul class="ley-linea" aria-label="Qué significa cada color">'
+    '<li class="tono-falso"><i aria-hidden="true"></i><span><b>Falso:</b> los datos lo contradicen</span></li>'
+    '<li class="tono-enganoso"><i aria-hidden="true"></i><span><b>Engañoso:</b> parte de un dato real, pero confunde</span></li>'
+    '<li class="tono-mayormente_verdadero"><i aria-hidden="true"></i><span><b>Casi cierto:</b> con una imprecisión menor</span></li>'
+    '<li class="tono-verdadero"><i aria-hidden="true"></i><span><b>Verdadero:</b> los datos lo confirman</span></li>'
+    '<li class="tono-no_verificable"><i aria-hidden="true"></i><span><b>No verificable:</b> sin prueba pública suficiente</span></li>'
+    '<li class="mas"><a href="/metodologia#que-significa-cada-veredicto">Criterios de cada veredicto</a></li></ul>')
 
 # Colores como variables: el tema claro (el de siempre) en :root y el oscuro redefinido una sola vez.
 # Sin preferencia guardada manda prefers-color-scheme; si la persona pulsa el botón, <html data-modo="claro|oscuro"> manda sobre el sistema.
@@ -1963,33 +1981,80 @@ QUIEN = """<!doctype html>
 * { box-sizing:border-box; }
 body { margin:0; background:var(--fondo); color:var(--tinta); font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; }
 a { color:var(--tinta); text-underline-offset:3px; }
-.ancho { max-width:1120px; margin:0 auto; padding:0 16px; }
-main.ancho { max-width:820px; padding-bottom:72px; }
-h1 { font:700 clamp(30px,6vw,48px)/1.06 var(--serif); letter-spacing:-0.02em; margin:38px 0 12px; text-wrap:balance; }
-.entrada { font-size:17px; max-width:62ch; }
-main > h2 { font:700 24px/1.2 var(--serif); margin:44px 0 10px; padding-top:12px; border-top:3px solid var(--tinta); }
+main.ancho { padding-bottom:72px; }
 p, li { max-width:68ch; }
-main ul { padding-left:22px; } main li { margin:4px 0; }
+/* Cabecera: título y entrada apilados en móvil; en escritorio, el título a la izquierda y la entrada a la derecha */
+.cabeza { padding:clamp(28px,5vw,56px) 0 clamp(28px,4vw,48px); }
+h1 { font:700 clamp(30px,5.2vw,58px)/1.05 var(--serif); letter-spacing:-0.02em; margin:0 0 14px; text-wrap:balance; }
+.entrada { font-size:17px; max-width:62ch; margin:0; }
+@media (min-width:1000px) { .cabeza { display:grid; grid-template-columns:minmax(0,1.2fr) minmax(0,1fr); gap:0 clamp(32px,5vw,80px); align-items:end; }
+  .cabeza h1 { margin:0; } }
+/* Personas: una ficha por persona, en columnas en cuanto caben dos de 380 px */
+.seccion-t { font:700 clamp(24px,2.4vw,28px)/1.2 var(--serif); margin:0 0 16px; padding-top:12px; border-top:3px solid var(--tinta); }
+.personas { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr)); gap:clamp(14px,2vw,24px); margin:0 0 14px; }
+.persona { border:2px solid var(--tinta); border-radius:var(--r-caja); padding:clamp(18px,2.4vw,28px); display:grid; grid-template-columns:auto minmax(0,1fr); grid-template-rows:auto auto 1fr auto; gap:4px clamp(14px,2vw,22px); }
+.inicial { grid-row:1 / span 2; width:clamp(52px,5vw,64px); aspect-ratio:1; border-radius:50%; border:2px solid var(--tinta); display:grid; place-items:center;
+  font:700 clamp(18px,1.8vw,22px)/1 var(--serif); letter-spacing:.02em; }
+.persona h3 { font:700 clamp(24px,2.2vw,30px)/1.1 var(--serif); margin:0; align-self:end; text-wrap:balance; }
+.rol { margin:0; font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--gris); align-self:start; }
+.persona .bio { grid-column:1 / -1; margin:14px 0 0; }
+.persona .bio p { margin:0 0 10px; }
+.enlaces { grid-column:1 / -1; align-self:end; display:flex; flex-wrap:wrap; gap:8px; margin:6px 0 0; padding:0; list-style:none; }
+.enlaces a { display:inline-flex; align-items:center; min-height:40px; padding:0 14px; border:1.5px solid var(--tinta); border-radius:var(--r-boton);
+  font-size:14px; font-weight:700; text-decoration:none; transition:background-color .15s ease-out, color .15s ease-out; }
+.enlaces a:hover, .enlaces a:focus-visible { background:var(--tinta); color:var(--fondo); }
+.nota { color:var(--suave); font-size:15px; }
+/* Resto de apartados: rejilla de bloques, una columna en móvil y dos en cuanto caben de 440 px */
+.bloques { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr)); gap:0 clamp(32px,5vw,80px); margin-top:clamp(28px,4vw,48px); }
+.bloques section { min-width:0; }
+.bloques h2 { font:700 24px/1.2 var(--serif); margin:32px 0 10px; padding-top:12px; border-top:3px solid var(--tinta); scroll-margin-top:calc(var(--menu, 48px) + 16px); }
+.bloques ul { padding-left:22px; } .bloques li { margin:4px 0; }
+@media (max-width:560px) { .persona { grid-template-columns:1fr; grid-template-rows:none; } .inicial { grid-row:auto; } .enlaces a { flex:1 1 auto; justify-content:center; } }
 @@CSS_MENU@@
 </style>
 </head>
 <body>
 @@MENU@@
 <main class="ancho">
+<div class="cabeza">
 <h1>Quién hace esto</h1>
 <p class="entrada">Quién está detrás de esta web, de quién es independiente, quién la paga y cómo se corrigen los errores.</p>
+</div>
 
-<h2 id="quien">Quién lo hace</h2>
-<p>Esta web la hace Pablo Pardo Cotos, estudiante del doble grado de Matemáticas e Ingeniería Informática de la Universidad Complutense de Madrid. Su perfil está en <a href="@@REPO_PABLO@@" target="_blank" rel="noopener noreferrer">GitHub</a>.</p>
-<p>Es un proyecto personal. Cualquiera puede proponer cambios en el <a href="@@REPO@@" target="_blank" rel="noopener noreferrer">repositorio</a>, y los que se aceptan quedan en su <a href="@@REPO@@/commits/main" target="_blank" rel="noopener noreferrer">historial público</a>.</p>
+<section aria-labelledby="quien">
+<h2 class="seccion-t" id="quien">Quién lo hace</h2>
+<div class="personas">
+<article class="persona">
+<span class="inicial" aria-hidden="true">PP</span>
+<h3>Pablo Pardo Cotos</h3>
+<p class="rol">Autor y mantenedor</p>
+<div class="bio"><p>Estudiante del doble grado de Matemáticas e Ingeniería Informática de la Universidad Complutense de Madrid. Hace la verificación, mantiene los datos y decide qué cambios entran.</p></div>
+<ul class="enlaces"><li><a href="@@REPO_PABLO@@" target="_blank" rel="noopener noreferrer">GitHub</a></li></ul>
+</article>
+<article class="persona">
+<span class="inicial" aria-hidden="true">DC</span>
+<h3>Diego Cristóbal Andaluz</h3>
+<p class="rol">Diseño y desarrollo web</p>
+<div class="bio">@@BIO_DIEGO@@</div>
+<ul class="enlaces">@@ENLACES_DIEGO@@</ul>
+</article>
+</div>
+<p class="nota">Es un proyecto personal. Cualquiera puede proponer cambios en el <a href="@@REPO@@" target="_blank" rel="noopener noreferrer">repositorio</a>, y los que se aceptan quedan en su <a href="@@REPO@@/commits/main" target="_blank" rel="noopener noreferrer">historial público</a>.</p>
+</section>
 
+<div class="bloques">
+<section>
 <h2 id="independencia">Independencia</h2>
-<p>Pablo no milita ni ha militado en ningún partido. No ha trabajado ni colaborado con ningún partido, ni con Jordi Wild, ni con The Wild Project. Nadie le ha encargado este trabajo.</p>
+<p>Ni Pablo ni Diego militan ni han militado en ningún partido. No han trabajado ni colaborado con ningún partido, ni con Jordi Wild, ni con The Wild Project. Nadie les ha encargado este trabajo.</p>
 <p>The Wild Project y Jordi Wild no participan en esta web ni la respaldan.</p>
+</section>
 
+<section>
 <h2 id="financiacion">Financiación</h2>
 <p>Esta web no tiene financiación ni apoyo de nadie. Pablo paga los costes, que son sus suscripciones de IA, y la web está alojada en el plan gratuito de Vercel. @@ANALITICA@@
+</section>
 
+<section>
 <h2 id="como">Cómo se hace</h2>
 <ul>
 <li>El audio de cada entrevista se transcribe con Whisper, un programa de transcripción automática.</li>
@@ -1997,12 +2062,16 @@ main ul { padding-left:22px; } main li { margin:4px 0; }
 <li>Ninguna persona periodista ha revisado los veredictos.</li>
 </ul>
 <p>El procedimiento completo está en el <a href="/metodologia">método</a>. En <a href="/verificalo">Verifícalo tú</a> puedes comprobar cada veredicto por tu cuenta.</p>
+</section>
 
+<section>
 <h2 id="errores">Errores y correcciones</h2>
 <p>Si ves un error, abre una incidencia en GitHub con la plantilla «Corregir una afirmación»: <a href="@@REPO@@/issues/new/choose" target="_blank" rel="noopener noreferrer">abrir una incidencia</a>. Indica el identificador de la afirmación o el minuto, y una fuente.</p>
 <p>Una corrección se acepta por la fuente, no por el partido. Se aplica la misma vara de medir a todos.</p>
 <p>Los cambios en los datos quedan registrados y se pueden consultar públicamente en el <a href="@@REPO@@/commits/main/entrevistas" target="_blank" rel="noopener noreferrer">historial de cambios</a>.</p>
 <p>El contacto es solo por GitHub.</p>
+</section>
+</div>
 </main>
 <footer class="pie-solo"><div class="ancho">@@PIE@@</div></footer>
 </body>
@@ -2325,7 +2394,7 @@ img.logo { background:var(--logo-fondo); box-shadow:0 0 0 6px var(--logo-fondo);
 footer { border-top:3px solid var(--tinta); margin-top:48px; padding:28px 0 64px; font-size:14.5px; }
 .pie-corto p { margin:0 0 6px; max-width:none; font-size:12.5px; line-height:1.5; color:var(--suave); }
 .pie-corto .final { color:var(--gris); }
-.pie-corto { padding-bottom:76px; }
+.pie-corto { padding-bottom:40px; }
 /* Escritorio: la portada cabe en una pantalla. El cuerpo es una columna de alto completo y los tamaños se atan al alto de la ventana. */
 @media (min-width:1000px) and (min-height:640px) {
   .primera { min-height:calc(100dvh - var(--menu, 48px)); display:flex; flex-direction:column; justify-content:center; gap:clamp(10px,2.4vh,40px);
@@ -2346,7 +2415,7 @@ footer { border-top:3px solid var(--tinta); margin-top:48px; padding:28px 0 64px
   .num { font-size:16px; } .num b { font-size:30px; }
   .tarjetas .entrevista .acc { margin-top:clamp(10px,1.6vh,18px); gap:8px; }
   .btn { min-height:clamp(40px,5.2vh,46px); }
-  .ancho.pie-corto { padding-left:max(88px, clamp(16px,4vw,48px)); padding-bottom:0; line-height:1.45; }
+  .ancho.pie-corto { padding-bottom:0; line-height:1.45; }
   .pie-corto p { display:inline; margin:0; font-size:clamp(11px,1.6vh,12px); }
   .pie-corto .final::before { content:" "; } }
 /* Entre 1000 y 1200 px de ancho las tarjetas son estrechas: botones sin icono para que vayan en una fila, y menos relleno */
@@ -2357,7 +2426,16 @@ footer { border-top:3px solid var(--tinta); margin-top:48px; padding:28px 0 64px
   .tarjetas .entrevista .num { font-size:15px; } .tarjetas .entrevista .num b { font-size:26px; }
   .tarjetas .entrevista { grid-template-columns:56px minmax(0,1fr); } .tarjetas .entrevista .logo { width:56px; height:56px; }
   .cabeza h1 { font-size:clamp(30px,3.4vw,40px); grid-row:1; } .cabeza .tu { display:none; } }
-/* Enlace al final de la primera pantalla que invita a bajar a la comparativa (deja sitio al botón de la leyenda) */
+/* Leyenda en texto bajo las tarjetas: una fila que se parte en varias en pantallas estrechas */
+.ley-linea { display:flex; flex-wrap:wrap; gap:6px clamp(14px,2vw,28px); margin:18px 0 0; padding:0; list-style:none; font-size:13.5px; line-height:1.4; color:var(--suave); }
+.ley-linea li { display:flex; align-items:baseline; gap:7px; }
+.ley-linea i { flex:none; width:10px; height:10px; border-radius:50%; background:var(--tono); transform:translateY(1px); }
+.ley-linea b { color:var(--tinta); }
+.ley-linea .mas { margin-left:auto; }
+.ley-linea .mas a { color:var(--suave); text-underline-offset:3px; }
+@media (max-width:760px) { .ley-linea { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr)); gap:8px 20px; } .ley-linea .mas { margin-left:0; } }
+@media (min-width:1000px) and (min-height:640px) { .ley-linea { margin:0; font-size:clamp(12px,1.7vh,13.5px); } }
+/* Enlace al final de la primera pantalla que invita a bajar a la comparativa */
 .seguir { align-self:center; display:inline-flex; align-items:center; gap:8px; min-height:44px; padding:0 14px; margin:18px 0 0;
   font-size:14px; font-weight:700; text-decoration:none; color:var(--gris); }
 .seguir:hover { color:var(--tinta); } .seguir svg { display:block; width:16px; height:16px; fill:none; stroke:currentColor; stroke-width:2.2; stroke-linecap:round; transition:transform .2s ease-out; }
@@ -2404,6 +2482,7 @@ footer .leyenda-f { max-width:820px; }
 <p class="tu"><a href="/verificalo"><b>Puedes verificarlo tú</b> →</a> Cada dato enlaza su fuente y el minuto del vídeo, y hay un encargo listo para que cualquier IA lo revise por su cuenta.</p>
 </div>
 <div class="tarjetas">@@TARJETAS@@</div>
+@@LEYENDA_LINEA@@
 <a class="seguir" href="#compara-t">Comparativa de los candidatos<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg></a>
 </div>
 @@COMPARATIVA@@
@@ -2413,7 +2492,6 @@ footer .leyenda-f { max-width:820px; }
 <p class="final">Última actualización: @@FECHA@@. @@CREDITOS@@</p>
 @@PIE@@
 </div></footer>
-@@FAB@@
 </body>
 </html>
 """
