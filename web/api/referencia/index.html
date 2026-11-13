@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<script>try{var m=localStorage.getItem("modo");if(m==="claro"||m==="oscuro")document.documentElement.dataset.modo=m}catch(e){}</script>
+<title>Referencia de la API · Verificación The Wild Project</title>
+<meta name="description" content="Referencia completa de la API abierta: cada ruta, cada campo y ejemplos reales, generada a partir de la descripción OpenAPI 3.1.">
+<style>
+:root { --fondo:#fff; --tinta:#000; }
+@media (prefers-color-scheme: dark) { :root:not([data-modo="claro"]) { --fondo:#121214; --tinta:#ececee; } }
+:root[data-modo="oscuro"] { --fondo:#121214; --tinta:#ececee; }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--fondo); color:var(--tinta); font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; }
+.volver { display:flex; flex-wrap:wrap; gap:6px 20px; align-items:center; padding:10px 16px; border-bottom:2px solid var(--tinta); background:var(--fondo); font-size:14px; }
+.volver a { color:var(--tinta); }
+.volver .sello { font:700 16px/1 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; text-decoration:none; }
+.volver .dcha { margin-left:auto; }
+noscript p { max-width:68ch; margin:24px 16px; }
+.scalar-app { --scalar-radius:0; --scalar-radius-lg:0; --scalar-radius-xl:0; }
+.light-mode .scalar-app, .light-mode { --scalar-color-accent:#000; }
+.dark-mode .scalar-app, .dark-mode { --scalar-color-accent:#ececee; --scalar-background-1:#121214; }
+</style>
+</head>
+<body>
+<nav class="volver" aria-label="Navegación"><a class="sello" href="/">Verificación</a><a href="/api">← Guía de la API</a>
+<a class="dcha" href="/api/v1/openapi.json">openapi.json</a></nav>
+<div id="referencia"></div>
+<noscript><p>Esta referencia necesita JavaScript. Tienes la misma información en <a href="/api/v1/openapi.json">openapi.json</a> y una guía corta en <a href="/api">/api</a>.</p></noscript>
+<script src="https://cdn.jsdelivr.net/npm/@scalar/api-reference@1.76.2/dist/browser/standalone.js" integrity="sha384-mCh2A/B6vkfhiHyzwBZm7lbFmEK5fE/96Kbtk+RH1zei1P/XEt0I2MCiG6WfZdor" crossorigin="anonymous"></script>
+<script>
+// Mismo modo que el resto de la web: el elegido con el botón (localStorage «modo») o el del sistema.
+const modo = document.documentElement.dataset.modo;
+const oscuro = modo ? modo === "oscuro" : matchMedia("(prefers-color-scheme: dark)").matches;
+Scalar.createApiReference("#referencia", {
+  url: "/api/v1/openapi.json",
+  forceDarkModeState: oscuro ? "dark" : "light",
+  hideDarkModeToggle: true,
+  hideClientButton: true,
+  showDeveloperTools: "never",
+  agent: { disabled: true },
+  documentDownloadType: "json",
+  defaultHttpClient: { targetKey: "shell", clientKey: "curl" },
+  metaData: { title: "Referencia de la API · Verificación The Wild Project" },
+});
+</script>
+</body>
+</html>

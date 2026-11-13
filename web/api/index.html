@@ -25,6 +25,9 @@ table { border-collapse:collapse; width:100%; font-size:14.5px; min-width:560px;
 th, td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--tinta); vertical-align:top; }
 th { font-size:11px; text-transform:uppercase; letter-spacing:.08em; }
 td a { overflow-wrap:anywhere; }
+.ref { border:2px solid var(--tinta); padding:14px 16px; display:flex; flex-direction:column; gap:4px; }
+.ref a { font-weight:700; font-size:17px; }
+.ref span { font-size:14.5px; }
 
 :root { --fondo:#fff; --tinta:#000; --suave:#444; --gris:#666; --gris-claro:#999; --claro:#d9d9d9; --codigo:#f2f2f2; --resalte:#f3f3f3; --pre-fondo:#000; --pre-tinta:#fff; --pre-borde:transparent; --sombra:#000; --inv-suave:#ccc; --sobre-tono:#fff; --logo-fondo:transparent; --logo-radio:0; --luna:block; --sol:none; color-scheme:light; --v-falso:#c0271e; --v-enganoso:#c26a00; --v-mayormente_verdadero:#5a7d10; --v-verdadero:#1c7c45; --v-no_verificable:#777; }
 @media (prefers-color-scheme:dark) { :root:not([data-modo=claro]) { --fondo:#121214; --tinta:#ececee; --suave:#bdbdc4; --gris:#a3a3aa; --gris-claro:#7c7c84; --claro:#3a3a40; --codigo:#26262b; --resalte:#26262b; --pre-fondo:#1c1c20; --pre-tinta:#ececee; --pre-borde:#3a3a40; --sombra:#55555c; --inv-suave:#55555c; --sobre-tono:#121214; --logo-fondo:#fff; --logo-radio:4px; --luna:none; --sol:block; color-scheme:dark; --v-falso:#ff6b5e; --v-enganoso:#ff9a2e; --v-mayormente_verdadero:#b8d63c; --v-verdadero:#3fd083; --v-no_verificable:#a4a4ac; } }
@@ -124,6 +127,7 @@ etiquetarModo();
 <main class="ancho">
 <h1>API abierta para comprobar la verificación</h1>
 <p>Todos los datos de esta web están disponibles como JSON estático: sin clave, sin límite propio de uso y con CORS abierto. Está pensada para que periodistas, verificadores y agentes de IA puedan revisar cada veredicto contra sus fuentes mucho más rápido que leyendo la web.</p>
+<p class="ref"><a href="/api/referencia">Referencia completa de la API →</a><span>Cada ruta y cada campo, con ejemplos reales y la opción de probar las llamadas desde el navegador.</span></p>
 
 <h2>Direcciones</h2>
 <div class="tabla"><table>
@@ -134,6 +138,7 @@ etiquetarModo();
 <tr><td>Afirmaciones de una entrevista</td><td><a href="/api/v1/sanchez.json">/api/v1/{slug}.json</a> · <a href="/api/v1/sanchez.csv">.csv</a></td></tr>
 <tr><td>Transcripción por segmentos con tiempos</td><td><a href="/api/v1/sanchez/transcripcion.json">/api/v1/{slug}/transcripcion.json</a></td></tr>
 <tr><td>Transcripción en texto plano</td><td><a href="/api/v1/sanchez/transcripcion.txt">/api/v1/{slug}/transcripcion.txt</a></td></tr>
+<tr><td>Referencia completa (Scalar)</td><td><a href="/api/referencia">/api/referencia</a></td></tr>
 <tr><td>Descripción OpenAPI 3.1</td><td><a href="/api/v1/openapi.json">/api/v1/openapi.json</a></td></tr>
 <tr><td>Guía para modelos de lenguaje</td><td><a href="/llms.txt">/llms.txt</a></td></tr>
 </tbody></table></div>

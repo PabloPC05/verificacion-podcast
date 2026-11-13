@@ -141,6 +141,10 @@ PLURAL = {"falso": "Falsas", "enganoso": "Engañosas", "mayormente_verdadero": "
 
 BASE = "https://verificacion-podcast.vercel.app"
 SCALAR = "1.76.2"  # @scalar/api-reference, versión fijada: subirla a mano tras probar /api/referencia
+# Huella SRI de dist/browser/standalone.js de esa versión. Si cambias SCALAR, recalcúlala:
+#   curl -s https://cdn.jsdelivr.net/npm/@scalar/api-reference@<versión>/dist/browser/standalone.js \
+#     | openssl dgst -sha384 -binary | openssl base64 -A
+SCALAR_SRI = "sha384-mCh2A/B6vkfhiHyzwBZm7lbFmEK5fE/96Kbtk+RH1zei1P/XEt0I2MCiG6WfZdor"
 LOGOS = {"PSOE": "psoe.svg", "PP": "pp.svg", "Frente Amplio": "frente-amplio.svg"}
 DEFINICIONES = {
     "verdadero": "Los datos lo confirman.",
@@ -429,6 +433,7 @@ def especificacion_openapi(hechas, ejemplo, aviso, comun):
     if ficha_ej:
         ficha_ej = dict(ficha_ej, temas=ficha_ej["temas"][:2])
     afirm_ej = [afirmacion_api(m_ej, a) for a in m_ej["todas"][:1]] if m_ej else []
+    excl_ej = [dict(x, id=f'{m_ej["slug"]}-{x["id"]}') for x in m_ej.get("excluidas", [])[:1]] if m_ej else []
     segs_ej = []
     if m_ej:
         segs = json.loads((m_ej["carpeta"] / "segmentos.json").read_text(encoding="utf-8"))[:2]
@@ -514,7 +519,7 @@ Si encuentras un dato mal verificado, abre una incidencia en [GitHub]({REPO}/iss
                 "tags": ["Afirmaciones"], "operationId": "afirmacionesDeEntrevista", "summary": "Afirmaciones de una entrevista",
                 "description": "La ficha de la entrevista y sus afirmaciones verificadas, en orden de aparición en el vídeo.",
                 "responses": dict(respuesta("Ficha y afirmaciones de la entrevista.", "AfirmacionesEntrevista",
-                                            dict(comun_ej, entrevista=ficha_ej, afirmaciones=afirm_ej)), **no_existe)}},
+                                            dict(comun_ej, entrevista=ficha_ej, afirmaciones=afirm_ej, excluidas=excl_ej)), **no_existe)}},
             "/afirmaciones.csv": {"get": {
                 "tags": ["Afirmaciones"], "operationId": "afirmacionesCsv", "summary": "Todas las afirmaciones en CSV",
                 "description": csv_desc,
@@ -575,7 +580,7 @@ Si encuentras un dato mal verificado, abre una incidencia en [GitHub]({REPO}/iss
                 "Entrevista": {"type": "object", "description": "Ficha de una entrevista.",
                                "required": ["slug", "invitado", "partido", "programa", "fecha", "duracion", "video_url", "web_url",
                                             "afirmaciones_url", "transcripcion_url", "transcripcion_txt_url",
-                                            "total_afirmaciones", "por_veredicto", "temas"],
+                                            "total_afirmaciones", "por_veredicto", "excluidas", "temas"],
                                "properties": {
                                    "slug": {"type": "string", "description": "Identificador para las rutas `/{slug}…`."},
                                    "invitado": {"type": "string", "description": "Nombre del candidato."},
@@ -588,8 +593,12 @@ Si encuentras un dato mal verificado, abre una incidencia en [GitHub]({REPO}/iss
                                    "afirmaciones_url": dict(url, description="URL de `/{slug}.json`."),
                                    "transcripcion_url": dict(url, description="URL de `/{slug}/transcripcion.json`."),
                                    "transcripcion_txt_url": dict(url, description="URL de `/{slug}/transcripcion.txt`."),
-                                   "total_afirmaciones": {"type": "integer", "minimum": 0},
+                                   "total_afirmaciones": {"type": "integer", "minimum": 0,
+                                                          "description": "Afirmaciones publicadas (sin contar las excluidas)."},
                                    "por_veredicto": ref("PorVeredicto"),
+                                   "excluidas": {"type": "integer", "minimum": 0,
+                                                 "description": "Afirmaciones comprobables que se han dejado fuera por no tener interés "
+                                                                "público. La lista está en el campo `excluidas` de `/{slug}.json`."},
                                    "temas": {"type": "array", "items": ref("Tema"), "description": "Capítulos en orden, incluidos los que no tienen afirmaciones."},
                                }},
                 "Fuente": {"type": "object", "required": ["titulo", "url"],
@@ -626,9 +635,24 @@ Si encuentras un dato mal verificado, abre una incidencia en [GitHub]({REPO}/iss
                 "TodasAfirmaciones": {"allOf": [ref("Comun"), {"type": "object", "required": ["total", "afirmaciones"],
                                       "properties": {"total": {"type": "integer", "minimum": 0, "description": "Número de afirmaciones."},
                                                      "afirmaciones": {"type": "array", "items": ref("Afirmacion")}}}]},
-                "AfirmacionesEntrevista": {"allOf": [ref("Comun"), {"type": "object", "required": ["entrevista", "afirmaciones"],
+                "Excluida": {"type": "object", "description": "Afirmación comprobable que no se publica por no tener interés público. "
+                                                              "Conserva su veredicto original por transparencia.",
+                             "required": ["id", "minuto", "afirmacion", "veredicto", "motivo"],
+                             "properties": {
+                                 "id": {"type": "string", "description": "Mismo formato que `Afirmacion.id` (`sanchez-m251`)."},
+                                 "minuto": {"type": "string", "pattern": "^\\d+:\\d{2}:\\d{2}$"},
+                                 "afirmacion": {"type": "string"},
+                                 "veredicto": ref("Veredicto"),
+                                 "motivo": {"type": "string", "description": "Uno de los cinco motivos de exclusión del método "
+                                                                             "(dato biográfico, anécdota privada, duración de un cargo, "
+                                                                             "logística de la campaña o curiosidad)."},
+                             }},
+                "AfirmacionesEntrevista": {"allOf": [ref("Comun"), {"type": "object", "required": ["entrevista", "afirmaciones", "excluidas"],
                                            "properties": {"entrevista": ref("Entrevista"),
-                                                          "afirmaciones": {"type": "array", "items": ref("Afirmacion")}}}]},
+                                                          "afirmaciones": {"type": "array", "items": ref("Afirmacion")},
+                                                          "excluidas": {"type": "array", "items": ref("Excluida"),
+                                                                        "description": "Afirmaciones dejadas fuera de `afirmaciones` y de "
+                                                                                       "los recuentos por no tener interés público."}}}]},
                 "Transcripcion": {"allOf": [ref("Comun"), {"type": "object", "required": ["entrevista", "nota", "segmentos"],
                                   "properties": {"entrevista": ref("Entrevista"),
                                                  "nota": {"type": "string", "description": "Límites de la transcripción automática."},
@@ -695,7 +719,7 @@ def main():
         SLUGS=", ".join(f"<code>{x}</code>" for x in slugs)), encoding="utf-8")
     (SALIDA / "api" / "referencia").mkdir(exist_ok=True)
     (SALIDA / "api" / "referencia" / "index.html").write_text(
-        rellenar(PAGINA_REFERENCIA, SCALAR=SCALAR), encoding="utf-8")
+        rellenar(PAGINA_REFERENCIA, SCALAR=SCALAR, SCALAR_SRI=SCALAR_SRI), encoding="utf-8")
 
 
 LEYENDA = """<section class="leyenda-f" aria-label="Leyenda de veredictos">
@@ -928,8 +952,8 @@ PAGINA_REFERENCIA = """<!doctype html>
 <meta name="description" content="Referencia completa de la API abierta: cada ruta, cada campo y ejemplos reales, generada a partir de la descripción OpenAPI 3.1.">
 <style>
 :root { --fondo:#fff; --tinta:#000; }
-@media (prefers-color-scheme: dark) { :root:not([data-modo="claro"]) { --fondo:#0f0f0f; --tinta:#f2f2f2; } }
-:root[data-modo="oscuro"] { --fondo:#0f0f0f; --tinta:#f2f2f2; }
+@media (prefers-color-scheme: dark) { :root:not([data-modo="claro"]) { --fondo:#121214; --tinta:#ececee; } }
+:root[data-modo="oscuro"] { --fondo:#121214; --tinta:#ececee; }
 * { box-sizing:border-box; }
 body { margin:0; background:var(--fondo); color:var(--tinta); font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; }
 .volver { display:flex; flex-wrap:wrap; gap:6px 20px; align-items:center; padding:10px 16px; border-bottom:2px solid var(--tinta); background:var(--fondo); font-size:14px; }
@@ -939,7 +963,7 @@ body { margin:0; background:var(--fondo); color:var(--tinta); font:15px/1.5 -app
 noscript p { max-width:68ch; margin:24px 16px; }
 .scalar-app { --scalar-radius:0; --scalar-radius-lg:0; --scalar-radius-xl:0; }
 .light-mode .scalar-app, .light-mode { --scalar-color-accent:#000; }
-.dark-mode .scalar-app, .dark-mode { --scalar-color-accent:#f2f2f2; }
+.dark-mode .scalar-app, .dark-mode { --scalar-color-accent:#ececee; --scalar-background-1:#121214; }
 </style>
 </head>
 <body>
@@ -947,7 +971,7 @@ noscript p { max-width:68ch; margin:24px 16px; }
 <a class="dcha" href="/api/v1/openapi.json">openapi.json</a></nav>
 <div id="referencia"></div>
 <noscript><p>Esta referencia necesita JavaScript. Tienes la misma información en <a href="/api/v1/openapi.json">openapi.json</a> y una guía corta en <a href="/api">/api</a>.</p></noscript>
-<script src="https://cdn.jsdelivr.net/npm/@scalar/api-reference@@@SCALAR@@"></script>
+<script src="https://cdn.jsdelivr.net/npm/@scalar/api-reference@@@SCALAR@@/dist/browser/standalone.js" integrity="@@SCALAR_SRI@@" crossorigin="anonymous"></script>
 <script>
 // Mismo modo que el resto de la web: el elegido con el botón (localStorage «modo») o el del sistema.
 const modo = document.documentElement.dataset.modo;
