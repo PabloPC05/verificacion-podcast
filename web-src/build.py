@@ -104,12 +104,13 @@ def panel(a):
         + (f'<blockquote>«{e(cita)}»</blockquote>' if cita else "") + "</div>"
         f'<span class="punto" aria-hidden="true"></span><span class="flecha" aria-hidden="true"></span>'
         f'<article class="panel"><p class="ficha">{NOMBRE[v]}</p>'
+        f'<a class="expandir" href="/{a["_slug"]}/{a["_id"]}" title="Abrir en su propia página" '
+        f'aria-label="Abrir esta afirmación en su propia página">{ICONO_EXPANDIR}</a>'
         + (f'<blockquote class="movil">«{e(cita)}»</blockquote>' if cita else "")
         + f'<p class="que">{e(a.get("afirmacion", ""))}</p>'
         f'<p class="porque"><b>Por qué:</b> {e(resumen)}</p>'
         + (f'<p class="rotulo">Fuentes</p><ol class="fuentes">{lista}</ol>' if lista else "")
-        + detalle + '<p class="contrasta"><button class="copiar" type="button">Copiar encargo para contrastarlo con una IA</button>'
-        f' <a class="enlace-af" href="/{a["_slug"]}/{a["_id"]}">Enlace a esta afirmación</a></p>'
+        + detalle + '<p class="contrasta"><button class="copiar" type="button">Copiar encargo para contrastarlo con una IA</button></p>'
         + "</article></li>"
     )
 
@@ -640,6 +641,7 @@ ICONO_LINEA = ('<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d=
                '<circle cx="6" cy="6" r="2" class="lleno"/><circle cx="6" cy="12" r="2" class="lleno"/><circle cx="6" cy="18" r="2" class="lleno"/></svg>')
 ICONO_TEXTO = '<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l4 4v14H6zM14 3v5h5M9 12h7M9 16h7"/></svg>'
 ICONO_FLECHA = '<svg class="flecha" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>'
+ICONO_EXPANDIR = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6M10 20H4v-6M20 4l-7 7M4 20l7-7"/></svg>'
 # Botón flotante (abajo a la izquierda) que despliega la leyenda de veredictos. Lo usan la portada y las páginas de cada entrevista.
 FAB_LEYENDA = """<div class="fab" id="fab">
 <div class="fab-panel" id="fab-panel" role="dialog" aria-modal="false" aria-labelledby="fab-titulo" hidden>
@@ -2694,7 +2696,14 @@ footer .leyenda-f { margin-bottom:34px; max-width:820px; }
   .copiar { min-height:36px; } }
 .abrir { margin:14px 0 0; padding:12px 14px; border:1.5px solid var(--tinta); font-size:14.5px; max-width:68ch; }
 .contrasta { margin:12px 0 0; }
-.enlace-af { font-size:12.5px; font-weight:600; color:var(--gris); margin-left:6px; }
+/* botón de expandir: abre la afirmación en su propia página (/<slug>/<id>) */
+.panel { position:relative; }
+.expandir { position:absolute; top:10px; right:10px; width:30px; height:30px; display:grid; place-items:center;
+  color:var(--gris); background:var(--fondo); border:1.5px solid var(--claro); border-radius:var(--r-mini); }
+.expandir svg { width:15px; height:15px; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+@media (hover:hover) { .hito:hover .expandir { color:var(--tono); border-color:var(--tono); } }
+.hito .expandir:hover, .hito .expandir:focus-visible { color:var(--fondo); background:var(--tinta); border-color:var(--tinta); }
+@media (max-width:600px) { .expandir { top:8px; right:8px; width:34px; height:34px; } }
 .copiar { font:inherit; font-size:12.5px; font-weight:600; background:var(--fondo); color:var(--tinta); border:1.5px solid var(--tinta); padding:4px 11px; cursor:pointer; }
 .copiar:hover, .copiar.hecho { background:var(--tinta); color:var(--fondo); }
 .hito:target .panel { outline:3px solid var(--tono); outline-offset:3px; animation:destello 1.6s ease-out; }
