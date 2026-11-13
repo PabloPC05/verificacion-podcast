@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<script>try{var m=localStorage.getItem("modo");if(m==="claro"||m==="oscuro")document.documentElement.dataset.modo=m}catch(e){}</script>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="83bf64a7-e92e-4617-80d2-bb6a92bb2b8e" data-domains="verificacion-podcast.vercel.app"></script>
+<script>
+document.addEventListener("click", function (ev) {
+  var a = ev.target.closest && ev.target.closest("a[href]");
+  if (!a || !window.umami) return;
+  try {
+    var u = new URL(a.href, location.href), desde = location.pathname;
+    if (u.protocol !== "http:" && u.protocol !== "https:") return;
+    if (a.hasAttribute("download") || /\.(csv|json)$/i.test(u.pathname))
+      umami.track("descarga", { url: u.pathname, desde: desde });
+    else if (u.host !== location.host)
+      umami.track("enlace-externo", { url: (u.host + u.pathname + u.search).slice(0, 480), dominio: u.host, desde: desde });
+    else if (u.pathname !== desde)
+      umami.track("enlace-interno", { url: u.pathname, desde: desde });
+  } catch (e) {}
+}, true);
+</script>
+<title>Verdadero: Vox no cree en el Estado de las autonomías, a diferencia del PP. · Alberto Núñez Feijóo</title>
+<meta name="description" content="Vox mantiene la exigencia de suprimir o vaciar el Estado autonómico, y el PP afirma que no aceptó esa condición en los pactos de 2026; ambos partidos reconocen la diferencia.">
+<link rel="canonical" href="https://verificacion-podcast.vercel.app/feijoo/m434">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Verificación de las entrevistas de The Wild Project">
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="Verdadero: Vox no cree en el Estado de las autonomías, a diferencia del PP.">
+<meta property="og:description" content="Vox mantiene la exigencia de suprimir o vaciar el Estado autonómico, y el PP afirma que no aceptó esa condición en los pactos de 2026; ambos partidos reconocen la diferencia.">
+<meta property="og:url" content="https://verificacion-podcast.vercel.app/feijoo/m434">
+<meta property="og:image" content="https://verificacion-podcast.vercel.app/compartir/feijoo.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Verificación dato a dato: Alberto Núñez Feijóo (PP) en The Wild Project #392">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Verdadero: Vox no cree en el Estado de las autonomías, a diferencia del PP.">
+<meta name="twitter:description" content="Vox mantiene la exigencia de suprimir o vaciar el Estado autonómico, y el PP afirma que no aceptó esa condición en los pactos de 2026; ambos partidos reconocen la diferencia.">
+<meta name="twitter:image" content="https://verificacion-podcast.vercel.app/compartir/feijoo.png">
+<meta name="twitter:image:alt" content="Verificación dato a dato: Alberto Núñez Feijóo (PP) en The Wild Project #392">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<style>
+:root { --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--fondo); color:var(--tinta); font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; -webkit-text-size-adjust:100%; overflow-wrap:break-word; }
+a { color:var(--tinta); text-underline-offset:3px; }
+main.ancho { max-width:760px; padding-top:4px; padding-bottom:56px; }
+.migas { font-size:14px; color:var(--gris); padding-top:18px; }
+.migas a { font-weight:600; color:var(--suave); }
+.migas a:hover { color:var(--tinta); }
+.veredicto { display:inline-block; margin:22px 0 0; padding:9px 18px 10px; font:700 clamp(22px,4vw,28px)/1 var(--serif); background:var(--tono); color:var(--sobre-tono); }
+h1 { font:700 clamp(28px,4.6vw,40px)/1.14 var(--serif); letter-spacing:-0.02em; margin:16px 0 0; text-wrap:balance; }
+.seccion { margin:34px 0 0; padding-top:14px; border-top:2px solid var(--tinta); }
+h2 { font:700 22px/1.2 var(--serif); margin:0 0 12px; }
+blockquote { margin:0; padding-left:16px; border-left:4px solid var(--tono); font:italic 21px/1.45 var(--serif); text-wrap:pretty; }
+.cita-pie { margin:10px 0 0 20px; font-size:15px; color:var(--suave); }
+.cita-pie a { font-weight:700; color:var(--tono); }
+.resumen { margin:0 0 12px; font-size:19px; font-weight:600; line-height:1.45; }
+.explicacion { margin:0; font-size:17px; }
+.confianza { margin:14px 0 0; font-size:14px; color:var(--suave); }
+.fuentes { margin:0; padding-left:22px; font-size:15px; }
+.fuentes li { margin:6px 0; overflow-wrap:anywhere; }
+.fuentes span { color:var(--gris); font-size:13px; white-space:nowrap; }
+/* contexto: el mismo lenguaje visual que la transcripción (quién habla, raya vertical en lo que dice el candidato) */
+.contexto .turno { margin:0 0 18px; }
+.cab-turno { display:flex; align-items:center; justify-content:space-between; gap:12px; margin:0 0 6px; }
+.cab-turno .minuto { font:700 13px/1 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; font-variant-numeric:tabular-nums; color:var(--gris); }
+.cab-turno .minuto:hover { background:var(--tinta); color:var(--fondo); text-decoration:none; }
+.quien { display:flex; align-items:center; gap:9px; min-width:0; font:700 13.5px/1.25 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; color:var(--tinta); }
+.nom { display:flex; flex-wrap:wrap; align-items:baseline; gap:2px 6px; min-width:0; }
+.quien small { font-size:12px; font-weight:500; color:var(--gris); }
+.cara { width:30px; height:30px; flex:none; border-radius:50%; display:grid; place-items:center; object-fit:cover;
+  font:700 11px/1 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; border:1.5px solid currentColor; }
+img.cara { border:0; background:var(--claro); }
+.contexto p { margin:0; font:17px/1.6 var(--serif); }
+.turno[data-voz=G] p { border-left:3px solid var(--tinta); padding-left:14px; }
+.turno[data-voz=J] p, .turno[data-voz=V] p, .turno[data-voz=O] p { padding-left:17px; color:var(--suave);
+  font:15.5px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+.turno:not([data-voz=G]) .quien { color:var(--suave); }
+mark { background:var(--tono); color:var(--sobre-tono); padding:1px 3px; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+.mas { margin:12px 0 0; font-size:15px; font-weight:600; }
+.acciones { display:flex; flex-wrap:wrap; gap:10px; margin-top:34px; padding-top:18px; border-top:2px solid var(--tinta); }
+.btn { font:inherit; font-size:14.5px; font-weight:600; color:var(--tinta); background:var(--fondo); border:2px solid var(--tinta); padding:7px 14px; cursor:pointer; text-decoration:none; line-height:1.4; }
+.btn:hover { background:var(--tinta); color:var(--fondo); }
+.vecinas { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:30px; }
+.vecina { display:flex; flex-direction:column; gap:4px; min-width:0; border:2px solid var(--tinta); padding:12px 14px; text-decoration:none; }
+.vecina:hover { background:var(--resalte); }
+.vecina.sig { text-align:right; }
+.vecina .rot-v { font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--gris); }
+.vecina .tiempo { font-size:15px; font-weight:600; font-variant-numeric:tabular-nums; }
+.vecina .tiempo b { color:var(--tono); }
+.vecina small { font-size:14px; line-height:1.4; color:var(--suave); }
+footer { border-top:3px solid var(--tinta); margin-top:48px; padding:24px 0 72px; font-size:14.5px; }
+@media (max-width:600px) {
+  main.ancho { padding-top:0; }
+  blockquote { font-size:19px; }
+  .cita-pie { margin-left:20px; }
+  .vecinas { grid-template-columns:1fr; }
+  .vecina.sig { text-align:left; } }
+
+:root { --fondo:#fff; --tinta:#000; --suave:#444; --gris:#666; --gris-claro:#999; --claro:#d9d9d9; --codigo:#f2f2f2; --resalte:#f3f3f3; --pre-fondo:#000; --pre-tinta:#fff; --pre-borde:transparent; --sombra:#000; --inv-suave:#ccc; --sobre-tono:#fff; --logo-fondo:transparent; --logo-radio:0; --luna:block; --sol:none; color-scheme:light; --v-falso:#c0271e; --v-enganoso:#c26a00; --v-mayormente_verdadero:#5a7d10; --v-verdadero:#1c7c45; --v-no_verificable:#777; }
+@media (prefers-color-scheme:dark) { :root:not([data-modo=claro]) { --fondo:#121214; --tinta:#ececee; --suave:#bdbdc4; --gris:#a3a3aa; --gris-claro:#7c7c84; --claro:#3a3a40; --codigo:#26262b; --resalte:#26262b; --pre-fondo:#1c1c20; --pre-tinta:#ececee; --pre-borde:#3a3a40; --sombra:#55555c; --inv-suave:#55555c; --sobre-tono:#121214; --logo-fondo:#fff; --logo-radio:4px; --luna:none; --sol:block; color-scheme:dark; --v-falso:#ff6b5e; --v-enganoso:#ff9a2e; --v-mayormente_verdadero:#b8d63c; --v-verdadero:#3fd083; --v-no_verificable:#a4a4ac; } }
+:root[data-modo=oscuro] { --fondo:#121214; --tinta:#ececee; --suave:#bdbdc4; --gris:#a3a3aa; --gris-claro:#7c7c84; --claro:#3a3a40; --codigo:#26262b; --resalte:#26262b; --pre-fondo:#1c1c20; --pre-tinta:#ececee; --pre-borde:#3a3a40; --sombra:#55555c; --inv-suave:#55555c; --sobre-tono:#121214; --logo-fondo:#fff; --logo-radio:4px; --luna:none; --sol:block; color-scheme:dark; --v-falso:#ff6b5e; --v-enganoso:#ff9a2e; --v-mayormente_verdadero:#b8d63c; --v-verdadero:#3fd083; --v-no_verificable:#a4a4ac; }
+[data-v=falso], .tono-falso { --tono:var(--v-falso); }
+[data-v=enganoso], .tono-enganoso { --tono:var(--v-enganoso); }
+[data-v=mayormente_verdadero], .tono-mayormente_verdadero { --tono:var(--v-mayormente_verdadero); }
+[data-v=verdadero], .tono-verdadero { --tono:var(--v-verdadero); }
+[data-v=no_verificable], .tono-no_verificable { --tono:var(--v-no_verificable); }
+::view-transition-old(root), ::view-transition-new(root) { animation:none; mix-blend-mode:normal; }
+html { scroll-behavior:smooth; scroll-padding-top:calc(var(--menu, 48px) + 64px); }
+[hidden] { display:none !important; }
+/* Un solo contenedor para todas las páginas: el menú, los títulos y el contenido arrancan en el mismo borde */
+.ancho { max-width:1360px; margin:0 auto; padding-left:clamp(16px,4vw,48px); padding-right:clamp(16px,4vw,48px); }
+.menu { position:sticky; top:0; z-index:10; background:var(--fondo); border-bottom:2px solid var(--tinta); }
+.menu .ancho { padding-top:9px; padding-bottom:9px; position:relative; }
+.m1 { display:flex; flex-wrap:wrap; align-items:center; gap:4px 24px; font-size:14.5px; }
+.m1 a, .desp summary { color:var(--tinta); text-decoration:none; font-weight:600; padding:3px 0; border-bottom:2px solid transparent; }
+/* Subrayado del menú: se dibuja de izquierda a derecha al pasar el ratón y se recoge hacia la derecha al salir */
+.m1 > a:not(.sello), .desp summary { position:relative; border-bottom-color:transparent !important; }
+.m1 > a:not(.sello)::after, .desp summary::after { content:""; position:absolute; left:0; right:0; bottom:-1px; height:2px; background:var(--tinta);
+  transform:scaleX(0); transform-origin:right center; transition:transform .28s cubic-bezier(.4,0,.2,1); }
+.m1 > a:not(.sello):hover::after, .m1 > a:not(.sello):focus-visible::after, .desp summary:hover::after, .desp summary:focus-visible::after,
+.desp.actual summary::after, .desp[open] summary::after { transform:scaleX(1); transform-origin:left center; }
+.m1 .sello { font:700 17px/1.2 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; }
+.m1 .off { color:var(--gris-claro); } .m1 .dcha { margin-left:auto; }
+.modo { flex:none; display:inline-grid; place-items:center; width:26px; height:26px; padding:0; margin:0 0 0 -8px; cursor:pointer;
+  color:var(--tinta); background:var(--fondo); border:1.5px solid var(--tinta); border-radius:50%; }
+.modo:hover { background:var(--tinta); color:var(--fondo); }
+.modo { line-height:0; font-size:0; }
+.modo svg { display:block; width:15px; height:15px; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+.modo .luna { display:var(--luna); } .modo .sol { display:var(--sol); }
+.rot { font-size:10.5px; font-weight:700; text-transform:uppercase; letter-spacing:.09em; color:var(--gris); flex:none; }
+.desp { position:relative; margin:0; padding:0; border:0; font-size:inherit; }
+.desp summary { list-style:none; cursor:pointer; user-select:none; }
+.desp summary::-webkit-details-marker { display:none; }
+
+.desp .lista { position:absolute; top:calc(100% + 12px); left:-14px; z-index:20; background:var(--fondo); border:2px solid var(--tinta); box-shadow:var(--flota);
+  width:max-content; min-width:260px; max-width:min(92vw,470px); max-height:74vh; overflow-y:auto; padding:6px 0; }
+/* Desplegable de cada candidato: cabecera con su foto, dos accesos grandes y la lista de temas numerada como en la línea temporal */
+.desp .lista a { border:0; padding:0; }
+.lista-cab { display:flex; align-items:center; gap:12px; padding:6px 6px 12px; }
+.lista-cab .retrato { width:46px; height:46px; } .lista-cab .retrato .insignia { display:none; }
+.lista-cab p { margin:0; } .lista-cab .nombre { font:700 18px/1.2 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; }
+.lista-cab .cuanto { font-size:12.5px; color:var(--gris); margin-top:2px; } .lista-cab .cuanto b { color:var(--v-falso); }
+.lista-acc { display:grid; grid-template-columns:1fr 1fr; gap:8px; padding:0 0 12px; margin:0 0 4px; border-bottom:1px solid var(--claro); }
+.desp .lista-acc a { display:flex; align-items:center; gap:9px; min-height:44px; padding:0 12px; border:1.5px solid var(--tinta); border-radius:var(--r-boton);
+  font-size:14px; font-weight:700; color:var(--tinta); background:var(--fondo); transition:background-color .15s ease-out, color .15s ease-out; }
+.desp .lista-acc a.principal { background:var(--tinta); color:var(--fondo); }
+.desp .lista-acc a:hover, .desp .lista-acc a:focus-visible { background:var(--tinta); color:var(--fondo); }
+.desp .lista-acc a.principal:hover, .desp .lista-acc a.principal:focus-visible { background:var(--fondo); color:var(--tinta); }
+.desp .lista-acc a[aria-current] { box-shadow:inset 0 0 0 1.5px var(--fondo), 0 0 0 1.5px var(--tinta); }
+.lista-acc svg { display:block; flex:none; width:17px; height:17px; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+.lista-acc svg .lleno { fill:currentColor; stroke:none; }
+.desp .lista .rot { margin:0; padding:10px 6px 6px; border:0; }
+.desp .lista .rot span { text-transform:none; letter-spacing:0; font-weight:500; }
+.lista-temas { list-style:none; margin:0; padding:0; }
+.desp .lista-temas a { display:grid; grid-template-columns:24px minmax(0,1fr) auto; align-items:center; gap:10px; padding:7px 6px; border-radius:var(--r-boton);
+  font-size:14.5px; font-weight:500; line-height:1.3; color:var(--tinta); transition:background-color .12s ease-out; }
+.lista-temas i { width:24px; height:24px; border-radius:50%; border:1.5px solid var(--tinta); display:grid; place-items:center; line-height:0;
+  font:700 11.5px/1 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; font-style:normal; font-variant-numeric:tabular-nums; transition:background-color .12s, color .12s; }
+.lista-temas b { min-width:24px; height:22px; padding:0 7px; border-radius:999px; display:grid; place-items:center; line-height:0;
+  background:var(--v-falso); color:var(--sobre-tono); font-size:12px; font-weight:700; font-variant-numeric:tabular-nums; }
+.lista-temas b .sr { position:absolute; }
+.desp .lista-temas a:hover, .desp .lista-temas a:focus-visible { background:var(--resalte); outline-offset:-2px; }
+.desp .lista-temas a:hover i, .desp .lista-temas a:focus-visible i { background:var(--tinta); color:var(--fondo); }
+.desp .lista-temas a.off { opacity:.4; }
+.leyenda-f h2 { font:700 22px/1.2 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; margin:0 0 4px; padding:0; border:0; }
+.ley-intro { margin:0 0 14px; font-size:14.5px; color:var(--suave); }
+.leyenda-f dl { margin:0 0 16px; border-top:2px solid var(--tinta); }
+.leyenda-f dl div { display:grid; grid-template-columns:150px minmax(0,1fr); gap:0 16px; align-items:center; padding:9px 0; border-bottom:1px solid var(--tinta); }
+.leyenda-f dt { background:var(--tono); color:var(--sobre-tono); font-size:12.5px; font-weight:700; text-transform:uppercase; letter-spacing:.07em;
+  padding:7px 10px; text-align:center; }
+.leyenda-f dd { margin:0; font-size:15px; line-height:1.4; }
+.ley-notas { list-style:none; margin:0; padding:0; font-size:14.5px; display:grid; gap:4px; }
+@media (max-width:560px) { .leyenda-f dl div { grid-template-columns:1fr; gap:6px; } .leyenda-f dt { justify-self:start; } }
+.filtros { position:sticky; top:var(--menu, 48px); z-index:5; background:var(--fondo); border-bottom:1px solid var(--tinta); padding:9px 0; }
+.fila { display:flex; flex-wrap:wrap; align-items:center; gap:6px 8px; }
+.fila button { font:inherit; font-size:12.5px; font-weight:600; color:var(--tinta); background:var(--fondo); border:1.5px solid var(--tinta);
+  border-radius:999px; padding:3px 11px; cursor:pointer; display:inline-flex; align-items:center; gap:6px; }
+.fila b { font-weight:500; opacity:.7; font-variant-numeric:tabular-nums; }
+.fila button[data-v] { color:var(--tono); border-color:var(--tono); }
+.fila button[data-v] i { width:8px; height:8px; border-radius:50%; background:currentColor; }
+.fila button[aria-pressed=true] { background:var(--tinta); color:var(--fondo); }
+.fila button[data-v][aria-pressed=true] { background:var(--tono); color:var(--sobre-tono); }
+.fila button[data-solo] { margin-left:auto; }
+.pie-solo { border-top:1px solid var(--tinta); padding:18px 0 44px; }
+.pie-quien { margin:0; font-size:13.5px; color:var(--suave); max-width:none; }
+footer .pie-quien { margin-top:18px; }
+.pie-quien a { color:var(--suave); text-underline-offset:3px; }
+.m1 > a, .desp summary, .fila button { white-space:nowrap; }
+@media (max-width:1000px) { .m1 .largo { display:none; } }
+/* En móvil el menú y los filtros ocupan una sola fila que se desliza en horizontal; el botón de modo se queda fijo a la derecha */
+@media (max-width:760px) {
+  .menu .ancho, .filtros .ancho { padding-left:0; padding-right:0; }
+  .filtros .ancho { position:relative; }
+  .filtros .ancho::after { content:""; position:absolute; top:0; bottom:0; right:0; width:28px; pointer-events:none;
+    background:linear-gradient(to right, transparent, var(--fondo) 85%); }
+  .m1, .fila { flex-wrap:nowrap; overflow-x:auto; scrollbar-width:none; overscroll-behavior-x:contain; padding-left:16px; padding-right:16px; }
+  .fila { padding-right:28px; }
+  .m1::-webkit-scrollbar, .fila::-webkit-scrollbar { display:none; }
+  .m1 { gap:0 18px; font-size:14px; } .m1 .dcha { margin-left:0; }
+  .m1 > a, .desp summary { display:inline-flex; align-items:center; min-height:36px; }
+  .m1 > a:not(.sello)::after, .desp summary::after { bottom:5px; }
+  .m1 { padding-right:72px; }
+  .modo { position:absolute; right:12px; top:calc(50% - 16px); margin:0; width:32px; height:32px; }
+  .modo svg { width:17px; height:17px; }
+  .menu .ancho::after { content:""; position:absolute; top:0; bottom:0; right:52px; width:28px; pointer-events:none;
+    background:linear-gradient(to right, transparent, var(--fondo)); }
+  .menu .ancho::before { content:""; position:absolute; top:0; bottom:0; right:0; width:52px; background:var(--fondo); pointer-events:none; z-index:1; }
+  .menu .ancho::after { z-index:1; } .modo { z-index:2; }
+  .menu .ancho { padding-top:4px; padding-bottom:4px; }
+  .desp { position:static; } .desp .lista { left:12px; right:12px; top:calc(100% + 6px); width:auto; max-width:none; max-height:calc(100dvh - var(--menu, 48px) - 24px); }
+  .filtros { padding:7px 0; }
+  .fila .rot { display:none; } .fila button { flex:none; font-size:13px; padding:0 12px; min-height:34px; } .fila button[data-solo] { margin-left:0; } }
+/* En móvil cada fila de tabla se apila (primero qué es, debajo su dirección o sus datos) en vez de obligar a deslizar en horizontal */
+@media (max-width:640px) {
+  .tabla table, .tabla-api table { min-width:0; } .tabla thead, .tabla-api thead { display:none; }
+  .tabla table, .tabla tbody, .tabla tr, .tabla td, .tabla-api table, .tabla-api tbody, .tabla-api tr, .tabla-api td { display:block; width:100%; }
+  .tabla tr, .tabla-api tr { padding:10px 0; border-bottom:1px solid var(--tinta); }
+  .tabla tr:first-child, .tabla-api tr:first-child { border-top:2px solid var(--tinta); }
+  .tabla td, .tabla-api td { border:0 !important; padding:2px 0 !important; } .tabla td:first-child, .tabla-api td:first-child { font-weight:600; }
+  .tabla-api td[data-l]::before { content:attr(data-l) ": "; font-weight:500; color:var(--gris); } }
+
+/* ── Interacción: estados hover, foco, pulsación y avisos, iguales en todas las páginas */
+html { -webkit-tap-highlight-color:transparent; }
+:focus-visible { outline:3px solid var(--tinta); outline-offset:2px; }
+a { text-underline-offset:3px; text-decoration-thickness:1px; transition:text-decoration-thickness .15s ease-out, color .15s ease-out, background-color .15s ease-out; }
+a:hover { text-decoration-thickness:2px; }
+button, summary, select, .chip, .repo, .botones a, .minuto, .modo { transition:background-color .15s ease-out, color .15s ease-out, border-color .15s ease-out, box-shadow .18s ease-out, transform .12s ease-out; }
+button:active, .repo:active, .botones a:active, .chip:active, .fila button:active { transform:translateY(1px) scale(.98); }
+select { cursor:pointer; } select:hover { box-shadow:inset 0 0 0 1px var(--tinta); }
+.m1 > a, .desp summary { transition:border-color .15s ease-out; }
+.desp[open] .lista { animation:caer .2s cubic-bezier(.2,.7,.2,1); }
+@keyframes caer { from { clip-path:inset(0 0 100% 0); } to { clip-path:inset(0 0 0 0); } }
+.fila button:not([aria-pressed=true]):hover { background:color-mix(in srgb, var(--tono, var(--tinta)) 13%, var(--fondo)); }
+.fila button[aria-pressed=true]:hover { box-shadow:0 0 0 2px var(--fondo), 0 0 0 3.5px var(--tono, var(--tinta)); }
+.fila .cuenta { margin-left:auto; font-size:12.5px; color:var(--gris); font-variant-numeric:tabular-nums; white-space:nowrap; }
+.fila button[data-solo] + .cuenta { margin-left:12px; }
+.botones button:hover, #api-ir:hover { background:var(--fondo); color:var(--tinta); }
+.botones button:disabled, #api-ir:disabled { opacity:.55; cursor:progress; }
+.repo:hover { background:var(--fondo); color:var(--tinta); box-shadow:inset 0 0 0 2px var(--tinta); }
+.repo.claro:hover { background:var(--tinta); color:var(--fondo); }
+/* Aviso flotante: confirma una acción (copiar, descargar) y se va solo; lo leen también los lectores de pantalla */
+.aviso { position:fixed; left:50%; bottom:calc(20px + env(safe-area-inset-bottom)); z-index:50; max-width:calc(100vw - 32px);
+  transform:translate(-50%, 16px); opacity:0; pointer-events:none; background:var(--tinta); color:var(--fondo);
+  border:2px solid var(--tinta); border-radius:var(--r-caja); box-shadow:var(--flota); padding:10px 16px; font-size:14.5px; font-weight:600;
+  transition:opacity .2s ease-out, transform .2s ease-out; }
+.aviso.ver { opacity:1; transform:translate(-50%, 0); }
+.aviso.mal { background:var(--fondo); color:var(--tinta); }
+/* Botón para volver arriba en las páginas largas */
+.arriba { position:fixed; right:calc(16px + env(safe-area-inset-right)); bottom:calc(16px + env(safe-area-inset-bottom)); z-index:40;
+  width:44px; height:44px; display:grid; place-items:center; padding:0; cursor:pointer; line-height:0; font-size:0;
+  color:var(--tinta); background:var(--fondo); border:2px solid var(--tinta); border-radius:50%; box-shadow:var(--flota);
+  opacity:0; transform:translateY(10px); pointer-events:none; transition:opacity .2s ease-out, transform .2s ease-out, background-color .15s, color .15s; }
+.arriba svg { display:block; width:20px; height:20px; fill:none; stroke:currentColor; stroke-width:2.5; stroke-linecap:square; }
+.arriba.ver { opacity:1; transform:none; pointer-events:auto; }
+.arriba:hover { background:var(--tinta); color:var(--fondo); }
+.sr { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; }
+@media (max-width:760px) { .fila .cuenta { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); } }
+@media (prefers-reduced-motion:reduce) { *, ::before, ::after { transition-duration:0s !important; animation-duration:0s !important; } html { scroll-behavior:auto; } }
+
+/* ── Esquinas suaves y contenidas, para que sigan leyéndose como recuadros de periódico: 14 px en contenedores, 9 px en botones y cajas, 5 px en etiquetas */
+:root { --r-caja:14px; --r-boton:9px; --r-mini:5px; --flota:0 10px 28px -8px rgba(0,0,0,.28); }
+.panel, .entrevista, .explorador, .vias li, .desp .lista, .agentes { border-radius:var(--r-caja); }
+.desp .lista { border-top:0 !important; border-radius:0 0 var(--r-caja) var(--r-caja) !important; overflow-x:hidden; overflow-y:auto; overscroll-behavior:contain; width:min(440px, calc(100vw - 24px)); min-width:0; max-width:none; max-height:min(78vh, 680px); padding:10px; }
+.tu, .abrir, pre, .btn, .repo, .botones button, .botones a, #api-ir, .copiar, select, .opciones select, .logo.sin, #api-res .vacio { border-radius:var(--r-boton); }
+.ficha, .leyenda-f dt, code, .chip-mini, .par:target, .indice a { border-radius:var(--r-mini); }
+.hito:target .panel { outline-offset:4px; }
+
+/* Retrato: foto redonda con borde de tinta y el logotipo del partido en una insignia blanca abajo a la derecha */
+.retrato { position:relative; display:block; flex:none; border-radius:50%; align-self:start; justify-self:start; }
+.retrato > img { display:block; width:100%; height:100%; object-fit:cover; border-radius:50%; border:2px solid var(--tinta); background:var(--claro); }
+.retrato .insignia { position:absolute; right:-4%; bottom:-4%; width:42%; aspect-ratio:1; border-radius:50%; overflow:hidden;
+  display:grid; place-items:center; background:#fff; border:2px solid var(--tinta); line-height:0; font-size:0; }
+.retrato .insignia img { display:block; width:72%; height:72%; object-fit:contain; }
+.retrato .insignia b { font:700 11px/1 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; color:#000; }
+.titular { display:flex; align-items:flex-start; gap:clamp(14px,2vw,24px); margin:0 0 18px; }
+.titular .retrato { margin-top:.2em; }
+.titular h1 { margin:0 !important; }
+.titular .retrato { width:clamp(64px,8vw,104px); height:clamp(64px,8vw,104px); }
+.titular .retrato.peque { width:clamp(52px,6vw,76px); height:clamp(52px,6vw,76px); }
+.creditos { font-size:12.5px; color:var(--gris); }
+.creditos a { color:inherit; }
+
+/* Botón flotante de la leyenda: círculo abajo a la izquierda que se ensancha al pasar el ratón y abre un panel con un revelado circular */
+.fab { position:fixed; left:calc(16px + env(safe-area-inset-left)); bottom:calc(16px + env(safe-area-inset-bottom)); z-index:45; }
+.fab-boton { position:relative; display:flex; align-items:center; gap:0; height:52px; min-width:52px; padding:0 14px; cursor:pointer;
+  border-radius:999px; border:2px solid var(--tinta); background:var(--fondo); color:var(--tinta); box-shadow:var(--flota);
+  font:700 14.5px/1 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; transition:background-color .15s ease-out, color .15s ease-out, gap .2s ease-out; }
+.fab-ico { display:grid; grid-template-columns:repeat(2,8px); gap:4px; flex:none; width:20px; place-content:center; }
+.fab-ico i { display:block; width:8px; height:8px; border-radius:50%; background:var(--tono); }
+.fab-x { display:none; flex:none; width:20px; height:20px; fill:none; stroke:currentColor; stroke-width:2.4; stroke-linecap:round; }
+.fab-txt { max-width:0; overflow:hidden; white-space:nowrap; opacity:0; transition:max-width .22s ease-out, opacity .15s ease-out; }
+.fab-boton:hover, .fab-boton:focus-visible { gap:10px; }
+.fab-boton:hover .fab-txt, .fab-boton:focus-visible .fab-txt { max-width:90px; opacity:1; }
+.fab.abierto .fab-boton { background:var(--tinta); color:var(--fondo); gap:0; }
+.fab.abierto .fab-ico { display:none; } .fab.abierto .fab-x { display:block; }
+.fab.abierto .fab-txt { max-width:0; opacity:0; }
+.fab-panel { position:absolute; left:0; bottom:64px; width:min(420px, calc(100vw - 32px)); max-height:calc(100dvh - var(--menu, 48px) - 100px); overflow-y:auto;
+  overscroll-behavior:contain; padding:16px 16px 14px; background:var(--fondo); color:var(--tinta); border:2px solid var(--tinta); border-radius:var(--r-caja);
+  box-shadow:var(--flota); clip-path:circle(0 at 26px calc(100% + 38px)); opacity:.4;
+  transition:clip-path .32s cubic-bezier(.4,0,.2,1), opacity .2s ease-out; }
+.fab.abierto .fab-panel { clip-path:circle(150% at 26px calc(100% + 38px)); opacity:1; }
+.fab-titulo { margin:0 0 10px; font:700 19px/1.2 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; outline:none; }
+.fab-panel .leyenda-f h2, .fab-panel .ley-intro { display:none; }
+.fab-panel .leyenda-f dl { margin:0 0 12px; }
+.fab-panel .leyenda-f dl div { grid-template-columns:104px minmax(0,1fr); gap:0 12px; padding:8px 0; }
+.fab-panel .leyenda-f dt { justify-self:stretch; font-size:11px; padding:5px 6px; }
+.fab-panel .leyenda-f dd { font-size:13.5px; line-height:1.38; }
+.fab-panel .ley-notas { font-size:13px; gap:5px; }
+@media (prefers-reduced-motion:reduce) { .fab-panel { clip-path:none !important; } }
+
+/* Barra de reparto: el 100 % de las afirmaciones, un tramo por veredicto con su color */
+.barra-reparto { display:flex; gap:2px; height:10px; margin:8px 0 2px; border-radius:999px; overflow:hidden; background:var(--claro); }
+.barra-reparto i { display:block; min-width:4px; background:var(--tono); transition:filter .15s ease-out; }
+.barra-reparto i:hover { filter:brightness(1.15) saturate(1.1); }
+.barra-reparto.grande { height:14px; margin:12px 0 0; }
+
+/* Entrada del hero: aparece por capas (título, texto, cifras, tarjetas), la barra de reparto se rellena y los números cuentan hacia arriba.
+   «backwards» solo aplica el estado inicial durante la espera, así no pisa los hovers cuando termina. */
+@keyframes subir { from { opacity:0; transform:translateY(16px); } }
+@keyframes asomar { from { opacity:0; transform:scale(.82); } }
+@keyframes rellenar { from { clip-path:inset(0 100% 0 0 round 999px); } to { clip-path:inset(0 0 0 0 round 999px); } }
+.cabeza h1, .titular h1 { animation:subir .7s cubic-bezier(.2,.7,.2,1) backwards; }
+.cabeza .entrada, .portada .intro { animation:subir .7s .1s cubic-bezier(.2,.7,.2,1) backwards; }
+.cabeza .tu { animation:subir .7s .18s cubic-bezier(.2,.7,.2,1) backwards; }
+.portada .cifras { animation:subir .7s .16s cubic-bezier(.2,.7,.2,1) backwards; }
+.tarjetas .entrevista { animation:subir .7s cubic-bezier(.2,.7,.2,1) backwards; }
+.tarjetas .entrevista:nth-child(1) { animation-delay:.22s; } .tarjetas .entrevista:nth-child(2) { animation-delay:.32s; } .tarjetas .entrevista:nth-child(3) { animation-delay:.42s; }
+.titular .retrato, .tarjetas .retrato { animation:asomar .55s .05s cubic-bezier(.3,1.4,.5,1) backwards; }
+.tarjetas .entrevista:nth-child(2) .retrato { animation-delay:.36s; } .tarjetas .entrevista:nth-child(3) .retrato { animation-delay:.46s; }
+.tarjetas .entrevista:nth-child(1) .retrato { animation-delay:.26s; }
+.retrato .insignia { animation:asomar .4s .5s cubic-bezier(.3,1.5,.5,1) backwards; }
+.barra-reparto { animation:rellenar .9s .55s cubic-bezier(.4,0,.2,1) backwards; }
+.tarjetas .entrevista:nth-child(2) .barra-reparto { animation-delay:.65s; } .tarjetas .entrevista:nth-child(3) .barra-reparto { animation-delay:.75s; }
+.barra-reparto.grande { animation-delay:.4s; }
+@media (prefers-reduced-motion:reduce) {
+  .cabeza h1, .titular h1, .cabeza .entrada, .portada .intro, .cabeza .tu, .portada .cifras, .tarjetas .entrevista, .retrato, .retrato .insignia, .barra-reparto { animation:none !important; } }
+
+</style>
+</head>
+<body>
+<header class="menu"><div class="ancho"><div class="m1"><a class="sello" href="/" title="Todas las entrevistas">Verificación</a><details class="desp"><summary><span class="largo">Pedro </span>Sánchez</summary><div class="lista"><div class="lista-cab"><span class="logo retrato mini"><img src="/fotos/sanchez.jpg" alt="Pedro Sánchez" width="160" height="160" decoding="async"><span class="insignia" title="PSOE"><img src="/logos/psoe.svg" alt="" width="40" height="40"></span></span><div><p class="nombre">Pedro Sánchez</p><p class="cuanto">PSOE · <b>30</b> falsas o engañosas de 147</p></div></div><div class="lista-acc"><a class="principal" href="/sanchez"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3v18M10 6h9M10 12h6M10 18h8"/><circle cx="6" cy="6" r="2" class="lleno"/><circle cx="6" cy="12" r="2" class="lleno"/><circle cx="6" cy="18" r="2" class="lleno"/></svg><span>Línea temporal</span></a><a href="/sanchez/transcripcion"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l4 4v14H6zM14 3v5h5M9 12h7M9 16h7"/></svg><span>Transcripción</span></a></div><p class="rot">Temas <span>· en rojo, cuántas falsas o engañosas</span></p><ol class="lista-temas"><li><a href="/sanchez#tema-3" data-tema="tema-3"><i aria-hidden="true">3</i><span>Insultos, polarización y crispación en la política española</span><b title="1 falsa o engañosa"><span class="sr">, </span>1<span class="sr"> falsa o engañosa</span></b></a></li><li><a href="/sanchez#tema-4" data-tema="tema-4"><i aria-hidden="true">4</i><span>Accidentes ferroviarios y responsabilidades del Gobierno</span><b title="2 falsas o engañosas"><span class="sr">, </span>2<span class="sr"> falsas o engañosas</span></b></a></li><li><a href="/sanchez#tema-5" data-tema="tema-5"><i aria-hidden="true">5</i><span>Crisis de Ceuta, Marruecos y gestión de la frontera</span><b title="7 falsas o engañosas"><span class="sr">, </span>7<span class="sr"> falsas o engañosas</span></b></a></li><li><a href="/sanchez#tema-6" data-tema="tema-6"><i aria-hidden="true">6</i><span>Inmigración, integración y futuro demográfico de España</span><b title="3 falsas o engañosas"><span class="sr">, </span>3<span class="sr"> falsas o engañosas</span></b></a></li><li><a href="/sanchez#tema-7" data-tema="tema-7"><i aria-hidden="true">7</i><span>Ábalos, Koldo, Cerdán y los casos que afectan al PSOE</span><b title="3 falsas o engañosas"><span class="sr">, </span>3<span class="sr"> falsas o engañosas</span></b></a></li><li><a href="/sanchez#tema-8" data-tema="tema-8"><i aria-hidden="true">8</i><span>Leire Díez, Zapatero y las investigaciones abiertas</span><b title="3 falsas o engañosas"><span class="sr">, </span>3<span class="sr"> falsas o engañosas</span></b></a></li><li><a href="/sanchez#tema-9" data-tema="tema-9"><i aria-hidden="true">9</i><span>Vivienda, alquileres y acceso de los jóvenes a una casa</span><b title="6 falsas o engañosas"><span class="sr">, </span>6<span class="sr"> falsas o engañosas</span></b></a></li><li><a href="/sanchez#tema-10" data-tema="tema-10"><i aria-hidden="true">10</i><span>Amnistía, Bildu, Pablo Iglesias y los cambios de opinión de Sánchez</span><b title="5 falsas o engañosas"><span class="sr">, </span>5<span class="sr"> falsas o engañosas</span></b></a></li></ol></div></details><details class="desp actual"><summary><span class="largo">Alberto Núñez </span>Feijóo</summary><div class="lista"><div class="lista-cab"><span class="logo retrato mini"><img src="/fotos/feijoo.jpg" alt="Alberto Núñez Feijóo" width="160" height="160" decoding="async"><span class="insignia" title="PP"><img src="/logos/pp.svg" alt="" width="40" height="40"></span></span><div><p class="nombre">Alberto Núñez Feijóo</p><p class="cuanto">PP · <b>31</b> falsas o engañosas de 153</p></div></div><div class="lista-acc"><a class="principal" href="/feijoo"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3v18M10 6h9M10 12h6M10 18h8"/><circle cx="6" cy="6" r="2" class="lleno"/><circle cx="6" cy="12" r="2" class="lleno"/><circle cx="6" cy="18" r="2" class="lleno"/></svg><span>Línea temporal</span></a><a href="/feijoo/transcripcion"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l4 4v14H6zM14 3v5h5M9 12h7M9 16h7"/></svg><span>Transcripción</span></a></div><p class="rot">Temas <span>· en rojo, cuántas falsas o engañosas</span></p><ol class="lista-temas"><li><a href="/feijoo#tema-2" data-tema="tema-2"><i aria-hidden="true">2</i><span>Vox, polarización y un posible gobierno de coalición</span><b title="4 falsas o engañosas"><span class="sr">, </span>4<span class="sr"> falsas o engañosas</span></b></a></li><li><a href="/feijoo#tema-3" data-tema="tema-3"><i aria-hidden="true">3</i><span>Economía, pensiones y futuro del sistema público</span><b title="1 falsa o engañosa"><span class="sr">, </span>1<span class="sr"> falsa o engañosa</span></b></a></li><li><a href="/feijoo#tema-4" data-tema="tema-4"><i aria-hidden="true">4</i><span>Autónomos, impuestos y propuestas económicas del PP</span></a></li><li><a href="/feijoo#tema-5" data-tema="tema-5"><i aria-hidden="true">5</i><span>Deuda pública, déficit y gasto en defensa</span><b title="4 falsas o engañosas"><span class="sr">, </span>4<span class="sr"> falsas o engañosas</span></b></a></li><li><a href="/feijoo#tema-6" data-tema="tema-6"><i aria-hidden="true">6</i><span>Ceuta, Marruecos y la gestión de la frontera</span><b title="4 falsas o engañosas"><span class="sr">, </span>4<span class="sr"> falsas o engañosas</span></b></a></li><li><a href="/feijoo#tema-7" data-tema="tema-7"><i aria-hidden="true">7</i><span>Inmigración, ayudas sociales, integración y expulsiones</span><b title="5 falsas o engañosas"><span class="sr">, </span>5<span class="sr"> falsas o engañosas</span></b></a></li><li><a href="/feijoo#tema-8" data-tema="tema-8"><i aria-hidden="true">8</i><span>Feijóo explica su relación con Marcial Dorado</span><b title="6 falsas o engañosas"><span class="sr">, </span>6<span class="sr"> falsas o engañosas</span></b></a></li><li><a href="/feijoo#tema-9" data-tema="tema-9"><i aria-hidden="true">9</i><span>Corrupción, Gürtel y los casos que afectan al PSOE y al PP</span><b title="4 falsas o engañosas"><span class="sr">, </span>4<span class="sr"> falsas o engañosas</span></b></a></li><li><a href="/feijoo#tema-10" data-tema="tema-10"><i aria-hidden="true">10</i><span>Isabel Díaz Ayuso y su relación dentro del Partido Popular</span><b title="3 falsas o engañosas"><span class="sr">, </span>3<span class="sr"> falsas o engañosas</span></b></a></li><li><a href="/feijoo#tema-11" data-tema="tema-11"><i aria-hidden="true">11</i><span>Inglés, servicio militar, Trump y política internacional</span></a></li><li><a href="/feijoo#tema-12" data-tema="tema-12"><i aria-hidden="true">12</i><span>Feijóo define a Colau, Abascal y Pedro Sánchez y cierra la entrevist</span></a></li></ol></div></details><details class="desp"><summary><span class="largo">Ada </span>Colau</summary><div class="lista"><div class="lista-cab"><span class="logo retrato mini"><img src="/fotos/colau.jpg" alt="Ada Colau" width="160" height="160" decoding="async"><span class="insignia" title="Frente Amplio"><img src="/logos/frente-amplio.svg" alt="" width="40" height="40"></span></span><div><p class="nombre">Ada Colau</p><p class="cuanto">Frente Amplio · <b>29</b> falsas o engañosas de 153</p></div></div><div class="lista-acc"><a class="principal" href="/colau"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3v18M10 6h9M10 12h6M10 18h8"/><circle cx="6" cy="6" r="2" class="lleno"/><circle cx="6" cy="12" r="2" class="lleno"/><circle cx="6" cy="18" r="2" class="lleno"/></svg><span>Línea temporal</span></a><a href="/colau/transcripcion"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l4 4v14H6zM14 3v5h5M9 12h7M9 16h7"/></svg><span>Transcripción</span></a></div><p class="rot">Temas <span>· en rojo, cuántas falsas o engañosas</span></p><ol class="lista-temas"><li><a href="/colau#tema-3" data-tema="tema-3"><i aria-hidden="true">3</i><span>Twitter, redes sociales y polarización política</span></a></li><li><a href="/colau#tema-4" data-tema="tema-4"><i aria-hidden="true">4</i><span>Por qué Ada Colau vuelve a la política y se presenta a las elecciones</span><b title="1 falsa o engañosa"><span class="sr">, </span>1<span class="sr"> falsa o engañosa</span></b></a></li><li><a href="/colau#tema-5" data-tema="tema-5"><i aria-hidden="true">5</i><span>Frente Amplio, Podemos y la división de la izquierda</span><b title="2 falsas o engañosas"><span class="sr">, </span>2<span class="sr"> falsas o engañosas</span></b></a></li><li><a href="/colau#tema-6" data-tema="tema-6"><i aria-hidden="true">6</i><span>PSOE, Sumar, corrupción y responsabilidad política</span><b title="2 falsas o engañosas"><span class="sr">, </span>2<span class="sr"> falsas o engañosas</span></b></a></li><li><a href="/colau#tema-7" data-tema="tema-7"><i aria-hidden="true">7</i><span>Accidentes ferroviarios y gestión del sistema de trenes</span><b title="5 falsas o engañosas"><span class="sr">, </span>5<span class="sr"> falsas o engañosas</span></b></a></li><li><a href="/colau#tema-8" data-tema="tema-8"><i aria-hidden="true">8</i><span>Ceuta, Marruecos y la política migratoria de España</span><b title="2 falsas o engañosas"><span class="sr">, </span>2<span class="sr"> falsas o engañosas</span></b></a></li><li><a href="/colau#tema-9" data-tema="tema-9"><i aria-hidden="true">9</i><span>Inmigración, integración y choque cultural</span><b title="1 falsa o engañosa"><span class="sr">, </span>1<span class="sr"> falsa o engañosa</span></b></a></li><li><a href="/colau#tema-10" data-tema="tema-10"><i aria-hidden="true">10</i><span>Natalidad, demografía y el futuro de la población española</span></a></li><li><a href="/colau#tema-11" data-tema="tema-11"><i aria-hidden="true">11</i><span>Su gestión de Barcelona: seguridad, limpieza y errores como alcaldesa</span><b title="7 falsas o engañosas"><span class="sr">, </span>7<span class="sr"> falsas o engañosas</span></b></a></li><li><a href="/colau#tema-12" data-tema="tema-12"><i aria-hidden="true">12</i><span>Vivienda, alquileres, grandes propietarios y especulación</span><b title="4 falsas o engañosas"><span class="sr">, </span>4<span class="sr"> falsas o engañosas</span></b></a></li><li><a href="/colau#tema-13" data-tema="tema-13"><i aria-hidden="true">13</i><span>Ocupación, pequeños propietarios e impagos</span></a></li><li><a href="/colau#tema-14" data-tema="tema-14"><i aria-hidden="true">14</i><span>Trump, Israel, la flotilla y sus rivales políticos</span><b title="5 falsas o engañosas"><span class="sr">, </span>5<span class="sr"> falsas o engañosas</span></b></a></li></ol></div></details><a class="dcha" href="/verificalo">Verifícalo tú</a><a href="/metodologia">Método</a><a href="/quien">Quién lo hace</a><a href="/api">API</a><a href="https://github.com/PabloPC05/verificacion-podcast" target="_blank" rel="noopener noreferrer">GitHub ↗</a><button class="modo" type="button" aria-label="Cambiar a modo oscuro" title="Cambiar a modo oscuro"><svg class="luna" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="sol" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button></div></div></header><script>
+document.addEventListener("click", ev => document.querySelectorAll("details.desp[open]").forEach(d => {
+  if (!d.contains(ev.target) || ev.target.closest(".lista a")) d.open = false;
+}));
+document.addEventListener("keydown", ev => {
+  const abierto = document.querySelector("details.desp[open]");
+  if (ev.key === "Escape" && abierto) { abierto.open = false; abierto.querySelector("summary").focus(); return; }
+  if (!abierto || !["ArrowDown", "ArrowUp"].includes(ev.key)) return;
+  const enlaces = [...abierto.querySelectorAll(".lista a")], i = enlaces.indexOf(document.activeElement);
+  ev.preventDefault();
+  enlaces[ev.key === "ArrowDown" ? (i + 1) % enlaces.length : (i <= 0 ? enlaces.length - 1 : i - 1)].focus();
+});
+// El desplegable cuelga de la línea inferior del menú: se calcula dónde está esa línea respecto a su contenedor
+const colgar = d => {
+  const l = d.querySelector(".lista"), op = l.offsetParent; if (!op) return;
+  l.style.top = (document.querySelector(".menu").getBoundingClientRect().bottom - op.getBoundingClientRect().top) + "px";
+};
+document.querySelectorAll("details.desp").forEach(d => d.addEventListener("toggle", () => {
+  if (!d.open) return;
+  document.querySelectorAll("details.desp[open]").forEach(o => { if (o !== d) o.open = false; });
+  colgar(d);
+}));
+addEventListener("resize", () => document.querySelectorAll("details.desp[open]").forEach(colgar));
+const rutaActual = location.pathname.replace(/\/$/, "");
+document.querySelectorAll(".lista-acc a").forEach(a => { if (a.pathname.replace(/\/$/, "") === rutaActual) a.setAttribute("aria-current", "page"); });
+const medirMenu = () => document.documentElement.style.setProperty("--menu", document.querySelector(".menu").offsetHeight + "px");
+medirMenu(); addEventListener("resize", medirMenu);
+// Las cifras del hero cuentan de 0 a su valor al cargar (salvo con movimiento reducido)
+if (!matchMedia("(prefers-reduced-motion: reduce)").matches) addEventListener("DOMContentLoaded", () => document.querySelectorAll(".dato > b, .num > b").forEach((el, i) => {
+  const fin = parseInt(el.textContent, 10); if (!(fin > 0)) return;
+  el.style.minWidth = el.offsetWidth + "px"; el.style.display = "inline-block";
+  const t0 = performance.now() + 250 + i * 100, dur = 900;
+  const paso = t => { const x = Math.min(1, Math.max(0, (t - t0) / dur)); el.textContent = Math.round(fin * (1 - Math.pow(1 - x, 3))); if (x < 1) requestAnimationFrame(paso); };
+  el.textContent = "0"; requestAnimationFrame(paso);
+}));
+// Aviso breve para confirmar acciones; role=status hace que también lo lean los lectores de pantalla.
+const avisar = (texto, mal) => {
+  let a = document.querySelector(".aviso");
+  if (!a) { a = document.createElement("p"); a.className = "aviso"; a.setAttribute("role", "status"); document.body.append(a); }
+  a.textContent = texto; a.classList.toggle("mal", !!mal);
+  requestAnimationFrame(() => a.classList.add("ver"));
+  clearTimeout(avisar.t); avisar.t = setTimeout(() => a.classList.remove("ver"), 3200);
+};
+// Copia al portapapeles con aviso; si el navegador no deja, se ofrece el texto para copiarlo a mano.
+const copiarTexto = (texto, ok) => {
+  const fallo = () => { avisar("No se ha podido copiar automáticamente: cópialo del cuadro.", true); prompt("Copia este texto:", texto); };
+  if (navigator.clipboard) navigator.clipboard.writeText(texto).then(() => { avisar(ok); }, fallo); else fallo();
+};
+(() => {
+  const b = document.createElement("button");
+  b.className = "arriba"; b.type = "button";
+  b.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20V5M5 11l7-7 7 7"/></svg>'; b.setAttribute("aria-label", "Volver arriba"); b.title = "Volver arriba";
+  b.onclick = () => { scrollTo({ top: 0 }); document.querySelector(".sello")?.focus({ preventScroll: true }); };
+  document.body.append(b);
+  const mirar = () => b.classList.toggle("ver", scrollY > innerHeight * 1.5 && document.documentElement.scrollHeight > innerHeight * 3);
+  addEventListener("scroll", mirar, { passive: true }); mirar();
+})();
+// Modo claro/oscuro. Sin preferencia guardada manda el sistema (lo resuelve el CSS); al pulsar se guarda y manda sobre el sistema.
+const RAIZ = document.documentElement, botonModo = document.querySelector(".modo"), sistemaOscuro = matchMedia("(prefers-color-scheme: dark)");
+const hayOscuro = () => (RAIZ.dataset.modo || (sistemaOscuro.matches ? "oscuro" : "claro")) === "oscuro";
+function etiquetarModo() {
+  const t = hayOscuro() ? "Cambiar a modo claro" : "Cambiar a modo oscuro";
+  botonModo.setAttribute("aria-label", t); botonModo.title = t;
+}
+// Revelado circular desde el botón (View Transitions API); sin la API o con poco movimiento, el cambio es instantáneo.
+function revelarModo(cambiar) {
+  if (!document.startViewTransition || matchMedia("(prefers-reduced-motion: reduce)").matches) { cambiar(); return; }
+  const c = botonModo.getBoundingClientRect(), x = c.left + c.width / 2, y = c.top + c.height / 2;
+  const r = Math.hypot(Math.max(x, innerWidth - x), Math.max(y, innerHeight - y));
+  document.startViewTransition(cambiar).ready.then(() => RAIZ.animate(
+    { clipPath: [`circle(0px at ${x}px ${y}px)`, `circle(${r}px at ${x}px ${y}px)`] },
+    { duration: 420, easing: "cubic-bezier(0.4, 0, 0.2, 1)", pseudoElement: "::view-transition-new(root)" })).catch(() => {});
+}
+botonModo.onclick = () => {
+  const nuevo = hayOscuro() ? "claro" : "oscuro";
+  revelarModo(() => { RAIZ.dataset.modo = nuevo; etiquetarModo(); });
+  try { localStorage.setItem("modo", nuevo); } catch (e) {}
+};
+sistemaOscuro.addEventListener("change", etiquetarModo);
+etiquetarModo();
+</script>
+<main class="ancho" data-v="verdadero">
+<nav class="migas" aria-label="Ruta"><a href="/feijoo">Alberto Núñez Feijóo</a> › Tema 2 · Vox, polarización y un posible gobierno de coalición › 0:07:14</nav>
+<p class="veredicto" data-v="verdadero">Verdadero</p>
+<h1>Vox no cree en el Estado de las autonomías, a diferencia del PP.</h1>
+<section class="seccion"><h2>Lo que dijo</h2><blockquote>«El estado de las autonomías en la que ellos no creen, yo sí creo.»</blockquote><p class="cita-pie">— Alberto Núñez Feijóo, <a href="https://www.youtube.com/watch?v=1YlGArMx_N4&t=434s" target="_blank" rel="noopener noreferrer">0:07:14</a></p></section>
+<section class="seccion"><h2>Por qué</h2><p class="resumen">Vox mantiene la exigencia de suprimir o vaciar el Estado autonómico, y el PP afirma que no aceptó esa condición en los pactos de 2026; ambos partidos reconocen la diferencia.</p><p class="explicacion">Vox mantiene como exigencia la supresión o el vaciado del Estado autonómico, y el PP afirma que en los pactos de 2026 no aceptó esa condición previa de Vox (ni la cadena perpetua revisable como imposición). La diferencia entre ambos partidos en este punto está reconocida por las dos partes.</p><p class="confianza">Confianza: <b>media</b></p></section>
+<section class="seccion"><h2>Fuentes</h2><ol class="fuentes"><li><a href="https://www.moncloa.com/2026/05/28/gamarra-documento-marco-acuerdo-vox-andalucia-3380431/" target="_blank" rel="noopener noreferrer">Moncloa.com: Gamarra fija el documento marco del PP como base para acuerdos con Vox en Andalucía (28-5-2026)</a> <span>moncloa.com</span></li></ol></section>
+<section class="seccion"><h2>Contexto en la entrevista</h2><div class="contexto"><div class="turno" data-voz="G"><div class="cab-turno"><div class="quien"><img class="cara" src="/fotos/feijoo.jpg" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="nom"><b>Alberto Núñez Feijóo</b><small>PP</small></span></div><a class="minuto" href="https://www.youtube.com/watch?v=1YlGArMx_N4&t=427s" target="_blank" rel="noopener noreferrer">0:07:07</a></div><p>discrepancias sobre muchas cosas. ¿Cuál sería</p></div><div class="turno" data-voz="J"><div class="cab-turno"><div class="quien"><span class="cara">JW</span><span class="nom"><b>Jordi Wild</b><small>The Wild Project</small></span></div><a class="minuto" href="https://www.youtube.com/watch?v=1YlGArMx_N4&t=431s" target="_blank" rel="noopener noreferrer">0:07:11</a></div><p>la más grande que tengas?</p></div><div class="turno" data-voz="G"><div class="cab-turno"><div class="quien"><img class="cara" src="/fotos/feijoo.jpg" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="nom"><b>Alberto Núñez Feijóo</b><small>PP</small></span></div><a class="minuto" href="https://www.youtube.com/watch?v=1YlGArMx_N4&t=433s" target="_blank" rel="noopener noreferrer">0:07:13</a></div><p>Bueno, la idea de Europa yo no la comparto. <mark>El estado de las autonomías en la que ellos no creen, yo sí creo.</mark> algunos planteamientos que fueron modulando, porque el Vox de hace cinco años, seis años, ahora ya ha ido modulando y ajustando. Pero es que yo le doy mucha importancia a esto de los bandos.</p></div></div><p class="mas"><a href="/feijoo/transcripcion#tema-2">Leer la transcripción completa</a></p></section>
+<div class="acciones">
+<a class="btn" href="/feijoo#m434">Ver en la línea temporal</a>
+<button class="btn" type="button" data-copiar data-enlace="https://verificacion-podcast.vercel.app/feijoo/m434">Copiar enlace</button>
+<a class="btn" href="https://github.com/PabloPC05/verificacion-podcast/issues/new?template=correccion.yml&amp;title=Corregir%20feijoo-m434" target="_blank" rel="noopener noreferrer">¿Ves un error?</a>
+</div>
+<nav class="vecinas" aria-label="Afirmaciones de la misma entrevista"><a class="vecina ant" href="/feijoo/m357" rel="prev"><span class="rot-v">← Anterior</span><span class="tiempo">0:05:57 · <b data-v="verdadero">Verdadero</b></span><small>Sánchez usó la imagen de los «muros» (bloques enfrentados) en su discurso de…</small></a><a class="vecina sig" href="/feijoo/m554" rel="next"><span class="rot-v">Siguiente →</span><span class="tiempo">0:09:14 · <b data-v="verdadero">Verdadero</b></span><small>En las generales de 2023 el PP obtuvo mayoría absoluta en el Senado y 16…</small></a></nav>
+</main>
+<footer class="pie-solo"><div class="ancho"><p class="pie-quien"><a href="/quien">Proyecto personal e independiente de Pablo Pardo Cotos, sin relación con The Wild Project ni con ningún partido.</a></p></div></footer>
+<script>
+document.querySelector("[data-copiar]").addEventListener("click", ev => copiarTexto(ev.currentTarget.dataset.enlace, "Enlace copiado."));
+</script>
+</body>
+</html>

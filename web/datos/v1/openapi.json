@@ -165,6 +165,7 @@
            "minuto": "0:09:26",
            "video_url": "https://www.youtube.com/watch?v=mStOFBvToUI&t=566s",
            "web_url": "https://verificacion-podcast.vercel.app/sanchez#m566",
+           "pagina_url": "https://verificacion-podcast.vercel.app/sanchez/m566",
            "cita": "A mí me han llamado dictador, me han llamado psicópata",
            "afirmacion": "Responsables políticos han llamado «dictador» y «psicópata» a Sánchez.",
            "veredicto": "verdadero",
@@ -293,6 +294,7 @@
            "minuto": "0:09:26",
            "video_url": "https://www.youtube.com/watch?v=mStOFBvToUI&t=566s",
            "web_url": "https://verificacion-podcast.vercel.app/sanchez#m566",
+           "pagina_url": "https://verificacion-podcast.vercel.app/sanchez/m566",
            "cita": "A mí me han llamado dictador, me han llamado psicópata",
            "afirmacion": "Responsables políticos han llamado «dictador» y «psicópata» a Sánchez.",
            "veredicto": "verdadero",
@@ -857,6 +859,7 @@
      "minuto",
      "video_url",
      "web_url",
+     "pagina_url",
      "cita",
      "afirmacion",
      "veredicto",
@@ -910,6 +913,11 @@
       "type": "string",
       "format": "uri",
       "description": "Tarjeta de la afirmación en la web."
+     },
+     "pagina_url": {
+      "type": "string",
+      "format": "uri",
+      "description": "Página propia de la afirmación, con la cita, la explicación, las fuentes y el contexto."
      },
      "cita": {
       "type": "string",
