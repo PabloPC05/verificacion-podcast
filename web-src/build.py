@@ -16,6 +16,7 @@ from pathlib import Path
 from urllib.parse import urlparse
 
 import api_publica
+import panel as estadisticas
 
 RAIZ = Path(__file__).resolve().parent.parent
 ENTREVISTAS = RAIZ / "entrevistas"
@@ -141,6 +142,9 @@ PLURAL = {"falso": "Falsas", "enganoso": "Engañosas", "mayormente_verdadero": "
 
 BASE = "https://verificacion-podcast.vercel.app"
 SCALAR = "1.76.2"  # @scalar/api-reference, versión fijada: subirla a mano tras probar /api/referencia
+# Umami Cloud (estadísticas de visitas, sin cookies). Vacío = la web sale sin seguimiento.
+# El ID es público (va en el HTML); la clave de la API no: vive en Vercel como UMAMI_API_KEY.
+UMAMI_ID = ""
 LOGOS = {"PSOE": "psoe.svg", "PP": "pp.svg", "Frente Amplio": "frente-amplio.svg"}
 DEFINICIONES = {
     "verdadero": "Los datos lo confirman.",
@@ -151,8 +155,8 @@ DEFINICIONES = {
 }
 
 
-def rellenar(plantilla, **valores):
-    plantilla = plantilla.replace("@@HEAD_MODO@@", HEAD_MODO)
+def rellenar(plantilla, analitica=True, **valores):
+    plantilla = plantilla.replace("@@HEAD_MODO@@", HEAD_MODO + (estadisticas.seguimiento(UMAMI_ID, BASE) if analitica else ""))
     for k, v in valores.items():
         plantilla = plantilla.replace(f"@@{k}@@", str(v))
     return plantilla
@@ -414,7 +418,8 @@ Para volver a comprobar una afirmación: lee `cita` y `afirmacion`, abre cada `f
 Los errores se comunican en {REPO}/issues.
 """, encoding="utf-8")
     (SALIDA / "vercel.json").write_text(json.dumps({"headers": [
-        {"source": "/api/(.*)", "headers": [{"key": "Access-Control-Allow-Origin", "value": "*"},
+        # /api/estadisticas (el panel privado) queda fuera: no se cachea ni se abre a otros dominios.
+        {"source": "/api/((?!estadisticas).*)", "headers": [{"key": "Access-Control-Allow-Origin", "value": "*"},
                                             {"key": "Cache-Control", "value": "public, max-age=300"}]},
         {"source": "/llms.txt", "headers": [{"key": "Access-Control-Allow-Origin", "value": "*"}]}]}, indent=1) + "\n")
     return ejemplo, slugs
@@ -696,6 +701,11 @@ def main():
     (SALIDA / "api" / "referencia").mkdir(exist_ok=True)
     (SALIDA / "api" / "referencia" / "index.html").write_text(
         rellenar(PAGINA_REFERENCIA, SCALAR=SCALAR), encoding="utf-8")
+    # Panel privado de estadísticas: la página es estática y los datos los sirve /api/estadisticas tras pedir contraseña.
+    (SALIDA / "panel").mkdir(exist_ok=True)
+    (SALIDA / "panel" / "index.html").write_text(
+        rellenar(estadisticas.PAGINA, analitica=False, CSS_MENU=CSS_MENU), encoding="utf-8")
+    shutil.copy(RAIZ / "web-src" / "estadisticas.js", SALIDA / "api" / "estadisticas.js")
 
 
 LEYENDA = """<section class="leyenda-f" aria-label="Leyenda de veredictos">

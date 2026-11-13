@@ -1,7 +1,7 @@
 {
  "headers": [
   {
-   "source": "/api/(.*)",
+   "source": "/api/((?!estadisticas).*)",
    "headers": [
     {
      "key": "Access-Control-Allow-Origin",
