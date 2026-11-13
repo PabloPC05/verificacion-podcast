@@ -17,6 +17,7 @@ from pathlib import Path
 from urllib.parse import quote, urlparse
 
 import api_publica
+import avisos
 import estadisticas
 
 RAIZ = Path(__file__).resolve().parent.parent
@@ -999,11 +1000,9 @@ def pagina_afirmacion(m, a, entrevistas, anterior, siguiente):
     contexto = (f'<section class="seccion"><h2>Contexto en la entrevista</h2><div class="contexto">{contexto_cita(m, a)}</div>'
                 f'<p class="mas"><a href="{ver_tema}">Leer la transcripción completa</a></p></section>')
 
-    # formulario «Avisar de un error» (.github/ISSUE_TEMPLATE/correccion.yml) con la afirmación ya rellenada:
-    # a quien avisa solo le queda pegar las fuentes
-    titulo_error = "Error en: " + m["invitado"] + ", " + minuto
-    afirmacion_error = m["invitado"] + ", " + minuto + " · " + BASE + ruta
-    url_error = f"{REPO}/issues/new?template=correccion.yml&title={quote(titulo_error)}&afirmacion={quote(afirmacion_error)}"
+    # formulario «Avisar de un error» de la propia web (/avisar) con la afirmación ya rellenada:
+    # a quien avisa solo le queda pegar las fuentes. Lo publica como incidencia la función web-src/avisar.js
+    url_error = f"/avisar?ruta={quote(ruta)}&a={quote(m['invitado'] + ', ' + minuto)}"
 
     def vecina(b, clase, rotulo):
         if not b:
@@ -1552,6 +1551,15 @@ def main():
             "/quien", "Quién hace esto · Verificación The Wild Project",
             "Quién hace esta verificación, su independencia, quién la paga, cómo se hace y cómo se corrigen los errores."),
         MENU=menu(entrevistas), CSS_MENU=CSS_MENU, REPO=REPO, REPO_PABLO=REPO_PABLO, BIO_PABLO=BIO_PABLO, ENLACES_PABLO=ENLACES_PABLO, BIO_DIEGO=BIO_DIEGO, ENLACES_DIEGO=ENLACES_DIEGO), encoding="utf-8")
+    (SALIDA / "avisar").mkdir(exist_ok=True)
+    (SALIDA / "avisar" / "index.html").write_text(rellenar(
+        avisos.PAGINA, CABECERA=cabecera(
+            "/avisar", "Avisar de un error · Verificación The Wild Project",
+            "Si crees que una afirmación está mal verificada, mándanos el enlace a una web que muestre el dato correcto."),
+        MENU=menu(entrevistas), CSS_MENU=CSS_MENU), encoding="utf-8")
+    # función de Vercel que publica los avisos como incidencias (web/api/ solo tiene funciones, sin estáticos)
+    (SALIDA / "api").mkdir(exist_ok=True)
+    shutil.copy(RAIZ / "web-src" / "avisar.js", SALIDA / "api" / "avisar.js")
     pagina_metodologia(entrevistas)
     DATOS.mkdir(exist_ok=True)
     (DATOS / "index.html").write_text(rellenar(
@@ -1921,7 +1929,7 @@ code { font:13.5px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace; background:v
 </div>
 <pre id="encargo"></pre>
 <div class="botones"><button id="copiar" type="button">Copiar encargo</button><a id="claude" target="_blank" rel="noopener noreferrer">Abrir en Claude ↗</a><a id="chatgpt" target="_blank" rel="noopener noreferrer">Abrir en ChatGPT ↗</a></div>
-<p class="nota">Una IA también se equivoca: pídele siempre los enlaces y ábrelos. Si su respuesta contradice un veredicto con una fuente sólida, <a href="@@REPO@@/issues/new?template=correccion.yml" target="_blank" rel="noopener noreferrer">avísanos</a> con esa fuente y lo revisamos.</p>
+<p class="nota">Una IA también se equivoca: pídele siempre los enlaces y ábrelos. Si su respuesta contradice un veredicto con una fuente sólida, <a href="/avisar">avísanos</a> con esa fuente y lo revisamos.</p>
 
 <h2>Qué significa cada veredicto</h2>
 @@LEYENDA@@
@@ -2085,10 +2093,10 @@ h1 { font:700 clamp(30px,5.2vw,58px)/1.05 var(--serif); letter-spacing:-0.02em; 
 
 <section>
 <h2 id="errores">Errores y correcciones</h2>
-<p>Si ves un error, abre la afirmación y pulsa «Avisar de un error», o <a href="@@REPO@@/issues/new?template=correccion.yml" target="_blank" rel="noopener noreferrer">avisa directamente</a>. Solo te pediremos un enlace a una fuente que muestre el dato correcto. El aviso se envía desde GitHub, donde está publicado el proyecto, y hace falta una cuenta gratuita.</p>
+<p>Si ves un error, abre la afirmación y pulsa «Avisar de un error», o <a href="/avisar">usa el formulario</a>. Solo te pediremos un enlace a una web que muestre el dato correcto. No hace falta cuenta.</p>
 <p>Una corrección se acepta por la fuente, no por el partido. Se aplica la misma vara de medir a todos.</p>
 <p>Los cambios en los datos quedan registrados y se pueden consultar públicamente en el <a href="@@REPO@@/commits/main/entrevistas" target="_blank" rel="noopener noreferrer">historial de cambios</a>.</p>
-<p>El contacto es solo por GitHub.</p>
+<p>Para cualquier otra cosa, el contacto es por GitHub.</p>
 </section>
 </div>
 </main>
