@@ -102,8 +102,8 @@ def panel(a):
     enlace = f"https://www.youtube.com/watch?v={a['_video']}&t={s}s"
     return (
         f'<li class="hito" data-v="{v}" id="{a["_id"]}">'
-        f'<div class="dicho"><a class="minuto" href="{enlace}" target="_blank" rel="noopener noreferrer" '
-        f'title="Abrir el vídeo en este momento">{hms(s)}</a>'
+        f'<div class="dicho"><a class="minuto" href="{enlace}" data-min target="_blank" rel="noopener noreferrer" '
+        f'title="Ver el vídeo en este momento">{hms(s)}</a>'
         + (f'<blockquote>«{e(cita)}»</blockquote>' if cita else "") + "</div>"
         f'<span class="punto" aria-hidden="true"></span><span class="flecha" aria-hidden="true"></span>'
         f'<article class="panel"><p class="ficha">{NOMBRE[v]}</p>'
@@ -219,6 +219,7 @@ REPO_PABLO = "https://github.com/PabloPC05"
 
 def rellenar(plantilla, **valores):
     plantilla = plantilla.replace("@@HEAD_MODO@@", HEAD_MODO + estadisticas.seguimiento(UMAMI_ID, BASE)).replace("@@PIE@@", PIE)
+    plantilla = plantilla.replace("@@REPRODUCTOR@@", JS_REPRODUCTOR)
     for k, v in valores.items():
         plantilla = plantilla.replace(f"@@{k}@@", str(v))
     return plantilla
@@ -670,6 +671,149 @@ FAB_LEYENDA = """<div class="fab" id="fab">
   document.addEventListener("click", ev => { if (!fab.contains(ev.target)) abrir(false); });
 })();
 </script>"""
+# Reproductor de vídeo dentro de la página (línea temporal, transcripción y página de cada afirmación; las plantillas lo
+# inyectan con @@REPRODUCTOR@@). Un clic normal en un enlace con data-min (un minuto de este vídeo) abre un panel fijo con el
+# vídeo de YouTube en ese segundo; Ctrl/Cmd+clic, botón central o sin JavaScript siguen yendo a YouTube porque el href no cambia.
+# No se carga nada de YouTube hasta ese primer clic: el panel y el iframe se crean entonces.
+# Primer minuto: se carga el iframe con ?start=. Minutos siguientes del mismo vídeo: seekTo por postMessage (enablejsapi=1) sin
+# recargar, porque recargar vuelve a pedir el anuncio previo; si YouTube no confirma el salto (no responde o se ignora durante un
+# anuncio), se recarga con ?start=, que siempre funciona. No se carga iframe_api, solo se habla con el iframe.
+JS_REPRODUCTOR = r"""<script>
+function hora(s) { return Math.floor(s / 3600) + ":" + String(Math.floor(s % 3600 / 60)).padStart(2, "0") + ":" + String(s % 60).padStart(2, "0"); }
+(() => {
+  const ORIGEN = "https://www.youtube-nocookie.com";
+  let panel, visor, marco, etiqueta, enlace, botonMin, estado, abridor;
+  let video = "", listo = false, minimizado = false, ultimo = null, latido = 0, vigia = 0;
+  const icono = d => '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="' + d + '"/></svg>';
+  const medir = () => document.documentElement.style.setProperty("--repro-h", (panel && !panel.hidden ? panel.offsetHeight : 0) + "px");
+
+  function construir() {
+    panel = document.createElement("section");
+    panel.className = "repro"; panel.setAttribute("role", "region"); panel.setAttribute("aria-label", "Reproductor de vídeo");
+    panel.tabIndex = -1; panel.hidden = true;
+    panel.innerHTML = '<div class="repro-barra"><span class="repro-t"></span>'
+      + '<a class="repro-yt" target="_blank" rel="noopener noreferrer">Abrir en YouTube ' + icono("M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5") + '</a>'
+      + '<button class="repro-min" type="button" aria-expanded="true"></button>'
+      + '<button class="repro-x" type="button" aria-label="Cerrar el reproductor" title="Cerrar (Esc)">' + icono("M6 6l12 12M18 6L6 18") + '</button></div>'
+      + '<div class="repro-video"></div><p class="sr" role="status"></p>';
+    visor = panel.querySelector(".repro-video"); etiqueta = panel.querySelector(".repro-t"); enlace = panel.querySelector(".repro-yt");
+    botonMin = panel.querySelector(".repro-min"); estado = panel.querySelector("[role=status]");
+    botonMin.onclick = () => minimizar(!minimizado);
+    panel.querySelector(".repro-x").onclick = cerrar;
+    enlace.addEventListener("click", () => orden("pauseVideo"));
+    document.body.append(panel);
+    if (window.ResizeObserver) new ResizeObserver(medir).observe(panel);
+    addEventListener("resize", medir);
+  }
+  function enviar(obj) { try { marco.contentWindow.postMessage(JSON.stringify(Object.assign({ id: 1, channel: "widget" }, obj)), ORIGEN); } catch (e) {} }
+  const orden = (func, args) => { if (marco && listo) enviar({ event: "command", func: func, args: args || [] }); };
+
+  // Con enablejsapi=1 el reproductor contesta cuando se le avisa de que se le escucha; mientras no conteste no se le dan órdenes
+  function saludar() {
+    clearInterval(latido); let n = 0;
+    const hola = () => { if (listo || ++n > 40) clearInterval(latido); else enviar({ event: "listening" }); };
+    latido = setInterval(hola, 250); hola();
+  }
+  addEventListener("message", ev => {
+    if (!marco || ev.source !== marco.contentWindow || ev.origin !== ORIGEN) return;
+    let d; try { d = JSON.parse(ev.data); } catch (e) { return; }
+    if (!d || typeof d !== "object") return;
+    if (d.event === "onReady" || d.event === "initialDelivery" || d.event === "infoDelivery") listo = true;
+    if (d.info && typeof d.info.currentTime === "number") ultimo = d.info.currentTime;
+  });
+
+  function cargar(v, s) {
+    video = v; listo = false; ultimo = null; clearTimeout(vigia);
+    if (!marco) {
+      marco = document.createElement("iframe");
+      marco.title = "Vídeo de la entrevista (YouTube)";
+      marco.allow = "autoplay; encrypted-media; picture-in-picture; fullscreen"; marco.allowFullscreen = true;
+      marco.referrerPolicy = "strict-origin-when-cross-origin";
+      marco.addEventListener("load", saludar);
+      visor.append(marco);
+    }
+    marco.src = ORIGEN + "/embed/" + v + "?start=" + s + "&autoplay=1&enablejsapi=1&rel=0&playsinline=1&origin=" + encodeURIComponent(location.origin);
+  }
+  function saltar(s) {
+    orden("seekTo", [s, true]); orden("playVideo");
+    ultimo = null; clearTimeout(vigia);
+    vigia = setTimeout(() => { if (marco && (ultimo === null || Math.abs(ultimo - s) > 30)) cargar(video, s); }, 3000);
+  }
+  function minimizar(si) {
+    minimizado = si; panel.classList.toggle("min", si);
+    botonMin.setAttribute("aria-expanded", !si);
+    const t = si ? "Ampliar el reproductor" : "Minimizar el reproductor (pausa el vídeo)";
+    botonMin.setAttribute("aria-label", t); botonMin.title = t;
+    botonMin.innerHTML = icono(si ? "M6 15l6-6 6 6" : "M6 9l6 6 6-6");
+    orden(si ? "pauseVideo" : "playVideo"); medir();
+  }
+  function abrir(v, s, a, teclado) {
+    if (!panel) construir();
+    const nuevo = panel.hidden; abridor = a;
+    panel.hidden = false; document.documentElement.classList.add("con-repro");
+    if (nuevo) minimizar(false);
+    else if (minimizado) minimizar(false);
+    enlace.href = "https://www.youtube.com/watch?v=" + v + "&t=" + s + "s";
+    etiqueta.textContent = "Desde " + hora(s);
+    estado.textContent = "Reproduciendo el vídeo desde " + hora(s);
+    if (marco && v === video && listo) saltar(s); else cargar(v, s);
+    medir();
+    if (teclado) panel.focus({ preventScroll: true });
+  }
+  function cerrar() {
+    const dentro = panel.contains(document.activeElement);
+    clearInterval(latido); clearTimeout(vigia);
+    if (marco) { marco.remove(); marco = null; }
+    video = ""; listo = false; panel.hidden = true; document.documentElement.classList.remove("con-repro"); medir();
+    if (dentro && abridor && abridor.isConnected) abridor.focus({ preventScroll: true });
+  }
+
+  // En captura sobre window: se adelanta al contador de enlaces externos de estadísticas, que ve el clic ya gestionado (defaultPrevented)
+  addEventListener("click", ev => {
+    const a = ev.target.closest && ev.target.closest("a[data-min]");
+    if (!a || ev.defaultPrevented || ev.button !== 0 || ev.ctrlKey || ev.metaKey || ev.shiftKey || ev.altKey) return;
+    let u; try { u = new URL(a.href); } catch (e) { return; }
+    const v = u.searchParams.get("v"), s = parseInt(u.searchParams.get("t"), 10);
+    if (!/^[\w-]{11}$/.test(v || "") || !(s >= 0)) return;
+    ev.preventDefault();
+    if (window.umami) umami.track("reproducir", { pagina: location.pathname, segundo: s });
+    abrir(v, s, a, ev.detail === 0);
+  }, true);
+  // Esc cierra el reproductor, salvo que haya un menú o la leyenda abiertos: a esos les toca primero
+  addEventListener("keydown", ev => {
+    if (ev.key !== "Escape" || !panel || panel.hidden || document.querySelector("details.desp[open], .fab.abierto")) return;
+    cerrar();
+  }, true);
+})();
+</script>"""
+
+# Línea temporal: lo que había dicho Jordi antes de cada cita. Los textos no van en el HTML (se repetirían en cada tarjeta):
+# se leen de /<slug>/preguntas.json y se pintan aquí. En escritorio van en la columna de la cita; en móvil, dentro de la tarjeta.
+JS_PREGUNTAS = r"""fetch("/@@SLUG@@/preguntas.json").then(r => r.ok ? r.json() : null).then(d => {
+  if (!d) return;
+  const crear = (t, x) => {
+    const div = document.createElement("div"); div.className = "pregunta";
+    const cab = document.createElement("p"); cab.className = "pregunta-cab";
+    const cara = document.createElement("span"); cara.className = "cara"; cara.setAttribute("aria-hidden", "true"); cara.textContent = "JW";
+    const quien = document.createElement("span"); quien.textContent = "Jordi Wild";
+    const min = document.createElement("a"); min.className = "min-p"; min.dataset.min = ""; min.target = "_blank"; min.rel = "noopener noreferrer";
+    min.href = "https://www.youtube.com/watch?v=" + d.v + "&t=" + t + "s"; min.title = "Ver el vídeo en este momento"; min.textContent = hora(t);
+    cab.append(cara, quien, min);
+    const texto = document.createElement("p"); texto.className = "pregunta-txt"; texto.textContent = x;
+    div.append(cab, texto);
+    return div;
+  };
+  document.querySelectorAll(".hito").forEach(li => {
+    const i = d.a[li.id]; if (i === undefined) return;
+    const lado = li.querySelector(".dicho .minuto"), movil = li.querySelector(".panel blockquote.movil");
+    if (!lado || !movil) return;
+    lado.after(crear(d.p[i][0], d.p[i][1])); movil.before(crear(d.p[i][0], d.p[i][1]));
+  });
+  // la tarjeta a la que apunta la dirección puede haberse movido al crecer las de encima (Chrome y Firefox lo compensan solos; Safari no)
+  const ancla = location.hash.length > 1 && document.getElementById(location.hash.slice(1));
+  if (ancla && !ancla.hidden) { const y = ancla.getBoundingClientRect().top; if (y < 0 || y > innerHeight * 0.6) irAlAncla(); }
+}).catch(() => {});"""
+
 BOTON_MODO = ('<button class="modo" type="button" aria-label="Cambiar a modo oscuro" title="Cambiar a modo oscuro">'
               '<svg class="luna" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>'
               '<svg class="sol" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/>'
@@ -697,7 +841,7 @@ def pagina_entrevista(m, entrevistas):
         fin = min(t["fin"], 10 ** 6)
         filas.append(
             f'<li class="capitulo" id="tema-{t["n"]}" data-etiqueta="Tema {t["n"]} · {e(t["titulo"], quote=True)}">'
-            f'<a class="minuto" href="https://www.youtube.com/watch?v={m["video"]}&t={t["ini"]}s" target="_blank" '
+            f'<a class="minuto" href="https://www.youtube.com/watch?v={m["video"]}&t={t["ini"]}s" data-min target="_blank" '
             f'rel="noopener noreferrer">{hms(t["ini"])}</a><span class="marca" aria-hidden="true">{t["n"]}</span>'
             f'<div class="cab-tema"><p class="num-tema">Tema {t["n"]} de {n_temas} · {hms(t["ini"])} – {hms(fin)}</p>'
             f'<h2>{e(t["titulo"])}</h2><p class="recuento">{t["total"]} afirmaciones: {recuento}</p>'
@@ -713,8 +857,9 @@ def pagina_entrevista(m, entrevistas):
         'Cada una enlaza al minuto exacto del vídeo, con su justificación y sus fuentes.',
         imagen_de(m["slug"]), titulo_social=f'{m["invitado"]} en The Wild Project, minuto a minuto',
         alt=f'Verificación dato a dato: {m["invitado"]} ({m.get("partido") or "sin partido"}) en {m["programa"]}')
+    n_preguntas = preguntas_jordi(m)
     pagina = rellenar(
-        PLANTILLA, CABECERA=cab, FAB=FAB_LEYENDA, BARRA=barra_reparto(m, "barra-reparto grande"), RETRATO=retrato(m) or "", CREDITOS=creditos_fotos([m]), MENU=menu(entrevistas, m["slug"]), CSS_MENU=CSS_MENU, LEYENDA=LEYENDA, NOTA_EXCL=nota_excl,
+        PLANTILLA, CABECERA=cab, PREGUNTAS=JS_PREGUNTAS if n_preguntas else "", FAB=FAB_LEYENDA, BARRA=barra_reparto(m, "barra-reparto grande"), RETRATO=retrato(m) or "", CREDITOS=creditos_fotos([m]), MENU=menu(entrevistas, m["slug"]), CSS_MENU=CSS_MENU, LEYENDA=LEYENDA, NOTA_EXCL=nota_excl,
         FILTROS=filtros(m, '<span class="tema-actual" id="tema-actual"></span>'), SUMA=m["suma"], MALAS=m["malas"],
         FALSAS=m["total"]["falso"], ENGANOSAS=m["total"]["enganoso"], CASI=m["total"]["mayormente_verdadero"],
         VERDADERAS=m["total"]["verdadero"], NV=m["total"]["no_verificable"], FILAS="".join(filas),
@@ -723,7 +868,7 @@ def pagina_entrevista(m, entrevistas):
     destino = SALIDA / m["slug"]
     destino.mkdir(parents=True, exist_ok=True)
     (destino / "index.html").write_text(pagina, encoding="utf-8")
-    print(f'{m["slug"]}: {m["suma"]} afirmaciones · {m["total"]}')
+    print(f'{m["slug"]}: {m["suma"]} afirmaciones · {m["total"]} · {n_preguntas} con la pregunta de Jordi')
 
 
 def tramo_cita(a, indice):
@@ -853,7 +998,7 @@ def pagina_transcripcion(m, entrevistas):
             celda = (ficha_voz(m, nombres, voz) if n == 0 else '<div class="quien"></div>') if voces else ""
             cuerpo.append(
                 f'<div class="par" id="t{t}"><a class="minuto" href="https://www.youtube.com/watch?v={m["video"]}&t={t}s" '
-                f'target="_blank" rel="noopener noreferrer">{hms(t)}</a>{celda}<p>{texto_marcado(p)}</p></div>')
+                f'data-min target="_blank" rel="noopener noreferrer">{hms(t)}</a>{celda}<p>{texto_marcado(p)}</p></div>')
         cuerpo.append("</div>")
     nota_voces = ("Las intervenciones se han atribuido a cada voz con reconocimiento automático de hablantes "
                   "(acierto medido del 97 %; las frases muy cortas son las que más fallan). "
@@ -900,15 +1045,21 @@ def preparar_contexto(m):
     }
 
 
+def tramo_seguro(m, a):
+    """Segmentos de la cita (`tramo_cita`) o, si no se localiza, el segmento que contiene su minuto."""
+    ctx = m["_contexto"]
+    tramo = tramo_cita(a, ctx["indice"])
+    if tramo is None:
+        k = max(0, bisect.bisect_right(ctx["inicios"], a["_t"] + 2) - 1)
+        tramo = (k, k)
+    return tramo
+
+
 def contexto_cita(m, a):
     """HTML de los segmentos alrededor de la cita: la cita en <mark> con el color del veredicto y, si hay hablantes, quién habla."""
     ctx = m["_contexto"]
     segmentos, voces = ctx["segmentos"], ctx["voces"]
-    tramo = tramo_cita(a, ctx["indice"])
-    if tramo is None:  # cita no localizada: el segmento que contiene su minuto
-        k = max(0, bisect.bisect_right(ctx["inicios"], a["_t"] + 2) - 1)
-        tramo = (k, k)
-    desde, hasta = tramo
+    desde, hasta = tramo_seguro(m, a)
     lo, hi = max(0, desde - 4), min(len(segmentos) - 1, hasta + 4)
     # agrupa segmentos seguidos de la misma voz en un párrafo
     grupos = []
@@ -938,8 +1089,88 @@ def contexto_cita(m, a):
             f'<div class="turno" data-voz="{voz or ""}"><div class="cab-turno">'
             + (ficha_voz(m, ctx["nombres"], voz) if voces else "")
             + f'<a class="minuto" href="https://www.youtube.com/watch?v={m["video"]}&t={t0}s" '
-            f'target="_blank" rel="noopener noreferrer">{hms(t0)}</a></div><p>{out}</p></div>')
+            f'data-min target="_blank" rel="noopener noreferrer">{hms(t0)}</a></div><p>{out}</p></div>')
     return "".join(parrafos)
+
+
+PREGUNTA_MIN_PALABRAS = 6   # una intervención de Jordi más corta («claro», «ya», «vale») no sirve de contexto, salvo que sea una pregunta
+PREGUNTA_BREVE = 12         # entre 6 y 11 palabras (y sin «?») suele ser un comentario suelto mientras el invitado habla: solo vale
+PREGUNTA_INMEDIATA = 4      #   si el invitado empieza a responder en ≤ 4 s; si no, se busca la pregunta de verdad, más atrás
+PREGUNTA_MAX_PALABRAS = 45  # si es más larga se queda el final, donde suele estar la pregunta
+PREGUNTA_VENTANA = 600      # a más de 10 minutos de la cita ya no es la pregunta a la que responde
+
+
+def pregunta_previa(m, a):
+    """Lo que Jordi Wild había dicho o preguntado justo antes de la cita: (segundo, texto), o None.
+
+    Es la última intervención de Jordi (segmentos seguidos con voz «J») anterior a la cita, saltando las muy cortas
+    (menos de 6 palabras sin «?») y las breves que no son la respuesta inmediata (menos de 12 palabras sin «?», con la cita a más de 4 s).
+    Si pasa de PREGUNTA_MAX_PALABRAS se queda el final, empezando en un inicio de frase si hay uno cerca, con «…» delante."""
+    ctx = m["_contexto"]
+    voces, segmentos = ctx["voces"], ctx["segmentos"]
+    if not voces:
+        return None
+    desde = tramo_seguro(m, a)[0]
+    k = desde - 1
+    while True:
+        while k >= 0 and voces[k] != "J":
+            k -= 1
+        if k < 0:
+            return None
+        fin = k
+        while k >= 0 and voces[k] == "J":
+            k -= 1
+        hueco = segmentos[desde]["i"] - segmentos[fin]["f"]
+        if hueco > PREGUNTA_VENTANA:
+            return None
+        palabras = [(w, j) for j in range(k + 1, fin + 1) for w in segmentos[j]["t"].split()]
+        if (palabras[-1][0].endswith("?") or len(palabras) >= PREGUNTA_BREVE
+                or (len(palabras) >= PREGUNTA_MIN_PALABRAS and hueco <= PREGUNTA_INMEDIATA)):
+            break
+    # La separación de voces a veces corta a Jordi a mitad de frase («en determinar qué pasó?»): si su intervención empieza
+    # en minúscula y el segmento anterior no cierra frase, ese segmento es casi seguro el principio de la misma frase.
+    inicio = k + 1
+    for _ in range(2):
+        primera = segmentos[inicio]["t"].strip().lstrip("¿¡«\"'(")
+        previo = segmentos[inicio - 1]["t"].strip() if inicio > 0 else ""
+        if not primera[:1].islower() or not previo or previo[-1] in ".?!…":
+            break
+        inicio -= 1
+    palabras = [(w, j) for j in range(inicio, fin + 1) for w in segmentos[j]["t"].split()]
+    n = len(palabras)
+    corte = 0
+    if n > PREGUNTA_MAX_PALABRAS:
+        corte = n - PREGUNTA_MAX_PALABRAS
+        # inicio de frase (la palabra anterior acaba en . ? ! …) que deje entre 25 y 60 palabras, lo más cerca de 45
+        inicios = [i for i in range(1, n) if palabras[i - 1][0][-1] in ".?!…" and 25 <= n - i <= 60]
+        if inicios:
+            corte = min(inicios, key=lambda i: abs(n - i - PREGUNTA_MAX_PALABRAS))
+    texto = " ".join(w for w, _ in palabras[corte:])
+    a_medias = texto.lstrip("¿¡«\"'(")[:1].islower()  # sigue empezando a mitad de frase: que se note
+    return int(segmentos[palabras[corte][1]]["i"]), ("…" + texto if corte or a_medias else texto)
+
+
+def preguntas_jordi(m):
+    """Escribe web/<slug>/preguntas.json con la pregunta previa de cada afirmación y devuelve cuántas hay.
+
+    Va aparte del HTML de la línea temporal (muchas afirmaciones comparten pregunta y el texto pesaría en cada página) y se
+    pinta con JavaScript. Formato: {"v": vídeo, "p": [[segundo, texto], …], "a": {id de afirmación: posición en "p"}}."""
+    unicas, lugar, por_id = [], {}, {}
+    for a in m["todas"]:
+        q = pregunta_previa(m, a)
+        if q:
+            if q not in lugar:
+                lugar[q] = len(unicas)
+                unicas.append(list(q))
+            por_id[a["_id"]] = lugar[q]
+    ruta = SALIDA / m["slug"] / "preguntas.json"
+    ruta.parent.mkdir(parents=True, exist_ok=True)
+    if unicas:
+        ruta.write_text(json.dumps({"v": m["video"], "p": unicas, "a": por_id}, ensure_ascii=False, separators=(",", ":")),
+                        encoding="utf-8")
+    elif ruta.exists():
+        ruta.unlink()
+    return len(por_id)
 
 
 def pagina_afirmacion(m, a, entrevistas, anterior, siguiente):
@@ -956,7 +1187,7 @@ def pagina_afirmacion(m, a, entrevistas, anterior, siguiente):
              + (f'Tema {tema["n"]} · {e(tema["titulo"])} › ' if tema else "") + minuto)
 
     cita_html = (f'<blockquote>«{e(cita)}»</blockquote>' if cita else "") + (
-        f'<p class="cita-pie">— {e(m["invitado"])}, <a href="{enlace_video}" target="_blank" '
+        f'<p class="cita-pie">— {e(m["invitado"])}, <a href="{enlace_video}" data-min target="_blank" '
         f'rel="noopener noreferrer">{minuto}</a></p>')
     por_que = ""
     if a.get("_resumen"):
@@ -1472,9 +1703,9 @@ def main():
     hechas = [m for m in entrevistas if m.get("publicar")]
     SALIDA.mkdir(exist_ok=True)
     for m in hechas:
+        preparar_contexto(m)
         pagina_entrevista(m, entrevistas)
         pagina_transcripcion(m, entrevistas)
-        preparar_contexto(m)
         for n, a in enumerate(m["todas"]):
             pagina_afirmacion(m, a, entrevistas,
                               m["todas"][n - 1] if n > 0 else None,
@@ -1823,6 +2054,36 @@ CSS_MENU += """
 @media (prefers-reduced-motion:reduce) {
   .cabeza h1, .titular h1, .cabeza .entrada, .portada .intro, .cabeza .tu, .portada .cifras, .tarjetas .entrevista, .retrato, .retrato .insignia, .barra-reparto { animation:none !important; } }
 """
+CSS_MENU += """
+/* ── Reproductor de vídeo: panel fijo abajo a la derecha (400 px, 16:9) en escritorio y a todo el ancho abajo en móvil.
+   El panel y su iframe solo existen tras pulsar un minuto. --repro-h (su alto) lo pone el script y aparta los botones flotantes. */
+.repro { position:fixed; right:calc(16px + env(safe-area-inset-right)); bottom:calc(16px + env(safe-area-inset-bottom)); z-index:46;
+  width:min(400px, calc(100vw - 32px)); background:var(--fondo); color:var(--tinta); border:2px solid var(--tinta);
+  border-radius:var(--r-caja); box-shadow:var(--flota); overflow:hidden; animation:repro-sube .22s ease-out; }
+@keyframes repro-sube { from { opacity:0; transform:translateY(14px); } }
+.repro:focus-visible { outline:3px solid var(--tinta); outline-offset:3px; }
+.repro-barra { display:flex; align-items:center; gap:2px; min-height:46px; padding:4px 5px 4px 13px; border-bottom:2px solid var(--tinta); }
+.repro.min .repro-barra { border-bottom:0; }
+.repro-t { flex:1; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font-size:13px; font-weight:700; font-variant-numeric:tabular-nums; }
+.repro-yt { flex:none; display:inline-flex; align-items:center; gap:5px; min-height:38px; padding:0 8px; font-size:13px; font-weight:600; white-space:nowrap; color:var(--tinta); }
+.repro-yt svg, .repro button svg { display:block; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+.repro-yt svg { width:14px; height:14px; }
+.repro button { flex:none; display:grid; place-items:center; width:38px; height:38px; padding:0; cursor:pointer; line-height:0; font-size:0;
+  color:var(--tinta); background:var(--fondo); border:0; border-radius:50%; }
+.repro button svg { width:19px; height:19px; stroke-width:2.2; }
+.repro button:hover, .repro button:focus-visible { background:var(--tinta); color:var(--fondo); }
+.repro-yt:hover { background:var(--tinta); color:var(--fondo); text-decoration:none; border-radius:var(--r-boton); }
+.repro-video { display:flex; justify-content:center; background:#000; }
+.repro-video iframe { display:block; border:0; width:min(100%, calc(45vh * 16 / 9)); width:min(100%, calc(45dvh * 16 / 9)); height:auto; aspect-ratio:16 / 9; }
+.repro.min .repro-video { display:none; }
+html.con-repro .arriba { bottom:calc(var(--repro-h, 0px) + 28px + env(safe-area-inset-bottom)); }
+@media (max-width:760px) {
+  .repro { left:0; right:0; bottom:0; width:auto; padding-bottom:env(safe-area-inset-bottom); border-width:2px 0 0; border-radius:var(--r-caja) var(--r-caja) 0 0; }
+  html.con-repro body { padding-bottom:var(--repro-h, 0px); }
+  html.con-repro .fab, html.con-repro .arriba { bottom:calc(var(--repro-h, 0px) + 12px); }
+  html.con-repro .aviso { bottom:calc(var(--repro-h, 0px) + 16px); }
+  html.con-repro .fab-panel { max-height:calc(100dvh - var(--menu, 48px) - 100px - var(--repro-h, 0px)); } }
+"""
 CSS_MENU = (CSS_MENU.replace("@@CLARO@@", _CLARO).replace("@@OSCURO@@", _OSCURO)
             .replace("@@CLASES_TONO@@", "\n".join(f"[data-v={k}], .tono-{k} {{ --tono:var(--v-{k}); }}" for k in ORDEN)))
 
@@ -1997,6 +2258,7 @@ main ul { padding-left:22px; } main li { margin:4px 0; }
 
 <h2 id="financiacion">Financiación</h2>
 <p>Esta web no tiene financiación ni apoyo de nadie. Pablo paga los costes, que son sus suscripciones de IA, y la web está alojada en el plan gratuito de Vercel. @@ANALITICA@@
+<p>Los vídeos de las entrevistas se reproducen con el reproductor de YouTube (youtube-nocookie.com), que solo se carga cuando pulsas un minuto y puede mostrar su propia publicidad. A partir de ahí se aplica la <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">política de privacidad de Google</a>.</p>
 
 <h2 id="como">Cómo se hace</h2>
 <ul>
@@ -2510,6 +2772,7 @@ img.cara { border:0; background:var(--claro); }
 </div>
 </main>
 <footer class="pie-solo"><div class="ancho">@@PIE@@</div></footer>
+@@REPRODUCTOR@@
 <script>
 const botones = document.querySelectorAll("#filtros button[data-v]");
 const todas = document.querySelector("#filtros [data-todas]"), soloB = document.querySelector("#filtros [data-solo]");
@@ -2725,6 +2988,18 @@ footer .leyenda-f { margin-bottom:34px; max-width:820px; }
   .hito:not([data-v=falso]):not([data-v=enganoso]):hover .panel { border-color:var(--tono); }
   .hito:hover .minuto { text-decoration-thickness:2px; } }
 .copiar.hecho { background:var(--tinta); color:var(--fondo); }
+/* lo que había dicho Jordi justo antes de la cita (lo pinta el script desde preguntas.json): más pequeño y gris, como sus intervenciones
+   en la transcripción. En escritorio va en la columna de la cita, debajo del minuto; en móvil, dentro de la tarjeta, encima de la cita. */
+.pregunta { margin:12px 0 14px; color:var(--suave); font:14px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; }
+.pregunta-cab { display:flex; align-items:center; gap:7px; margin:0 0 4px; font-size:12.5px; font-weight:700; }
+.dicho .pregunta-cab { justify-content:flex-end; }
+.pregunta .cara { width:22px; height:22px; flex:none; display:grid; place-items:center; border:1.5px solid currentColor; border-radius:50%;
+  font-size:8.5px; font-weight:700; letter-spacing:.02em; }
+.pregunta .min-p { color:var(--gris); font-weight:600; font-variant-numeric:tabular-nums; }
+.pregunta .min-p:hover { background:var(--tinta); color:var(--fondo); text-decoration:none; }
+.pregunta-txt { margin:0; text-wrap:pretty; }
+.panel .pregunta { display:none; }
+@media (max-width:860px) { .dicho .pregunta { display:none; } .panel .pregunta { display:block; margin:0 0 12px; } }
 @@CSS_MENU@@
 </style>
 </head>
@@ -2762,6 +3037,7 @@ footer .leyenda-f { margin-bottom:34px; max-width:820px; }
   </div>
 @@PIE@@
 </div></footer>
+@@REPRODUCTOR@@
 <script>
 const activos = new Set(["falso", "enganoso"]);
 const botones = document.querySelectorAll("#filtros button[data-v]");
@@ -2812,6 +3088,7 @@ function irAlAncla() {
 }
 pintar(); irAlAncla(); marcarTema();
 addEventListener("hashchange", irAlAncla);
+@@PREGUNTAS@@
 document.addEventListener("click", ev => {
   const b = ev.target.closest(".copiar");
   if (!b) return;
@@ -2942,6 +3219,7 @@ footer { border-top:3px solid var(--tinta); margin-top:48px; padding:24px 0 72px
 <nav class="vecinas" aria-label="Afirmaciones de la misma entrevista">@@ANTERIOR@@@@SIGUIENTE@@</nav>
 </main>
 <footer class="pie-solo"><div class="ancho">@@PIE@@</div></footer>
+@@REPRODUCTOR@@
 <script>
 document.querySelector("[data-copiar]").addEventListener("click", ev => copiarTexto(ev.currentTarget.dataset.enlace, "Enlace copiado."));
 </script>

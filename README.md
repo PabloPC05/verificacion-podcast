@@ -69,7 +69,7 @@ Ingeniería Informática de la Universidad Complutense de Madrid. No milita ni h
 trabajado ni colaborado con ningún partido, ni con Jordi Wild, ni con The Wild Project; nadie le ha encargado esto, y
 The Wild Project y Jordi Wild no participan en la web ni la respaldan. No tiene financiación ni apoyo de nadie: paga
 los costes (sus suscripciones de IA) y la web está en el plan gratuito de Vercel, sin publicidad. Las visitas
-se cuentan con Umami, que no usa cookies y, según su documentación, no recoge datos personales. Más detalle en https://verificacion-podcast.vercel.app/quien.
+se cuentan con Umami, que no usa cookies y, según su documentación, no recoge datos personales. Los vídeos se reproducen con el reproductor de YouTube (youtube-nocookie.com), que solo se carga al pulsar un minuto; a partir de ahí se aplica la política de privacidad de Google. Más detalle en https://verificacion-podcast.vercel.app/quien.
 
 ## Corregir un error o contribuir
 

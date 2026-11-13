@@ -9,7 +9,7 @@
 <script>
 document.addEventListener("click", function (ev) {
   var a = ev.target.closest && ev.target.closest("a[href]");
-  if (!a || !window.umami) return;
+  if (!a || !window.umami || ev.defaultPrevented) return;  // si otro script ya gestionó el clic (el reproductor), no es una salida a otro dominio
   try {
     var u = new URL(a.href, location.href), desde = location.pathname;
     if (u.protocol !== "http:" && u.protocol !== "https:") return;
@@ -345,6 +345,35 @@ select { cursor:pointer; } select:hover { box-shadow:inset 0 0 0 1px var(--tinta
 @media (prefers-reduced-motion:reduce) {
   .cabeza h1, .titular h1, .cabeza .entrada, .portada .intro, .cabeza .tu, .portada .cifras, .tarjetas .entrevista, .retrato, .retrato .insignia, .barra-reparto { animation:none !important; } }
 
+/* ── Reproductor de vídeo: panel fijo abajo a la derecha (400 px, 16:9) en escritorio y a todo el ancho abajo en móvil.
+   El panel y su iframe solo existen tras pulsar un minuto. --repro-h (su alto) lo pone el script y aparta los botones flotantes. */
+.repro { position:fixed; right:calc(16px + env(safe-area-inset-right)); bottom:calc(16px + env(safe-area-inset-bottom)); z-index:46;
+  width:min(400px, calc(100vw - 32px)); background:var(--fondo); color:var(--tinta); border:2px solid var(--tinta);
+  border-radius:var(--r-caja); box-shadow:var(--flota); overflow:hidden; animation:repro-sube .22s ease-out; }
+@keyframes repro-sube { from { opacity:0; transform:translateY(14px); } }
+.repro:focus-visible { outline:3px solid var(--tinta); outline-offset:3px; }
+.repro-barra { display:flex; align-items:center; gap:2px; min-height:46px; padding:4px 5px 4px 13px; border-bottom:2px solid var(--tinta); }
+.repro.min .repro-barra { border-bottom:0; }
+.repro-t { flex:1; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font-size:13px; font-weight:700; font-variant-numeric:tabular-nums; }
+.repro-yt { flex:none; display:inline-flex; align-items:center; gap:5px; min-height:38px; padding:0 8px; font-size:13px; font-weight:600; white-space:nowrap; color:var(--tinta); }
+.repro-yt svg, .repro button svg { display:block; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+.repro-yt svg { width:14px; height:14px; }
+.repro button { flex:none; display:grid; place-items:center; width:38px; height:38px; padding:0; cursor:pointer; line-height:0; font-size:0;
+  color:var(--tinta); background:var(--fondo); border:0; border-radius:50%; }
+.repro button svg { width:19px; height:19px; stroke-width:2.2; }
+.repro button:hover, .repro button:focus-visible { background:var(--tinta); color:var(--fondo); }
+.repro-yt:hover { background:var(--tinta); color:var(--fondo); text-decoration:none; border-radius:var(--r-boton); }
+.repro-video { display:flex; justify-content:center; background:#000; }
+.repro-video iframe { display:block; border:0; width:min(100%, calc(45vh * 16 / 9)); width:min(100%, calc(45dvh * 16 / 9)); height:auto; aspect-ratio:16 / 9; }
+.repro.min .repro-video { display:none; }
+html.con-repro .arriba { bottom:calc(var(--repro-h, 0px) + 28px + env(safe-area-inset-bottom)); }
+@media (max-width:760px) {
+  .repro { left:0; right:0; bottom:0; width:auto; padding-bottom:env(safe-area-inset-bottom); border-width:2px 0 0; border-radius:var(--r-caja) var(--r-caja) 0 0; }
+  html.con-repro body { padding-bottom:var(--repro-h, 0px); }
+  html.con-repro .fab, html.con-repro .arriba { bottom:calc(var(--repro-h, 0px) + 12px); }
+  html.con-repro .aviso { bottom:calc(var(--repro-h, 0px) + 16px); }
+  html.con-repro .fab-panel { max-height:calc(100dvh - var(--menu, 48px) - 100px - var(--repro-h, 0px)); } }
+
 </style>
 </head>
 <body>
@@ -433,10 +462,10 @@ etiquetarModo();
 <nav class="migas" aria-label="Ruta"><a href="/sanchez">Pedro Sánchez</a> › Tema 9 · Vivienda, alquileres y acceso de los jóvenes a una casa › 1:26:28</nav>
 <p class="veredicto" data-v="falso">Falso</p>
 <h1>Durante los años de gobierno de Sánchez se han construido en torno a un millón de viviendas, de las que el 13% (más de 150.000) han sido protegidas.</h1>
-<section class="seccion"><h2>Lo que dijo</h2><blockquote>«durante estos años de gobierno, el 13% de la vivienda que se ha construido en nuestro país se han construido en torno a un millón de viviendas, el 13% han sido viviendas protegidas, más de 150.000 viviendas.»</blockquote><p class="cita-pie">— Pedro Sánchez, <a href="https://www.youtube.com/watch?v=mStOFBvToUI&t=5188s" target="_blank" rel="noopener noreferrer">1:26:28</a></p></section>
+<section class="seccion"><h2>Lo que dijo</h2><blockquote>«durante estos años de gobierno, el 13% de la vivienda que se ha construido en nuestro país se han construido en torno a un millón de viviendas, el 13% han sido viviendas protegidas, más de 150.000 viviendas.»</blockquote><p class="cita-pie">— Pedro Sánchez, <a href="https://www.youtube.com/watch?v=mStOFBvToUI&t=5188s" data-min target="_blank" rel="noopener noreferrer">1:26:28</a></p></section>
 <section class="seccion"><h2>Por qué</h2><p class="resumen">Se terminaron entre 634.537 y 726.126 viviendas según la fuente, no un millón, y las protegidas fueron unas 74.000-78.735, nunca más de 150.000; el 13% sí encaja.</p><p class="explicacion">Según el Observatorio de Vivienda y Suelo (Ministerio de Vivienda), entre 2018 y el primer trimestre de 2026 se terminaron 722.307 viviendas (Newtral); entre 2019 y 2025, 634.537 (The Objective); desde junio de 2018, 726.126 (El Debate). El millón solo se alcanza contando desde enero de 2013, es decir, incluyendo años de Rajoy. Las protegidas terminadas son unas 74.000 (11,6%) en 2019-2025 según The Objective y 78.735 en 2018-2025 según Electomanía con datos del Ministerio, nunca más de 150.000; el porcentaje del 13% sí queda en el rango 11,6-14,2%. Medidas en viviendas iniciadas la cifra sería mayor, pero no he podido comprobar esa serie y Sánchez habló de viviendas «construidas». Sánchez ya hizo esta afirmación en La Revuelta (22/10/2026), con los mismos cruces de datos.</p><p class="confianza">Confianza: <b>alta</b></p></section>
 <section class="seccion"><h2>Fuentes</h2><ol class="fuentes"><li><a href="https://www.newtral.es/sanchez-la-revuelta-verificaciones/20261023/" target="_blank" rel="noopener noreferrer">Newtral: De la vivienda al empleo, los datos de Sánchez en La Revuelta (23/10/2026)</a> <span>newtral.es</span></li><li><a href="https://theobjective.com/economia/2026-10-23/mentiras-pedro-sanchez-vivienda-la-revuelta/" target="_blank" rel="noopener noreferrer">The Objective: Las mentiras de Pedro Sánchez sobre vivienda en La Revuelta (23/10/2026)</a> <span>theobjective.com</span></li><li><a href="https://www.eldebate.com/economia/20261023/truco-sanchez-presumir-haber-construido-millon-casas-atribuirse-viviendas-rajoy_473104.html" target="_blank" rel="noopener noreferrer">El Debate: El truco de Sánchez para presumir de haber construido «un millón» de casas (23/10/2026)</a> <span>eldebate.com</span></li><li><a href="https://electomania.es/viviendas-de-proteccion-oficial-terminadas-por-cada-gobierno-desde-1981/" target="_blank" rel="noopener noreferrer">Electomanía: viviendas de protección oficial terminadas por cada Gobierno desde 1981</a> <span>electomania.es</span></li></ol></section>
-<section class="seccion"><h2>Contexto en la entrevista</h2><div class="contexto"><div class="turno" data-voz="G"><div class="cab-turno"><div class="quien"><img class="cara" src="/fotos/sanchez.jpg" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="nom"><b>Pedro Sánchez</b><small>PSOE</small></span></div><a class="minuto" href="https://www.youtube.com/watch?v=mStOFBvToUI&t=5166s" target="_blank" rel="noopener noreferrer">1:26:06</a></div><p>no es solamente una cuestión de oferta, es una cuestión también de que mucha de esa vivienda que se está poniendo al alquiler en Málaga tiene que ver con los apartamentos turísticos, con la Airbnb, etcétera, etcétera, etcétera. Por tanto, hombre, aquellos que dicen hay que construir más vivienda, yo digo, hombre, habéis descubierto América. Pero no solamente tenemos que construir más vivienda, por cierto, más vivienda protegida. <mark>Para hacerte una idea, durante estos años de gobierno, el 13% de la vivienda que se ha construido en nuestro país se han construido en torno a un millón de viviendas, el 13% han sido viviendas protegidas, más de 150.000 viviendas. Tenemos que construir más vivienda protegida. Y en segundo lugar, lo que tenemos que hacer es regular el mercado de la vivienda. ¿Eso qué significa? Pues regular, por ejemplo, el alquiler de habitaciones, los alojamientos temporales, el incentivar desde el punto de vista fiscal el control de los precios del alquiler por parte de los pequeños propietarios y también la estabilidad de los contratos de alquiler a los inquilinos.</mark></p></div><div class="turno" data-voz="J"><div class="cab-turno"><div class="quien"><span class="cara">JW</span><span class="nom"><b>Jordi Wild</b><small>The Wild Project</small></span></div><a class="minuto" href="https://www.youtube.com/watch?v=mStOFBvToUI&t=5225s" target="_blank" rel="noopener noreferrer">1:27:05</a></div><p>¿Pero en estos ocho años creéis que habéis hecho suficiente como para que la situación de la vivienda en España no sea crítica?</p></div><div class="turno" data-voz="G"><div class="cab-turno"><div class="quien"><img class="cara" src="/fotos/sanchez.jpg" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="nom"><b>Pedro Sánchez</b><small>PSOE</small></span></div><a class="minuto" href="https://www.youtube.com/watch?v=mStOFBvToUI&t=5230s" target="_blank" rel="noopener noreferrer">1:27:10</a></div><p>Hemos sentado las bases, yo creo que de una nueva política, en la que no solamente estamos favoreciendo la construcción de vivienda, particularmente de la vivienda protegida.</p></div><div class="turno" data-voz="J"><div class="cab-turno"><div class="quien"><span class="cara">JW</span><span class="nom"><b>Jordi Wild</b><small>The Wild Project</small></span></div><a class="minuto" href="https://www.youtube.com/watch?v=mStOFBvToUI&t=5238s" target="_blank" rel="noopener noreferrer">1:27:18</a></div><p>Pero la gente no quiere bases, quiere realidades, porque hoy en día se está volviendo cada vez más imposible el independizarte.</p></div><div class="turno" data-voz="G"><div class="cab-turno"><div class="quien"><img class="cara" src="/fotos/sanchez.jpg" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="nom"><b>Pedro Sánchez</b><small>PSOE</small></span></div><a class="minuto" href="https://www.youtube.com/watch?v=mStOFBvToUI&t=5245s" target="_blank" rel="noopener noreferrer">1:27:25</a></div><p>Claro, fíjate, y además lo comparto.</p></div></div><p class="mas"><a href="/sanchez/transcripcion#tema-9">Leer la transcripción completa</a></p></section>
+<section class="seccion"><h2>Contexto en la entrevista</h2><div class="contexto"><div class="turno" data-voz="G"><div class="cab-turno"><div class="quien"><img class="cara" src="/fotos/sanchez.jpg" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="nom"><b>Pedro Sánchez</b><small>PSOE</small></span></div><a class="minuto" href="https://www.youtube.com/watch?v=mStOFBvToUI&t=5166s" data-min target="_blank" rel="noopener noreferrer">1:26:06</a></div><p>no es solamente una cuestión de oferta, es una cuestión también de que mucha de esa vivienda que se está poniendo al alquiler en Málaga tiene que ver con los apartamentos turísticos, con la Airbnb, etcétera, etcétera, etcétera. Por tanto, hombre, aquellos que dicen hay que construir más vivienda, yo digo, hombre, habéis descubierto América. Pero no solamente tenemos que construir más vivienda, por cierto, más vivienda protegida. <mark>Para hacerte una idea, durante estos años de gobierno, el 13% de la vivienda que se ha construido en nuestro país se han construido en torno a un millón de viviendas, el 13% han sido viviendas protegidas, más de 150.000 viviendas. Tenemos que construir más vivienda protegida. Y en segundo lugar, lo que tenemos que hacer es regular el mercado de la vivienda. ¿Eso qué significa? Pues regular, por ejemplo, el alquiler de habitaciones, los alojamientos temporales, el incentivar desde el punto de vista fiscal el control de los precios del alquiler por parte de los pequeños propietarios y también la estabilidad de los contratos de alquiler a los inquilinos.</mark></p></div><div class="turno" data-voz="J"><div class="cab-turno"><div class="quien"><span class="cara">JW</span><span class="nom"><b>Jordi Wild</b><small>The Wild Project</small></span></div><a class="minuto" href="https://www.youtube.com/watch?v=mStOFBvToUI&t=5225s" data-min target="_blank" rel="noopener noreferrer">1:27:05</a></div><p>¿Pero en estos ocho años creéis que habéis hecho suficiente como para que la situación de la vivienda en España no sea crítica?</p></div><div class="turno" data-voz="G"><div class="cab-turno"><div class="quien"><img class="cara" src="/fotos/sanchez.jpg" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="nom"><b>Pedro Sánchez</b><small>PSOE</small></span></div><a class="minuto" href="https://www.youtube.com/watch?v=mStOFBvToUI&t=5230s" data-min target="_blank" rel="noopener noreferrer">1:27:10</a></div><p>Hemos sentado las bases, yo creo que de una nueva política, en la que no solamente estamos favoreciendo la construcción de vivienda, particularmente de la vivienda protegida.</p></div><div class="turno" data-voz="J"><div class="cab-turno"><div class="quien"><span class="cara">JW</span><span class="nom"><b>Jordi Wild</b><small>The Wild Project</small></span></div><a class="minuto" href="https://www.youtube.com/watch?v=mStOFBvToUI&t=5238s" data-min target="_blank" rel="noopener noreferrer">1:27:18</a></div><p>Pero la gente no quiere bases, quiere realidades, porque hoy en día se está volviendo cada vez más imposible el independizarte.</p></div><div class="turno" data-voz="G"><div class="cab-turno"><div class="quien"><img class="cara" src="/fotos/sanchez.jpg" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="nom"><b>Pedro Sánchez</b><small>PSOE</small></span></div><a class="minuto" href="https://www.youtube.com/watch?v=mStOFBvToUI&t=5245s" data-min target="_blank" rel="noopener noreferrer">1:27:25</a></div><p>Claro, fíjate, y además lo comparto.</p></div></div><p class="mas"><a href="/sanchez/transcripcion#tema-9">Leer la transcripción completa</a></p></section>
 <div class="acciones">
 <a class="btn" href="/sanchez#m5188">Ver en la línea temporal</a>
 <button class="btn" type="button" data-copiar data-enlace="https://verificacion-podcast.vercel.app/sanchez/m5188">Copiar enlace</button>
@@ -449,6 +478,114 @@ etiquetarModo();
 <nav class="vecinas" aria-label="Afirmaciones de la misma entrevista"><a class="vecina ant" href="/sanchez/m5164" rel="prev"><span class="rot-v">← Anterior</span><span class="tiempo">1:26:04 · <b data-v="enganoso">Engañoso</b></span><small>El mayor precio de la vivienda en Málaga frente a Manresa se explica, en buena…</small></a><a class="vecina sig" href="/sanchez/m5248" rel="next"><span class="rot-v">Siguiente →</span><span class="tiempo">1:27:28 · <b data-v="mayormente_verdadero">Casi cierto</b></span><small>La ley estatal de vivienda permite a comunidades autónomas y ayuntamientos…</small></a></nav>
 </main>
 <footer class="pie-solo"><div class="ancho"><p class="pie-quien"><a href="/quien">Proyecto personal e independiente de Pablo Pardo Cotos, sin relación con The Wild Project ni con ningún partido.</a></p></div></footer>
+<script>
+function hora(s) { return Math.floor(s / 3600) + ":" + String(Math.floor(s % 3600 / 60)).padStart(2, "0") + ":" + String(s % 60).padStart(2, "0"); }
+(() => {
+  const ORIGEN = "https://www.youtube-nocookie.com";
+  let panel, visor, marco, etiqueta, enlace, botonMin, estado, abridor;
+  let video = "", listo = false, minimizado = false, ultimo = null, latido = 0, vigia = 0;
+  const icono = d => '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="' + d + '"/></svg>';
+  const medir = () => document.documentElement.style.setProperty("--repro-h", (panel && !panel.hidden ? panel.offsetHeight : 0) + "px");
+
+  function construir() {
+    panel = document.createElement("section");
+    panel.className = "repro"; panel.setAttribute("role", "region"); panel.setAttribute("aria-label", "Reproductor de vídeo");
+    panel.tabIndex = -1; panel.hidden = true;
+    panel.innerHTML = '<div class="repro-barra"><span class="repro-t"></span>'
+      + '<a class="repro-yt" target="_blank" rel="noopener noreferrer">Abrir en YouTube ' + icono("M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5") + '</a>'
+      + '<button class="repro-min" type="button" aria-expanded="true"></button>'
+      + '<button class="repro-x" type="button" aria-label="Cerrar el reproductor" title="Cerrar (Esc)">' + icono("M6 6l12 12M18 6L6 18") + '</button></div>'
+      + '<div class="repro-video"></div><p class="sr" role="status"></p>';
+    visor = panel.querySelector(".repro-video"); etiqueta = panel.querySelector(".repro-t"); enlace = panel.querySelector(".repro-yt");
+    botonMin = panel.querySelector(".repro-min"); estado = panel.querySelector("[role=status]");
+    botonMin.onclick = () => minimizar(!minimizado);
+    panel.querySelector(".repro-x").onclick = cerrar;
+    enlace.addEventListener("click", () => orden("pauseVideo"));
+    document.body.append(panel);
+    if (window.ResizeObserver) new ResizeObserver(medir).observe(panel);
+    addEventListener("resize", medir);
+  }
+  function enviar(obj) { try { marco.contentWindow.postMessage(JSON.stringify(Object.assign({ id: 1, channel: "widget" }, obj)), ORIGEN); } catch (e) {} }
+  const orden = (func, args) => { if (marco && listo) enviar({ event: "command", func: func, args: args || [] }); };
+
+  // Con enablejsapi=1 el reproductor contesta cuando se le avisa de que se le escucha; mientras no conteste no se le dan órdenes
+  function saludar() {
+    clearInterval(latido); let n = 0;
+    const hola = () => { if (listo || ++n > 40) clearInterval(latido); else enviar({ event: "listening" }); };
+    latido = setInterval(hola, 250); hola();
+  }
+  addEventListener("message", ev => {
+    if (!marco || ev.source !== marco.contentWindow || ev.origin !== ORIGEN) return;
+    let d; try { d = JSON.parse(ev.data); } catch (e) { return; }
+    if (!d || typeof d !== "object") return;
+    if (d.event === "onReady" || d.event === "initialDelivery" || d.event === "infoDelivery") listo = true;
+    if (d.info && typeof d.info.currentTime === "number") ultimo = d.info.currentTime;
+  });
+
+  function cargar(v, s) {
+    video = v; listo = false; ultimo = null; clearTimeout(vigia);
+    if (!marco) {
+      marco = document.createElement("iframe");
+      marco.title = "Vídeo de la entrevista (YouTube)";
+      marco.allow = "autoplay; encrypted-media; picture-in-picture; fullscreen"; marco.allowFullscreen = true;
+      marco.referrerPolicy = "strict-origin-when-cross-origin";
+      marco.addEventListener("load", saludar);
+      visor.append(marco);
+    }
+    marco.src = ORIGEN + "/embed/" + v + "?start=" + s + "&autoplay=1&enablejsapi=1&rel=0&playsinline=1&origin=" + encodeURIComponent(location.origin);
+  }
+  function saltar(s) {
+    orden("seekTo", [s, true]); orden("playVideo");
+    ultimo = null; clearTimeout(vigia);
+    vigia = setTimeout(() => { if (marco && (ultimo === null || Math.abs(ultimo - s) > 30)) cargar(video, s); }, 3000);
+  }
+  function minimizar(si) {
+    minimizado = si; panel.classList.toggle("min", si);
+    botonMin.setAttribute("aria-expanded", !si);
+    const t = si ? "Ampliar el reproductor" : "Minimizar el reproductor (pausa el vídeo)";
+    botonMin.setAttribute("aria-label", t); botonMin.title = t;
+    botonMin.innerHTML = icono(si ? "M6 15l6-6 6 6" : "M6 9l6 6 6-6");
+    orden(si ? "pauseVideo" : "playVideo"); medir();
+  }
+  function abrir(v, s, a, teclado) {
+    if (!panel) construir();
+    const nuevo = panel.hidden; abridor = a;
+    panel.hidden = false; document.documentElement.classList.add("con-repro");
+    if (nuevo) minimizar(false);
+    else if (minimizado) minimizar(false);
+    enlace.href = "https://www.youtube.com/watch?v=" + v + "&t=" + s + "s";
+    etiqueta.textContent = "Desde " + hora(s);
+    estado.textContent = "Reproduciendo el vídeo desde " + hora(s);
+    if (marco && v === video && listo) saltar(s); else cargar(v, s);
+    medir();
+    if (teclado) panel.focus({ preventScroll: true });
+  }
+  function cerrar() {
+    const dentro = panel.contains(document.activeElement);
+    clearInterval(latido); clearTimeout(vigia);
+    if (marco) { marco.remove(); marco = null; }
+    video = ""; listo = false; panel.hidden = true; document.documentElement.classList.remove("con-repro"); medir();
+    if (dentro && abridor && abridor.isConnected) abridor.focus({ preventScroll: true });
+  }
+
+  // En captura sobre window: se adelanta al contador de enlaces externos de estadísticas, que ve el clic ya gestionado (defaultPrevented)
+  addEventListener("click", ev => {
+    const a = ev.target.closest && ev.target.closest("a[data-min]");
+    if (!a || ev.defaultPrevented || ev.button !== 0 || ev.ctrlKey || ev.metaKey || ev.shiftKey || ev.altKey) return;
+    let u; try { u = new URL(a.href); } catch (e) { return; }
+    const v = u.searchParams.get("v"), s = parseInt(u.searchParams.get("t"), 10);
+    if (!/^[\w-]{11}$/.test(v || "") || !(s >= 0)) return;
+    ev.preventDefault();
+    if (window.umami) umami.track("reproducir", { pagina: location.pathname, segundo: s });
+    abrir(v, s, a, ev.detail === 0);
+  }, true);
+  // Esc cierra el reproductor, salvo que haya un menú o la leyenda abiertos: a esos les toca primero
+  addEventListener("keydown", ev => {
+    if (ev.key !== "Escape" || !panel || panel.hidden || document.querySelector("details.desp[open], .fab.abierto")) return;
+    cerrar();
+  }, true);
+})();
+</script>
 <script>
 document.querySelector("[data-copiar]").addEventListener("click", ev => copiarTexto(ev.currentTarget.dataset.enlace, "Enlace copiado."));
 </script>

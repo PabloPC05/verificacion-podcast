@@ -8,11 +8,12 @@ from urllib.parse import urlparse
 #   descarga        ficheros .csv / .json o enlaces con atributo download
 #   enlace-externo  cualquier enlace a otro dominio (vídeos, fuentes, GitHub…)
 #   enlace-interno  enlaces dentro de la web, con la página de origen
+#   reproducir      lo registra el reproductor de vídeo de build.py (no este script) al pulsar un minuto: la página y el segundo
 # Todos llevan la propiedad «url», con la que Umami los agrupa en su sección de eventos.
 _CLICS = """<script>
 document.addEventListener("click", function (ev) {
   var a = ev.target.closest && ev.target.closest("a[href]");
-  if (!a || !window.umami) return;
+  if (!a || !window.umami || ev.defaultPrevented) return;  // si otro script ya gestionó el clic (el reproductor), no es una salida a otro dominio
   try {
     var u = new URL(a.href, location.href), desde = location.pathname;
     if (u.protocol !== "http:" && u.protocol !== "https:") return;
