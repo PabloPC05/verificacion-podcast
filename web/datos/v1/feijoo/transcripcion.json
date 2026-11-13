@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-13T21:47:57+01:00",
+ "generado": "2026-11-13T22:56:17+01:00",
  "aviso": "Verificación asistida por IA, sin revisión de un equipo de periodistas. «falso» no implica intención de mentir. Contrasta siempre con las fuentes enlazadas.",
  "veredictos": {
   "verdadero": "Los datos lo confirman.",
@@ -191,7 +191,7 @@
    }
   ]
  },
- "nota": "Transcripción automática (Whisper), que puede tener errores en nombres y cifras. El hablante de cada segmento sale de un reconocimiento automático de voces (acierto medido del 97 %; falla sobre todo en frases muy cortas).",
+ "nota": "Transcripción automática (Whisper), que puede tener errores en nombres y cifras. Los nombres mal transcritos más claros se corrigen con un glosario público (https://github.com/PabloPC05/verificacion-podcast/blob/main/entrevistas/glosario.json). El hablante de cada segmento sale de un reconocimiento automático de voces (acierto medido del 97 %; falla sobre todo en frases muy cortas).",
  "segmentos": [
   {
    "inicio_s": 0.0,
@@ -239,7 +239,7 @@
    "inicio_s": 110.88,
    "fin_s": 116.76,
    "hablante": "Jordi Wild",
-   "texto": "Y yo creo que nos lo vamos a pasar bien, incluso mejor de lo que muchos piensan. Alberto Núñez Feijóo en The Wall Project. ¿Qué tal?"
+   "texto": "Y yo creo que nos lo vamos a pasar bien, incluso mejor de lo que muchos piensan. Alberto Núñez Feijóo en The Wild Project. ¿Qué tal?"
   },
   {
    "inicio_s": 116.92,
@@ -6965,7 +6965,7 @@
    "inicio_s": 3844.1,
    "fin_s": 3851.26,
    "hablante": "Jordi Wild",
-   "texto": "que es gravísimo, Ábalos, supuestamente Cerdán, Coldo, etc., tendría que haber dimitido."
+   "texto": "que es gravísimo, Ábalos, supuestamente Cerdán, Koldo, etc., tendría que haber dimitido."
   },
   {
    "inicio_s": 3852.0,
@@ -7337,13 +7337,13 @@
    "inicio_s": 4128.68,
    "fin_s": 4134.48,
    "hablante": "Jordi Wild",
-   "texto": "Ahora que hablamos de Coldo, Ábalos, etcétera, esto es una noticia de hace poquito, pocos días,"
+   "texto": "Ahora que hablamos de Koldo, Ábalos, etcétera, esto es una noticia de hace poquito, pocos días,"
   },
   {
    "inicio_s": 4134.76,
    "fin_s": 4141.06,
    "hablante": "Jordi Wild",
-   "texto": "Cuca Amarra reconoció una reunión del abogado del PP después de que vuestro partido negara esta reunión con Coldo."
+   "texto": "Cuca Amarra reconoció una reunión del abogado del PP después de que vuestro partido negara esta reunión con Koldo."
   },
   {
    "inicio_s": 4142.2,
@@ -7397,13 +7397,13 @@
    "inicio_s": 4191.7,
    "fin_s": 4192.48,
    "hablante": "Jordi Wild",
-   "texto": "¿Y por qué el de Coldo?"
+   "texto": "¿Y por qué el de Koldo?"
   },
   {
    "inicio_s": 4192.98,
    "fin_s": 4196.86,
    "hablante": "Alberto Núñez Feijóo",
-   "texto": "Pues supongo que el de Coldo y el de Aldama y el de..."
+   "texto": "Pues supongo que el de Koldo y el de Aldama y el de..."
   },
   {
    "inicio_s": 4196.86,
@@ -7655,7 +7655,7 @@
    "inicio_s": 4280.46,
    "fin_s": 4282.48,
    "hablante": "Alberto Núñez Feijóo",
-   "texto": "al señor Coldo y hemos tenido"
+   "texto": "al señor Koldo y hemos tenido"
   },
   {
    "inicio_s": 4282.48,
@@ -7697,7 +7697,7 @@
    "inicio_s": 4294.4,
    "fin_s": 4295.52,
    "hablante": "Alberto Núñez Feijóo",
-   "texto": "Coldo. Ah, coño."
+   "texto": "Koldo. Ah, coño."
   },
   {
    "inicio_s": 4296.28,
