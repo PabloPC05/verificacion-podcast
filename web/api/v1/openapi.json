@@ -1,0 +1,119 @@
+{
+ "openapi": "3.1.0",
+ "info": {
+  "title": "Verificación de entrevistas de The Wild Project",
+  "version": "1",
+  "description": "API estática de solo lectura, sin clave y con CORS abierto. Verificación asistida por IA, sin revisión de un equipo de periodistas. «falso» no implica intención de mentir. Contrasta siempre con las fuentes enlazadas."
+ },
+ "servers": [
+  {
+   "url": "https://verificacion-podcast.vercel.app/api/v1"
+  }
+ ],
+ "paths": {
+  "/entrevistas.json": {
+   "get": {
+    "summary": "Lista de entrevistas verificadas, con recuentos por veredicto y por tema",
+    "responses": {
+     "200": {
+      "description": "JSON",
+      "content": {
+       "application/json": {}
+      }
+     }
+    }
+   }
+  },
+  "/afirmaciones.json": {
+   "get": {
+    "summary": "Todas las afirmaciones verificadas de todas las entrevistas",
+    "responses": {
+     "200": {
+      "description": "JSON",
+      "content": {
+       "application/json": {}
+      }
+     }
+    }
+   }
+  },
+  "/{slug}.json": {
+   "get": {
+    "summary": "Afirmaciones verificadas de una entrevista",
+    "responses": {
+     "200": {
+      "description": "JSON",
+      "content": {
+       "application/json": {}
+      }
+     }
+    }
+   },
+   "parameters": [
+    {
+     "name": "slug",
+     "in": "path",
+     "required": true,
+     "schema": {
+      "type": "string",
+      "enum": [
+       "sanchez"
+      ]
+     }
+    }
+   ]
+  },
+  "/{slug}/transcripcion.json": {
+   "get": {
+    "summary": "Transcripción por segmentos con tiempos",
+    "responses": {
+     "200": {
+      "description": "JSON",
+      "content": {
+       "application/json": {}
+      }
+     }
+    }
+   },
+   "parameters": [
+    {
+     "name": "slug",
+     "in": "path",
+     "required": true,
+     "schema": {
+      "type": "string",
+      "enum": [
+       "sanchez"
+      ]
+     }
+    }
+   ]
+  },
+  "/{slug}/transcripcion.txt": {
+   "get": {
+    "summary": "Transcripción en texto plano con marcas [h:mm:ss]",
+    "responses": {
+     "200": {
+      "description": "JSON",
+      "content": {
+       "application/json": {}
+      }
+     }
+    }
+   },
+   "parameters": [
+    {
+     "name": "slug",
+     "in": "path",
+     "required": true,
+     "schema": {
+      "type": "string",
+      "enum": [
+       "sanchez"
+      ]
+     }
+    }
+   ]
+  }
+ }
+}

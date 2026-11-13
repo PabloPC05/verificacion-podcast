@@ -31,6 +31,20 @@ Todo está aquí para que cualquiera pueda revisarlo, discutirlo y corregirlo.
 | Alberto Núñez Feijóo | The Wild Project #392 | En curso |
 | Ada Colau | The Wild Project #391 | En curso |
 
+## API abierta
+
+Todos los datos se publican también como JSON estático, sin clave y con CORS abierto, para que terceros y
+agentes de IA puedan revisar cada veredicto contra sus fuentes. Documentación: https://verificacion-podcast.vercel.app/api
+
+| Qué | Dirección |
+|---|---|
+| Entrevistas, recuentos y temas | `/api/v1/entrevistas.json` |
+| Todas las afirmaciones | `/api/v1/afirmaciones.json` |
+| Afirmaciones de una entrevista | `/api/v1/{slug}.json` |
+| Transcripción con tiempos | `/api/v1/{slug}/transcripcion.json` y `.txt` |
+| OpenAPI 3.1 | `/api/v1/openapi.json` |
+| Guía para modelos de lenguaje | `/llms.txt` |
+
 ## Cómo se ha hecho, en corto
 
 1. El audio se transcribe en local con Whisper (`large-v3-turbo`).

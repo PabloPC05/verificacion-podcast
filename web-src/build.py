@@ -90,7 +90,7 @@ def panel(a):
                if a.get("_resumen") and a.get("explicacion") else "")
     enlace = f"https://www.youtube.com/watch?v={a['_video']}&t={s}s"
     return (
-        f'<li class="hito" data-v="{v}" id="m{s}">'
+        f'<li class="hito" data-v="{v}" id="{a["_id"]}">'
         f'<div class="dicho"><a class="minuto" href="{enlace}" target="_blank" rel="noopener noreferrer" '
         f'title="Abrir el vídeo en este momento">{hms(s)}</a>'
         + (f'<blockquote>«{e(cita)}»</blockquote>' if cita else "") + "</div>"
@@ -132,21 +132,65 @@ PLURAL = {"falso": "Falsas", "enganoso": "Engañosas", "mayormente_verdadero": "
           "verdadero": "Verdaderas", "no_verificable": "No verificables"}
 
 
-def menu(metas, actual=None, temas="", filas=""):
-    """Menú superior fijo: entrevistas, desplegables de temas y transcripciones, y filtros."""
-    enlaces = "".join(
-        (f'<a href="/{e(m["slug"])}"' + (' aria-current="page"' if m["slug"] == actual else "") + f'>{e(m["invitado"])}</a>')
-        if m.get("publicar") else f'<span class="off" title="Verificación en curso">{e(m["invitado"])}</span>'
-        for m in metas)
-    textos = "".join(
-        f'<a href="/{e(m["slug"])}/transcripcion">{e(m["invitado"])}</a>' if m.get("publicar")
-        else f'<span class="off">{e(m["invitado"])} · en curso</span>' for m in metas)
-    return (f'<header class="menu"><div class="ancho"><div class="m1"><a class="sello" href="/" title="Todas las entrevistas">Verificación</a>'
-            f'<nav aria-label="Entrevistas"><span class="rot">Entrevistas</span>{enlaces}</nav>'
-            + (f'<details class="desp"><summary>Temas</summary><div class="lista" id="temas">{temas}</div></details>' if temas else "")
-            + f'<details class="desp"><summary>Transcripciones</summary><div class="lista">{textos}</div></details>'
-            f'<a class="dcha" href="{REPO}" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div>{filas}</div></header>'
-            + JS_MENU)
+BASE = "https://verificacion-podcast.vercel.app"
+DEFINICIONES = {
+    "verdadero": "Los datos lo confirman.",
+    "mayormente_verdadero": "Cierto en lo esencial, con una imprecisión menor.",
+    "enganoso": "Se apoya en algo real pero omite contexto, mezcla periodos o lleva a una conclusión que no se sigue.",
+    "falso": "Los datos lo contradicen. No implica intención de mentir: incluye errores y lapsus.",
+    "no_verificable": "No se encontró prueba pública suficiente, o la búsqueda automática se quedó corta.",
+}
+
+
+def rellenar(plantilla, **valores):
+    for k, v in valores.items():
+        plantilla = plantilla.replace(f"@@{k}@@", str(v))
+    return plantilla
+
+
+def preparar(meta):
+    """Carga una entrevista y reparte sus afirmaciones por temas (capítulos del vídeo)."""
+    carpeta = ENTREVISTAS / meta["slug"]
+    todas = cargar(carpeta, meta)
+    capitulos = json.loads((carpeta / "capitulos.json").read_text(encoding="utf-8"))
+    if not capitulos:
+        capitulos = [{"start_time": 0, "end_time": 10 ** 9, "title": "Entrevista completa"}]
+    vistos = {}
+    for a in todas:
+        n = vistos[a["_t"]] = vistos.get(a["_t"], 0) + 1
+        a["_id"] = f'm{a["_t"]}' if n == 1 else f'm{a["_t"]}-{n}'
+    temas = []
+    for n, c in enumerate(capitulos, 1):
+        ini, fin = int(c["start_time"]), int(c["end_time"])
+        suyas = [a for a in todas if ini <= a["_t"] < fin or (c is capitulos[-1] and a["_t"] >= fin)]
+        for a in suyas:
+            a["_tema"] = n
+        temas.append({"n": n, "titulo": c["title"], "ini": ini, "fin": fin, "suyas": suyas, "total": len(suyas),
+                      "malas": sum(a["veredicto"] in ("falso", "enganoso") for a in suyas)})
+    total = {k: sum(a["veredicto"] == k for a in todas) for k in ORDEN}
+    return dict(meta, carpeta=carpeta, todas=todas, temas=temas, capitulos=capitulos, total=total,
+                suma=len(todas), malas=total["falso"] + total["enganoso"])
+
+
+def menu(entrevistas, actual=None):
+    """Menú superior fijo: un desplegable por candidato (línea temporal, transcripción y temas)."""
+    partes = []
+    for m in entrevistas:
+        if not m.get("publicar"):
+            partes.append(f'<span class="off" title="Verificación en curso">{e(m["invitado"])}</span>')
+            continue
+        s = e(m["slug"])
+        temas = "".join(
+            f'<a href="/{s}#tema-{t["n"]}" data-tema="tema-{t["n"]}"><span>{e(t["titulo"])}</span>'
+            + (f'<b>{t["malas"]}</b>' if t["malas"] else "") + "</a>" for t in m["temas"] if t["total"])
+        partes.append(
+            f'<details class="desp{" actual" if m["slug"] == actual else ""}"><summary>{e(m["invitado"])}</summary><div class="lista">'
+            f'<a class="fuerte" href="/{s}"><span>Línea temporal</span><small>{m["malas"]} falsas o engañosas de {m["suma"]}</small></a>'
+            f'<a class="fuerte" href="/{s}/transcripcion"><span>Transcripción completa</span></a>'
+            f'<p class="rot">Temas</p>{temas}</div></details>')
+    return ('<header class="menu"><div class="ancho"><div class="m1"><a class="sello" href="/" title="Todas las entrevistas">Verificación</a>'
+            + "".join(partes) + '<a class="dcha" href="/api">API</a>'
+            f'<a href="{REPO}" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></div></header>' + JS_MENU)
 
 
 JS_MENU = """<script>
@@ -154,98 +198,188 @@ document.addEventListener("click", ev => document.querySelectorAll("details.desp
   if (!d.contains(ev.target) || ev.target.closest(".lista a")) d.open = false;
 }));
 document.addEventListener("keydown", ev => { if (ev.key === "Escape") document.querySelectorAll("details.desp[open]").forEach(d => d.open = false); });
+const medirMenu = () => document.documentElement.style.setProperty("--menu", document.querySelector(".menu").offsetHeight + "px");
+medirMenu(); addEventListener("resize", medirMenu);
 </script>"""
 
 
-def pagina_entrevista(carpeta, meta, metas):
-    todas = cargar(carpeta, meta)
-    capitulos = json.loads((carpeta / "capitulos.json").read_text(encoding="utf-8"))
-    if not capitulos:
-        capitulos = [{"start_time": 0, "end_time": 10 ** 9, "title": "Entrevista completa"}]
-    total = {k: sum(a["veredicto"] == k for a in todas) for k in ORDEN}
-    filas, temas = [], []
-    for n, c in enumerate(capitulos, 1):
-        ini, fin = int(c["start_time"]), int(c["end_time"])
-        suyas = [a for a in todas if ini <= a["_t"] < fin or (c is capitulos[-1] and a["_t"] >= fin)]
-        malas = sum(a["veredicto"] in ("falso", "enganoso") for a in suyas)
-        temas.append({"n": n, "titulo": c["title"], "malas": malas, "total": len(suyas), "ini": ini})
-        nota = f"{malas} falsas o engañosas" if malas != 1 else "1 falsa o engañosa"
+def filtros(m, extra=""):
+    return ('<div class="filtros"><div class="ancho"><div class="fila" id="filtros"><span class="rot">Filtros</span>'
+            f'<button data-todas aria-pressed="false">Todas <b>{m["suma"]}</b></button>'
+            + "".join(f'<button data-v="{k}" style="--tono:{TONO[k]}" aria-pressed="false"><i></i>{PLURAL[k]} <b>{m["total"][k]}</b></button>'
+                      for k in ORDEN) + extra + "</div></div></div>")
+
+
+def pagina_entrevista(m, entrevistas):
+    filas = []
+    for t in m["temas"]:
+        nota = f'{t["malas"]} falsas o engañosas' if t["malas"] != 1 else "1 falsa o engañosa"
         filas.append(
-            f'<li class="capitulo" id="tema-{n}">'
-            f'<a class="minuto" href="https://www.youtube.com/watch?v={meta["video"]}&t={ini}s" target="_blank" '
-            f'rel="noopener noreferrer">{hms(ini)}</a><span class="marca" aria-hidden="true"></span>'
-            f'<div><h2>{e(c["title"])}</h2><p>{nota} · {len(suyas)} afirmaciones comprobadas</p></div></li>')
-        filas += [panel(a) for a in suyas]
-    malas = total["falso"] + total["enganoso"]
-    f_filtros = ('<div class="fila" id="filtros"><span class="rot">Filtros</span>'
-                 f'<button data-todas aria-pressed="false">Todas <b>{len(todas)}</b></button>'
-                 + "".join(f'<button data-v="{k}" style="--tono:{TONO[k]}" aria-pressed="false"><i></i>{PLURAL[k]} <b>{total[k]}</b></button>'
-                           for k in ORDEN) + "</div>")
-    f_temas = "".join(f'<a href="#tema-{t["n"]}"><span>{e(t["titulo"])}</span>' + (f'<b>{t["malas"]}</b>' if t["malas"] else "") + "</a>"
-                      for t in temas if t["total"])
-    pagina = (PLANTILLA
-              .replace("@@MENU@@", menu(metas, meta["slug"], f_temas, f_filtros)).replace("@@CSS_MENU@@", CSS_MENU)
-              .replace("@@SUMA@@", str(len(todas))).replace("@@MALAS@@", str(malas))
-              .replace("@@FALSAS@@", str(total["falso"])).replace("@@ENGANOSAS@@", str(total["enganoso"]))
-              .replace("@@CASI@@", str(total["mayormente_verdadero"])).replace("@@VERDADERAS@@", str(total["verdadero"]))
-              .replace("@@NV@@", str(total["no_verificable"])).replace("@@FILAS@@", "".join(filas))
-              .replace("@@INVITADO@@", e(meta["invitado"])).replace("@@PROGRAMA@@", e(meta["programa"]))
-              .replace("@@FECHA_VIDEO@@", e(meta["fecha"])).replace("@@DURACION@@", e(meta["duracion"]))
-              .replace("@@FECHA@@", dt.datetime.now().strftime("%d/%m/%Y")).replace("@@VIDEO@@", meta["video"])
-              .replace("@@SLUG@@", meta["slug"]).replace("@@REPO@@", REPO))
-    destino = SALIDA / meta["slug"]
+            f'<li class="capitulo" id="tema-{t["n"]}">'
+            f'<a class="minuto" href="https://www.youtube.com/watch?v={m["video"]}&t={t["ini"]}s" target="_blank" '
+            f'rel="noopener noreferrer">{hms(t["ini"])}</a><span class="marca" aria-hidden="true"></span>'
+            f'<div><h2>{e(t["titulo"])}</h2><p>{nota} · {t["total"]} afirmaciones comprobadas</p></div></li>')
+        filas += [panel(a) for a in t["suyas"]]
+    pagina = rellenar(
+        PLANTILLA, MENU=menu(entrevistas, m["slug"]), CSS_MENU=CSS_MENU, FILTROS=filtros(m), SUMA=m["suma"], MALAS=m["malas"],
+        FALSAS=m["total"]["falso"], ENGANOSAS=m["total"]["enganoso"], CASI=m["total"]["mayormente_verdadero"],
+        VERDADERAS=m["total"]["verdadero"], NV=m["total"]["no_verificable"], FILAS="".join(filas),
+        INVITADO=e(m["invitado"]), PROGRAMA=e(m["programa"]), FECHA_VIDEO=e(m["fecha"]), DURACION=e(m["duracion"]),
+        FECHA=dt.datetime.now().strftime("%d/%m/%Y"), VIDEO=m["video"], SLUG=m["slug"], REPO=REPO)
+    destino = SALIDA / m["slug"]
     destino.mkdir(parents=True, exist_ok=True)
     (destino / "index.html").write_text(pagina, encoding="utf-8")
-    pagina_transcripcion(carpeta, meta, metas, todas, capitulos)
-    print(f'{meta["slug"]}: {len(todas)} afirmaciones · {total}')
-    return dict(meta, total=total, suma=len(todas), malas=malas, temas=temas)
+    print(f'{m["slug"]}: {m["suma"]} afirmaciones · {m["total"]}')
 
 
-def pagina_transcripcion(carpeta, meta, metas, todas, capitulos):
+def pagina_transcripcion(m, entrevistas):
     parrafos = []
-    for linea in (carpeta / "transcripcion.txt").read_text(encoding="utf-8").splitlines():
-        m = re.match(r"\[(\d+:\d\d:\d\d)\]\s*(.*)", linea)
-        if m:
-            parrafos.append((segundos(m.group(1)), m.group(2)))
-    pendientes = list(enumerate(capitulos, 1))
-    cuerpo, indice = [], []
+    for linea in (m["carpeta"] / "transcripcion.txt").read_text(encoding="utf-8").splitlines():
+        r = re.match(r"\[(\d+:\d\d:\d\d)\]\s*(.*)", linea)
+        if r:
+            parrafos.append((segundos(r.group(1)), r.group(2)))
+    pendientes = list(m["temas"])
+    cuerpo = []
     for k, (t, texto) in enumerate(parrafos):
         fin = parrafos[k + 1][0] if k + 1 < len(parrafos) else 10 ** 9
-        while pendientes and int(pendientes[0][1]["start_time"]) < fin:
-            n, c = pendientes.pop(0)
-            cuerpo.append(f'<h2 id="tema-{n}">{e(c["title"])}</h2>')
-            indice.append(f'<a href="#tema-{n}"><span>{e(c["title"])}</span></a>')
+        while pendientes and pendientes[0]["ini"] < fin:
+            tema = pendientes.pop(0)
+            cuerpo.append(f'<h2 id="tema-{tema["n"]}">{e(tema["titulo"])}</h2>')
         marcas = "".join(
-            f'<a class="chip" style="--tono:{TONO[a["veredicto"]]}" href="/{meta["slug"]}#m{a["_t"]}" '
+            f'<a class="chip" data-v="{a["veredicto"]}" style="--tono:{TONO[a["veredicto"]]}" href="/{m["slug"]}#{a["_id"]}" '
             f'title="{e(a.get("afirmacion", ""), quote=True)}">{hms(a["_t"])} · {NOMBRE[a["veredicto"]]}</a>'
-            for a in todas if t <= a["_t"] < fin)
+            for a in m["todas"] if t <= a["_t"] < fin)
         cuerpo.append(
-            f'<div class="par" id="t{t}"><a class="minuto" href="https://www.youtube.com/watch?v={meta["video"]}&t={t}s" '
+            f'<div class="par" id="t{t}"><a class="minuto" href="https://www.youtube.com/watch?v={m["video"]}&t={t}s" '
             f'target="_blank" rel="noopener noreferrer">{hms(t)}</a><div><p>{e(texto)}</p>'
             + (f'<p class="chips">{marcas}</p>' if marcas else "") + "</div></div>")
-    pagina = (TRANSCRIPCION
-              .replace("@@MENU@@", menu(metas, meta["slug"], "".join(indice))).replace("@@CSS_MENU@@", CSS_MENU)
-              .replace("@@CUERPO@@", "".join(cuerpo)).replace("@@INVITADO@@", e(meta["invitado"]))
-              .replace("@@PROGRAMA@@", e(meta["programa"])).replace("@@FECHA_VIDEO@@", e(meta["fecha"]))
-              .replace("@@DURACION@@", e(meta["duracion"])).replace("@@VIDEO@@", meta["video"])
-              .replace("@@SLUG@@", meta["slug"]).replace("@@REPO@@", REPO))
-    destino = SALIDA / meta["slug"] / "transcripcion"
+    solo = '<button data-solo aria-pressed="false">Solo párrafos con afirmaciones</button>'
+    pagina = rellenar(
+        TRANSCRIPCION, MENU=menu(entrevistas, m["slug"]), CSS_MENU=CSS_MENU, FILTROS=filtros(m, solo), CUERPO="".join(cuerpo),
+        INVITADO=e(m["invitado"]), PROGRAMA=e(m["programa"]), FECHA_VIDEO=e(m["fecha"]), DURACION=e(m["duracion"]),
+        VIDEO=m["video"], SLUG=m["slug"], REPO=REPO)
+    destino = SALIDA / m["slug"] / "transcripcion"
     destino.mkdir(parents=True, exist_ok=True)
     (destino / "index.html").write_text(pagina, encoding="utf-8")
+
+
+# ───────────────────────── API estática (JSON) ─────────────────────────
+
+def ficha_api(m):
+    s = m["slug"]
+    return {
+        "slug": s, "invitado": m["invitado"], "partido": m.get("partido"), "programa": m["programa"], "fecha": m["fecha"],
+        "duracion": m["duracion"], "video_url": f'https://www.youtube.com/watch?v={m["video"]}',
+        "web_url": f"{BASE}/{s}", "afirmaciones_url": f"{BASE}/api/v1/{s}.json",
+        "transcripcion_url": f"{BASE}/api/v1/{s}/transcripcion.json",
+        "transcripcion_txt_url": f"{BASE}/api/v1/{s}/transcripcion.txt",
+        "total_afirmaciones": m["suma"], "por_veredicto": m["total"],
+        "temas": [{"n": t["n"], "titulo": t["titulo"], "inicio_s": t["ini"], "total": t["total"],
+                   "por_veredicto": {k: sum(a["veredicto"] == k for a in t["suyas"]) for k in ORDEN}} for t in m["temas"]],
+    }
+
+
+def afirmacion_api(m, a):
+    tema = next((t for t in m["temas"] if t["n"] == a.get("_tema")), None)
+    return {
+        "id": f'{m["slug"]}-{a["_id"]}', "entrevista": m["slug"], "invitado": m["invitado"],
+        "tema_n": a.get("_tema"), "tema": tema["titulo"] if tema else None,
+        "segundo": a["_t"], "minuto": hms(a["_t"]),
+        "video_url": f'https://www.youtube.com/watch?v={m["video"]}&t={a["_t"]}s', "web_url": f'{BASE}/{m["slug"]}#{a["_id"]}',
+        "cita": a.get("cita", ""), "afirmacion": a.get("afirmacion", ""), "veredicto": a["veredicto"],
+        "resumen": a.get("_resumen"), "explicacion": a.get("explicacion", ""), "confianza": a.get("confianza"),
+        "fuentes": [{"titulo": f.get("titulo", ""), "url": f["url"]} for f in a.get("fuentes", [])
+                    if isinstance(f, dict) and str(f.get("url", "")).startswith(("http://", "https://"))],
+    }
+
+
+def escribir_json(ruta, datos):
+    ruta.parent.mkdir(parents=True, exist_ok=True)
+    ruta.write_text(json.dumps(datos, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+
+
+def generar_api(hechas):
+    api = SALIDA / "api" / "v1"
+    ahora = dt.datetime.now().astimezone().isoformat(timespec="seconds")
+    aviso = ("Verificación asistida por IA, sin revisión de un equipo de periodistas. «falso» no implica intención de mentir. "
+             "Contrasta siempre con las fuentes enlazadas.")
+    comun = {"generado": ahora, "aviso": aviso, "veredictos": DEFINICIONES, "metodo_url": f"{REPO}/blob/main/METODO.md",
+             "repositorio": REPO, "documentacion": f"{BASE}/api"}
+    escribir_json(api / "entrevistas.json", dict(comun, entrevistas=[ficha_api(m) for m in hechas]))
+    todas = []
+    for m in hechas:
+        suyas = [afirmacion_api(m, a) for a in m["todas"]]
+        todas += suyas
+        escribir_json(api / f'{m["slug"]}.json', dict(comun, entrevista=ficha_api(m), afirmaciones=suyas))
+        segs = json.loads((m["carpeta"] / "segmentos.json").read_text(encoding="utf-8"))
+        escribir_json(api / m["slug"] / "transcripcion.json", dict(
+            comun, entrevista=ficha_api(m),
+            nota="Transcripción automática (Whisper): no distingue hablantes y puede tener errores en nombres y cifras.",
+            segmentos=[{"inicio_s": round(x["i"], 2), "fin_s": round(x["f"], 2), "texto": x["t"].strip()} for x in segs]))
+        (api / m["slug"] / "transcripcion.txt").write_text(
+            (m["carpeta"] / "transcripcion.txt").read_text(encoding="utf-8"), encoding="utf-8")
+    escribir_json(api / "afirmaciones.json", dict(comun, total=len(todas), afirmaciones=todas))
+    slugs = [m["slug"] for m in hechas]
+    def op(resumen):
+        return {"get": {"summary": resumen, "responses": {"200": {"description": "JSON", "content": {"application/json": {}}}}}}
+    par = [{"name": "slug", "in": "path", "required": True, "schema": {"type": "string", "enum": slugs}}]
+    escribir_json(api / "openapi.json", {
+        "openapi": "3.1.0",
+        "info": {"title": "Verificación de entrevistas de The Wild Project", "version": "1",
+                 "description": "API estática de solo lectura, sin clave y con CORS abierto. " + aviso},
+        "servers": [{"url": f"{BASE}/api/v1"}],
+        "paths": {
+            "/entrevistas.json": op("Lista de entrevistas verificadas, con recuentos por veredicto y por tema"),
+            "/afirmaciones.json": op("Todas las afirmaciones verificadas de todas las entrevistas"),
+            "/{slug}.json": dict(op("Afirmaciones verificadas de una entrevista"), parameters=par),
+            "/{slug}/transcripcion.json": dict(op("Transcripción por segmentos con tiempos"), parameters=par),
+            "/{slug}/transcripcion.txt": dict(op("Transcripción en texto plano con marcas [h:mm:ss]"), parameters=par),
+        }})
+    ejemplo = slugs[0] if slugs else "sanchez"
+    (SALIDA / "llms.txt").write_text(f"""# Verificación de las entrevistas electorales de The Wild Project
+
+> Afirmaciones comprobables de los candidatos a las elecciones generales españolas del 29-11-2026 en sus entrevistas
+> con Jordi Wild, cada una con veredicto, explicación, fuentes y enlace al segundo exacto del vídeo. {aviso}
+
+API de solo lectura, JSON estático, sin clave, CORS abierto. Base: {BASE}/api/v1
+
+- [Entrevistas]({BASE}/api/v1/entrevistas.json): lista de entrevistas, recuentos por veredicto y temas. Empieza aquí.
+- [Todas las afirmaciones]({BASE}/api/v1/afirmaciones.json): un solo fichero con todas las afirmaciones verificadas.
+- [Afirmaciones de una entrevista]({BASE}/api/v1/{ejemplo}.json): sustituye el slug ({", ".join(slugs)}).
+- [Transcripción con tiempos]({BASE}/api/v1/{ejemplo}/transcripcion.json) y [en texto]({BASE}/api/v1/{ejemplo}/transcripcion.txt).
+- [OpenAPI]({BASE}/api/v1/openapi.json)
+- [Método y criterios]({REPO}/blob/main/METODO.md)
+
+Campos de cada afirmación: id, entrevista, invitado, tema, segundo, minuto, video_url, web_url, cita (literal de la
+transcripción), afirmacion (reformulada), veredicto (verdadero | mayormente_verdadero | enganoso | falso | no_verificable),
+resumen, explicacion, confianza (alta | media | baja), fuentes [{{titulo, url}}].
+
+Para volver a comprobar una afirmación: lee `cita` y `afirmacion`, abre cada `fuentes[].url`, y contrasta con la `explicacion`.
+Los errores se comunican en {REPO}/issues.
+""", encoding="utf-8")
+    (SALIDA / "vercel.json").write_text(json.dumps({"headers": [
+        {"source": "/api/(.*)", "headers": [{"key": "Access-Control-Allow-Origin", "value": "*"},
+                                            {"key": "Cache-Control", "value": "public, max-age=300"}]},
+        {"source": "/llms.txt", "headers": [{"key": "Access-Control-Allow-Origin", "value": "*"}]}]}, indent=1) + "\n")
+    return ejemplo, slugs
 
 
 def main():
     metas = [json.loads(r.read_text(encoding="utf-8")) for r in sorted(ENTREVISTAS.glob("*/meta.json"))]
     metas.sort(key=lambda m: m.get("programa", ""), reverse=True)
-    hechas = []
+    entrevistas = []
     for meta in metas:
-        carpeta = ENTREVISTAS / meta["slug"]
-        if not meta.get("publicar") or not any((carpeta / "resultados").glob("*.json")):
-            meta["publicar"] = False
+        if meta.get("publicar") and any((ENTREVISTAS / meta["slug"] / "resultados").glob("*.json")):
+            entrevistas.append(preparar(meta))
+        else:
             print(f'{meta["slug"]}: verificación en curso (meta.json sin "publicar": true), se omite')
-    for meta in metas:
-        if meta.get("publicar"):
-            hechas.append(pagina_entrevista(ENTREVISTAS / meta["slug"], meta, metas))
+            entrevistas.append(dict(meta, publicar=False))
+    hechas = [m for m in entrevistas if m.get("publicar")]
+    SALIDA.mkdir(exist_ok=True)
+    for m in hechas:
+        pagina_entrevista(m, entrevistas)
+        pagina_transcripcion(m, entrevistas)
+    ejemplo, slugs = generar_api(hechas)
     tarjetas = "".join(
         f'<article class="entrevista"><p class="prog">{e(m["programa"])} · {e(m["fecha"])} · {e(m["duracion"])}</p>'
         f'<h2><a href="/{e(m["slug"])}">{e(m["invitado"])}</a></h2>'
@@ -259,49 +393,140 @@ def main():
         for m in hechas)
     tarjetas += "".join(
         f'<article class="entrevista off"><p class="prog">{e(m.get("programa", ""))}</p><h2>{e(m["invitado"])}</h2>'
-        f'<p class="des">Verificación en curso.</p></article>' for m in metas if not m.get("publicar"))
-    portada = (PORTADA.replace("@@MENU@@", menu(metas)).replace("@@CSS_MENU@@", CSS_MENU)
-               .replace("@@TARJETAS@@", tarjetas).replace("@@REPO@@", REPO)
-               .replace("@@FECHA@@", dt.datetime.now().strftime("%d/%m/%Y")))
-    SALIDA.mkdir(exist_ok=True)
-    (SALIDA / "index.html").write_text(portada, encoding="utf-8")
+        f'<p class="des">Verificación en curso.</p></article>' for m in entrevistas if not m.get("publicar"))
+    (SALIDA / "index.html").write_text(rellenar(
+        PORTADA, MENU=menu(entrevistas), CSS_MENU=CSS_MENU, TARJETAS=tarjetas, REPO=REPO,
+        FECHA=dt.datetime.now().strftime("%d/%m/%Y")), encoding="utf-8")
+    (SALIDA / "api").mkdir(exist_ok=True)
+    (SALIDA / "api" / "index.html").write_text(rellenar(
+        PAGINA_API, MENU=menu(entrevistas), CSS_MENU=CSS_MENU, BASE=BASE, REPO=REPO, EJ=ejemplo,
+        SLUGS=", ".join(f"<code>{x}</code>" for x in slugs)), encoding="utf-8")
 
 
 CSS_MENU = """
-html { scroll-behavior:smooth; scroll-padding-top:110px; }
+html { scroll-behavior:smooth; scroll-padding-top:calc(var(--menu, 48px) + 64px); }
+[hidden] { display:none !important; }
 .menu { position:sticky; top:0; z-index:10; background:#fff; border-bottom:2px solid #000; }
-.menu .ancho { padding-top:8px; padding-bottom:8px; position:relative; }
-.m1 { display:flex; flex-wrap:wrap; align-items:center; gap:4px 22px; font-size:14px; }
-.m1 nav { display:flex; flex-wrap:wrap; align-items:center; gap:4px 14px; }
+.menu .ancho { padding-top:9px; padding-bottom:9px; position:relative; }
+.m1 { display:flex; flex-wrap:wrap; align-items:center; gap:4px 24px; font-size:14.5px; }
 .m1 a, .desp summary { color:#000; text-decoration:none; font-weight:600; padding:3px 0; border-bottom:2px solid transparent; }
-.m1 > a:hover, .m1 nav a:hover, .m1 a[aria-current], .desp[open] summary, .desp summary:hover { border-bottom-color:#000; }
-.m1 .sello { font:700 16px/1.2 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; }
+.m1 > a:hover, .desp.actual summary, .desp[open] summary, .desp summary:hover { border-bottom-color:#000; }
+.m1 .sello { font:700 17px/1.2 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; }
 .m1 .off { color:#999; } .m1 .dcha { margin-left:auto; }
 .rot { font-size:10.5px; font-weight:700; text-transform:uppercase; letter-spacing:.09em; color:#666; flex:none; }
 .desp { position:relative; margin:0; padding:0; border:0; font-size:inherit; }
 .desp summary { list-style:none; cursor:pointer; user-select:none; }
 .desp summary::-webkit-details-marker { display:none; }
-.desp summary::after { content:" ▾"; }
-.desp[open] summary::after { content:" ▴"; }
-.desp .lista { position:absolute; top:calc(100% + 9px); left:0; z-index:20; background:#fff; border:2px solid #000; box-shadow:5px 5px 0 #000;
-  width:max-content; min-width:240px; max-width:min(92vw,480px); max-height:70vh; overflow-y:auto; padding:6px 0; }
-.desp .lista a, .desp .lista .off { display:flex; justify-content:space-between; align-items:baseline; gap:16px; padding:8px 16px;
+.desp summary::after { content:" ▾"; } .desp[open] summary::after { content:" ▴"; }
+.desp .lista { position:absolute; top:calc(100% + 10px); left:0; z-index:20; background:#fff; border:2px solid #000; box-shadow:5px 5px 0 #000;
+  width:max-content; min-width:260px; max-width:min(92vw,470px); max-height:74vh; overflow-y:auto; padding:6px 0; }
+.desp .lista a { display:flex; justify-content:space-between; align-items:baseline; gap:16px; padding:7px 16px;
   font-size:14.5px; font-weight:500; border:0; line-height:1.35; }
-.desp .lista a:hover { background:#000; color:#fff; }
+.desp .lista a.fuerte { font-weight:700; padding:9px 16px; }
+.desp .lista a.fuerte small { font-weight:500; color:#666; font-size:12px; white-space:nowrap; }
+.desp .lista .rot { margin:8px 0 2px; padding:9px 16px 0; border-top:1px solid #000; }
+.desp .lista a:hover { background:#000; color:#fff; } .desp .lista a:hover small { color:#ccc; }
 .desp .lista b { color:#c0271e; font-weight:700; font-variant-numeric:tabular-nums; }
-.desp .lista a:hover b { color:#fff; }
-.desp .lista a.off { opacity:.4; }
-.menu .fila { display:flex; flex-wrap:wrap; align-items:center; gap:6px 8px; margin-top:8px; }
-.menu .fila button { font:inherit; font-size:12.5px; font-weight:600; color:#000; background:#fff; border:1.5px solid #000;
+.desp .lista a:hover b { color:#fff; } .desp .lista a.off { opacity:.4; }
+.filtros { position:sticky; top:var(--menu, 48px); z-index:5; background:#fff; border-bottom:1px solid #000; padding:9px 0; }
+.fila { display:flex; flex-wrap:wrap; align-items:center; gap:6px 8px; }
+.fila button { font:inherit; font-size:12.5px; font-weight:600; color:#000; background:#fff; border:1.5px solid #000;
   border-radius:999px; padding:3px 11px; cursor:pointer; display:inline-flex; align-items:center; gap:6px; }
-.menu .fila b { font-weight:500; opacity:.7; font-variant-numeric:tabular-nums; }
-.menu .fila button[data-v] { color:var(--tono); border-color:var(--tono); }
-.menu .fila button[data-v] i { width:8px; height:8px; border-radius:50%; background:currentColor; }
-.menu .fila button[aria-pressed=true] { background:#000; color:#fff; }
-.menu .fila button[data-v][aria-pressed=true] { background:var(--tono); color:#fff; }
-@media (max-width:700px) { html { scroll-padding-top:170px; } .m1 { gap:4px 16px; font-size:13.5px; } .m1 .dcha { margin-left:0; }
-  .desp { position:static; } .desp .lista { left:16px; right:16px; top:auto; margin-top:9px; width:auto; max-width:none; }
-  .menu .fila .rot { display:none; } .menu .fila button { font-size:12px; padding:2px 9px; } }
+.fila b { font-weight:500; opacity:.7; font-variant-numeric:tabular-nums; }
+.fila button[data-v] { color:var(--tono); border-color:var(--tono); }
+.fila button[data-v] i { width:8px; height:8px; border-radius:50%; background:currentColor; }
+.fila button[aria-pressed=true] { background:#000; color:#fff; }
+.fila button[data-v][aria-pressed=true] { background:var(--tono); color:#fff; }
+.fila button[data-solo] { margin-left:auto; }
+@media (max-width:700px) { .m1 { gap:4px 16px; font-size:14px; } .m1 .dcha { margin-left:0; }
+  .desp { position:static; } .desp .lista { left:16px; right:16px; top:auto; margin-top:10px; width:auto; max-width:none; }
+  .fila .rot { display:none; } .fila button { font-size:12px; padding:2px 9px; } .fila button[data-solo] { margin-left:0; } }
+"""
+
+PAGINA_API = """<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light only">
+<title>API abierta · Verificación The Wild Project</title>
+<meta name="description" content="API JSON de solo lectura, sin clave y con CORS abierto, con todas las afirmaciones verificadas, sus fuentes y las transcripciones. Pensada para agentes de IA y verificadores.">
+<style>
+:root { --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; }
+* { box-sizing:border-box; }
+body { margin:0; background:#fff; color:#000; font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; }
+a { color:#000; }
+.ancho { max-width:1120px; margin:0 auto; padding:0 16px; }
+main.ancho { max-width:820px; padding-bottom:72px; }
+h1 { font:700 clamp(28px,5.5vw,44px)/1.08 var(--serif); letter-spacing:-0.02em; margin:38px 0 12px; text-wrap:balance; }
+h2 { font:700 23px/1.2 var(--serif); margin:40px 0 10px; padding-top:12px; border-top:3px solid #000; }
+p, li { max-width:68ch; }
+code { font:13.5px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace; background:#f2f2f2; padding:1px 5px; }
+pre { background:#000; color:#fff; padding:14px 16px; overflow-x:auto; font:13px/1.55 ui-monospace,SFMono-Regular,Menlo,monospace; }
+pre code { background:none; padding:0; color:inherit; }
+.tabla { overflow-x:auto; }
+table { border-collapse:collapse; width:100%; font-size:14.5px; min-width:560px; }
+th, td { text-align:left; padding:8px 10px; border-bottom:1px solid #000; vertical-align:top; }
+th { font-size:11px; text-transform:uppercase; letter-spacing:.08em; }
+td a { overflow-wrap:anywhere; }
+@@CSS_MENU@@
+</style>
+</head>
+<body>
+@@MENU@@
+<main class="ancho">
+<h1>API abierta para comprobar la verificación</h1>
+<p>Todos los datos de esta web están disponibles como JSON estático: sin clave, sin límite propio de uso y con CORS abierto. Está pensada para que periodistas, verificadores y agentes de IA puedan revisar cada veredicto contra sus fuentes mucho más rápido que leyendo la web.</p>
+
+<h2>Direcciones</h2>
+<div class="tabla"><table>
+<thead><tr><th>Qué</th><th>Dirección</th></tr></thead>
+<tbody>
+<tr><td>Lista de entrevistas, recuentos y temas (empieza aquí)</td><td><a href="/api/v1/entrevistas.json">/api/v1/entrevistas.json</a></td></tr>
+<tr><td>Todas las afirmaciones de todas las entrevistas</td><td><a href="/api/v1/afirmaciones.json">/api/v1/afirmaciones.json</a></td></tr>
+<tr><td>Afirmaciones de una entrevista</td><td><a href="/api/v1/@@EJ@@.json">/api/v1/{slug}.json</a></td></tr>
+<tr><td>Transcripción por segmentos con tiempos</td><td><a href="/api/v1/@@EJ@@/transcripcion.json">/api/v1/{slug}/transcripcion.json</a></td></tr>
+<tr><td>Transcripción en texto plano</td><td><a href="/api/v1/@@EJ@@/transcripcion.txt">/api/v1/{slug}/transcripcion.txt</a></td></tr>
+<tr><td>Descripción OpenAPI 3.1</td><td><a href="/api/v1/openapi.json">/api/v1/openapi.json</a></td></tr>
+<tr><td>Guía para modelos de lenguaje</td><td><a href="/llms.txt">/llms.txt</a></td></tr>
+</tbody></table></div>
+<p>Entrevistas disponibles (<code>slug</code>): @@SLUGS@@.</p>
+
+<h2>Qué trae cada afirmación</h2>
+<div class="tabla"><table>
+<thead><tr><th>Campo</th><th>Contenido</th></tr></thead>
+<tbody>
+<tr><td><code>id</code></td><td>Identificador estable: entrevista y segundo del vídeo.</td></tr>
+<tr><td><code>cita</code></td><td>Lo que se dijo, literal de la transcripción.</td></tr>
+<tr><td><code>afirmacion</code></td><td>La afirmación reformulada para que se entienda sola.</td></tr>
+<tr><td><code>veredicto</code></td><td><code>verdadero</code>, <code>mayormente_verdadero</code>, <code>enganoso</code>, <code>falso</code> o <code>no_verificable</code>.</td></tr>
+<tr><td><code>resumen</code>, <code>explicacion</code></td><td>La justificación, en una frase y completa.</td></tr>
+<tr><td><code>confianza</code></td><td><code>alta</code>, <code>media</code> o <code>baja</code>.</td></tr>
+<tr><td><code>fuentes</code></td><td>Lista de <code>{titulo, url}</code> que sustentan el veredicto.</td></tr>
+<tr><td><code>segundo</code>, <code>minuto</code>, <code>video_url</code></td><td>El momento exacto del vídeo.</td></tr>
+<tr><td><code>tema</code>, <code>tema_n</code></td><td>El capítulo de la entrevista.</td></tr>
+<tr><td><code>web_url</code></td><td>Enlace a la tarjeta en esta web.</td></tr>
+</tbody></table></div>
+
+<h2>Ejemplos</h2>
+<pre><code># Las afirmaciones falsas de una entrevista, con sus fuentes
+curl -s @@BASE@@/api/v1/@@EJ@@.json \\
+  | jq '.afirmaciones[] | select(.veredicto == "falso") | {minuto, cita, resumen, fuentes}'
+
+# Recuento por veredicto de todas las entrevistas
+curl -s @@BASE@@/api/v1/entrevistas.json | jq '.entrevistas[] | {invitado, por_veredicto}'</code></pre>
+
+<h2>Encargo de ejemplo para un agente de IA</h2>
+<pre><code>Descarga @@BASE@@/api/v1/@@EJ@@.json. Para cada afirmación con veredicto
+"falso" o "enganoso": abre cada fuentes[].url, comprueba si de verdad respalda la
+explicacion, busca al menos una fuente independiente más y dime en cuáles discrepas
+del veredicto y por qué. Usa video_url para oír el contexto si la cita es ambigua.</code></pre>
+
+<h2>Condiciones</h2>
+<p>Los datos son una verificación asistida por IA, sin revisión de un equipo de periodistas: úsalos como punto de partida y contrasta con las fuentes. «Falso» no implica intención de mentir. Los ficheros se regeneran cuando cambia algún dato (campo <code>generado</code>). Si encuentras un error, abre una incidencia en <a href="@@REPO@@/issues" target="_blank" rel="noopener noreferrer">GitHub</a>; el método completo está en <a href="@@REPO@@/blob/main/METODO.md" target="_blank" rel="noopener noreferrer">METODO.md</a>.</p>
+</main>
+</body>
+</html>
 """
 
 PORTADA = """<!doctype html>
@@ -382,11 +607,37 @@ h2 { font:700 23px/1.2 var(--serif); margin:44px 0 14px; padding-top:12px; borde
 </head>
 <body>
 @@MENU@@
+@@FILTROS@@
 <main class="ancho">
 <h1>Transcripción completa: @@INVITADO@@ con Jordi Wild</h1>
 <p class="entrada">@@PROGRAMA@@ · @@FECHA_VIDEO@@ · @@DURACION@@. Transcripción automática (Whisper): no distingue quién habla y puede tener errores en nombres y cifras. Cada minuto abre el <a href="https://www.youtube.com/watch?v=@@VIDEO@@" target="_blank" rel="noopener noreferrer">vídeo</a> en ese punto; las etiquetas de color llevan a la afirmación verificada en la <a href="/@@SLUG@@">línea temporal</a>.</p>
 @@CUERPO@@
 </main>
+<script>
+const botones = document.querySelectorAll("#filtros button[data-v]");
+const todas = document.querySelector("#filtros [data-todas]"), soloB = document.querySelector("#filtros [data-solo]");
+const activos = new Set([...botones].map(b => b.dataset.v));
+let solo = false;
+function pintar() {
+  botones.forEach(b => b.setAttribute("aria-pressed", activos.has(b.dataset.v)));
+  todas.setAttribute("aria-pressed", activos.size === botones.length);
+  soloB.setAttribute("aria-pressed", solo);
+  document.querySelectorAll(".par").forEach(p => {
+    let n = 0;
+    p.querySelectorAll(".chip").forEach(c => { c.hidden = !activos.has(c.dataset.v); if (!c.hidden) n++; });
+    p.hidden = solo && n === 0;
+  });
+}
+botones.forEach(b => b.onclick = () => {
+  const v = b.dataset.v;
+  if (activos.size === botones.length) { activos.clear(); activos.add(v); }
+  else if (activos.has(v) && activos.size > 1) activos.delete(v); else activos.add(v);
+  pintar();
+});
+todas.onclick = () => { botones.forEach(b => activos.add(b.dataset.v)); pintar(); };
+soloB.onclick = () => { solo = !solo; pintar(); };
+pintar();
+</script>
 </body>
 </html>
 """
@@ -504,6 +755,7 @@ footer p { max-width:68ch; }
   <div class="dato"><b>@@MALAS@@</b><span>afirmaciones falsas (@@FALSAS@@) o engañosas (@@ENGANOSAS@@) de @@SUMA@@ comprobadas</span></div>
   <p class="resto">El resto: @@VERDADERAS@@ verdaderas, @@CASI@@ casi ciertas y @@NV@@ que no se han podido verificar.</p>
 </div>
+@@FILTROS@@
 <main class="ancho"><ol class="linea">@@FILAS@@</ol></main>
 <footer><div class="ancho">
   <h2>Cómo se ha hecho</h2>
@@ -516,6 +768,7 @@ footer p { max-width:68ch; }
 const activos = new Set(["falso", "enganoso"]);
 const botones = document.querySelectorAll("#filtros button[data-v]");
 const todas = document.querySelector("#filtros [data-todas]");
+const aqui = location.pathname.replace(/\/$/, "");
 function pintar() {
   botones.forEach(b => b.setAttribute("aria-pressed", activos.has(b.dataset.v)));
   todas.setAttribute("aria-pressed", activos.size === botones.length);
@@ -525,7 +778,9 @@ function pintar() {
     else { li.hidden = !activos.has(li.dataset.v); if (!li.hidden) n++; }
   });
   if (cap) cap.hidden = n === 0;
-  document.querySelectorAll("#temas a").forEach(a => a.classList.toggle("off", document.querySelector(a.getAttribute("href")).hidden));
+  document.querySelectorAll(".lista a[data-tema]").forEach(a => {
+    if (a.pathname.replace(/\/$/, "") === aqui) a.classList.toggle("off", document.getElementById(a.dataset.tema).hidden);
+  });
 }
 function verTodo() { botones.forEach(b => activos.add(b.dataset.v)); }
 botones.forEach(b => b.onclick = () => {
@@ -537,14 +792,14 @@ todas.onclick = () => {
   if (activos.size === botones.length) { activos.clear(); activos.add("falso"); activos.add("enganoso"); } else verTodo();
   pintar();
 };
-document.querySelectorAll("#temas a").forEach(a => a.addEventListener("click", () => {
-  if (a.classList.contains("off")) { verTodo(); pintar(); }
-}));
-const destino = location.hash.length > 1 && document.getElementById(location.hash.slice(1));
-if (destino && destino.dataset.v) activos.add(destino.dataset.v);
-if (destino && destino.classList.contains("capitulo")) verTodo();
-pintar();
-if (destino) destino.scrollIntoView();
+function irAlAncla() {
+  const d = location.hash.length > 1 && document.getElementById(location.hash.slice(1));
+  if (!d) return;
+  if (d.hidden) { if (d.dataset.v) activos.add(d.dataset.v); else verTodo(); pintar(); }
+  d.scrollIntoView();
+}
+pintar(); irAlAncla();
+addEventListener("hashchange", irAlAncla);
 </script>
 </body>
 </html>

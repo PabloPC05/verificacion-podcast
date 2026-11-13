@@ -1,0 +1,20 @@
+# Verificación de las entrevistas electorales de The Wild Project
+
+> Afirmaciones comprobables de los candidatos a las elecciones generales españolas del 29-11-2026 en sus entrevistas
+> con Jordi Wild, cada una con veredicto, explicación, fuentes y enlace al segundo exacto del vídeo. Verificación asistida por IA, sin revisión de un equipo de periodistas. «falso» no implica intención de mentir. Contrasta siempre con las fuentes enlazadas.
+
+API de solo lectura, JSON estático, sin clave, CORS abierto. Base: https://verificacion-podcast.vercel.app/api/v1
+
+- [Entrevistas](https://verificacion-podcast.vercel.app/api/v1/entrevistas.json): lista de entrevistas, recuentos por veredicto y temas. Empieza aquí.
+- [Todas las afirmaciones](https://verificacion-podcast.vercel.app/api/v1/afirmaciones.json): un solo fichero con todas las afirmaciones verificadas.
+- [Afirmaciones de una entrevista](https://verificacion-podcast.vercel.app/api/v1/sanchez.json): sustituye el slug (sanchez).
+- [Transcripción con tiempos](https://verificacion-podcast.vercel.app/api/v1/sanchez/transcripcion.json) y [en texto](https://verificacion-podcast.vercel.app/api/v1/sanchez/transcripcion.txt).
+- [OpenAPI](https://verificacion-podcast.vercel.app/api/v1/openapi.json)
+- [Método y criterios](https://github.com/PabloPC05/verificacion-podcast/blob/main/METODO.md)
+
+Campos de cada afirmación: id, entrevista, invitado, tema, segundo, minuto, video_url, web_url, cita (literal de la
+transcripción), afirmacion (reformulada), veredicto (verdadero | mayormente_verdadero | enganoso | falso | no_verificable),
+resumen, explicacion, confianza (alta | media | baja), fuentes [{titulo, url}].
+
+Para volver a comprobar una afirmación: lee `cita` y `afirmacion`, abre cada `fuentes[].url`, y contrasta con la `explicacion`.
+Los errores se comunican en https://github.com/PabloPC05/verificacion-podcast/issues.
