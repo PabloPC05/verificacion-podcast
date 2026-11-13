@@ -109,7 +109,8 @@ def panel(a):
         + f'<p class="que">{e(a.get("afirmacion", ""))}</p>'
         f'<p class="porque"><b>Por qué:</b> {e(resumen)}</p>'
         + (f'<p class="rotulo">Fuentes</p><ol class="fuentes">{lista}</ol>' if lista else "")
-        + detalle + '<p class="contrasta"><button class="copiar" type="button">Copiar encargo para contrastarlo con una IA</button></p>'
+        + detalle + '<p class="contrasta"><button class="copiar" type="button">Copiar encargo para contrastarlo con una IA</button>'
+        f' <a class="enlace-af" href="/{a["_slug"]}/{a["_id"]}">Enlace a esta afirmación</a></p>'
         + "</article></li>"
     )
 
@@ -131,6 +132,7 @@ def cargar(carpeta, meta):
             a["_resumen"] = r.strip() if isinstance(r, str) and r.strip() else None
             a["_t"] = momento_exacto(a, indice)
             a["_video"] = meta["video"]
+            a["_slug"] = meta["slug"]
         todas += datos
     todas.sort(key=lambda a: a["_t"])
     return todas
@@ -268,7 +270,9 @@ def copiar_compartir():
 
 def indexacion(hechas):
     """robots.txt y sitemap.xml con las páginas publicadas."""
-    rutas = ["/", "/verificalo", "/quien", "/api"] + [r for m in hechas for r in (f'/{m["slug"]}', f'/{m["slug"]}/transcripcion')]
+    rutas = (["/", "/verificalo", "/quien", "/api"]
+             + [r for m in hechas for r in (f'/{m["slug"]}', f'/{m["slug"]}/transcripcion')]
+             + [f'/{m["slug"]}/{a["_id"]}' for m in hechas for a in m["todas"]])
     (SALIDA / "sitemap.xml").write_text(
         '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
         + "".join(f"  <url><loc>{e(BASE + r)}</loc></url>\n" for r in rutas) + "</urlset>\n", encoding="utf-8")
@@ -584,6 +588,131 @@ def pagina_transcripcion(m, entrevistas):
     (destino / "index.html").write_text(pagina, encoding="utf-8")
 
 
+def recortar(texto, largo):
+    """Recorta un texto a `largo` caracteres en un límite de palabra; si se corta, acaba en «…»."""
+    texto = " ".join(str(texto or "").split())
+    if len(texto) <= largo:
+        return texto
+    corte = texto.rfind(" ", 0, largo)
+    return texto[: corte if corte > largo // 2 else largo].rstrip(" ,;:") + "…"
+
+
+def preparar_contexto(m):
+    """Lo que necesitan las páginas de afirmación de una entrevista. Se lee una vez por entrevista, no por afirmación."""
+    segmentos = json.loads((m["carpeta"] / "segmentos.json").read_text(encoding="utf-8"))
+    ruta_h = m["carpeta"] / "hablantes.json"
+    h = json.loads(ruta_h.read_text(encoding="utf-8")) if ruta_h.exists() else None
+    voces = [x["voz"] for x in h["segmentos"]] if h and len(h["segmentos"]) == len(segmentos) else None
+    m["_contexto"] = {
+        "segmentos": segmentos, "indice": indice_segmentos(m["carpeta"]),
+        "inicios": [s["i"] for s in segmentos], "voces": voces, "nombres": h["nombres"] if voces else {},
+    }
+
+
+def contexto_cita(m, a):
+    """HTML de los segmentos alrededor de la cita: la cita en <mark> con el color del veredicto y, si hay hablantes, quién habla."""
+    ctx = m["_contexto"]
+    segmentos, voces = ctx["segmentos"], ctx["voces"]
+    tramo = tramo_cita(a, ctx["indice"])
+    if tramo is None:  # cita no localizada: el segmento que contiene su minuto
+        k = max(0, bisect.bisect_right(ctx["inicios"], a["_t"] + 2) - 1)
+        tramo = (k, k)
+    desde, hasta = tramo
+    lo, hi = max(0, desde - 4), min(len(segmentos) - 1, hasta + 4)
+    # agrupa segmentos seguidos de la misma voz en un párrafo
+    grupos = []
+    for k in range(lo, hi + 1):
+        voz = voces[k] if voces else None
+        if not grupos or grupos[-1][0] != voz:
+            grupos.append((voz, []))
+        grupos[-1][1].append(k)
+    parrafos = []
+    for voz, ks in grupos:
+        out, dentro = "", False
+        for k in ks:
+            en = desde <= k <= hasta
+            t = e(segmentos[k]["t"].strip())
+            if en and not dentro:
+                out += (" " if out else "") + "<mark>" + t
+            elif not en and dentro:
+                out += "</mark> " + t
+            else:
+                out += (" " if out else "") + t
+            dentro = en
+        if dentro:
+            out += "</mark>"
+        t0 = int(segmentos[ks[0]]["i"])
+        quien = ctx["nombres"].get(voz, "") if voces else ""
+        parrafos.append(
+            f'<p class="par"><a class="minuto" href="https://www.youtube.com/watch?v={m["video"]}&t={t0}s" '
+            f'target="_blank" rel="noopener noreferrer">{hms(t0)}</a> '
+            + (f'<span class="quien">{e(quien)}</span> ' if quien else "") + out + "</p>")
+    return "".join(parrafos)
+
+
+def pagina_afirmacion(m, a, entrevistas, anterior, siguiente):
+    """Página propia de una afirmación (/<slug>/<id>): cita, veredicto, explicación, fuentes y contexto en la entrevista."""
+    v, slug, idx = a["veredicto"], m["slug"], a["_id"]
+    ruta = f"/{slug}/{idx}"
+    afirmacion = " ".join(a.get("afirmacion", "").split())
+    cita = a.get("cita", "").strip("«»\" ")
+    minuto = hms(a["_t"])
+    enlace_video = f"https://www.youtube.com/watch?v={a['_video']}&t={a['_t']}s"
+    resumen = a.get("_resumen") or a.get("explicacion", "")
+    tema = next((t for t in m["temas"] if t["n"] == a.get("_tema")), None)
+    migas = (f'<a href="/{slug}">{e(m["invitado"])}</a> › '
+             + (f'Tema {tema["n"]} · {e(tema["titulo"])} › ' if tema else "") + minuto)
+
+    cita_html = (f'<blockquote>«{e(cita)}»</blockquote>' if cita else "") + (
+        f'<p class="cita-pie">— {e(m["invitado"])}, <a href="{enlace_video}" target="_blank" '
+        f'rel="noopener noreferrer">{minuto}</a></p>')
+    por_que = ""
+    if a.get("_resumen"):
+        por_que += f'<p class="resumen">{e(a["_resumen"])}</p>'
+    if a.get("explicacion"):
+        por_que += f'<p class="explicacion">{e(a["explicacion"])}</p>'
+    if a.get("confianza"):
+        por_que += f'<p class="confianza">Confianza: <b>{e(str(a["confianza"]))}</b></p>'
+
+    fuentes = [f for f in a.get("fuentes", []) if isinstance(f, dict)
+               and str(f.get("url", "")).startswith(("http://", "https://"))]
+    fuentes_html = ""
+    if fuentes:
+        items = "".join(
+            f'<li><a href="{e(f["url"], quote=True)}" target="_blank" rel="noopener noreferrer">'
+            f'{e(f.get("titulo") or f["url"])}</a> <span>{e(dominio(f["url"]))}</span></li>' for f in fuentes)
+        fuentes_html = f'<section class="seccion"><h2>Fuentes</h2><ol class="fuentes">{items}</ol></section>'
+
+    ver_tema = f"/{slug}/transcripcion" + (f"#tema-{a['_tema']}" if a.get("_tema") else "")
+    contexto = (f'<section class="seccion"><h2>Contexto en la entrevista</h2><div class="contexto">{contexto_cita(m, a)}</div>'
+                f'<p class="mas"><a href="{ver_tema}">Leer la transcripción completa</a></p></section>')
+
+    titulo_error = f"Corregir {slug}-{idx}"
+    url_error = f"{REPO}/issues/new?template=correccion.yml&title={quote(titulo_error)}"
+
+    def vecina(b, clase, rotulo):
+        if not b:
+            return "<span></span>"
+        return (f'<a class="vecina {clase}" href="/{slug}/{b["_id"]}" rel="{"prev" if clase == "ant" else "next"}">'
+                f'<span class="rot-v">{rotulo}</span>'
+                f'<span class="tiempo">{hms(b["_t"])} · <b data-v="{b["veredicto"]}">{NOMBRE[b["veredicto"]]}</b></span>'
+                f'<small>{e(recortar(b.get("afirmacion", ""), 80))}</small></a>')
+
+    descripcion = recortar(resumen, 200) or f"Verificación de una afirmación de {m['invitado']} en The Wild Project."
+    cab = cabecera(
+        ruta, f'{NOMBRE[v]}: {recortar(afirmacion, 90)} · {m["invitado"]}', descripcion, imagen_de(slug),
+        titulo_social=f'{NOMBRE[v]}: {afirmacion}',
+        alt=f'Verificación dato a dato: {m["invitado"]} ({m.get("partido") or "sin partido"}) en {m["programa"]}')
+    pagina = rellenar(
+        AFIRMACION, CABECERA=cab, CSS_MENU=CSS_MENU, MENU=menu(entrevistas, slug), MIGAS=migas, V=v,
+        VEREDICTO=NOMBRE[v], AFIRMACION=e(afirmacion), CITA=cita_html, POR_QUE=por_que, FUENTES=fuentes_html,
+        CONTEXTO=contexto, VER_LINEA=f"/{slug}#{idx}", URL_PAGINA=e(BASE + ruta, quote=True), URL_ERROR=e(url_error, quote=True),
+        ANTERIOR=vecina(anterior, "ant", "← Anterior"), SIGUIENTE=vecina(siguiente, "sig", "Siguiente →"))
+    destino = SALIDA / slug / idx
+    destino.mkdir(parents=True, exist_ok=True)
+    (destino / "index.html").write_text(pagina, encoding="utf-8")
+
+
 # ───────────────────────── API estática (JSON) ─────────────────────────
 
 def ficha_api(m):
@@ -606,7 +735,7 @@ def afirmacion_api(m, a):
         "id": f'{m["slug"]}-{a["_id"]}', "entrevista": m["slug"], "invitado": m["invitado"],
         "tema_n": a.get("_tema"), "tema": tema["titulo"] if tema else None,
         "segundo": a["_t"], "minuto": hms(a["_t"]),
-        "video_url": f'https://www.youtube.com/watch?v={m["video"]}&t={a["_t"]}s', "web_url": f'{BASE}/{m["slug"]}#{a["_id"]}',
+        "video_url": f'https://www.youtube.com/watch?v={m["video"]}&t={a["_t"]}s', "web_url": f'{BASE}/{m["slug"]}#{a["_id"]}', "pagina_url": f'{BASE}/{m["slug"]}/{a["_id"]}',
         "cita": a.get("cita", ""), "afirmacion": a.get("afirmacion", ""), "veredicto": a["veredicto"],
         "resumen": a.get("_resumen"), "explicacion": a.get("explicacion", ""), "confianza": a.get("confianza"),
         "fuentes": [{"titulo": f.get("titulo", ""), "url": f["url"]} for f in a.get("fuentes", [])
@@ -894,7 +1023,7 @@ Si encuentras un dato mal verificado, abre una incidencia en [GitHub]({REPO}/iss
                                           "url": dict(url, description="Siempre `http` o `https`.")}},
                 "Afirmacion": {"type": "object", "description": "Una afirmación comprobable del invitado y su verificación.",
                                "required": ["id", "entrevista", "invitado", "tema_n", "tema", "segundo", "minuto", "video_url",
-                                            "web_url", "cita", "afirmacion", "veredicto", "resumen", "explicacion", "confianza", "fuentes"],
+                                            "web_url", "pagina_url", "cita", "afirmacion", "veredicto", "resumen", "explicacion", "confianza", "fuentes"],
                                "properties": {
                                    "id": {"type": "string", "description": "Identificador estable: `slug` de la entrevista y segundo del vídeo (`sanchez-m251`)."},
                                    "entrevista": {"type": "string", "description": "`slug` de la entrevista."},
@@ -905,6 +1034,7 @@ Si encuentras un dato mal verificado, abre una incidencia en [GitHub]({REPO}/iss
                                    "minuto": {"type": "string", "pattern": "^\\d+:\\d{2}:\\d{2}$", "description": "El mismo momento en `h:mm:ss`."},
                                    "video_url": dict(url, description="Vídeo en YouTube, ya situado en ese segundo."),
                                    "web_url": dict(url, description="Tarjeta de la afirmación en la web."),
+                                   "pagina_url": dict(url, description="Página propia de la afirmación, con la cita, la explicación, las fuentes y el contexto."),
                                    "cita": {"type": "string", "description": "Lo que se dijo, literal de la transcripción automática."},
                                    "afirmacion": {"type": "string", "description": "La afirmación reformulada para que se entienda sin contexto."},
                                    "veredicto": ref("Veredicto"),
@@ -1051,6 +1181,11 @@ def main():
     for m in hechas:
         pagina_entrevista(m, entrevistas)
         pagina_transcripcion(m, entrevistas)
+        preparar_contexto(m)
+        for n, a in enumerate(m["todas"]):
+            pagina_afirmacion(m, a, entrevistas,
+                              m["todas"][n - 1] if n > 0 else None,
+                              m["todas"][n + 1] if n + 1 < len(m["todas"]) else None)
     ejemplo, slugs = generar_api(hechas)
     copiar_compartir()
     indexacion(hechas)
@@ -2035,6 +2170,7 @@ footer .leyenda-f { margin-bottom:34px; max-width:820px; }
   .copiar { min-height:36px; } }
 .abrir { margin:14px 0 0; padding:12px 14px; border:1.5px solid var(--tinta); font-size:14.5px; max-width:68ch; }
 .contrasta { margin:12px 0 0; }
+.enlace-af { font-size:12.5px; font-weight:600; color:var(--gris); margin-left:6px; }
 .copiar { font:inherit; font-size:12.5px; font-weight:600; background:var(--fondo); color:var(--tinta); border:1.5px solid var(--tinta); padding:4px 11px; cursor:pointer; }
 .copiar:hover, .copiar.hecho { background:var(--tinta); color:var(--fondo); }
 .hito:target .panel { outline:3px solid var(--tono); outline-offset:3px; animation:destello 1.6s ease-out; }
@@ -2164,6 +2300,88 @@ No inventes enlaces. Si no puedes abrir una fuente o no hay pruebas suficientes,
   setTimeout(() => { b.textContent = "Copiar encargo para contrastarlo con una IA"; b.classList.remove("hecho"); }, 2200);
   copiarTexto(texto, "Encargo copiado. Pégalo en Claude, ChatGPT o la IA que uses.");
 });
+</script>
+</body>
+</html>
+"""
+
+AFIRMACION = """<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+@@HEAD_MODO@@
+@@CABECERA@@
+<style>
+:root { --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--fondo); color:var(--tinta); font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; -webkit-text-size-adjust:100%; overflow-wrap:break-word; }
+a { color:var(--tinta); text-underline-offset:3px; }
+main.ancho { max-width:760px; padding-top:4px; padding-bottom:56px; }
+.migas { font-size:14px; color:var(--gris); padding-top:18px; }
+.migas a { font-weight:600; color:var(--suave); }
+.migas a:hover { color:var(--tinta); }
+.veredicto { display:inline-block; margin:22px 0 0; padding:9px 18px 10px; font:700 clamp(22px,4vw,28px)/1 var(--serif); background:var(--tono); color:var(--sobre-tono); }
+h1 { font:700 clamp(28px,4.6vw,40px)/1.14 var(--serif); letter-spacing:-0.02em; margin:16px 0 0; text-wrap:balance; }
+.seccion { margin:34px 0 0; padding-top:14px; border-top:2px solid var(--tinta); }
+h2 { font:700 22px/1.2 var(--serif); margin:0 0 12px; }
+blockquote { margin:0; padding-left:16px; border-left:4px solid var(--tono); font:italic 21px/1.45 var(--serif); text-wrap:pretty; }
+.cita-pie { margin:10px 0 0 20px; font-size:15px; color:var(--suave); }
+.cita-pie a { font-weight:700; color:var(--tono); }
+.resumen { margin:0 0 12px; font-size:19px; font-weight:600; line-height:1.45; }
+.explicacion { margin:0; font-size:17px; }
+.confianza { margin:14px 0 0; font-size:14px; color:var(--suave); }
+.fuentes { margin:0; padding-left:22px; font-size:15px; }
+.fuentes li { margin:6px 0; overflow-wrap:anywhere; }
+.fuentes span { color:var(--gris); font-size:13px; white-space:nowrap; }
+.contexto { border-left:2px solid var(--claro); padding-left:16px; }
+.par { margin:0 0 14px; font:17px/1.6 var(--serif); }
+.par .minuto { font:700 13px/1 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; font-variant-numeric:tabular-nums; color:var(--gris); margin-right:6px; }
+.par .minuto:hover { background:var(--tinta); color:var(--fondo); text-decoration:none; }
+.quien { font:700 11.5px/1 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; text-transform:uppercase; letter-spacing:.07em; color:var(--gris); margin-right:4px; }
+mark { background:var(--tono); color:var(--sobre-tono); padding:1px 3px; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+.mas { margin:12px 0 0; font-size:15px; font-weight:600; }
+.acciones { display:flex; flex-wrap:wrap; gap:10px; margin-top:34px; padding-top:18px; border-top:2px solid var(--tinta); }
+.btn { font:inherit; font-size:14.5px; font-weight:600; color:var(--tinta); background:var(--fondo); border:2px solid var(--tinta); padding:7px 14px; cursor:pointer; text-decoration:none; line-height:1.4; }
+.btn:hover { background:var(--tinta); color:var(--fondo); }
+.vecinas { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:30px; }
+.vecina { display:flex; flex-direction:column; gap:4px; min-width:0; border:2px solid var(--tinta); padding:12px 14px; text-decoration:none; }
+.vecina:hover { background:var(--resalte); }
+.vecina.sig { text-align:right; }
+.vecina .rot-v { font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--gris); }
+.vecina .tiempo { font-size:15px; font-weight:600; font-variant-numeric:tabular-nums; }
+.vecina .tiempo b { color:var(--tono); }
+.vecina small { font-size:14px; line-height:1.4; color:var(--suave); }
+footer { border-top:3px solid var(--tinta); margin-top:48px; padding:24px 0 72px; font-size:14.5px; }
+@media (max-width:600px) {
+  main.ancho { padding-top:0; }
+  blockquote { font-size:19px; }
+  .cita-pie { margin-left:20px; }
+  .vecinas { grid-template-columns:1fr; }
+  .vecina.sig { text-align:left; } }
+@@CSS_MENU@@
+</style>
+</head>
+<body>
+@@MENU@@
+<main class="ancho" data-v="@@V@@">
+<nav class="migas" aria-label="Ruta">@@MIGAS@@</nav>
+<p class="veredicto" data-v="@@V@@">@@VEREDICTO@@</p>
+<h1>@@AFIRMACION@@</h1>
+<section class="seccion"><h2>Lo que dijo</h2>@@CITA@@</section>
+<section class="seccion"><h2>Por qué</h2>@@POR_QUE@@</section>
+@@FUENTES@@
+@@CONTEXTO@@
+<div class="acciones">
+<a class="btn" href="@@VER_LINEA@@">Ver en la línea temporal</a>
+<button class="btn" type="button" data-copiar data-enlace="@@URL_PAGINA@@">Copiar enlace</button>
+<a class="btn" href="@@URL_ERROR@@" target="_blank" rel="noopener noreferrer">¿Ves un error?</a>
+</div>
+<nav class="vecinas" aria-label="Afirmaciones de la misma entrevista">@@ANTERIOR@@@@SIGUIENTE@@</nav>
+</main>
+<footer class="pie-solo"><div class="ancho">@@PIE@@</div></footer>
+<script>
+document.querySelector("[data-copiar]").addEventListener("click", ev => copiarTexto(ev.currentTarget.dataset.enlace, "Enlace copiado."));
 </script>
 </body>
 </html>
