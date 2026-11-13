@@ -11,31 +11,61 @@
 * { box-sizing:border-box; }
 body { margin:0; background:#fff; color:#000; font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; }
 a { color:#000; }
-.ancho { max-width:860px; margin:0 auto; padding:0 16px; }
-.cima { display:flex; justify-content:space-between; gap:12px; padding-top:18px; font-size:13px; }
-.cima a { font-weight:600; white-space:nowrap; }
+.ancho { max-width:1120px; margin:0 auto; padding:0 16px; }
+main.ancho { max-width:860px; }
 h1 { font:700 clamp(30px,6vw,48px)/1.06 var(--serif); letter-spacing:-0.02em; margin:40px 0 14px; text-wrap:balance; }
 .entrada { font-size:17px; max-width:62ch; margin:0 0 30px; }
-.entrevista { display:block; border:2px solid #000; padding:20px 22px; margin-bottom:16px; text-decoration:none; }
-.entrevista:hover { box-shadow:6px 6px 0 #000; }
+.entrevista { border:2px solid #000; padding:20px 22px; margin-bottom:18px; }
+.entrevista.off { border:1px dashed #999; color:#666; }
 .prog { margin:0; font-size:12px; text-transform:uppercase; letter-spacing:.08em; color:#666; }
-.entrevista h2 { font:700 30px/1.15 var(--serif); margin:4px 0 8px; }
+.entrevista h2 { font:700 30px/1.15 var(--serif); margin:4px 0 8px; } .entrevista h2 a { text-decoration:none; }
 .num { margin:0; font-size:17px; } .num b { font:700 34px/1 var(--serif); margin-right:4px; }
-.des { margin:4px 0 12px; font-size:13.5px; color:#666; }
-.entrevista span { font-weight:600; text-decoration:underline; text-underline-offset:3px; }
+.des { margin:4px 0 14px; font-size:13.5px; font-weight:600; }
+.entrevista ul { list-style:none; margin:6px 0 16px; padding:0; columns:2; column-gap:28px; font-size:14.5px; }
+.entrevista li { margin:0 0 5px; break-inside:avoid; } .entrevista li b { color:#c0271e; }
+.acc { margin:0; display:flex; flex-wrap:wrap; gap:8px 22px; } .acc a { font-weight:700; text-underline-offset:3px; }
 footer { border-top:3px solid #000; margin-top:48px; padding:24px 0 64px; font-size:14.5px; }
 footer p { max-width:68ch; }
+@media (max-width:640px) { .entrevista ul { columns:1; } }
+
+html { scroll-behavior:smooth; scroll-padding-top:150px; }
+.menu { position:sticky; top:0; z-index:10; background:#fff; border-bottom:2px solid #000; }
+.menu .ancho { padding-top:8px; padding-bottom:8px; }
+.m1, .menu .fila { display:flex; align-items:center; gap:8px; overflow-x:auto; scrollbar-width:none; white-space:nowrap; }
+.m1::-webkit-scrollbar, .menu .fila::-webkit-scrollbar { display:none; }
+.m1 { gap:22px; font-size:14px; padding-bottom:2px; }
+.m1 nav { display:flex; align-items:center; gap:14px; }
+.m1 a { color:#000; text-decoration:none; font-weight:600; padding:3px 0; border-bottom:2px solid transparent; }
+.m1 a:hover, .m1 a[aria-current] { border-bottom-color:#000; }
+.m1 .sello { font:700 16px/1.2 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; }
+.m1 .off { color:#999; } .m1 .dcha { margin-left:auto; }
+.rot { font-size:10.5px; font-weight:700; text-transform:uppercase; letter-spacing:.09em; color:#666; flex:none; }
+.menu .fila { margin-top:7px; }
+.menu .fila button, .menu .fila a { flex:none; font:inherit; font-size:12.5px; font-weight:600; color:#000; background:#fff;
+  border:1.5px solid #000; border-radius:999px; padding:3px 11px; cursor:pointer; text-decoration:none;
+  display:inline-flex; align-items:center; gap:6px; }
+.menu .fila b { font-weight:500; opacity:.7; font-variant-numeric:tabular-nums; }
+.menu .fila button[data-v] { color:var(--tono); border-color:var(--tono); }
+.menu .fila button[data-v] i { width:8px; height:8px; border-radius:50%; background:currentColor; }
+.menu .fila button[aria-pressed=true] { background:#000; color:#fff; }
+.menu .fila button[data-v][aria-pressed=true] { background:var(--tono); color:#fff; }
+#temas a { border-color:#ccc; font-weight:500; }
+#temas a:hover { border-color:#000; }
+#temas a b { color:#c0271e; opacity:1; font-weight:700; }
+#temas a.off { opacity:.4; }
+@media (max-width:860px) { html { scroll-padding-top:140px; } .m1 { gap:16px; font-size:13px; } }
+
 </style>
 </head>
 <body>
-<div class="ancho cima"><span>Elecciones generales · 29 nov 2026</span><a href="https://github.com/PabloPC05/verificacion-podcast" target="_blank" rel="noopener noreferrer">Código y datos en GitHub ↗</a></div>
+<header class="menu"><div class="ancho"><div class="m1"><a class="sello" href="/" title="Todas las entrevistas">Verificación</a><nav aria-label="Entrevistas"><span class="rot">Entrevistas</span><a href="/sanchez">Pedro Sánchez</a><span class="off" title="Verificación en curso">Alberto Núñez Feijóo</span><span class="off" title="Verificación en curso">Ada Colau</span></nav><a class="dcha" href="https://github.com/PabloPC05/verificacion-podcast" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></div></header>
 <main class="ancho">
 <h1>Las entrevistas de The Wild Project, comprobadas dato a dato</h1>
-<p class="entrada">Jordi Wild ha entrevistado a los candidatos a la presidencia del Gobierno. Transcribimos cada entrevista entera, separamos las afirmaciones que se pueden comprobar y las contrastamos con fuentes públicas, con el mismo método y la misma vara de medir para todos.</p>
-<a class="entrevista" href="/sanchez"><p class="prog">The Wild Project #393 · 13 nov 2026 · 1 h 52 min</p><h2>Pedro Sánchez</h2><p class="num"><b>30</b> falsas o engañosas de 157 afirmaciones comprobadas</p><p class="des">7 falsas · 23 engañosas · 53 casi ciertas · 34 verdaderas · 40 no verificables</p><span>Ver la línea temporal →</span></a>
+<p class="entrada">Jordi Wild ha entrevistado a los candidatos a la presidencia del Gobierno para las elecciones del 29 de noviembre de 2026. Transcribimos cada entrevista entera, separamos las afirmaciones que se pueden comprobar y las contrastamos con fuentes públicas, con el mismo método y la misma vara de medir para todos.</p>
+<article class="entrevista"><p class="prog">The Wild Project #393 · 13 nov 2026 · 1 h 52 min</p><h2><a href="/sanchez">Pedro Sánchez</a></h2><p class="num"><b>30</b> falsas o engañosas de 157 afirmaciones comprobadas</p><p class="des"><span style="color:#c0271e">7 falsas</span> · <span style="color:#c26a00">23 engañosas</span> · <span style="color:#5a7d10">53 casi ciertas</span> · <span style="color:#1c7c45">34 verdaderas</span> · <span style="color:#777">40 no verificables</span></p><p class="rot">Temas de la entrevista</p><ul><li><a href="/sanchez#tema-2">Por qué Pedro Sánchez quiere seguir al frente del Gobierno</a></li><li><a href="/sanchez#tema-3">Insultos, polarización y crispación en la política española</a> <b>1</b></li><li><a href="/sanchez#tema-4">Accidentes ferroviarios y responsabilidades del Gobierno</a> <b>2</b></li><li><a href="/sanchez#tema-5">Crisis de Ceuta, Marruecos y gestión de la frontera</a> <b>7</b></li><li><a href="/sanchez#tema-6">Inmigración, integración y futuro demográfico de España</a> <b>3</b></li><li><a href="/sanchez#tema-7">Ábalos, Koldo, Cerdán y los casos que afectan al PSOE</a> <b>3</b></li><li><a href="/sanchez#tema-8">Leire Díez, Zapatero y las investigaciones abiertas</a> <b>3</b></li><li><a href="/sanchez#tema-9">Vivienda, alquileres y acceso de los jóvenes a una casa</a> <b>6</b></li><li><a href="/sanchez#tema-10">Amnistía, Bildu, Pablo Iglesias y los cambios de opinión de Sánchez</a> <b>5</b></li><li><a href="/sanchez#tema-12">Alegato final de Pedro Sánchez y mensaje a los votantes</a></li></ul><p class="acc"><a href="/sanchez">Línea temporal →</a><a href="/sanchez/transcripcion">Transcripción completa →</a></p></article><article class="entrevista off"><p class="prog">The Wild Project #392</p><h2>Alberto Núñez Feijóo</h2><p class="des">Verificación en curso.</p></article><article class="entrevista off"><p class="prog">The Wild Project #391</p><h2>Ada Colau</h2><p class="des">Verificación en curso.</p></article>
 </main>
 <footer><div class="ancho">
-<p>Verificación asistida por IA (transcripción con Whisper, contraste con modelos Claude y búsqueda web), sin revisión de un equipo de periodistas. Cada afirmación enlaza el segundo exacto del vídeo y sus fuentes, y el código, las transcripciones y los datos están publicados en <a href="https://github.com/PabloPC05/verificacion-podcast" target="_blank" rel="noopener noreferrer">GitHub</a>. «Falso» no implica intención de mentir: incluye errores y lapsus. El número de afirmaciones falsas depende también de cuánto habla cada invitado y de cuántos datos da, así que las cifras no son un ranking.</p>
+<p>Verificación asistida por IA (transcripción con Whisper, contraste con modelos Claude y búsqueda web), sin revisión de un equipo de periodistas. Cada afirmación enlaza el segundo exacto del vídeo y sus fuentes, y el código, las transcripciones y los datos están publicados en <a href="https://github.com/PabloPC05/verificacion-podcast" target="_blank" rel="noopener noreferrer">GitHub</a>. «Falso» no implica intención de mentir: incluye errores y lapsus. El número de afirmaciones falsas depende también de cuánto habla cada invitado y de cuántos datos da, así que las cifras no son un ranking. En rojo, junto a cada tema, cuántas afirmaciones falsas o engañosas contiene.</p>
 <p>Última actualización: 13/11/2026.</p>
 </div></footer>
 </body>
