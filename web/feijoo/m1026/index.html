@@ -4,7 +4,53 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<script>try{var m=localStorage.getItem("modo");if(m==="claro"||m==="oscuro")document.documentElement.dataset.modo=m}catch(e){}</script>
+<script>try{var m=localStorage.getItem("modo");if(m==="claro"||m==="oscuro")document.documentElement.dataset.modo=m}catch(e){}</script><style>
+@view-transition { navigation: auto; }
+::view-transition-group(afirmacion) { animation-duration:280ms; animation-timing-function:cubic-bezier(.2,.7,.2,1); }
+/* La tarjeta se desvanece enseguida y es la página nueva la que crece desde su tamaño, recortada por arriba */
+::view-transition-old(afirmacion) { animation-duration:80ms; }
+::view-transition-new(afirmacion) { animation-duration:120ms; height:100%; object-fit:cover; object-position:top; }
+@media (prefers-reduced-motion: reduce) { @view-transition { navigation: none; } }
+</style>
+<script>
+(() => {
+  const AFIRMACION = /^\/([a-z]+)\/(m\d+(?:-\d+)?)\/?$/, LINEA = /^\/([a-z]+)\/?$/;
+  const ruta = u => { try { return new URL(u).pathname; } catch (e) { return ""; } };
+  const visible = el => { const r = el.getBoundingClientRect(); return r.bottom > 0 && r.top < innerHeight; };
+  const nombrar = (el, vt) => {
+    el.style.viewTransitionName = "afirmacion";
+    vt.ready.catch(() => {});
+    vt.finished.finally(() => { el.style.viewTransitionName = ""; }).catch(() => {});
+  };
+  // Saltar sin dejar promesas rechazadas sin atender (darían un error en la consola)
+  const saltar = vt => { vt.ready.catch(() => {}); vt.updateCallbackDone.catch(() => {}); vt.skipTransition(); };
+  // Qué se anima entre dos rutas: «ida» de la línea temporal a una afirmación de la misma entrevista, o «vuelta»
+  const paso = (de, a) => {
+    const l = LINEA.exec(de), f = AFIRMACION.exec(a);
+    if (l && f && l[1] === f[1]) return { tipo: "ida", id: f[2] };
+    const f2 = AFIRMACION.exec(de), l2 = LINEA.exec(a);
+    if (f2 && l2 && f2[1] === l2[1]) return { tipo: "vuelta", id: f2[2] };
+    return null;
+  };
+  const tarjeta = id => document.getElementById(id) && document.getElementById(id).querySelector(".panel");
+  const pagina = () => document.querySelector("main[data-v]");
+  // La página que se va marca lo que va a crecer (la tarjeta) o a encogerse (la página de la afirmación)
+  addEventListener("pageswap", ev => {
+    const vt = ev.viewTransition; if (!vt) return;
+    const p = paso(ruta(location.href), ruta(ev.activation && ev.activation.entry ? ev.activation.entry.url : ""));
+    const el = p && (p.tipo === "ida" ? tarjeta(p.id) : pagina());
+    if (el && visible(el)) nombrar(el, vt); else saltar(vt);
+  });
+  // La que llega marca el destino
+  addEventListener("pagereveal", ev => {
+    const vt = ev.viewTransition; if (!vt) return;
+    const desde = window.navigation && navigation.activation && navigation.activation.from ? navigation.activation.from.url : "";
+    const p = paso(ruta(desde), ruta(location.href));
+    const el = p && (p.tipo === "ida" ? pagina() : tarjeta(p.id));
+    if (el && visible(el)) nombrar(el, vt); else saltar(vt);
+  });
+})();
+</script>
 <script defer src="https://cloud.umami.is/script.js" data-website-id="83bf64a7-e92e-4617-80d2-bb6a92bb2b8e" data-domains="verificacion-podcast.vercel.app"></script>
 <script>
 document.addEventListener("click", function (ev) {
