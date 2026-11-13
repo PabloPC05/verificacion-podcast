@@ -91,9 +91,16 @@ aunque parezca menor. Los identificadores (`m<segundo>`) se asignan antes de exc
 Cuando todos los bloques y resúmenes estén completos, añade `"publicar": true` a `entrevistas/<slug>/meta.json`
 (el generador ignora las entrevistas que no lo tienen, para no publicar verificaciones a medias).
 
+Antes de generar la web, crea las imágenes que se ven al compartir los enlaces (vista previa en WhatsApp, X,
+Telegram, LinkedIn, Bluesky): una por entrevista publicada, con el nombre, el partido y el número del programa
+(sin recuentos, para que no se queden viejas al corregir veredictos). Necesita Pillow, que no es dependencia del
+proyecto, así que se ejecuta con `uv`. Escribe en `web-src/compartir/` (también el favicon); hay que subir esos
+ficheros al repositorio. Si falta la imagen de una entrevista, `build.py` avisa y usa la general.
+
 ```sh
+uv run --with pillow python herramientas/imagenes_compartir.py   # web-src/compartir/<slug>.png, 1200×630
 python3 web-src/build.py                                  # genera web/index.html y web/<slug>/index.html
-git add entrevistas/<slug> web && git commit -m "Verificación de la entrevista a <invitado>" && git push
+git add entrevistas/<slug> web web-src/compartir && git commit -m "Verificación de la entrevista a <invitado>" && git push
 cd web && npx vercel deploy --prod --yes --scope pablopc05s-projects
 ```
 

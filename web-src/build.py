@@ -162,6 +162,72 @@ def rellenar(plantilla, **valores):
     return plantilla
 
 
+ICONOS = ("favicon.svg", "favicon-32.png", "apple-touch-icon.png")  # van a la raíz de web/; el resto de web-src/compartir/ a web/compartir/
+IMAGEN_GENERAL = "general"
+IMAGEN_ANCHO, IMAGEN_ALTO = 1200, 630
+NOMBRE_SITIO = "Verificación de las entrevistas de The Wild Project"
+
+
+def cabecera(ruta, titulo, descripcion, imagen=IMAGEN_GENERAL, titulo_social=None, alt=None):
+    """Bloque del <head> de cada página: <title>, descripción, canonical, Open Graph, Twitter Card e iconos.
+
+    `ruta` es la ruta de la página en el sitio ("/", "/sanchez"...); las URL salen absolutas con BASE.
+    `imagen` es el nombre (sin .png) de una imagen de web/compartir/. Todo se escapa aquí."""
+    url = BASE + ruta
+    foto = f"{BASE}/compartir/{imagen}.png"
+    social = titulo_social or titulo
+    alt = alt or "Verificación dato a dato de las entrevistas electorales de The Wild Project"
+
+    def meta(clave, valor, atributo="property"):
+        return f'<meta {atributo}="{clave}" content="{e(str(valor), quote=True)}">'
+
+    lineas = [
+        f"<title>{e(titulo)}</title>",
+        meta("description", descripcion, "name"),
+        f'<link rel="canonical" href="{e(url, quote=True)}">',
+        meta("og:type", "website"), meta("og:site_name", NOMBRE_SITIO), meta("og:locale", "es_ES"),
+        meta("og:title", social), meta("og:description", descripcion), meta("og:url", url),
+        meta("og:image", foto), meta("og:image:width", IMAGEN_ANCHO), meta("og:image:height", IMAGEN_ALTO),
+        meta("og:image:alt", alt),
+        meta("twitter:card", "summary_large_image", "name"), meta("twitter:title", social, "name"),
+        meta("twitter:description", descripcion, "name"), meta("twitter:image", foto, "name"),
+        meta("twitter:image:alt", alt, "name"),
+        '<link rel="icon" href="/favicon.svg" type="image/svg+xml">',
+        '<link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">',
+        '<link rel="apple-touch-icon" href="/apple-touch-icon.png">',
+    ]
+    return "\n".join(lineas)
+
+
+def imagen_de(slug):
+    """Imagen para compartir de una entrevista; si falta, la general (y se avisa)."""
+    if (RAIZ / "web-src" / "compartir" / f"{slug}.png").exists():
+        return slug
+    print(f"AVISO: falta web-src/compartir/{slug}.png; se usa la imagen general. "
+          "Ejecuta: uv run --with pillow python herramientas/imagenes_compartir.py")
+    return IMAGEN_GENERAL
+
+
+def copiar_compartir():
+    """Copia a web/ las imágenes y los iconos generados por herramientas/imagenes_compartir.py."""
+    origen = RAIZ / "web-src" / "compartir"
+    (SALIDA / "compartir").mkdir(parents=True, exist_ok=True)
+    for f in sorted(origen.glob("*")) if origen.is_dir() else []:
+        shutil.copy(f, SALIDA / ("" if f.name in ICONOS else "compartir") / f.name)
+    if not (SALIDA / "compartir" / f"{IMAGEN_GENERAL}.png").exists():
+        print("AVISO: falta web-src/compartir/general.png: las páginas apuntarán a una imagen que no existe. "
+              "Ejecuta: uv run --with pillow python herramientas/imagenes_compartir.py")
+
+
+def indexacion(hechas):
+    """robots.txt y sitemap.xml con las páginas publicadas."""
+    rutas = ["/", "/verificalo", "/api"] + [r for m in hechas for r in (f'/{m["slug"]}', f'/{m["slug"]}/transcripcion')]
+    (SALIDA / "sitemap.xml").write_text(
+        '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+        + "".join(f"  <url><loc>{e(BASE + r)}</loc></url>\n" for r in rutas) + "</urlset>\n", encoding="utf-8")
+    (SALIDA / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {BASE}/sitemap.xml\n", encoding="utf-8")
+
+
 def preparar(meta):
     """Carga una entrevista y reparte sus afirmaciones por temas (capítulos del vídeo)."""
     carpeta = ENTREVISTAS / meta["slug"]
@@ -288,8 +354,14 @@ def pagina_entrevista(m, entrevistas):
     nota_excl = (f' Se han dejado fuera {excl} afirmaciones sin interés para el debate público (datos personales, anécdotas, '
                  f'duración de cargos); están en <a href="{REPO}/blob/main/entrevistas/{m["slug"]}/excluidas.json" target="_blank" '
                  f'rel="noopener noreferrer">esta lista</a>.') if excl else ""
+    cab = cabecera(
+        f'/{m["slug"]}', f'Verificación: {m["invitado"]} en The Wild Project',
+        f'{m["malas"]} de {m["suma"]} afirmaciones de {m["invitado"]} en {m["programa"]} son falsas o engañosas. '
+        'Cada una enlaza al minuto exacto del vídeo, con su justificación y sus fuentes.',
+        imagen_de(m["slug"]), titulo_social=f'{m["invitado"]} en The Wild Project, minuto a minuto',
+        alt=f'Verificación dato a dato: {m["invitado"]} ({m.get("partido") or "sin partido"}) en {m["programa"]}')
     pagina = rellenar(
-        PLANTILLA, MENU=menu(entrevistas, m["slug"]), CSS_MENU=CSS_MENU, LEYENDA=LEYENDA, NOTA_EXCL=nota_excl,
+        PLANTILLA, CABECERA=cab, MENU=menu(entrevistas, m["slug"]), CSS_MENU=CSS_MENU, LEYENDA=LEYENDA, NOTA_EXCL=nota_excl,
         FILTROS=filtros(m, '<span class="tema-actual" id="tema-actual"></span>'), SUMA=m["suma"], MALAS=m["malas"],
         FALSAS=m["total"]["falso"], ENGANOSAS=m["total"]["enganoso"], CASI=m["total"]["mayormente_verdadero"],
         VERDADERAS=m["total"]["verdadero"], NV=m["total"]["no_verificable"], FILAS="".join(filas),
@@ -323,8 +395,13 @@ def pagina_transcripcion(m, entrevistas):
             f'target="_blank" rel="noopener noreferrer">{hms(t)}</a><div><p>{e(texto)}</p>'
             + (f'<p class="chips">{marcas}</p>' if marcas else "") + "</div></div>")
     solo = '<button data-solo aria-pressed="false">Solo párrafos con afirmaciones</button>'
+    cab = cabecera(
+        f'/{m["slug"]}/transcripcion', f'Transcripción completa: {m["invitado"]} en The Wild Project',
+        f'Transcripción completa de la entrevista de Jordi Wild a {m["invitado"]} ({m["programa"]}), con marcas de tiempo '
+        'enlazadas al vídeo y a cada afirmación verificada.', imagen_de(m["slug"]),
+        alt=f'Verificación dato a dato: {m["invitado"]} ({m.get("partido") or "sin partido"}) en {m["programa"]}')
     pagina = rellenar(
-        TRANSCRIPCION, MENU=menu(entrevistas, m["slug"]), CSS_MENU=CSS_MENU, LEYENDA=LEYENDA, FILTROS=filtros(m, solo), CUERPO="".join(cuerpo),
+        TRANSCRIPCION, CABECERA=cab, MENU=menu(entrevistas, m["slug"]), CSS_MENU=CSS_MENU, LEYENDA=LEYENDA, FILTROS=filtros(m, solo), CUERPO="".join(cuerpo),
         INVITADO=e(m["invitado"]), PROGRAMA=e(m["programa"]), FECHA_VIDEO=e(m["fecha"]), DURACION=e(m["duracion"]),
         VIDEO=m["video"], SLUG=m["slug"], REPO=REPO)
     destino = SALIDA / m["slug"] / "transcripcion"
@@ -767,6 +844,8 @@ def main():
         pagina_entrevista(m, entrevistas)
         pagina_transcripcion(m, entrevistas)
     ejemplo, slugs = generar_api(hechas)
+    copiar_compartir()
+    indexacion(hechas)
     for carpeta_logos in [RAIZ / "web-src" / "logos"]:
         (SALIDA / "logos").mkdir(exist_ok=True)
         for f in carpeta_logos.glob("*.svg"):
@@ -794,21 +873,31 @@ def main():
         f'<p class="prog">{e(m.get("programa", ""))}</p><p class="des">Verificación en curso.</p></div></article>'
         for m in entrevistas if not m.get("publicar"))
     (SALIDA / "index.html").write_text(rellenar(
-        PORTADA, MENU=menu(entrevistas), CSS_MENU=CSS_MENU, LEYENDA=LEYENDA, COMPARATIVA=comparativa(hechas), TARJETAS=tarjetas, REPO=REPO,
+        PORTADA, CABECERA=cabecera(
+            "/", "Verificación de las entrevistas electorales de The Wild Project",
+            "Las entrevistas de Jordi Wild a los candidatos a las elecciones generales de 2026, comprobadas dato a dato "
+            "con el mismo método. Código y datos abiertos."), MENU=menu(entrevistas), CSS_MENU=CSS_MENU, LEYENDA=LEYENDA, COMPARATIVA=comparativa(hechas), TARJETAS=tarjetas, REPO=REPO,
         FECHA=dt.datetime.now().strftime("%d/%m/%Y")), encoding="utf-8")
     (SALIDA / "verificalo").mkdir(exist_ok=True)
     opciones = "".join(f'<option value="{e(m["slug"])}">{e(m["invitado"])}</option>' for m in hechas)
     (SALIDA / "verificalo" / "index.html").write_text(rellenar(
-        VERIFICALO, SECCION_API=api_publica.SECCION_API, JS_API=api_publica.JS_API, CSS_API=api_publica.CSS_API,
+        VERIFICALO, CABECERA=cabecera(
+            "/verificalo", "Verifícalo tú · Verificación The Wild Project",
+            "Cómo comprobar por tu cuenta cada veredicto: vídeo, fuentes, datos abiertos y un encargo listo para que "
+            "cualquier IA audite la verificación."), SECCION_API=api_publica.SECCION_API, JS_API=api_publica.JS_API, CSS_API=api_publica.CSS_API,
         MENU=menu(entrevistas), CSS_MENU=CSS_MENU, LEYENDA=LEYENDA, BASE=BASE, REPO=REPO, OPCIONES=opciones,
         EJ=ejemplo, SLUGS=", ".join(f"<code>{x}</code>" for x in slugs)), encoding="utf-8")
     (SALIDA / "api").mkdir(exist_ok=True)
     (SALIDA / "api" / "index.html").write_text(rellenar(
-        PAGINA_API, PROMPT=e(prompt_agente(hechas)), MENU=menu(entrevistas), CSS_MENU=CSS_MENU, BASE=BASE, REPO=REPO,
+        PAGINA_API, CABECERA=cabecera(
+            "/api", "API abierta · Verificación The Wild Project",
+            "API JSON y CSV de solo lectura, sin clave y con CORS abierto: referencia completa de cada ruta y cada campo, "
+            "y un prompt listo para agentes de IA."), PROMPT=e(prompt_agente(hechas)), MENU=menu(entrevistas), CSS_MENU=CSS_MENU, BASE=BASE, REPO=REPO,
         SCALAR=SCALAR, SCALAR_SRI=SCALAR_SRI), encoding="utf-8")
     # La referencia vivió unas horas en /api/referencia: se redirige (aquí y en vercel.json).
     (SALIDA / "api" / "referencia").mkdir(exist_ok=True)
-    (SALIDA / "api" / "referencia" / "index.html").write_text(REDIRIGE_API, encoding="utf-8")
+    (SALIDA / "api" / "referencia" / "index.html").write_text(rellenar(REDIRIGE_API, CABECERA=cabecera(
+        "/api", "API abierta · Verificación The Wild Project", "La referencia de la API está en /api.")), encoding="utf-8")
 
 
 LEYENDA = """<section class="leyenda-f" aria-label="Leyenda de veredictos">
@@ -907,8 +996,7 @@ VERIFICALO = """<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 @@HEAD_MODO@@
-<title>Verifícalo tú · Verificación The Wild Project</title>
-<meta name="description" content="Cómo comprobar por tu cuenta cada veredicto: vídeo, fuentes, datos abiertos y un encargo listo para que cualquier IA audite la verificación.">
+@@CABECERA@@
 <style>
 :root { --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; }
 * { box-sizing:border-box; }
@@ -1037,8 +1125,7 @@ PAGINA_API = """<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 @@HEAD_MODO@@
-<title>API abierta · Verificación The Wild Project</title>
-<meta name="description" content="API JSON y CSV de solo lectura, sin clave y con CORS abierto: referencia completa de cada ruta y cada campo, y un prompt listo para agentes de IA.">
+@@CABECERA@@
 <style>
 :root { --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; --scalar-custom-header-height:var(--menu, 48px); }
 * { box-sizing:border-box; }
@@ -1127,8 +1214,9 @@ noscript p { max-width:68ch; margin:24px 16px; }
 """
 
 REDIRIGE_API = """<!doctype html>
-<html lang="es"><head><meta charset="utf-8"><meta http-equiv="refresh" content="0; url=/api"><link rel="canonical" href="/api">
-<title>API abierta</title></head><body><p>La referencia de la API está ahora en <a href="/api">/api</a>.</p></body></html>
+<html lang="es"><head><meta charset="utf-8"><meta http-equiv="refresh" content="0; url=/api">
+@@CABECERA@@
+</head><body><p>La referencia de la API está ahora en <a href="/api">/api</a>.</p></body></html>
 """
 
 PORTADA = """<!doctype html>
@@ -1137,8 +1225,7 @@ PORTADA = """<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 @@HEAD_MODO@@
-<title>Verificación de las entrevistas electorales de The Wild Project</title>
-<meta name="description" content="Las entrevistas de Jordi Wild a los candidatos a las elecciones generales de 2026, comprobadas dato a dato con el mismo método. Código y datos abiertos.">
+@@CABECERA@@
 <style>
 :root { --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; }
 * { box-sizing:border-box; }
@@ -1224,8 +1311,7 @@ TRANSCRIPCION = """<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 @@HEAD_MODO@@
-<title>Transcripción completa: @@INVITADO@@ en The Wild Project</title>
-<meta name="description" content="Transcripción completa de la entrevista de Jordi Wild a @@INVITADO@@ (@@PROGRAMA@@), con marcas de tiempo enlazadas al vídeo y a cada afirmación verificada.">
+@@CABECERA@@
 <style>
 :root { --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; }
 * { box-sizing:border-box; }
@@ -1291,10 +1377,7 @@ PLANTILLA = """<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 @@HEAD_MODO@@
-<title>Verificación: @@INVITADO@@ en The Wild Project</title>
-<meta name="description" content="Línea temporal de la entrevista de Jordi Wild a @@INVITADO@@: @@MALAS@@ afirmaciones falsas o engañosas, cada una con su minuto, su justificación y sus fuentes.">
-<meta property="og:title" content="@@INVITADO@@ en The Wild Project, minuto a minuto">
-<meta property="og:description" content="@@MALAS@@ de @@SUMA@@ afirmaciones son falsas o engañosas. Cada una enlaza al segundo exacto del vídeo y a sus fuentes.">
+@@CABECERA@@
 <style>
 :root { --col:330px; --hueco:56px;
   --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; }
