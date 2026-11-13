@@ -10,27 +10,44 @@ comparable. La regla principal: **la misma vara de medir para todos los invitado
 .venv/bin/python herramientas/transcribir.py <slug> <url-de-youtube> "<Nombre del invitado>" "<glosario opcional>"
 ```
 
-Crea `entrevistas/<slug>/` con la transcripción (`transcripcion.txt`, párrafos de ~1 minuto con marca
-`[h:mm:ss]`), los segmentos con tiempos (`segmentos.json`), los capítulos del vídeo (`capitulos.json`) y
-`meta.json`. Revisa `meta.json` (nombre del invitado, programa, fecha, duración). El audio no se sube al repo.
+Descarga el audio y lo transcribe en local con Whisper (`large-v3-turbo`). Crea `entrevistas/<slug>/` con la
+transcripción (`transcripcion.txt`, párrafos de ~1 minuto con marca `[h:mm:ss]`), los segmentos con tiempos
+(`segmentos.json`), los capítulos del vídeo (`capitulos.json`), `info.txt` y `meta.json`. Revisa `meta.json`
+(nombre del invitado, programa, fecha, duración). El audio (`entrevista.m4a`) se queda en esa carpeta, pero no se
+sube al repo.
 
 Si el entorno `.venv` no existe: `uv venv --python 3.12 && uv pip install mlx-whisper`.
 
 ## 1 bis. Reconocer quién habla
 
 ```sh
-.venv/bin/python herramientas/hablantes.py <slug>
+uv pip install sherpa-onnx          # una sola vez
+.venv/bin/python herramientas/hablantes.py <slug> [umbral]
 ```
 
-Necesita `sherpa-onnx` y el modelo de huella de voz TitaNet-large en `.modelos/` (el enlace está en la cabecera del
-script). Antes hay que añadir en `MUESTRAS` dos fragmentos escuchados a mano en los que hable una sola persona: Jordi
-presentando el programa y una respuesta larga del invitado. Cada segmento de la transcripción se compara con esas dos
-muestras (recalibradas con los segmentos más claros) y con una de los verificadores del programa; si no se parece a
-ninguna queda como «Voz sin identificar».
+Whisper transcribe pero no dice quién habla, así que este paso atribuye cada segmento de la transcripción a una voz,
+en local. Parte del audio y de `segmentos.json` que deja el paso 1 y necesita `ffmpeg`, `sherpa-onnx` y el modelo de
+huella de voz TitaNet-large en `.modelos/` (el enlace de descarga está en la cabecera del script).
 
-Escribe `hablantes.json` (la voz de cada segmento, con sus puntuaciones) y `transcripcion-hablantes.txt`. Con 125
-segmentos etiquetados a mano de la entrevista de Sánchez acertó el 96,8 %; los fallos son frases de menos de un
-segundo y segmentos en los que Whisper juntó a los dos hablantes. El agrupamiento automático sin muestras dio
+Antes hay que añadir en `MUESTRAS`, para la entrevista nueva, dos fragmentos escuchados a mano en los que hable una
+sola persona: Jordi presentando el programa (`J`) y una respuesta larga del invitado (`G`). La muestra de los
+verificadores del programa (Iván Muñoz y Javier Collado) es la misma para todas las entrevistas y sale de la de Sánchez
+(`MUESTRA_VERIFICADORES`).
+
+1. Se calcula la huella de voz de cada segmento; los de menos de 1,2 s se amplían por los dos lados hasta 1,2 s.
+2. Cada huella se compara con las muestras de Jordi y del invitado, que se recalibran dos veces con los segmentos
+   largos y claros, y con la de los verificadores.
+3. Si el segmento no se parece lo bastante a ninguna queda como «Voz sin identificar» (verificadores, cortes, público).
+   El umbral es 0,25 y se puede cambiar con el segundo argumento.
+4. Un segmento de menos de 1,5 s y dudoso, entre dos del mismo hablante, toma la etiqueta de esos dos.
+
+Escribe `hablantes.json` (la voz de cada segmento con sus puntuaciones, el tiempo total de cada voz y un campo `metodo`
+con la herramienta, el umbral y el acierto medido) y `transcripcion-hablantes.txt` (la transcripción por intervenciones).
+La web los usa para mostrar la transcripción por voces y la API publica el hablante de cada segmento.
+
+Con 125 segmentos de la entrevista de Sánchez etiquetados a mano, la huella de voz TitaNet acertó el 96,8 % (medido
+sin recalibrar). Los fallos son frases de menos de 1,5 segundos y segmentos en los que Whisper juntó a los dos
+hablantes. Esa medición solo se hizo en la entrevista de Sánchez. El agrupamiento automático sin muestras dio
 resultados mucho peores (partía a cada persona en varias voces) y se descartó.
 
 ## 2. Repartir por temas
@@ -78,6 +95,12 @@ Lanza en paralelo un subagente (modelo Sonnet, con WebSearch y WebFetch) por blo
 
 La `cita` debe ser literal: la web la usa para encontrar el segundo exacto del vídeo.
 
+Este encargo, tal cual, es el que se usó en las tres entrevistas publicadas. Se hicieron con `transcripcion.txt`, que
+no lleva etiquetas de hablante (por eso pide deducir quién habla por el contexto): el reconocimiento de voces del paso
+1 bis se añadió después. Para una entrevista nueva, `transcripcion-hablantes.txt` ya indica quién habla en cada
+intervención; si se entrega ese fichero en lugar de `transcripcion.txt`, hay que cambiar en el encargo la ruta y la
+frase sobre los hablantes.
+
 ## 4. Resumir las justificaciones
 
 Un subagente Sonnet por fichero de resultados. Para cada afirmación, en el mismo orden, un resumen de la
@@ -105,7 +128,8 @@ aunque parezca menor. Los identificadores (`m<segundo>`) se asignan antes de exc
 
 ## 5. Generar la web y publicar
 
-Cuando todos los bloques y resúmenes estén completos, añade `"publicar": true` a `entrevistas/<slug>/meta.json`
+Cuando todos los bloques y resúmenes estén completos y `python3 herramientas/comprobar_datos.py` no dé errores
+(valida los JSON, los veredictos y que cada resumen case con su afirmación), añade `"publicar": true` a `entrevistas/<slug>/meta.json`
 (el generador ignora las entrevistas que no lo tienen, para no publicar verificaciones a medias).
 
 Antes de generar la web, crea las imágenes que se ven al compartir los enlaces (vista previa en WhatsApp, X,
@@ -116,10 +140,15 @@ ficheros al repositorio. Si falta la imagen de una entrevista, `build.py` avisa 
 
 ```sh
 uv run --with pillow python herramientas/imagenes_compartir.py   # web-src/compartir/<slug>.png, 1200×630
-python3 web-src/build.py                                  # genera web/index.html y web/<slug>/index.html
+python3 web-src/build.py                                  # genera toda la web en web/ (páginas, API y vercel.json)
 git add entrevistas/<slug> web web-src/compartir && git commit -m "Verificación de la entrevista a <invitado>" && git push
 cd web && npx vercel deploy --prod --yes --scope pablopc05s-projects
 ```
+
+La API se genera como JSON estático en `web/datos/` (ahí está también su documentación) y `web/vercel.json` hace que
+Vercel la sirva en `/api` y en `/api/v1/…`. En local, con `python3 -m http.server -d web`, los datos están en
+`/datos/v1/`. Esta página (`/metodologia`) sale de este mismo fichero, `METODO.md`: para cambiar el método, se edita
+aquí y se vuelve a ejecutar `build.py`.
 
 ## Qué significa cada veredicto
 
@@ -137,5 +166,9 @@ cd web && npx vercel deploy --prod --yes --scope pablopc05s-projects
 - Los subagentes tienen un cupo de búsquedas; cuando se agota, lo que queda sin contrastar se marca «no
   verificable», no «verdadero».
 - Algunas páginas oficiales no se dejan abrir de forma automática y se citan a través de prensa.
-- La transcripción automática no distingue hablantes y a veces confunde nombres.
+- La transcripción automática a veces confunde nombres y cifras. La atribución de cada frase a su hablante también es
+  automática: acertó el 96,8 % en las 125 frases comprobadas a mano de la entrevista de Sánchez (no se ha medido en las
+  otras dos) y falla sobre todo en frases muy cortas.
 - El número de afirmaciones falsas depende de cuánto habla cada invitado y de cuántos datos da: no es un ranking.
+
+Para proponer una corrección, mira [CONTRIBUTING.md](CONTRIBUTING.md).

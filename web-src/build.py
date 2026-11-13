@@ -268,11 +268,208 @@ def copiar_compartir():
 
 def indexacion(hechas):
     """robots.txt y sitemap.xml con las páginas publicadas."""
-    rutas = ["/", "/verificalo", "/quien", "/api"] + [r for m in hechas for r in (f'/{m["slug"]}', f'/{m["slug"]}/transcripcion')]
+    rutas = ["/", "/verificalo", "/metodologia", "/quien", "/api"] + [r for m in hechas for r in (f'/{m["slug"]}', f'/{m["slug"]}/transcripcion')]
     (SALIDA / "sitemap.xml").write_text(
         '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
         + "".join(f"  <url><loc>{e(BASE + r)}</loc></url>\n" for r in rutas) + "</urlset>\n", encoding="utf-8")
     (SALIDA / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {BASE}/sitemap.xml\n", encoding="utf-8")
+
+
+# ───────────────────────── Markdown → HTML (solo lo que usa METODO.md) ─────────────────────────
+
+_EN_LINEA = re.compile(r"`([^`]+)`|\*\*(.+?)\*\*|\[([^\]]+)\]\(([^)\s]+)\)")
+_ITEM = re.compile(r"^(\s*)([-*]|\d+\.)\s+(.*)$")
+_SEPARADOR = re.compile(r"^\s*\|?\s*:?-+:?\s*(\|\s*:?-+:?\s*)*\|?\s*$")
+
+
+def md_enlace(url):
+    """Dirección de un enlace de Markdown: los ficheros relativos (CONTRIBUTING.md) van al repositorio en GitHub.
+    Devuelve (href, externo), o None si el esquema no es seguro (javascript:, data:...), y el enlace queda como texto."""
+    if url.startswith(("http://", "https://")):
+        return url, True
+    if re.match(r"^[a-zA-Z][a-zA-Z0-9+.-]*:", url):
+        return None
+    if url.startswith(("#", "/")):
+        return url, False
+    return f"{REPO}/blob/main/{url[2:] if url.startswith('./') else url}", True
+
+
+def md_en_linea(texto):
+    """`código`, **negrita** y [enlaces](url) de un texto; todo lo demás se escapa."""
+    partes, pos = [], 0
+    for m in _EN_LINEA.finditer(texto):
+        partes.append(e(texto[pos:m.start()]))
+        if m.group(1) is not None:
+            partes.append(f"<code>{e(m.group(1))}</code>")
+        elif m.group(2) is not None:
+            partes.append(f"<strong>{md_en_linea(m.group(2))}</strong>")
+        else:
+            destino = md_enlace(m.group(4))
+            if destino is None:
+                partes.append(md_en_linea(m.group(3)))
+            else:
+                href, externo = destino
+                abre = ' target="_blank" rel="noopener noreferrer"' if externo else ""
+                partes.append(f'<a href="{e(href, quote=True)}"{abre}>{md_en_linea(m.group(3))}</a>')
+        pos = m.end()
+    partes.append(e(texto[pos:]))
+    return "".join(partes)
+
+
+def md_celdas(linea):
+    """Celdas de una fila de tabla: separa por | salvo dentro de `código` o si va escapada (\\|)."""
+    linea = linea.strip()
+    if linea.startswith("|"):
+        linea = linea[1:]
+    if linea.endswith("|") and not linea.endswith("\\|"):
+        linea = linea[:-1]
+    celdas, actual, en_codigo, i = [], "", False, 0
+    while i < len(linea):
+        c = linea[i]
+        if c == "\\" and i + 1 < len(linea) and linea[i + 1] == "|":
+            actual += "|"
+            i += 2
+            continue
+        if c == "`":
+            en_codigo = not en_codigo
+        if c == "|" and not en_codigo:
+            celdas.append(actual.strip())
+            actual = ""
+        else:
+            actual += c
+        i += 1
+    celdas.append(actual.strip())
+    return celdas
+
+
+def md_tabla(filas, alineacion):
+    def fila(celdas, etiqueta):
+        celdas = (celdas + [""] * len(alineacion))[:len(alineacion)]
+        return "<tr>" + "".join(
+            f'<{etiqueta}{alineacion[k]}>{md_en_linea(c)}</{etiqueta}>' for k, c in enumerate(celdas)) + "</tr>"
+    return ('<div class="tabla-md"><table><thead>' + fila(filas[0], "th") + "</thead><tbody>"
+            + "".join(fila(f, "td") for f in filas[1:]) + "</tbody></table></div>")
+
+
+def md_id(texto, usados):
+    """Identificador estable de un título: su texto sin el número de paso, en minúsculas y sin tildes."""
+    base = re.sub(r"^\d+( bis)?\.\s*", "", texto)
+    base = unicodedata.normalize("NFD", base.lower())
+    base = re.sub(r"[^a-z0-9]+", "-", "".join(c for c in base if not unicodedata.combining(c))).strip("-") or "seccion"
+    ident, n = base, 2
+    while ident in usados:
+        ident, n = f"{base}-{n}", n + 1
+    usados.add(ident)
+    return ident
+
+
+def md_lista(lineas, i):
+    """Lista que empieza en lineas[i]: (html, índice de la primera línea que ya no es de la lista)."""
+    ordenada = _ITEM.match(lineas[i]).group(2)[0].isdigit()
+    sangria = len(_ITEM.match(lineas[i]).group(1))
+    primero = int(_ITEM.match(lineas[i]).group(2)[:-1]) if ordenada else 1
+    items = []
+    while i < len(lineas):
+        m = _ITEM.match(lineas[i])
+        if not m or len(m.group(1)) != sangria or m.group(2)[0].isdigit() != ordenada:
+            break
+        cuerpo = [m.group(3)]
+        i += 1
+        while i < len(lineas) and lineas[i].strip() and not (_ITEM.match(lineas[i]) and len(_ITEM.match(lineas[i]).group(1)) <= sangria):
+            cuerpo.append(lineas[i].strip() if not lineas[i].startswith(" " * (sangria + 2)) else lineas[i][sangria + 2:])
+            i += 1
+        items.append(cuerpo)
+    html_items = []
+    for cuerpo in items:
+        donde = next((k for k, l in enumerate(cuerpo) if k and _ITEM.match(l)), len(cuerpo))
+        texto = md_en_linea(" ".join(l.strip() for l in cuerpo[:donde]))
+        anidada = md_a_html("\n".join(cuerpo[donde:]))[0] if donde < len(cuerpo) else ""
+        html_items.append(f"<li>{texto}{anidada}</li>")
+    etiqueta = "ol" if ordenada else "ul"
+    inicio = f' start="{primero}"' if ordenada and primero != 1 else ""
+    return f"<{etiqueta}{inicio}>" + "".join(html_items) + f"</{etiqueta}>", i
+
+
+def md_a_html(texto, usados=None):
+    """Convierte el Markdown de METODO.md en HTML. Devuelve (html, títulos), con títulos = [(nivel, id, texto)].
+
+    Cubre solo lo que usa ese fichero: títulos #, ## y ### (los ## con id para enlazarlos), párrafos, bloques de código
+    con ```, citas > de varios párrafos, tablas, listas con - y con 1. (con líneas de continuación sangradas) y, en línea,
+    `código`, **negrita** y [enlaces](url). Todo el texto se escapa."""
+    usados = set() if usados is None else usados
+    lineas, salida, titulos, i = texto.splitlines(), [], [], 0
+
+    def empieza_bloque(k):
+        l = lineas[k]
+        return (l.startswith("```") or l.startswith(">") or re.match(r"^#{1,3} ", l) or _ITEM.match(l)
+                or (l.lstrip().startswith("|") and k + 1 < len(lineas) and _SEPARADOR.match(lineas[k + 1])))
+
+    while i < len(lineas):
+        linea = lineas[i]
+        if not linea.strip():
+            i += 1
+        elif linea.startswith("```"):
+            i += 1
+            codigo = []
+            while i < len(lineas) and not lineas[i].startswith("```"):
+                codigo.append(lineas[i])
+                i += 1
+            i += 1
+            salida.append(f"<pre><code>{e(chr(10).join(codigo))}</code></pre>")
+        elif re.match(r"^#{1,3} ", linea):
+            nivel, _, titulo = linea.partition(" ")
+            nivel, titulo = len(nivel), titulo.strip()
+            ident = md_id(titulo, usados) if nivel == 2 else None
+            titulos.append((nivel, ident, titulo))
+            atributo = f' id="{ident}"' if ident else ""
+            salida.append(f"<h{nivel}{atributo}>{md_en_linea(titulo)}</h{nivel}>")
+            i += 1
+        elif linea.startswith(">"):
+            cita = []
+            while i < len(lineas) and lineas[i].startswith(">"):
+                cita.append(re.sub(r"^> ?", "", lineas[i]))
+                i += 1
+            salida.append("<blockquote>" + md_a_html("\n".join(cita), usados)[0] + "</blockquote>")
+        elif linea.lstrip().startswith("|") and i + 1 < len(lineas) and _SEPARADOR.match(lineas[i + 1]):
+            alineacion = []
+            for c in md_celdas(lineas[i + 1]):
+                alineacion.append(' style="text-align:center"' if c.startswith(":") and c.endswith(":")
+                                  else ' style="text-align:right"' if c.endswith(":") else "")
+            filas = [md_celdas(linea)]
+            i += 2
+            while i < len(lineas) and lineas[i].lstrip().startswith("|"):
+                filas.append(md_celdas(lineas[i]))
+                i += 1
+            salida.append(md_tabla(filas, alineacion))
+        elif _ITEM.match(linea):
+            html_lista, i = md_lista(lineas, i)
+            salida.append(html_lista)
+        else:
+            parrafo = [linea.strip()]
+            i += 1
+            while i < len(lineas) and lineas[i].strip() and not empieza_bloque(i):
+                parrafo.append(lineas[i].strip())
+                i += 1
+            salida.append(f"<p>{md_en_linea(' '.join(parrafo))}</p>")
+    return "\n".join(salida), titulos
+
+
+def pagina_metodologia(entrevistas):
+    """/metodologia: el texto de METODO.md convertido a HTML, para que el método tenga una sola fuente."""
+    fuente = (RAIZ / "METODO.md").read_text(encoding="utf-8")
+    lineas = fuente.splitlines()
+    k = next((n for n, l in enumerate(lineas) if l.startswith("# ")), None)  # el título de la página es el primer #
+    titulo = lineas[k][2:].strip() if k is not None else "Método de verificación"
+    resto = "\n".join(lineas[:k] + lineas[k + 1:] if k is not None else lineas)
+    cuerpo, titulos = md_a_html(resto)
+    indice = "".join(f'<li><a href="#{t[1]}"><span>{md_en_linea(t[2])}</span></a></li>' for t in titulos if t[0] == 2)
+    (SALIDA / "metodologia").mkdir(exist_ok=True)
+    (SALIDA / "metodologia" / "index.html").write_text(rellenar(
+        METODOLOGIA, CABECERA=cabecera(
+            "/metodologia", f"{titulo} · Verificación The Wild Project",
+            "El procedimiento exacto con el que se verifica cada entrevista, el encargo que recibe cada agente de IA, "
+            "los criterios de cada veredicto y los límites conocidos."),
+        MENU=menu(entrevistas), CSS_MENU=CSS_MENU, REPO=REPO, TITULO=e(titulo), INDICE=indice, CUERPO=cuerpo), encoding="utf-8")
 
 
 def preparar(meta):
@@ -331,7 +528,7 @@ def menu(entrevistas, actual=None):
             f'<a class="fuerte" href="/{s}/transcripcion"><span>Transcripción completa</span></a>'
             f'<p class="rot">Temas</p>{temas}</div></details>')
     return ('<header class="menu"><div class="ancho"><div class="m1"><a class="sello" href="/" title="Todas las entrevistas">Verificación</a>'
-            + "".join(partes) + '<a class="dcha" href="/verificalo">Verifícalo tú</a><a href="/quien">Quién lo hace</a><a href="/api">API</a>'
+            + "".join(partes) + '<a class="dcha" href="/verificalo">Verifícalo tú</a><a href="/metodologia">Método</a><a href="/quien">Quién lo hace</a><a href="/api">API</a>'
             f'<a href="{REPO}" target="_blank" rel="noopener noreferrer">GitHub ↗</a>' + BOTON_MODO + '</div></div></header>' + JS_MENU)
 
 
@@ -1104,6 +1301,7 @@ def main():
             "/quien", "Quién hace esto · Verificación The Wild Project",
             "Quién hace esta verificación, su independencia, quién la paga, cómo se hace y cómo se corrigen los errores."),
         MENU=menu(entrevistas), CSS_MENU=CSS_MENU, REPO=REPO, REPO_PABLO=REPO_PABLO), encoding="utf-8")
+    pagina_metodologia(entrevistas)
     DATOS.mkdir(exist_ok=True)
     (DATOS / "index.html").write_text(rellenar(
         PAGINA_API, CABECERA=cabecera(
@@ -1365,7 +1563,7 @@ code { font:13.5px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace; background:v
 <li><b>1</b><div><h3>Mira el momento exacto</h3><p>En la línea temporal, el minuto de cada afirmación abre el vídeo de YouTube en ese segundo. Escucha la frase y su contexto.</p></div></li>
 <li><b>2</b><div><h3>Abre las fuentes</h3><p>Cada panel lista las fuentes con su enlace. «Explicación completa» detalla qué dato sale de cada una.</p></div></li>
 <li><b>3</b><div><h3>Pásaselo a una IA</h3><p>Cada panel tiene un botón que copia un encargo para esa afirmación concreta. Para auditar una entrevista entera, usa el encargo de abajo.</p></div></li>
-<li><b>4</b><div><h3>Consulta la API</h3><p>Afirmaciones, veredictos, fuentes y transcripciones, en JSON y CSV, sin clave. Está <a href="#api">aquí abajo</a>, con ejemplos para hoja de cálculo, terminal y programación. El método y los encargos originales, en <a href="@@REPO@@" target="_blank" rel="noopener noreferrer">GitHub</a>.</p></div></li>
+<li><b>4</b><div><h3>Consulta la API</h3><p>Afirmaciones, veredictos, fuentes y transcripciones, en JSON y CSV, sin clave. Está <a href="#api">aquí abajo</a>, con ejemplos para hoja de cálculo, terminal y programación. El <a href="/metodologia">método</a>, con los encargos originales, tiene su propia página; el código y los datos están en <a href="@@REPO@@" target="_blank" rel="noopener noreferrer">GitHub</a>.</p></div></li>
 </ol>
 
 @@SECCION_API@@
@@ -1495,7 +1693,7 @@ main ul { padding-left:22px; } main li { margin:4px 0; }
 <li>Modelos de IA de Claude (Sonnet), con búsqueda web, contrastan cada afirmación con fuentes públicas y le ponen un veredicto.</li>
 <li>Ninguna persona periodista ha revisado los veredictos.</li>
 </ul>
-<p>El procedimiento completo está en el <a href="@@REPO@@/blob/main/METODO.md" target="_blank" rel="noopener noreferrer">método, en GitHub</a>. En <a href="/verificalo">Verifícalo tú</a> puedes comprobar cada veredicto por tu cuenta.</p>
+<p>El procedimiento completo está en el <a href="/metodologia">método</a>. En <a href="/verificalo">Verifícalo tú</a> puedes comprobar cada veredicto por tu cuenta.</p>
 
 <h2 id="errores">Errores y correcciones</h2>
 <p>Si ves un error, abre una incidencia en GitHub con la plantilla «Corregir una afirmación»: <a href="@@REPO@@/issues/new/choose" target="_blank" rel="noopener noreferrer">abrir una incidencia</a>. Indica el identificador de la afirmación o el minuto, y una fuente.</p>
@@ -1504,6 +1702,88 @@ main ul { padding-left:22px; } main li { margin:4px 0; }
 <p>El contacto es solo por GitHub.</p>
 </main>
 <footer class="pie-solo"><div class="ancho">@@PIE@@</div></footer>
+</body>
+</html>
+"""
+
+METODOLOGIA = """<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+@@HEAD_MODO@@
+@@CABECERA@@
+<style>
+:root { --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--fondo); color:var(--tinta); font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; }
+a { color:var(--tinta); text-underline-offset:3px; }
+main.ancho { padding-bottom:72px; }
+.lectura { max-width:780px; min-width:0; }
+.indice { display:none; }
+/* En pantallas anchas, un índice de secciones fijo a la izquierda acompaña la lectura y marca la sección en curso */
+@media (min-width:1180px) {
+  main.ancho { display:grid; grid-template-columns:minmax(220px,300px) minmax(0,780px); gap:0 clamp(40px,5vw,88px); }
+  .indice { display:block; position:sticky; top:calc(var(--menu, 48px) + 64px); align-self:start; margin-top:44px;
+    max-height:calc(100vh - var(--menu, 48px) - 96px); overflow-y:auto; scrollbar-width:thin; }
+  .indice p { margin:0 0 8px; font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.09em; color:var(--gris); }
+  .indice ol { list-style:none; margin:0; padding:0; border-top:2px solid var(--tinta); }
+  .indice a { display:flex; justify-content:space-between; gap:12px; padding:8px 10px; margin:0 -10px; border-bottom:1px solid var(--claro);
+    font-size:14px; line-height:1.35; text-decoration:none; }
+  .indice a:hover { background:var(--resalte); }
+  .indice a.aqui { font-weight:700; box-shadow:inset 3px 0 0 var(--tinta); } }
+h1 { font:700 clamp(30px,5.2vw,52px)/1.05 var(--serif); letter-spacing:-0.02em; margin:clamp(28px,5vw,44px) 0 14px; text-wrap:balance; }
+.entrada { font-size:15px; color:var(--suave); max-width:64ch; margin:0 0 22px; padding:10px 14px; border:2px solid var(--tinta); border-radius:var(--r-caja,14px); }
+.entrada a { font-weight:600; }
+.texto > p:first-child { font-size:17px; }
+.texto h2 { font:700 23px/1.2 var(--serif); margin:44px 0 14px; padding-top:12px; border-top:3px solid var(--tinta); text-wrap:balance; }
+.texto h3 { font:700 18px/1.3 var(--serif); margin:28px 0 8px; }
+.texto p, .texto li { max-width:68ch; }
+.texto ul, .texto ol { padding-left:24px; margin:12px 0; }
+.texto li { margin:6px 0; }
+.texto li > ul, .texto li > ol { margin:6px 0; }
+.texto code { font:13.5px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace; background:var(--codigo); padding:1px 5px; overflow-wrap:anywhere; }
+.texto pre { background:var(--pre-fondo); color:var(--pre-tinta); outline:1px solid var(--pre-borde); outline-offset:-1px; padding:16px 18px; white-space:pre-wrap; overflow-wrap:anywhere; font:13px/1.6 ui-monospace,SFMono-Regular,Menlo,monospace; margin:14px 0 18px; }
+.texto pre code { background:none; padding:0; font:inherit; overflow-wrap:anywhere; }
+/* El encargo a los subagentes: una cita larga, con una barra a la izquierda */
+.texto blockquote { margin:18px 0; padding:6px 18px; border-left:4px solid var(--tinta); background:var(--resalte); font-size:15px; }
+.texto blockquote p { max-width:none; }
+.texto blockquote code { background:var(--fondo); }
+/* Las tablas se desplazan dentro de su caja: nunca ensanchan la página */
+.tabla-md { max-width:100%; overflow-x:auto; margin:16px 0 22px; -webkit-overflow-scrolling:touch; }
+.tabla-md table { border-collapse:collapse; width:100%; font-size:15px; }
+.tabla-md th { text-align:left; font-size:12px; text-transform:uppercase; letter-spacing:.07em; color:var(--gris); border-bottom:2px solid var(--tinta); }
+.tabla-md th, .tabla-md td { padding:9px 14px 9px 0; vertical-align:top; }
+.tabla-md td { border-bottom:1px solid var(--claro); }
+.tabla-md td:first-child { font-weight:700; min-width:8.5em; }
+.tabla-md td code { font-size:12.5px; }
+@@CSS_MENU@@
+</style>
+</head>
+<body>
+@@MENU@@
+<main class="ancho">
+<nav class="indice" aria-label="Secciones del método"><p>Secciones</p><ol>@@INDICE@@</ol></nav>
+<div class="lectura">
+<h1>@@TITULO@@</h1>
+<p class="entrada">Esta página es el texto de <a href="@@REPO@@/blob/main/METODO.md" target="_blank" rel="noopener noreferrer"><code>METODO.md</code></a> del repositorio, tal cual está hoy. Cada cambio queda en su <a href="@@REPO@@/commits/main/METODO.md" target="_blank" rel="noopener noreferrer">historial de cambios</a>.</p>
+<div class="texto">
+@@CUERPO@@
+</div>
+</div>
+</main>
+<footer class="pie-solo"><div class="ancho">@@PIE@@</div></footer>
+<script>
+const enIndice = new Map([...document.querySelectorAll(".indice a")].map(a => [a.hash.slice(1), a]));
+if (enIndice.size && "IntersectionObserver" in window) {
+  const obs = new IntersectionObserver(es => es.forEach(x => {
+    if (!x.isIntersecting) return;
+    enIndice.forEach(a => a.classList.remove("aqui"));
+    enIndice.get(x.target.id)?.classList.add("aqui");
+  }), { rootMargin: "0px 0px -70% 0px" });
+  enIndice.forEach((a, id) => { const h = document.getElementById(id); if (h) obs.observe(h); });
+}
+</script>
 </body>
 </html>
 """
@@ -2057,7 +2337,7 @@ footer .leyenda-f { margin-bottom:34px; max-width:820px; }
   <div class="titular">@@RETRATO@@<h1>@@INVITADO@@ con Jordi Wild, minuto a minuto</h1></div>
   <div class="intro">
   <p class="entrada">Hemos transcrito la <a href="https://www.youtube.com/watch?v=@@VIDEO@@" target="_blank" rel="noopener noreferrer">entrevista completa</a> (@@DURACION@@) y contrastado con fuentes públicas las @@SUMA@@ afirmaciones que se pueden comprobar. Esta es la línea temporal: pulsa cualquier minuto para ver ese momento del vídeo, o lee la <a href="/@@SLUG@@/transcripcion">transcripción completa</a>.</p>
-  <p class="abrir"><b>Contrástalo tú mismo.</b> Cada panel enlaza el vídeo y sus fuentes, y trae un botón que copia un encargo listo para pegar en cualquier IA. También puedes descargar <a href="/api/v1/@@SLUG@@.json">todos los datos de esta entrevista (JSON)</a>, usar la <a href="/api">API abierta</a> o leer el <a href="@@REPO@@/blob/main/METODO.md" target="_blank" rel="noopener noreferrer">método</a>.</p>
+  <p class="abrir"><b>Contrástalo tú mismo.</b> Cada panel enlaza el vídeo y sus fuentes, y trae un botón que copia un encargo listo para pegar en cualquier IA. También puedes descargar <a href="/api/v1/@@SLUG@@.json">todos los datos de esta entrevista (JSON)</a>, usar la <a href="/api">API abierta</a> o leer el <a href="/metodologia">método</a>.</p>
   </div>
   <div class="cifras">
   <div class="dato"><b>@@MALAS@@</b><span>afirmaciones falsas (@@FALSAS@@) o engañosas (@@ENGANOSAS@@) de @@SUMA@@ comprobadas</span></div>
