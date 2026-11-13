@@ -606,7 +606,7 @@ def copiar_compartir():
 
 def indexacion(hechas):
     """robots.txt y sitemap.xml con las páginas publicadas."""
-    rutas = (["/", "/buscar", "/metodologia", "/quien", "/api"]
+    rutas = (["/", "/buscar", "/participa", "/metodologia", "/quien", "/api"]
              + [r for m in hechas for r in (f'/{m["slug"]}', f'/{m["slug"]}/transcripcion')]
              + [f'/{m["slug"]}/{a["_id"]}' for m in hechas for a in m["todas"]])
     (SALIDA / "sitemap.xml").write_text(
@@ -878,10 +878,11 @@ def menu(entrevistas, actual=None):
             f'<a href="/{s}/transcripcion">{ICONO_TEXTO}<span>Transcripción</span></a></div>'
             f'<p class="rot">Temas <span>· en rojo, cuántas falsas o engañosas</span></p><ol class="lista-temas">{temas}</ol></div></details>')
     aqui_buscar = ' aria-current="page"' if actual == "buscar" else ""
+    aqui_participa = ' aria-current="page"' if actual == "participa" else ""
     return ('<header class="menu"><div class="ancho"><div class="m1"><a class="sello" href="/" title="Todas las entrevistas">Verificación</a>'
             + "".join(partes) + f'<a class="dcha buscar"{aqui_buscar} href="/buscar" title="Buscar una afirmación (tecla /)">{ICONO_LUPA}<span>Buscar</span></a>'
-            '<a href="/api">Verifícalo tú</a><a href="/metodologia">Método</a><a href="/quien">Quién lo hace</a>'
-            f'<a href="{REPO}" target="_blank" rel="noopener noreferrer">GitHub ↗</a>' + BOTON_MODO + '</div></div></header>' + JS_MENU)
+            f'<a href="/api">Verifícalo tú</a><a href="/participa"{aqui_participa}>Participa</a><a href="/metodologia">Método</a><a href="/quien">Quién lo hace</a>'
+            f'<a class="gh" href="{REPO}" target="_blank" rel="noopener noreferrer">GitHub ↗</a>' + BOTON_MODO + '</div></div></header>' + JS_MENU)
 
 
 JS_MENU = """<script>
@@ -2281,6 +2282,13 @@ def main():
         (SALIDA / ruta_f / "index.html").write_text(rellenar(
             plantilla_f, ESTILO_FORM=avisos.ESTILO, CABECERA=cabecera(f"/{ruta_f}", f"{titulo_f} · Verificación The Wild Project", desc_f),
             MENU=menu(entrevistas), CSS_MENU=CSS_MENU, OPCIONES=opciones), encoding="utf-8")
+    (SALIDA / "participa").mkdir(exist_ok=True)
+    (SALIDA / "participa" / "index.html").write_text(rellenar(
+        avisos.PARTICIPA, ESTILO_FORM=avisos.ESTILO, CABECERA=cabecera(
+            "/participa", "Participa · Verificación The Wild Project",
+            "Avísanos de un error en una verificación o propón algo que se dijo en una entrevista y falta por comprobar. "
+            "Solo hace falta un enlace a una fuente."),
+        MENU=menu(entrevistas, "participa"), CSS_MENU=CSS_MENU, REPO=REPO), encoding="utf-8")
     (SALIDA / "api").mkdir(exist_ok=True)  # web/api/ solo tiene funciones; los datos estáticos están en web/datos/
     shutil.copy(RAIZ / "web-src" / "avisar.js", SALIDA / "api" / "avisar.js")
     pagina_metodologia(entrevistas)
@@ -2432,6 +2440,11 @@ footer .pie-quien { margin-top:18px; }
 .m1 .buscar svg { display:block; flex:none; width:16px; height:16px; fill:none; stroke:currentColor; stroke-width:2.2; stroke-linecap:round; stroke-linejoin:round; }
 .m1 > a[aria-current]::after { transform:scaleX(1); transform-origin:left center; }
 @media (min-width:761px) and (max-width:1200px) { .m1 .buscar span { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; } .m1 .buscar { gap:0; } }   /* con poco ancho, solo la lupa: así el menú no baja de línea */
+/* Entre 761 y 1200 px el menú tiene que caber en una línea: menos hueco y letra un punto menor, y por debajo de 900 px
+   sale «GitHub ↗», que sigue en el pie de cada página */
+@media (min-width:761px) and (max-width:1200px) { .m1 { column-gap:14px; font-size:14px; } }
+@media (min-width:761px) and (max-width:900px) { .m1 > a.gh { display:none; } }
+@media (min-width:1001px) and (max-width:1060px) { .m1 { column-gap:12px; } }   /* ahí vuelven los nombres largos */
 @media (max-width:760px) { .m1 .sello { order:-2; } .m1 .buscar { order:-1; } }   /* en móvil el menú se desliza: Buscar va junto al título para que se vea */
 /* En móvil el menú y los filtros ocupan una sola fila que se desliza en horizontal; el botón de modo se queda fijo a la derecha */
 @media (max-width:760px) {
@@ -3221,7 +3234,7 @@ footer .leyenda-f { max-width:820px; }
 <div class="cabeza">
 <h1>Las entrevistas de The Wild Project, comprobadas <em class="subraya">dato a dato</em></h1>
 <p class="entrada">Jordi Wild ha entrevistado a los candidatos a la presidencia del Gobierno para las elecciones del 29 de noviembre de 2026. Transcribimos cada entrevista entera, separamos las afirmaciones que se pueden comprobar y las contrastamos con fuentes públicas, con el mismo método y la misma vara de medir para todos.</p>
-<p class="tu"><a href="/api#verificalo"><b>Puedes verificarlo tú</b> →</a> Cada dato enlaza su fuente y el minuto del vídeo, y hay un encargo listo para que cualquier IA lo revise por su cuenta.</p>
+<p class="tu"><a href="/api#verificalo"><b>Puedes verificarlo tú</b> →</a> Cada dato enlaza su fuente y el minuto del vídeo, y hay un encargo listo para que cualquier IA lo revise por su cuenta. ¿Ves un error o falta algo? <a href="/participa">Participa</a>.</p>
 @@MUESTRA@@
 </div>
 <div class="tarjetas">@@TARJETAS@@</div>

@@ -254,3 +254,77 @@ PROPONER = """<!doctype html>
 </html>
 """
 
+
+
+# Página /participa: el apartado propio de los dos formularios, enlazado desde el menú y la portada
+PARTICIPA = """<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+@@HEAD_MODO@@
+@@CABECERA@@
+<style>
+@@ESTILO_FORM@@
+.cabeza { padding:clamp(28px,5vw,56px) 0 clamp(24px,3vw,36px); }
+.cabeza h1 { margin:0 0 14px; }
+.cabeza .entrada { margin:0; }
+@media (min-width:1000px) { .cabeza { display:grid; grid-template-columns:minmax(0,1.2fr) minmax(0,1fr); gap:0 clamp(32px,5vw,80px); align-items:end; }
+  .cabeza h1 { margin:0; } }
+.vias { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr)); gap:clamp(16px,2vw,24px); margin:0 0 clamp(36px,5vw,56px); }
+.via { display:flex; flex-direction:column; gap:12px; min-width:0; margin:0; }
+.via h2 { font:700 clamp(24px,2.4vw,28px)/1.2 var(--serif); margin:0; text-wrap:balance; }
+.via p { margin:0; max-width:62ch; }
+.via .atajo { font-size:14.5px; color:var(--suave); }
+.via .boton { margin-top:auto; align-self:flex-start; display:inline-flex; align-items:center; min-height:46px; padding:0 22px; font-weight:700;
+  text-decoration:none; background:var(--tinta); color:var(--fondo); border:2px solid var(--tinta); border-radius:var(--r-boton);
+  transition:background-color .18s ease-out, color .18s ease-out; }
+.via .boton:hover { background:var(--fondo); color:var(--tinta); }
+@media (max-width:560px) { .via .boton { align-self:stretch; justify-content:center; } }
+.despues { border-top:3px solid var(--tinta); padding-top:12px; }
+.despues h2 { font:700 clamp(24px,2.4vw,28px)/1.2 var(--serif); margin:0 0 14px; }
+.despues ul { margin:0 0 18px; padding-left:20px; max-width:68ch; }
+.despues li { margin:0 0 8px; }
+.despues .registro { margin:0; max-width:68ch; }
+</style>
+<style>@@CSS_MENU@@</style>
+</head>
+<body>
+@@MENU@@
+<main class="ancho">
+<div class="cabeza">
+<h1>Participa</h1>
+<p class="entrada">Esta verificación la hace una IA y la mejoramos con lo que nos mandáis. Hay dos formas de ayudar y, en las dos, te pedimos un enlace a una fuente: así cualquiera puede comprobarlo. No hace falta cuenta.</p>
+</div>
+
+<div class="vias">
+<section class="caja via" aria-labelledby="via-error">
+<p class="rot">Corregir</p>
+<h2 id="via-error">¿Hemos verificado algo mal?</h2>
+<p>Si crees que un veredicto es incorrecto, mándanos el enlace a una web que muestre el dato correcto. Lo revisamos con el mismo criterio para todos los partidos.</p>
+<p class="atajo">Atajo: en cada afirmación, el botón «Avisar de un error» abre el formulario con ella ya puesta.</p>
+<a class="boton" href="/avisar">Avisar de un error</a>
+</section>
+<section class="caja via" aria-labelledby="via-propuesta">
+<p class="rot">Añadir</p>
+<h2 id="via-propuesta">¿Falta algo que se dijo?</h2>
+<p>Si un candidato dijo algo comprobable que no está en la línea temporal, cuéntanos qué dijo y en qué minuto, con un enlace para contrastarlo.</p>
+<p class="atajo">Atajo: desde la transcripción de cada entrevista llegas con la entrevista ya elegida.</p>
+<a class="boton" href="/proponer">Proponer un hecho para verificar</a>
+</section>
+</div>
+
+<section class="despues" aria-labelledby="despues">
+<h2 id="despues">Qué pasa después</h2>
+<ul>
+<li>Tu envío se publica tal cual en el registro público del proyecto, en GitHub, sin ningún dato tuyo. No pongas datos personales.</li>
+<li>Lo revisamos con el <a href="/metodologia">mismo método</a> y la misma vara de medir para todos los partidos.</li>
+<li>Si la fuente lo confirma, corregimos el veredicto o añadimos la afirmación, y el cambio queda registrado.</li>
+</ul>
+<p class="registro">Puedes seguir cómo se resuelve cada uno: <a href="@@REPO@@/issues?q=is%3Aissue+label%3Acorrecci%C3%B3n" target="_blank" rel="noopener noreferrer">avisos de error</a> y <a href="@@REPO@@/issues?q=is%3Aissue+label%3Apropuesta" target="_blank" rel="noopener noreferrer">propuestas</a>.</p>
+</section>
+</main>
+<footer class="pie-solo"><div class="ancho">@@PIE@@</div></footer>
+</body>
+</html>
+"""
