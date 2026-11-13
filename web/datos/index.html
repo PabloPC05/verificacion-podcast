@@ -468,7 +468,7 @@ document.addEventListener("keydown", ev => {
 const medirMenu = () => document.documentElement.style.setProperty("--menu", document.querySelector(".menu").offsetHeight + "px");
 medirMenu(); addEventListener("resize", medirMenu);
 // Las cifras del hero cuentan de 0 a su valor al cargar (salvo con movimiento reducido)
-if (!matchMedia("(prefers-reduced-motion: reduce)").matches) addEventListener("DOMContentLoaded", () => document.querySelectorAll(".dato > b, .num > b").forEach((el, i) => {
+if (!matchMedia("(prefers-reduced-motion: reduce)").matches) addEventListener("DOMContentLoaded", () => window.gsap && document.documentElement.classList.contains("con-gsap") || document.querySelectorAll(".dato > b, .num > b").forEach((el, i) => {
   const fin = parseInt(el.textContent, 10); if (!(fin > 0)) return;
   el.style.minWidth = el.offsetWidth + "px"; el.style.display = "inline-block";
   const t0 = performance.now() + 250 + i * 100, dur = 900;

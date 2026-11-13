@@ -89,6 +89,9 @@ document.addEventListener("click", function (ev) {
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<script>if(!matchMedia("(prefers-reduced-motion: reduce)").matches){document.documentElement.classList.add("con-gsap");window.esperaGsap=setTimeout(function(){document.documentElement.classList.remove("con-gsap")},2500)}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" integrity="sha384-HOvlOYPIs/zjoIkWUGXkVmXsjr8GuZLV+Q+rcPwmJOVZVpvTSXQChiN4t9Euv9Vc" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js" integrity="sha384-xb96EMJeax+NLXMC88ZBa1xAeAW+kn+horHh/zFlbMLG2UPWhMJJSlv7fi57hS+Q" crossorigin="anonymous"></script>
 <style>
 :root { --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; }
 * { box-sizing:border-box; }
@@ -513,6 +516,54 @@ html.con-repro .arriba { bottom:calc(var(--repro-h, 0px) + 28px + env(safe-area-
   html.con-repro .aviso { bottom:calc(var(--repro-h, 0px) + 16px); }
   html.con-repro .fab-panel { max-height:calc(100dvh - var(--menu, 48px) - 100px - var(--repro-h, 0px)); } }
 
+/* ── Hero con GSAP: el titular sube por líneas y se subraya «dato a dato»; debajo, un carrusel de afirmaciones reales que reciben su veredicto como un sello */
+.subraya { font-style:normal; background:linear-gradient(var(--tinta),var(--tinta)) no-repeat 0 96% / var(--subrayado,100%) .075em;
+  -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+.muestra { position:relative; margin-top:20px; border:2px solid var(--tinta); border-radius:var(--r-caja); padding:12px 16px 16px; overflow:hidden; max-width:62ch; }
+.muestra-barra { position:absolute; top:8px; right:10px; z-index:1; display:flex; gap:6px; margin:0; }
+.muestra-rot { margin:0 0 6px; padding-right:84px; font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--gris); }
+.muestra-barra button { display:grid; place-items:center; width:36px; height:36px; padding:0; cursor:pointer; border:1.5px solid var(--tinta); border-radius:var(--r-boton);
+  background:var(--fondo); color:var(--tinta); transition:background-color .15s ease-out, color .15s ease-out, transform .12s ease-out; }
+.muestra-barra button:hover { background:var(--tinta); color:var(--fondo); }
+.muestra-barra button:active { transform:scale(.94); }
+.muestra-barra button:focus-visible { outline:2px solid var(--tinta); outline-offset:2px; }
+.muestra-barra svg { width:16px; height:16px; fill:none; stroke:currentColor; stroke-width:2.2; stroke-linecap:round; stroke-linejoin:round; }
+.muestra-pausa .ico-play { display:none; fill:currentColor; stroke:none; }
+.muestra.parada .muestra-pausa .ico-pausa { display:none; } .muestra.parada .muestra-pausa .ico-play { display:block; }
+.muestra:not(.auto) .muestra-pausa { display:none; }
+.muestra-lista { list-style:none; margin:0; padding:0; display:grid; }
+.muestra-item { grid-area:1 / 1; visibility:hidden; min-width:0; }
+.muestra-item.activa { visibility:visible; }
+.muestra-item a { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:4px 18px; align-items:center; color:inherit; text-decoration:none; }
+.muestra-quien { grid-column:1; padding-right:84px; font-size:12.5px; font-weight:700; color:var(--suave); }
+.muestra-cita { grid-column:1; font:italic 400 clamp(17px,1.55vw,21px)/1.3 var(--serif); text-wrap:pretty; }
+.muestra-item a:hover .muestra-cita { text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:3px; }
+.muestra-item a:focus-visible { outline:2px solid var(--tinta); outline-offset:4px; border-radius:var(--r-mini); }
+.estampa { grid-column:2; grid-row:1 / span 2; justify-self:end; padding:7px 10px; border:2.5px solid currentColor; border-radius:var(--r-mini);
+  color:var(--tono); background:color-mix(in srgb, var(--tono) 8%, var(--fondo)); transform:rotate(-4deg);
+  font:800 12.5px/1 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; letter-spacing:.09em; text-transform:uppercase; white-space:nowrap; }
+.muestra-tiempo { position:absolute; left:0; right:0; bottom:0; height:3px; background:var(--tinta); transform-origin:0 50%; transform:scaleX(0); }
+@media (max-width:560px) { .muestra { padding:12px 14px 16px; } .muestra-rot { min-height:36px; }
+  .muestra-item a { grid-template-columns:minmax(0,1fr); } .estampa { grid-column:1; grid-row:auto; justify-self:start; margin-top:8px; } }
+/* Escritorio sin el ajuste a una pantalla: el carrusel ocupa la columna derecha bajo el titular */
+@media (min-width:1000px) {
+  .cabeza .entrada { grid-column:1; grid-row:2; } .cabeza .tu { grid-column:1; grid-row:3; margin-top:16px; }
+  .cabeza .muestra { grid-column:2; grid-row:2 / span 2; margin:0; align-self:end; } }
+/* Escritorio a una pantalla: titular y carrusel a la izquierda, entradilla y «verifícalo tú» a la derecha */
+@media (min-width:1000px) and (min-height:640px) {
+  .cabeza { grid-template-rows:auto auto; row-gap:clamp(12px,2.2vh,24px); }
+  .cabeza h1 { grid-row:1; align-self:end; }
+  .cabeza .entrada { grid-column:2; grid-row:1; align-self:end; } .cabeza .tu { grid-column:2; grid-row:2; margin:0; align-self:end; }
+  .cabeza .muestra { grid-column:1; grid-row:2; max-width:none; padding:clamp(6px,1vh,10px) 16px clamp(10px,1.6vh,16px); }
+  .muestra-rot { display:none; } .muestra-quien { padding-right:0; } .muestra-barra { top:8px; } .muestra-cita { line-height:1.24; }
+  .cabeza h1 { font-size:clamp(30px, min(3.5vw, 5.4vh), 58px); }
+  main.ancho { gap:clamp(8px,1.6vh,28px); } .cabeza { row-gap:clamp(8px,1.4vh,18px); }
+  .muestra-item a { align-items:end; min-height:64px; } .estampa { align-self:end; margin-bottom:2px; } .muestra-barra button { width:32px; height:32px; }
+  .muestra-cita { font-size:clamp(16px, min(1.5vw, 2.5vh), 21px); } }
+@media (min-width:1000px) and (max-width:1199px) and (min-height:640px) { .cabeza .entrada { grid-row:1 / span 2; } .muestra-cita { font-size:16px; } .cabeza .muestra { padding-top:4px; padding-bottom:8px; } }
+/* Mientras carga GSAP (como mucho 2,5 s) lo que va a animar no se pinta; luego sus animaciones sustituyen a las de CSS */
+.con-gsap .cabeza h1, .con-gsap .cabeza .entrada, .con-gsap .cabeza .tu, .con-gsap .muestra, .con-gsap .tarjetas .entrevista { visibility:hidden; }
+.gsap-listo .cabeza *, .gsap-listo .tarjetas .entrevista, .gsap-listo .tarjetas .entrevista * { animation:none !important; }
 </style>
 </head>
 <body>
@@ -553,7 +604,7 @@ document.addEventListener("keydown", ev => {
 const medirMenu = () => document.documentElement.style.setProperty("--menu", document.querySelector(".menu").offsetHeight + "px");
 medirMenu(); addEventListener("resize", medirMenu);
 // Las cifras del hero cuentan de 0 a su valor al cargar (salvo con movimiento reducido)
-if (!matchMedia("(prefers-reduced-motion: reduce)").matches) addEventListener("DOMContentLoaded", () => document.querySelectorAll(".dato > b, .num > b").forEach((el, i) => {
+if (!matchMedia("(prefers-reduced-motion: reduce)").matches) addEventListener("DOMContentLoaded", () => window.gsap && document.documentElement.classList.contains("con-gsap") || document.querySelectorAll(".dato > b, .num > b").forEach((el, i) => {
   const fin = parseInt(el.textContent, 10); if (!(fin > 0)) return;
   el.style.minWidth = el.offsetWidth + "px"; el.style.display = "inline-block";
   const t0 = performance.now() + 250 + i * 100, dur = 900;
@@ -609,9 +660,10 @@ etiquetarModo();
 <main class="ancho">
 <div class="primera">
 <div class="cabeza">
-<h1>Las entrevistas de The Wild Project, comprobadas dato a dato</h1>
+<h1>Las entrevistas de The Wild Project, comprobadas <em class="subraya">dato a dato</em></h1>
 <p class="entrada">Jordi Wild ha entrevistado a los candidatos a la presidencia del Gobierno para las elecciones del 29 de noviembre de 2026. Transcribimos cada entrevista entera, separamos las afirmaciones que se pueden comprobar y las contrastamos con fuentes públicas, con el mismo método y la misma vara de medir para todos.</p>
 <p class="tu"><a href="/api#verificalo"><b>Puedes verificarlo tú</b> →</a> Cada dato enlaza su fuente y el minuto del vídeo, y hay un encargo listo para que cualquier IA lo revise por su cuenta.</p>
+<section class="muestra" aria-roledescription="carrusel" aria-label="Afirmaciones verificadas, de muestra"><p class="muestra-rot">Así se ve una afirmación comprobada</p><div class="muestra-barra"><button class="muestra-pausa" type="button" aria-label="Pausar el carrusel" title="Pausar"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="ico-pausa" d="M9 5v14M15 5v14"/><path class="ico-play" d="M8 5l11 7-11 7z"/></svg></button><button class="muestra-sig" type="button" aria-label="Siguiente afirmación" title="Siguiente"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button></div><ul class="muestra-lista" aria-live="off"><li class="muestra-item tono-falso activa"><a href="/sanchez#m6003"><span class="muestra-quien">Sánchez · 1:40:03</span><span class="muestra-cita">«yo nunca dije nunca dije que no quería que Pablo Iglesias estuviera en el gobierno»</span><span class="estampa"><span class="sr">Veredicto: </span>Falso</span></a></li><li class="muestra-item tono-enganoso" aria-hidden="true" inert><a href="/feijoo#m3334"><span class="muestra-quien">Feijóo · 0:55:34</span><span class="muestra-cita">«aproximadamente el censo de la ciudad de Lleida más del 30% son inmigrantes»</span><span class="estampa"><span class="sr">Veredicto: </span>Engañoso</span></a></li><li class="muestra-item tono-falso" aria-hidden="true" inert><a href="/colau#m2564"><span class="muestra-quien">Colau · 0:42:44</span><span class="muestra-cita">«con la liberalización, entran otras operadoras que no aceptan,»</span><span class="estampa"><span class="sr">Veredicto: </span>Falso</span></a></li><li class="muestra-item tono-verdadero" aria-hidden="true" inert><a href="/sanchez#m5986"><span class="muestra-quien">Sánchez · 1:39:46</span><span class="muestra-cita">«yo sé bueno, pero es un pacto bueno, claro»</span><span class="estampa"><span class="sr">Veredicto: </span>Verdadero</span></a></li><li class="muestra-item tono-verdadero" aria-hidden="true" inert><a href="/feijoo#m4009"><span class="muestra-quien">Feijóo · 1:06:49</span><span class="muestra-cita">«Y ha pasado por la cárcel y sigue investigado»</span><span class="estampa"><span class="sr">Veredicto: </span>Verdadero</span></a></li><li class="muestra-item tono-verdadero" aria-hidden="true" inert><a href="/colau#m771"><span class="muestra-quien">Colau · 0:12:51</span><span class="muestra-cita">«Pepe, Junts y Vox tumbaron esos decretos»</span><span class="estampa"><span class="sr">Veredicto: </span>Verdadero</span></a></li><li class="muestra-item tono-mayormente_verdadero" aria-hidden="true" inert><a href="/sanchez#m5890"><span class="muestra-quien">Sánchez · 1:38:10</span><span class="muestra-cita">«probablemente no sea la principal prioridad de la sociedad catalana.»</span><span class="estampa"><span class="sr">Veredicto: </span>Casi cierto</span></a></li><li class="muestra-item tono-mayormente_verdadero" aria-hidden="true" inert><a href="/feijoo#m3994-2"><span class="muestra-quien">Feijóo · 1:06:34</span><span class="muestra-cita">«uno está en la cárcel con 25 años y otro está investigado»</span><span class="estampa"><span class="sr">Veredicto: </span>Casi cierto</span></a></li><li class="muestra-item tono-mayormente_verdadero" aria-hidden="true" inert><a href="/colau#m1444"><span class="muestra-quien">Colau · 0:24:04</span><span class="muestra-cita">«la justicia ha actuado y está en la cárcel»</span><span class="estampa"><span class="sr">Veredicto: </span>Casi cierto</span></a></li></ul><span class="muestra-tiempo" aria-hidden="true"></span></section>
 </div>
 <div class="tarjetas"><article class="entrevista"><span class="logo retrato"><img src="/fotos/sanchez.jpg" alt="Pedro Sánchez" width="160" height="160" decoding="async"><span class="insignia" title="PSOE"><img src="/logos/psoe.svg" alt="" width="40" height="40"></span></span><div><h2><a href="/sanchez">Pedro Sánchez</a></h2><p class="partido">PSOE</p><p class="prog">The Wild Project #393 · 13 nov 2026 · 1 h 52 min</p><p class="num"><b>30</b> falsas o engañosas de 147 afirmaciones comprobadas</p><div class="barra-reparto" role="img" aria-label="Reparto de las 147 afirmaciones: 7 falsas (5 %), 23 engañosas (16 %), 53 casi ciertas (36 %), 29 verdaderas (20 %), 35 no verificables (24 %)"><i class="tono-falso" style="flex:7" title="Falsas: 7 (5 %)"></i><i class="tono-enganoso" style="flex:23" title="Engañosas: 23 (16 %)"></i><i class="tono-mayormente_verdadero" style="flex:53" title="Casi ciertas: 53 (36 %)"></i><i class="tono-verdadero" style="flex:29" title="Verdaderas: 29 (20 %)"></i><i class="tono-no_verificable" style="flex:35" title="No verificables: 35 (24 %)"></i></div><p class="des"><span class="tono-falso">7 falsas</span> · <span class="tono-enganoso">23 engañosas</span> · <span class="tono-mayormente_verdadero">53 casi ciertas</span> · <span class="tono-verdadero">29 verdaderas</span> · <span class="tono-no_verificable">35 no verificables</span></p></div><p class="acc"><a class="btn principal" href="/sanchez"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3v18M10 6h9M10 12h6M10 18h8"/><circle cx="6" cy="6" r="2" class="lleno"/><circle cx="6" cy="12" r="2" class="lleno"/><circle cx="6" cy="18" r="2" class="lleno"/></svg><span>Línea temporal</span><svg class="flecha" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="btn" href="/sanchez/transcripcion"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l4 4v14H6zM14 3v5h5M9 12h7M9 16h7"/></svg><span>Transcripción<span class="sr"> completa</span></span><svg class="flecha" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></p></article><article class="entrevista"><span class="logo retrato"><img src="/fotos/feijoo.jpg" alt="Alberto Núñez Feijóo" width="160" height="160" decoding="async"><span class="insignia" title="PP"><img src="/logos/pp.svg" alt="" width="40" height="40"></span></span><div><h2><a href="/feijoo">Alberto Núñez Feijóo</a></h2><p class="partido">PP</p><p class="prog">The Wild Project #392 · 13 nov 2026 · 1 h 28 min</p><p class="num"><b>31</b> falsas o engañosas de 153 afirmaciones comprobadas</p><div class="barra-reparto" role="img" aria-label="Reparto de las 153 afirmaciones: 4 falsas (3 %), 27 engañosas (18 %), 52 casi ciertas (34 %), 41 verdaderas (27 %), 29 no verificables (19 %)"><i class="tono-falso" style="flex:4" title="Falsas: 4 (3 %)"></i><i class="tono-enganoso" style="flex:27" title="Engañosas: 27 (18 %)"></i><i class="tono-mayormente_verdadero" style="flex:52" title="Casi ciertas: 52 (34 %)"></i><i class="tono-verdadero" style="flex:41" title="Verdaderas: 41 (27 %)"></i><i class="tono-no_verificable" style="flex:29" title="No verificables: 29 (19 %)"></i></div><p class="des"><span class="tono-falso">4 falsas</span> · <span class="tono-enganoso">27 engañosas</span> · <span class="tono-mayormente_verdadero">52 casi ciertas</span> · <span class="tono-verdadero">41 verdaderas</span> · <span class="tono-no_verificable">29 no verificables</span></p></div><p class="acc"><a class="btn principal" href="/feijoo"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3v18M10 6h9M10 12h6M10 18h8"/><circle cx="6" cy="6" r="2" class="lleno"/><circle cx="6" cy="12" r="2" class="lleno"/><circle cx="6" cy="18" r="2" class="lleno"/></svg><span>Línea temporal</span><svg class="flecha" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="btn" href="/feijoo/transcripcion"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l4 4v14H6zM14 3v5h5M9 12h7M9 16h7"/></svg><span>Transcripción<span class="sr"> completa</span></span><svg class="flecha" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></p></article><article class="entrevista"><span class="logo retrato"><img src="/fotos/colau.jpg" alt="Ada Colau" width="160" height="160" decoding="async"><span class="insignia" title="Frente Amplio"><img src="/logos/frente-amplio.svg" alt="" width="40" height="40"></span></span><div><h2><a href="/colau">Ada Colau</a></h2><p class="partido">Frente Amplio</p><p class="prog">The Wild Project #391 · 13 nov 2026 · 2 h 14 min</p><p class="num"><b>29</b> falsas o engañosas de 153 afirmaciones comprobadas</p><div class="barra-reparto" role="img" aria-label="Reparto de las 153 afirmaciones: 5 falsas (3 %), 24 engañosas (16 %), 73 casi ciertas (48 %), 36 verdaderas (24 %), 15 no verificables (10 %)"><i class="tono-falso" style="flex:5" title="Falsas: 5 (3 %)"></i><i class="tono-enganoso" style="flex:24" title="Engañosas: 24 (16 %)"></i><i class="tono-mayormente_verdadero" style="flex:73" title="Casi ciertas: 73 (48 %)"></i><i class="tono-verdadero" style="flex:36" title="Verdaderas: 36 (24 %)"></i><i class="tono-no_verificable" style="flex:15" title="No verificables: 15 (10 %)"></i></div><p class="des"><span class="tono-falso">5 falsas</span> · <span class="tono-enganoso">24 engañosas</span> · <span class="tono-mayormente_verdadero">73 casi ciertas</span> · <span class="tono-verdadero">36 verdaderas</span> · <span class="tono-no_verificable">15 no verificables</span></p></div><p class="acc"><a class="btn principal" href="/colau"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3v18M10 6h9M10 12h6M10 18h8"/><circle cx="6" cy="6" r="2" class="lleno"/><circle cx="6" cy="12" r="2" class="lleno"/><circle cx="6" cy="18" r="2" class="lleno"/></svg><span>Línea temporal</span><svg class="flecha" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="btn" href="/colau/transcripcion"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l4 4v14H6zM14 3v5h5M9 12h7M9 16h7"/></svg><span>Transcripción<span class="sr"> completa</span></span><svg class="flecha" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></p></article></div>
 <ul class="ley-linea" aria-label="Qué significa cada color"><li class="tono-falso"><i aria-hidden="true"></i><span><b>Falso:</b> los datos lo contradicen</span></li><li class="tono-enganoso"><i aria-hidden="true"></i><span><b>Engañoso:</b> parte de un dato real, pero confunde</span></li><li class="tono-mayormente_verdadero"><i aria-hidden="true"></i><span><b>Casi cierto:</b> con una imprecisión menor</span></li><li class="tono-verdadero"><i aria-hidden="true"></i><span><b>Verdadero:</b> los datos lo confirman</span></li><li class="tono-no_verificable"><i aria-hidden="true"></i><span><b>No verificable:</b> sin prueba pública suficiente</span></li><li class="mas"><a href="/metodologia#que-significa-cada-veredicto">Criterios de cada veredicto</a></li></ul>
@@ -624,5 +676,97 @@ etiquetarModo();
 <p class="final">Última actualización: 13/11/2026. <span class="creditos">Fotos vía Wikimedia Commons: <a href="https://commons.wikimedia.org/wiki/File:Pedro_S%C3%A1nchez_in_2026.jpg" target="_blank" rel="noopener noreferrer">Pedro Sánchez</a> (Pool Moncloa / Carlos Spottorno, uso libre citando la fuente) · <a href="https://commons.wikimedia.org/wiki/File:ALBERTO_N%C3%9A%C3%91EZ_FEIJ%C3%93O.jpg" target="_blank" rel="noopener noreferrer">Alberto Núñez Feijóo</a> (Partido Popular, CC0) · <a href="https://commons.wikimedia.org/wiki/File:Ada-Colau-Encuentro-2024.jpg" target="_blank" rel="noopener noreferrer">Ada Colau</a> (Robo71, CC0).</span></p>
 <p class="pie-quien"><a href="/quien">Proyecto independiente de Pablo Pardo Cotos y Diego Cristóbal Andaluz, sin relación con The Wild Project ni con ningún partido.</a></p>
 </div></footer>
+<script>
+// Hero: GSAP anima la entrada y mueve el carrusel. Sin GSAP (no cargó) o con poco movimiento, todo se ve quieto y el carrusel se pasa a mano.
+addEventListener("DOMContentLoaded", () => {
+  const raiz = document.documentElement, muestra = document.querySelector(".muestra");
+  const conGsap = !!(window.gsap && window.SplitText) && raiz.classList.contains("con-gsap");
+  clearTimeout(window.esperaGsap);
+  if (conGsap) { raiz.classList.add("gsap-listo"); gsap.registerPlugin(SplitText); }
+  raiz.classList.remove("con-gsap");
+  if (!conGsap) { if (muestra) carrusel(muestra, false); return; }
+
+  const h1 = document.querySelector(".cabeza h1");
+  const tl = gsap.timeline({ defaults: { ease: "expo.out", duration: .9 } });
+  const lineas = SplitText.create(h1, { type: "lines", mask: "lines" });
+  tl.from(lineas.lines, { yPercent: 115, stagger: .09, onComplete: () => lineas.revert() })
+    .fromTo(".subraya", { "--subrayado": "0%" }, { "--subrayado": "100%", duration: .7, ease: "power3.inOut" }, "-=.3")
+    .from([".cabeza .entrada", ".cabeza .tu"], { autoAlpha: 0, y: 18, stagger: .08, duration: .8, ease: "power3.out", clearProps: "transform,opacity,visibility" }, .2);
+  if (muestra) tl.from(muestra, { autoAlpha: 0, y: 18, duration: .8, ease: "power3.out", clearProps: "transform,opacity,visibility",
+                                  onStart: () => carrusel(muestra, true) }, .35);
+  tl.from(".tarjetas .entrevista", { autoAlpha: 0, y: 28, stagger: .1, duration: .85, ease: "power3.out", clearProps: "transform,opacity,visibility" }, .4)
+    .from(".tarjetas .retrato", { autoAlpha: 0, scale: .8, stagger: .1, duration: .6, ease: "back.out(2)", clearProps: "transform,opacity,visibility" }, .5)
+    .from(".tarjetas .insignia", { autoAlpha: 0, scale: .5, stagger: .1, duration: .45, ease: "back.out(2.5)", clearProps: "transform,opacity,visibility" }, .8)
+    .fromTo(".tarjetas .barra-reparto", { clipPath: "inset(0 100% 0 0 round 999px)" },
+            { clipPath: "inset(0 0% 0 0 round 999px)", stagger: .1, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath" }, .7);
+  document.querySelectorAll(".tarjetas .num > b").forEach((b, i) => {
+    b.style.minWidth = b.offsetWidth + "px"; b.style.display = "inline-block";
+    tl.from(b, { textContent: 0, snap: { textContent: 1 }, duration: 1.1, ease: "power2.out" }, .7 + i * .1);
+  });
+});
+
+function carrusel(muestra, animado) {
+  const items = [...muestra.querySelectorAll(".muestra-item")], lista = muestra.querySelector(".muestra-lista");
+  const barra = muestra.querySelector(".muestra-tiempo"), botonPausa = muestra.querySelector(".muestra-pausa");
+  const ESPERA = 5.5;
+  let actual = 0, paso = null, espera = null, parado = !animado, encima = false;
+  const partes = it => ["muestra-quien", "estampa"].map(c => it.querySelector("." + c));
+  const activar = (viejo, nuevo) => {
+    viejo.classList.remove("activa"); viejo.setAttribute("aria-hidden", "true"); viejo.inert = true;
+    nuevo.classList.add("activa"); nuevo.removeAttribute("aria-hidden"); nuevo.inert = false;
+  };
+  // Empieza en una afirmación al azar: si no, cada visita abriría con el mismo candidato y el mismo veredicto
+  const inicio = Math.floor(Math.random() * items.length);
+  if (inicio) { activar(items[0], items[inicio]); actual = inicio; }
+  const entrar = it => {
+    const cita = it.querySelector(".muestra-cita"), [quien, estampa] = partes(it);
+    it._split = SplitText.create(cita, { type: "words", mask: "words" });
+    return gsap.timeline()
+      .from(quien, { autoAlpha: 0, x: -10, duration: .35, ease: "power2.out" })
+      .from(it._split.words, { yPercent: 110, duration: .55, stagger: .022, ease: "power3.out" }, "<.05")
+      .fromTo(estampa, { autoAlpha: 0, scale: 2, rotation: -18 }, { autoAlpha: 1, scale: 1, rotation: -4, duration: .38, ease: "back.out(2.6)" }, ">-.15")
+      .to(muestra, { keyframes: { x: [0, -3, 2.5, -1.5, 0] }, duration: .24, ease: "none" }, "<.22")
+      .add(() => { it._split.revert(); it._split = null; });
+  };
+  const salir = it => {
+    const cita = it.querySelector(".muestra-cita");
+    it._split = SplitText.create(cita, { type: "words", mask: "words" });
+    return gsap.timeline()
+      .to(it._split.words, { yPercent: -110, duration: .3, stagger: .01, ease: "power2.in" })
+      .to(partes(it), { autoAlpha: 0, duration: .22, ease: "power1.in" }, "<")
+      .add(() => { it._split.revert(); it._split = null; gsap.set(partes(it), { clearProps: "all" }); });
+  };
+  const esperar = () => {
+    espera?.kill();
+    espera = gsap.fromTo(barra, { scaleX: 0 }, { scaleX: 1, duration: ESPERA, ease: "none", onComplete: () => ir(actual + 1) });
+    if (parado || encima) espera.pause();
+  };
+  function ir(n) {
+    n = (n + items.length) % items.length;
+    if (n === actual) return;
+    const viejo = items[actual], nuevo = items[n];
+    actual = n;
+    if (!animado) { activar(viejo, nuevo); return; }
+    paso?.progress(1).kill(); espera?.kill(); gsap.set(barra, { scaleX: 0 });
+    paso = gsap.timeline({ onComplete: esperar }).add(salir(viejo)).add(() => activar(viejo, nuevo)).add(entrar(nuevo));
+  }
+  muestra.querySelector(".muestra-sig").onclick = () => { lista.setAttribute("aria-live", "polite"); ir(actual + 1); };
+  if (!animado) return;
+  muestra.classList.add("auto");
+  botonPausa.onclick = () => {
+    parado = !parado; muestra.classList.toggle("parada", parado);
+    const t = parado ? "Reanudar el carrusel" : "Pausar el carrusel";
+    botonPausa.setAttribute("aria-label", t); botonPausa.title = parado ? "Reanudar" : "Pausar";
+    lista.setAttribute("aria-live", parado ? "polite" : "off");
+    if (!encima && espera) parado ? espera.pause() : espera.resume();
+  };
+  const sobre = v => { encima = v; if (espera) (v || parado) ? espera.pause() : espera.resume(); };
+  muestra.addEventListener("pointerenter", e => e.pointerType === "mouse" && sobre(true));
+  muestra.addEventListener("pointerleave", e => e.pointerType === "mouse" && sobre(false));
+  muestra.addEventListener("focusin", () => sobre(true));
+  muestra.addEventListener("focusout", e => muestra.contains(e.relatedTarget) || sobre(false));
+  paso = gsap.timeline({ onComplete: esperar }).add(entrar(items[actual]), .25);
+}
+</script>
 </body>
 </html>

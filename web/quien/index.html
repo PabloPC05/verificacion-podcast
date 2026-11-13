@@ -443,7 +443,7 @@ document.addEventListener("keydown", ev => {
 const medirMenu = () => document.documentElement.style.setProperty("--menu", document.querySelector(".menu").offsetHeight + "px");
 medirMenu(); addEventListener("resize", medirMenu);
 // Las cifras del hero cuentan de 0 a su valor al cargar (salvo con movimiento reducido)
-if (!matchMedia("(prefers-reduced-motion: reduce)").matches) addEventListener("DOMContentLoaded", () => document.querySelectorAll(".dato > b, .num > b").forEach((el, i) => {
+if (!matchMedia("(prefers-reduced-motion: reduce)").matches) addEventListener("DOMContentLoaded", () => window.gsap && document.documentElement.classList.contains("con-gsap") || document.querySelectorAll(".dato > b, .num > b").forEach((el, i) => {
   const fin = parseInt(el.textContent, 10); if (!(fin > 0)) return;
   el.style.minWidth = el.offsetWidth + "px"; el.style.display = "inline-block";
   const t0 = performance.now() + 250 + i * 100, dur = 900;
@@ -535,6 +535,7 @@ etiquetarModo();
 <p>Esta web no tiene financiación ni apoyo de nadie. Los únicos costes son las suscripciones de IA, y Pablo y Diego pagan cada uno las suyas; la web está alojada en el plan gratuito de Vercel. No hay publicidad.</p>
 <p>Las visitas se cuentan con <a href="https://umami.is/docs" target="_blank" rel="noopener noreferrer">Umami</a>, un servicio de estadísticas que no usa cookies y que, según su documentación, no recoge datos personales. También cuenta qué enlaces se pulsan (vídeos, fuentes y descargas), sin saber quién los pulsa. Esas cifras solo las ve Pablo.</p>
 <p>Los vídeos de las entrevistas se reproducen con el reproductor de YouTube (youtube-nocookie.com), que solo se carga cuando pulsas un minuto y puede mostrar su propia publicidad. A partir de ahí se aplica la <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">política de privacidad de Google</a>.</p>
+<p>Al abrir una fuente en el visor, tu navegador le pide su texto a <a href="https://jina.ai/reader" target="_blank" rel="noopener noreferrer">r.jina.ai</a>, un servicio de Jina AI, que ve tu dirección IP y qué fuente abres. Si prefieres evitarlo, ábrela con Cmd o Ctrl y clic: irá directamente a la web original. La animación de la portada y la referencia de la API cargan su código de jsDelivr, un servicio público de distribución de librerías, que también ve tu dirección IP.</p>
 </section>
 
 <section>

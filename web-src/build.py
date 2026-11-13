@@ -457,6 +457,48 @@ def barra_reparto(m, clase="barra-reparto"):
             + "".join(f'<i class="tono-{k}" style="flex:{n}" title="{PLURAL[k]}: {n} ({pct(n)})"></i>' for k, n in trozos) + "</div>")
 
 
+GSAP = "3.13.0"  # gsap y SplitText desde jsDelivr, versión fijada
+# Huellas SRI de esa versión. Si cambias GSAP, recalcúlalas como las de Scalar:
+#   curl -s https://cdn.jsdelivr.net/npm/gsap@<versión>/dist/<fichero>.min.js | openssl dgst -sha384 -binary | openssl base64 -A
+GSAP_SRI = {"gsap": "sha384-HOvlOYPIs/zjoIkWUGXkVmXsjr8GuZLV+Q+rcPwmJOVZVpvTSXQChiN4t9Euv9Vc",
+            "SplitText": "sha384-xb96EMJeax+NLXMC88ZBa1xAeAW+kn+horHh/zFlbMLG2UPWhMJJSlv7fi57hS+Q"}
+
+
+def muestra_hero(hechas, por_veredicto=(("falso", "enganoso"), ("verdadero",), ("mayormente_verdadero",))):
+    """Afirmaciones de muestra para el carrusel del hero: de cada candidato, una falsa o engañosa, una verdadera y una casi cierta,
+    alternando candidatos para que ninguno acapare el arranque. Solo citas cortas y con confianza alta."""
+    rondas = []
+    for grupo in por_veredicto:
+        ronda = []
+        for m in hechas:
+            aptas = [a for a in m["todas"] if a["veredicto"] in grupo and a.get("confianza") == "alta"
+                     and 40 <= len(a.get("cita", "").strip("«»\" ")) <= 120]
+            aptas.sort(key=lambda a: (grupo.index(a["veredicto"]), len(a["cita"])))
+            if aptas:
+                ronda.append((m, aptas[0]))
+        rondas.append(ronda)
+    elegidas = [x for ronda in rondas for x in ronda]
+    if not elegidas:
+        return ""
+    def item(i, m, a):
+        # Fuera de la f-string: Python 3.9 no admite en ella comillas del mismo tipo ni «\» (el python3 del Mac es 3.9)
+        activa = " activa" if i == 0 else ""
+        oculta = "" if i == 0 else ' aria-hidden="true" inert'
+        cita = e(a["cita"].strip("«»\" "))
+        return (f'<li class="muestra-item tono-{a["veredicto"]}{activa}"{oculta}>'
+                f'<a href="/{e(m["slug"])}#{a["_id"]}"><span class="muestra-quien">{e(m["invitado"].rpartition(" ")[2])} · {hms(a["_t"])}</span>'
+                f'<span class="muestra-cita">«{cita}»</span>'
+                f'<span class="estampa"><span class="sr">Veredicto: </span>{NOMBRE[a["veredicto"]]}</span></a></li>')
+    items = "".join(item(i, m, a) for i, (m, a) in enumerate(elegidas))
+    return ('<section class="muestra" aria-roledescription="carrusel" aria-label="Afirmaciones verificadas, de muestra">'
+            '<p class="muestra-rot">Así se ve una afirmación comprobada</p><div class="muestra-barra">'
+            '<button class="muestra-pausa" type="button" aria-label="Pausar el carrusel" title="Pausar">'
+            '<svg viewBox="0 0 24 24" aria-hidden="true"><path class="ico-pausa" d="M9 5v14M15 5v14"/><path class="ico-play" d="M8 5l11 7-11 7z"/></svg></button>'
+            '<button class="muestra-sig" type="button" aria-label="Siguiente afirmación" title="Siguiente">'
+            '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button></div>'
+            f'<ul class="muestra-lista" aria-live="off">{items}</ul><span class="muestra-tiempo" aria-hidden="true"></span></section>')
+
+
 def creditos_fotos(entrevistas):
     partes = [f'<a href="{f["url"]}" target="_blank" rel="noopener noreferrer">{e(m["invitado"])}</a> ({e(f["autor"])}, {f["licencia"]})'
               for m in entrevistas if (f := FOTOS.get(m["slug"]))]
@@ -874,7 +916,7 @@ document.addEventListener("keydown", ev => {
 const medirMenu = () => document.documentElement.style.setProperty("--menu", document.querySelector(".menu").offsetHeight + "px");
 medirMenu(); addEventListener("resize", medirMenu);
 // Las cifras del hero cuentan de 0 a su valor al cargar (salvo con movimiento reducido)
-if (!matchMedia("(prefers-reduced-motion: reduce)").matches) addEventListener("DOMContentLoaded", () => document.querySelectorAll(".dato > b, .num > b").forEach((el, i) => {
+if (!matchMedia("(prefers-reduced-motion: reduce)").matches) addEventListener("DOMContentLoaded", () => window.gsap && document.documentElement.classList.contains("con-gsap") || document.querySelectorAll(".dato > b, .num > b").forEach((el, i) => {
   const fin = parseInt(el.textContent, 10); if (!(fin > 0)) return;
   el.style.minWidth = el.offsetWidth + "px"; el.style.display = "inline-block";
   const t0 = performance.now() + 250 + i * 100, dur = 900;
@@ -2206,7 +2248,7 @@ def main():
         f'<p class="prog">{e(m.get("programa", ""))}</p><p class="des">Verificación en curso.</p></div></article>'
         for m in entrevistas if not m.get("publicar"))
     (SALIDA / "index.html").write_text(rellenar(
-        PORTADA, LEYENDA_LINEA=LEYENDA_LINEA, CABECERA=cabecera(
+        PORTADA, LEYENDA_LINEA=LEYENDA_LINEA, MUESTRA=muestra_hero(hechas), GSAP=GSAP, GSAP_SRI=GSAP_SRI["gsap"], SPLIT_SRI=GSAP_SRI["SplitText"], CABECERA=cabecera(
             "/", "Verificación de las entrevistas electorales de The Wild Project",
             "Las entrevistas de Jordi Wild a los candidatos a las elecciones generales de 2026, comprobadas dato a dato "
             "con el mismo método. Código y datos abiertos."), CREDITOS=creditos_fotos(hechas), MENU=menu(entrevistas), CSS_MENU=CSS_MENU, LEYENDA=LEYENDA, COMPARATIVA=comparativa(hechas), TARJETAS=tarjetas, REPO=REPO,
@@ -2665,7 +2707,7 @@ h1 { font:700 clamp(30px,5.2vw,58px)/1.05 var(--serif); letter-spacing:-0.02em; 
 <h2 id="financiacion">Financiación</h2>
 <p>Esta web no tiene financiación ni apoyo de nadie. Los únicos costes son las suscripciones de IA, y Pablo y Diego pagan cada uno las suyas; la web está alojada en el plan gratuito de Vercel. @@ANALITICA@@
 <p>Los vídeos de las entrevistas se reproducen con el reproductor de YouTube (youtube-nocookie.com), que solo se carga cuando pulsas un minuto y puede mostrar su propia publicidad. A partir de ahí se aplica la <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">política de privacidad de Google</a>.</p>
-<p>Al abrir una fuente en el visor, tu navegador le pide su texto a <a href="https://jina.ai/reader" target="_blank" rel="noopener noreferrer">r.jina.ai</a>, un servicio de Jina AI, que ve tu dirección IP y qué fuente abres. Si prefieres evitarlo, ábrela con Cmd o Ctrl y clic: irá directamente a la web original.</p>
+<p>Al abrir una fuente en el visor, tu navegador le pide su texto a <a href="https://jina.ai/reader" target="_blank" rel="noopener noreferrer">r.jina.ai</a>, un servicio de Jina AI, que ve tu dirección IP y qué fuente abres. Si prefieres evitarlo, ábrela con Cmd o Ctrl y clic: irá directamente a la web original. La animación de la portada y la referencia de la API cargan su código de jsDelivr, un servicio público de distribución de librerías, que también ve tu dirección IP.</p>
 </section>
 
 <section>
@@ -2943,6 +2985,9 @@ PORTADA = """<!doctype html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 @@HEAD_MODO@@
 @@CABECERA@@
+<script>if(!matchMedia("(prefers-reduced-motion: reduce)").matches){document.documentElement.classList.add("con-gsap");window.esperaGsap=setTimeout(function(){document.documentElement.classList.remove("con-gsap")},2500)}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/gsap@@@GSAP@@/dist/gsap.min.js" integrity="@@GSAP_SRI@@" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/gsap@@@GSAP@@/dist/SplitText.min.js" integrity="@@SPLIT_SRI@@" crossorigin="anonymous"></script>
 <style>
 :root { --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; }
 * { box-sizing:border-box; }
@@ -3088,6 +3133,54 @@ footer .leyenda-f { max-width:820px; }
   .pie > div > p:first-child { margin-top:0 !important; } }
 @media (max-width:560px) { .entrevista { grid-template-columns:60px minmax(0,1fr); gap:0 14px; padding:16px; } .logo { width:60px; height:60px; } .entrevista h2 { font-size:26px; } }
 @@CSS_MENU@@
+/* ── Hero con GSAP: el titular sube por líneas y se subraya «dato a dato»; debajo, un carrusel de afirmaciones reales que reciben su veredicto como un sello */
+.subraya { font-style:normal; background:linear-gradient(var(--tinta),var(--tinta)) no-repeat 0 96% / var(--subrayado,100%) .075em;
+  -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+.muestra { position:relative; margin-top:20px; border:2px solid var(--tinta); border-radius:var(--r-caja); padding:12px 16px 16px; overflow:hidden; max-width:62ch; }
+.muestra-barra { position:absolute; top:8px; right:10px; z-index:1; display:flex; gap:6px; margin:0; }
+.muestra-rot { margin:0 0 6px; padding-right:84px; font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--gris); }
+.muestra-barra button { display:grid; place-items:center; width:36px; height:36px; padding:0; cursor:pointer; border:1.5px solid var(--tinta); border-radius:var(--r-boton);
+  background:var(--fondo); color:var(--tinta); transition:background-color .15s ease-out, color .15s ease-out, transform .12s ease-out; }
+.muestra-barra button:hover { background:var(--tinta); color:var(--fondo); }
+.muestra-barra button:active { transform:scale(.94); }
+.muestra-barra button:focus-visible { outline:2px solid var(--tinta); outline-offset:2px; }
+.muestra-barra svg { width:16px; height:16px; fill:none; stroke:currentColor; stroke-width:2.2; stroke-linecap:round; stroke-linejoin:round; }
+.muestra-pausa .ico-play { display:none; fill:currentColor; stroke:none; }
+.muestra.parada .muestra-pausa .ico-pausa { display:none; } .muestra.parada .muestra-pausa .ico-play { display:block; }
+.muestra:not(.auto) .muestra-pausa { display:none; }
+.muestra-lista { list-style:none; margin:0; padding:0; display:grid; }
+.muestra-item { grid-area:1 / 1; visibility:hidden; min-width:0; }
+.muestra-item.activa { visibility:visible; }
+.muestra-item a { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:4px 18px; align-items:center; color:inherit; text-decoration:none; }
+.muestra-quien { grid-column:1; padding-right:84px; font-size:12.5px; font-weight:700; color:var(--suave); }
+.muestra-cita { grid-column:1; font:italic 400 clamp(17px,1.55vw,21px)/1.3 var(--serif); text-wrap:pretty; }
+.muestra-item a:hover .muestra-cita { text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:3px; }
+.muestra-item a:focus-visible { outline:2px solid var(--tinta); outline-offset:4px; border-radius:var(--r-mini); }
+.estampa { grid-column:2; grid-row:1 / span 2; justify-self:end; padding:7px 10px; border:2.5px solid currentColor; border-radius:var(--r-mini);
+  color:var(--tono); background:color-mix(in srgb, var(--tono) 8%, var(--fondo)); transform:rotate(-4deg);
+  font:800 12.5px/1 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; letter-spacing:.09em; text-transform:uppercase; white-space:nowrap; }
+.muestra-tiempo { position:absolute; left:0; right:0; bottom:0; height:3px; background:var(--tinta); transform-origin:0 50%; transform:scaleX(0); }
+@media (max-width:560px) { .muestra { padding:12px 14px 16px; } .muestra-rot { min-height:36px; }
+  .muestra-item a { grid-template-columns:minmax(0,1fr); } .estampa { grid-column:1; grid-row:auto; justify-self:start; margin-top:8px; } }
+/* Escritorio sin el ajuste a una pantalla: el carrusel ocupa la columna derecha bajo el titular */
+@media (min-width:1000px) {
+  .cabeza .entrada { grid-column:1; grid-row:2; } .cabeza .tu { grid-column:1; grid-row:3; margin-top:16px; }
+  .cabeza .muestra { grid-column:2; grid-row:2 / span 2; margin:0; align-self:end; } }
+/* Escritorio a una pantalla: titular y carrusel a la izquierda, entradilla y «verifícalo tú» a la derecha */
+@media (min-width:1000px) and (min-height:640px) {
+  .cabeza { grid-template-rows:auto auto; row-gap:clamp(12px,2.2vh,24px); }
+  .cabeza h1 { grid-row:1; align-self:end; }
+  .cabeza .entrada { grid-column:2; grid-row:1; align-self:end; } .cabeza .tu { grid-column:2; grid-row:2; margin:0; align-self:end; }
+  .cabeza .muestra { grid-column:1; grid-row:2; max-width:none; padding:clamp(6px,1vh,10px) 16px clamp(10px,1.6vh,16px); }
+  .muestra-rot { display:none; } .muestra-quien { padding-right:0; } .muestra-barra { top:8px; } .muestra-cita { line-height:1.24; }
+  .cabeza h1 { font-size:clamp(30px, min(3.5vw, 5.4vh), 58px); }
+  main.ancho { gap:clamp(8px,1.6vh,28px); } .cabeza { row-gap:clamp(8px,1.4vh,18px); }
+  .muestra-item a { align-items:end; min-height:64px; } .estampa { align-self:end; margin-bottom:2px; } .muestra-barra button { width:32px; height:32px; }
+  .muestra-cita { font-size:clamp(16px, min(1.5vw, 2.5vh), 21px); } }
+@media (min-width:1000px) and (max-width:1199px) and (min-height:640px) { .cabeza .entrada { grid-row:1 / span 2; } .muestra-cita { font-size:16px; } .cabeza .muestra { padding-top:4px; padding-bottom:8px; } }
+/* Mientras carga GSAP (como mucho 2,5 s) lo que va a animar no se pinta; luego sus animaciones sustituyen a las de CSS */
+.con-gsap .cabeza h1, .con-gsap .cabeza .entrada, .con-gsap .cabeza .tu, .con-gsap .muestra, .con-gsap .tarjetas .entrevista { visibility:hidden; }
+.gsap-listo .cabeza *, .gsap-listo .tarjetas .entrevista, .gsap-listo .tarjetas .entrevista * { animation:none !important; }
 </style>
 </head>
 <body>
@@ -3095,9 +3188,10 @@ footer .leyenda-f { max-width:820px; }
 <main class="ancho">
 <div class="primera">
 <div class="cabeza">
-<h1>Las entrevistas de The Wild Project, comprobadas dato a dato</h1>
+<h1>Las entrevistas de The Wild Project, comprobadas <em class="subraya">dato a dato</em></h1>
 <p class="entrada">Jordi Wild ha entrevistado a los candidatos a la presidencia del Gobierno para las elecciones del 29 de noviembre de 2026. Transcribimos cada entrevista entera, separamos las afirmaciones que se pueden comprobar y las contrastamos con fuentes públicas, con el mismo método y la misma vara de medir para todos.</p>
 <p class="tu"><a href="/api#verificalo"><b>Puedes verificarlo tú</b> →</a> Cada dato enlaza su fuente y el minuto del vídeo, y hay un encargo listo para que cualquier IA lo revise por su cuenta.</p>
+@@MUESTRA@@
 </div>
 <div class="tarjetas">@@TARJETAS@@</div>
 @@LEYENDA_LINEA@@
@@ -3110,6 +3204,98 @@ footer .leyenda-f { max-width:820px; }
 <p class="final">Última actualización: @@FECHA@@. @@CREDITOS@@</p>
 @@PIE@@
 </div></footer>
+<script>
+// Hero: GSAP anima la entrada y mueve el carrusel. Sin GSAP (no cargó) o con poco movimiento, todo se ve quieto y el carrusel se pasa a mano.
+addEventListener("DOMContentLoaded", () => {
+  const raiz = document.documentElement, muestra = document.querySelector(".muestra");
+  const conGsap = !!(window.gsap && window.SplitText) && raiz.classList.contains("con-gsap");
+  clearTimeout(window.esperaGsap);
+  if (conGsap) { raiz.classList.add("gsap-listo"); gsap.registerPlugin(SplitText); }
+  raiz.classList.remove("con-gsap");
+  if (!conGsap) { if (muestra) carrusel(muestra, false); return; }
+
+  const h1 = document.querySelector(".cabeza h1");
+  const tl = gsap.timeline({ defaults: { ease: "expo.out", duration: .9 } });
+  const lineas = SplitText.create(h1, { type: "lines", mask: "lines" });
+  tl.from(lineas.lines, { yPercent: 115, stagger: .09, onComplete: () => lineas.revert() })
+    .fromTo(".subraya", { "--subrayado": "0%" }, { "--subrayado": "100%", duration: .7, ease: "power3.inOut" }, "-=.3")
+    .from([".cabeza .entrada", ".cabeza .tu"], { autoAlpha: 0, y: 18, stagger: .08, duration: .8, ease: "power3.out", clearProps: "transform,opacity,visibility" }, .2);
+  if (muestra) tl.from(muestra, { autoAlpha: 0, y: 18, duration: .8, ease: "power3.out", clearProps: "transform,opacity,visibility",
+                                  onStart: () => carrusel(muestra, true) }, .35);
+  tl.from(".tarjetas .entrevista", { autoAlpha: 0, y: 28, stagger: .1, duration: .85, ease: "power3.out", clearProps: "transform,opacity,visibility" }, .4)
+    .from(".tarjetas .retrato", { autoAlpha: 0, scale: .8, stagger: .1, duration: .6, ease: "back.out(2)", clearProps: "transform,opacity,visibility" }, .5)
+    .from(".tarjetas .insignia", { autoAlpha: 0, scale: .5, stagger: .1, duration: .45, ease: "back.out(2.5)", clearProps: "transform,opacity,visibility" }, .8)
+    .fromTo(".tarjetas .barra-reparto", { clipPath: "inset(0 100% 0 0 round 999px)" },
+            { clipPath: "inset(0 0% 0 0 round 999px)", stagger: .1, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath" }, .7);
+  document.querySelectorAll(".tarjetas .num > b").forEach((b, i) => {
+    b.style.minWidth = b.offsetWidth + "px"; b.style.display = "inline-block";
+    tl.from(b, { textContent: 0, snap: { textContent: 1 }, duration: 1.1, ease: "power2.out" }, .7 + i * .1);
+  });
+});
+
+function carrusel(muestra, animado) {
+  const items = [...muestra.querySelectorAll(".muestra-item")], lista = muestra.querySelector(".muestra-lista");
+  const barra = muestra.querySelector(".muestra-tiempo"), botonPausa = muestra.querySelector(".muestra-pausa");
+  const ESPERA = 5.5;
+  let actual = 0, paso = null, espera = null, parado = !animado, encima = false;
+  const partes = it => ["muestra-quien", "estampa"].map(c => it.querySelector("." + c));
+  const activar = (viejo, nuevo) => {
+    viejo.classList.remove("activa"); viejo.setAttribute("aria-hidden", "true"); viejo.inert = true;
+    nuevo.classList.add("activa"); nuevo.removeAttribute("aria-hidden"); nuevo.inert = false;
+  };
+  // Empieza en una afirmación al azar: si no, cada visita abriría con el mismo candidato y el mismo veredicto
+  const inicio = Math.floor(Math.random() * items.length);
+  if (inicio) { activar(items[0], items[inicio]); actual = inicio; }
+  const entrar = it => {
+    const cita = it.querySelector(".muestra-cita"), [quien, estampa] = partes(it);
+    it._split = SplitText.create(cita, { type: "words", mask: "words" });
+    return gsap.timeline()
+      .from(quien, { autoAlpha: 0, x: -10, duration: .35, ease: "power2.out" })
+      .from(it._split.words, { yPercent: 110, duration: .55, stagger: .022, ease: "power3.out" }, "<.05")
+      .fromTo(estampa, { autoAlpha: 0, scale: 2, rotation: -18 }, { autoAlpha: 1, scale: 1, rotation: -4, duration: .38, ease: "back.out(2.6)" }, ">-.15")
+      .to(muestra, { keyframes: { x: [0, -3, 2.5, -1.5, 0] }, duration: .24, ease: "none" }, "<.22")
+      .add(() => { it._split.revert(); it._split = null; });
+  };
+  const salir = it => {
+    const cita = it.querySelector(".muestra-cita");
+    it._split = SplitText.create(cita, { type: "words", mask: "words" });
+    return gsap.timeline()
+      .to(it._split.words, { yPercent: -110, duration: .3, stagger: .01, ease: "power2.in" })
+      .to(partes(it), { autoAlpha: 0, duration: .22, ease: "power1.in" }, "<")
+      .add(() => { it._split.revert(); it._split = null; gsap.set(partes(it), { clearProps: "all" }); });
+  };
+  const esperar = () => {
+    espera?.kill();
+    espera = gsap.fromTo(barra, { scaleX: 0 }, { scaleX: 1, duration: ESPERA, ease: "none", onComplete: () => ir(actual + 1) });
+    if (parado || encima) espera.pause();
+  };
+  function ir(n) {
+    n = (n + items.length) % items.length;
+    if (n === actual) return;
+    const viejo = items[actual], nuevo = items[n];
+    actual = n;
+    if (!animado) { activar(viejo, nuevo); return; }
+    paso?.progress(1).kill(); espera?.kill(); gsap.set(barra, { scaleX: 0 });
+    paso = gsap.timeline({ onComplete: esperar }).add(salir(viejo)).add(() => activar(viejo, nuevo)).add(entrar(nuevo));
+  }
+  muestra.querySelector(".muestra-sig").onclick = () => { lista.setAttribute("aria-live", "polite"); ir(actual + 1); };
+  if (!animado) return;
+  muestra.classList.add("auto");
+  botonPausa.onclick = () => {
+    parado = !parado; muestra.classList.toggle("parada", parado);
+    const t = parado ? "Reanudar el carrusel" : "Pausar el carrusel";
+    botonPausa.setAttribute("aria-label", t); botonPausa.title = parado ? "Reanudar" : "Pausar";
+    lista.setAttribute("aria-live", parado ? "polite" : "off");
+    if (!encima && espera) parado ? espera.pause() : espera.resume();
+  };
+  const sobre = v => { encima = v; if (espera) (v || parado) ? espera.pause() : espera.resume(); };
+  muestra.addEventListener("pointerenter", e => e.pointerType === "mouse" && sobre(true));
+  muestra.addEventListener("pointerleave", e => e.pointerType === "mouse" && sobre(false));
+  muestra.addEventListener("focusin", () => sobre(true));
+  muestra.addEventListener("focusout", e => muestra.contains(e.relatedTarget) || sobre(false));
+  paso = gsap.timeline({ onComplete: esperar }).add(entrar(items[actual]), .25);
+}
+</script>
 </body>
 </html>
 """

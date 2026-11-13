@@ -73,7 +73,7 @@ Ninguno de los dos milita ni ha militado en ningún partido, ni ha trabajado o c
 Wild o con The Wild Project; nadie les ha encargado esto, y The Wild Project y Jordi Wild no participan en la web ni la
 respaldan. No hay financiación ni apoyo de nadie: los únicos costes son las suscripciones de IA, que cada uno paga de
 su bolsillo, y la web está en el plan gratuito de Vercel, sin publicidad. Las visitas
-se cuentan con Umami, que no usa cookies y, según su documentación, no recoge datos personales. Los vídeos se reproducen con el reproductor de YouTube (youtube-nocookie.com), que solo se carga al pulsar un minuto; a partir de ahí se aplica la política de privacidad de Google. Más detalle en https://verificacion-podcast.vercel.app/quien.
+se cuentan con Umami, que no usa cookies y, según su documentación, no recoge datos personales. Los vídeos se reproducen con el reproductor de YouTube (youtube-nocookie.com), que solo se carga al pulsar un minuto; a partir de ahí se aplica la política de privacidad de Google. Al abrir una fuente en el visor, el navegador pide su texto a r.jina.ai (Jina AI), que ve la IP y la fuente; la animación de la portada y la referencia de la API cargan código de jsDelivr. Más detalle en https://verificacion-podcast.vercel.app/quien.
 
 ## Corregir un error o contribuir
 
