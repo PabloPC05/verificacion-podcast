@@ -283,7 +283,7 @@ def copiar_compartir():
 
 def indexacion(hechas):
     """robots.txt y sitemap.xml con las páginas publicadas."""
-    rutas = (["/", "/verificalo", "/metodologia", "/quien", "/api"]
+    rutas = (["/", "/buscar", "/verificalo", "/metodologia", "/quien", "/api"]
              + [r for m in hechas for r in (f'/{m["slug"]}', f'/{m["slug"]}/transcripcion')]
              + [f'/{m["slug"]}/{a["_id"]}' for m in hechas for a in m["todas"]])
     (SALIDA / "sitemap.xml").write_text(
@@ -549,8 +549,10 @@ def menu(entrevistas, actual=None):
             f'<div class="lista-acc"><a class="principal" href="/{s}">{ICONO_LINEA}<span>Línea temporal</span></a>'
             f'<a href="/{s}/transcripcion">{ICONO_TEXTO}<span>Transcripción</span></a></div>'
             f'<p class="rot">Temas <span>· en rojo, cuántas falsas o engañosas</span></p><ol class="lista-temas">{temas}</ol></div></details>')
+    aqui_buscar = ' aria-current="page"' if actual == "buscar" else ""
     return ('<header class="menu"><div class="ancho"><div class="m1"><a class="sello" href="/" title="Todas las entrevistas">Verificación</a>'
-            + "".join(partes) + '<a class="dcha" href="/verificalo">Verifícalo tú</a><a href="/metodologia">Método</a><a href="/quien">Quién lo hace</a><a href="/api">API</a>'
+            + "".join(partes) + f'<a class="dcha buscar"{aqui_buscar} href="/buscar" title="Buscar una afirmación (tecla /)">{ICONO_LUPA}<span>Buscar</span></a>'
+            '<a href="/verificalo">Verifícalo tú</a><a href="/metodologia">Método</a><a href="/quien">Quién lo hace</a><a href="/api">API</a>'
             f'<a href="{REPO}" target="_blank" rel="noopener noreferrer">GitHub ↗</a>' + BOTON_MODO + '</div></div></header>' + JS_MENU)
 
 
@@ -579,6 +581,15 @@ document.querySelectorAll("details.desp").forEach(d => d.addEventListener("toggl
 addEventListener("resize", () => document.querySelectorAll("details.desp[open]").forEach(colgar));
 const rutaActual = location.pathname.replace(/\\/$/, "");
 document.querySelectorAll(".lista-acc a").forEach(a => { if (a.pathname.replace(/\\/$/, "") === rutaActual) a.setAttribute("aria-current", "page"); });
+// La tecla «/» lleva al buscador (o enfoca su campo si ya se está en él), salvo si se está escribiendo
+document.addEventListener("keydown", ev => {
+  if (ev.key !== "/" || ev.ctrlKey || ev.metaKey || ev.altKey || ev.isComposing) return;
+  const t = ev.target;
+  if (t && (t.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName))) return;
+  ev.preventDefault();
+  const campo = document.getElementById("q");
+  if (campo) { campo.focus(); campo.select(); } else location.href = "/buscar";
+});
 const medirMenu = () => document.documentElement.style.setProperty("--menu", document.querySelector(".menu").offsetHeight + "px");
 medirMenu(); addEventListener("resize", medirMenu);
 // Las cifras del hero cuentan de 0 a su valor al cargar (salvo con movimiento reducido)
@@ -642,6 +653,7 @@ HEAD_MODO = ('<meta name="color-scheme" content="light dark">\n'
 # Iconos de los botones de las tarjetas de la portada (trazo, heredan el color del texto)
 ICONO_LINEA = ('<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3v18M10 6h9M10 12h6M10 18h8"/>'
                '<circle cx="6" cy="6" r="2" class="lleno"/><circle cx="6" cy="12" r="2" class="lleno"/><circle cx="6" cy="18" r="2" class="lleno"/></svg>')
+ICONO_LUPA = '<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg>'
 ICONO_TEXTO = '<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l4 4v14H6zM14 3v5h5M9 12h7M9 16h7"/></svg>'
 ICONO_FLECHA = '<svg class="flecha" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>'
 ICONO_EXPANDIR = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6M10 20H4v-6M20 4l-7 7M4 20l7-7"/></svg>'
@@ -1006,6 +1018,74 @@ def pagina_afirmacion(m, a, entrevistas, anterior, siguiente):
     destino = SALIDA / slug / idx
     destino.mkdir(parents=True, exist_ok=True)
     (destino / "index.html").write_text(pagina, encoding="utf-8")
+
+
+# ───────────────────────── Buscador (/buscar) ─────────────────────────
+
+# Búsquedas de ejemplo del estado vacío de /buscar. Salen de verdad en los datos y están repartidas entre los tres candidatos
+# (indice_busqueda() avisa si alguna deja de salir o si dejan de cubrirlos a todos).
+EJEMPLOS_BUSQUEDA = ["vivienda", "inmigración", "pensiones", "Marruecos", "corrupción", "amnistía", "Trump", "deuda"]
+
+
+def _plano(texto):
+    """Minúsculas y sin tildes: la misma normalización que hace el buscador en el navegador."""
+    t = unicodedata.normalize("NFD", str(texto).lower())
+    return "".join(c for c in t if unicodedata.category(c) != "Mn")
+
+
+def indice_busqueda(hechas):
+    """web/buscar/indice.json: lo justo para buscar y pintar cada resultado, mucho más ligero que afirmaciones.json.
+
+    Formato: {"c": [[slug, invitado, partido]], "t": [temas], "a": [[candidato, veredicto, segundo, id, tema, cita, afirmación,
+    resumen, [títulos de las fuentes]]]}. «candidato» y «tema» son posiciones en "c" y "t"; «veredicto» es la posición en ORDEN."""
+    temas, filas, textos = [], [], []
+    for n, m in enumerate(hechas):
+        for a in m["todas"]:
+            tema = next((t["titulo"] for t in m["temas"] if t["n"] == a.get("_tema")), "")
+            if tema not in temas:
+                temas.append(tema)
+            fuentes = []
+            for f in a.get("fuentes", []):
+                if isinstance(f, dict) and str(f.get("url", "")).startswith(("http://", "https://")):
+                    titulo = " ".join(str(f.get("titulo") or "").split())
+                    if titulo and titulo not in fuentes:
+                        fuentes.append(titulo)
+            filas.append([n, ORDEN.index(a["veredicto"]), a["_t"], a["_id"], temas.index(tema),
+                          " ".join(a.get("cita", "").strip("«»\" ").split()), " ".join(a.get("afirmacion", "").split()),
+                          " ".join((a.get("_resumen") or a.get("explicacion", "")).split()), fuentes])
+            textos.append((n, _plano(" ".join([m["invitado"], tema] + [str(x) for x in filas[-1][5:8]] + fuentes))))
+    datos = {"c": [[m["slug"], m["invitado"], m.get("partido") or ""] for m in hechas], "t": temas, "a": filas}
+    destino = SALIDA / "buscar"
+    destino.mkdir(exist_ok=True)
+    ruta = destino / "indice.json"
+    ruta.write_text(json.dumps(datos, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
+    # Comprobación de los ejemplos con la misma regla del navegador (la palabra aparece en algún campo de la afirmación)
+    cubiertos = set()
+    for ej in EJEMPLOS_BUSQUEDA:
+        quien = {n for n, texto in textos if _plano(ej) in texto}
+        if not quien:
+            print(f'AVISO: la búsqueda de ejemplo «{ej}» de /buscar no sale en ninguna afirmación')
+        cubiertos |= quien
+    if len(cubiertos) < len(hechas):
+        print("AVISO: las búsquedas de ejemplo de /buscar no cubren a todos los candidatos")
+    return ruta.stat().st_size
+
+
+def pagina_buscar(entrevistas, hechas):
+    total = sum(m["suma"] for m in hechas)
+    botones_c = "".join(
+        f'<button type="button" data-c="{e(m["slug"])}" aria-pressed="false">{e(m["invitado"])} <b></b></button>' for m in hechas)
+    botones_v = "".join(f'<button type="button" data-v="{k}" aria-pressed="false"><i></i>{PLURAL[k]} <b></b></button>' for k in ORDEN)
+    ejemplos = "".join(f'<button type="button" data-ej="{e(x, quote=True)}">{e(x)} <b></b></button>' for x in EJEMPLOS_BUSQUEDA)
+    (SALIDA / "buscar").mkdir(exist_ok=True)
+    (SALIDA / "buscar" / "index.html").write_text(rellenar(
+        BUSCAR, CABECERA=cabecera(
+            "/buscar", "Buscar una afirmación · Verificación The Wild Project",
+            f"Busca entre las {total} afirmaciones comprobadas de las entrevistas de The Wild Project: por tema, palabra, cifra o nombre, "
+            "y filtra por candidato y veredicto."),
+        MENU=menu(entrevistas, "buscar"), CSS_MENU=CSS_MENU, TOTAL=total, BOTONES_C=botones_c, BOTONES_V=botones_v,
+        EJEMPLOS=ejemplos, ICONO_LUPA=ICONO_LUPA, NOMBRES=json.dumps([NOMBRE[k] for k in ORDEN], ensure_ascii=False),
+        CLAVES=json.dumps(ORDEN), REPO=REPO), encoding="utf-8")
 
 
 # ───────────────────────── API estática (JSON) ─────────────────────────
@@ -1480,6 +1560,8 @@ def main():
                               m["todas"][n - 1] if n > 0 else None,
                               m["todas"][n + 1] if n + 1 < len(m["todas"]) else None)
     ejemplo, slugs = generar_api(hechas)
+    indice_busqueda(hechas)
+    pagina_buscar(entrevistas, hechas)
     copiar_compartir()
     indexacion(hechas)
     (SALIDA / "fotos").mkdir(exist_ok=True)
@@ -1668,6 +1750,11 @@ footer .pie-quien { margin-top:18px; }
 .pie-quien a { color:var(--suave); text-underline-offset:3px; }
 .m1 > a, .desp summary, .fila button { white-space:nowrap; }
 @media (max-width:1000px) { .m1 .largo { display:none; } }
+.m1 .buscar { display:inline-flex; align-items:center; gap:6px; }
+.m1 .buscar svg { display:block; flex:none; width:16px; height:16px; fill:none; stroke:currentColor; stroke-width:2.2; stroke-linecap:round; stroke-linejoin:round; }
+.m1 > a[aria-current]::after { transform:scaleX(1); transform-origin:left center; }
+@media (min-width:761px) and (max-width:1200px) { .m1 .buscar span { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; } .m1 .buscar { gap:0; } }   /* con poco ancho, solo la lupa: así el menú no baja de línea */
+@media (max-width:760px) { .m1 .sello { order:-2; } .m1 .buscar { order:-1; } }   /* en móvil el menú se desliza: Buscar va junto al título para que se vea */
 /* En móvil el menú y los filtros ocupan una sola fila que se desliza en horizontal; el botón de modo se queda fijo a la derecha */
 @media (max-width:760px) {
   .menu .ancho, .filtros .ancho { padding-left:0; padding-right:0; }
@@ -2944,6 +3031,306 @@ footer { border-top:3px solid var(--tinta); margin-top:48px; padding:24px 0 72px
 <footer class="pie-solo"><div class="ancho">@@PIE@@</div></footer>
 <script>
 document.querySelector("[data-copiar]").addEventListener("click", ev => copiarTexto(ev.currentTarget.dataset.enlace, "Enlace copiado."));
+</script>
+</body>
+</html>
+"""
+
+BUSCAR = """<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+@@HEAD_MODO@@
+@@CABECERA@@
+<style>
+:root { --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--fondo); color:var(--tinta); font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; -webkit-text-size-adjust:100%; overflow-wrap:break-word; }
+a { color:var(--tinta); }
+main.ancho { padding-bottom:72px; }
+main > * { max-width:900px; }
+h1 { font:700 clamp(30px,5.2vw,56px)/1.05 var(--serif); letter-spacing:-0.02em; margin:clamp(28px,5vw,48px) 0 12px; text-wrap:balance; }
+.entrada { font-size:17px; max-width:62ch; margin:0 0 22px; }
+.nota { font-size:14.5px; color:var(--suave); }
+code { font:13.5px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace; background:var(--codigo); padding:1px 5px; border-radius:var(--r-mini); }
+/* Campo de búsqueda grande, con la lupa dentro */
+.campo label { display:block; margin:0 0 6px; font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:.09em; color:var(--gris); }
+.caja { position:relative; }
+.caja svg { position:absolute; left:18px; top:50%; width:24px; height:24px; margin-top:-12px; fill:none; stroke:var(--tinta); stroke-width:2.2;
+  stroke-linecap:round; stroke-linejoin:round; pointer-events:none; }
+.caja input { display:block; width:100%; height:64px; padding:0 18px 0 56px; font:500 clamp(18px,3.4vw,24px)/1.2 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  color:var(--tinta); background:var(--fondo); border:2px solid var(--tinta); border-radius:var(--r-caja); -webkit-appearance:none; appearance:none; }
+.caja input::placeholder { color:var(--gris-claro); opacity:1; }
+.caja input:focus-visible { outline:3px solid var(--tinta); outline-offset:2px; }
+.caja input::-webkit-search-cancel-button { -webkit-appearance:none; height:20px; width:20px; margin-left:8px; cursor:pointer;
+  background:var(--tinta); -webkit-mask:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 5l14 14M19 5L5 19" stroke="black" stroke-width="2.6" stroke-linecap="round"/></svg>') center/contain no-repeat;
+  mask:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 5l14 14M19 5L5 19" stroke="black" stroke-width="2.6" stroke-linecap="round"/></svg>') center/contain no-repeat; }
+/* Filtros: los mismos botones que los de la línea temporal (una fila por grupo, que en móvil baja de línea en vez de deslizarse) */
+.filtros-b { display:grid; gap:8px; margin:20px 0 0; }
+.filtros-b .fila { flex-wrap:wrap; overflow:visible; padding:0; }
+.filtros-b .fila .rot { display:inline-block; min-width:76px; }
+.filtros-b .fila button { min-height:30px; }
+.fila button[data-n="0"]:not([aria-pressed=true]) { opacity:.45; }
+.fila button[data-n="0"]:not([aria-pressed=true]):hover { opacity:.8; }
+.fila b { min-width:1.6ch; }
+/* Resultados */
+#resultados { margin-top:22px; }
+.cuenta-b { margin:0 0 14px; padding-top:12px; border-top:3px solid var(--tinta); font-size:15px; font-weight:600; font-variant-numeric:tabular-nums; }
+.cuenta-b span { font-weight:400; color:var(--suave); }
+.lista-res { list-style:none; margin:0; padding:0; display:grid; gap:14px; }
+.res { position:relative; border:2px solid var(--tinta); border-radius:var(--r-caja); padding:16px 18px 16px; background:var(--fondo);
+  transition:background-color .15s ease-out, box-shadow .15s ease-out; }
+.res[data-v=falso] { box-shadow:inset 5px 0 0 var(--tono); padding-left:23px; }
+.res:hover { background:var(--resalte); }
+.res:focus-within { outline:3px solid var(--tinta); outline-offset:3px; }
+.res-cab { display:flex; flex-wrap:wrap; align-items:center; gap:6px 12px; margin:0 0 10px; font-size:13.5px; color:var(--suave); }
+.res-cab b { color:var(--tinta); font-weight:700; }
+.res-cab .t { min-width:0; color:var(--gris); }
+.res-cab .min { font-variant-numeric:tabular-nums; font-weight:700; color:var(--tono); white-space:nowrap; }
+.ficha { display:inline-block; font-size:11.5px; font-weight:700; text-transform:uppercase; letter-spacing:.09em; line-height:1.3;
+  border:1.5px solid var(--tono); color:var(--tono); padding:2px 9px; border-radius:var(--r-mini); }
+.res[data-v=falso] .ficha { background:var(--tono); color:var(--sobre-tono); }
+.res blockquote { margin:0 0 10px; padding-left:14px; border-left:4px solid var(--tono); font:italic 18px/1.4 var(--serif); text-wrap:pretty; }
+.res h3 { margin:0 0 6px; font-size:16.5px; line-height:1.4; font-weight:700; }
+.res h3 a { text-decoration:none; }
+.res h3 a:hover { text-decoration:underline; text-decoration-thickness:2px; }
+.res h3 a::after { content:""; position:absolute; inset:0; border-radius:var(--r-caja); }   /* toda la tarjeta es el enlace */
+.res h3 a:focus-visible { outline:none; }
+.res p { margin:0; font-size:14.5px; line-height:1.5; color:var(--suave); }
+.res .fu { margin-top:6px; font-size:13px; color:var(--gris); }
+mark { background:color-mix(in srgb, var(--tono, var(--tinta)) 24%, transparent); color:inherit; box-shadow:inset 0 -2px 0 var(--tono, var(--tinta));
+  padding:0 1px; border-radius:2px; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+.mas-b { margin:22px 0 0; }
+.btn-b { font:inherit; font-size:15px; font-weight:600; color:var(--fondo); background:var(--tinta); border:2px solid var(--tinta); border-radius:var(--r-boton);
+  padding:10px 20px; min-height:44px; cursor:pointer; }
+.btn-b:hover { background:var(--fondo); color:var(--tinta); }
+.btn-b.claro { background:var(--fondo); color:var(--tinta); }
+.btn-b.claro:hover { background:var(--tinta); color:var(--fondo); }
+/* Estados vacíos */
+.ejemplos { margin-top:6px; }
+.ejemplos .rot { display:block; margin:0 0 8px; }
+.ejemplos .fila { flex-wrap:wrap; overflow:visible; padding:0; }
+.ejemplos .fila button { font-size:14.5px; padding:5px 14px; min-height:36px; }
+.sin { border:2px solid var(--tinta); border-radius:var(--r-caja); padding:18px 20px; }
+.sin h2 { font:700 22px/1.25 var(--serif); margin:0 0 6px; }
+.sin p { margin:0 0 12px; max-width:62ch; }
+.sin .acc { display:flex; flex-wrap:wrap; gap:8px; margin-top:4px; }
+@media (max-width:600px) {
+  .caja input { height:56px; padding-left:50px; } .caja svg { left:15px; width:22px; height:22px; margin-top:-11px; }
+  .filtros-b .fila .rot { display:block; flex:0 0 100%; min-width:0; margin-bottom:-2px; }
+  .res { padding:14px 14px 14px; } .res[data-v=falso] { padding-left:19px; }
+  .res blockquote { font-size:17px; } }
+footer { border-top:3px solid var(--tinta); margin-top:48px; padding:24px 0 72px; font-size:14.5px; }
+@@CSS_MENU@@
+</style>
+</head>
+<body>
+@@MENU@@
+<main class="ancho buscador">
+<h1>Buscar una afirmación</h1>
+<p class="entrada">Busca entre las @@TOTAL@@ afirmaciones comprobadas: por tema, palabra, cifra o nombre. Si escribes varias palabras, tienen que salir todas. Pulsa <code>/</code> en cualquier página para venir aquí.</p>
+<noscript><p class="nota">El buscador necesita JavaScript. Sin él, tienes todas las afirmaciones en <a href="/api/v1/afirmaciones.csv">CSV</a> (se abre en cualquier hoja de cálculo) y en <a href="/api/v1/afirmaciones.json">JSON</a>; la <a href="/api">API</a> explica los campos.</p></noscript>
+<div id="app" hidden>
+<form class="campo" id="form" role="search" action="/buscar" method="get">
+<label for="q">Qué quieres buscar</label>
+<div class="caja">@@ICONO_LUPA@@<input id="q" name="q" type="search" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="search" placeholder="Vivienda, una cifra, un nombre…"></div>
+</form>
+<div class="filtros-b" id="filtros">
+<div class="fila" role="group" aria-label="Filtrar por candidato"><span class="rot">Candidato</span><button type="button" data-todas="c" aria-pressed="true">Todos <b></b></button>@@BOTONES_C@@</div>
+<div class="fila" role="group" aria-label="Filtrar por veredicto"><span class="rot">Veredicto</span><button type="button" data-todas="v" aria-pressed="true">Todos <b></b></button>@@BOTONES_V@@</div>
+</div>
+<div id="resultados" aria-live="polite">
+<p class="cuenta-b" id="cuenta"></p>
+<div id="sin" class="sin" hidden></div>
+<ol id="lista" class="lista-res" aria-live="off"></ol>
+<p class="mas-b" id="mas-p" hidden><button type="button" class="btn-b" id="mas"></button></p>
+</div>
+<div id="ejemplos" class="ejemplos" hidden><span class="rot">Prueba con</span><div class="fila">@@EJEMPLOS@@</div></div>
+</div>
+<p class="nota" id="error" hidden>No se ha podido cargar el índice de búsqueda. Puedes descargar todas las afirmaciones en <a href="/api/v1/afirmaciones.csv">CSV</a> o <a href="/api/v1/afirmaciones.json">JSON</a>.</p>
+</main>
+<footer class="pie-solo"><div class="ancho">@@PIE@@</div></footer>
+<script>
+/* ── Núcleo de la búsqueda: sin DOM, se prueba por separado ── */
+// Minúsculas y sin tildes, conservando la longitud del texto para poder resaltar sobre el original
+const plano = s => s.replace(/[^\\x00-\\x7f]/g, ch => { const b = ch.normalize("NFD")[0].toLowerCase(); return b.length === 1 ? b : ch; }).toLowerCase();
+const esAlfa = c => !!c && /[\\p{L}\\p{N}]/u.test(c);
+const esc = s => s.replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const palabras = q => [...new Set(plano(q).split(/\\s+/).map(w => w.replace(/^[^\\p{L}\\p{N}]+|[^\\p{L}\\p{N}%€$]+$/gu, "")).filter(Boolean))];
+// Una palabra de 3 letras o más vale como trozo de otra (migración casa con inmigración); una más corta, solo al principio de palabra
+function hallar(texto, p, desde) {
+  for (let i = texto.indexOf(p, desde); i >= 0; i = texto.indexOf(p, i + 1))
+    if (p.length >= 3 || !esAlfa(texto[i - 1])) return i;
+  return -1;
+}
+const tiene = (texto, p) => hallar(texto, p, 0) >= 0;
+function preparar(datos) {
+  return datos.a.map(([c, v, seg, id, t, cita, af, res, fu], i) => ({
+    i, c, v, seg, id, t, cita, af, res, fu,
+    n: { a: plano(af), c: plano(cita), r: plano(res), t: plano(datos.t[t]), k: plano(datos.c[c][1] + " " + datos.c[c][2]), f: plano(fu.join(" | ")) } }));
+}
+// Coincidencia de una afirmación con las palabras: puntuación (0 si falta alguna), con más peso en la afirmación y la cita
+function puntuar(d, ps) {
+  let total = 0;
+  for (const p of ps) {
+    const n = d.n, a = tiene(n.a, p), c = tiene(n.c, p), r = tiene(n.r, p), t = tiene(n.t, p), o = tiene(n.k, p) || tiene(n.f, p);
+    if (!(a || c || r || t || o)) return 0;
+    total += (a ? 10 : 0) + (c ? 8 : 0) + (r ? 3 : 0) + (t ? 2 : 0) + (o ? 1 : 0);
+  }
+  return total;
+}
+function buscar(docs, q) {
+  const ps = palabras(q);
+  if (!ps.length) return docs.map(d => ({ d, p: 1 }));
+  return docs.map(d => ({ d, p: puntuar(d, ps) })).filter(x => x.p).sort((x, y) => y.p - x.p);   // sort es estable: a igualdad, orden del índice
+}
+// Texto escapado con <mark> en cada trozo que coincide con alguna palabra
+function resaltar(texto, norm, ps) {
+  const trozos = [];
+  for (const p of ps) for (let i = hallar(norm, p, 0); i >= 0; i = hallar(norm, p, i + p.length)) trozos.push([i, i + p.length]);
+  if (!trozos.length) return esc(texto);
+  trozos.sort((x, y) => x[0] - y[0] || y[1] - x[1]);
+  let sal = "", pos = 0;
+  for (let [a, b] of trozos) {
+    if (b <= pos) continue;
+    if (a < pos) a = pos;
+    sal += esc(texto.slice(pos, a)) + "<mark>" + esc(texto.slice(a, b)) + "</mark>";
+    pos = b;
+  }
+  return sal + esc(texto.slice(pos));
+}
+/* ── Fin del núcleo ── */
+
+const TAM = 60, NOMBRES = @@NOMBRES@@, CLAVES = @@CLAVES@@;
+const $ = id => document.getElementById(id);
+const campo = $("q"), lista = $("lista"), botonMas = $("mas");
+let datos = null, docs = [], hallados = [], pintados = 0, espera = 0;
+const estado = { q: "", c: new Set(), v: new Set() };
+
+const hms = s => Math.floor(s / 3600) + ":" + String(Math.floor(s % 3600 / 60)).padStart(2, "0") + ":" + String(s % 60).padStart(2, "0");
+const plural = n => n === 1 ? "1 afirmación" : n.toLocaleString("es-ES") + " afirmaciones";
+
+function leerURL() {
+  const u = new URLSearchParams(location.search);
+  estado.q = (u.get("q") || "").trim();
+  const conj = (clave, validos) => new Set((u.get(clave) || "").split(",").filter(x => validos.includes(x)));
+  estado.c = conj("c", datos.c.map(c => c[0]));
+  estado.v = conj("v", CLAVES);
+  campo.value = estado.q;
+}
+function escribirURL(extra) {
+  const u = new URLSearchParams();
+  if (estado.q) u.set("q", estado.q);
+  if (estado.c.size) u.set("c", [...estado.c].join(","));
+  if (estado.v.size) u.set("v", [...estado.v].join(","));
+  const s = u.toString();
+  history.replaceState(extra || history.state, "", location.pathname + (s ? "?" + s : ""));
+}
+const filtrar = (x, c, v) => (!c || !estado.c.size || estado.c.has(datos.c[x.d.c][0])) && (!v || !estado.v.size || estado.v.has(CLAVES[x.d.v]));
+
+function tarjeta(x, ps) {
+  const d = x.d, cand = datos.c[d.c], v = CLAVES[d.v], enlace = "/" + cand[0] + "/" + d.id;
+  const tema = datos.t[d.t];
+  // Si alguna palabra solo sale en el título de una fuente, se enseña esa fuente para que se vea por qué aparece
+  let fuente = "";
+  const sueltas = ps.filter(p => !["a", "c", "r", "t", "k"].some(k => tiene(d.n[k], p)));
+  if (sueltas.length) {
+    const i = d.fu.findIndex(t => sueltas.some(p => tiene(plano(t), p)));
+    if (i >= 0) fuente = '<p class="fu">Fuente: ' + resaltar(d.fu[i], plano(d.fu[i]), ps) + "</p>";
+  }
+  return '<li class="res" data-v="' + v + '"><article><div class="res-cab"><span class="ficha">' + NOMBRES[d.v] + "</span>" +
+    "<b>" + resaltar(cand[1], plano(cand[1]), ps) + '</b><span class="min">' + hms(d.seg) + "</span>" +
+    (tema ? '<span class="t">' + resaltar(tema, d.n.t, ps) + "</span>" : "") + "</div>" +
+    (d.cita ? "<blockquote>«" + resaltar(d.cita, d.n.c, ps) + "»</blockquote>" : "") +
+    '<h3><a href="' + enlace + '">' + resaltar(d.af, d.n.a, ps) + "</a></h3>" +
+    "<p>" + resaltar(d.res, d.n.r, ps) + "</p>" + fuente + "</article></li>";
+}
+function pintarMas(n) {
+  const ps = palabras(estado.q), ini = pintados;
+  pintados = Math.min(hallados.length, pintados + n);
+  lista.insertAdjacentHTML("beforeend", hallados.slice(ini, pintados).map(x => tarjeta(x, ps)).join(""));
+  const quedan = hallados.length - pintados;
+  $("mas-p").hidden = !quedan;
+  botonMas.textContent = "Ver más (quedan " + quedan.toLocaleString("es-ES") + ")";
+  return ini;
+}
+function aplicar(mantener) {
+  estado.q = campo.value.trim();
+  const base = buscar(docs, estado.q);
+  // Los números de cada botón cuentan lo que saldría al pulsarlo, con la búsqueda y el otro filtro actuales
+  document.querySelectorAll("#filtros [data-c]").forEach(b => b.dataset.n = base.filter(x => datos.c[x.d.c][0] === b.dataset.c && filtrar(x, false, true)).length);
+  document.querySelectorAll("#filtros [data-v]").forEach(b => b.dataset.n = base.filter(x => CLAVES[x.d.v] === b.dataset.v && filtrar(x, true, false)).length);
+  document.querySelectorAll("#filtros [data-todas]").forEach(b => b.dataset.n = base.filter(x => filtrar(x, b.dataset.todas === "v", b.dataset.todas === "c")).length);
+  document.querySelectorAll("#filtros button").forEach(b => {
+    b.querySelector("b").textContent = Number(b.dataset.n).toLocaleString("es-ES");
+    b.setAttribute("aria-pressed", b.dataset.todas ? !estado[b.dataset.todas].size : (b.dataset.c ? estado.c.has(b.dataset.c) : estado.v.has(b.dataset.v)));
+  });
+  hallados = base.filter(x => filtrar(x, true, true));
+  lista.innerHTML = ""; pintados = 0;
+  const vacio = !estado.q && !estado.c.size && !estado.v.size;
+  $("ejemplos").hidden = !vacio;
+  const sin = $("sin"); sin.hidden = true;
+  const cuenta = $("cuenta");
+  if (vacio) {
+    cuenta.innerHTML = "Escribe algo para buscar entre las " + docs.length.toLocaleString("es-ES") + " afirmaciones.";
+    $("mas-p").hidden = true;
+  } else if (!hallados.length) {
+    cuenta.textContent = "0 afirmaciones";
+    $("mas-p").hidden = true;
+    const sinFiltros = base.length;
+    sin.hidden = false;
+    sin.innerHTML = "<h2>No hay ninguna afirmación que coincida</h2>" +
+      (estado.q ? "<p>No sale nada para «" + esc(estado.q) + "»" + (sinFiltros && (estado.c.size || estado.v.size) ? " con los filtros puestos" : "") + ".</p>" : "<p>No hay nada con esos filtros.</p>") +
+      (palabras(estado.q).length > 1 ? "<p>Con varias palabras tienen que salir todas: prueba con menos palabras o con una más corta.</p>" : "") +
+      '<div class="acc">' +
+      ((estado.c.size || estado.v.size) && sinFiltros ? '<button type="button" class="btn-b" data-accion="quitar">Quitar los filtros (' + plural(sinFiltros) + ")</button>" : "") +
+      (estado.q ? '<button type="button" class="btn-b claro" data-accion="borrar">Borrar la búsqueda</button>' : "") + "</div>";
+  } else {
+    cuenta.innerHTML = plural(hallados.length) + (estado.q ? " <span>para «" + esc(estado.q) + "»</span>" : "");
+    pintarMas(mantener || TAM);
+  }
+  escribirURL();
+}
+function ponerBusqueda(texto) { campo.value = texto; clearTimeout(espera); aplicar(); campo.focus(); }
+
+function alternar(conjunto, valor) { conjunto.has(valor) ? conjunto.delete(valor) : conjunto.add(valor); }
+$("filtros").addEventListener("click", ev => {
+  const b = ev.target.closest("button"); if (!b) return;
+  if (b.dataset.todas) estado[b.dataset.todas].clear();
+  else {
+    const conj = b.dataset.c ? estado.c : estado.v, total = b.dataset.c ? datos.c.length : CLAVES.length;
+    alternar(conj, b.dataset.c || b.dataset.v);
+    if (conj.size === total) conj.clear();
+  }
+  aplicar();
+});
+$("ejemplos").addEventListener("click", ev => { const b = ev.target.closest("button[data-ej]"); if (b) ponerBusqueda(b.dataset.ej); });
+$("sin").addEventListener("click", ev => {
+  const b = ev.target.closest("button[data-accion]"); if (!b) return;
+  if (b.dataset.accion === "quitar") { estado.c.clear(); estado.v.clear(); aplicar(); campo.focus(); } else ponerBusqueda("");
+});
+botonMas.addEventListener("click", () => {
+  const ini = pintarMas(TAM);
+  lista.children[ini]?.querySelector("a").focus({ preventScroll: false });
+});
+campo.addEventListener("input", () => { clearTimeout(espera); espera = setTimeout(() => aplicar(), 180); });
+$("form").addEventListener("submit", ev => { ev.preventDefault(); clearTimeout(espera); aplicar(); });
+// Al volver atrás desde una afirmación se recupera cuántas había pintadas y dónde se estaba
+const guardarPosicion = () => { if (datos) try { history.replaceState({ n: pintados, y: scrollY }, "", location.href); } catch (e) {} };
+lista.addEventListener("click", guardarPosicion);
+addEventListener("pagehide", guardarPosicion);
+if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+
+fetch("/buscar/indice.json").then(r => { if (!r.ok) throw 0; return r.json(); }).then(j => {
+  datos = j; docs = preparar(j);
+  document.querySelectorAll("#ejemplos [data-ej]").forEach(b => b.querySelector("b").textContent = buscar(docs, b.dataset.ej).length);
+  leerURL();
+  $("app").hidden = false;
+  const previo = history.state && history.state.n;
+  aplicar(previo > TAM ? previo : TAM);
+  if (previo) { if (history.state.y) scrollTo(0, history.state.y); } else campo.focus();
+}).catch(() => { $("error").hidden = false; });
 </script>
 </body>
 </html>
