@@ -68,8 +68,8 @@ Proyecto personal de [Pablo Pardo Cotos](https://github.com/PabloPC05), estudian
 Ingeniería Informática de la Universidad Complutense de Madrid. No milita ni ha militado en ningún partido y no ha
 trabajado ni colaborado con ningún partido, ni con Jordi Wild, ni con The Wild Project; nadie le ha encargado esto, y
 The Wild Project y Jordi Wild no participan en la web ni la respaldan. No tiene financiación ni apoyo de nadie: paga
-los costes (sus suscripciones de IA) y la web está en el plan gratuito de Vercel, sin publicidad ni seguimiento de
-visitas. Más detalle en https://verificacion-podcast.vercel.app/quien.
+los costes (sus suscripciones de IA) y la web está en el plan gratuito de Vercel, sin publicidad. Las visitas
+se cuentan con Umami, que no usa cookies y, según su documentación, no recoge datos personales. Más detalle en https://verificacion-podcast.vercel.app/quien.
 
 ## Corregir un error o contribuir
 
