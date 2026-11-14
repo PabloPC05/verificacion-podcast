@@ -4,20 +4,116 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<script>try{var m=localStorage.getItem("modo");if(m==="claro"||m==="oscuro")document.documentElement.dataset.modo=m}catch(e){}</script>
+<script>try{var m=localStorage.getItem("modo");if(m==="claro"||m==="oscuro")document.documentElement.dataset.modo=m}catch(e){}</script><style>
+@view-transition { navigation: auto; }
+::view-transition-group(afirmacion) { animation-duration:280ms; animation-timing-function:cubic-bezier(.2,.7,.2,1); }
+/* La tarjeta se desvanece enseguida y es la página nueva la que crece desde su tamaño, recortada por arriba */
+::view-transition-old(afirmacion) { animation-duration:80ms; }
+::view-transition-new(afirmacion) { animation-duration:120ms; height:100%; object-fit:cover; object-position:top; }
+@media (prefers-reduced-motion: reduce) { @view-transition { navigation: none; } }
+</style>
+<script>
+(() => {
+  const AFIRMACION = /^\/([a-z]+)\/(m\d+(?:-\d+)?)\/?$/, LINEA = /^\/([a-z]+)\/?$/;
+  const ruta = u => { try { return new URL(u).pathname; } catch (e) { return ""; } };
+  const visible = el => { const r = el.getBoundingClientRect(); return r.bottom > 0 && r.top < innerHeight; };
+  const nombrar = (el, vt) => {
+    el.style.viewTransitionName = "afirmacion";
+    vt.ready.catch(() => {});
+    vt.finished.finally(() => { el.style.viewTransitionName = ""; }).catch(() => {});
+  };
+  // Saltar sin dejar promesas rechazadas sin atender (darían un error en la consola)
+  const saltar = vt => { vt.ready.catch(() => {}); vt.updateCallbackDone.catch(() => {}); vt.skipTransition(); };
+  // Qué se anima entre dos rutas: «ida» de la línea temporal a una afirmación de la misma entrevista, o «vuelta»
+  const paso = (de, a) => {
+    const l = LINEA.exec(de), f = AFIRMACION.exec(a);
+    if (l && f && l[1] === f[1]) return { tipo: "ida", id: f[2] };
+    const f2 = AFIRMACION.exec(de), l2 = LINEA.exec(a);
+    if (f2 && l2 && f2[1] === l2[1]) return { tipo: "vuelta", id: f2[2] };
+    return null;
+  };
+  const tarjeta = id => document.getElementById(id) && document.getElementById(id).querySelector(".panel");
+  const pagina = () => document.querySelector("main[data-v]");
+  // La página que se va marca lo que va a crecer (la tarjeta) o a encogerse (la página de la afirmación)
+  addEventListener("pageswap", ev => {
+    const vt = ev.viewTransition; if (!vt) return;
+    const p = paso(ruta(location.href), ruta(ev.activation && ev.activation.entry ? ev.activation.entry.url : ""));
+    const el = p && (p.tipo === "ida" ? tarjeta(p.id) : pagina());
+    if (el && visible(el)) nombrar(el, vt); else saltar(vt);
+  });
+  // La que llega marca el destino
+  addEventListener("pagereveal", ev => {
+    const vt = ev.viewTransition; if (!vt) return;
+    const desde = window.navigation && navigation.activation && navigation.activation.from ? navigation.activation.from.url : "";
+    const p = paso(ruta(desde), ruta(location.href));
+    const el = p && (p.tipo === "ida" ? pagina() : tarjeta(p.id));
+    if (el && visible(el)) nombrar(el, vt); else saltar(vt);
+  });
+})();
+</script>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="83bf64a7-e92e-4617-80d2-bb6a92bb2b8e" data-domains="verificacion-podcast.vercel.app"></script>
+<script>
+document.addEventListener("click", function (ev) {
+  var a = ev.target.closest && ev.target.closest("a[href]");
+  if (!a || !window.umami || ev.defaultPrevented) return;  // si otro script ya gestionó el clic (el reproductor), no es una salida a otro dominio
+  try {
+    var u = new URL(a.href, location.href), desde = location.pathname;
+    if (u.protocol !== "http:" && u.protocol !== "https:") return;
+    if (a.hasAttribute("download") || /\.(csv|json)$/i.test(u.pathname))
+      umami.track("descarga", { url: u.pathname, desde: desde });
+    else if (u.host !== location.host)
+      umami.track("enlace-externo", { url: (u.host + u.pathname + u.search).slice(0, 480), dominio: u.host, desde: desde });
+    else if (u.pathname !== desde)
+      umami.track("enlace-interno", { url: u.pathname, desde: desde });
+  } catch (e) {}
+}, true);
+</script>
 <title>Verificación de las entrevistas electorales de The Wild Project</title>
 <meta name="description" content="Las entrevistas de Jordi Wild a los candidatos a las elecciones generales de 2026, comprobadas dato a dato con el mismo método. Código y datos abiertos.">
+<link rel="canonical" href="https://verificacion-podcast.vercel.app/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Verificación de las entrevistas de The Wild Project">
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="Verificación de las entrevistas electorales de The Wild Project">
+<meta property="og:description" content="Las entrevistas de Jordi Wild a los candidatos a las elecciones generales de 2026, comprobadas dato a dato con el mismo método. Código y datos abiertos.">
+<meta property="og:url" content="https://verificacion-podcast.vercel.app/">
+<meta property="og:image" content="https://verificacion-podcast.vercel.app/compartir/general.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Verificación dato a dato de las entrevistas electorales de The Wild Project">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Verificación de las entrevistas electorales de The Wild Project">
+<meta name="twitter:description" content="Las entrevistas de Jordi Wild a los candidatos a las elecciones generales de 2026, comprobadas dato a dato con el mismo método. Código y datos abiertos.">
+<meta name="twitter:image" content="https://verificacion-podcast.vercel.app/compartir/general.png">
+<meta name="twitter:image:alt" content="Verificación dato a dato de las entrevistas electorales de The Wild Project">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<script>if(!matchMedia("(prefers-reduced-motion: reduce)").matches){document.documentElement.classList.add("con-gsap");window.esperaGsap=setTimeout(function(){document.documentElement.classList.remove("con-gsap")},2500)}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" integrity="sha384-HOvlOYPIs/zjoIkWUGXkVmXsjr8GuZLV+Q+rcPwmJOVZVpvTSXQChiN4t9Euv9Vc" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js" integrity="sha384-xb96EMJeax+NLXMC88ZBa1xAeAW+kn+horHh/zFlbMLG2UPWhMJJSlv7fi57hS+Q" crossorigin="anonymous"></script>
 <style>
 :root { --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; }
 * { box-sizing:border-box; }
 body { margin:0; background:var(--fondo); color:var(--tinta); font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; }
 a { color:var(--tinta); }
-.ancho { max-width:1120px; margin:0 auto; padding:0 16px; }
-main.ancho { max-width:860px; }
-h1 { font:700 clamp(30px,6vw,48px)/1.06 var(--serif); letter-spacing:-0.02em; margin:40px 0 14px; text-wrap:balance; }
-.entrada { font-size:17px; max-width:62ch; margin:0 0 30px; }
-.tu { margin:-10px 0 30px; padding:12px 14px; border:1.5px solid var(--tinta); font-size:15px; max-width:62ch; }
-.entrevista { border:2px solid var(--tinta); padding:22px 24px; margin-bottom:18px; display:grid; grid-template-columns:76px minmax(0,1fr); gap:0 22px; align-items:start; }
+.cabeza { padding:clamp(28px,5vw,56px) 0 clamp(24px,3vw,36px); }
+h1 { font:700 clamp(30px,5.2vw,58px)/1.05 var(--serif); letter-spacing:-0.02em; margin:0 0 16px; text-wrap:balance; max-width:20ch; }
+.entrada { font-size:17px; max-width:62ch; margin:0 0 20px; }
+@media (min-width:1000px) {
+  .cabeza { display:grid; grid-template-columns:minmax(0,1.5fr) minmax(280px,1fr); gap:0 clamp(32px,5vw,80px); align-items:end; }
+  .cabeza h1 { grid-column:1 / -1; max-width:24ch; } .cabeza .entrada { margin:0; } }
+.tarjetas { display:grid; gap:18px; }
+.entrevista { position:relative; border:2px solid var(--tinta); padding:22px 24px; display:grid; grid-template-columns:76px minmax(0,1fr); gap:0 22px; align-items:start; }
+.entrevista > div { min-width:0; }
+/* En tres columnas la cabecera (logo, nombre, partido) va arriba y el resto aprovecha todo el ancho de la tarjeta */
+@media (min-width:1000px) { .tarjetas { grid-template-columns:repeat(3,minmax(0,1fr)); }
+  .tarjetas .entrevista { grid-template-columns:76px minmax(0,1fr); grid-template-rows:auto auto auto auto auto auto 1fr; gap:0 18px; }
+  .tarjetas .entrevista > div { display:contents; } .tarjetas .entrevista > div > * { grid-column:1 / -1; }
+  .tarjetas .entrevista .logo { grid-column:1; grid-row:1 / span 3; width:76px; height:76px; align-self:start; }
+  .tarjetas .entrevista h2, .tarjetas .entrevista .partido { grid-column:2; }
+  .tarjetas .entrevista h2 { font-size:clamp(26px,2.2vw,32px); align-self:end; text-wrap:balance; }
+  .tarjetas .entrevista .prog { margin-top:8px; } .tarjetas .entrevista .acc { grid-column:1 / -1; align-self:end; } }
 .logo { width:76px; height:76px; object-fit:contain; display:block; }
 /* en oscuro, los logotipos llevan una placa clara detrás (el azul del PP casi desaparece sobre fondo oscuro); en claro no hay placa */
 img.logo { background:var(--logo-fondo); box-shadow:0 0 0 6px var(--logo-fondo); border-radius:var(--logo-radio); }
@@ -27,6 +123,12 @@ img.logo { background:var(--logo-fondo); box-shadow:0 0 0 6px var(--logo-fondo);
 .entrevista.off { border:1px dashed var(--gris-claro); color:var(--gris); }
 .prog { margin:0 0 12px; font-size:12px; text-transform:uppercase; letter-spacing:.08em; color:var(--gris); }
 .entrevista h2 { font:700 32px/1.1 var(--serif); margin:0 0 2px; } .entrevista h2 a { text-decoration:none; }
+.entrevista h2 a::after { content:""; position:absolute; inset:0; }
+
+.entrevista:not(.off) { transition:transform .18s ease-out, box-shadow .18s ease-out; }
+@media (hover:hover) { .entrevista:not(.off):hover { transform:translateY(-3px); box-shadow:inset 0 0 0 1px var(--tinta); }
+  .entrevista:not(.off):hover h2 a { text-decoration:underline; text-decoration-thickness:2px; } }
+.entrevista:not(.off):active { transform:translateY(-1px); }
 .num { margin:0; font-size:17px; } .num b { font:700 34px/1 var(--serif); margin-right:4px; }
 .des { margin:4px 0 14px; font-size:13.5px; font-weight:600; } .des span { color:var(--tono); }
 .entrevista ul { list-style:none; margin:6px 0 16px; padding:0; columns:2; column-gap:28px; font-size:14.5px; }
@@ -37,7 +139,80 @@ img.logo { background:var(--logo-fondo); box-shadow:0 0 0 6px var(--logo-fondo);
 .contrastar pre { background:var(--pre-fondo); color:var(--pre-tinta); outline:1px solid var(--pre-borde); outline-offset:-1px; padding:14px 16px; overflow-x:auto; white-space:pre-wrap; font:13px/1.55 ui-monospace,SFMono-Regular,Menlo,monospace; margin:6px 0 10px; }
 .copiar { font:inherit; font-size:13px; font-weight:600; background:var(--fondo); color:var(--tinta); border:1.5px solid var(--tinta); padding:5px 12px; cursor:pointer; }
 .copiar:hover { background:var(--tinta); color:var(--fondo); }
-.acc { margin:0; display:flex; flex-wrap:wrap; gap:8px 22px; } .acc a { font-weight:700; text-underline-offset:3px; }
+/* Botones de cada tarjeta: la línea temporal es la acción principal (rellena) y la transcripción la secundaria (con borde) */
+/* Lado a lado si cada botón cabe en una línea (≥ 200 px); si no, uno debajo de otro a todo el ancho */
+.acc { grid-column:2; margin:16px 0 0; display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr)); gap:10px; max-width:520px; }
+.btn span { white-space:nowrap; }
+.btn { position:relative; z-index:1; display:flex; align-items:center; gap:10px; min-height:46px; padding:0 14px;
+  border:2px solid var(--tinta); background:var(--fondo); color:var(--tinta); font-size:15px; font-weight:700; line-height:1.2; text-decoration:none;
+  transition:background-color .15s ease-out, color .15s ease-out, box-shadow .18s ease-out, transform .12s ease-out; }
+.btn.principal { background:var(--tinta); color:var(--fondo); }
+.btn svg { display:block; flex:none; width:18px; height:18px; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+.btn svg .lleno { fill:currentColor; stroke:none; }
+.btn .flecha { margin-left:auto; transition:transform .18s ease-out; }
+.btn:hover { background:var(--tinta); color:var(--fondo); }
+.btn.principal:hover { background:var(--fondo); color:var(--tinta); }
+.btn:hover .flecha, .btn:focus-visible .flecha { transform:translateX(3px); }
+.btn:active { transform:translateY(1px) scale(.99); }
+.sr { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; }
+@media (min-width:1000px) { .acc { max-width:none; margin-top:18px; } }
+@media (max-width:560px) { .acc { grid-column:1 / -1; max-width:none; } }
+footer { border-top:3px solid var(--tinta); margin-top:48px; padding:28px 0 64px; font-size:14.5px; }
+.pie-corto p { margin:0 0 6px; max-width:none; font-size:12.5px; line-height:1.5; color:var(--suave); }
+.pie-corto .final { color:var(--gris); }
+.pie-corto { padding-bottom:40px; }
+/* Escritorio: la portada cabe en una pantalla. El cuerpo es una columna de alto completo y los tamaños se atan al alto de la ventana. */
+@media (min-width:1000px) and (min-height:640px) {
+  .primera { min-height:calc(100dvh - var(--menu, 48px)); display:flex; flex-direction:column; justify-content:center; gap:clamp(10px,2.4vh,40px);
+    padding-top:clamp(8px,2vh,32px); padding-bottom:clamp(4px,1vh,12px); }
+  .primera .seguir { margin-top:0; }
+  .cabeza { padding:0; grid-template-columns:minmax(0,1.25fr) minmax(0,1fr); grid-template-rows:auto auto; gap:10px clamp(32px,4vw,72px); align-items:end; }
+  .cabeza h1 { grid-column:1; grid-row:1 / span 2; max-width:none; margin:0; font-size:clamp(32px, min(3.7vw, 6vh), 60px); }
+  .cabeza .entrada { grid-column:2; grid-row:1; font-size:clamp(14px,1.95vh,17px); line-height:1.5; }
+  .tarjetas .entrevista { padding:clamp(14px,2.2vh,22px) 20px; }
+  .des { font-size:clamp(12.5px,1.75vh,13.5px); }
+  .tarjetas .entrevista .prog { margin:clamp(6px,1.2vh,12px) 0 clamp(4px,1vh,10px); font-size:11px; letter-spacing:.05em; }
+  .tarjetas .entrevista h2 { font-size:clamp(23px, min(2.1vw, 3.6vh), 32px); }
+  .tarjetas .entrevista { grid-template-columns:clamp(60px,8vh,76px) minmax(0,1fr); }
+  .tarjetas .entrevista .logo { width:clamp(60px,8vh,76px); height:clamp(60px,8vh,76px); }
+  .des { margin-bottom:0; }
+  .acc { grid-template-columns:repeat(auto-fit,minmax(min(100%,140px),1fr)); } .btn .flecha { display:none; } .btn { padding:0 12px; font-size:14.5px; }
+  .num { font-size:16px; } .num b { font-size:30px; }
+  .tarjetas .entrevista .acc { margin-top:clamp(10px,1.6vh,18px); gap:8px; }
+  .btn { min-height:clamp(40px,5.2vh,46px); }
+  .ancho.pie-corto { padding-bottom:0; line-height:1.45; }
+  .pie-corto p { display:inline; margin:0; font-size:clamp(11px,1.6vh,12px); }
+  .pie-corto .final::before { content:" "; } }
+/* Entre 1000 y 1200 px de ancho las tarjetas son estrechas: botones sin icono para que vayan en una fila, y menos relleno */
+@media (min-width:1000px) and (max-width:1199px) and (min-height:640px) {
+  .tarjetas .entrevista { padding:14px 16px; gap:0 14px; }
+  .tarjetas .entrevista .acc { grid-template-columns:1fr 1fr; } .btn .ico { display:none; } .btn { justify-content:center; padding:0 8px; font-size:14px; }
+  .tarjetas .entrevista .prog { font-size:10.5px; letter-spacing:.03em; }
+  .tarjetas .entrevista .num { font-size:15px; } .tarjetas .entrevista .num b { font-size:26px; }
+  .tarjetas .entrevista { grid-template-columns:56px minmax(0,1fr); } .tarjetas .entrevista .logo { width:56px; height:56px; }
+  .cabeza h1 { font-size:clamp(30px,3.4vw,40px); grid-row:1; } }
+/* Leyenda en texto bajo las tarjetas: una fila que se parte en varias en pantallas estrechas */
+.ley-linea { display:flex; flex-wrap:wrap; gap:6px clamp(14px,2vw,28px); margin:18px 0 0; padding:0; list-style:none; font-size:13.5px; line-height:1.4; color:var(--suave); }
+.ley-linea li { display:flex; align-items:baseline; gap:7px; }
+.ley-linea i { flex:none; width:10px; height:10px; border-radius:50%; background:var(--tono); transform:translateY(1px); }
+.ley-linea b { color:var(--tinta); }
+.ley-linea .mas { margin-left:auto; }
+.ley-linea .mas a { color:var(--suave); text-underline-offset:3px; }
+@media (max-width:760px) { .ley-linea { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr)); gap:8px 20px; } .ley-linea .mas { margin-left:0; } }
+@media (min-width:1000px) and (min-height:640px) { .ley-linea { margin:0; font-size:clamp(12px,1.7vh,13.5px); } }
+/* Enlace al final de la primera pantalla que invita a bajar a la comparativa */
+.seguir { align-self:center; display:inline-flex; align-items:center; gap:8px; min-height:44px; padding:0 14px; margin:18px 0 0;
+  font-size:14px; font-weight:700; text-decoration:none; color:var(--gris); }
+.seguir:hover { color:var(--tinta); } .seguir svg { display:block; width:16px; height:16px; fill:none; stroke:currentColor; stroke-width:2.2; stroke-linecap:round; transition:transform .2s ease-out; }
+.seguir:hover svg { transform:translateY(3px); }
+.compara { scroll-margin-top:calc(var(--menu, 48px) + 16px); }
+/* «Puedes verificarlo tú», después de la comparativa: tres vías cortas en fichas */
+.verifica-entrada { margin:0 0 16px; max-width:62ch; font-size:17px; }
+.verifica-vias { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr)); gap:clamp(14px,2vw,22px); margin:0; padding:0; list-style:none; }
+.verifica-vias li { display:flex; flex-direction:column; gap:8px; min-width:0; padding:clamp(16px,2vw,22px); border:2px solid var(--tinta); border-radius:var(--r-caja); }
+.verifica-vias h3 { margin:0; font:700 20px/1.25 var(--serif); text-wrap:balance; }
+.verifica-vias p { margin:0; font-size:15px; color:var(--suave); max-width:62ch; }
+.verifica-vias a { margin-top:auto; padding-top:4px; font-weight:700; text-underline-offset:3px; }
 .seccion-t, .compara h2 { font:700 27px/1.2 var(--serif); margin:44px 0 14px; padding-top:12px; border-top:3px solid var(--tinta); }
 .compara { margin-bottom:8px; }
 .tabla-c { overflow-x:auto; }
@@ -61,9 +236,11 @@ img.logo { background:var(--logo-fondo); box-shadow:0 0 0 6px var(--logo-fondo);
 @media (max-width:560px) { .compara table { min-width:0; font-size:12.5px; } .compara thead td { width:27%; }
   .cand { font-size:15px; } .par { font-size:11px; } .compara th, .compara td { padding:7px 4px; } .compara tbody th { font-size:12px; }
   .compara .pc { display:block; margin-left:0; font-size:11.5px; } .compara tr.fuerte td b { font-size:20px; } }
-footer { border-top:3px solid var(--tinta); margin-top:48px; padding:24px 0 64px; font-size:14.5px; }
 footer p { max-width:68ch; }
-@media (max-width:560px) { .entrevista { grid-template-columns:52px minmax(0,1fr); gap:0 14px; padding:16px; } .logo { width:52px; height:52px; } .entrevista h2 { font-size:26px; } }
+footer .leyenda-f { max-width:820px; }
+@media (min-width:1080px) { .pie { display:grid; grid-template-columns:minmax(0,1.2fr) minmax(0,1fr); gap:0 clamp(40px,5vw,80px); align-items:start; }
+  .pie > div > p:first-child { margin-top:0 !important; } }
+@media (max-width:560px) { .entrevista { grid-template-columns:60px minmax(0,1fr); gap:0 14px; padding:16px; } .logo { width:60px; height:60px; } .entrevista h2 { font-size:26px; } }
 
 :root { --fondo:#fff; --tinta:#000; --suave:#444; --gris:#666; --gris-claro:#999; --claro:#d9d9d9; --codigo:#f2f2f2; --resalte:#f3f3f3; --pre-fondo:#000; --pre-tinta:#fff; --pre-borde:transparent; --sombra:#000; --inv-suave:#ccc; --sobre-tono:#fff; --logo-fondo:transparent; --logo-radio:0; --luna:block; --sol:none; color-scheme:light; --v-falso:#c0271e; --v-enganoso:#c26a00; --v-mayormente_verdadero:#5a7d10; --v-verdadero:#1c7c45; --v-no_verificable:#777; }
 @media (prefers-color-scheme:dark) { :root:not([data-modo=claro]) { --fondo:#121214; --tinta:#ececee; --suave:#bdbdc4; --gris:#a3a3aa; --gris-claro:#7c7c84; --claro:#3a3a40; --codigo:#26262b; --resalte:#26262b; --pre-fondo:#1c1c20; --pre-tinta:#ececee; --pre-borde:#3a3a40; --sombra:#55555c; --inv-suave:#55555c; --sobre-tono:#121214; --logo-fondo:#fff; --logo-radio:4px; --luna:none; --sol:block; color-scheme:dark; --v-falso:#ff6b5e; --v-enganoso:#ff9a2e; --v-mayormente_verdadero:#b8d63c; --v-verdadero:#3fd083; --v-no_verificable:#a4a4ac; } }
@@ -76,33 +253,61 @@ footer p { max-width:68ch; }
 ::view-transition-old(root), ::view-transition-new(root) { animation:none; mix-blend-mode:normal; }
 html { scroll-behavior:smooth; scroll-padding-top:calc(var(--menu, 48px) + 64px); }
 [hidden] { display:none !important; }
+/* Un solo contenedor para todas las páginas: el menú, los títulos y el contenido arrancan en el mismo borde */
+.ancho { max-width:1360px; margin:0 auto; padding-left:clamp(16px,4vw,48px); padding-right:clamp(16px,4vw,48px); }
 .menu { position:sticky; top:0; z-index:10; background:var(--fondo); border-bottom:2px solid var(--tinta); }
 .menu .ancho { padding-top:9px; padding-bottom:9px; position:relative; }
-.m1 { display:flex; flex-wrap:wrap; align-items:center; gap:4px 24px; font-size:14.5px; }
+.m1 { display:flex; flex-wrap:wrap; align-items:center; gap:4px 24px; font-size:14.5px; line-height:22px; }   /* alto de línea entero: así la fila mide píxeles enteros y el botón de modo queda centrado sin medio píxel */
 .m1 a, .desp summary { color:var(--tinta); text-decoration:none; font-weight:600; padding:3px 0; border-bottom:2px solid transparent; }
-.m1 > a:hover, .desp.actual summary, .desp[open] summary, .desp summary:hover { border-bottom-color:var(--tinta); }
-.m1 .sello { font:700 17px/1.2 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; }
+/* Subrayado del menú: se dibuja de izquierda a derecha al pasar el ratón y se recoge hacia la derecha al salir */
+.m1 > a:not(.sello), .desp summary { position:relative; border-bottom-color:transparent !important; }
+.m1 > a:not(.sello)::after, .desp summary::after { content:""; position:absolute; left:0; right:0; bottom:-1px; height:2px; background:var(--tinta);
+  transform:scaleX(0); transform-origin:right center; transition:transform .28s cubic-bezier(.4,0,.2,1); }
+.m1 > a:not(.sello):hover::after, .m1 > a:not(.sello):focus-visible::after, .desp summary:hover::after, .desp summary:focus-visible::after,
+.desp.actual summary::after, .desp[open] summary::after { transform:scaleX(1); transform-origin:left center; }
+.m1 .sello { font:700 17px/22px "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; }   /* alto entero: la fila del menú mide píxeles enteros y lo centrado cae en píxel exacto */
 .m1 .off { color:var(--gris-claro); } .m1 .dcha { margin-left:auto; }
 .modo { flex:none; display:inline-grid; place-items:center; width:26px; height:26px; padding:0; margin:0 0 0 -8px; cursor:pointer;
   color:var(--tinta); background:var(--fondo); border:1.5px solid var(--tinta); border-radius:50%; }
 .modo:hover { background:var(--tinta); color:var(--fondo); }
-.modo svg { width:15px; height:15px; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+.modo { line-height:0; font-size:0; }
+.modo svg { display:block; width:16px; height:16px; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
 .modo .luna { display:var(--luna); } .modo .sol { display:var(--sol); }
 .rot { font-size:10.5px; font-weight:700; text-transform:uppercase; letter-spacing:.09em; color:var(--gris); flex:none; }
 .desp { position:relative; margin:0; padding:0; border:0; font-size:inherit; }
 .desp summary { list-style:none; cursor:pointer; user-select:none; }
 .desp summary::-webkit-details-marker { display:none; }
-.desp summary::after { content:" ▾"; } .desp[open] summary::after { content:" ▴"; }
-.desp .lista { position:absolute; top:calc(100% + 10px); left:0; z-index:20; background:var(--fondo); border:2px solid var(--tinta); box-shadow:5px 5px 0 var(--sombra);
+
+.desp .lista { position:absolute; top:calc(100% + 12px); left:-14px; z-index:20; background:var(--fondo); border:2px solid var(--tinta); box-shadow:var(--flota);
   width:max-content; min-width:260px; max-width:min(92vw,470px); max-height:74vh; overflow-y:auto; padding:6px 0; }
-.desp .lista a { display:flex; justify-content:space-between; align-items:baseline; gap:16px; padding:7px 16px;
-  font-size:14.5px; font-weight:500; border:0; line-height:1.35; }
-.desp .lista a.fuerte { font-weight:700; padding:9px 16px; }
-.desp .lista a.fuerte small { font-weight:500; color:var(--gris); font-size:12px; white-space:nowrap; }
-.desp .lista .rot { margin:8px 0 2px; padding:9px 16px 0; border-top:1px solid var(--tinta); }
-.desp .lista a:hover { background:var(--tinta); color:var(--fondo); } .desp .lista a:hover small { color:var(--inv-suave); }
-.desp .lista b { color:var(--v-falso); font-weight:700; font-variant-numeric:tabular-nums; }
-.desp .lista a:hover b { color:var(--fondo); } .desp .lista a.off { opacity:.4; }
+/* Desplegable de cada candidato: cabecera con su foto, dos accesos grandes y la lista de temas numerada como en la línea temporal */
+.desp .lista a { border:0; padding:0; }
+.lista-cab { display:flex; align-items:center; gap:12px; padding:6px 6px 12px; }
+.lista-cab .retrato { width:46px; height:46px; } .lista-cab .retrato .insignia { display:none; }
+.lista-cab p { margin:0; } .lista-cab .nombre { font:700 18px/1.2 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; }
+.lista-cab .cuanto { font-size:12.5px; color:var(--gris); margin-top:2px; } .lista-cab .cuanto b { color:var(--v-falso); }
+.lista-acc { display:grid; grid-template-columns:1fr 1fr; gap:8px; padding:0 0 12px; margin:0 0 4px; border-bottom:1px solid var(--claro); }
+.desp .lista-acc a { display:flex; align-items:center; gap:9px; min-height:44px; padding:0 12px; border:1.5px solid var(--tinta); border-radius:var(--r-boton);
+  font-size:14px; font-weight:700; color:var(--tinta); background:var(--fondo); transition:background-color .15s ease-out, color .15s ease-out; }
+.desp .lista-acc a.principal { background:var(--tinta); color:var(--fondo); }
+.desp .lista-acc a:hover, .desp .lista-acc a:focus-visible { background:var(--tinta); color:var(--fondo); }
+.desp .lista-acc a.principal:hover, .desp .lista-acc a.principal:focus-visible { background:var(--fondo); color:var(--tinta); }
+.desp .lista-acc a[aria-current] { box-shadow:inset 0 0 0 1.5px var(--fondo), 0 0 0 1.5px var(--tinta); }
+.lista-acc svg { display:block; flex:none; width:17px; height:17px; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+.lista-acc svg .lleno { fill:currentColor; stroke:none; }
+.desp .lista .rot { margin:0; padding:10px 6px 6px; border:0; }
+.desp .lista .rot span { text-transform:none; letter-spacing:0; font-weight:500; }
+.lista-temas { list-style:none; margin:0; padding:0; }
+.desp .lista-temas a { display:grid; grid-template-columns:24px minmax(0,1fr) auto; align-items:center; gap:10px; padding:7px 6px; border-radius:var(--r-boton);
+  font-size:14.5px; font-weight:500; line-height:1.3; color:var(--tinta); transition:background-color .12s ease-out; }
+.lista-temas i { width:24px; height:24px; border-radius:50%; border:1.5px solid var(--tinta); display:grid; place-items:center; line-height:0;
+  font:700 11.5px/1 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; font-style:normal; font-variant-numeric:tabular-nums; transition:background-color .12s, color .12s; }
+.lista-temas b { min-width:24px; height:22px; padding:0 7px; border-radius:999px; display:grid; place-items:center; line-height:0;
+  background:var(--v-falso); color:var(--sobre-tono); font-size:12px; font-weight:700; font-variant-numeric:tabular-nums; }
+.lista-temas b .sr { position:absolute; }
+.desp .lista-temas a:hover, .desp .lista-temas a:focus-visible { background:var(--resalte); outline-offset:-2px; }
+.desp .lista-temas a:hover i, .desp .lista-temas a:focus-visible i { background:var(--tinta); color:var(--fondo); }
+.desp .lista-temas a.off { opacity:.4; }
 .leyenda-f h2 { font:700 22px/1.2 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; margin:0 0 4px; padding:0; border:0; }
 .ley-intro { margin:0 0 14px; font-size:14.5px; color:var(--suave); }
 .leyenda-f dl { margin:0 0 16px; border-top:2px solid var(--tinta); }
@@ -122,71 +327,518 @@ html { scroll-behavior:smooth; scroll-padding-top:calc(var(--menu, 48px) + 64px)
 .fila button[aria-pressed=true] { background:var(--tinta); color:var(--fondo); }
 .fila button[data-v][aria-pressed=true] { background:var(--tono); color:var(--sobre-tono); }
 .fila button[data-solo] { margin-left:auto; }
-@media (max-width:700px) { .m1 { gap:4px 16px; font-size:14px; } .m1 .dcha { margin-left:0; }
-  .desp { position:static; } .desp .lista { left:16px; right:16px; top:auto; margin-top:10px; width:auto; max-width:none; }
-  .fila .rot { display:none; } .fila button { font-size:12px; padding:2px 9px; } .fila button[data-solo] { margin-left:0; } }
+.pie-solo { border-top:1px solid var(--tinta); padding:18px 0 44px; }
+.pie-quien { margin:0; font-size:13.5px; color:var(--suave); max-width:none; }
+footer .pie-quien { margin-top:18px; }
+.pie-quien a { color:var(--suave); text-underline-offset:3px; }
+.m1 > a, .desp summary, .fila button { white-space:nowrap; }
+@media (max-width:1000px) { .m1 .largo { display:none; } }
+.m1 .buscar { display:inline-flex; align-items:center; gap:6px; }
+.m1 .buscar svg { display:block; flex:none; width:16px; height:16px; fill:none; stroke:currentColor; stroke-width:2.2; stroke-linecap:round; stroke-linejoin:round; }
+.m1 > a[aria-current]::after { transform:scaleX(1); transform-origin:left center; }
+@media (min-width:761px) and (max-width:1200px) { .m1 .buscar span { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; } .m1 .buscar { gap:0; } }   /* con poco ancho, solo la lupa: así el menú no baja de línea */
+/* Entre 761 y 1200 px el menú tiene que caber en una línea: menos hueco y letra un punto menor, y por debajo de 900 px
+   sale «GitHub ↗», que sigue en el pie de cada página */
+@media (min-width:761px) and (max-width:1200px) { .m1 { column-gap:14px; font-size:14px; } }
+@media (min-width:1001px) and (max-width:1060px) { .m1 { column-gap:12px; } }   /* ahí vuelven los nombres largos */
+@media (max-width:760px) { .m1 .sello { order:-2; } .m1 .buscar { order:-1; } }   /* en móvil el menú se desliza: Buscar va junto al título para que se vea */
+/* En móvil el menú y los filtros ocupan una sola fila que se desliza en horizontal; el botón de modo se queda fijo a la derecha */
+@media (max-width:760px) {
+  .menu .ancho, .filtros .ancho { padding-left:0; padding-right:0; }
+  .filtros .ancho { position:relative; }
+  .filtros .ancho::after { content:""; position:absolute; top:0; bottom:0; right:0; width:28px; pointer-events:none;
+    background:linear-gradient(to right, transparent, var(--fondo) 85%); }
+  .m1, .fila { flex-wrap:nowrap; overflow-x:auto; scrollbar-width:none; overscroll-behavior-x:contain; padding-left:16px; padding-right:16px; }
+  .fila { padding-right:28px; }
+  .m1::-webkit-scrollbar, .fila::-webkit-scrollbar { display:none; }
+  .m1 { gap:0 18px; font-size:14px; } .m1 .dcha { margin-left:0; }
+  .m1 > a, .desp summary { display:inline-flex; align-items:center; min-height:36px; }
+  .m1 > a:not(.sello)::after, .desp summary::after { bottom:5px; }
+  .m1 { padding-right:72px; }
+  .modo { position:absolute; right:12px; top:calc(50% - 16px); margin:0; width:32px; height:32px; }
+  .modo svg { width:18px; height:18px; }
+  .menu .ancho::after { content:""; position:absolute; top:0; bottom:0; right:52px; width:28px; pointer-events:none;
+    background:linear-gradient(to right, transparent, var(--fondo)); }
+  .menu .ancho::before { content:""; position:absolute; top:0; bottom:0; right:0; width:52px; background:var(--fondo); pointer-events:none; z-index:1; }
+  .menu .ancho::after { z-index:1; } .modo { z-index:2; }
+  .menu .ancho { padding-top:4px; padding-bottom:4px; }
+  .desp { position:static; } .desp .lista { left:12px; right:12px; top:calc(100% + 6px); width:auto; max-width:none; max-height:calc(100dvh - var(--menu, 48px) - 24px); }
+  .filtros { padding:7px 0; }
+  .fila .rot { display:none; } .fila button { flex:none; font-size:13px; padding:0 12px; min-height:34px; } .fila button[data-solo] { margin-left:0; } }
+/* En móvil cada fila de tabla se apila (primero qué es, debajo su dirección o sus datos) en vez de obligar a deslizar en horizontal */
+@media (max-width:640px) {
+  .tabla table, .tabla-api table { min-width:0; } .tabla thead, .tabla-api thead { display:none; }
+  .tabla table, .tabla tbody, .tabla tr, .tabla td, .tabla-api table, .tabla-api tbody, .tabla-api tr, .tabla-api td { display:block; width:100%; }
+  .tabla tr, .tabla-api tr { padding:10px 0; border-bottom:1px solid var(--tinta); }
+  .tabla tr:first-child, .tabla-api tr:first-child { border-top:2px solid var(--tinta); }
+  .tabla td, .tabla-api td { border:0 !important; padding:2px 0 !important; } .tabla td:first-child, .tabla-api td:first-child { font-weight:600; }
+  .tabla-api td[data-l]::before { content:attr(data-l) ": "; font-weight:500; color:var(--gris); } }
 
+/* ── Interacción: estados hover, foco, pulsación y avisos, iguales en todas las páginas */
+html { -webkit-tap-highlight-color:transparent; }
+:focus-visible { outline:3px solid var(--tinta); outline-offset:2px; }
+/* Los campos de texto no llevan anillo de foco: el cursor ya dice dónde se escribe */
+:is(input, textarea):focus, :is(input, textarea):focus-visible { outline:none; box-shadow:none; }
+a { text-underline-offset:3px; text-decoration-thickness:1px; transition:text-decoration-thickness .15s ease-out, color .15s ease-out, background-color .15s ease-out; }
+a:hover { text-decoration-thickness:2px; }
+button, summary, select, .chip, .repo, .botones a, .minuto, .modo { transition:background-color .15s ease-out, color .15s ease-out, border-color .15s ease-out, box-shadow .18s ease-out, transform .12s ease-out; }
+button:active, .repo:active, .botones a:active, .chip:active, .fila button:active { transform:translateY(1px) scale(.98); }
+select { cursor:pointer; } select:hover { box-shadow:inset 0 0 0 1px var(--tinta); }
+.m1 > a, .desp summary { transition:border-color .15s ease-out; }
+.desp[open] .lista { animation:caer .2s cubic-bezier(.2,.7,.2,1); }
+@keyframes caer { from { clip-path:inset(0 0 100% 0); } to { clip-path:inset(0 0 0 0); } }
+.fila button:not([aria-pressed=true]):hover { background:color-mix(in srgb, var(--tono, var(--tinta)) 13%, var(--fondo)); }
+.fila button[aria-pressed=true]:hover { box-shadow:0 0 0 2px var(--fondo), 0 0 0 3.5px var(--tono, var(--tinta)); }
+.fila .cuenta { margin-left:auto; font-size:12.5px; color:var(--gris); font-variant-numeric:tabular-nums; white-space:nowrap; }
+.fila button[data-solo] + .cuenta { margin-left:12px; }
+.botones button:hover, #api-ir:hover { background:var(--fondo); color:var(--tinta); }
+.botones button:disabled, #api-ir:disabled { opacity:.55; cursor:progress; }
+.repo:hover { background:var(--fondo); color:var(--tinta); box-shadow:inset 0 0 0 2px var(--tinta); }
+.repo.claro:hover { background:var(--tinta); color:var(--fondo); }
+/* Aviso flotante: confirma una acción (copiar, descargar) y se va solo; lo leen también los lectores de pantalla */
+.aviso { position:fixed; left:50%; bottom:calc(20px + env(safe-area-inset-bottom)); z-index:50; max-width:calc(100vw - 32px);
+  transform:translate(-50%, 16px); opacity:0; pointer-events:none; background:var(--tinta); color:var(--fondo);
+  border:2px solid var(--tinta); border-radius:var(--r-caja); box-shadow:var(--flota); padding:10px 16px; font-size:14.5px; font-weight:600;
+  transition:opacity .2s ease-out, transform .2s ease-out; }
+.aviso.ver { opacity:1; transform:translate(-50%, 0); }
+.aviso.mal { background:var(--fondo); color:var(--tinta); }
+/* Botón para volver arriba en las páginas largas */
+.arriba { position:fixed; right:calc(16px + env(safe-area-inset-right)); bottom:calc(16px + env(safe-area-inset-bottom)); z-index:40;
+  width:44px; height:44px; display:grid; place-items:center; padding:0; cursor:pointer; line-height:0; font-size:0;
+  color:var(--tinta); background:var(--fondo); border:2px solid var(--tinta); border-radius:50%; box-shadow:var(--flota);
+  opacity:0; transform:translateY(10px); pointer-events:none; transition:opacity .2s ease-out, transform .2s ease-out, background-color .15s, color .15s; }
+.arriba svg { display:block; width:20px; height:20px; fill:none; stroke:currentColor; stroke-width:2.5; stroke-linecap:square; }
+.arriba.ver { opacity:1; transform:none; pointer-events:auto; }
+.arriba:hover { background:var(--tinta); color:var(--fondo); }
+.sr { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; }
+@media (max-width:760px) { .fila .cuenta { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); } }
+@media (prefers-reduced-motion:reduce) { *, ::before, ::after { transition-duration:0s !important; animation-duration:0s !important; } html { scroll-behavior:auto; } }
+
+/* ── Esquinas suaves y contenidas, para que sigan leyéndose como recuadros de periódico: 14 px en contenedores, 9 px en botones y cajas, 5 px en etiquetas */
+:root { --r-caja:14px; --r-boton:9px; --r-mini:5px; --flota:0 10px 28px -8px rgba(0,0,0,.28); }
+.panel, .entrevista, .explorador, .vias li, .desp .lista, .agentes { border-radius:var(--r-caja); }
+.desp .lista { border-top:0 !important; border-radius:0 0 var(--r-caja) var(--r-caja) !important; overflow-x:hidden; overflow-y:auto; overscroll-behavior:contain; width:min(440px, calc(100vw - 24px)); min-width:0; max-width:none; max-height:min(78vh, 680px); padding:10px; }
+.tu, .abrir, pre, .btn, .repo, .botones button, .botones a, #api-ir, .copiar, select, .opciones select, .logo.sin, #api-res .vacio { border-radius:var(--r-boton); }
+.ficha, .leyenda-f dt, code, .chip-mini, .par:target, .indice a { border-radius:var(--r-mini); }
+.hito:target .panel { outline-offset:4px; }
+
+/* Retrato: foto redonda con borde de tinta y el logotipo del partido en una insignia blanca abajo a la derecha */
+.retrato { position:relative; display:block; flex:none; border-radius:50%; align-self:start; justify-self:start; }
+.retrato > img { display:block; width:100%; height:100%; object-fit:cover; border-radius:50%; border:2px solid var(--tinta); background:var(--claro); }
+.retrato .insignia { position:absolute; right:-4%; bottom:-4%; width:42%; aspect-ratio:1; border-radius:50%; overflow:hidden;
+  display:grid; place-items:center; background:#fff; border:2px solid var(--tinta); line-height:0; font-size:0; }
+.retrato .insignia img { display:block; width:72%; height:72%; object-fit:contain; }
+.retrato .insignia b { font:700 11px/1 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; color:#000; }
+.titular { display:flex; align-items:flex-start; gap:clamp(14px,2vw,24px); margin:0 0 18px; }
+.titular .retrato { margin-top:.2em; }
+.titular h1 { margin:0 !important; }
+.titular .retrato { width:clamp(64px,8vw,104px); height:clamp(64px,8vw,104px); }
+.titular .retrato.peque { width:clamp(52px,6vw,76px); height:clamp(52px,6vw,76px); }
+/* Buscador: foto de cada resultado (con insignia) y foto pequeña, sin ella, en los botones de candidato */
+.retrato.res-foto { width:clamp(44px,5.5vw,54px); height:clamp(44px,5.5vw,54px); align-self:center; }
+.retrato.res-foto .insignia { animation:none; }
+.retrato.chica { width:24px; height:24px; align-self:center; }
+.chip-v { align-self:flex-start; display:inline-block; padding:2px 8px; font-size:11.5px; font-weight:700; text-transform:uppercase; letter-spacing:.08em;
+  background:var(--tono); color:var(--sobre-tono); border-radius:var(--r-mini); white-space:nowrap; }
+.retrato.chica > img { border-width:1.5px; }
+.fila button[aria-pressed=true] .retrato > img { border-color:var(--fondo); }
+.creditos { font-size:12.5px; color:var(--gris); }
+.creditos a { color:inherit; }
+
+/* Botón flotante de la leyenda: círculo abajo a la izquierda que se ensancha al pasar el ratón y abre un panel con un revelado circular */
+.fab { position:fixed; left:calc(16px + env(safe-area-inset-left)); bottom:calc(16px + env(safe-area-inset-bottom)); z-index:45; }
+.fab-boton { position:relative; display:flex; align-items:center; gap:0; height:52px; min-width:52px; padding:0 14px; cursor:pointer;
+  border-radius:999px; border:2px solid var(--tinta); background:var(--fondo); color:var(--tinta); box-shadow:var(--flota);
+  font:700 14.5px/1 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; transition:background-color .15s ease-out, color .15s ease-out, gap .2s ease-out; }
+.fab-ico { display:grid; grid-template-columns:repeat(2,8px); gap:4px; flex:none; width:20px; place-content:center; }
+.fab-ico i { display:block; width:8px; height:8px; border-radius:50%; background:var(--tono); }
+.fab-x { display:none; flex:none; width:20px; height:20px; fill:none; stroke:currentColor; stroke-width:2.4; stroke-linecap:round; }
+.fab-txt { max-width:0; overflow:hidden; white-space:nowrap; opacity:0; transition:max-width .22s ease-out, opacity .15s ease-out; }
+.fab-boton:hover, .fab-boton:focus-visible { gap:10px; }
+.fab-boton:hover .fab-txt, .fab-boton:focus-visible .fab-txt { max-width:90px; opacity:1; }
+.fab.abierto .fab-boton { background:var(--tinta); color:var(--fondo); gap:0; }
+.fab.abierto .fab-ico { display:none; } .fab.abierto .fab-x { display:block; }
+.fab.abierto .fab-txt { max-width:0; opacity:0; }
+.fab-panel { position:absolute; left:0; bottom:64px; width:min(420px, calc(100vw - 32px)); max-height:calc(100dvh - var(--menu, 48px) - 100px); overflow-y:auto;
+  overscroll-behavior:contain; padding:16px 16px 14px; background:var(--fondo); color:var(--tinta); border:2px solid var(--tinta); border-radius:var(--r-caja);
+  box-shadow:var(--flota); clip-path:circle(0 at 26px calc(100% + 38px)); opacity:.4;
+  transition:clip-path .32s cubic-bezier(.4,0,.2,1), opacity .2s ease-out; }
+.fab.abierto .fab-panel { clip-path:circle(150% at 26px calc(100% + 38px)); opacity:1; }
+.fab-titulo { margin:0 0 10px; font:700 19px/1.2 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; outline:none; }
+.fab-panel .leyenda-f h2, .fab-panel .ley-intro { display:none; }
+.fab-panel .leyenda-f dl { margin:0 0 12px; }
+.fab-panel .leyenda-f dl div { grid-template-columns:104px minmax(0,1fr); gap:0 12px; padding:8px 0; }
+.fab-panel .leyenda-f dt { justify-self:stretch; font-size:11px; padding:5px 6px; }
+.fab-panel .leyenda-f dd { font-size:13.5px; line-height:1.38; }
+.fab-panel .ley-notas { font-size:13px; gap:5px; }
+@media (prefers-reduced-motion:reduce) { .fab-panel { clip-path:none !important; } }
+
+/* Barra de reparto: el 100 % de las afirmaciones, un tramo por veredicto con su color */
+.barra-reparto { display:flex; gap:2px; height:10px; margin:8px 0 2px; border-radius:999px; overflow:hidden; background:var(--claro); }
+.barra-reparto i { display:block; min-width:4px; background:var(--tono); transition:filter .15s ease-out; }
+.barra-reparto i:hover { filter:brightness(1.15) saturate(1.1); }
+.barra-reparto.grande { height:14px; margin:12px 0 0; }
+
+/* Entrada del hero: aparece por capas (título, texto, cifras, tarjetas), la barra de reparto se rellena y los números cuentan hacia arriba.
+   «backwards» solo aplica el estado inicial durante la espera, así no pisa los hovers cuando termina. */
+@keyframes subir { from { opacity:0; transform:translateY(16px); } }
+@keyframes asomar { from { opacity:0; transform:scale(.82); } }
+@keyframes rellenar { from { clip-path:inset(0 100% 0 0 round 999px); } to { clip-path:inset(0 0 0 0 round 999px); } }
+.cabeza h1, .titular h1 { animation:subir .7s cubic-bezier(.2,.7,.2,1) backwards; }
+.cabeza .entrada, .portada .intro { animation:subir .7s .1s cubic-bezier(.2,.7,.2,1) backwards; }
+.cabeza .tu { animation:subir .7s .18s cubic-bezier(.2,.7,.2,1) backwards; }
+.portada .cifras { animation:subir .7s .16s cubic-bezier(.2,.7,.2,1) backwards; }
+.tarjetas .entrevista { animation:subir .7s cubic-bezier(.2,.7,.2,1) backwards; }
+.tarjetas .entrevista:nth-child(1) { animation-delay:.22s; } .tarjetas .entrevista:nth-child(2) { animation-delay:.32s; } .tarjetas .entrevista:nth-child(3) { animation-delay:.42s; }
+.titular .retrato, .tarjetas .retrato { animation:asomar .55s .05s cubic-bezier(.3,1.4,.5,1) backwards; }
+.tarjetas .entrevista:nth-child(2) .retrato { animation-delay:.36s; } .tarjetas .entrevista:nth-child(3) .retrato { animation-delay:.46s; }
+.tarjetas .entrevista:nth-child(1) .retrato { animation-delay:.26s; }
+.retrato .insignia { animation:asomar .4s .5s cubic-bezier(.3,1.5,.5,1) backwards; }
+.barra-reparto { animation:rellenar .9s .55s cubic-bezier(.4,0,.2,1) backwards; }
+.tarjetas .entrevista:nth-child(2) .barra-reparto { animation-delay:.65s; } .tarjetas .entrevista:nth-child(3) .barra-reparto { animation-delay:.75s; }
+.barra-reparto.grande { animation-delay:.4s; }
+@media (prefers-reduced-motion:reduce) {
+  .cabeza h1, .titular h1, .cabeza .entrada, .portada .intro, .cabeza .tu, .portada .cifras, .tarjetas .entrevista, .retrato, .retrato .insignia, .barra-reparto { animation:none !important; } }
+
+/* ── Reproductor de vídeo: panel fijo abajo a la derecha (400 px, 16:9) en escritorio y a todo el ancho abajo en móvil.
+   El panel y su iframe solo existen tras pulsar un minuto. --repro-h (su alto) lo pone el script y aparta los botones flotantes. */
+.repro { position:fixed; right:calc(16px + env(safe-area-inset-right)); bottom:calc(16px + env(safe-area-inset-bottom)); z-index:46;
+  width:min(400px, calc(100vw - 32px)); background:var(--fondo); color:var(--tinta); border:2px solid var(--tinta);
+  border-radius:var(--r-caja); box-shadow:var(--flota); overflow:hidden; animation:repro-sube .22s ease-out; }
+@keyframes repro-sube { from { opacity:0; transform:translateY(14px); } }
+.repro:focus-visible { outline:3px solid var(--tinta); outline-offset:3px; }
+.repro-barra { display:flex; align-items:center; gap:2px; min-height:46px; padding:4px 5px 4px 13px; border-bottom:2px solid var(--tinta); }
+.repro.min .repro-barra { border-bottom:0; }
+.repro-t { flex:1; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font-size:13px; font-weight:700; font-variant-numeric:tabular-nums; }
+.repro-yt { flex:none; display:inline-flex; align-items:center; gap:5px; min-height:38px; padding:0 8px; font-size:13px; font-weight:600; white-space:nowrap; color:var(--tinta); }
+.repro-yt svg, .repro button svg { display:block; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+.repro-yt svg { width:14px; height:14px; }
+.repro button { flex:none; display:grid; place-items:center; width:38px; height:38px; padding:0; cursor:pointer; line-height:0; font-size:0;
+  color:var(--tinta); background:var(--fondo); border:0; border-radius:50%; }
+.repro button svg { width:19px; height:19px; stroke-width:2.2; }
+.repro button:hover, .repro button:focus-visible { background:var(--tinta); color:var(--fondo); }
+.repro-yt:hover { background:var(--tinta); color:var(--fondo); text-decoration:none; border-radius:var(--r-boton); }
+.repro-video { display:flex; justify-content:center; background:#000; }
+.repro-video iframe { display:block; border:0; width:min(100%, calc(45vh * 16 / 9)); width:min(100%, calc(45dvh * 16 / 9)); height:auto; aspect-ratio:16 / 9; }
+.repro.min .repro-video { display:none; }
+html.con-repro .arriba { bottom:calc(var(--repro-h, 0px) + 28px + env(safe-area-inset-bottom)); }
+@media (max-width:760px) {
+  .repro { left:0; right:0; bottom:0; width:auto; padding-bottom:env(safe-area-inset-bottom); border-width:2px 0 0; border-radius:var(--r-caja) var(--r-caja) 0 0; }
+  html.con-repro body { padding-bottom:var(--repro-h, 0px); }
+  html.con-repro .fab, html.con-repro .arriba { bottom:calc(var(--repro-h, 0px) + 12px); }
+  html.con-repro .aviso { bottom:calc(var(--repro-h, 0px) + 16px); }
+  html.con-repro .fab-panel { max-height:calc(100dvh - var(--menu, 48px) - 100px - var(--repro-h, 0px)); } }
+/* Menú «Más»: en pantallas anchas no existe (los enlaces van sueltos); en móvil recoge los enlaces secundarios y el cambio de modo */
+.desp > summary { font-size:inherit; }
+.mas { display:none; }
+.mas-lista { list-style:none; margin:0; padding:0; }
+.desp.mas .mas-lista a { display:flex; align-items:center; min-height:48px; padding:0 10px; font-size:16px; font-weight:600; color:var(--tinta);
+  border-bottom:1px solid var(--claro); border-radius:0; text-decoration:none; }
+.desp.mas .mas-lista a:hover, .desp.mas .mas-lista a:focus-visible { background:var(--resalte); }
+.modo-txt { display:flex; align-items:center; gap:10px; width:100%; min-height:48px; padding:0 10px; margin:0; font:inherit; font-size:16px; font-weight:600;
+  color:var(--tinta); background:none; border:0; cursor:pointer; text-align:left; border-radius:var(--r-boton); }
+.modo-txt:hover { background:var(--resalte); }
+.modo-txt svg { display:block; flex:none; width:18px; height:18px; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+.modo-txt .luna { display:var(--luna); } .modo-txt .sol { display:var(--sol); }
+@media (max-width:760px) {
+  .m1 > .sec, .m1 > .modo { display:none; }
+  .mas { display:block; }
+  .desp.mas > summary { position:absolute; right:12px; top:calc(50% - 18px); z-index:2; display:grid; place-items:center; width:36px; height:36px;
+    min-height:0; padding:0; border:1.5px solid var(--tinta) !important; border-radius:50%; background:var(--fondo); color:var(--tinta); }
+  .desp.mas > summary::after { display:none; }
+  .desp.mas[open] > summary { background:var(--tinta); color:var(--fondo); }
+  .desp.mas > summary svg { display:block; width:18px; height:18px; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; }
+  .m1 .buscar span { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; } .m1 .buscar { gap:0; }   /* solo la lupa */
+  .m1 { gap:0 14px; } }
+
+/* Resumen al pie de cada página: la entrevista de la página o, en las generales, una tarjeta por candidato */
+.resumenes { border-top:3px solid var(--tinta); padding:26px 0 34px; margin-top:24px; }
+.resumenes .mini-t { font:700 22px/1.2 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; margin:0 0 16px; padding:0; border:0; letter-spacing:0; }
+.mini-lista { display:grid; gap:12px; grid-template-columns:repeat(auto-fit, minmax(min(100%, 280px), 1fr)); }
+.mini-e { display:flex; flex-direction:column; gap:9px; border:1.5px solid var(--tinta); border-radius:var(--r-caja); padding:14px 16px 12px; background:var(--fondo); }
+.mini-cab { display:flex; align-items:center; gap:12px; }
+.mini-cab .retrato { width:44px; height:44px; } .mini-cab .retrato .insignia { display:none; }
+.mini-cab h3 { margin:0; font:700 18px/1.2 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; }
+.mini-cab h3 a { color:var(--tinta); text-decoration:none; } .mini-cab h3 a:hover { text-decoration:underline; }
+.mini-meta { margin:2px 0 0; font-size:12.5px; color:var(--gris); }
+.mini-res { margin:0; font-size:14.5px; line-height:1.5; max-width:none; }
+.mini-num { margin:0; font-size:13.5px; } .mini-num b { font:700 21px/1 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; margin-right:2px; }
+.barra-reparto.mini-barra { margin:0; height:8px; animation:none; }
+.mini-acc { margin:auto 0 0; display:flex; flex-wrap:wrap; gap:0 18px; font-size:13.5px; font-weight:600; }
+.mini-acc a { display:inline-flex; align-items:center; gap:4px; min-height:36px; color:var(--tinta); }
+/* Iconos de «↗» y «→» (ICONO_EXTERNO, ICONO_SIGUE): trazo que hereda el color, a la altura de la letra */
+.ic { display:block; flex:none; width:14px; height:14px; fill:none; stroke:currentColor; stroke-width:2.2; stroke-linecap:round; stroke-linejoin:round; }
+.m1 > a.gh { display:inline-flex; align-items:center; gap:3px; }
+.desp.mas .mas-lista a .ic { margin-left:4px; }
+/* Entre 761 y 1060 px no cabe todo en una línea: Método, Quién lo hace y GitHub pasan al «Más», que solo enseña esos tres */
+@media (min-width:761px) and (max-width:1060px) {
+  .m1 > .sec.seg { display:none; }
+  .mas { display:block; }
+  .mas-lista li.pri, .desp.mas .modo-txt { display:none; }
+  .desp.mas .lista { left:auto; right:-14px; min-width:220px; }
+  .desp.mas > summary { display:grid; place-items:center; width:32px; height:32px; min-height:0; padding:0; border:1.5px solid var(--tinta) !important; border-radius:50%; }
+  .desp.mas > summary::after { display:none; }
+  .desp.mas[open] > summary { background:var(--tinta); color:var(--fondo); }
+  .desp.mas > summary svg { display:block; width:16px; height:16px; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; } }
+/* En la cabecera de cada entrevista: debajo del texto y de las cifras, ocupando las dos columnas */
+.resumenes.en-cabeza { grid-column:1 / -1; margin-top:28px; padding:18px 0 0; }
+
+/* ── Hero con GSAP: el titular sube por líneas y se subraya «dato a dato»; debajo, un carrusel de afirmaciones reales que reciben su veredicto como un sello */
+.subraya { font-style:normal; background:linear-gradient(var(--tinta),var(--tinta)) no-repeat 0 96% / var(--subrayado,100%) .075em;
+  -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+/* Sin marco: arriba el rótulo con las flechas a su derecha; debajo quién y cuándo, la cita y el sello del veredicto a la derecha */
+.muestra { position:relative; margin-top:20px; max-width:62ch; }
+.muestra-cab { display:flex; align-items:center; justify-content:space-between; gap:12px; margin:0 0 4px; }
+.muestra-rot { margin:0; min-width:0; font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--gris); }
+.muestra-barra { display:flex; flex:none; gap:2px; margin:0 -8px 0 0; }
+.muestra-barra button { display:grid; place-items:center; width:40px; height:40px; padding:0; cursor:pointer; border:0; border-radius:var(--r-boton);
+  background:transparent; color:var(--tinta); transition:background-color .15s ease-out, transform .12s ease-out; }
+.muestra-barra button:hover { background:var(--claro); }
+.muestra-barra button:active { transform:scale(.92); }
+.muestra-barra button:focus-visible { outline:2px solid var(--tinta); outline-offset:0; }
+.muestra-barra svg { width:18px; height:18px; fill:none; stroke:currentColor; stroke-width:2.4; stroke-linecap:round; stroke-linejoin:round; }
+.muestra-lista { list-style:none; margin:0; padding:0; display:grid; }
+.muestra-item { grid-area:1 / 1; visibility:hidden; min-width:0; }
+.muestra-item.activa { visibility:visible; }
+.muestra-item a { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:6px 20px; align-items:center; color:inherit; text-decoration:none; }
+.muestra-quien { grid-column:1; font-size:12.5px; font-weight:700; line-height:24px; color:var(--suave); }
+.muestra-cita { grid-column:1; font:italic 400 clamp(17px,1.55vw,21px)/1.3 var(--serif); text-wrap:pretty; }
+.muestra-cita .palabra-mask { padding:0 .12em .08em; margin:0 -.12em -.08em; }
+.muestra-item a:hover .muestra-cita { text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:3px; }
+.muestra-item a:focus-visible { outline:2px solid var(--tinta); outline-offset:4px; border-radius:var(--r-mini); }
+.estampa { grid-column:2; grid-row:1 / span 2; justify-self:end; align-self:center; padding:8px 12px; border:2.5px solid currentColor; border-radius:var(--r-mini);
+  color:var(--tono); background:color-mix(in srgb, var(--tono) 8%, var(--fondo)); transform:rotate(-4deg);
+  font:800 14px/1 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; letter-spacing:.09em; text-transform:uppercase; white-space:nowrap; }
+@media (max-width:560px) { .muestra-rot { letter-spacing:.05em; } .muestra-item a { column-gap:12px; } .estampa { padding:7px 9px; font-size:12px; } }
+/* Escritorio: a la izquierda el titular con la entradilla debajo; a la derecha el carrusel, más grande y centrado en vertical */
+@media (min-width:1000px) {
+  .cabeza { grid-template-columns:minmax(0,1.3fr) minmax(0,1fr); }
+  .cabeza h1 { grid-column:1; grid-row:1; align-self:end; }
+  .cabeza .entrada { grid-column:1; grid-row:2; align-self:start; margin:14px 0 0; }
+  .cabeza .muestra { grid-column:2; grid-row:1 / span 2; align-self:center; margin:0; max-width:none; }
+  .muestra-cita { font-size:clamp(20px,1.9vw,27px); line-height:1.25; }
+  .estampa { font-size:15px; padding:10px 14px; border-width:3px; } }
+/* Escritorio a una pantalla: los tamaños se atan también al alto de la ventana */
+@media (min-width:1000px) and (min-height:640px) {
+  .cabeza { grid-template-rows:auto auto; row-gap:0; }
+  .cabeza h1 { grid-row:1; font-size:clamp(30px, min(3.5vw, 5.4vh), 58px); }
+  .cabeza .entrada { grid-column:1; grid-row:2; margin-top:clamp(8px,1.6vh,16px); }
+  .cabeza .muestra { grid-column:2; grid-row:1 / span 2; }
+  main.ancho { gap:clamp(8px,1.6vh,28px); }
+  .muestra-cita { font-size:clamp(18px, min(1.9vw, 3.1vh), 27px); }
+  .muestra-item a { min-height:64px; } }
+@media (min-width:1000px) and (max-width:1199px) and (min-height:640px) { .muestra-cita { font-size:clamp(17px,1.8vw,20px); } .estampa { font-size:13.5px; padding:8px 11px; } }
+/* Mientras carga GSAP (como mucho 2,5 s) lo que va a animar no se pinta; luego sus animaciones sustituyen a las de CSS */
+.con-gsap .cabeza h1, .con-gsap .cabeza .entrada, .con-gsap .muestra, .con-gsap .tarjetas .entrevista { visibility:hidden; }
+.gsap-listo .cabeza *, .gsap-listo .tarjetas .entrevista, .gsap-listo .tarjetas .entrevista * { animation:none !important; }
 </style>
 </head>
 <body>
-<header class="menu"><div class="ancho"><div class="m1"><a class="sello" href="/" title="Todas las entrevistas">Verificación</a><details class="desp"><summary>Pedro Sánchez</summary><div class="lista"><a class="fuerte" href="/sanchez"><span>Línea temporal</span><small>30 falsas o engañosas de 147</small></a><a class="fuerte" href="/sanchez/transcripcion"><span>Transcripción completa</span></a><p class="rot">Temas</p><a href="/sanchez#tema-3" data-tema="tema-3"><span>Insultos, polarización y crispación en la política española</span><b>1</b></a><a href="/sanchez#tema-4" data-tema="tema-4"><span>Accidentes ferroviarios y responsabilidades del Gobierno</span><b>2</b></a><a href="/sanchez#tema-5" data-tema="tema-5"><span>Crisis de Ceuta, Marruecos y gestión de la frontera</span><b>7</b></a><a href="/sanchez#tema-6" data-tema="tema-6"><span>Inmigración, integración y futuro demográfico de España</span><b>3</b></a><a href="/sanchez#tema-7" data-tema="tema-7"><span>Ábalos, Koldo, Cerdán y los casos que afectan al PSOE</span><b>3</b></a><a href="/sanchez#tema-8" data-tema="tema-8"><span>Leire Díez, Zapatero y las investigaciones abiertas</span><b>3</b></a><a href="/sanchez#tema-9" data-tema="tema-9"><span>Vivienda, alquileres y acceso de los jóvenes a una casa</span><b>6</b></a><a href="/sanchez#tema-10" data-tema="tema-10"><span>Amnistía, Bildu, Pablo Iglesias y los cambios de opinión de Sánchez</span><b>5</b></a></div></details><details class="desp"><summary>Alberto Núñez Feijóo</summary><div class="lista"><a class="fuerte" href="/feijoo"><span>Línea temporal</span><small>31 falsas o engañosas de 153</small></a><a class="fuerte" href="/feijoo/transcripcion"><span>Transcripción completa</span></a><p class="rot">Temas</p><a href="/feijoo#tema-2" data-tema="tema-2"><span>Vox, polarización y un posible gobierno de coalición</span><b>4</b></a><a href="/feijoo#tema-3" data-tema="tema-3"><span>Economía, pensiones y futuro del sistema público</span><b>1</b></a><a href="/feijoo#tema-4" data-tema="tema-4"><span>Autónomos, impuestos y propuestas económicas del PP</span></a><a href="/feijoo#tema-5" data-tema="tema-5"><span>Deuda pública, déficit y gasto en defensa</span><b>4</b></a><a href="/feijoo#tema-6" data-tema="tema-6"><span>Ceuta, Marruecos y la gestión de la frontera</span><b>4</b></a><a href="/feijoo#tema-7" data-tema="tema-7"><span>Inmigración, ayudas sociales, integración y expulsiones</span><b>5</b></a><a href="/feijoo#tema-8" data-tema="tema-8"><span>Feijóo explica su relación con Marcial Dorado</span><b>6</b></a><a href="/feijoo#tema-9" data-tema="tema-9"><span>Corrupción, Gürtel y los casos que afectan al PSOE y al PP</span><b>4</b></a><a href="/feijoo#tema-10" data-tema="tema-10"><span>Isabel Díaz Ayuso y su relación dentro del Partido Popular</span><b>3</b></a><a href="/feijoo#tema-11" data-tema="tema-11"><span>Inglés, servicio militar, Trump y política internacional</span></a><a href="/feijoo#tema-12" data-tema="tema-12"><span>Feijóo define a Colau, Abascal y Pedro Sánchez y cierra la entrevist</span></a></div></details><details class="desp"><summary>Ada Colau</summary><div class="lista"><a class="fuerte" href="/colau"><span>Línea temporal</span><small>29 falsas o engañosas de 153</small></a><a class="fuerte" href="/colau/transcripcion"><span>Transcripción completa</span></a><p class="rot">Temas</p><a href="/colau#tema-3" data-tema="tema-3"><span>Twitter, redes sociales y polarización política</span></a><a href="/colau#tema-4" data-tema="tema-4"><span>Por qué Ada Colau vuelve a la política y se presenta a las elecciones</span><b>1</b></a><a href="/colau#tema-5" data-tema="tema-5"><span>Frente Amplio, Podemos y la división de la izquierda</span><b>2</b></a><a href="/colau#tema-6" data-tema="tema-6"><span>PSOE, Sumar, corrupción y responsabilidad política</span><b>2</b></a><a href="/colau#tema-7" data-tema="tema-7"><span>Accidentes ferroviarios y gestión del sistema de trenes</span><b>5</b></a><a href="/colau#tema-8" data-tema="tema-8"><span>Ceuta, Marruecos y la política migratoria de España</span><b>2</b></a><a href="/colau#tema-9" data-tema="tema-9"><span>Inmigración, integración y choque cultural</span><b>1</b></a><a href="/colau#tema-10" data-tema="tema-10"><span>Natalidad, demografía y el futuro de la población española</span></a><a href="/colau#tema-11" data-tema="tema-11"><span>Su gestión de Barcelona: seguridad, limpieza y errores como alcaldesa</span><b>7</b></a><a href="/colau#tema-12" data-tema="tema-12"><span>Vivienda, alquileres, grandes propietarios y especulación</span><b>4</b></a><a href="/colau#tema-13" data-tema="tema-13"><span>Ocupación, pequeños propietarios e impagos</span></a><a href="/colau#tema-14" data-tema="tema-14"><span>Trump, Israel, la flotilla y sus rivales políticos</span><b>5</b></a></div></details><a class="dcha" href="/verificalo">Verifícalo tú</a><a href="/api">API</a><a href="https://github.com/PabloPC05/verificacion-podcast" target="_blank" rel="noopener noreferrer">GitHub ↗</a><button class="modo" type="button" aria-label="Cambiar a modo oscuro" title="Cambiar a modo oscuro"><svg class="luna" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="sol" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button></div></div></header><script>
+<header class="menu"><div class="ancho"><div class="m1"><a class="sello" href="/" title="Todas las entrevistas">Verificación</a><details class="desp"><summary><span class="largo">Pedro </span>Sánchez</summary><div class="lista"><div class="lista-cab"><span class="logo retrato mini"><img src="/fotos/sanchez.jpg" alt="Pedro Sánchez" width="160" height="160" decoding="async"><span class="insignia" title="PSOE"><img src="/logos/psoe.svg" alt="" width="40" height="40"></span></span><div><p class="nombre">Pedro Sánchez</p><p class="cuanto">PSOE · <b>28</b> falsas o engañosas de 147</p></div></div><div class="lista-acc"><a class="principal" href="/sanchez"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3v18M10 6h9M10 12h6M10 18h8"/><circle cx="6" cy="6" r="2" class="lleno"/><circle cx="6" cy="12" r="2" class="lleno"/><circle cx="6" cy="18" r="2" class="lleno"/></svg><span>Línea temporal</span></a><a href="/sanchez/transcripcion"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l4 4v14H6zM14 3v5h5M9 12h7M9 16h7"/></svg><span>Transcripción</span></a></div><p class="rot">Temas con afirmaciones <span>· en rojo, las falsas o engañosas</span></p><ol class="lista-temas"><li><a href="/sanchez#tema-3" data-tema="tema-3"><i aria-hidden="true">3</i><span>Insultos, polarización y crispación en la política española</span><b title="1 falsa o engañosa"><span class="sr">, </span>1<span class="sr"> falsa o engañosa</span></b></a></li><li><a href="/sanchez#tema-4" data-tema="tema-4"><i aria-hidden="true">4</i><span>Accidentes ferroviarios y responsabilidades del Gobierno</span><b title="2 falsas o engañosas"><span class="sr">, </span>2<span class="sr"> falsas o engañosas</span></b></a></li><li><a href="/sanchez#tema-5" data-tema="tema-5"><i aria-hidden="true">5</i><span>Crisis de Ceuta, Marruecos y gestión de la frontera</span><b title="7 falsas o engañosas"><span class="sr">, </span>7<span class="sr"> falsas o engañosas</span></b></a></li><li><a href="/sanchez#tema-6" data-tema="tema-6"><i aria-hidden="true">6</i><span>Inmigración, integración y futuro demográfico de España</span><b title="3 falsas o engañosas"><span class="sr">, </span>3<span class="sr"> falsas o engañosas</span></b></a></li><li><a href="/sanchez#tema-7" data-tema="tema-7"><i aria-hidden="true">7</i><span>Ábalos, Koldo, Cerdán y los casos que afectan al PSOE</span><b title="3 falsas o engañosas"><span class="sr">, </span>3<span class="sr"> falsas o engañosas</span></b></a></li><li><a href="/sanchez#tema-8" data-tema="tema-8"><i aria-hidden="true">8</i><span>Leire Díez, Zapatero y las investigaciones abiertas</span><b title="3 falsas o engañosas"><span class="sr">, </span>3<span class="sr"> falsas o engañosas</span></b></a></li><li><a href="/sanchez#tema-9" data-tema="tema-9"><i aria-hidden="true">9</i><span>Vivienda, alquileres y acceso de los jóvenes a una casa</span><b title="5 falsas o engañosas"><span class="sr">, </span>5<span class="sr"> falsas o engañosas</span></b></a></li><li><a href="/sanchez#tema-10" data-tema="tema-10"><i aria-hidden="true">10</i><span>Amnistía, Bildu, Pablo Iglesias y los cambios de opinión de Sánchez</span><b title="4 falsas o engañosas"><span class="sr">, </span>4<span class="sr"> falsas o engañosas</span></b></a></li></ol></div></details><details class="desp"><summary><span class="largo">Alberto Núñez </span>Feijóo</summary><div class="lista"><div class="lista-cab"><span class="logo retrato mini"><img src="/fotos/feijoo.jpg" alt="Alberto Núñez Feijóo" width="160" height="160" decoding="async"><span class="insignia" title="PP"><img src="/logos/pp.svg" alt="" width="40" height="40"></span></span><div><p class="nombre">Alberto Núñez Feijóo</p><p class="cuanto">PP · <b>32</b> falsas o engañosas de 153</p></div></div><div class="lista-acc"><a class="principal" href="/feijoo"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3v18M10 6h9M10 12h6M10 18h8"/><circle cx="6" cy="6" r="2" class="lleno"/><circle cx="6" cy="12" r="2" class="lleno"/><circle cx="6" cy="18" r="2" class="lleno"/></svg><span>Línea temporal</span></a><a href="/feijoo/transcripcion"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l4 4v14H6zM14 3v5h5M9 12h7M9 16h7"/></svg><span>Transcripción</span></a></div><p class="rot">Temas con afirmaciones <span>· en rojo, las falsas o engañosas</span></p><ol class="lista-temas"><li><a href="/feijoo#tema-2" data-tema="tema-2"><i aria-hidden="true">2</i><span>Vox, polarización y un posible gobierno de coalición</span><b title="4 falsas o engañosas"><span class="sr">, </span>4<span class="sr"> falsas o engañosas</span></b></a></li><li><a href="/feijoo#tema-3" data-tema="tema-3"><i aria-hidden="true">3</i><span>Economía, pensiones y futuro del sistema público</span><b title="1 falsa o engañosa"><span class="sr">, </span>1<span class="sr"> falsa o engañosa</span></b></a></li><li><a href="/feijoo#tema-4" data-tema="tema-4"><i aria-hidden="true">4</i><span>Autónomos, impuestos y propuestas económicas del PP</span></a></li><li><a href="/feijoo#tema-5" data-tema="tema-5"><i aria-hidden="true">5</i><span>Deuda pública, déficit y gasto en defensa</span><b title="4 falsas o engañosas"><span class="sr">, </span>4<span class="sr"> falsas o engañosas</span></b></a></li><li><a href="/feijoo#tema-6" data-tema="tema-6"><i aria-hidden="true">6</i><span>Ceuta, Marruecos y la gestión de la frontera</span><b title="4 falsas o engañosas"><span class="sr">, </span>4<span class="sr"> falsas o engañosas</span></b></a></li><li><a href="/feijoo#tema-7" data-tema="tema-7"><i aria-hidden="true">7</i><span>Inmigración, ayudas sociales, integración y expulsiones</span><b title="5 falsas o engañosas"><span class="sr">, </span>5<span class="sr"> falsas o engañosas</span></b></a></li><li><a href="/feijoo#tema-8" data-tema="tema-8"><i aria-hidden="true">8</i><span>Feijóo explica su relación con Marcial Dorado</span><b title="6 falsas o engañosas"><span class="sr">, </span>6<span class="sr"> falsas o engañosas</span></b></a></li><li><a href="/feijoo#tema-9" data-tema="tema-9"><i aria-hidden="true">9</i><span>Corrupción, Gürtel y los casos que afectan al PSOE y al PP</span><b title="5 falsas o engañosas"><span class="sr">, </span>5<span class="sr"> falsas o engañosas</span></b></a></li><li><a href="/feijoo#tema-10" data-tema="tema-10"><i aria-hidden="true">10</i><span>Isabel Díaz Ayuso y su relación dentro del Partido Popular</span><b title="3 falsas o engañosas"><span class="sr">, </span>3<span class="sr"> falsas o engañosas</span></b></a></li><li><a href="/feijoo#tema-11" data-tema="tema-11"><i aria-hidden="true">11</i><span>Inglés, servicio militar, Trump y política internacional</span></a></li><li><a href="/feijoo#tema-12" data-tema="tema-12"><i aria-hidden="true">12</i><span>Feijóo define a Colau, Abascal y Pedro Sánchez y cierra la entrevist</span></a></li></ol></div></details><details class="desp"><summary><span class="largo">Ada </span>Colau</summary><div class="lista"><div class="lista-cab"><span class="logo retrato mini"><img src="/fotos/colau.jpg" alt="Ada Colau" width="160" height="160" decoding="async"><span class="insignia" title="Frente Amplio"><img src="/logos/frente-amplio.svg" alt="" width="40" height="40"></span></span><div><p class="nombre">Ada Colau</p><p class="cuanto">Frente Amplio · <b>27</b> falsas o engañosas de 153</p></div></div><div class="lista-acc"><a class="principal" href="/colau"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3v18M10 6h9M10 12h6M10 18h8"/><circle cx="6" cy="6" r="2" class="lleno"/><circle cx="6" cy="12" r="2" class="lleno"/><circle cx="6" cy="18" r="2" class="lleno"/></svg><span>Línea temporal</span></a><a href="/colau/transcripcion"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l4 4v14H6zM14 3v5h5M9 12h7M9 16h7"/></svg><span>Transcripción</span></a></div><p class="rot">Temas con afirmaciones <span>· en rojo, las falsas o engañosas</span></p><ol class="lista-temas"><li><a href="/colau#tema-3" data-tema="tema-3"><i aria-hidden="true">3</i><span>Twitter, redes sociales y polarización política</span></a></li><li><a href="/colau#tema-4" data-tema="tema-4"><i aria-hidden="true">4</i><span>Por qué Ada Colau vuelve a la política y se presenta a las elecciones</span><b title="1 falsa o engañosa"><span class="sr">, </span>1<span class="sr"> falsa o engañosa</span></b></a></li><li><a href="/colau#tema-5" data-tema="tema-5"><i aria-hidden="true">5</i><span>Frente Amplio, Podemos y la división de la izquierda</span><b title="2 falsas o engañosas"><span class="sr">, </span>2<span class="sr"> falsas o engañosas</span></b></a></li><li><a href="/colau#tema-6" data-tema="tema-6"><i aria-hidden="true">6</i><span>PSOE, Sumar, corrupción y responsabilidad política</span><b title="2 falsas o engañosas"><span class="sr">, </span>2<span class="sr"> falsas o engañosas</span></b></a></li><li><a href="/colau#tema-7" data-tema="tema-7"><i aria-hidden="true">7</i><span>Accidentes ferroviarios y gestión del sistema de trenes</span><b title="5 falsas o engañosas"><span class="sr">, </span>5<span class="sr"> falsas o engañosas</span></b></a></li><li><a href="/colau#tema-8" data-tema="tema-8"><i aria-hidden="true">8</i><span>Ceuta, Marruecos y la política migratoria de España</span><b title="2 falsas o engañosas"><span class="sr">, </span>2<span class="sr"> falsas o engañosas</span></b></a></li><li><a href="/colau#tema-9" data-tema="tema-9"><i aria-hidden="true">9</i><span>Inmigración, integración y choque cultural</span><b title="1 falsa o engañosa"><span class="sr">, </span>1<span class="sr"> falsa o engañosa</span></b></a></li><li><a href="/colau#tema-10" data-tema="tema-10"><i aria-hidden="true">10</i><span>Natalidad, demografía y el futuro de la población española</span></a></li><li><a href="/colau#tema-11" data-tema="tema-11"><i aria-hidden="true">11</i><span>Su gestión de Barcelona: seguridad, limpieza y errores como alcaldesa</span><b title="5 falsas o engañosas"><span class="sr">, </span>5<span class="sr"> falsas o engañosas</span></b></a></li><li><a href="/colau#tema-12" data-tema="tema-12"><i aria-hidden="true">12</i><span>Vivienda, alquileres, grandes propietarios y especulación</span><b title="3 falsas o engañosas"><span class="sr">, </span>3<span class="sr"> falsas o engañosas</span></b></a></li><li><a href="/colau#tema-13" data-tema="tema-13"><i aria-hidden="true">13</i><span>Ocupación, pequeños propietarios e impagos</span><b title="1 falsa o engañosa"><span class="sr">, </span>1<span class="sr"> falsa o engañosa</span></b></a></li><li><a href="/colau#tema-14" data-tema="tema-14"><i aria-hidden="true">14</i><span>Trump, Israel, la flotilla y sus rivales políticos</span><b title="5 falsas o engañosas"><span class="sr">, </span>5<span class="sr"> falsas o engañosas</span></b></a></li></ol></div></details><a class="dcha buscar" href="/buscar" title="Buscar una afirmación (tecla /)"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg><span>Buscar</span></a><a class="sec" href="/temas">Temas</a><a class="sec" href="/api">Verifícalo tú</a><a class="sec" href="/participa">Participa</a><a class="sec seg" href="/metodologia">Método</a><a class="sec seg" href="/quien">Quién lo hace</a><a class="sec gh seg" href="https://github.com/PabloPC05/verificacion-podcast" target="_blank" rel="noopener noreferrer">GitHub<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a><button class="modo" type="button" aria-label="Cambiar a modo oscuro" title="Cambiar a modo oscuro"><svg class="luna" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="sol" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button><details class="desp mas"><summary aria-label="Más enlaces y modo oscuro" title="Más"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></summary><div class="lista"><ul class="mas-lista"><li class="pri"><a href="/temas">Temas</a></li><li class="pri"><a href="/api">Verifícalo tú</a></li><li class="pri"><a href="/participa">Participa</a></li><li class="seg"><a href="/metodologia">Método</a></li><li class="seg"><a href="/quien">Quién lo hace</a></li><li class="seg"><a href="https://github.com/PabloPC05/verificacion-podcast" target="_blank" rel="noopener noreferrer">GitHub<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a></li></ul><button class="modo-txt" type="button" aria-label="Cambiar a modo oscuro" title="Cambiar a modo oscuro"><svg class="luna" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="sol" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><span>Cambiar a modo oscuro</span></button></div></details></div></div></header><script>
 document.addEventListener("click", ev => document.querySelectorAll("details.desp[open]").forEach(d => {
   if (!d.contains(ev.target) || ev.target.closest(".lista a")) d.open = false;
 }));
-document.addEventListener("keydown", ev => { if (ev.key === "Escape") document.querySelectorAll("details.desp[open]").forEach(d => d.open = false); });
+document.addEventListener("keydown", ev => {
+  const abierto = document.querySelector("details.desp[open]");
+  if (ev.key === "Escape" && abierto) { abierto.open = false; abierto.querySelector("summary").focus(); return; }
+  if (!abierto || !["ArrowDown", "ArrowUp"].includes(ev.key)) return;
+  const enlaces = [...abierto.querySelectorAll(".lista a")], i = enlaces.indexOf(document.activeElement);
+  ev.preventDefault();
+  enlaces[ev.key === "ArrowDown" ? (i + 1) % enlaces.length : (i <= 0 ? enlaces.length - 1 : i - 1)].focus();
+});
+// El desplegable cuelga de la línea inferior del menú: se calcula dónde está esa línea respecto a su contenedor
+const colgar = d => {
+  const l = d.querySelector(".lista"), op = l.offsetParent; if (!op) return;
+  l.style.top = (document.querySelector(".menu").getBoundingClientRect().bottom - op.getBoundingClientRect().top) + "px";
+};
+document.querySelectorAll("details.desp").forEach(d => d.addEventListener("toggle", () => {
+  if (!d.open) return;
+  document.querySelectorAll("details.desp[open]").forEach(o => { if (o !== d) o.open = false; });
+  colgar(d);
+}));
+addEventListener("resize", () => document.querySelectorAll("details.desp[open]").forEach(colgar));
+const rutaActual = location.pathname.replace(/\/$/, "");
+document.querySelectorAll(".lista-acc a").forEach(a => { if (a.pathname.replace(/\/$/, "") === rutaActual) a.setAttribute("aria-current", "page"); });
+// La tecla «/» lleva al buscador (o enfoca su campo si ya se está en él), salvo si se está escribiendo
+document.addEventListener("keydown", ev => {
+  if (ev.key !== "/" || ev.ctrlKey || ev.metaKey || ev.altKey || ev.isComposing) return;
+  const t = ev.target;
+  if (t && (t.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName))) return;
+  ev.preventDefault();
+  const campo = document.getElementById("q");
+  if (campo) { campo.focus(); campo.select(); } else location.href = "/buscar";
+});
 const medirMenu = () => document.documentElement.style.setProperty("--menu", document.querySelector(".menu").offsetHeight + "px");
 medirMenu(); addEventListener("resize", medirMenu);
+// Las cifras del hero cuentan de 0 a su valor al cargar (salvo con movimiento reducido)
+if (!matchMedia("(prefers-reduced-motion: reduce)").matches) addEventListener("DOMContentLoaded", () => window.gsap && document.documentElement.classList.contains("con-gsap") || document.querySelectorAll(".dato > b, .num > b").forEach((el, i) => {
+  const fin = parseInt(el.textContent, 10); if (!(fin > 0)) return;
+  el.style.minWidth = el.offsetWidth + "px"; el.style.display = "inline-block";
+  const t0 = performance.now() + 250 + i * 100, dur = 900;
+  const paso = t => { const x = Math.min(1, Math.max(0, (t - t0) / dur)); el.textContent = Math.round(fin * (1 - Math.pow(1 - x, 3))); if (x < 1) requestAnimationFrame(paso); };
+  el.textContent = "0"; requestAnimationFrame(paso);
+}));
+// Aviso breve para confirmar acciones; role=status hace que también lo lean los lectores de pantalla.
+const avisar = (texto, mal) => {
+  let a = document.querySelector(".aviso");
+  if (!a) { a = document.createElement("p"); a.className = "aviso"; a.setAttribute("role", "status"); document.body.append(a); }
+  a.textContent = texto; a.classList.toggle("mal", !!mal);
+  requestAnimationFrame(() => a.classList.add("ver"));
+  clearTimeout(avisar.t); avisar.t = setTimeout(() => a.classList.remove("ver"), 3200);
+};
+// Copia al portapapeles con aviso; si el navegador no deja, se ofrece el texto para copiarlo a mano.
+const copiarTexto = (texto, ok) => {
+  const fallo = () => { avisar("No se ha podido copiar automáticamente: cópialo del cuadro.", true); prompt("Copia este texto:", texto); };
+  if (navigator.clipboard) navigator.clipboard.writeText(texto).then(() => { avisar(ok); }, fallo); else fallo();
+};
+(() => {
+  const b = document.createElement("button");
+  b.className = "arriba"; b.type = "button";
+  b.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20V5M5 11l7-7 7 7"/></svg>'; b.setAttribute("aria-label", "Volver arriba"); b.title = "Volver arriba";
+  b.onclick = () => { scrollTo({ top: 0 }); document.querySelector(".sello")?.focus({ preventScroll: true }); };
+  document.body.append(b);
+  const mirar = () => b.classList.toggle("ver", scrollY > innerHeight * 1.5 && document.documentElement.scrollHeight > innerHeight * 3);
+  addEventListener("scroll", mirar, { passive: true }); mirar();
+})();
 // Modo claro/oscuro. Sin preferencia guardada manda el sistema (lo resuelve el CSS); al pulsar se guarda y manda sobre el sistema.
-const RAIZ = document.documentElement, botonModo = document.querySelector(".modo"), sistemaOscuro = matchMedia("(prefers-color-scheme: dark)");
+// Hay dos botones: el redondo del menú (pantallas anchas) y el de texto dentro de «Más» (móvil).
+const RAIZ = document.documentElement, botonesModo = document.querySelectorAll(".modo, .modo-txt"), sistemaOscuro = matchMedia("(prefers-color-scheme: dark)");
 const hayOscuro = () => (RAIZ.dataset.modo || (sistemaOscuro.matches ? "oscuro" : "claro")) === "oscuro";
 function etiquetarModo() {
   const t = hayOscuro() ? "Cambiar a modo claro" : "Cambiar a modo oscuro";
-  botonModo.setAttribute("aria-label", t); botonModo.title = t;
+  botonesModo.forEach(b => {
+    if (b.classList.contains("modo-txt")) b.querySelector("span").textContent = t;
+    else { b.setAttribute("aria-label", t); b.title = t; }
+  });
 }
 // Revelado circular desde el botón (View Transitions API); sin la API o con poco movimiento, el cambio es instantáneo.
-function revelarModo(cambiar) {
+function revelarModo(cambiar, boton) {
   if (!document.startViewTransition || matchMedia("(prefers-reduced-motion: reduce)").matches) { cambiar(); return; }
-  const c = botonModo.getBoundingClientRect(), x = c.left + c.width / 2, y = c.top + c.height / 2;
+  const c = boton.getBoundingClientRect(), x = c.left + c.width / 2, y = c.top + c.height / 2;
   const r = Math.hypot(Math.max(x, innerWidth - x), Math.max(y, innerHeight - y));
   document.startViewTransition(cambiar).ready.then(() => RAIZ.animate(
     { clipPath: [`circle(0px at ${x}px ${y}px)`, `circle(${r}px at ${x}px ${y}px)`] },
     { duration: 420, easing: "cubic-bezier(0.4, 0, 0.2, 1)", pseudoElement: "::view-transition-new(root)" })).catch(() => {});
 }
-botonModo.onclick = () => {
+botonesModo.forEach(b => b.onclick = () => {
   const nuevo = hayOscuro() ? "claro" : "oscuro";
-  revelarModo(() => { RAIZ.dataset.modo = nuevo; etiquetarModo(); });
+  revelarModo(() => { RAIZ.dataset.modo = nuevo; etiquetarModo(); }, b);
   try { localStorage.setItem("modo", nuevo); } catch (e) {}
-};
+});
 sistemaOscuro.addEventListener("change", etiquetarModo);
 etiquetarModo();
 </script>
 <main class="ancho">
-<h1>Las entrevistas de The Wild Project, comprobadas dato a dato</h1>
-<p class="entrada">Jordi Wild ha entrevistado a los candidatos a la presidencia del Gobierno para las elecciones del 29 de noviembre de 2026. Transcribimos cada entrevista entera, separamos las afirmaciones que se pueden comprobar y las contrastamos con fuentes públicas, con el mismo método y la misma vara de medir para todos.</p>
-<p class="tu"><a href="/verificalo"><b>Puedes verificarlo tú</b> →</a> Cada dato enlaza su fuente y el minuto del vídeo, y hay un encargo listo para que cualquier IA lo revise por su cuenta.</p>
-<section class="compara" aria-labelledby="compara-t"><h2 id="compara-t">Los 3 candidatos, comparados</h2><div class="tabla-c"><table><thead><tr><td></td><th scope="col"><a href="/sanchez"><span class="cand">Pedro Sánchez</span></a><span class="par">PSOE</span></th><th scope="col"><a href="/feijoo"><span class="cand">Alberto Núñez Feijóo</span></a><span class="par">PP</span></th><th scope="col"><a href="/colau"><span class="cand">Ada Colau</span></a><span class="par">Frente Amplio</span></th></tr></thead><tbody><tr><th scope="row">Duración de la entrevista</th><td>1 h 52 min</td><td>1 h 28 min</td><td>2 h 14 min</td></tr><tr><th scope="row">Afirmaciones comprobadas</th><td><b>147</b></td><td><b>153</b></td><td><b>153</b></td></tr><tr><th scope="row">Comprobadas por hora</th><td>79</td><td>104</td><td>68</td></tr><tr class="tono-falso"><th scope="row"><i class="tono-falso"></i>Falsas</th><td><b>7</b> <span class="pc">5 %</span></td><td><b>4</b> <span class="pc">3 %</span></td><td><b>5</b> <span class="pc">3 %</span></td></tr><tr class="tono-enganoso"><th scope="row"><i class="tono-enganoso"></i>Engañosas</th><td><b>23</b> <span class="pc">16 %</span></td><td><b>27</b> <span class="pc">18 %</span></td><td><b>24</b> <span class="pc">16 %</span></td></tr><tr class="fuerte"><th scope="row">Falsas o engañosas</th><td><b>30</b> <span class="pc">20 %</span></td><td><b>31</b> <span class="pc">20 %</span></td><td><b>29</b> <span class="pc">19 %</span></td></tr><tr class="tono-mayormente_verdadero"><th scope="row"><i class="tono-mayormente_verdadero"></i>Casi ciertas</th><td><b>53</b> <span class="pc">36 %</span></td><td><b>52</b> <span class="pc">34 %</span></td><td><b>73</b> <span class="pc">48 %</span></td></tr><tr class="tono-verdadero"><th scope="row"><i class="tono-verdadero"></i>Verdaderas</th><td><b>29</b> <span class="pc">20 %</span></td><td><b>41</b> <span class="pc">27 %</span></td><td><b>36</b> <span class="pc">24 %</span></td></tr><tr class="tono-no_verificable"><th scope="row"><i class="tono-no_verificable"></i>No verificables</th><td><b>35</b> <span class="pc">24 %</span></td><td><b>29</b> <span class="pc">19 %</span></td><td><b>15</b> <span class="pc">10 %</span></td></tr><tr><th scope="row">Reparto</th><td><div class="reparto"><i class="tono-falso" style="flex:7"></i><i class="tono-enganoso" style="flex:23"></i><i class="tono-mayormente_verdadero" style="flex:53"></i><i class="tono-verdadero" style="flex:29"></i><i class="tono-no_verificable" style="flex:35"></i></div></td><td><div class="reparto"><i class="tono-falso" style="flex:4"></i><i class="tono-enganoso" style="flex:27"></i><i class="tono-mayormente_verdadero" style="flex:52"></i><i class="tono-verdadero" style="flex:41"></i><i class="tono-no_verificable" style="flex:29"></i></div></td><td><div class="reparto"><i class="tono-falso" style="flex:5"></i><i class="tono-enganoso" style="flex:24"></i><i class="tono-mayormente_verdadero" style="flex:73"></i><i class="tono-verdadero" style="flex:36"></i><i class="tono-no_verificable" style="flex:15"></i></div></td></tr><tr><th scope="row">Tema con más falsas o engañosas</th><td><a href="/sanchez#tema-5">Crisis de Ceuta, Marruecos y gestión de la frontera</a> <span class="pc">(7)</span></td><td><a href="/feijoo#tema-8">Feijóo explica su relación con Marcial Dorado</a> <span class="pc">(6)</span></td><td><a href="/colau#tema-11">Su gestión de Barcelona: seguridad, limpieza y errores como alcaldesa</a> <span class="pc">(7)</span></td></tr><tr><th scope="row">Excluidas por irrelevantes</th><td>10</td><td>15</td><td>12</td></tr></tbody></table></div><p class="nota-c">Los porcentajes son sobre las afirmaciones comprobadas de cada candidato. Cuántas se pueden comprobar depende de la duración de la entrevista, de las preguntas y de cuántos datos da cada invitado, así que esto no es un ranking: sirve para ver dónde mirar. Cada cifra lleva a su línea temporal.</p></section>
-<h2 class="seccion-t">Las entrevistas</h2>
-<article class="entrevista"><img class="logo" src="/logos/psoe.svg" alt="Logotipo de PSOE" width="76" height="76"><div><h2><a href="/sanchez">Pedro Sánchez</a></h2><p class="partido">PSOE</p><p class="prog">The Wild Project #393 · 13 nov 2026 · 1 h 52 min</p><p class="num"><b>30</b> falsas o engañosas de 147 afirmaciones comprobadas</p><p class="des"><span class="tono-falso">7 falsas</span> · <span class="tono-enganoso">23 engañosas</span> · <span class="tono-mayormente_verdadero">53 casi ciertas</span> · <span class="tono-verdadero">29 verdaderas</span> · <span class="tono-no_verificable">35 no verificables</span></p><p class="acc"><a href="/sanchez">Línea temporal →</a><a href="/sanchez/transcripcion">Transcripción completa →</a></p></div></article><article class="entrevista"><img class="logo" src="/logos/pp.svg" alt="Logotipo de PP" width="76" height="76"><div><h2><a href="/feijoo">Alberto Núñez Feijóo</a></h2><p class="partido">PP</p><p class="prog">The Wild Project #392 · 13 nov 2026 · 1 h 28 min</p><p class="num"><b>31</b> falsas o engañosas de 153 afirmaciones comprobadas</p><p class="des"><span class="tono-falso">4 falsas</span> · <span class="tono-enganoso">27 engañosas</span> · <span class="tono-mayormente_verdadero">52 casi ciertas</span> · <span class="tono-verdadero">41 verdaderas</span> · <span class="tono-no_verificable">29 no verificables</span></p><p class="acc"><a href="/feijoo">Línea temporal →</a><a href="/feijoo/transcripcion">Transcripción completa →</a></p></div></article><article class="entrevista"><img class="logo" src="/logos/frente-amplio.svg" alt="Logotipo de Frente Amplio" width="76" height="76"><div><h2><a href="/colau">Ada Colau</a></h2><p class="partido">Frente Amplio</p><p class="prog">The Wild Project #391 · 13 nov 2026 · 2 h 14 min</p><p class="num"><b>29</b> falsas o engañosas de 153 afirmaciones comprobadas</p><p class="des"><span class="tono-falso">5 falsas</span> · <span class="tono-enganoso">24 engañosas</span> · <span class="tono-mayormente_verdadero">73 casi ciertas</span> · <span class="tono-verdadero">36 verdaderas</span> · <span class="tono-no_verificable">15 no verificables</span></p><p class="acc"><a href="/colau">Línea temporal →</a><a href="/colau/transcripcion">Transcripción completa →</a></p></div></article>
-</main>
-<footer><div class="ancho">
-<section class="leyenda-f" aria-label="Leyenda de veredictos">
-<h2>Leyenda</h2>
-<p class="ley-intro">El color del minuto, del punto de la línea y de la etiqueta indica el veredicto de cada afirmación.</p>
-<dl>
-<div class="tono-falso"><dt>Falso</dt><dd><b>Los datos lo contradicen.</b> Incluye errores y lapsus: no implica intención de mentir.</dd></div>
-<div class="tono-enganoso"><dt>Engañoso</dt><dd><b>Parte de un dato real, pero confunde.</b> Omite contexto, mezcla periodos o lleva a una conclusión que no se sigue.</dd></div>
-<div class="tono-mayormente_verdadero"><dt>Casi cierto</dt><dd><b>Cierto en lo esencial.</b> Tiene una imprecisión menor, como un redondeo o una fecha aproximada.</dd></div>
-<div class="tono-verdadero"><dt>Verdadero</dt><dd><b>Los datos lo confirman.</b></dd></div>
-<div class="tono-no_verificable"><dt>No verificable</dt><dd><b>Sin prueba pública suficiente.</b> No se puede confirmar ni desmentir, o la búsqueda automática se quedó corta.</dd></div>
-</dl>
-<ul class="ley-notas">
-<li><b>Se evalúa:</b> hechos comprobables que afirma el entrevistado (cifras, fechas, leyes, lo que dijo o hizo alguien).</li>
-<li><b>No se evalúa:</b> opiniones, promesas, predicciones ni lo que dice el entrevistador.</li>
-<li><b>Confianza</b> (alta, media, baja): cuánta prueba respalda el veredicto.</li>
+<div class="primera">
+<div class="cabeza">
+<h1>Las entrevistas de The Wild Project, comprobadas<br> <em class="subraya">dato a dato</em></h1>
+<p class="entrada">Jordi Wild ha entrevistado a los candidatos a las elecciones generales del 29 de noviembre. Comprobamos cada dato que dan con fuentes públicas, con el mismo método y la misma vara de medir para todos.</p>
+<section class="muestra" aria-roledescription="carrusel" aria-label="Afirmaciones verificadas, de muestra"><div class="muestra-cab"><p class="muestra-rot">Así se ve una afirmación comprobada</p><div class="muestra-barra"><button class="muestra-ant" type="button" aria-label="Afirmación anterior" title="Anterior"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button><button class="muestra-sig" type="button" aria-label="Afirmación siguiente" title="Siguiente"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button></div></div><ul class="muestra-lista" aria-live="off"><li class="muestra-item tono-falso activa"><a href="/sanchez#m4938"><span class="muestra-quien">Sánchez · 1:22:18</span><span class="muestra-cita">«Nosotros a todas las aerolíneas las rescatamos.»</span><span class="estampa"><span class="sr">Veredicto: </span>Falso</span></a></li><li class="muestra-item tono-enganoso" aria-hidden="true" inert><a href="/feijoo#m3334"><span class="muestra-quien">Feijóo · 0:55:34</span><span class="muestra-cita">«aproximadamente el censo de la ciudad de Lleida más del 30% son inmigrantes»</span><span class="estampa"><span class="sr">Veredicto: </span>Engañoso</span></a></li><li class="muestra-item tono-falso" aria-hidden="true" inert><a href="/colau#m6059"><span class="muestra-quien">Colau · 1:40:59</span><span class="muestra-cita">«el precio es el de tasación y es muy inferior al de mercado»</span><span class="estampa"><span class="sr">Veredicto: </span>Falso</span></a></li><li class="muestra-item tono-verdadero" aria-hidden="true" inert><a href="/sanchez#m5986"><span class="muestra-quien">Sánchez · 1:39:46</span><span class="muestra-cita">«yo sé bueno, pero es un pacto bueno, claro»</span><span class="estampa"><span class="sr">Veredicto: </span>Verdadero</span></a></li><li class="muestra-item tono-verdadero" aria-hidden="true" inert><a href="/feijoo#m4009"><span class="muestra-quien">Feijóo · 1:06:49</span><span class="muestra-cita">«Y ha pasado por la cárcel y sigue investigado»</span><span class="estampa"><span class="sr">Veredicto: </span>Verdadero</span></a></li><li class="muestra-item tono-verdadero" aria-hidden="true" inert><a href="/colau#m771"><span class="muestra-quien">Colau · 0:12:51</span><span class="muestra-cita">«Pepe, Junts y Vox tumbaron esos decretos»</span><span class="estampa"><span class="sr">Veredicto: </span>Verdadero</span></a></li><li class="muestra-item tono-mayormente_verdadero" aria-hidden="true" inert><a href="/sanchez#m570"><span class="muestra-quien">Sánchez · 0:09:30</span><span class="muestra-cita">«Hasta incluso Abascal ha dicho a este señor hay que colgarle de los pies.»</span><span class="estampa"><span class="sr">Veredicto: </span>Casi cierto</span></a></li><li class="muestra-item tono-mayormente_verdadero" aria-hidden="true" inert><a href="/feijoo#m3994-2"><span class="muestra-quien">Feijóo · 1:06:34</span><span class="muestra-cita">«uno está en la cárcel con 25 años y otro está investigado»</span><span class="estampa"><span class="sr">Veredicto: </span>Casi cierto</span></a></li><li class="muestra-item tono-mayormente_verdadero" aria-hidden="true" inert><a href="/colau#m1444"><span class="muestra-quien">Colau · 0:24:04</span><span class="muestra-cita">«la justicia ha actuado y está en la cárcel»</span><span class="estampa"><span class="sr">Veredicto: </span>Casi cierto</span></a></li></ul></section>
+</div>
+<div class="tarjetas"><article class="entrevista"><span class="logo retrato"><img src="/fotos/sanchez.jpg" alt="Pedro Sánchez" width="160" height="160" decoding="async"><span class="insignia" title="PSOE"><img src="/logos/psoe.svg" alt="" width="40" height="40"></span></span><div><h2><a href="/sanchez">Pedro Sánchez</a></h2><p class="partido">PSOE</p><p class="prog">The Wild Project #393 · 13 nov 2026 · 1 h 52 min</p><p class="num"><b>28</b> falsas o engañosas de 147 afirmaciones comprobadas</p><div class="barra-reparto" role="img" aria-label="Reparto de las 147 afirmaciones: 5 falsas (3 %), 23 engañosas (16 %), 52 casi ciertas (35 %), 33 verdaderas (22 %), 34 no verificables (23 %)"><i class="tono-falso" style="flex:5" title="Falsas: 5 (3 %)"></i><i class="tono-enganoso" style="flex:23" title="Engañosas: 23 (16 %)"></i><i class="tono-mayormente_verdadero" style="flex:52" title="Casi ciertas: 52 (35 %)"></i><i class="tono-verdadero" style="flex:33" title="Verdaderas: 33 (22 %)"></i><i class="tono-no_verificable" style="flex:34" title="No verificables: 34 (23 %)"></i></div><p class="des"><span class="tono-falso">5 falsas</span> · <span class="tono-enganoso">23 engañosas</span> · <span class="tono-mayormente_verdadero">52 casi ciertas</span> · <span class="tono-verdadero">33 verdaderas</span> · <span class="tono-no_verificable">34 no verificables</span></p></div><p class="acc"><a class="btn principal" href="/sanchez"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3v18M10 6h9M10 12h6M10 18h8"/><circle cx="6" cy="6" r="2" class="lleno"/><circle cx="6" cy="12" r="2" class="lleno"/><circle cx="6" cy="18" r="2" class="lleno"/></svg><span>Línea temporal</span><svg class="flecha" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="btn" href="/sanchez/transcripcion"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l4 4v14H6zM14 3v5h5M9 12h7M9 16h7"/></svg><span>Transcripción<span class="sr"> completa</span></span><svg class="flecha" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></p></article><article class="entrevista"><span class="logo retrato"><img src="/fotos/feijoo.jpg" alt="Alberto Núñez Feijóo" width="160" height="160" decoding="async"><span class="insignia" title="PP"><img src="/logos/pp.svg" alt="" width="40" height="40"></span></span><div><h2><a href="/feijoo">Alberto Núñez Feijóo</a></h2><p class="partido">PP</p><p class="prog">The Wild Project #392 · 13 nov 2026 · 1 h 28 min</p><p class="num"><b>32</b> falsas o engañosas de 153 afirmaciones comprobadas</p><div class="barra-reparto" role="img" aria-label="Reparto de las 153 afirmaciones: 4 falsas (3 %), 28 engañosas (18 %), 51 casi ciertas (33 %), 40 verdaderas (26 %), 30 no verificables (20 %)"><i class="tono-falso" style="flex:4" title="Falsas: 4 (3 %)"></i><i class="tono-enganoso" style="flex:28" title="Engañosas: 28 (18 %)"></i><i class="tono-mayormente_verdadero" style="flex:51" title="Casi ciertas: 51 (33 %)"></i><i class="tono-verdadero" style="flex:40" title="Verdaderas: 40 (26 %)"></i><i class="tono-no_verificable" style="flex:30" title="No verificables: 30 (20 %)"></i></div><p class="des"><span class="tono-falso">4 falsas</span> · <span class="tono-enganoso">28 engañosas</span> · <span class="tono-mayormente_verdadero">51 casi ciertas</span> · <span class="tono-verdadero">40 verdaderas</span> · <span class="tono-no_verificable">30 no verificables</span></p></div><p class="acc"><a class="btn principal" href="/feijoo"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3v18M10 6h9M10 12h6M10 18h8"/><circle cx="6" cy="6" r="2" class="lleno"/><circle cx="6" cy="12" r="2" class="lleno"/><circle cx="6" cy="18" r="2" class="lleno"/></svg><span>Línea temporal</span><svg class="flecha" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="btn" href="/feijoo/transcripcion"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l4 4v14H6zM14 3v5h5M9 12h7M9 16h7"/></svg><span>Transcripción<span class="sr"> completa</span></span><svg class="flecha" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></p></article><article class="entrevista"><span class="logo retrato"><img src="/fotos/colau.jpg" alt="Ada Colau" width="160" height="160" decoding="async"><span class="insignia" title="Frente Amplio"><img src="/logos/frente-amplio.svg" alt="" width="40" height="40"></span></span><div><h2><a href="/colau">Ada Colau</a></h2><p class="partido">Frente Amplio</p><p class="prog">The Wild Project #391 · 13 nov 2026 · 2 h 14 min</p><p class="num"><b>27</b> falsas o engañosas de 153 afirmaciones comprobadas</p><div class="barra-reparto" role="img" aria-label="Reparto de las 153 afirmaciones: 5 falsas (3 %), 22 engañosas (14 %), 73 casi ciertas (48 %), 37 verdaderas (24 %), 16 no verificables (10 %)"><i class="tono-falso" style="flex:5" title="Falsas: 5 (3 %)"></i><i class="tono-enganoso" style="flex:22" title="Engañosas: 22 (14 %)"></i><i class="tono-mayormente_verdadero" style="flex:73" title="Casi ciertas: 73 (48 %)"></i><i class="tono-verdadero" style="flex:37" title="Verdaderas: 37 (24 %)"></i><i class="tono-no_verificable" style="flex:16" title="No verificables: 16 (10 %)"></i></div><p class="des"><span class="tono-falso">5 falsas</span> · <span class="tono-enganoso">22 engañosas</span> · <span class="tono-mayormente_verdadero">73 casi ciertas</span> · <span class="tono-verdadero">37 verdaderas</span> · <span class="tono-no_verificable">16 no verificables</span></p></div><p class="acc"><a class="btn principal" href="/colau"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3v18M10 6h9M10 12h6M10 18h8"/><circle cx="6" cy="6" r="2" class="lleno"/><circle cx="6" cy="12" r="2" class="lleno"/><circle cx="6" cy="18" r="2" class="lleno"/></svg><span>Línea temporal</span><svg class="flecha" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="btn" href="/colau/transcripcion"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l4 4v14H6zM14 3v5h5M9 12h7M9 16h7"/></svg><span>Transcripción<span class="sr"> completa</span></span><svg class="flecha" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></p></article></div>
+<ul class="ley-linea" aria-label="Qué significa cada color"><li class="tono-falso"><i aria-hidden="true"></i><span><b>Falso:</b> los datos lo contradicen</span></li><li class="tono-enganoso"><i aria-hidden="true"></i><span><b>Engañoso:</b> parte de un dato real, pero confunde</span></li><li class="tono-mayormente_verdadero"><i aria-hidden="true"></i><span><b>Casi cierto:</b> con una imprecisión menor</span></li><li class="tono-verdadero"><i aria-hidden="true"></i><span><b>Verdadero:</b> los datos lo confirman</span></li><li class="tono-no_verificable"><i aria-hidden="true"></i><span><b>No verificable:</b> sin prueba pública suficiente</span></li><li class="mas"><a href="/metodologia#que-significa-cada-veredicto">Criterios de cada veredicto</a></li></ul>
+<a class="seguir" href="#compara-t">Comparativa de los candidatos<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg></a>
+</div>
+<section class="compara" aria-labelledby="compara-t"><h2 id="compara-t">Los 3 candidatos, comparados</h2><div class="tabla-c"><table><thead><tr><td></td><th scope="col"><a href="/sanchez"><span class="cand">Pedro Sánchez</span></a><span class="par">PSOE</span></th><th scope="col"><a href="/feijoo"><span class="cand">Alberto Núñez Feijóo</span></a><span class="par">PP</span></th><th scope="col"><a href="/colau"><span class="cand">Ada Colau</span></a><span class="par">Frente Amplio</span></th></tr></thead><tbody><tr><th scope="row">Duración de la entrevista</th><td>1 h 52 min</td><td>1 h 28 min</td><td>2 h 14 min</td></tr><tr><th scope="row">Afirmaciones comprobadas</th><td><b>147</b></td><td><b>153</b></td><td><b>153</b></td></tr><tr><th scope="row">Comprobadas por hora</th><td>79</td><td>104</td><td>68</td></tr><tr class="tono-falso"><th scope="row"><i class="tono-falso"></i>Falsas</th><td><b>5</b> <span class="pc">3 %</span></td><td><b>4</b> <span class="pc">3 %</span></td><td><b>5</b> <span class="pc">3 %</span></td></tr><tr class="tono-enganoso"><th scope="row"><i class="tono-enganoso"></i>Engañosas</th><td><b>23</b> <span class="pc">16 %</span></td><td><b>28</b> <span class="pc">18 %</span></td><td><b>22</b> <span class="pc">14 %</span></td></tr><tr class="fuerte"><th scope="row">Falsas o engañosas</th><td><b>28</b> <span class="pc">19 %</span></td><td><b>32</b> <span class="pc">21 %</span></td><td><b>27</b> <span class="pc">18 %</span></td></tr><tr class="tono-mayormente_verdadero"><th scope="row"><i class="tono-mayormente_verdadero"></i>Casi ciertas</th><td><b>52</b> <span class="pc">35 %</span></td><td><b>51</b> <span class="pc">33 %</span></td><td><b>73</b> <span class="pc">48 %</span></td></tr><tr class="tono-verdadero"><th scope="row"><i class="tono-verdadero"></i>Verdaderas</th><td><b>33</b> <span class="pc">22 %</span></td><td><b>40</b> <span class="pc">26 %</span></td><td><b>37</b> <span class="pc">24 %</span></td></tr><tr class="fuerte"><th scope="row">Verdaderas o casi ciertas</th><td><b>85</b> <span class="pc">58 %</span></td><td><b>91</b> <span class="pc">59 %</span></td><td><b>110</b> <span class="pc">72 %</span></td></tr><tr class="tono-no_verificable"><th scope="row"><i class="tono-no_verificable"></i>No verificables</th><td><b>34</b> <span class="pc">23 %</span></td><td><b>30</b> <span class="pc">20 %</span></td><td><b>16</b> <span class="pc">10 %</span></td></tr><tr><th scope="row">Reparto</th><td><div class="reparto"><i class="tono-falso" style="flex:5"></i><i class="tono-enganoso" style="flex:23"></i><i class="tono-mayormente_verdadero" style="flex:52"></i><i class="tono-verdadero" style="flex:33"></i><i class="tono-no_verificable" style="flex:34"></i></div></td><td><div class="reparto"><i class="tono-falso" style="flex:4"></i><i class="tono-enganoso" style="flex:28"></i><i class="tono-mayormente_verdadero" style="flex:51"></i><i class="tono-verdadero" style="flex:40"></i><i class="tono-no_verificable" style="flex:30"></i></div></td><td><div class="reparto"><i class="tono-falso" style="flex:5"></i><i class="tono-enganoso" style="flex:22"></i><i class="tono-mayormente_verdadero" style="flex:73"></i><i class="tono-verdadero" style="flex:37"></i><i class="tono-no_verificable" style="flex:16"></i></div></td></tr><tr><th scope="row">Tema con más falsas o engañosas</th><td><a href="/sanchez#tema-5">Crisis de Ceuta, Marruecos y gestión de la frontera</a> <span class="pc">(7)</span></td><td><a href="/feijoo#tema-8">Feijóo explica su relación con Marcial Dorado</a> <span class="pc">(6)</span></td><td><a href="/colau#tema-7">Accidentes ferroviarios y gestión del sistema de trenes</a> <span class="pc">(5)</span></td></tr><tr><th scope="row">Excluidas por irrelevantes</th><td>10</td><td>15</td><td>12</td></tr></tbody></table></div><p class="nota-c">Los porcentajes son sobre las afirmaciones comprobadas de cada candidato. Cuántas se pueden comprobar depende de la duración de la entrevista, de las preguntas y de cuántos datos da cada invitado, así que esto no es un ranking: sirve para ver dónde mirar. Cada cifra lleva a su línea temporal. Para ver qué dijo cada uno sobre lo mismo, <a href="/temas">compáralos tema a tema</a>.</p></section>
+<section class="verifica" aria-labelledby="verifica-t">
+<h2 class="seccion-t" id="verifica-t">Puedes verificarlo tú</h2>
+<p class="verifica-entrada">No hace falta que te fíes: todo está a la vista para que lo compruebes.</p>
+<ul class="verifica-vias">
+<li><h3>El vídeo y las fuentes</h3><p>Cada afirmación abre el vídeo en el segundo exacto y enlaza las fuentes con las que se comprobó.</p><a href="/metodologia">Cómo se verifica →</a></li>
+<li><h3>Tu propia IA</h3><p>Hay un encargo listo para que cualquier IA revise la verificación por su cuenta, y todos los datos están en abierto.</p><a href="/api#verificalo">Copiar el encargo →</a></li>
+<li><h3>¿Un error o algo que falta?</h3><p>Mándanos el enlace a una fuente y lo revisamos con el mismo criterio para todos.</p><a href="/participa">Participa →</a></li>
 </ul>
 </section>
-<p style="margin-top:22px">Verificación asistida por IA (transcripción con Whisper, contraste con modelos Claude y búsqueda web), sin revisión de un equipo de periodistas. Cada afirmación enlaza el segundo exacto del vídeo y sus fuentes, y el código, las transcripciones y los datos están publicados en <a href="https://github.com/PabloPC05/verificacion-podcast" target="_blank" rel="noopener noreferrer">GitHub</a>. «Falso» no implica intención de mentir: incluye errores y lapsus. El número de afirmaciones falsas depende también de cuánto habla cada invitado y de cuántos datos da, así que las cifras no son un ranking. En rojo, junto a cada tema, cuántas afirmaciones falsas o engañosas contiene.</p>
-<p>Última actualización: 13/11/2026.</p>
+</main>
+<footer><div class="ancho pie-corto">
+<p>Verificación asistida por IA (transcripción con Whisper, contraste con modelos Claude y búsqueda web), sin revisión de un equipo de periodistas. Cada afirmación enlaza el segundo exacto del vídeo y sus fuentes, y el código, las transcripciones y los datos están publicados en <a href="https://github.com/PabloPC05/verificacion-podcast" target="_blank" rel="noopener noreferrer">GitHub</a>. «Falso» no implica intención de mentir: incluye errores y lapsus. El número de afirmaciones falsas depende también de cuánto habla cada invitado y de cuántos datos da, así que las cifras no son un ranking. En rojo, junto a cada tema, cuántas afirmaciones falsas o engañosas contiene.</p>
+<p class="final">Última actualización: 14/11/2026. <span class="creditos">Fotos vía Wikimedia Commons: <a href="https://commons.wikimedia.org/wiki/File:Pedro_S%C3%A1nchez_in_2026.jpg" target="_blank" rel="noopener noreferrer">Pedro Sánchez</a> (Pool Moncloa / Carlos Spottorno, uso libre citando la fuente) · <a href="https://commons.wikimedia.org/wiki/File:ALBERTO_N%C3%9A%C3%91EZ_FEIJ%C3%93O.jpg" target="_blank" rel="noopener noreferrer">Alberto Núñez Feijóo</a> (Partido Popular, CC0) · <a href="https://commons.wikimedia.org/wiki/File:Ada-Colau-Encuentro-2024.jpg" target="_blank" rel="noopener noreferrer">Ada Colau</a> (Robo71, CC0).</span></p>
+<p class="pie-quien"><a href="/quien">Proyecto independiente de Pablo Pardo Cotos y Diego Cristóbal Andaluz, sin relación con The Wild Project ni con ningún partido.</a></p>
 </div></footer>
+<script>
+// Hero: GSAP anima la entrada y mueve el carrusel. Sin GSAP (no cargó) o con poco movimiento, todo se ve quieto y el carrusel se pasa a mano.
+addEventListener("DOMContentLoaded", () => {
+  const raiz = document.documentElement, muestra = document.querySelector(".muestra");
+  const conGsap = !!(window.gsap && window.SplitText) && raiz.classList.contains("con-gsap");
+  clearTimeout(window.esperaGsap);
+  if (conGsap) { raiz.classList.add("gsap-listo"); gsap.registerPlugin(SplitText); }
+  raiz.classList.remove("con-gsap");
+  if (!conGsap) { if (muestra) carrusel(muestra, false); return; }
+
+  const h1 = document.querySelector(".cabeza h1");
+  const tl = gsap.timeline({ defaults: { ease: "expo.out", duration: .9 } });
+  const lineas = SplitText.create(h1, { type: "lines", mask: "lines" });
+  tl.from(lineas.lines, { yPercent: 115, stagger: .09, onComplete: () => lineas.revert() })
+    .fromTo(".subraya", { "--subrayado": "0%" }, { "--subrayado": "100%", duration: .7, ease: "power3.inOut" }, "-=.3")
+    .from(".cabeza .entrada", { autoAlpha: 0, y: 18, duration: .8, ease: "power3.out", clearProps: "transform,opacity,visibility" }, .2);
+  if (muestra) tl.from(muestra, { autoAlpha: 0, y: 18, duration: .8, ease: "power3.out", clearProps: "transform,opacity,visibility",
+                                  onStart: () => carrusel(muestra, true) }, .35);
+  tl.from(".tarjetas .entrevista", { autoAlpha: 0, y: 28, stagger: .1, duration: .85, ease: "power3.out", clearProps: "transform,opacity,visibility" }, .4)
+    .from(".tarjetas .retrato", { autoAlpha: 0, scale: .8, stagger: .1, duration: .6, ease: "back.out(2)", clearProps: "transform,opacity,visibility" }, .5)
+    .from(".tarjetas .insignia", { autoAlpha: 0, scale: .5, stagger: .1, duration: .45, ease: "back.out(2.5)", clearProps: "transform,opacity,visibility" }, .8)
+    .fromTo(".tarjetas .barra-reparto", { clipPath: "inset(0 100% 0 0 round 999px)" },
+            { clipPath: "inset(0 0% 0 0 round 999px)", stagger: .1, duration: 1.1, ease: "power2.inOut", clearProps: "clipPath" }, .7);
+  document.querySelectorAll(".tarjetas .num > b").forEach((b, i) => {
+    b.style.minWidth = b.offsetWidth + "px"; b.style.display = "inline-block";
+    tl.from(b, { textContent: 0, snap: { textContent: 1 }, duration: 1.1, ease: "power2.out" }, .7 + i * .1);
+  });
+});
+
+function carrusel(muestra, animado) {
+  const items = [...muestra.querySelectorAll(".muestra-item")], lista = muestra.querySelector(".muestra-lista");
+  const ESPERA = 5.5;
+  let actual = 0, paso = null, espera = null, parado = !animado, encima = false;
+  const partes = it => ["muestra-quien", "estampa"].map(c => it.querySelector("." + c));
+  const activar = (viejo, nuevo) => {
+    viejo.classList.remove("activa"); viejo.setAttribute("aria-hidden", "true"); viejo.inert = true;
+    nuevo.classList.add("activa"); nuevo.removeAttribute("aria-hidden"); nuevo.inert = false;
+  };
+  // Empieza en una afirmación al azar: si no, cada visita abriría con el mismo candidato y el mismo veredicto
+  const inicio = Math.floor(Math.random() * items.length);
+  if (inicio) { activar(items[0], items[inicio]); actual = inicio; }
+  // Cada cita se parte en palabras una sola vez y se queda partida: deshacer el corte al acabar recolocaba el texto un píxel
+  if (animado) items.forEach(it => { it._palabras = SplitText.create(it.querySelector(".muestra-cita"), { type: "words", mask: "words", wordsClass: "palabra" }).words; });
+  const entrar = it => {
+    const [quien, estampa] = partes(it);
+    return gsap.timeline()
+      .fromTo(quien, { autoAlpha: 0, x: -10 }, { autoAlpha: 1, x: 0, duration: .35, ease: "power2.out" })
+      .fromTo(it._palabras, { yPercent: 110 }, { yPercent: 0, duration: .55, stagger: .022, ease: "power3.out" }, "<.05")
+      // crece desde su borde derecho: en móvil va pegado al margen y, desde el centro, se salía de la pantalla
+      .fromTo(estampa, { autoAlpha: 0, scale: 2, rotation: -18, transformOrigin: "100% 50%" }, { autoAlpha: 1, scale: 1, rotation: -4, duration: .38, ease: "back.out(2.6)" }, ">-.15")
+      .to(muestra, { keyframes: { x: [0, -3, 2.5, -1.5, 0] }, duration: .24, ease: "none", clearProps: "x" }, "<.22");
+  };
+  const salir = it => gsap.timeline()
+    .to(it._palabras, { yPercent: -110, duration: .3, stagger: .01, ease: "power2.in" })
+    .to(partes(it), { autoAlpha: 0, duration: .22, ease: "power1.in" }, "<");
+  // Pasa sola cada ESPERA segundos y solo se para mientras el ratón o el foco del teclado están encima.
+  // Las flechas cambian de afirmación y vuelven a empezar la cuenta. Lo que pasa solo no se anuncia al lector de pantalla.
+  const esperar = () => {
+    espera?.kill(); espera = null;
+    if (parado) return;
+    espera = gsap.delayedCall(ESPERA, () => { lista.setAttribute("aria-live", "off"); ir(actual + 1); });
+    if (encima) espera.pause();
+  };
+  function ir(n) {
+    n = (n + items.length) % items.length;
+    if (n === actual) return;
+    const viejo = items[actual], nuevo = items[n];
+    actual = n;
+    if (!animado) { activar(viejo, nuevo); return; }
+    paso?.progress(1).kill(); espera?.kill();
+    paso = gsap.timeline({ onComplete: esperar }).add(salir(viejo)).add(() => activar(viejo, nuevo)).add(entrar(nuevo));
+  }
+  const mano = d => { lista.setAttribute("aria-live", "polite"); ir(actual + d); };
+  muestra.querySelector(".muestra-ant").onclick = () => mano(-1);
+  muestra.querySelector(".muestra-sig").onclick = () => mano(1);
+  if (!animado) return;
+  const sobre = v => { encima = v; if (espera) v ? espera.pause() : espera.resume(); };
+  muestra.addEventListener("pointerenter", e => e.pointerType === "mouse" && sobre(true));
+  muestra.addEventListener("pointerleave", e => e.pointerType === "mouse" && sobre(false));
+  const conTeclado = el => { try { return el.matches(":focus-visible"); } catch (e) { return true; } };
+  muestra.addEventListener("focusin", e => conTeclado(e.target) && sobre(true));
+  muestra.addEventListener("focusout", e => muestra.contains(e.relatedTarget) || sobre(false));
+  paso = gsap.timeline({ onComplete: esperar }).add(entrar(items[actual]), .25);
+}
+</script>
 </body>
 </html>

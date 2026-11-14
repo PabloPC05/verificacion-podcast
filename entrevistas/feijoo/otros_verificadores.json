@@ -1,0 +1,32 @@
+{
+ "nota": "Lo que otros verificadores profesionales publicaron sobre la misma frase (misma_frase) o sobre el mismo dato dicho por el candidato en otro momento (mismo_dato). Solo entra una pieza si trata esa afirmación concreta; un artículo general sobre el tema no cuenta. veredicto_medio es la etiqueta del propio medio, copiada tal cual.",
+ "enlaces": [
+  {
+   "id": "m3225",
+   "medio": "Newtral",
+   "titulo": "FACT-CHECK: España no es el país con “la mayor inmigración irregular de toda Europa”",
+   "url": "https://www.newtral.es/feijoo-inmigracion-irregular-factcheck/20250606/",
+   "fecha": "2025-06-06",
+   "veredicto_medio": "Engañoso",
+   "alcance": "mismo_dato"
+  },
+  {
+   "id": "m3225",
+   "medio": "Newtral",
+   "titulo": "FACT-CHECK: España no fue el país de la UE donde más “inmigración irregular entró”",
+   "url": "https://www.newtral.es/feijoo-inmigracion-irregular-espana-factcheck/20250717/",
+   "fecha": "2025-07-17",
+   "veredicto_medio": "Falso",
+   "alcance": "mismo_dato"
+  },
+  {
+   "id": "m3651",
+   "medio": "Newtral",
+   "titulo": "Marcial Dorado, el contrabandista y narcotraficante amigo de Feijóo",
+   "url": "https://www.newtral.es/marcial-dorado-feijoo/20230718/",
+   "fecha": "2023-07-18",
+   "veredicto_medio": null,
+   "alcance": "mismo_dato"
+  }
+ ]
+}

@@ -1,0 +1,25 @@
+{
+ "criterio": "Las afirmaciones con un dato concreto sobre los temas centrales de la campaña, elegidas con el mismo criterio para los tres candidatos, salgan bien o mal.",
+ "afirmaciones": [
+  {
+   "id": "m5188",
+   "por_que": "Vivienda: el dato con el que defiende su gestión."
+  },
+  {
+   "id": "m3267",
+   "por_que": "Inmigración: de dónde llegan los migrantes."
+  },
+  {
+   "id": "m2012",
+   "por_que": "Ceuta: quiénes entraron en la crisis de julio."
+  },
+  {
+   "id": "m4742",
+   "por_que": "Corrupción: qué ha pasado con los implicados del PSOE."
+  },
+  {
+   "id": "m6437",
+   "por_que": "Salario mínimo: una promesa que sí cumplió."
+  }
+ ]
+}

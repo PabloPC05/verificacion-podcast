@@ -4,19 +4,31 @@
     "cita": "Sería cerrarlas, sobre todo con un señor tan peligroso que está provocando guerras por todo el mundo y nos está poniendo en peligro directamente",
     "afirmacion": "Donald Trump está provocando guerras en distintos lugares del mundo.",
     "veredicto": "mayormente_verdadero",
-    "explicacion": "EE UU, bajo Trump, capturó a Maduro en una operación militar en Venezuela el 3 de enero de 2026 (el Consejo de Seguridad se reunió de urgencia y varios países la calificaron de violación del derecho internacional; Washington dice que fue una operación policial y no una guerra) y atacó Irán junto a Israel desde febrero de 2026. Que «provoca guerras por todo el mundo» y que «nos pone en peligro» es una valoración, pero hay al menos dos operaciones militares de gran escala iniciadas por EE UU en 2026.",
+    "explicacion": "EE UU capturó a Nicolás Maduro en una operación militar en Caracas el 3-1-2026 y, junto con Israel, atacó Irán el 28-2-2026; ese día Trump anunció operaciones de combate de gran escala e instó a los iraníes a tomar el control de su gobierno (AP). El Consejo de Seguridad se reunió de urgencia el 5-1: el secretario general habló de precedente peligroso y varios países de violación del derecho internacional, mientras Washington defendió una operación policial y no una guerra. Son dos operaciones militares de gran escala iniciadas por EE UU en 2026; «guerras por todo el mundo» exagera y que «nos pone en peligro» es una valoración.",
     "confianza": "media",
     "fuentes": [
       {
-        "titulo": "El Consejo de Seguridad de la ONU convoca sesión de urgencia tras el operativo militar de EE UU en Venezuela (El Diario EC, 3-1-2026)",
-        "url": "https://www.eldiario.ec/centro/el-consejo-de-seguridad-de-la-onu-convoca-sesion-de-urgencia-tras-operativo-militar-de-ee-uu-en-venezuela-20260103/"
+        "titulo": "PBS NewsHour (AP): US strikes Venezuela and says its leader Maduro has been captured and flown out of the country",
+        "url": "https://www.pbs.org/newshour/world/us-strikes-venezuela-and-says-its-leader-maduro-has-been-captured-and-flown-out-of-the-country"
       },
       {
-        "titulo": "EE UU niega estar en guerra con Venezuela y defiende la captura de Maduro ante la ONU (Blu Radio)",
+        "titulo": "Security Council Report: Venezuela, emergency meeting (What's in Blue, 5-1-2026)",
+        "url": "https://www.securitycouncilreport.org/whatsinblue/2026/01/venezuela-emergency-meeting.php"
+      },
+      {
+        "titulo": "Blu Radio: EE UU niega estar en guerra con Venezuela y defiende la captura de Maduro ante la ONU (5-1-2026)",
         "url": "https://www.bluradio.com/mundo/ee-uu-niega-estar-en-guerra-con-venezuela-y-defiende-captura-de-nicolas-maduro-ante-la-onu-rg10"
       },
       {
-        "titulo": "Los ataques a Irán amenazan el crecimiento del PIB de EE UU y las perspectivas de inflación (Euronews, 3-3-2026)",
+        "titulo": "El Diario EC: El Consejo de Seguridad de la ONU convoca sesión de urgencia tras el operativo militar de EE UU en Venezuela (3-1-2026)",
+        "url": "https://www.eldiario.ec/centro/el-consejo-de-seguridad-de-la-onu-convoca-sesion-de-urgencia-tras-operativo-militar-de-ee-uu-en-venezuela-20260103/"
+      },
+      {
+        "titulo": "AP (WCAX): What to know about U.S.-Israel attacks on Iran (28-2-2026)",
+        "url": "https://www.wcax.com/2026/02/28/what-know-about-us-israel-attacks-iran/?outputType=amp"
+      },
+      {
+        "titulo": "Euronews: Los ataques a Irán amenazan el crecimiento del PIB de EE UU y las perspectivas de inflación (3-3-2026)",
         "url": "https://es.euronews.com/business/2026/03/03/los-ataques-iran-amenazan-crecimiento-del-pib-ee-uu-las-perspectivas-de-inflacion"
       }
     ]
@@ -26,20 +38,32 @@
     "cita": "Ya está castigando con aranceles, generando inestabilidad en todo el mundo",
     "afirmacion": "Trump está castigando con aranceles a Europa y a España.",
     "veredicto": "mayormente_verdadero",
-    "explicacion": "Los productos europeos soportan un arancel de EE UU (techo del 15 % pactado con la UE en 2025) y en 2026 Trump anunció aranceles adicionales del 25 % a coches y camiones europeos y amenazó con el 100 % por las tasas digitales. En marzo de 2026 pidió «cortar todos los acuerdos con España» por negarse a ceder las bases para atacar Irán; no consta un arancel específico contra España, porque la política comercial es competencia de la UE.",
+    "explicacion": "Los productos europeos pagan aranceles de EE UU: el pacto de Turnberry fija un techo del 15 % para la mayoría de las exportaciones de la UE y, al caducar el arancel global temporal, el nuevo esquema del 24-7-2026 mantiene el 10 % para la UE. Trump anunció el 1-5-2026 subir al 25 % el arancel a coches y camiones europeos y el 26-6-2026 amenazó con el 100 % por los impuestos digitales; no hemos hallado que esas subidas llegaran a aplicarse (la UE aprobó el pacto el 20-5-2026). El 3-3-2026 pidió cortar los acuerdos con España por negar las bases de Rota y Morón contra Irán, pero no hay arancel específico contra España porque la política comercial es competencia exclusiva de la UE.",
     "confianza": "media",
     "fuentes": [
       {
-        "titulo": "¿Puede Trump cortar unilateralmente su comercio con España? (Euronews, 8-7-2026)",
+        "titulo": "Euronews: ¿Puede Trump cortar unilateralmente su comercio con España? (8-7-2026)",
         "url": "https://es.euronews.com/2026/07/08/puede-trump-cortar-unilateralmente-su-comercio-con-espana"
       },
       {
-        "titulo": "Bruselas se solidariza con España tras las amenazas de Trump (Menorca.info, 4-3-2026)",
+        "titulo": "Menorca.info: Bruselas se solidariza con España tras las amenazas de Trump (4-3-2026)",
         "url": "https://www.menorca.info/actualidad/internacional/2026/03/04/2589557/bruselas-solidariza-espana-tras-amenazas-trump-actuara-necesario-para-proteger-intereses-ue.html"
       },
       {
-        "titulo": "Trump anuncia aranceles adicionales del 25 % a coches y camiones de la UE (elDiario.es)",
-        "url": "https://www.eldiario.es/internacional/trump-anuncia-aranceles-adicionales-25-coches-camiones-ue_1_13188968.amp.html"
+        "titulo": "elDiario.es: Trump anuncia aranceles adicionales del 25 % a coches y camiones de la UE (1-5-2026)",
+        "url": "https://www.eldiario.es/internacional/trump-anuncia-aranceles-adicionales-25-coches-camiones-ue_1_13188968.html"
+      },
+      {
+        "titulo": "Euronews: La UE aprueba un acuerdo comercial con EE UU pese a la incertidumbre transatlántica (20-5-2026)",
+        "url": "https://es.euronews.com/2026/05/20/la-ue-aprueba-un-acuerdo-comercial-con-eeuu-pese-a-la-incertidumbre-transatlantica"
+      },
+      {
+        "titulo": "Euronews: Trump amenaza a Europa con aranceles del 100 % por la tasa digital (26-6-2026)",
+        "url": "https://es.euronews.com/2026/06/26/trump-amenaza-a-europa-con-aranceles-del-100-por-la-tasa-digital"
+      },
+      {
+        "titulo": "Menorca.info: Bruselas valora positivamente los nuevos aranceles de EEUU por ajustarse al acuerdo con la UE (24-7-2026)",
+        "url": "https://www.menorca.info/actualidad/internacional/2026/07/24/2676359/bruselas-valora-positivamente-nuevos-aranceles-eeuu-por-ajustarse-acuerdo-ue.html"
       }
     ]
   },
@@ -48,20 +72,28 @@
     "cita": "la inflación tiene que ver con todas las guerras que está provocando",
     "afirmacion": "La inflación que sufre España está relacionada con las guerras que provoca Trump.",
     "veredicto": "mayormente_verdadero",
-    "explicacion": "El IPC español fue del 4,9 % en octubre de 2026 (dato adelantado del INE, el más alto desde febrero de 2023) y la guerra contra Irán disparó el petróleo por encima de 100 dólares en 2026, con instituciones europeas avisando de un shock estanflacionario. Sin embargo, el INE atribuye el dato de octubre sobre todo al gas, los paquetes turísticos y los combustibles líquidos, mientras que los carburantes bajaron; el vínculo es plausible pero no está cuantificado y «todas las guerras» es una generalización.",
+    "explicacion": "El INE publicó el 30-10-2026 un IPC adelantado del 4,9 % para octubre, igual que en septiembre, con gas, combustibles líquidos y paquetes turísticos al alza y los carburantes a la baja. Según Diario de León, el Banco de España (informe de octubre de 2026) sube su previsión de inflación al 3,9 % en 2026 y al 3,7 % en 2027 y atribuye la persistencia a la guerra de Irán, con la energía un 22 % más cara en septiembre; en junio ya la había elevado al 3,6 %. El vínculo con la guerra de Irán está respaldado; «todas las guerras» generaliza, porque el efecto de la operación de Venezuela no está cuantificado y la guerra de Irán empezó como operación conjunta de EE UU e Israel.",
     "confianza": "media",
     "fuentes": [
       {
-        "titulo": "El IPC se mantiene en el 4,9 % y sigue presionando el coste de vida (Que.es, 30-10-2026)",
-        "url": "https://www.que.es/2026/10/30/ipc-octubre-2026-coste-vida/"
+        "titulo": "INE: Indicador adelantado del IPC, octubre de 2026 (nota de prensa, 30-10-2026)",
+        "url": "https://www.ine.es/dyngs/Prensa/adIPC1026.pdf"
       },
       {
-        "titulo": "How high could Europe's inflation go if the Iran war continues? (Euronews, 11-3-2026)",
-        "url": "https://www.euronews.com/2026/03/11/how-high-could-europes-inflation-go-if-the-iran-war-continues"
+        "titulo": "Diario de León: La guerra en Irán enquista la inflación y deja los precios disparados hasta 2027 (10-10-2026)",
+        "url": "https://www.diariodeleon.es/economia/261010/2099819/guerra-iran-enquista-inflacion-precios-disparados.html"
       },
       {
-        "titulo": "La economía europea empieza a sentir el golpe de la guerra de Trump contra Irán (Bloomberg Línea)",
+        "titulo": "El Independiente: El Banco de España alerta de que la inflación sube al 3,6 % en el escenario central (18-6-2026)",
+        "url": "https://www.elindependiente.com/economia/2026/06/18/banco-espana-alerta-inflacion-sube-36-escenario-central-adverso/"
+      },
+      {
+        "titulo": "Bloomberg Línea: La economía europea empieza a sentir el golpe de la guerra de Donald Trump contra Irán (27-3-2026)",
         "url": "https://www.bloomberglinea.com/economia/la-economia-europea-empieza-a-sentir-el-golpe-de-la-guerra-de-donald-trump-contra-iran/"
+      },
+      {
+        "titulo": "Euronews: How high could Europe's inflation go if the Iran war continues? (11-3-2026)",
+        "url": "https://www.euronews.com/2026/03/11/how-high-could-europes-inflation-go-if-the-iran-war-continues"
       }
     ]
   },
@@ -70,16 +102,28 @@
     "cita": "interviene en terceros países, declara guerras sin respetar lo que diga Naciones Unidas, interviene a gobiernos y los cambia, apoya genocidios",
     "afirmacion": "Trump interviene en terceros países, emprende acciones bélicas sin respetar a la ONU y cambia gobiernos ajenos.",
     "veredicto": "mayormente_verdadero",
-    "explicacion": "La operación del 3 de enero de 2026 en Venezuela acabó con la captura de Maduro, que fue llevado a Nueva York, y Delcy Rodríguez asumió como presidenta encargada; el Consejo de Seguridad se reunió y Colombia, Rusia y China la acusaron de violar la Carta de la ONU, sin resolución que la autorizara. EE UU niega que fuera una guerra. «Declara guerras» no es literal (no hay declaración formal) y «apoya genocidios» es una calificación jurídica que no evaluamos aquí.",
+    "explicacion": "El 3-1-2026 EE UU capturó a Maduro en Caracas y lo trasladó a Nueva York; Trump dijo que EE UU «dirigirá» Venezuela hasta una transición. El Consejo de Seguridad se reunió el 5-1 sin que conste resolución: Colombia, Rusia y China acusaron a EE UU de violar la soberanía venezolana y el embajador estadounidense lo defendió como acción policial contra el narcoterrorismo. En el ataque a Irán del 28-2-2026 Trump pidió a los iraníes tomar el control de su gobierno. «Declara guerras» no es literal (no hubo declaración formal) y «apoya genocidios» es una calificación jurídica que no evaluamos.",
     "confianza": "media",
     "fuentes": [
       {
-        "titulo": "Reunión de urgencia en la ONU por la captura de Maduro (Publimetro, 5-1-2026)",
+        "titulo": "PBS NewsHour (AP): US strikes Venezuela and says its leader Maduro has been captured and flown out of the country",
+        "url": "https://www.pbs.org/newshour/world/us-strikes-venezuela-and-says-its-leader-maduro-has-been-captured-and-flown-out-of-the-country"
+      },
+      {
+        "titulo": "Publimetro: Reunión de urgencia en la ONU por la captura de Maduro; Colombia, China y Rusia acusan a EE UU de violar la soberanía (5-1-2026)",
         "url": "https://www.publimetro.co/noticias/2026/01/05/reunion-de-urgencia-en-la-onu-por-la-captura-de-maduro-colombia-china-y-rusia-acusan-a-ee-uu-de-violar-la-soberania/"
       },
       {
-        "titulo": "EE UU niega estar en guerra con Venezuela y defiende la captura de Maduro ante la ONU (Blu Radio)",
+        "titulo": "Blu Radio: EE UU niega estar en guerra con Venezuela y defiende la captura de Maduro ante la ONU (5-1-2026)",
         "url": "https://www.bluradio.com/mundo/ee-uu-niega-estar-en-guerra-con-venezuela-y-defiende-captura-de-nicolas-maduro-ante-la-onu-rg10"
+      },
+      {
+        "titulo": "Security Council Report: Venezuela, emergency meeting (What's in Blue, 5-1-2026)",
+        "url": "https://www.securitycouncilreport.org/whatsinblue/2026/01/venezuela-emergency-meeting.php"
+      },
+      {
+        "titulo": "AP (WCAX): What to know about U.S.-Israel attacks on Iran (28-2-2026)",
+        "url": "https://www.wcax.com/2026/02/28/what-know-about-us-israel-attacks-iran/?outputType=amp"
       }
     ]
   },
@@ -88,15 +132,27 @@
     "cita": "después de dos años de ver que los gobiernos de Europa se llenan la boca de derechos humanos y que veíamos en directo cómo masacraban a una población entera, y concretamente a niños y a niñas",
     "afirmacion": "Durante dos años se masacró a la población de Gaza, en concreto a niños y niñas, mientras los gobiernos europeos no actuaron.",
     "veredicto": "mayormente_verdadero",
-    "explicacion": "UNICEF cifra en más de 20.000 los niños muertos en Gaza entre octubre de 2023 y octubre de 2025 (alto el fuego), así que la parte factual es sólida. Que los gobiernos europeos «no actuaron» es una valoración y es generalizadora: España reconoció a Palestina en mayo de 2024 y aplicaba de facto un embargo de armas desde octubre de 2023, aunque la UE en su conjunto fue reacia a medidas.",
+    "explicacion": "La Comisión Internacional Independiente de Investigación de la ONU (informe del 23-6-2026) contabiliza unos 20.000 niños muertos y 44.000 heridos en Gaza desde octubre de 2023; la cifra procede de esa comisión y no de UNICEF. Sobre los gobiernos europeos hubo medidas parciales: el Gobierno español decía desde octubre de 2023 que no exportaba material militar a Israel, aprobó un embargo formal en el decreto-ley 10/2025 (23-9-2025, convalidado el 8-10-2025) y la Comisión Europea propuso el 17-9-2025 suspender las preferencias comerciales con Israel. «Masacraron» es una valoración y «no actuaron» generaliza, aunque la respuesta europea llegó casi dos años después del inicio de la guerra y exigía mayoría cualificada.",
     "confianza": "media",
     "fuentes": [
       {
-        "titulo": "Israel ha matado a 351 niños en Gaza desde que empezó la tregua (Excélsior, cita informe de UNICEF con más de 20.000 niños muertos entre oct-2023 y oct-2025)",
+        "titulo": "ONU (UN News): Informe de la Comisión Internacional Independiente de Investigación sobre los niños de Gaza (23-6-2026)",
+        "url": "https://news.un.org/en/story/2026/06/1167790"
+      },
+      {
+        "titulo": "Excélsior: Israel ha matado a 351 niños en Gaza desde que empezó la tregua (cita a la comisión de la ONU y a UNICEF)",
         "url": "https://www.excelsior.com.mx/internacional/israel-ha-matado-351-ninos-gaza-desde-que-empezo-tregua"
       },
       {
-        "titulo": "España impone un embargo total de armas a Israel (Al Jazeera, 8-9-2025)",
+        "titulo": "Congreso de los Diputados: BOCG, Proyecto de Ley de medidas urgentes contra el genocidio en Gaza (procedente del Real Decreto-ley 10/2025, 17-10-2025)",
+        "url": "https://www.congreso.es/public_oficiales/L15/CONG/BOCG/A/BOCG-15-A-70-1.PDF"
+      },
+      {
+        "titulo": "El Independiente: Bruselas propone retirar ventajas comerciales a Israel y sancionar a 2 ministros (17-9-2025)",
+        "url": "https://www.elindependiente.com/internacional/2025/09/17/bruselas-propone-retirar-ventajas-comerciales-a-israel-y-sancionar-a-2-ministros-es-necesario-un-alto-el-fuego/"
+      },
+      {
+        "titulo": "Al Jazeera: Spain imposes total arms embargo on Israel (8-9-2025)",
         "url": "https://www.aljazeera.com/news/2025/9/8/spain-imposes-total-arms-embargo-on-israel-to-stop-genocide-in"
       }
     ]
@@ -106,16 +162,20 @@
     "cita": "por primera vez fueron, creo recordar, 14 o 15 gobiernos hicieron un comunicado contra el gobierno de Israel y dijeron que esa flotilla estaba bajo su protección porque era una misión humanitaria eso no había pasado nunca",
     "afirmacion": "Con la flotilla, por primera vez 14 o 15 gobiernos emitieron un comunicado contra el Gobierno de Israel diciendo que la flotilla estaba bajo su protección por ser una misión humanitaria, algo sin precedentes.",
     "veredicto": "mayormente_verdadero",
-    "explicacion": "El 16-9-2025 el Ministerio de Exteriores español publicó un comunicado conjunto de España y otros 15 o 16 países (según la versión de la web), de los que solo unos pocos son europeos (España, Irlanda, Eslovenia; el resto, Turquía, Brasil, Colombia, México, Qatar, etc.). El texto expresa preocupación por la seguridad de la flotilla, pide no cometer actos ilegales o violentos y advierte de que habrá rendición de cuentas; no dice literalmente que esté «bajo su protección», aunque España e Italia enviaron buques militares de escolta. La cifra es aproximada y «no había pasado nunca» no se puede comprobar.",
+    "explicacion": "El comunicado del Ministerio de Exteriores del 16-9-2025 lo suscriben los ministros de 17 países (España, Turquía, Bangladés, Brasil, Colombia, Eslovenia, Indonesia, Irlanda, Libia, Malasia, Maldivas, México, Omán, Pakistán, Qatar, Sudáfrica y Tailandia), algo más que los 14 o 15 que Colau recuerda. Expresa preocupación por la seguridad de la flotilla, pide abstenerse de actos ilegales o violentos y advierte de que cualquier violación dará lugar a rendición de cuentas; no nombra a Israel ni dice que la flotilla esté «bajo su protección», aunque España e Italia acompañaron la flotilla con buques militares. Que «no había pasado nunca» no se puede comprobar.",
     "confianza": "media",
     "fuentes": [
       {
-        "titulo": "Comunicado de España y otros países sobre la flotilla a Gaza (Ministerio de Asuntos Exteriores, 16-9-2025)",
-        "url": "https://www.exteriores.gob.es/ca/Comunicacion/Comunicados/Paginas/2025_COMUNICADOS/Comunicado-de-Espana-y-otros-15-paises-sobre-la-flotilla-a-Gaza.aspx"
+        "titulo": "Ministerio de Asuntos Exteriores: Comunicado de España y otros países sobre la flotilla a Gaza (16-9-2025)",
+        "url": "https://www.exteriores.gob.es/es/Comunicacion/Comunicados/Paginas/2025_COMUNICADOS/Comunicado-de-Espana-y-otros-15-paises-sobre-la-flotilla-a-Gaza.aspx"
       },
       {
-        "titulo": "Espanya i 15 països amenacen Israel amb la «rendició de comptes» (Nació Digital)",
+        "titulo": "Nació Digital: Espanya i 15 països amenacen Israel amb la «rendició de comptes» (16-9-2025)",
         "url": "https://naciodigital.cat/internacional/espanya-i-15-paisos-amenacen-israel-amb-la-rendicio-de-comptes-si-dete-o-ataca-els-integrants-de-la-flotilla.html"
+      },
+      {
+        "titulo": "Euronews: La flotilla está en aguas internacionales sobrevolada por drones (28-9-2025)",
+        "url": "https://es.euronews.com/2025/09/28/la-flotilla-esta-en-aguas-internacionales-sobrevolada-por-drones"
       }
     ]
   },
@@ -124,19 +184,27 @@
     "cita": "las manifestaciones masivas en España contra la vuelta ciclista, la huelga general",
     "afirmacion": "Hubo manifestaciones masivas en España contra la Vuelta ciclista y una huelga general por Palestina.",
     "veredicto": "mayormente_verdadero",
-    "explicacion": "El 14-9-2025 las protestas propalestinas en Madrid obligaron a cancelar la última etapa de la Vuelta. El 15-10-2025 hubo la jornada de huelga por Palestina: CGT convocó 24 horas y CCOO y UGT paros parciales de dos horas por turno, con decenas de miles de manifestantes; fue una huelga general solo en sentido amplio y con seguimiento desigual según las fuentes.",
+    "explicacion": "El 14-9-2025 las protestas propalestinas en Madrid interrumpieron la última etapa de la Vuelta, que terminó unos 50 km antes de meta y sin podio; la Delegación del Gobierno cifró a los manifestantes en más de 100.000 (cifra de las autoridades, no verificada de forma independiente, según AP). El 15-10-2025 hubo la jornada de huelga por Palestina: CCOO y UGT convocaron paros parciales de dos horas por turno y CGT y otros sindicatos paros de 24 horas, con manifestaciones en muchas ciudades (110.000 personas en Euskadi según la cobertura de El Salto) y un seguimiento desigual. Es una huelga general en sentido amplio y no una paralización total del país.",
     "confianza": "alta",
     "fuentes": [
       {
-        "titulo": "Cancelan la última etapa de la Vuelta a España 2025 en medio de manifestaciones propalestinas en Madrid (La Tercera)",
+        "titulo": "PBS NewsHour (AP): Over 100,000 pro-Palestinian protesters forced early end to Spanish Vuelta, authorities say (14-9-2025)",
+        "url": "https://www.pbs.org/newshour/world/over-100000-pro-palestinian-protesters-forced-early-end-to-spanish-vuelta-authorities-say"
+      },
+      {
+        "titulo": "La Tercera: Cancelan la última etapa de la Vuelta a España 2025 en medio de manifestaciones propalestinas en Madrid",
         "url": "https://www.latercera.com/mundo/noticia/cancelan-la-ultima-etapa-de-la-vuelta-a-espana-2025-en-medio-de-manifestaciones-pro-palestina-en-madrid/"
       },
       {
-        "titulo": "Huelga general convocada para el 15 de octubre de 2025 (Cuatrecasas)",
+        "titulo": "RTVC: Trabajadores y estudiantes secundan paros y salen a la calle en toda España por Gaza (15-10-2025)",
+        "url": "https://rtvc.es/canarias-huelga-general-palestina-15-octubre-2025/"
+      },
+      {
+        "titulo": "Cuatrecasas: Huelga general convocada para el 15 de octubre de 2025",
         "url": "https://www.cuatrecasas.com/es/latam/laboral/art/huelga-general-conflicto-gaza"
       },
       {
-        "titulo": "Decenas de miles de personas se manifiestan por todo el Estado en la jornada de huelga por Palestina (El Salto)",
+        "titulo": "El Salto: Decenas de miles de personas se manifiestan por todo el Estado en la jornada de huelga por Palestina (15-10-2025)",
         "url": "https://www.elsaltodiario.com/derechos-humanos/directo-or-cientos-movilizaciones-previstas-una-jornada-huelga-luchas-palestina"
       }
     ]
@@ -146,19 +214,27 @@
     "cita": "los puertos italianos impulsaron toda la huelga general, a partir decir, si se toca la flotilla, nosotros paralizamos todos los puertos",
     "afirmacion": "Los puertos italianos impulsaron la huelga general en Italia al advertir de que paralizarían todos los puertos si se tocaba la flotilla.",
     "veredicto": "mayormente_verdadero",
-    "explicacion": "Los estibadores genoveses del CALP amenazaron en septiembre de 2025 con bloquear los puertos («bloqueamos toda Europa») si Israel atacaba la flotilla, y el sindicato USB, recogiendo ese llamamiento, anunció huelga inmediata en caso de interceptación. Tras la interceptación del 1-2 de octubre, CGIL y USB convocaron la huelga general del 3-10-2025 «en defensa de la flotilla», con cierres de puertos como Génova o Livorno. «Toda la huelga» exagera: la convocatoria también la impulsó la CGIL, el mayor sindicato italiano.",
+    "explicacion": "El 20-9-2025 el sindicato USB anunció la huelga general del 22-9 «en defensa de la flotilla» tras una asamblea en Génova promovida por los estibadores del CALP junto a la flotilla, y a finales de agosto un estibador de USB había advertido de que, si se perdía el contacto con los barcos, cerrarían «toda Europa». Tras la interceptación del 1-2 de octubre, CGIL y USB convocaron la huelga general de 24 horas del 3-10, con bloqueos de puertos como Génova. «Toda la huelga» exagera: la del 3-10 la convocó también la CGIL, el mayor sindicato italiano, y las autoridades la declararon ilegítima por falta de preaviso.",
     "confianza": "media",
     "fuentes": [
       {
-        "titulo": "Italian dockworkers threaten to block all shipments to Israel if flotilla for Gaza is stopped (Wanted in Rome)",
+        "titulo": "USB (Unione Sindacale di Base): USB calls for general strike on 22 September: defend the Flotilla, stop the genocide in Gaza, end the war economy (20-9-2025)",
+        "url": "https://www.usb.it/leggi-notizia/usb-calls-for-general-strike-on-22-september-defend-the-flotilla-stop-the-genocide-in-gaza-end-the-war-economy-2042.pdf"
+      },
+      {
+        "titulo": "Euronews: Las huelgas generales y las protestas perturbarán los desplazamientos en Italia (3-10-2025)",
+        "url": "https://es.euronews.com/2025/10/03/las-huelgas-generales-y-las-protestas-perturbaran-los-desplazamientos-en-italia"
+      },
+      {
+        "titulo": "Wanted in Rome: Italian dockworkers threaten to block all shipments to Israel if flotilla for Gaza is stopped (3-9-2025)",
         "url": "https://www.wantedinrome.com/news/italy-dockworkers-threaten-to-block-shipments-to-israel-if-flotilla-for-gaza-stopped.html"
       },
       {
-        "titulo": "Italian dockworkers threaten to shut down all of Europe if Gaza aid flotilla is blocked (Novara Media, 2-9-2025)",
+        "titulo": "Novara Media: Italian dockworkers threaten to shut down all of Europe if Gaza aid flotilla is blocked (2-9-2025)",
         "url": "https://novaramedia.com/2025/09/02/italian-dockworkers-threaten-to-shut-down-all-of-europe-if-gaza-aid-flotilla-is-blocked/"
       },
       {
-        "titulo": "The Making of Italy's Pro-Palestine General Strike (Jacobin, octubre 2025)",
+        "titulo": "Jacobin: The Making of Italy's Pro-Palestine General Strike (octubre 2025)",
         "url": "https://jacobin.com/2025/10/italy-general-strike-palestine-labor"
       }
     ]
@@ -168,19 +244,31 @@
     "cita": "consiguió que gobiernos europeos, que por ejemplo no cuestionaban que Israel participara en Eurovisión o que no consideraban suspender algunos acuerdos comerciales o revisar tráfico de armas, cambiaran su posición por la presión social",
     "afirmacion": "La presión social logró que gobiernos europeos que no cuestionaban la presencia de Israel en Eurovisión, ni suspender acuerdos comerciales o revisar el tráfico de armas, cambiaran su posición.",
     "veredicto": "enganoso",
-    "explicacion": "Hubo cambios reales: España, Irlanda, Países Bajos y Eslovenia se retiraron de Eurovisión 2026 en diciembre de 2025 y España aprobó un embargo de armas a Israel (anunciado el 8-9-2025, votado en el Congreso en octubre). Pero el consejo de RTVE ya había acordado en septiembre de 2025 retirarse si Israel participaba, y España aplicaba de facto el embargo desde octubre de 2023, de modo que no eran gobiernos que «no cuestionaban» esas cosas, y la atribución causal a la presión social o a la flotilla no puede demostrarse.",
+    "explicacion": "Hubo cambios: el 4-12-2025 RTVE anunció que España se retiraba de Eurovisión 2026, igual que Irlanda, Países Bajos y Eslovenia, y el Congreso convalidó el 8-10-2025 el decreto-ley 10/2025 que formaliza el embargo de armas a Israel; la Comisión Europea propuso el 17-9-2025 suspender las preferencias comerciales. Pero las retiradas de Eurovisión las decidieron las cadenas públicas, no los gobiernos, el consejo de RTVE ya había acordado en septiembre retirarse si Israel participaba y España decía desde 2023 que no exportaba material militar a Israel, de modo que no eran gobiernos que no cuestionaran esas cosas. La atribución a la presión social o a la flotilla no puede demostrarse.",
     "confianza": "media",
     "fuentes": [
       {
-        "titulo": "Varios países anuncian un boicot al festival europeo de la canción tras permitirse la participación de Israel (Semanario Universidad / EFE)",
+        "titulo": "Euronews: España suspende su participación en el festival de Eurovisión (4-12-2025)",
+        "url": "https://es.euronews.com/2025/12/04/espana-suspende-su-participacion-en-el-festival-de-eurovision"
+      },
+      {
+        "titulo": "Semanario Universidad: Varios países anuncian un boicot al festival europeo de la canción tras permitirse la participación de Israel (5-12-2025)",
         "url": "https://semanariouniversidad.com/mundo/varios-paises-anuncian-un-boicot-de-festival-europeo-de-la-cancion-tras-permitirse-la-participacion-de-israel/"
       },
       {
-        "titulo": "España impone un embargo total de armas a Israel (Al Jazeera, 8-9-2025)",
+        "titulo": "Congreso de los Diputados: BOCG, Proyecto de Ley de medidas urgentes contra el genocidio en Gaza (procedente del Real Decreto-ley 10/2025, 17-10-2025)",
+        "url": "https://www.congreso.es/public_oficiales/L15/CONG/BOCG/A/BOCG-15-A-70-1.PDF"
+      },
+      {
+        "titulo": "El Independiente: Bruselas propone retirar ventajas comerciales a Israel y sancionar a 2 ministros (17-9-2025)",
+        "url": "https://www.elindependiente.com/internacional/2025/09/17/bruselas-propone-retirar-ventajas-comerciales-a-israel-y-sancionar-a-2-ministros-es-necesario-un-alto-el-fuego/"
+      },
+      {
+        "titulo": "Al Jazeera: Spain imposes total arms embargo on Israel (8-9-2025)",
         "url": "https://www.aljazeera.com/news/2025/9/8/spain-imposes-total-arms-embargo-on-israel-to-stop-genocide-in"
       },
       {
-        "titulo": "España aprueba en pleno el embargo de armas a Israel (France 24 / Acento)",
+        "titulo": "France 24 (vía Acento): España aprueba en pleno el embargo de armas a Israel (9-10-2025)",
         "url": "https://acento.com.do/france24/espana-aprueba-en-pleno-el-embargo-de-armas-a-israel-9561492.html"
       }
     ]
@@ -190,24 +278,28 @@
     "cita": "nos dispararon con drones, nos secuestró el ejército, nos pusieron en la carne",
     "afirmacion": "A los miembros de la flotilla les atacaron con drones, el ejército israelí los detuvo y los metió en la cárcel.",
     "veredicto": "mayormente_verdadero",
-    "explicacion": "Colau iba en el Sirius, interceptado por la Armada israelí el 1-2 de octubre de 2025; fue detenida, llevada a Ashdod y a la prisión de Ketziot, y deportada el 5 de octubre. La flotilla denunció drones, unas 13 explosiones y objetos lanzados sobre diez barcos la noche previa; Israel no lo reivindicó, y no hemos encontrado verificación independiente de que se «disparara» contra ellos. «Secuestrar» es una calificación: la ONU y Amnistía hablaron de violación del derecho marítimo. La transcripción dice «carne» donde evidentemente es «cárcel».",
+    "explicacion": "Colau fue detenida tras la interceptación de la flotilla por Israel la noche del 1-2 de octubre de 2025, pasó por una cárcel de máxima seguridad del sur de Israel (Ketziot) y llegó deportada a Barcelona el 5-10-2025. Sobre los drones, la flotilla denunció en la noche del 23-24 de septiembre «al menos 13 explosiones» y objetos lanzados sobre al menos 10 barcos, y el ministro de Defensa italiano condenó un ataque de drones; Israel no respondió y nadie ha acreditado públicamente quién los lanzó. «Dispararon» exagera lo documentado (explosiones y objetos, sin heridos) y «secuestró» es una calificación; la transcripción dice «carne» donde se entiende «cárcel».",
     "confianza": "media",
     "fuentes": [
       {
-        "titulo": "¿Qué pasó con la flotilla Global Sumud detenida por Israel? (CNN en Español, 2-10-2025)",
-        "url": "https://cnnespanol.cnn.com/2025/10/02/mundo/que-paso-flotilla-global-sumud-gaza-israel-trax"
-      },
-      {
-        "titulo": "«Tortura psicológica», vejaciones y privación de agua y comida: el relato de la detención de Colau y Coronas en Israel (Ara)",
+        "titulo": "Ara: Colau y Coronas aterrizan en Barcelona deportados de Israel y relatan «tortura psicológica» (6-10-2025)",
         "url": "https://es.ara.cat/politica/colau-coronas-aterrizan-barcelona-deportados-israel_1_5519239.html"
       },
       {
-        "titulo": "Flotilla detainees: Spanish citizens deported on Sunday 5 October 2025 (Catalan News)",
+        "titulo": "Catalan News: All Catalan activists from Gaza aid flotilla return home",
         "url": "https://www.catalannews.com/gaza-aid-flotilla/item/all-catalan-activists-from-gaza-aid-flotilla-return-home"
       },
       {
-        "titulo": "Bulos, desinformaciones y contexto sobre la Flotilla Global Sumud (Maldita.es)",
-        "url": "https://maldita.es/malditobulo/20251007/desinformaciones-flotilla-global-sumud-gaza/"
+        "titulo": "Catalan News: Former Barcelona mayor denounces 'degrading treatment' by Israel after flotilla interception (6-10-2025)",
+        "url": "https://www.catalannews.com/society-science/item/former-barcelona-denounces-degrading-treatment-israel-flotilla-6-october-2025"
+      },
+      {
+        "titulo": "PBS NewsHour (AP): Activist flotilla seeking to break the Israeli blockade of Gaza says drones attacked its boats (24-9-2025)",
+        "url": "https://www.pbs.org/newshour/amp/world/activist-flotilla-seeking-to-break-the-israeli-blockade-of-gaza-says-drones-attacked-its-boats"
+      },
+      {
+        "titulo": "Euronews: Greta Thunberg among 171 flotilla activists deported from Israel after failed bid to reach Gaza (6-10-2025)",
+        "url": "https://www.euronews.com/2025/10/06/greta-thunberg-among-171-flotilla-activists-deported-from-israel-after-failed-bid-to-reach"
       }
     ]
   },
@@ -216,16 +308,28 @@
     "cita": "Yo creo que el genocidio ha seguido, desgraciadamente, pero creo que bajó la intensidad y Europa, sobre todo, empezó a modificar su posición",
     "afirmacion": "Tras la flotilla la violencia en Gaza continuó pero con menor intensidad, y Europa empezó a modificar su posición.",
     "veredicto": "mayormente_verdadero",
-    "explicacion": "Desde el alto el fuego de octubre de 2025 la violencia bajó mucho de intensidad pero no cesó: UNICEF documentó al menos 300 niños muertos en Gaza en los 300 días posteriores (agosto de 2026), uno al día de media. Cualquier calificación jurídica como «genocidio» no se evalúa aquí, y el alto el fuego (10-10-2025) llegó pocos días después de la flotilla, pero no hay prueba de que ésta lo causara.",
+    "explicacion": "Desde el alto el fuego del 10-10-2025 la violencia bajó de intensidad pero no cesó: el Ministerio de Sanidad de Gaza contaba 1.005 muertos desde entonces a mediados de junio de 2026 (AP), frente a más de 73.000 en toda la guerra, y UNICEF documentó 300 niños muertos en los 300 días siguientes (6-8-2026), uno al día, frente a unos 20.000 en los dos años anteriores. El alto el fuego llegó pocos días después de la flotilla, pero no hay prueba de que ésta lo causara. Que Europa empezó a modificar su posición tiene respaldo: España aprobó el decreto-ley de embargo (23-9-2025) y la Comisión propuso el 17-9-2025 suspender preferencias comerciales con Israel. Si lo ocurrido es «genocidio» es una calificación jurídica que no evaluamos.",
     "confianza": "media",
     "fuentes": [
       {
-        "titulo": "Al menos 300 niños y niñas han muerto en Gaza en los últimos 300 días (UNICEF)",
+        "titulo": "UNICEF: Al menos 300 niños y niñas han muerto en Gaza en los últimos 300 días (6-8-2026)",
         "url": "https://www.unicef.org/es/comunicados-prensa/al-menos-300-ninos-y-ninas-han-muerto-en-gaza-en-los-ultimos-300-dias"
       },
       {
-        "titulo": "UNICEF eleva a 300 el número de niños muertos en Gaza desde la entrada en vigor del alto el fuego (Infobae, 6-8-2026)",
+        "titulo": "Infobae (agencias): UNICEF eleva a 300 el número de niños muertos en Gaza desde la entrada en vigor del alto el fuego (6-8-2026)",
         "url": "https://www.infobae.com/america/agencias/2026/08/06/unicef-eleva-a-300-el-numero-de-ninos-muertos-en-gaza-desde-la-entrada-en-vigor-del-alto-el-fuego/"
+      },
+      {
+        "titulo": "AP (OPB): Over 1,000 people killed during Gaza ceasefire, Palestinian authorities say (18-6-2026)",
+        "url": "https://www.opb.org/article/2026/06/18/over-1000-people-killed-during-gaza-ceasefire-palestinian-authorities-say/"
+      },
+      {
+        "titulo": "OCHA: Humanitarian Situation Update #357, Gaza Strip (12-2-2026)",
+        "url": "https://www.ochaopt.org/content/humanitarian-situation-update-357-gaza-strip"
+      },
+      {
+        "titulo": "El Independiente: Bruselas propone retirar ventajas comerciales a Israel y sancionar a 2 ministros (17-9-2025)",
+        "url": "https://www.elindependiente.com/internacional/2025/09/17/bruselas-propone-retirar-ventajas-comerciales-a-israel-y-sancionar-a-2-ministros-es-necesario-un-alto-el-fuego/"
       }
     ]
   },
@@ -234,24 +338,24 @@
     "cita": "El PSOE al principio era pro-Israel. Y ahora mismo es de los gobiernos que se ha posicionado más a favor de Palestina y que ha cambiado más sus relaciones con el gobierno de Israel",
     "afirmacion": "El PSOE (Gobierno) empezó siendo favorable a Israel y ahora es de los gobiernos europeos que más se ha posicionado a favor de Palestina y más ha cambiado sus relaciones con Israel.",
     "veredicto": "mayormente_verdadero",
-    "explicacion": "La evolución es real: España reconoció a Palestina en mayo de 2024, anunció el 8-9-2025 un paquete de medidas contra Israel con embargo de armas y el Congreso lo votó en octubre de 2025. «Pro-Israel al principio» simplifica: en octubre y noviembre de 2023 Sánchez condenó a Hamás y reafirmó el derecho de Israel a defenderse dentro del derecho internacional, pero ya pedía alto el fuego humanitario y criticaba la muerte de civiles. Se trata del Gobierno más que del PSOE como partido.",
+    "explicacion": "España reconoció a Palestina en mayo de 2024 y el 8-9-2025 Sánchez anunció un embargo de armas inmediato, vetos a puertos y espacio aéreo y la prohibición de importar productos de los asentamientos; el Gobierno lo recogió en el decreto-ley 10/2025 (23-9-2025) y el Congreso lo convalidó el 8-10-2025. «Pro-Israel al principio» simplifica: el 22-10-2023 Sánchez condenó a Hamás y defendió el derecho de Israel a defenderse dentro del derecho internacional, pero ya pedía un alto el fuego humanitario y ayuda para Gaza, y el Gobierno decía entonces que no exportaba material militar a Israel. Se trata de la postura del Gobierno más que del PSOE como partido.",
     "confianza": "media",
     "fuentes": [
       {
-        "titulo": "Sánchez endurece las medidas contra Netanyahu y se agrava la crisis diplomática (Ara)",
-        "url": "https://es.ara.cat/politica/sanchez-anunciara-hoy-nuevas-medidas-genocidio-gaza_1_5490067.html"
-      },
-      {
-        "titulo": "Spain PM Sanchez imposes arms embargo on Israel (Al Jazeera, 8-9-2025)",
+        "titulo": "Al Jazeera: Spain imposes total arms embargo on Israel (8-9-2025)",
         "url": "https://www.aljazeera.com/news/2025/9/8/spain-imposes-total-arms-embargo-on-israel-to-stop-genocide-in"
       },
       {
-        "titulo": "Viaje del presidente del Gobierno a Israel, 23-11-2023 (Moncloa)",
-        "url": "https://www.lamoncloa.gob.es/presidente/actividades/Paginas/2023/231123-sanchez-viaje-israel.aspx"
+        "titulo": "Ara: Sánchez endurece las medidas contra Netanyahu y se agrava la crisis diplomática (8-9-2025)",
+        "url": "https://es.ara.cat/politica/sanchez-anunciara-hoy-nuevas-medidas-genocidio-gaza_1_5490067.html"
       },
       {
-        "titulo": "Pedro Sánchez conversa con Netanyahu (El Independiente, 22-10-2023)",
+        "titulo": "El Independiente: Pedro Sánchez conversa con Netanyahu: «hay que evitar que el conflicto se extienda al resto de la región» (22-10-2023)",
         "url": "https://www.elindependiente.com/internacional/2023/10/22/pedro-sanchez-conversa-con-netanyahu-hay-que-evitar-que-el-conflicto-se-extienda-al-resto-de-la-region/amp/"
+      },
+      {
+        "titulo": "Congreso de los Diputados: BOCG, Proyecto de Ley de medidas urgentes contra el genocidio en Gaza (procedente del Real Decreto-ley 10/2025, 17-10-2025)",
+        "url": "https://www.congreso.es/public_oficiales/L15/CONG/BOCG/A/BOCG-15-A-70-1.PDF"
       }
     ]
   },
@@ -260,20 +364,24 @@
     "cita": "ha dicho que bajará las pensiones, que bajará el salario mínimo",
     "afirmacion": "Feijóo ha empezado la campaña diciendo que bajará las pensiones y el salario mínimo.",
     "veredicto": "falso",
-    "explicacion": "No hemos encontrado ninguna declaración de Feijóo anunciando una bajada de pensiones ni del SMI. El 23-10-2026, en la SER, dijo que el Gobierno «ha hecho un buen negocio» con la subida del SMI y que el PP «está en contra de subir el salario medio»; minutos después lo corrigió en X (su objetivo es subir tanto el mínimo como el medio, con la subida exenta de IRPF) y Génova habló de «lapsus». En pensiones, tras unas palabras de la portavoz Ester Muñoz sobre que el sistema iba a «petar», Feijóo prometió mantener la revalorización con el IPC. Sí evitó comprometerse a mantener el ritmo de subidas del SMI, y en 2025 había rechazado subirlo.",
+    "explicacion": "No hemos encontrado ninguna declaración de Feijóo en la que anuncie bajar las pensiones ni el salario mínimo. El 23-10-2026, en la SER, dijo que el Gobierno «ha hecho un buen negocio» con la subida del SMI y que el PP «está en contra de subir el salario medio»; poco después lo corrigió en X como lapsus (su objetivo es subir tanto el mínimo como el medio, con el SMI exento de IRPF). En pensiones, tras decir Ester Muñoz que el sistema «colapsará» (14-10-2026), Feijóo afirmó que con él «las pensiones se revalorizarán con el IPC».",
     "confianza": "alta",
     "fuentes": [
       {
-        "titulo": "Feijóo precisa que su objetivo es subir tanto el salario mínimo como el medio (Infobae / EFE, 23-10-2026)",
+        "titulo": "Infobae (EFE): Feijóo precisa que su objetivo es subir tanto el salario mínimo como el medio (23-10-2026)",
         "url": "https://www.infobae.com/espana/agencias/2026/10/23/feijoo-precisa-que-su-objetivo-es-subir-tanto-el-salario-minimo-como-el-medio/"
       },
       {
-        "titulo": "Temor empresarial a los errores no forzados del PP tras el tropiezo de las pensiones (Vozpópuli, 20-10-2026)",
+        "titulo": "Vozpópuli: Temor empresarial a los errores no forzados del PP tras el tropiezo de las pensiones (20-10-2026)",
         "url": "https://www.vozpopuli.com/economia/temor-empresarial-a-los-errores-no-forzados-del-pp-tras-el-tropiezo-de-las-pensiones.html"
       },
       {
-        "titulo": "Feijóo is wrong: the Spanish government has not made a good deal with the minimum wage increase (Ara)",
+        "titulo": "Ara: Feijóo is wrong: the Spanish government has not made a good deal with the minimum wage increase (23-10-2026)",
         "url": "https://en.ara.cat/politics/feijoo-is-wrong-the-spanish-government-has-not-made-good-deal-with-the-minimum-wage-increase_1_5888273.html"
+      },
+      {
+        "titulo": "Ara: El PP se vuelve a liar con las pensiones: Esther Muñoz dice que el sistema «colapsará» (14-10-2026)",
+        "url": "https://es.ara.cat/politica/pp-vuelve-liar-pensiones-esther-munoz-dice-sistema-colapsara_1_5879033.html"
       }
     ]
   },
@@ -282,20 +390,24 @@
     "cita": "Cuando sale Figaredo, un diputado de Vox en el Congreso, y dice hay que salir a cazar inmigrantes",
     "afirmacion": "José María Figaredo, diputado de Vox, dijo que hay que salir a cazar inmigrantes.",
     "veredicto": "mayormente_verdadero",
-    "explicacion": "Figaredo, secretario general del grupo de Vox en el Congreso, pidió «cazar» y «pescar» a los migrantes que entraron en Ceuta el 30-31 de julio de 2026 («hay que cazarlos a todos, uno por uno»), en entrevistas televisivas y no desde la tribuna del Congreso, y se ha reafirmado el 18 de agosto. El Ministerio de Igualdad, Compromís y el Foro de Abogacía y Democracia lo han denunciado ante la Fiscalía; no consta resolución judicial. Se refería a los llegados a Ceuta, no a inmigrantes en general.",
+    "explicacion": "José María Figaredo, secretario general del grupo de Vox en el Congreso, pidió «cazar» y «pescar» a los migrantes que entraron en Ceuta el 30-31 de julio de 2026 («hay que cazarlos a todos, uno por uno») en entrevistas televisivas, no en la tribuna del Congreso, y el 18-8-2026 dijo que no se arrepiente ni se retracta. Compromís y el Foro de Abogacía y Democracia lo denunciaron ante la Fiscalía y el Ministerio de Igualdad pidió a la Fiscalía que estudie si es un delito de odio del artículo 510; no consta resolución. Se refería a los llegados a Ceuta y no a los inmigrantes en general.",
     "confianza": "alta",
     "fuentes": [
       {
-        "titulo": "Nueva denuncia contra Figaredo (Vox) por llamar a «cazar» a los migrantes que entraron ilegalmente en Ceuta (Diario de León, 10-8-2026)",
+        "titulo": "Diario de León: Nueva denuncia contra Figaredo (Vox) por llamar a «cazar» a los migrantes que entraron ilegalmente en Ceuta (10-8-2026)",
         "url": "https://www.diariodeleon.es/nacional/260810/2093922/nueva-denuncia-figaredo-vox-llamar-cazar-migrantes-entraron-ilegalmente-ceuta.html"
       },
       {
-        "titulo": "El Ministerio de Igualdad insta a la Fiscalía a actuar por las declaraciones de Figaredo (Ministerio de Igualdad, 11-8-2026)",
+        "titulo": "Ministerio de Igualdad: El Ministerio de Igualdad insta a la Fiscalía y a la Autoridad Independiente a actuar por las declaraciones de José María Figaredo sobre los migrantes en Ceuta (11-8-2026)",
         "url": "https://www.igualdad.gob.es/comunicacion/sala-de-prensa/el-ministerio-de-igualdad-insta-a-la-fiscalia-y-a-la-autoridad-independiente-a-actuar-por-las-declaraciones-de-jose-maria-figaredo-sobre-los-migrantes-en-ceuta/"
       },
       {
-        "titulo": "Figaredo insiste en su propuesta de «cazar» inmigrantes en Ceuta: «No me arrepiento» (El Plural)",
+        "titulo": "El Plural: Figaredo insiste en su propuesta de «cazar» inmigrantes en Ceuta: «No me arrepiento ni me retracto de nada» (18-8-2026)",
         "url": "https://www.elplural.com/politica/espana/figaredo-insiste-propuesta-cazar-inmigrantes-ceuta-no-me-arrepiento-ni-me-retracto-nada_398278102"
+      },
+      {
+        "titulo": "Galicia Press (Europa Press): Figaredo (Vox) se reafirma en «cazar» a inmigrantes ilegales en Ceuta (18-8-2026)",
+        "url": "https://www.galiciapress.es/articulo/politica/2026-08-18/5987531-figaredo-vox-reafirma-cazar-inmigrantes-ilegales-ceuta-centren-foco-interes-espanoles"
       }
     ]
   },
@@ -304,34 +416,50 @@
     "cita": "luego hay gente que va y pega inmigrantes por la calle, se ve que hay una relación directa entre hacer un discurso de odio y que luego hayan acciones violentas en la calle",
     "afirmacion": "Tras las palabras de Figaredo hubo agresiones a inmigrantes en la calle y existe una relación directa entre el discurso de odio y esa violencia.",
     "veredicto": "no_verificable",
-    "explicacion": "No hemos encontrado fuentes que documenten agresiones concretas a inmigrantes vinculadas a las declaraciones de Figaredo sobre Ceuta, ni que establezcan una relación causal directa. La existencia de una relación entre discurso de odio y violencia es objeto de debate académico y no se puede acreditar para este caso. (Nota: la búsqueda se interrumpió por límite de consultas, por lo que puede haber información no encontrada.)",
-    "confianza": "baja",
+    "explicacion": "Hay agresiones documentadas contra migrantes en Ceuta en agosto de 2026: el 26-27 de agosto manifestantes entraron en campamentos de playa, tiraron enseres al mar y quemaron refugios (Le360, Africanews), y ONG denuncian ataques de grupos encapuchados en moto o coche (El Salto). Ninguna fuente oficial o judicial vincula esos hechos con las palabras de Figaredo: las denuncias de Compromís y del Foro de Abogacía y Democracia siguen sin resolución conocida y las crónicas de Africanews y Le360 no mencionan a Vox. Que exista una «relación directa» entre el discurso de odio y esas agresiones es una inferencia que no se puede acreditar para este caso.",
+    "confianza": "media",
     "fuentes": [
       {
-        "titulo": "Figaredo (Vox) se reafirma en «cazar» a inmigrantes ilegales en Ceuta (Galicia Press, 18-8-2026)",
-        "url": "https://www.galiciapress.es/articulo/politica/2026-08-18/5987531-figaredo-vox-reafirma-cazar-inmigrantes-ilegales-ceuta-centren-foco-interes-espanoles"
+        "titulo": "Africanews: Police in Ceuta clash with anti-migrant protesters as tensions rise (28-8-2026)",
+        "url": "https://www.africanews.com/amp/2026/08/28/police-in-ceuta-clash-with-anti-migrant-protesters-as-tensions-rise/"
+      },
+      {
+        "titulo": "Le360: Ceuta protests turn violent as migrant camps attacked, aid convoy blocked (28-8-2026)",
+        "url": "https://en.le360.ma/society/ceuta-protests-turn-violent-as-migrant-camps-attacked-aid-convoy-blocked_AKN3LR736FFC3DHFG6BFF6XGKQ/"
+      },
+      {
+        "titulo": "El Salto: «La violencia está en todas partes»: denuncian agresiones continuas contra las personas migrantes en Ceuta (3-9-2026)",
+        "url": "https://www.elsaltodiario.com/ceuta/violencia-todas-partes-denuncian-agresiones-continuas-personas-migrantes-ceuta"
+      },
+      {
+        "titulo": "Diario de León: Nueva denuncia contra Figaredo (Vox) por llamar a «cazar» a los migrantes que entraron ilegalmente en Ceuta (10-8-2026)",
+        "url": "https://www.diariodeleon.es/nacional/260810/2093922/nueva-denuncia-figaredo-vox-llamar-cazar-migrantes-entraron-ilegalmente-ceuta.html"
+      },
+      {
+        "titulo": "Ministerio de Igualdad: El Ministerio de Igualdad insta a la Fiscalía y a la Autoridad Independiente a actuar por las declaraciones de José María Figaredo sobre los migrantes en Ceuta (11-8-2026)",
+        "url": "https://www.igualdad.gob.es/comunicacion/sala-de-prensa/el-ministerio-de-igualdad-insta-a-la-fiscalia-y-a-la-autoridad-independiente-a-actuar-por-las-declaraciones-de-jose-maria-figaredo-sobre-los-migrantes-en-ceuta/"
       }
     ]
   },
   {
     "minuto": "2:02:58",
     "cita": "dice que el franquismo fue bueno. Lo dice literalmente",
-    "afirmacion": "Vox dice literalmente que el franquismo fue bueno.",
+    "afirmacion": "Vox dice que el franquismo fue bueno.",
     "veredicto": "enganoso",
-    "explicacion": "No hemos hallado ninguna declaración oficial de Vox que diga que el franquismo «fue bueno»: el partido rehúsa condenarlo (Figaredo eludió condenar la dictadura en noviembre de 2025; Vox rechaza una «visión única y divisiva» del pasado) y Abascal dijo en 2019 que Vox «no tiene una posición sobre Franco». Sí hay diputados que lo han blanqueado, como Manuel Mariscal, quien en 2024 dijo que la etapa posterior a la Guerra Civil «no fue oscura» (retirado del diario de sesiones). Por tanto, hay banalización por parte de algunos cargos, pero no una afirmación literal del partido.",
+    "explicacion": "No hemos hallado ninguna declaración oficial de Vox que diga que el franquismo «fue bueno». En la entrevista, «lo dice literalmente» lo plantea Jordi Wild como pregunta y Colau responde que «muchos exponentes de Vox han reivindicado el franquismo» y han banalizado la dictadura. Hay precedentes cercanos: Figaredo, secretario general del grupo de Vox en el Congreso, no condenó la dictadura el 20-11-2025 y la llamó «una etapa de la historia», y el diputado Manuel Mariscal dijo que la posguerra «no fue oscura» (palabras retiradas del diario de sesiones). El CIS de octubre de 2025 recoge que el 61,7 % de los votantes de Vox valora positivamente la dictadura, un dato del electorado y no del partido.",
     "confianza": "media",
     "fuentes": [
       {
-        "titulo": "Vox amplifica su apología del franquismo mientras un PP incómodo busca apartarlo del debate público (Público)",
+        "titulo": "Público: Vox amplifica su apología del franquismo mientras un PP incómodo busca apartarlo del debate público",
         "url": "https://www.publico.es/politica/vox-amplifica-apologia-franquismo-pp-incomodo-busca-apartarlo-debate-publico.html"
       },
       {
-        "titulo": "Figaredo (Vox) no condena el franquismo (Europa Press / Diario Siglo XXI, 20-11-2025)",
+        "titulo": "Europa Press (vía Diario Siglo XXI): Figaredo (Vox) no condena el franquismo y dice que España padece ahora el peor Gobierno de la historia (20-11-2025)",
         "url": "https://www.diariosigloxxi.com/texto-ep/mostrar/20251120135720/figaredo-vox-no-condena-franquismo-dice-espana-padece-ahora-peor-gobierno-historia"
       },
       {
-        "titulo": "El discurso y la posición de Vox sobre el franquismo (Maldita.es)",
-        "url": "https://maldita.es/malditahemeroteca/20220714/el-discurso-y-la-posicion-de-vox-sobre-el-franquismo/"
+        "titulo": "Ara: Sobre los que piensan que el franquismo fue «bueno» o «muy bueno» (octubre de 2025, datos del CIS)",
+        "url": "https://es.ara.cat/politica/piensan-franquismo-bueno-bueno_129_5533086.html"
       }
     ]
   },
@@ -340,16 +468,20 @@
     "cita": "muchos exponentes de Vox han reivindicado el franquismo como un régimen",
     "afirmacion": "Muchos exponentes de Vox han reivindicado o banalizado el franquismo.",
     "veredicto": "mayormente_verdadero",
-    "explicacion": "Hay varios casos documentados de cargos de Vox que relativizan o blanquean la dictadura: Manuel Mariscal (Congreso, 26-11-2024, sus palabras fueron retiradas), Juan García-Gallardo (Cortes de Castilla y León, diciembre de 2024) y Ortega Smith, que en 2020 se negó a condenar el franquismo. «Muchos» es una cuantificación imprecisa y no todos los casos son una reivindicación explícita del régimen.",
+    "explicacion": "Hay casos documentados de cargos de Vox que relativizan o blanquean la dictadura: el diputado Manuel Mariscal dijo en el Congreso el 26-11-2024 que la etapa posterior a la Guerra Civil «no fue oscura» (palabras retiradas del diario de sesiones), y en las Cortes de Castilla y León Juan García-Gallardo aludió al franquismo como un periodo sin «robos»; Figaredo no condenó la dictadura el 20-11-2025. «Muchos» es una cuantificación imprecisa y ninguna de esas citas afirma que el régimen fuera bueno: la calificación de «apología» es de los autores de las crónicas.",
     "confianza": "media",
     "fuentes": [
       {
-        "titulo": "Vox amplifica su apología del franquismo mientras un PP incómodo busca apartarlo del debate público (Público)",
+        "titulo": "Público: Vox amplifica su apología del franquismo mientras un PP incómodo busca apartarlo del debate público",
         "url": "https://www.publico.es/politica/vox-amplifica-apologia-franquismo-pp-incomodo-busca-apartarlo-debate-publico.html"
       },
       {
-        "titulo": "Ortega Smith se niega a condenar el franquismo (Deia, 2020)",
-        "url": "https://www.deia.eus/actualidad/2020/10/26/ortega-smith-niega-condenar-franquismo-4672031.amp.html"
+        "titulo": "Ara: Sobre los que piensan que el franquismo fue «bueno» o «muy bueno» (octubre de 2025, datos del CIS)",
+        "url": "https://es.ara.cat/politica/piensan-franquismo-bueno-bueno_129_5533086.html"
+      },
+      {
+        "titulo": "Europa Press (vía Diario Siglo XXI): Figaredo (Vox) no condena el franquismo y dice que España padece ahora el peor Gobierno de la historia (20-11-2025)",
+        "url": "https://www.diariosigloxxi.com/texto-ep/mostrar/20251120135720/figaredo-vox-no-condena-franquismo-dice-espana-padece-ahora-peor-gobierno-historia"
       }
     ]
   },
@@ -357,13 +489,17 @@
     "minuto": "2:02:58",
     "cita": "reivindica la dictadura en España que mató a cientos de miles de personas",
     "afirmacion": "La dictadura franquista mató a cientos de miles de personas.",
-    "veredicto": "enganoso",
-    "explicacion": "Los estudios sobre la violencia franquista documentan en torno a 130.000-142.000 víctimas mortales de la represión (130.199 en el recuento de varias provincias; 141.914 según Julio Prada), una cifra de más de cien mil pero no de «cientos de miles» en sentido estricto, y que incluye la represión de la retaguardia desde 1936, antes de la dictadura propiamente dicha. El carácter masivo de la represión es indiscutible; la cifra exacta sigue en debate y algunas estimaciones incluyen muertes en cárceles y por hambre.",
+    "veredicto": "mayormente_verdadero",
+    "explicacion": "Según la historiografía recogida por Cenarro (Ayer, 2013), los historiadores sitúan en torno a 150.000 las víctimas mortales de la represión franquista durante la guerra y la posguerra (130.199 en el recuento de varias provincias, 141.914 en el de Prada y 200.000 en el de Preston); Público recoge unos 150.000 muertos. «Cientos de miles» queda en el extremo alto de esas estimaciones, y las cifras cuentan la represión desde 1936, antes de la dictadura en sentido estricto. El carácter masivo de la represión no se discute y el recuento exacto sigue abierto.",
     "confianza": "media",
     "fuentes": [
       {
-        "titulo": "Miradas y debates sobre la violencia franquista (Ayer, Marcial Pons)",
+        "titulo": "Ayer (Marcial Pons), Ángela Cenarro: Miradas y debates sobre la violencia franquista (Ayer 91/2013)",
         "url": "https://revistasmarcialpons.es/index.php/revistaayer/article/download/cenarro-miradas-y-debates-sobre-la-violencia-franquista/1865/4849"
+      },
+      {
+        "titulo": "Público: Vox amplifica su apología del franquismo mientras un PP incómodo busca apartarlo del debate público",
+        "url": "https://www.publico.es/politica/vox-amplifica-apologia-franquismo-pp-incomodo-busca-apartarlo-debate-publico.html"
       }
     ]
   },
@@ -371,20 +507,28 @@
     "minuto": "2:03:58",
     "cita": "acaban de detener a la cúpula de núcleo nacional, que se dedican a meter palizas a la gente por la calle",
     "afirmacion": "Acaban de detener a la cúpula de Núcleo Nacional, un grupo que se dedica a dar palizas a la gente por la calle.",
-    "veredicto": "mayormente_verdadero",
-    "explicacion": "El 6-11-2026 la Policía Nacional detuvo a unos 12-14 miembros de Núcleo Nacional (entre ellos, según algunos medios, su líder Iván Rico y su ideólogo) en varias provincias; los militantes quedaron en libertad con cargos y el caso lo investiga un juzgado de Gijón. Se les imputan odio, asociación ilícita y tenencia de armas, y la Policía sostiene que se entrenaron en Ucrania para preparar un «levantamiento armado»; la prensa consultada no atribuye palizas concretas a los detenidos (solo menciona denuncias de estudiantes por agresiones en Gijón). Son imputados, no condenados.",
+    "veredicto": "enganoso",
+    "explicacion": "El 6-11-2026 la Policía Nacional detuvo a 12-14 miembros de Núcleo Nacional en siete u ocho provincias, siete de ellos considerados posible cúpula (entre ellos Enrique Lemus, fundador de Noviembre Nacional), por incitación al odio, asociación ilícita y tenencia de armas; la investiga un juzgado de instrucción de Gijón y la Policía sostiene que se entrenaron en Ucrania para un «levantamiento armado». Las fuentes consultadas no atribuyen a los detenidos palizas concretas: solo mencionan altercados en Gijón y denuncias de estudiantes por agresiones. Son investigados y no condenados, así que «se dedican a meter palizas» es una caracterización que los cargos conocidos no recogen.",
     "confianza": "media",
     "fuentes": [
       {
-        "titulo": "The National Police detains a dozen members of Núcleo Nacional (Demócrata)",
-        "url": "https://www.democrata.es/en/politics/the-national-police-detains-a-dozen-members-of-nucleo-nacional-in-an-operation-in-eight-provinces/"
+        "titulo": "Diari de Tarragona (Europa Press): La Policía Nacional detiene a 12 miembros del grupo neonazi Núcleo Nacional en siete provincias (6-11-2026)",
+        "url": "https://www.diaridetarragona.com/espana/275089/policia-nacional-detiene-12-miembros-grupo-neonazi-nucleo-nacional-siete-provincias.html"
       },
       {
-        "titulo": "La Policía Nacional acusa a Núcleo Nacional de entrenarse en Ucrania para preparar un «levantamiento armado» (Ara)",
+        "titulo": "elDiario.es: Detenidos 14 miembros de la cúpula de Núcleo Nacional (6-11-2026)",
+        "url": "https://www.eldiario.es/1_d02e0f"
+      },
+      {
+        "titulo": "Ara: La Policía Nacional acusa a Núcleo Nacional de entrenarse en Ucrania para preparar un «levantamiento armado» (10-11-2026)",
         "url": "https://es.ara.cat/politica/policia-nacional-acusa-nucleo-nacional-entrenarse-ucrania-preparar-levantamiento-armado_1_5906770.html"
       },
       {
-        "titulo": "Who are the detainees of Núcleo Nacional (Demócrata)",
+        "titulo": "Demócrata: The National Police detains a dozen members of Núcleo Nacional in an operation in eight provinces (6-11-2026)",
+        "url": "https://www.democrata.es/en/politics/the-national-police-detains-a-dozen-members-of-nucleo-nacional-in-an-operation-in-eight-provinces/"
+      },
+      {
+        "titulo": "Demócrata: Who are the detainees of Núcleo Nacional",
         "url": "https://www.democrata.es/en/courts/who-are-the-detainees-of-nucleo-nacional-the-neo-nazi-alberto-pugilato-and-the-founder-of-noviembre-nacional-among-the-14-arrested/"
       }
     ]
@@ -394,16 +538,24 @@
     "cita": "tiene complicidades con grupos que son directamente nazis",
     "afirmacion": "Vox tiene complicidades con grupos que son directamente nazis.",
     "veredicto": "no_verificable",
-    "explicacion": "No hay prueba pública de vínculos orgánicos o de complicidad entre Vox y Núcleo Nacional: la información policial y de prensa sobre la operación no los menciona. Existen acusaciones de un exportavoz de Vox en Barcelona (Fernando Moya) de que Abascal avaló la entrada de neonazis y opiniones editoriales que los relacionan, pero son acusaciones o valoraciones, no hechos acreditados.",
-    "confianza": "baja",
+    "explicacion": "No hemos hallado prueba pública de vínculos orgánicos o de complicidad entre Vox y Núcleo Nacional: la información de la operación del 6-11-2026 no los menciona y Demócrata sitúa a los detenidos en Núcleo Nacional, Noviembre Nacional y Democracia Nacional. Existen una acusación de 2022 de un exportavoz de Vox en Barcelona (Fernando Moya) de que Abascal avaló la entrada de miembros de Plataforma per Catalunya, a quienes llamó neonazis, sin pruebas aportadas, y un análisis de El País recogido por el CIDOB (25-10-2025) que sitúa a Núcleo Nacional en un espacio que crece a la sombra de Vox. Son acusaciones y análisis, no hechos acreditados.",
+    "confianza": "media",
     "fuentes": [
       {
-        "titulo": "La Policía Nacional acusa a Núcleo Nacional de entrenarse en Ucrania (Ara)",
+        "titulo": "Ara: La Policía Nacional acusa a Núcleo Nacional de entrenarse en Ucrania para preparar un «levantamiento armado» (10-11-2026)",
         "url": "https://es.ara.cat/politica/policia-nacional-acusa-nucleo-nacional-entrenarse-ucrania-preparar-levantamiento-armado_1_5906770.html"
       },
       {
-        "titulo": "Un exportavoz de Vox afirma que Abascal avaló el ingreso de neonazis al partido (La Política Online)",
+        "titulo": "Demócrata: Who are the detainees of Núcleo Nacional",
+        "url": "https://www.democrata.es/en/courts/who-are-the-detainees-of-nucleo-nacional-the-neo-nazi-alberto-pugilato-and-the-founder-of-noviembre-nacional-among-the-14-arrested/"
+      },
+      {
+        "titulo": "La Política Online: Un exportavoz de Vox afirma que Abascal avaló el ingreso de neonazis al partido (17-10-2022)",
         "url": "https://www.lapoliticaonline.com/espana/politica-es/un-exportavoz-de-vox-afirma-que-abascal-avalo-y-autorizo-el-ingreso-de-neonazis-al-partido/"
+      },
+      {
+        "titulo": "CIDOB (reproduce El País, 25-10-2025): La ultraderecha que llama «derechita» a Abascal sale del rincón y luce adeptos jóvenes",
+        "url": "https://www.cidob.org/cidob-en-medios/ultraderecha-llama-derechita-abascal-sale-del-rincon-luce-adeptos-jovenes"
       }
     ]
   },
@@ -412,16 +564,16 @@
     "cita": "Vox es cómplice de Desocupa, que también se toman la ley por su mano y van pegando palizas a la gente por la calle",
     "afirmacion": "Vox es cómplice de Desokupa, que da palizas a la gente por la calle.",
     "veredicto": "no_verificable",
-    "explicacion": "«Cómplice» es una valoración y no hemos hallado prueba de que Vox haya participado o encubierto agresiones de Desokupa. Sí está documentado que Vox secundó y alabó movilizaciones contra la okupación afines a Desokupa y que ambos coinciden en el discurso sobre delincuencia e inmigración, mientras el líder de Desokupa, Daniel Esteve, se desmarca públicamente de Vox. No hemos podido contrastar las «palizas» atribuidas a Desokupa con fuentes judiciales.",
-    "confianza": "baja",
+    "explicacion": "«Cómplice» es una valoración y no hemos hallado prueba de que Vox haya participado o encubierto agresiones de Desokupa. Constan lazos políticos: Vox Alcorcón prometió en noviembre de 2022 contratar a Desokupa para desalojos si gobernaba, y Daniel Esteve apareció con Abascal en marzo de 2024 en lo que Ara describe como su primera aparición conjunta, aunque Esteve dice que nunca votará a Vox. No hemos podido contrastar con fuentes judiciales las «palizas» atribuidas a Desokupa.",
+    "confianza": "media",
     "fuentes": [
       {
-        "titulo": "Oficinas antiocupas de PP y Vox (La Marea, 13-7-2024)",
-        "url": "https://www.lamarea.com/2024/07/13/oficinas-antiocupas-pp-vox"
+        "titulo": "Ara: El líder de Desokupa no vota a Vox, vota toros (21-12-2024)",
+        "url": "https://es.ara.cat/politica/lider-desokupa-no-vota-vox-toros_1_5237441.html"
       },
       {
-        "titulo": "El líder de Desokupa no vota a Vox, vota toros (Ara)",
-        "url": "https://es.ara.cat/politica/lider-desokupa-no-vota-vox-toros_1_5237441.html"
+        "titulo": "elDiario.es: Vox promete contratar a Desokupa en Alcorcón si logra gobernar el Ayuntamiento (30-11-2022)",
+        "url": "https://www.eldiario.es/madrid/vox-promete-contratar-desokupa-alcorcon-si-logra-gobernar-ayuntamiento_1_9757767.html"
       }
     ]
   },
@@ -430,16 +582,16 @@
     "cita": "Se manifiestan juntos, se fotografían juntos",
     "afirmacion": "Vox y Desokupa se manifiestan y se fotografían juntos.",
     "veredicto": "no_verificable",
-    "explicacion": "No hemos encontrado una foto o manifestación conjunta documentada de dirigentes de Vox y Desokupa en las fuentes consultadas; sí hay constancia de que Vox apoyó movilizaciones contra la okupación en las que Desokupa tenía protagonismo, lo que no equivale a manifestarse juntos. Daniel Esteve se desmarca del partido.",
+    "explicacion": "Hemos documentado una aparición conjunta de Daniel Esteve (Desokupa) con Abascal en marzo de 2024, que Ara describe como su primera aparición conjunta, y la promesa de Vox Alcorcón de contratar a Desokupa en 2022. No hemos hallado fotografías ni manifestaciones conjuntas de dirigentes de Vox y Desokupa, y Esteve se desmarca del partido. La búsqueda quedó acotada por el límite de consultas, por lo que puede haber material no encontrado.",
     "confianza": "baja",
     "fuentes": [
       {
-        "titulo": "Oficinas antiocupas de PP y Vox (La Marea, 13-7-2024)",
-        "url": "https://www.lamarea.com/2024/07/13/oficinas-antiocupas-pp-vox"
+        "titulo": "Ara: El líder de Desokupa no vota a Vox, vota toros (21-12-2024)",
+        "url": "https://es.ara.cat/politica/lider-desokupa-no-vota-vox-toros_1_5237441.html"
       },
       {
-        "titulo": "El líder de Desokupa no vota a Vox, vota toros (Ara)",
-        "url": "https://es.ara.cat/politica/lider-desokupa-no-vota-vox-toros_1_5237441.html"
+        "titulo": "elDiario.es: Vox promete contratar a Desokupa en Alcorcón si logra gobernar el Ayuntamiento (30-11-2022)",
+        "url": "https://www.eldiario.es/madrid/vox-promete-contratar-desokupa-alcorcon-si-logra-gobernar-ayuntamiento_1_9757767.html"
       }
     ]
   },
@@ -448,19 +600,19 @@
     "cita": "igual que Vox se fotografía con Milley o se fotografía con Trump",
     "afirmacion": "Vox (Abascal) se fotografía con Milei y con Trump.",
     "veredicto": "verdadero",
-    "explicacion": "Abascal se fotografió con Trump en la CPAC de Washington en febrero de 2024 (conversación de unos quince minutos) y se reunió con Milei en Madrid, con foto, el 14-3-2026, además de otros encuentros previos. En la investidura de Trump (enero de 2025) no logró foto: la imagen que circuló de Abascal con Trump, Meloni y Milei era falsa, generada con IA.",
+    "explicacion": "Abascal posó con Trump en Washington el 24-2-2024, tras la CPAC, y conversaron unos quince minutos. Con Milei se fotografió en Madrid durante la visita del presidente argentino a la Cumbre Iberoamericana, a principios de noviembre de 2026 (la foto la difundió el Gobierno argentino). Una imagen de Abascal con Trump, Meloni y Milei difundida en enero de 2025 era falsa, creada con IA, y no cuenta.",
     "confianza": "alta",
     "fuentes": [
       {
-        "titulo": "Abascal se cita con Trump en Washington: conversación de quince minutos y foto posterior (El Independiente, 24-2-2024)",
+        "titulo": "El Independiente: Abascal se cita con Trump en Washington: conversación de quince minutos y foto posterior (24-2-2024)",
         "url": "https://www.elindependiente.com/espana/2024/02/24/abascal-se-cita-con-trump-en-washington-conversacion-de-quince-minutos-y-foto-posterior/amp/"
       },
       {
-        "titulo": "Milei se reunió con Abascal en Madrid (Perfil)",
+        "titulo": "Perfil: Milei se reunió con Abascal en Madrid y reforzó su alianza con la ultraderecha europea (4-11-2026)",
         "url": "https://www.perfil.com/internacional/milei-se-reunio-con-abascal-en-madrid-y-reforzo-su-alianza-con-la-ultraderecha-europea-aenlM9d2dM7R"
       },
       {
-        "titulo": "Imagen de Abascal con Trump generada con IA (Maldita.es, 21-1-2025)",
+        "titulo": "Maldita.es: Imagen de Abascal con Trump, Meloni y Milei generada con IA (21-1-2025)",
         "url": "https://maldita.es/malditobulo/20250121/imagen-abascal-trump-ia-grok/"
       }
     ]
@@ -470,19 +622,19 @@
     "cita": "está destrozando la economía y los servicios públicos en Argentina",
     "afirmacion": "Milei está destrozando la economía y los servicios públicos de Argentina.",
     "veredicto": "enganoso",
-    "explicacion": "Es una valoración con base parcial en datos. La inflación bajó desde el 211 % interanual de diciembre de 2023 y el PIB creció entre el 4,4 % y el 5,5 % en 2025, pero la pobreza volvió a subir al 32,3 % en el primer semestre de 2026 según el INDEC (frente al 28,2 % del segundo semestre de 2025), los salarios del sector privado crecieron por debajo de la inflación (32,3 % frente a 36,2 % entre febrero de 2025 y 2026) y la industria cayó. No hemos verificado datos específicos sobre el recorte de servicios públicos.",
+    "explicacion": "Es una valoración con base parcial en datos. La inflación interanual bajó del 211 % de diciembre de 2023 al 33,8 % de julio de 2026, la pobreza del INDEC bajó del 52,9 % (primer semestre de 2024) al 31,6 % (primer semestre de 2025) y al 28,2 % (segundo semestre de 2025) y la actividad creció un 2,7 % interanual en junio de 2026. Pero el desempleo subió al 7,8 % (primer trimestre de 2026), el empleo registrado cayó (12,75 millones en mayo de 2026 frente a 13,36 millones en 2023), la industria y la construcción siguen por debajo de 2023 y los salarios privados registrados subieron un 32,3 % entre febrero de 2025 y febrero de 2026 frente a una inflación del 36,2 %. No hemos verificado datos concretos sobre recortes en servicios públicos, más allá del ajuste del gasto y la obra pública.",
     "confianza": "media",
     "fuentes": [
       {
-        "titulo": "Cómo cambiaron los indicadores de la economía argentina en los 1.000 días de Milei (iProfesional, 2026)",
+        "titulo": "iProfesional: Cómo cambiaron los indicadores de la economía argentina en los 1.000 días de Milei (6-9-2026)",
         "url": "https://www.iprofesional.com/finanzas/463866-como-cambiaron-los-indicadores-de-la-economia-argentina-en-los-1-000-dias-de-javier-milei"
       },
       {
-        "titulo": "Pobreza baja en Argentina, pero la dinámica de salarios e inflación condicionan la tendencia (Bloomberg Línea)",
+        "titulo": "Bloomberg Línea: Pobreza baja en Argentina, pero la dinámica de salarios e inflación condicionan la tendencia",
         "url": "https://www.bloomberglinea.com/latinoamerica/argentina/pobreza-baja-en-argentina-pero-la-dinamica-de-salarios-e-inflacion-condicionan-la-tendencia/"
       },
       {
-        "titulo": "Argentina 2025: deudas pendientes del modelo libertario (El Economista)",
+        "titulo": "El Economista (Argentina): Argentina 2025: deudas pendientes del modelo libertario",
         "url": "https://eleconomista.com.ar/economia/argentina-2025-deudas-pendientes-modelo-libertario-n91652"
       }
     ]
@@ -492,20 +644,20 @@
     "cita": "porque está haciendo una represión muy fuerte contra cualquier protesta social que sea en contra de sus opiniones",
     "afirmacion": "Milei reprime con fuerza las protestas sociales en Argentina.",
     "veredicto": "mayormente_verdadero",
-    "explicacion": "Amnistía Internacional documentó en su balance de 2024 15 protestas reprimidas y más de 1.100 heridos y pidió derogar el protocolo antipiquetes de la ministra Bullrich; Human Rights Watch pidió investigar la represión en la marcha de jubilados y dijo que el protocolo facilita violaciones de derechos humanos, y la Comisión Provincial por la Memoria sostiene que la represión se duplicó en 2025. «Contra cualquier protesta» generaliza: las protestas continúan y el Gobierno rechaza las críticas.",
-    "confianza": "media",
+    "explicacion": "Amnistía Internacional documentó al menos 1.341 personas heridas, presuntamente por agentes del Estado, en protestas entre diciembre de 2024 y noviembre de 2025, y vincula el aumento de la represión con la Resolución 943/2023 del Ministerio de Seguridad (el protocolo antipiquetes). Human Rights Watch describe un uso de la fuerza a veces indiscriminado e imprudente en la marcha de jubilados del 12-3-2025, con 114 detenidos liberados por orden judicial, y pidió investigar; también reconoce que algunos manifestantes lanzaron piedras. «Contra cualquier protesta» generaliza y no hay una política de reprimir todas.",
+    "confianza": "alta",
     "fuentes": [
       {
-        "titulo": "Human Rights Watch reclamó investigar la represión en la marcha de jubilados y cuestionó el protocolo antipiquetes (La Nación, 3-4-2025)",
+        "titulo": "Human Rights Watch: Informe mundial 2026, Argentina",
+        "url": "https://www.hrw.org/world-report/2026/country-chapters/argentina"
+      },
+      {
+        "titulo": "Amnistía Internacional: Informe sobre Argentina (diciembre de 2024 a noviembre de 2025)",
+        "url": "https://www.amnesty.org/es/location/americas/south-america/argentina/report-argentina/"
+      },
+      {
+        "titulo": "La Nación: Human Rights Watch reclamó investigar la represión en la marcha de jubilados y cuestionó el protocolo antipiquetes (3-4-2025)",
         "url": "https://www.lanacion.com.ar/politica/human-rights-watch-reclamo-investigar-la-represion-en-la-marcha-de-jubilados-y-cuestiono-el-nid03042025"
-      },
-      {
-        "titulo": "Amnistía Internacional lanza duras críticas al protocolo antipiquetes de Milei (Misiones Online, 13-1-2025)",
-        "url": "https://misionesonline.net/2025/01/13/amnistia-internacional-lanza-duras-criticas-al-protocolo-antipiquetes-de-milei-observamos-el-uso-abusivo-y-desproporcionado-de-gases-lacrimogenos-y-balas-de-goma/"
-      },
-      {
-        "titulo": "Milei duplicó la represión a las protestas sociales en Argentina durante 2025 (El Ciudadano)",
-        "url": "https://www.elciudadano.com/?p=1141827"
       }
     ]
   },
@@ -513,16 +665,16 @@
     "minuto": "2:06:01",
     "cita": "en un meeting critiqué a Cayetana",
     "afirmacion": "En un mitin Colau criticó a Cayetana Álvarez de Toledo y habló de subir los impuestos a sus «amigos pijos».",
-    "veredicto": "mayormente_verdadero",
-    "explicacion": "En el acto del Frente Amplio del 7-11-2026 en La Sagrera (Barcelona), Colau se dirigió a Cayetana Álvarez de Toledo, número dos del PP: «Señora marquesa Cayetana, a usted y a los amigos pijos les subiremos muchísimo los impuestos», y que el Frente Amplio «freirá a los pijos a impuestos». Las crónicas recogen «freír» y «pijos», no «crujir» ni «ricachones», aunque la sustancia coincide con lo que Colau cuenta.",
-    "confianza": "alta",
+    "veredicto": "verdadero",
+    "explicacion": "El 7-11-2026, en el acto de presentación del Frente Amplio en Cataluña (La Sagrera, Barcelona), Colau se dirigió a Cayetana Álvarez de Toledo, número dos del PP: «Señora marquesa Cayetana, a usted y a los amigos pijos les subiremos muchísimo los impuestos», y dijo que el Frente Amplio «freirá a los pijos a impuestos». Coincide con lo que cuenta en la entrevista; «crujir» y «ricachones» son palabras de Jordi Wild. Solo hemos hallado la cobertura de Ara (en castellano y en inglés), por lo que no se llega a dos fuentes independientes.",
+    "confianza": "media",
     "fuentes": [
       {
-        "titulo": "El Frente Amplio de Colau se presenta en Cataluña: «Freiremos a impuestos a los pijos» (Ara, 7-11-2026)",
+        "titulo": "Ara: El Frente Amplio de Colau se presenta en Cataluña: «Freiremos a impuestos a los pijos» (7-11-2026)",
         "url": "https://es.ara.cat/politica/elecciones-generales/frente-amplio-colau-presenta-cataluna-freiremos-impuestos-pijos_1_5903201.html"
       },
       {
-        "titulo": "Colau's Broad Front is presented in Catalonia: «We will fry the posh people with taxes» (Ara)",
+        "titulo": "Ara: Colau's Broad Front is presented in Catalonia: «We will fry the posh people with taxes» (7-11-2026)",
         "url": "https://en.ara.cat/politics/colau-s-broad-front-is-presented-in-catalonia-we-will-fry-the-posh-people-with-taxes_1_5903199.html"
       }
     ]
@@ -532,20 +684,24 @@
     "cita": "Pedro Sánchez, cuando sale diciendo que la economía va estupendamente",
     "afirmacion": "Pedro Sánchez dice que la economía va estupendamente.",
     "veredicto": "mayormente_verdadero",
-    "explicacion": "Sánchez ha presentado reiteradamente la economía como un éxito: en mayo de 2024 dijo que iba «como un cohete» y columnas de octubre de 2026 describen esa línea como eje de su mensaje de campaña. No hemos encontrado una cita literal de la campaña de 2026 con «estupendamente», así que es una paráfrasis. Los datos son mixtos: PIB +2,8 % en 2025, +0,6 % trimestral en el tercer trimestre de 2026, pero IPC del 4,9 % en octubre, lo que Colau misma matiza («algunas cosas van bien, pero hay muchas otras que no»).",
-    "confianza": "media",
+    "explicacion": "Sánchez dijo el 16-5-2024 que la economía española iba «no como una moto, sino como un cohete» (The Objective); no hemos hallado una cita literal con «estupendamente» en la campaña de 2026, así que es una paráfrasis, y una columna de opinión de octubre de 2026 (El Debate) alude a «la que dicen que va como un cohete» sin atribuirla a Sánchez. Los datos son mixtos: el PIB creció un 0,6 % trimestral y un 2,7 % interanual en el tercer trimestre de 2026, mientras que el IPC fue del 4,9 % en octubre (INE). Colau matiza en la misma frase que algunas cosas van bien y muchas otras no.",
+    "confianza": "baja",
     "fuentes": [
       {
-        "titulo": "Pedro Sánchez: la economía española va como un cohete (The Objective, 16-5-2024)",
+        "titulo": "The Objective: Pedro Sánchez: la economía española va como un cohete (16-5-2024)",
         "url": "https://theobjective.com/espana/politica/2024-05-16/pedro-sanchez-economia-espanola-cohete/"
       },
       {
-        "titulo": "Economía, mentiras y campaña electoral (El Debate, 18-10-2026, opinión)",
+        "titulo": "El Debate: Economía, mentiras y campaña electoral (18-10-2026, columna de opinión)",
         "url": "https://www.eldebate.com/economia/20261018/economia-mentiras-campana-electoral_470754_amp.html"
       },
       {
-        "titulo": "El PIB modera su crecimiento al 0,6 % en el tercer trimestre y la inflación se mantiene en el 4,9 % (Artículo14, 30-10-2026)",
+        "titulo": "Artículo14: El PIB modera su crecimiento al 0,6 % en el tercer trimestre y la inflación se mantiene en el 4,9 % (30-10-2026)",
         "url": "https://www.articulo14.es/economia/el-pib-modera-su-crecimiento-al-06-en-el-tercer-trimestre-una-decima-menos-y-la-inflacion-se-mantiene-en-el-49-20261030.html"
+      },
+      {
+        "titulo": "INE: Indicador adelantado del IPC, octubre de 2026 (nota de prensa, 30-10-2026)",
+        "url": "https://www.ine.es/dyngs/Prensa/adIPC1026.pdf"
       }
     ]
   }

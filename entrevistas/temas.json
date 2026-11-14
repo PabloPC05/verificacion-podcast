@@ -1,0 +1,144 @@
+{
+ "nota": "Temas que comparten varias entrevistas, para comparar a los candidatos. Cada tema agrupa capítulos del vídeo de cada entrevista (números de capitulos.json, empezando en 1). Un capítulo puede estar en más de un tema. Un tema solo sale en la web si lo tratan al menos dos candidatos.",
+ "temas": [
+  {
+   "slug": "vivienda",
+   "titulo": "Vivienda",
+   "descripcion": "Alquileres, vivienda pública, grandes propietarios y ocupación.",
+   "capitulos": {
+    "sanchez": [
+     9
+    ],
+    "colau": [
+     12,
+     13
+    ]
+   }
+  },
+  {
+   "slug": "inmigracion",
+   "titulo": "Inmigración",
+   "descripcion": "Llegadas, regularización, integración, ayudas y demografía.",
+   "capitulos": {
+    "sanchez": [
+     6
+    ],
+    "feijoo": [
+     7
+    ],
+    "colau": [
+     9,
+     10
+    ]
+   }
+  },
+  {
+   "slug": "ceuta",
+   "titulo": "Ceuta y Marruecos",
+   "descripcion": "La entrada masiva de julio de 2026 y la gestión de la frontera.",
+   "capitulos": {
+    "sanchez": [
+     5
+    ],
+    "feijoo": [
+     6
+    ],
+    "colau": [
+     8
+    ]
+   }
+  },
+  {
+   "slug": "corrupcion",
+   "titulo": "Corrupción y causas judiciales",
+   "descripcion": "Ábalos, Koldo, Cerdán, Leire Díez, Gürtel, Marcial Dorado y la financiación de los partidos.",
+   "capitulos": {
+    "sanchez": [
+     7,
+     8
+    ],
+    "feijoo": [
+     8,
+     9
+    ],
+    "colau": [
+     6
+    ]
+   }
+  },
+  {
+   "slug": "trenes",
+   "titulo": "Trenes",
+   "descripcion": "Los accidentes de Adamuz y Urda, la inversión ferroviaria y la liberalización.",
+   "capitulos": {
+    "sanchez": [
+     4
+    ],
+    "colau": [
+     7
+    ]
+   }
+  },
+  {
+   "slug": "pactos",
+   "titulo": "Pactos y alianzas",
+   "descripcion": "Coaliciones, amnistía, Bildu, Vox, Podemos y el Frente Amplio.",
+   "capitulos": {
+    "sanchez": [
+     10
+    ],
+    "feijoo": [
+     2
+    ],
+    "colau": [
+     5
+    ]
+   }
+  },
+  {
+   "slug": "polarizacion",
+   "titulo": "Crispación y polarización",
+   "descripcion": "Insultos, redes sociales y el tono del debate político.",
+   "capitulos": {
+    "sanchez": [
+     3
+    ],
+    "feijoo": [
+     2
+    ],
+    "colau": [
+     3
+    ]
+   }
+  },
+  {
+   "slug": "internacional",
+   "titulo": "Política internacional",
+   "descripcion": "Trump, Israel, Ucrania, la OTAN y el servicio militar.",
+   "capitulos": {
+    "feijoo": [
+     11
+    ],
+    "colau": [
+     14
+    ]
+   }
+  },
+  {
+   "slug": "rivales",
+   "titulo": "Los rivales",
+   "descripcion": "Lo que cada candidato dice de los demás.",
+   "capitulos": {
+    "sanchez": [
+     11
+    ],
+    "feijoo": [
+     12
+    ],
+    "colau": [
+     14
+    ]
+   }
+  }
+ ]
+}

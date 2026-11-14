@@ -1,0 +1,12 @@
+{
+  "nota": "Correcciones de nombres que Whisper transcribe mal. Se aplican a la transcripción que muestra la web y a la de la API; los ficheros de cada entrevista (segmentos.json, transcripcion.txt) se quedan tal como salieron de Whisper. Solo entran errores claros por el contexto: lo dudoso se deja como está.",
+  "correcciones": [
+    {"buscar": "\\b(?<!King of )(?:Wall|World) Project\\b", "poner": "Wild Project"},
+    {"buscar": "\\bJordi Wilde\\b", "poner": "Jordi Wild"},
+    {"buscar": "\\bJavier Goyado\\b", "poner": "Javier Collado"},
+    {"buscar": "\\bSantos Cerda(?:no)?\\b", "poner": "Santos Cerdán"},
+    {"buscar": "\\bColdo\\b", "poner": "Koldo"},
+    {"buscar": "\\bFeij(?:ó|o)(?![\\wó])", "poner": "Feijóo"},
+    {"buscar": "\\bLeire Díaz\\b", "poner": "Leire Díez"}
+  ]
+}

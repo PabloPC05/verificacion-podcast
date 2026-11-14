@@ -1,0 +1,25 @@
+{
+ "criterio": "Las afirmaciones con un dato concreto sobre los temas centrales de la campaña, elegidas con el mismo criterio para los tres candidatos, salgan bien o mal.",
+ "afirmaciones": [
+  {
+   "id": "m3123-2",
+   "por_que": "Inmigración y ayudas: la cifra del ingreso mínimo vital."
+  },
+  {
+   "id": "m2591",
+   "por_que": "Ceuta: cuántas personas entraron en 2021."
+  },
+  {
+   "id": "m2159-2",
+   "por_que": "Impuestos: cuánto ha subido la recaudación."
+  },
+  {
+   "id": "m3945-2",
+   "por_que": "Corrupción: la sentencia de la Gürtel."
+  },
+  {
+   "id": "m2201",
+   "por_que": "Deuda: lo que se paga en intereses cada año."
+  }
+ ]
+}

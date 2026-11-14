@@ -1,0 +1,21 @@
+{
+ "nota": "Lo que otros verificadores profesionales publicaron sobre la misma frase (misma_frase) o sobre el mismo dato dicho por el candidato en otro momento (mismo_dato). Solo entra una pieza si trata esa afirmación concreta; un artículo general sobre el tema no cuenta. veredicto_medio es la etiqueta del propio medio, copiada tal cual.",
+ "enlaces": [],
+ "pendientes": {
+  "nota": "Candidatas que aparecen en buscadores pero no se han podido abrir para confirmar fecha y etiqueta (verificat.cat no respondía el 13/11/2026). No salen en la web hasta comprobarlas.",
+  "enlaces": [
+   {
+    "id": "m5326",
+    "medio": "Verificat",
+    "url": "https://www.verificat.cat/colau-agents-guardia-urbana-alcaldessa-wild-project/",
+    "alcance": "misma_frase"
+   },
+   {
+    "id": "m5556",
+    "medio": "Verificat",
+    "url": "https://www.verificat.cat/es/datos-delincuencia-ada-colau-barcelona/",
+    "alcance": "misma_frase"
+   }
+  ]
+ }
+}

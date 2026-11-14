@@ -4,11 +4,35 @@
    "source": "/api/referencia",
    "destination": "/api",
    "permanent": true
+  },
+  {
+   "source": "/verificalo",
+   "destination": "/api#verificalo",
+   "permanent": true
+  },
+  {
+   "source": "/verificalo/",
+   "destination": "/api#verificalo",
+   "permanent": true
+  }
+ ],
+ "rewrites": [
+  {
+   "source": "/api",
+   "destination": "/datos/index.html"
+  },
+  {
+   "source": "/api/",
+   "destination": "/datos/index.html"
+  },
+  {
+   "source": "/api/v1/:ruta*",
+   "destination": "/datos/v1/:ruta*"
   }
  ],
  "headers": [
   {
-   "source": "/api/(.*)",
+   "source": "/api/v1/(.*)",
    "headers": [
     {
      "key": "Access-Control-Allow-Origin",
@@ -26,6 +50,15 @@
     {
      "key": "Access-Control-Allow-Origin",
      "value": "*"
+    }
+   ]
+  },
+  {
+   "source": "/datos/(.*)",
+   "headers": [
+    {
+     "key": "X-Robots-Tag",
+     "value": "noindex"
     }
    ]
   }

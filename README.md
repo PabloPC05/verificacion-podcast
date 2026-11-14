@@ -18,10 +18,16 @@ Todo está aquí para que cualquiera pueda revisarlo, discutirlo y corregirlo.
 | `entrevistas/<slug>/capitulos.json` | Capítulos del vídeo en YouTube. |
 | `entrevistas/<slug>/resultados/*.json` | Las afirmaciones verificadas, un fichero por bloque temático: cita literal, veredicto, explicación, confianza y fuentes. |
 | `entrevistas/<slug>/resumenes/*.json` | Resumen de una frase de cada explicación (el texto corto que muestra la web). |
+| `entrevistas/<slug>/esencial.json` | «Lo esencial»: las 3-5 afirmaciones clave de cada candidato y por qué. |
+| `entrevistas/<slug>/otros_verificadores.json` | Lo que Newtral, Maldita.es o EFE Verifica publicaron sobre la misma frase o el mismo dato. |
+| `entrevistas/temas.json` | Temas que comparten las entrevistas, para comparar a los candidatos en `/temas`. |
+| `entrevistas/archivo.json` | Copia de cada fuente en la Wayback Machine. La rellena `herramientas/archivar_fuentes.py`. |
 | `herramientas/transcribir.py` | Descarga el audio y lo transcribe en local con Whisper. |
+| `herramientas/hablantes.py` | Reconoce quién habla en cada segmento (Jordi, el invitado o los verificadores), en local. |
+| `entrevistas/<slug>/hablantes.json`, `transcripcion-hablantes.txt` | La voz de cada segmento y la transcripción por intervenciones. |
 | `web-src/build.py` | Genera la web estática (`web/`) a partir de los datos. Sin dependencias. |
 | `en-directo/` | Experimento: graba el micrófono, transcribe y verifica en directo. Sin terminar de probar. |
-| `METODO.md` | El procedimiento exacto, los criterios de cada veredicto y los límites. |
+| `METODO.md` | El procedimiento exacto, los criterios de cada veredicto y los límites. La web lo publica en `/metodologia`. |
 
 ## Entrevistas
 
@@ -40,6 +46,7 @@ agentes de IA puedan revisar cada veredicto contra sus fuentes. Documentación: 
 |---|---|
 | Entrevistas, recuentos y temas | `/api/v1/entrevistas.json` |
 | Todas las afirmaciones | `/api/v1/afirmaciones.json` |
+| Temas comunes, con las afirmaciones de cada candidato | `/api/v1/temas.json` |
 | Afirmaciones de una entrevista | `/api/v1/{slug}.json` |
 | Transcripción con tiempos | `/api/v1/{slug}/transcripcion.json` y `.txt` |
 | Referencia completa y prompt para agentes de IA | `/api` |
@@ -60,9 +67,23 @@ Esto es una verificación asistida por IA, no revisada por un equipo de periodis
 los datos contradicen lo dicho, no que haya intención de mentir. Una parte de las afirmaciones queda como
 «no verificable» porque la búsqueda automática se quedó corta. Los detalles están en [METODO.md](METODO.md).
 
+## Quién lo hace
+
+Proyecto independiente de [Pablo Pardo Cotos](https://github.com/PabloPC05) y [Diego Cristóbal Andaluz](https://github.com/2cristo7).
+Pablo, estudiante del doble grado de Matemáticas e Ingeniería Informática de la Universidad Complutense de Madrid, es el
+autor y mantenedor: transcripción, verificación, método y web. Diego, cofundador de OSIX Tech, ha hecho el rediseño
+visual y responsive, la leyenda flotante, las estadísticas de visitas y la referencia interactiva de la API.
+
+Ninguno de los dos milita ni ha militado en ningún partido, ni ha trabajado o colaborado con ningún partido, con Jordi
+Wild o con The Wild Project; nadie les ha encargado esto, y The Wild Project y Jordi Wild no participan en la web ni la
+respaldan. No hay financiación ni apoyo de nadie: los únicos costes son las suscripciones de IA, que cada uno paga de
+su bolsillo, y la web está en el plan gratuito de Vercel, sin publicidad. Las visitas
+se cuentan con Umami, que no usa cookies y, según su documentación, no recoge datos personales. Los vídeos se reproducen con el reproductor de YouTube (youtube-nocookie.com), que solo se carga al pulsar un minuto; a partir de ahí se aplica la política de privacidad de Google. Al abrir una fuente en el visor, el navegador pide su texto a r.jina.ai (Jina AI), que ve la IP y la fuente; la animación de la portada y la referencia de la API cargan código de jsDelivr. Más detalle en https://verificacion-podcast.vercel.app/quien.
+
 ## Corregir un error o contribuir
 
-- **Incidencia:** usa la plantilla «Corregir una afirmación» con el identificador o el minuto y una fuente.
+- **Avisar de un error:** en la página de cada afirmación, el botón «Avisar de un error» abre el formulario con la
+  afirmación ya rellenada; solo pide una fuente.
 - **Pull request:** se abre desde tu propio fork (no se puede subir directamente a este repositorio). Los pasos,
   qué ficheros tocar y qué no, están en [CONTRIBUTING.md](CONTRIBUTING.md). Cada PR pasa una comprobación automática.
 

@@ -1,40 +1,31 @@
-name: Corregir una afirmación
-description: Un veredicto que crees que está mal, una fuente rota o una cita mal transcrita.
-title: "Corrección: "
+name: Avisar de un error
+description: ¿Crees que una afirmación está mal verificada? Mándanos una fuente que lo demuestre.
+title: "Error en: "
 labels: ["corrección"]
 body:
+  - type: markdown
+    attributes:
+      value: |
+        Gracias por avisar. Solo necesitamos **un enlace que muestre el dato correcto**. Lo revisamos con el mismo criterio para todos los partidos.
   - type: input
     id: afirmacion
     attributes:
-      label: Afirmación
-      description: El identificador (por ejemplo sanchez-m6003, aparece en la API) o la entrevista y el minuto.
-      placeholder: sanchez-m6003 · o · Sánchez, 1:40:03
-    validations:
-      required: true
-  - type: dropdown
-    id: tipo
-    attributes:
-      label: Qué está mal
-      options:
-        - El veredicto
-        - La explicación o el resumen
-        - Una fuente (rota, no dice eso, poco fiable)
-        - La cita (mal transcrita o la dice otra persona)
-        - Debería excluirse o recuperarse por relevancia
-        - Otra cosa
-    validations:
-      required: true
-  - type: textarea
-    id: correccion
-    attributes:
-      label: Corrección propuesta
-      description: Qué debería decir y por qué.
+      label: ¿Qué afirmación?
+      description: Si vienes desde la web, ya está rellenado. Si no, pon quién lo dijo y el minuto (por ejemplo, «Sánchez, 1:02:00»).
     validations:
       required: true
   - type: textarea
     id: fuentes
     attributes:
       label: Fuentes
-      description: Enlaces que respaldan la corrección. Mejor fuentes primarias u oficiales.
+      description: Pega uno o varios enlaces que muestren lo que de verdad pasó. Mejor de organismos oficiales (INE, BOE, ministerios…) o de medios conocidos.
+      placeholder: https://…
     validations:
       required: true
+  - type: textarea
+    id: comentario
+    attributes:
+      label: ¿Qué está mal? (opcional)
+      description: Si quieres, cuéntalo en una frase.
+    validations:
+      required: false
