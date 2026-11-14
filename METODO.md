@@ -142,7 +142,8 @@ ficheros al repositorio. Si falta la imagen de una entrevista, `build.py` avisa 
 uv run --with pillow python herramientas/imagenes_compartir.py   # web-src/compartir/<slug>.png, 1200×630
 python3 web-src/build.py                                  # genera toda la web en web/ (páginas, API y vercel.json)
 git add entrevistas/<slug> web web-src/compartir && git commit -m "Verificación de la entrevista a <invitado>" && git push
-cd web && npx vercel deploy --prod --yes --scope pablopc05s-projects
+cd web && npx vercel link --yes --scope pablopc05s-projects --project verificacion-podcast   # solo la primera vez en un clon nuevo
+npx vercel deploy --prod --yes --scope pablopc05s-projects
 ```
 
 ### Después de publicar

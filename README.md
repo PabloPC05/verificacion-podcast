@@ -87,9 +87,25 @@ se cuentan con Umami, que no usa cookies y, según su documentación, no recoge 
 - **Pull request:** se abre desde tu propio fork (no se puede subir directamente a este repositorio). Los pasos,
   qué ficheros tocar y qué no, están en [CONTRIBUTING.md](CONTRIBUTING.md). Cada PR pasa una comprobación automática.
 
-## Reproducirlo
+## Empezar desde un clon nuevo
+
+El repositorio tiene todo lo necesario para seguir: datos, transcripciones, voces, resultados, auditoría, código y la
+web generada. Solo quedan fuera, por su tamaño, cosas que se regeneran:
+
+| Qué | Para qué | Cómo se recupera |
+|---|---|---|
+| `.venv/` | Transcribir y reconocer voces | `uv venv --python 3.12 && uv pip install mlx-whisper sherpa-onnx` (Mac con Apple Silicon) |
+| `.modelos/nemo_en_titanet_large.onnx` | Reconocer quién habla | `mkdir -p .modelos && curl -L -o .modelos/nemo_en_titanet_large.onnx https://github.com/k2-fsa/sherpa-onnx/releases/download/speaker-recongition-models/nemo_en_titanet_large.onnx` |
+| `entrevistas/<slug>/entrevista.m4a` | Volver a reconocer las voces de una entrevista ya publicada | `uvx yt-dlp -f "bestaudio[ext=m4a]/bestaudio" -o entrevistas/<slug>/entrevista.m4a "https://www.youtube.com/watch?v=<video>"`, con el `video` de su `meta.json`. No uses `transcribir.py` para esto: vuelve a transcribir y cambiaría los datos publicados. |
+| `web/.vercel/` | Desplegar | Una vez por clon: `cd web && npx vercel link --yes --scope pablopc05s-projects --project verificacion-podcast`. Sin este paso, `vercel deploy` crearía un proyecto nuevo llamado «web». |
+
+Herramientas: Python 3.12 o superior, [uv](https://docs.astral.sh/uv/), Node (para `npx vercel`) y `ffmpeg` (para las voces).
+Para revisar datos y generar la web no hace falta nada de lo anterior:
 
 ```sh
-uv venv --python 3.12 && uv pip install mlx-whisper   # solo para transcribir (Mac con Apple Silicon)
-python3 web-src/build.py                              # regenera la web a partir de los datos
+python3 herramientas/comprobar_datos.py          # valida los JSON
+python3 web-src/build.py                         # regenera web/ a partir de los datos
+python3 -m http.server -d web 8000               # y abre http://localhost:8000 (la API está en /datos/v1/)
 ```
+
+El procedimiento completo, paso a paso, está en [METODO.md](METODO.md); las reglas de trabajo con agentes, en [CLAUDE.md](CLAUDE.md).
