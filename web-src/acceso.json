@@ -107,6 +107,10 @@
 "lectura": true,
 "comprobado": "2026-11-14"
 },
+"https://apps.fomento.gob.es/BoletinOnline2/sedal/35103500.XLS": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://ariasmontano.uhu.es/entities/publication/f77935b1-be63-4b49-aba5-33f637ad2971": {
 "lectura": true,
 "comprobado": "2026-11-13"
@@ -1659,6 +1663,10 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://rtvc.es/joseba-asiron-eh-bildu-alcalde-de-pamplona-al-ganar-la-mocion-de-censura/": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://rtvc.es/moreno-reelegido-presidente-andalucia-con-vicepresidencia-vox-3-julio-2026/": {
 "lectura": true,
 "comprobado": "2026-11-14"
@@ -2979,6 +2987,10 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.dsca.gob.es/es/comunicacion/notas-prensa/lista-espera-dependencia-baja-casi-20-ano-registra-maximo-historico": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.economistjurist.es/actualidad-juridica/archivada-la-investigacion-por-el-caso-pegasus-ante-la-falta-de-cooperacion-de-israel/": {
 "lectura": true,
 "comprobado": "2026-11-13"
@@ -2987,9 +2999,17 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.economistjurist.es/articulos-juridicos-destacados/lo-malo-de-hablar-con-ligereza-de-una-expropiacion-legislativa-por-maricarmen/": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.economistjurist.es/tal-dia-como-hoy/se-dicta-sentencia-por-corrupcion-en-el-caso-filesa/": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://www.eeas.europa.eu/morocco/european-union-and-morocco_en": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://www.elciudadano.com/?p=1141827": {
 "lectura": true,
@@ -2999,8 +3019,16 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.elcorreogallego.es/espana/2026/11/11/defensa-12000-millones-buques-submarinos-misiles-136316809.html": {
+"lectura": false,
+"comprobado": "2026-11-14"
+},
 "https://www.elcorreogallego.es/galicia/2026/10/22/bng-psdeg-defienden-protestas-antifascistas-135636174.html": {
 "lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.elcorreogallego.es/hemeroteca/feijoo-fijara-residencia-habitual-monte-pio-IBCG417285": {
+"lectura": false,
 "comprobado": "2026-11-14"
 },
 "https://www.eldebate.com/cine-tv-series/20261113/post-2014-jordi-wild-recordado-pedro-sanchez-alabando-koldo-garcia-cnsm_480566.html": {
@@ -3022,6 +3050,10 @@
 "https://www.eldebate.com/economia/20250809/maquinistas-piden-bajar-velocidad-ave-mal-estado-vias_324568.html": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://www.eldebate.com/economia/20260126/trampas-puente-graficos-inversion-real-mantener-red-alta-velocidad-menor-rajoy_378055.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://www.eldebate.com/economia/20260707/feijoo-denuncia-grave-problema-absentismo-laboral-izquierda-le-echa-encima_437170.html": {
 "lectura": true,
@@ -3046,6 +3078,10 @@
 "https://www.eldebate.com/economia/20261029/deterioro-inversion-ferroviaria-trenes-viajeros-menos-dinero-vias_474787.html": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://www.eldebate.com/espana/20220813/bolanos-asegura-feijoo-baila-son-ayuso-contra-europa-asuntos-energeticos_54534.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://www.eldebate.com/espana/20230810/diaz-quiere-colau-dirija-ministerio-vivienda-sanchez-planea-crear_133240.html": {
 "lectura": true,
@@ -3172,6 +3208,10 @@
 "comprobado": "2026-11-14"
 },
 "https://www.eldiario.es/1_d02a9f": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.eldiario.es/1_d02e0f": {
 "lectura": true,
 "comprobado": "2026-11-14"
 },
