@@ -1,23 +1,111 @@
 {
+"http://data.unhcr.org/en/situations/europe-sea-arrivals/location/24567": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"http://resultados2016.xunta.gal/11AU/DAU11999CM.htm?lang=es": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://acento.com.do/france24/espana-aprueba-en-pleno-el-embargo-de-armas-a-israel-9561492.html": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://ajuntament.barcelona.cat/alcalde/en": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://ajuntament.barcelona.cat/distincions-honors/es/colau-ballano-ada": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://ajuntament.barcelona.cat/educacio/ca/protegim-les-escoles": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://ajuntament.barcelona.cat/guardiaurbana/en/services/our-services/neighbourhood-police": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://ajuntament.barcelona.cat/premsa/2017/08/25/english-closing-act-of-the-i-am-not-afraid-demonstration": {
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://ajuntament.barcelona.cat/premsa/2019/08/16/ada-colau-assisteix-a-lacte-en-record-i-homenatge-a-les-victimes-de-latemptat-del-17-dagost-del-2017-a-barcelona/": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://ajuntament.barcelona.cat/premsa/2021/08/17/barcelona-recorda-a-les-victimes-de-latemptat-del-17-dagost-del-2017/": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://ajuntament.barcelona.cat/seguretatiprevencio/en/about-us/collaborating-bodies/local-security-board": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://ajuntament.barcelona.cat/seguretatiprevencio/sites/default/files/2024-07/Pla%20Local%20de%20Seguretat_2024_2027.pdf": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://ajuntament.barcelona.cat/superilles/en/noticia/984608": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://ajuntament.barcelona.cat/transparencia/sites/default/files/06._memoria_general._ordenanca_tanteig_vdfrev.pdf": {
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://ajuntament.barcelona.cat/transparencia/sites/default/files/20240304_habitatge_carta-de-serveis.pdf": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://ajuntament.barcelona.cat/transparencia/sites/default/files/2025-04/1.3_Memoria_economica_OTiR_2025_2_sgn_Censurado.pdf": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://ajuntamentabrera.cat/files/doc6084/resultats-eleccions-al-parlament-de-catalunya-2024.pdf": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://alicanteplaza.es/alicanteplaza/vox-cree-insultante-que-feijoo-diga-que-el-estado-de-las-autonomias-ha-funcionado-ante-la-dana": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://api.idescat.cat/emex/v1/dades.json?id=251207&lang=es": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://api.worldbank.org/v2/country/ESP;MAR/indicator/NY.GDP.PCAP.CD?format=json&date=2022:2025&per_page=20": {
+"lectura": false,
+"comprobado": "2026-11-14"
+},
+"https://api.worldbank.org/v2/country/ESP;MAR/indicator/NY.GDP.PCAP.PP.CD?format=json&date=2022:2025&per_page=20": {
+"lectura": false,
+"comprobado": "2026-11-14"
+},
+"https://apps.fomento.gob.es/BoletinOnline2/sedal/31202000.XLS": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://apps.fomento.gob.es/BoletinOnline2/sedal/31205000.XLS": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://apps.fomento.gob.es/BoletinOnline2/sedal/31306000.XLS": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://apps.fomento.gob.es/BoletinOnline2/sedal/32100500.XLS": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://apps.fomento.gob.es/BoletinOnline2/sedal/32101000.XLS": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://apps.fomento.gob.es/BoletinOnline2/sedal/35101000.XLS": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://ariasmontano.uhu.es/entities/publication/f77935b1-be63-4b49-aba5-33f637ad2971": {
 "lectura": true,
@@ -31,6 +119,10 @@
 "lectura": false,
 "comprobado": "2026-11-13"
 },
+"https://beteve.cat/politica/junta-local-seguretat-barcelona-juliol-2020/": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://beteve.cat/societat/buch-manca-de-mossos-estat/": {
 "lectura": true,
 "comprobado": "2026-11-13"
@@ -42,6 +134,14 @@
 "https://beteve.cat/societat/front-comu-poble-sec-combatre-narcopisos/": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://beteve.cat/societat/juliol-comencen-obres-pacificar-entorns-75-escoles-barcelona/": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://beteve.cat/societat/narcolocal-poble-sec-font-constant-baralles-video/": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://bilbaohiria.com/actualidad/inversion-ferroviaria-espana-por-anos-rajoy-sanchez/": {
 "lectura": true,
@@ -67,6 +167,10 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://cemical.diba.cat/codibasic/fitxers/Estatut_Autonomia.pdf": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://civio.es/el-boe-nuestro-de-cada-dia/2026/08/26/el-gobierno-declara-situacion-de-interes-para-la-seguridad-nacional-la-crisis-de-ceuta-casi-un-mes-despues/": {
 "lectura": true,
 "comprobado": "2026-11-13"
@@ -79,6 +183,14 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://commission.europa.eu/strategy-and-policy/eu-budget/eu-borrower-investor-relations/nextgenerationeu_en": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://confilegal.com/20161103-legal-management-forum-innovacion-humor-paletismo-del-ingles/": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://confilegal.com/20260730-sts-2965-2026-ceuta-rechazo-frontera-cruces-nado/": {
 "lectura": true,
 "comprobado": "2026-11-13"
@@ -90,6 +202,18 @@
 "https://confilegal.com/20261112-calama-prorroga-instruccion-caso-plus-ultra-zapatero-mayo-2027/": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://confilegal.com/wp-content/uploads/2025/06/Circular-FGE-1-2025_firmado.pdf": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://confilegal.com/wp-content/uploads/2026/09/Informe-parte-1.pdf": {
+"lectura": false,
+"comprobado": "2026-11-14"
+},
+"https://conselleriadepresidencia.xunta.gal/es/relacions-institucionais-e-parlamentarias/informe-dos-resultados-electorais": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://constitucion.congreso.es/constitucion-1978/texto-de-la-constitucion": {
 "lectura": true,
@@ -135,9 +259,41 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://diariosocialista.net/2026/11/13/el-gobierno-autoriza-11-860-millones-en-armas-en-un-solo-consejo-de-ministros/": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://diposit.ub.edu/dspace/handle/2445/147446": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://documentos.fedea.net/pubs/ap/2026/ap2026-03.pdf": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://documentos.fedea.net/pubs/ap/2026/ap2026-15.pdf": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/crim_off_cat?format=JSON&lang=EN&unit=P_HTHAB&geo=ES&geo=DE&geo=FR&geo=FI&geo=SE&time=2022&time=2023&time=2024&iccs=ICCS0101&iccs=ICCS0401&iccs=ICCS0501&iccs=ICCS0301": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/crim_off_cat?format=JSON&lang=EN&unit=P_HTHAB&geo=ES&geo=DE&geo=FR&geo=FI&geo=SE&time=2024&iccs=ICCS0502": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/earn_mw_cur?geo=ES&currency=EUR&format=JSON&lang=EN": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/gov_10a_exp?format=JSON&lang=EN&geo=ES&sector=S13&unit=PC_GDP&cofog99=GF02&na_item=TE&sinceTimePeriod=2018": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/gov_10a_exp?geo=ES&geo=EU27_2020&cofog99=GF09&cofog99=GF07&unit=PC_GDP&sector=S13&na_item=TE&format=JSON&lang=EN&sinceTimePeriod=2015": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/gov_10a_main?format=JSON&lang=EN&geo=ES&na_item=TE&sector=S13&unit=MIO_EUR&sinceTimePeriod=2018": {
 "lectura": true,
@@ -151,9 +307,17 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/gov_10a_main?format=JSON&lang=EN&geo=ES&sector=S13&unit=PC_GDP&na_item=TR&sinceTimePeriod=1995": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/gov_10a_taxag?format=JSON&lang=EN&geo=ES&unit=MIO_EUR&na_item=D2_D5_D91_D61_M_D995&na_item=D61&na_item=D2REC&na_item=D5REC&sector=S13&sinceTimePeriod=2018": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/gov_10a_taxag?format=JSON&lang=EN&geo=ES&unit=PC_GDP&na_item=D2_D5_D91_D61_M_D995&sector=S13&sinceTimePeriod=1995": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/gov_10dd_edpt1?format=JSON&lang=EN&geo=ES&na_item=GD&sector=S13&unit=MIO_EUR&sinceTimePeriod=2017": {
 "lectura": true,
@@ -167,9 +331,21 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/gov_10dd_edpt1?format=JSON&lang=EN&geo=PT&geo=IE&geo=EL&geo=ES&sector=S13&unit=PC_GDP&na_item=B9&sinceTimePeriod=2018": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/gov_10dd_edpt1?format=JSON&lang=EN&geo=PT&geo=IE&geo=EL&sector=S13&unit=PC_GDP&na_item=B9&sinceTimePeriod=2018": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/ilc_lvho07c?format=JSON&lang=EN&geo=ES&geo=DE&geo=EU27_2020&sinceTimePeriod=2023": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/ilc_lvho07c?format=JSON&lang=EN&geo=ES&sinceTimePeriod=2005": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_gdp?format=JSON&lang=EN&geo=ES&geo=EU27_2020&na_item=B1GQ&unit=CLV_PCH_PRE&sinceTimePeriod=2023": {
 "lectura": true,
@@ -191,9 +367,21 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/prc_hpi_a?format=JSON&lang=EN&geo=ES&unit=I15_A_AVG&purchase=TOTAL&sinceTimePeriod=2005": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/tipsho60?format=JSON&lang=EN&geo=ES": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://ec.europa.eu/eurostat/statistics-explained/index.php/Railway_safety_statistics_in_the_EU": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Government_expenditure_on_education": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Government_finance_statistics": {
 "lectura": true,
@@ -203,13 +391,25 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://ec.europa.eu/eurostat/web/products-eurostat-news/w/ddn-20251216-2": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://elderecho.com/el-70-de-los-condenados-en-espana-en-2025-fueron-espanoles-y-los-delitos-de-seguridad-vial-fueron-los-mas-numerosos": {
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://elderecho.com/el-boe-hace-oficial-el-nuevo-gobierno-con-cuatro-vicepresidentas-y-22-ministerios": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://elderecho.com/la-edad-legal-de-jubilacion-sube-a-66-anos-y-10-meses": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://elecciones.comunidad.madrid/sites/default/files/total-madrid.pdf": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://eleccionesenespana.es/coaliciones/frente-amplio/": {
 "lectura": true,
@@ -239,6 +439,18 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://en.ara.cat/economy/brussels-takes-spain-to-european-court-for-not-exempting-smes-and-the-self-employed-from-declaring-vat_1_5674905.html": {
+"lectura": false,
+"comprobado": "2026-11-14"
+},
+"https://en.ara.cat/economy/the-judge-charges-the-president-of-sepi-in-the-leire-diez-case_1_5783733.amp.html": {
+"lectura": false,
+"comprobado": "2026-11-14"
+},
+"https://en.ara.cat/politics/abalos-maintains-that-he-has-suffered-political-and-predetermined-trial_1_5779479.html": {
+"lectura": false,
+"comprobado": "2026-11-14"
+},
 "https://en.ara.cat/politics/colau-s-broad-front-is-presented-in-catalonia-we-will-fry-the-posh-people-with-taxes_1_5903199.html": {
 "lectura": false,
 "comprobado": "2026-11-13"
@@ -251,6 +463,10 @@
 "lectura": false,
 "comprobado": "2026-11-13"
 },
+"https://en.ara.cat/politics/the-valencian-high-court-of-justice-rejects-charging-mazon-now_1_5679874.amp.html": {
+"lectura": false,
+"comprobado": "2026-11-14"
+},
 "https://en.ara.cat/politics/yolanda-diaz-raises-her-voice-regarding-the-cerdan-case-we-are-not-the-same-the-problem-is-the-pp-and-the-psoe_1_5419085.html": {
 "lectura": false,
 "comprobado": "2026-11-13"
@@ -258,6 +474,10 @@
 "https://en.ara.cat/society/the-judicial-ordeal-of-the-colau-government-is-over_1_5313130.html": {
 "lectura": false,
 "comprobado": "2026-11-13"
+},
+"https://en.le360.ma/society/ceuta-protests-turn-violent-as-migrant-camps-attacked-aid-convoy-blocked_AKN3LR736FFC3DHFG6BFF6XGKQ/": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://en.wikipedia.org/wiki/2016_PSOE_crisis": {
 "lectura": true,
@@ -275,6 +495,10 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://en.wikipedia.org/wiki/Deutsche_Bahn": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://en.wikipedia.org/wiki/Jos%C3%A9_Luis_%C3%81balos": {
 "lectura": true,
 "comprobado": "2026-11-13"
@@ -287,9 +511,17 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://enlargement.ec.europa.eu/news/eu-opens-accession-negotiations-ukraine-internal-market-competitiveness-and-inclusive-growth-2026-10-13_en": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://es-us.noticias.yahoo.com/leire-d%C3%ADez-niega-v%C3%ADnculos-santos-131226617.html": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://es.ara.cat/economia/cuentas-publicas/hacienda-ajustado-irpf-inflacion-ultimos-20-anos_1_5698298.html": {
+"lectura": false,
+"comprobado": "2026-11-14"
 },
 "https://es.ara.cat/economia/inmobiliario/precio-vivienda-espana-crece-cerca-tres-veces-salarios-ano_1_5866787.html": {
 "lectura": false,
@@ -311,6 +543,14 @@
 "lectura": false,
 "comprobado": "2026-11-13"
 },
+"https://es.ara.cat/politica/colau-he-decidido-no-ministra-decision-totalmente-tomada_1_4839092.html": {
+"lectura": false,
+"comprobado": "2026-11-14"
+},
+"https://es.ara.cat/politica/dicen-encuestas-elecciones-espanolas-29-n_1_5874092.html": {
+"lectura": false,
+"comprobado": "2026-11-14"
+},
 "https://es.ara.cat/politica/elecciones-generales/colau-vuelve-x-cinco-anos-despues-aceptar-entrevista-jordi-wild_1_5884799.html": {
 "lectura": false,
 "comprobado": "2026-11-13"
@@ -318,6 +558,10 @@
 "https://es.ara.cat/politica/elecciones-generales/frente-amplio-colau-presenta-cataluna-freiremos-impuestos-pijos_1_5903201.html": {
 "lectura": false,
 "comprobado": "2026-11-13"
+},
+"https://es.ara.cat/politica/elecciones-generales/marcial-dorado-relacion-tenia-feijoo_1_4757899.html": {
+"lectura": false,
+"comprobado": "2026-11-14"
 },
 "https://es.ara.cat/politica/feijoo-explora-mocion-censura-socios-sanchez-le-dan-espalda_1_5428803.amp.html": {
 "lectura": false,
@@ -327,6 +571,10 @@
 "lectura": false,
 "comprobado": "2026-11-13"
 },
+"https://es.ara.cat/politica/finalidad-legitima-explicita-razonable-claves-sentencia_1_5423708.html": {
+"lectura": false,
+"comprobado": "2026-11-14"
+},
 "https://es.ara.cat/politica/gobierno-ayuso-pago-6-3-millones-atico-lujo-madrid_1_5817231.html": {
 "lectura": false,
 "comprobado": "2026-11-13"
@@ -335,9 +583,25 @@
 "lectura": false,
 "comprobado": "2026-11-13"
 },
+"https://es.ara.cat/politica/gobierno-sanchez-rinde-cuentas-26-dias-despues-crisis-ceuta_1_5831446.html": {
+"lectura": false,
+"comprobado": "2026-11-14"
+},
+"https://es.ara.cat/politica/juez-pide-informacion-doce-bancos-rastrear-pagos-psoe-vinculados-caso-leire_1_5813838.html": {
+"lectura": false,
+"comprobado": "2026-11-14"
+},
+"https://es.ara.cat/politica/le-queda-pendiente-ada-colau_129_5872893.html": {
+"lectura": false,
+"comprobado": "2026-11-14"
+},
 "https://es.ara.cat/politica/lider-desokupa-no-vota-vox-toros_1_5237441.html": {
 "lectura": false,
 "comprobado": "2026-11-13"
+},
+"https://es.ara.cat/politica/piensan-franquismo-bueno-bueno_129_5533086.html": {
+"lectura": false,
+"comprobado": "2026-11-14"
 },
 "https://es.ara.cat/politica/policia-nacional-acusa-nucleo-nacional-entrenarse-ucrania-preparar-levantamiento-armado_1_5906770.html": {
 "lectura": false,
@@ -346,6 +610,18 @@
 "https://es.ara.cat/politica/pp-arrasa-obtiene-mayoria-absoluta-andalucia_1_4409041.html": {
 "lectura": false,
 "comprobado": "2026-11-13"
+},
+"https://es.ara.cat/politica/pp-recurre-indultos-supremo_1_4038288.html": {
+"lectura": false,
+"comprobado": "2026-11-14"
+},
+"https://es.ara.cat/politica/pp-vox-llegan-acuerdo-extremadura_1_5709797.html": {
+"lectura": false,
+"comprobado": "2026-11-14"
+},
+"https://es.ara.cat/politica/pp-vuelve-liar-pensiones-esther-munoz-dice-sistema-colapsara_1_5879033.html": {
+"lectura": false,
+"comprobado": "2026-11-14"
 },
 "https://es.ara.cat/politica/sanchez-anunciara-hoy-nuevas-medidas-genocidio-gaza_1_5490067.html": {
 "lectura": false,
@@ -387,6 +663,10 @@
 "lectura": false,
 "comprobado": "2026-11-13"
 },
+"https://es.ara.cat/sociedad/espana-dedica-mitad-presupuesto-francia-alemania-mantenimiento-alta-velocidad_1_5894680.html": {
+"lectura": false,
+"comprobado": "2026-11-14"
+},
 "https://es.ara.cat/sociedad/inmigracion/extranjeros-cometen-delitos-graves-permisos_130_4934748.html": {
 "lectura": false,
 "comprobado": "2026-11-13"
@@ -395,17 +675,57 @@
 "lectura": false,
 "comprobado": "2026-11-13"
 },
+"https://es.ara.cat/sociedad/movilidad/fiscalia-europea-investiga-posible-fraude-obras-alta-velocidad-accidente-urda_1_5901934.html": {
+"lectura": false,
+"comprobado": "2026-11-14"
+},
 "https://es.ara.cat/sociedad/puerta-puerta-dobla-recogida-selectiva-sant-andreu-palomar-basuras_1_4046752.html": {
 "lectura": false,
 "comprobado": "2026-11-13"
+},
+"https://es.ara.cat/sociedad/sucesos/renfe-trabaja-limitar-40km-h-reanudacion-tren-falla-sistema-seguridad_1_5897809.html": {
+"lectura": false,
+"comprobado": "2026-11-14"
+},
+"https://es.ara.cat/sociedad/vivienda/ayuntamiento-barcelona-entidad-social-habitat-3-compran-casa-orsola_1_5277907.html": {
+"lectura": false,
+"comprobado": "2026-11-14"
 },
 "https://es.euronews.com/2025/01/24/hizo-elon-musk-un-saludo-nazi-ante-los-seguidores-de-trump": {
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://es.euronews.com/2025/09/08/leire-diez-niega-tener-vinculos-con-santos-cerdan-y-pedro-sanchez-en-la-comision-del-caso-": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://es.euronews.com/2025/09/28/la-flotilla-esta-en-aguas-internacionales-sobrevolada-por-drones": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://es.euronews.com/2025/10/03/las-huelgas-generales-y-las-protestas-perturbaran-los-desplazamientos-en-italia": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://es.euronews.com/2025/12/04/espana-suspende-su-participacion-en-el-festival-de-eurovision": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://es.euronews.com/2026/05/20/la-ue-aprueba-un-acuerdo-comercial-con-eeuu-pese-a-la-incertidumbre-transatlantica": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://es.euronews.com/2026/05/27/que-dice-el-auto-judicial-que-situa-a-cerdan-al-frente-de-la-presunta-trama-vinculada-al-p": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://es.euronews.com/2026/06/03/pp-y-vox-cierran-su-acuerdo-de-gobierno-en-castilla-y-leon-para-investir-a-manueco": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://es.euronews.com/2026/06/26/trump-amenaza-a-europa-con-aranceles-del-100-por-la-tasa-digital": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://es.euronews.com/2026/07/08/puede-trump-cortar-unilateralmente-su-comercio-con-espana": {
 "lectura": true,
@@ -435,6 +755,18 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://es.euronews.com/2026/09/17/eurocamara-responsabiliza-marruecos-asalto-masivo-ceuta-rechazo-socialistas": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://es.euronews.com/2026/09/27/espana-cumple-1000-dias-sin-nuevos-presupuestos-es-un-hurto-a-los-ciudadanos": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://es.euronews.com/2026/09/27/la-manifestacion-por-maricarmen-y-el-problema-de-la-vivienda-acaba-en-una-acampada-en-sol-": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://es.euronews.com/2026/10/01/espana-ue-reglamento-retornos-inmigrantes-deportaciones-ceuta": {
 "lectura": true,
 "comprobado": "2026-11-13"
@@ -447,9 +779,25 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://es.euronews.com/2026/10/03/casi-500000-personas-protestan-en-madrid-por-la-crisis-de-la-vivienda-en-espana": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://es.euronews.com/2026/10/04/sanchez-estudia-convocar-elecciones-generales-el-proximo-29-de-noviembre": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://es.euronews.com/2026/10/06/calendario-elecciones-generales-29n-fechas-clave-voto-correo-campana": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://es.euronews.com/2026/10/08/elecciones-espana-presupuesto-superara-270-millones": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://es.euronews.com/2026/10/19/nomina-pensiones-bate-records-mientras-jubilacion-del-baby-boom-tensiona-cuentas": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://es.euronews.com/2026/10/30/el-ministro-de-transportes-descarta-dimitir-accidente-urda": {
 "lectura": true,
@@ -458,6 +806,14 @@
 "https://es.euronews.com/2026/11/03/ucrania-asegura-que-hungria-no-bloquea-las-negociaciones-de-adhesion-a-la-union-europea": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://es.euronews.com/2026/11/04/sanchez-nombra-a-cuerpo-ministro-de-transporte-tras-la-dimision-de-oscar-puente": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://es.euronews.com/2026/11/06/la-fiscalia-europea-investiga-un-posible-fraude-con-fondos-de-la-ue-tras-el-accidente-de-u": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://es.euronews.com/2026/11/10/desmantelamiento-campamento-puerto-ceuta-acelera-retornos-marruecos": {
 "lectura": true,
@@ -471,9 +827,21 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://es.euronews.com/2026/11/13/psoe-denuncia-fiscalia-supuestos-pagos-pp-koldo-negarlos-feijoo": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://es.euronews.com/business/2026/03/03/los-ataques-iran-amenazan-crecimiento-del-pib-ee-uu-las-perspectivas-de-inflacion": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://es.euronews.com/my-europe/2026/07/02/117-millones-de-solicitudes-espana-bate-su-record-historico-de-regularizacion-de-migrantes": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://es.euronews.com/my-europe/2026/07/14/caso-leire-diez-la-uco-confirma-pagos-del-psoe-por-valor-de-43225-euros-a-traves-de-interm": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://es.euronews.com/my-europe/2026/08/06/espana-50-millones-habitantes-1-cada-5-nacio-extranjero": {
 "lectura": true,
@@ -490,6 +858,10 @@
 "https://es.wikipedia.org/wiki/Ada_Colau": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://es.wikipedia.org/wiki/Adif": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://es.wikipedia.org/wiki/Alberto_N%C3%BA%C3%B1ez_Feij%C3%B3o": {
 "lectura": true,
@@ -518,6 +890,10 @@
 "https://es.wikipedia.org/wiki/Crisis_migratoria_de_Ceuta_de_2026": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://es.wikipedia.org/wiki/Delito_fiscal": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://es.wikipedia.org/wiki/Demograf%C3%ADa_de_Espa%C3%B1a": {
 "lectura": true,
@@ -635,6 +1011,30 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://estadisticasdecriminalidad.ses.mir.es/publico/portalestadistico/dam/jcr:7d3776cd-9ca4-4c02-8ca4-96b2571dbee4/Balance%20de%20Criminalidad%20Cuarto%20Trimestre%202025.pdf": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://estadisticasdecriminalidad.ses.mir.es/sec/jaxiPx/files/_px/es/csv_c/DatosBalanceAnt/l0/1209012.csv_c?nocab=1": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://estadisticasdecriminalidad.ses.mir.es/sec/jaxiPx/files/_px/es/csv_c/DatosBalanceAnt/l0/1309012.csv_c?nocab=1": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://estadisticasdecriminalidad.ses.mir.es/sec/jaxiPx/files/_px/es/csv_c/DatosBalanceAnt/l0/69012.csv_c?nocab=1": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://euroweeklynews.com/2021/12/20/ave-links-madrid-with-galicia-after-20-years/": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://euroweeklynews.com/2026/11/05/mercadona-boss-climbs-to-third-as-spains-richest-see-fortunes-hit-e300bn/": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://facthem.es/claim/la-crisis-migratoria-de-ceuta-causo-141-fallecidos-1ff35556.html": {
 "lectura": true,
 "comprobado": "2026-11-13"
@@ -643,6 +1043,10 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://forbes.es/economia/830463/sanchez-quiere-presupuestos-para-2026-pero-defiende-los-prorrogados-le-sientan-bien-a-la-economia/": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://forbes.es/economia/893652/los-desahucios-caen-un-11-en-2025-hasta-los-25-540-segun-cgpj/": {
 "lectura": true,
 "comprobado": "2026-11-13"
@@ -650,6 +1054,10 @@
 "https://forbes.es/ultima-hora/970458/los-inmigrantes-aportaron-17-puntos-al-alza-del-pib-espanol-entre-2022-y-2025-y-05-puntos-al-pib-per-capita/": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://fr.wikipedia.org/wiki/SNCF_Réseau": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://fundaciondisenso.org/wp-content/uploads/2023/01/Los-retos-de-la-vivienda-en-Espana-en-clave-europea.pdf": {
 "lectura": true,
@@ -687,13 +1095,33 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://hj.tribunalconstitucional.es/es/Resolucion/GetDocumentResolucion/24664": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://hj.tribunalconstitucional.es/es/Resolucion/GetDocumentResolucion/31403": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://ine.es/dyngs/Prensa/CNTR4T25.htm?print=1": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://ine.es/dyngs/Prensa/ECAECM2024.htm": {
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://ine.es/dyngs/Prensa/ECP2T26.htm": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://ine.es/dyngs/Prensa/ECP4T25.htm": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://ine.es/dyngs/Prensa/EDES_EMN2025.htm": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://ine.es/dyngs/Prensa/EMCR2024.htm?print=1": {
 "lectura": true,
@@ -702,6 +1130,10 @@
 "https://ine.es/dyngs/Prensa/EPA4T25.htm?print=1": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://ine.es/dyngs/Prensa/EPCAEPCM2025.htm": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://ine.es/dyngs/Prensa/IPVA2024.htm": {
 "lectura": true,
@@ -731,6 +1163,10 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://jamaica-gleaner.com/article/world-news/20250916/politicians-condemn-elon-musks-comments-anti-migrant-rally": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://lamarea.com/2013/04/07/alberto-nunez-feijoo": {
 "lectura": true,
 "comprobado": "2026-11-13"
@@ -751,6 +1187,10 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://maldita.es/buloteca/claim/El-83-de-los-detenidos-por-robos-con-violencia-y-el-91-por-hurtos-en-Barcelona-son-extranjeros": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://maldita.es/buloteca/claim/sanchez-dice-sanchez-dice-que-su-abuelo-franquista-no-sabia-leer-ni-escribir-pero-este-documento-demuestra-que-miente": {
 "lectura": true,
 "comprobado": "2026-11-13"
@@ -759,6 +1199,10 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://maldita.es/desinfo/20260608/leire-diez-se-reunio-con-pedro-sanchez-en-febrero-de-2025-segun-una-de-sus-agendas/": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://maldita.es/desinfo/20260902/policia-nacional-informe-alerta-ceuta-migrantes/": {
 "lectura": true,
 "comprobado": "2026-11-13"
@@ -766,6 +1210,10 @@
 "https://maldita.es/investigaciones/20260806/tribunal-supremo-sentencia-ceuta-marruecos-facebook/": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://maldita.es/malditahemeroteca/20210623/indultos-proces-cataluna-sanchez/": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://maldita.es/malditahemeroteca/20220323/psoe-sahara-referendum-autonomia-marruecos/": {
 "lectura": true,
@@ -783,6 +1231,10 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://maldita.es/malditahemeroteca/20260430/vivienda-social-espana-sanchez/": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://maldita.es/malditateexplica/20210525/ceuta-melilla-fronteras-mas-desiguales/": {
 "lectura": true,
 "comprobado": "2026-11-13"
@@ -794,6 +1246,10 @@
 "https://maldita.es/malditateexplica/20220905/okupas-plazo-48-horas-policia-orden-judicial/": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://maldita.es/malditateexplica/20230623/pactos-psoe-bildu/": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://maldita.es/malditateexplica/20231120/ministros-gobierno-psoe-sumar/": {
 "lectura": true,
@@ -839,6 +1295,10 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://maldita.es/malditobulo/20251027/extranjeros-49-delitos-cataluna/": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://maldita.es/malditobulo/20260120/los-maquinistas-pidieron-hace-cinco-meses-reducir-la-velocidad-en-el-tramo-en-el-que-se-ha-producido-el-accidente-de-adamuz-por-el-estado-de-la-via/": {
 "lectura": true,
 "comprobado": "2026-11-13"
@@ -847,6 +1307,10 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://maldita.es/malditodato/20190812/es-falso-que-ada-colau-haya-puesto-mas-agentes-de-policia-en-barcelona-como-decia-la-alcaldesa-en-campana-electoral/": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://maldita.es/malditodato/20200112/el-nuevo-gobierno-paritario-y-el-tercero-mas-numeroso-de-la-historia/": {
 "lectura": true,
 "comprobado": "2026-11-13"
@@ -854,6 +1318,10 @@
 "https://maldita.es/malditodato/20230529/resultados-comunidad-madrid/": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://maldita.es/malditodato/es-falso-que-los-hurtos-y-los-robos-son-mas-del-90-de-los-delitos-en-barcelona-como-dice-ada-colau": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://maldita.es/prebunking/20260710/ingreso-minimo-vital-espa%C3%B1oles-extranjeros/": {
 "lectura": true,
@@ -867,6 +1335,10 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://metropoliabierta.elespanol.com/informacion-municipal/20230617/jaume-collboni-nuevo-alcalde-de-barcelona-se-cierra-la-etapa-colau/772172840_0.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://metropoliabierta.elespanol.com/sucesos/20230615/balance-de-la-inseguridad-en-barcelona-criminalidad-se-dispara-los-ultimos-ocho-anos/771672967_0.html": {
 "lectura": true,
 "comprobado": "2026-11-13"
@@ -878,6 +1350,14 @@
 "https://misionesonline.net/2025/01/13/amnistia-internacional-lanza-duras-criticas-al-protocolo-antipiquetes-de-milei-observamos-el-uso-abusivo-y-desproporcionado-de-gases-lacrimogenos-y-balas-de-goma/": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://mptmd.gob.es/content/dam/mpt/delegaciones_gobierno/informe-evaluacion/2024/Balance%20de%20situaci%C3%B3n%20de%20efectivos.pdf": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://naciodigital.cat/economia/el-lloguer-mitja-a-barcelona-arriba-als-1160-euros-al-mes.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://naciodigital.cat/internacional/espanya-i-15-paisos-amenacen-israel-amb-la-rendicio-de-comptes-si-dete-o-ataca-els-integrants-de-la-flotilla.html": {
 "lectura": true,
@@ -891,6 +1371,14 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://naciodigital.cat/politica/el-psc-recupera-amb-autoritat-lhegemonia-municipal.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://naciodigital.cat/politica/els-vots-dels-comuns-i-el-pp-fan-alcalde-collboni.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://naciodigital.cat/politica/feijoo-enceta-cordialitat-amb-sanchez-sobre-a-renovar-el-cgpj-pero-refreda-el-pacte-economic.html": {
 "lectura": true,
 "comprobado": "2026-11-13"
@@ -898,6 +1386,18 @@
 "https://naciodigital.cat/societat/la-preocupacio-per-la-immigracio-i-la-inseguretat-sestanca-molt-per-sota-de-lhabitatge.html": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://news.un.org/en/story/2026/06/1167790": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://noticias.juridicas.com/actualidad/noticias/20879-real-decreto-126-2026:nuevo-salario-minimo-interprofesional-para-2026/": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://noticias.juridicas.com/actualidad/noticias/9285-las-15-claves-de-la-reforma-del-codigo-penal/": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://novaramedia.com/2025/09/02/italian-dockworkers-threaten-to-shut-down-all-of-europe-if-gaza-aid-flotilla-is-blocked/": {
 "lectura": true,
@@ -923,6 +1423,18 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://orain.eus/en/politika/2025/10/28/after-the-breakup-of-junts-what-now/": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://orain.eus/en/politika/2026/06/05/sanchez-says-he-didnt-support-diezs-walks-he-didnt-know-about-them-and-even-if-he-had-he-wouldnt-have-accepted-them/": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://orain.eus/en/politika/2026/07/22/psoe-sumar-pactan-prorrogar-2-anos-los-alquileres-acaban-antes-del-30-junio-2028/": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://orain.eus/es/politica/2016/10/01/pedro-sanchez-dimite-secretario-general-psoe/": {
 "lectura": true,
 "comprobado": "2026-11-13"
@@ -930,6 +1442,10 @@
 "https://orain.eus/es/politica/2016/10/29/pedro-sanchez-entrega-su-acta-diputado/": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://orain.eus/es/politica/2017/06/15/patxi-lopez-odon-elorza-nueva-ejecutiva-psoe-sanchez/": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://orain.eus/es/politica/2017/10/10/las-cargas-policiales-produjeron-218-heridos-barcelona-1o/": {
 "lectura": true,
@@ -939,6 +1455,10 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://orain.eus/es/politica/2019/07/18/investidura-pedro-sanchez-veta-pablo-iglesias-18-julio-2019/": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://orain.eus/es/politica/2021/05/04/resultados-elecciones-madrid-4-mayo-2021-victoria-pp/": {
 "lectura": true,
 "comprobado": "2026-11-13"
@@ -946,6 +1466,30 @@
 "https://orain.eus/es/politica/2022/05/02/espionaje-politico-de-pegasus-los-telefonos-moviles-de-pedro-sanchez-y-margarita-robles-infectados/": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://orain.eus/es/politica/2023/07/23/resultados-elecciones-generales-al-congreso-y-senado-en-espana-2023/": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://orain.eus/es/politica/2023/07/24/el-pp-logra-mayoria-absoluta-en-senado/": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://orain.eus/es/politica/2023/11/20/composicion-del-nuevo-gobierno-de-pedro-sanchez-reparto-de-ministerios-y-vicepresidencias-hoy-20-noviembre/": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://orain.eus/es/politica/2024/02/27/abalos-anuncia-que-no-renuncia-al-acta-de-diputado-en-congreso-de-diputados/": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://orain.eus/es/politica/2024/05/12/resultados-de-elecciones-al-parlamento-de-cataluna-12-mayo-2024/": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://orain.eus/es/politica/2024/06/20/imanol-pradales-elegido-lehendakari-con-votos-del-pnv-y-pseee/": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://orain.eus/es/politica/2025/06/12/santos-cerdan-dimite-como-secretario-de-organizacion-del-psoe-y-entregara-acta-de-diputado/": {
 "lectura": true,
@@ -955,6 +1499,10 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://orain.eus/es/politica/2026/05/27/es-el-caso-leire-diez-investiga-el-juez-pedraz/": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://orain.eus/es/politica/2026/08/04/marlaska-asegura-han-regresado-marruecos-70-000-las-72-000-personas-entraron-ceuta/": {
 "lectura": true,
 "comprobado": "2026-11-13"
@@ -963,17 +1511,45 @@
 "lectura": false,
 "comprobado": "2026-11-13"
 },
+"https://orain.eus/es/politica/elecciones/elecciones-generales/2019/11/10/resultados-elecciones-generales-10n-el-psoe-gana-derecha-sube/": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://pahbarcelona.org/wp-content/uploads/2018/02/informe-2-a%C3%B1os-ada-colau-pahbcn.pdf": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://pahbarcelona.org/wp-content/uploads/2019/05/BComu-Resposta-demandes-PAH-Municipals-2019.pdf": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://papelea.com/es/leyes/codigo-penal/libro-ii_titulo-xiii-bis": {
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://periscopiofiscalylegal.pwc.es/wp-content/uploads/2024/02/Se-aprueba-el-Salario-Minimo-Interprofesional-para-2024-v.f.pdf": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://planderecuperacion.gob.es/noticias/el-gobierno-aprueba-planes-integrales-de-desarrollo-socioeconomico-para-ceuta-y-melilla": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://policy.trade.ec.europa.eu/eu-trade-relationships-country-and-region/countries-and-regions/morocco_en": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://politica.elpais.com/politica/2016/10/29/actualidad/1477735635_217414.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://press.un.org/en/2026/sc16498": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://primicias.ec/internacional/pedro-sanchez-convoca-elecciones-generales-espana-134126/": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://psicologiaymente.com/social/principios-propaganda-goebbels": {
 "lectura": true,
@@ -982,6 +1558,10 @@
 "https://pymesmagazine.es/actualidad/los-autonomos-superan-por-primera-vez-los-35-millones-mientras-espana-alcanza-un-nuevo-record-de-afiliacion/": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://railway-news.com/spain-madrid-murcia-high-speed-railway-line-opens": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://realadvisor.es/es/precios-viviendas/municipio-manresa": {
 "lectura": true,
@@ -995,6 +1575,18 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://resultados2020.xunta.gal/resultados/0/galicia": {
+"lectura": false,
+"comprobado": "2026-11-14"
+},
+"https://revista.seg-social.es/-/afiliacion-extranjeros-octubre-2026": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://revista.seg-social.es/-/afiliacion-octubre-2026": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://revista.seg-social.es/-/el-ingreso-m%C3%ADnimo-vital-protege-en-octubre-a-cerca-de-2-8-millones-de-personas-que-viven-en-911.274-hogares": {
 "lectura": true,
 "comprobado": "2026-11-13"
@@ -1002,6 +1594,10 @@
 "https://revista.seg-social.es/-/el-permiso-por-nacimiento-y-cuidado-de-menor-ser%C3%A1-de-16-semanas-para-ambos-progenitores-a-partir-de-enero": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://revista.seg-social.es/-/el-plazo-de-presentaci%C3%B3n-de-solicitud-para-la-regularizaci%C3%B3n-extraordinaria-concluye-con-1.174.978-solicitudes-recibidas": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://revistas.uma.es/index.php/boletin-criminologico/article/view/20680": {
 "lectura": false,
@@ -1023,6 +1619,10 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://rtvc.es/canarias-huelga-general-palestina-15-octubre-2025/": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://rtvc.es/casa-47-primer-portal-parque-publico-estatal-vivienda-7-septiembre-2026/": {
 "lectura": true,
 "comprobado": "2026-11-13"
@@ -1030,6 +1630,14 @@
 "https://rtvc.es/debate-investidura-pedro-sanchez-2023/": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://rtvc.es/el-congreso-rechaza-la-reforma-de-la-ley-del-suelo/": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://rtvc.es/el-constitucional-avala-la-ley-de-amnistia-26-junio-2025/": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://rtvc.es/el-pp-logra-mayoria-absoluta-en-andalucia/": {
 "lectura": true,
@@ -1039,13 +1647,29 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://rtvc.es/en-directo-segunda-sesion-debate-de-investidura-de-feijoo": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://rtvc.es/feijoo-toma-posesion-de-su-escano-como-senador/": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://rtvc.es/informe-uco-angel-victor-torres-koldo-garcia-3-noviembre-2025/": {
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://rtvc.es/moreno-reelegido-presidente-andalucia-con-vicepresidencia-vox-3-julio-2026/": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://rtvc.es/oscar-puente-anuncia-su-dimision-como-ministro-de-transportes-3-noviembre-2026/": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://rtvc.es/rajoy-niega-que-triturara-la-ultima-hoja-de-la-contabilidad-b-del-pp-23-abril-2026/": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://rtvc.es/sanchez-mantendra-un-gobierno-con-22-ministerios-cinco-para-sumar/": {
 "lectura": true,
@@ -1067,6 +1691,10 @@
 "lectura": false,
 "comprobado": "2026-11-13"
 },
+"https://serpavi.mivau.gob.es/": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/ADRH102076?nult=4": {
 "lectura": true,
 "comprobado": "2026-11-13"
@@ -1082,6 +1710,30 @@
 "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/ADRH94959?nult=4": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/EPA42962?nult=200": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/2915?nult=1": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/65336?date=20180101:20261101": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/69690?nult=4": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/77019?nult=2": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://static.laregion.es/laregion/public/content/file/original/2026/0909/16/20260730-jigc-3ii-inf-situacion-migratoria-ceuta-pdf.pdf": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://telquel.ma/2026/10/30/sahara-la-russie-torpille-les-avancees-sur-le-sahara_2016033": {
 "lectura": true,
@@ -1102,6 +1754,14 @@
 "https://theobjective.com/aprobado-el-pacto-de-estado-de-violencia-de-genero-con-la-abstencion-de-podemos/": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://theobjective.com/economia/2026-03-31/seguridad-social-cierra-2025-deficit-7-387-millones/": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://theobjective.com/economia/2026-05-21/vivienda-acuerdo-colores-politicos-plan-estatal/": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://theobjective.com/economia/2026-08-04/regularizacion-extraordinaria-262-475-afiliados/": {
 "lectura": true,
@@ -1131,9 +1791,37 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://theobjective.com/el-psoe-gana-las-elecciones-pero-necesita-a-podemos-y-a-los-independentistas-para-gobernar/": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://theobjective.com/espana/2016-10-01/pedro-sanchez-dimite-como-secretario-general-del-psoe/": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://theobjective.com/espana/2021-04-12/ada-colau-deja-twitter-de-forma-indefinida-para-hacer-buena-politica/": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://theobjective.com/espana/2021-05-15/15m-cronologia-de-un-antes-y-un-despues-en-la-politica-en-espana/": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://theobjective.com/espana/2021-06-18/ayuso-es-investida-presidenta-de-madrid-con-los-votos-de-pp-y-vox/": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://theobjective.com/espana/2021-07-12/sanchez-deja-el-psoe-en-manos-de-lastra-y-cerdan-hasta-el-40o-congreso/": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://theobjective.com/espana/2022-01-12/gobierno-oculta-inmigrantes-ceuta-crisis/": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://theobjective.com/espana/2022-04-11/espana-supera-las-50-000-protecciones-a-desplazados-por-la-guerra-en-ucrania/": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://theobjective.com/espana/2022-05-21/feijoo-arropa-a-ayuso-en-el-congreso-del-pp-de-madrid-isabel-es-mas-libre-es-la-presidenta-que-madrid-necesita/": {
 "lectura": true,
@@ -1146,6 +1834,10 @@
 "https://theobjective.com/espana/2023-06-17/collboni-nuevo-alcalde-de-barcelona-gracias-a-los-votos-de-pp-y-el-voto-de-los-de-colau/": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://theobjective.com/espana/2025-06-12/monica-garcia-pide-dimision-cerdan-psoe-explicaciones/": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://theobjective.com/espana/2025-06-18/abalos-licito-primera-obra-mordidas-posesion-ministro/": {
 "lectura": true,
@@ -1195,9 +1887,17 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://theobjective.com/espana/politica/2023-12-28/bildu-alcaldia-pamplona-mocion-psoe/": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://theobjective.com/espana/politica/2024-01-15/colau-candidata-europea-sumar-sustituto/": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://theobjective.com/espana/politica/2024-01-17/diaz-sumar-colau-europa-errejon/": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://theobjective.com/espana/politica/2024-04-17/psoe-200-ataques-sedes-agresiones/": {
 "lectura": true,
@@ -1207,6 +1907,10 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://theobjective.com/espana/politica/2024-05-23/sumar-celebra-retirada-ley-suelo/": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://theobjective.com/espana/politica/2024-10-04/ferraz-primarias-psoe-castilla-y-leon/": {
 "lectura": true,
 "comprobado": "2026-11-13"
@@ -1214,6 +1918,22 @@
 "https://theobjective.com/espana/politica/2025-05-31/sumar-pide-cabeza-cerdan-audios/": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://theobjective.com/espana/politica/2025-06-13/sumar-descarta-salir-gobierno-problema-psoe/": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://theobjective.com/espana/politica/2025-06-16/psoe-expulsa-abalos-expediente/": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://theobjective.com/espana/politica/2025-09-08/espana-consultas-embajadora-israel/": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://theobjective.com/espana/politica/2025-11-20/sumar-caso-cerdan-gobierno/": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://theobjective.com/espana/politica/2026-04-28/sanchez-cerdan-cabreo-vida-abalos-traicion/": {
 "lectura": true,
@@ -1226,6 +1946,14 @@
 "https://theobjective.com/espana/politica/2026-05-06/gobierno-ayuntamientos-regularizacion/": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://theobjective.com/espana/politica/2026-06-27/desregulacion-motosierra-vox-podar-marana-burocratica/": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://theobjective.com/espana/politica/2026-06-29/alusion-abogado-psoe-agenda-leire-partido-querelle/": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://theobjective.com/espana/politica/2026-10-02/saiz-afiliacion-papel-regularizacion/": {
 "lectura": true,
@@ -1251,9 +1979,21 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://theobjective.com/further/espana/2020-01-13/18-ministerios-cuatro-vicepresidencias-y-seis-nuevas-caras-el-rompecabezas-del-nuevo-gobierno/": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://theobjective.com/further/espana/2021-11-03/razones-caida-abalos-doble-vida/": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://theobjective.com/politica/2024-05-30/ley-amnistia-congreso/directo/": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://theobjective.com/rajoy-defiende-ante-el-senado-la-aplicacion-del-articulo-155/": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://theobjective.com/sanchez-respalda-al-gobierno-ante-el-desafio-soberano/": {
 "lectura": true,
@@ -1263,6 +2003,14 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://timesbrasil.com.br/eleicoes-2026/abstencao-eleitoral-cai-para-1921-no-segundo-turno-aponta-tse/": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://un-project.org/votes/resolution/S-RES-2797(2025)": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://valenciaplaza.com/clamor-en-el-psoe-para-que-abalos-deje-el-acta-de-diputado": {
 "lectura": true,
 "comprobado": "2026-11-13"
@@ -1270,6 +2018,18 @@
 "https://valenciaplaza.com/santos-cerdan-confirma-koldo-custodio-avales-sanchez-fue-chofer-psoe": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://valenciaplaza.com/valenciaplaza/abalos-mano-derecha-de-pedro-sanchez-portavoz-interino-del-grupo-socialista": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://valenciaplaza.com/valenciaplaza/nacional/edad-jubilacion-sube-66-anos-y-10-meses-2026-ultimo-ano-transicion-67": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://valenciaplaza.com/valenciaplaza/vox-diez-anos-abascal-punto-iniciar-nuevo-mandato-dirigentes-historicos-fuera": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://vilaweb.cat/noticies/barcelona-citizens-chant-no-tinc-por-as-they-retake-la-rambla": {
 "lectura": true,
@@ -1279,9 +2039,45 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://web.archive.org/web/20240519175708/https://www.boe.es/boe/dias/1975/04/18/pdfs/A08049-08068.pdf": {
+"lectura": false,
+"comprobado": "2026-11-14"
+},
+"https://web.archive.org/web/2025/https://www.boe.es/buscar/act.php?id=BOE-A-2019-3108": {
+"lectura": false,
+"comprobado": "2026-11-14"
+},
+"https://web.archive.org/web/2025/https://www.boe.es/buscar/doc.php?id=BOE-A-2023-12203": {
+"lectura": false,
+"comprobado": "2026-11-14"
+},
+"https://web.archive.org/web/2026/https://boe.es/boe/dias/2025/07/23/pdfs/BOE-A-2025-15292.pdf": {
+"lectura": false,
+"comprobado": "2026-11-14"
+},
+"https://web.archive.org/web/2026/https://boe.es/boe/dias/2025/12/11/pdfs/BOE-A-2025-25270.pdf": {
+"lectura": false,
+"comprobado": "2026-11-14"
+},
+"https://web.archive.org/web/2026/https://www.boe.es/eli/es/rd/2026/04/22/326": {
+"lectura": false,
+"comprobado": "2026-11-14"
+},
+"https://web.archive.org/web/2026/https://www.lamoncloa.gob.es/presidente/biografia/Paginas/index.aspx": {
+"lectura": false,
+"comprobado": "2026-11-14"
+},
+"https://wtop.com/national/2025/01/elon-musk-speaks-at-germanys-afd-campaign-launch-as-thousands-protest-the-far-right-party/": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.3cat.cat/3catinfo/acaba-la-primera-junta-de-seguretat-de-barcelona-del-nou-mandat-de-colau/noticia-amp/2936374/": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://www.3cat.cat/3catinfo/ada-colau-investida-alcaldessa-promet-lleialtat-a-la-ciutadania-de-barcelona/noticia/2670635/": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://www.3cat.cat/3catinfo/barcelona-tindra-un-dels-tres-grans-centres-per-rebre-refugiats-ucrainesos-a-espanya/noticia-amp/3150331/": {
 "lectura": true,
@@ -1295,6 +2091,10 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.3cat.cat/3catinfo/mes-inversio-i-personal-a-renfe-i-adif-les-claus-de-lacord-per-desconvocar-la-vaga-de-trens/noticia-amp/3393758/": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.3cat.cat/3catinfo/pocavergonya-i-llibertat-presos-politics-crits-a-sanchez-a-lhospital-de-sant-pau/noticia/2957250/": {
 "lectura": true,
 "comprobado": "2026-11-13"
@@ -1302,6 +2102,10 @@
 "https://www.3cat.cat/esport3/lefecte-trump-posa-en-perill-la-final-del-mundial-2030-per-a-espanya/noticia/3419403/": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://www.abogacia.es/actualidad/noticias/nuevo-gobierno-de-pedro-sanchez-11-ministras-y-6-ministros-que-toman-posesion-este-jueves/": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://www.actuallynotes.com/propaganda-11-principios-goebbels-aplicados-politica-actual-espanola/": {
 "lectura": true,
@@ -1327,21 +2131,81 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.africanews.com/amp/2026/08/28/police-in-ceuta-clash-with-anti-migrant-protesters-as-tensions-rise/": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.airef.es/wp-content/uploads/2026/04/Presupuestos-iniciales-2026/Informe-Presupuestos-Iniciales-2026.pdf": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.aljazeera.com/economy/2025/6/19/spain-rejects-natos-5-defence-spending-hike-as-counterproductive": {
+"lectura": false,
+"comprobado": "2026-11-14"
+},
 "https://www.aljazeera.com/news/2025/9/8/spain-imposes-total-arms-embargo-on-israel-to-stop-genocide-in": {
 "lectura": false,
 "comprobado": "2026-11-13"
+},
+"https://www.aljazeera.com/news/2026/3/11/spain-removes-ambassador-from-israel-as-opposes-war-on-iran-gaza-genocide": {
+"lectura": false,
+"comprobado": "2026-11-14"
+},
+"https://www.amat.es/wp-content/uploads/2025/11/Informe-sobre-el-Absentismo-Laboral-por-Contingencias-Comunes-CC-en-Espana-de-2018-a-2024.pdf": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.amat.es/wp-content/uploads/2026/06/2026-06-22-Analisis-de-las-Bajas-Laborables-derivadas-de-la-ITCC-Ano-2025.pdf": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://www.americamagazine.org/news/2026/07/31/patti-smith-pope-leo/": {
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.amnesty.org/en/location/middle-east-and-north-africa/morocco-and-western-sahara/report-morocco-and-western-sahara/": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.amnesty.org/es/location/americas/south-america/argentina/report-argentina/": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.apd.cat/en/girona/rodalies-ended-2025-with-only-50-punctuality-the-lowest-figure-of-all-the-cercanias-of-spain_4519_102.html": {
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.apdnoticies.com/en/girona/rodalies-ended-2025-with-only-50-punctuality-the-lowest-figure-of-all-the-cercanias-of-spain_4519_102.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.ara.cat/societat/junta-seguretat-barcelona-investigacio-furts-estrebades-canvis-legislatius-reincidencia-comissaria-placa-catalunya-augment-delictes_1_2597731.html": {
+"lectura": false,
+"comprobado": "2026-11-14"
+},
+"https://www.ara.cat/societat/psoe-reformar-codi-penal-reincidencia-furts-grande-marlaska_1_2646588.html": {
+"lectura": false,
+"comprobado": "2026-11-14"
+},
 "https://www.aragonplay.es/aragonnoticias/espana/consejo-seguridad-nacional-ratifica-crear-mando-unico-abordar-crisis-ceuta.html": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://www.articulo14.es/defensa/el-ejecutivo-aprueba-mas-de-2-500-millones-para-la-modernizacion-de-la-armada-y-la-compra-de-helicopteros-h135-y-h160-20261102.html": {
+"lectura": false,
+"comprobado": "2026-11-14"
+},
+"https://www.articulo14.es/economia/ana-botin-pilar-libano-y-mercedes-daurella-entran-por-primera-vez-en-la-lista-forbes-de-las-mas-ricas-de-espana-20261104.html": {
+"lectura": false,
+"comprobado": "2026-11-14"
+},
+"https://www.articulo14.es/economia/el-deficit-de-la-seguridad-social-duplica-el-gasto-militar-comprometido-con-la-otan-20260123.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.articulo14.es/economia/el-deterioro-de-la-alta-velocidad-en-siete-graficos-20261101.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://www.articulo14.es/economia/el-pib-modera-su-crecimiento-al-06-en-el-tercer-trimestre-una-decima-menos-y-la-inflacion-se-mantiene-en-el-49-20261030.html": {
 "lectura": true,
@@ -1351,9 +2215,17 @@
 "lectura": false,
 "comprobado": "2026-11-13"
 },
+"https://www.articulo14.es/economia/espana-destino-solo-el-16-de-su-gasto-en-alta-velocidad-al-mantenimiento-entre-2018-y-2022-segun-la-ue-20261029.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.articulo14.es/economia/gobierno-refuerza-seguridad-trenes-proteccion-profesionales-urda-tragedia-20261110.html": {
 "lectura": false,
 "comprobado": "2026-11-13"
+},
+"https://www.articulo14.es/economia/las-plazas-de-controladores-de-adif-cayeron-en-2025-a-su-nivel-mas-bajo-desde-2020-20261031.html": {
+"lectura": false,
+"comprobado": "2026-11-14"
 },
 "https://www.articulo14.es/economia/los-impuestos-en-espana-baten-record-con-sanchez-hacienda-recauda-ya-mas-de-325-000-millones-20260409.html": {
 "lectura": false,
@@ -1379,6 +2251,10 @@
 "lectura": false,
 "comprobado": "2026-11-13"
 },
+"https://www.articulo14.es/politica/cuerpo-asumira-de-forma-transitoria-el-ministerio-de-transportes-20261104.html": {
+"lectura": false,
+"comprobado": "2026-11-14"
+},
 "https://www.articulo14.es/politica/el-boe-lo-hace-oficial-asi-es-el-decreto-que-convoca-las-elecciones-generales-del-29n-20261006.html": {
 "lectura": false,
 "comprobado": "2026-11-13"
@@ -1387,6 +2263,10 @@
 "lectura": false,
 "comprobado": "2026-11-13"
 },
+"https://www.articulo14.es/politica/el-gobierno-aprueba-30-millones-de-euros-en-ayudas-urgentes-para-las-victimas-del-accidente-de-urda-20261103.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.articulo14.es/politica/el-pp-pide-a-la-audiencia-nacional-la-imputacion-del-psoe-por-financiacion-ilegal-20261006.html": {
 "lectura": true,
 "comprobado": "2026-11-13"
@@ -1394,6 +2274,14 @@
 "https://www.articulo14.es/politica/el-pp-rechaza-que-el-paso-a-un-lado-de-alberto-duran-tenga-relacion-con-su-reunion-con-koldo-garcia-20261107.html": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://www.articulo14.es/politica/el-psoe-ofrece-un-interes-record-del-375-para-financiar-su-campana-electoral-20261020.html": {
+"lectura": false,
+"comprobado": "2026-11-14"
+},
+"https://www.articulo14.es/politica/elecciones-generales-del-29n-cuando-publicaran-psoe-pp-vox-frente-amplio-y-demas-partidos-sus-programas-electorales-20261110.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://www.articulo14.es/politica/feijoo-metera-igualdad-dentro-de-otros-ministerios-el-ministro-que-lo-lleve-se-encargara-de-otras-cosas-20261023.html": {
 "lectura": true,
@@ -1407,9 +2295,21 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.articulo14.es/politica/pesquisas-pedraz-sobre-psoe-y-financiacion-irregular-20261007.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.articulo14.es/politica/podemos-se-desmarca-de-frente-amplio-y-defiende-su-alianza-con-erc-20261013.html": {
+"lectura": false,
+"comprobado": "2026-11-14"
+},
 "https://www.articulo14.es/politica/por-que-podemos-no-se-va-a-integrar-en-el-frente-amplio-20261013.html": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://www.articulo14.es/politica/pp-vox-y-junts-tumban-los-dos-decretos-de-vivienda-y-asestan-una-dura-derrota-al-gobierno-20261002.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://www.articulo14.es/politica/que-partidos-forman-frente-amplio-integrantes-acuerdos-y-diferencias-con-sumar-20261107.html": {
 "lectura": false,
@@ -1427,13 +2327,33 @@
 "lectura": false,
 "comprobado": "2026-11-13"
 },
+"https://www.articulo14.es/politica/yanes-acredita-que-las-joyas-son-posteriores-al-relato-de-zapatero-y-apunta-a-una-comision-20261101.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.articulo14.es/sociedad/miles-de-personas-claman-por-la-vivienda-en-ciudades-de-toda-espana-y-presionan-a-los-sindicatos-para-convocar-una-huelga-general-20261003.html": {
+"lectura": false,
+"comprobado": "2026-11-14"
+},
+"https://www.asturias.es/bopa/2026/06/23/2026-05104.pdf": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.atlantico.net/articulo/galicia/marta-fernandez-situacion-estaban-cuentas-xunta-era-peor-pensabamos/20090706140158067101.html": {
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.barcelona.cat/habitatge/ca/ajuts-i-serveis/borsa-dhabitatge-de-lloguer": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.bbvaresearch.com/wp-content/uploads/2025/06/Rafael_Domenech_Juan_Ramon_Garcia_Menos_temporalidad_mas_estabilidad_Expansion__WB.pdf": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://www.bbvaresearch.com/wp-content/uploads/2026/01/EPA4T25.pdf": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://www.bde.es/f/webbde/GAP/Secciones/SalaPrensa/NotasInformativas/Briefing_notes/en/notabe230419en.pdf": {
 "lectura": true,
@@ -1471,6 +2391,10 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.bolsamania.com/noticias/economia/economia--amp-sanchez-nombra-a-oscar-puente-nuevo-ministro-de-transportes-y-a-isabel-rodriguez-ministra-de-vivienda--15380418.html": {
+"lectura": false,
+"comprobado": "2026-11-14"
+},
 "https://www.bolsamania.com/noticias/economia/economia--el-45-de-los-ocupados-no-acude-a-su-puesto-de-trabajo-por-incapacidad-temporal-un-73-mas-que-en-2018--21559088.html": {
 "lectura": false,
 "comprobado": "2026-11-13"
@@ -1478,6 +2402,10 @@
 "https://www.bolsamania.com/noticias/economia/economia--la-nomina-del-imv-llego-en-marzo-a-829399-hogares-en-los-que-viven-mas-de-25-millones-de-personas--22270400.html": {
 "lectura": false,
 "comprobado": "2026-11-13"
+},
+"https://www.bolsamania.com/noticias/economia/economia-amp-la-deuda-publica-cierra-2025-en-el-1007-del-pib-tras-caer-un-punto-y-mejora-el-objetivo-del-gobierno--22217329.html": {
+"lectura": false,
+"comprobado": "2026-11-14"
 },
 "https://www.bolsamania.com/noticias_amp/politica/sanchez-no-dimite-ni-convoca-elecciones-pido-perdon-reestructurare-ejecutiva-federal-psoe--19996124.html": {
 "lectura": true,
@@ -1515,9 +2443,17 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.catalannews.com/politics/item/spain-arms-embargo-israel-palestine-genocide-promoters-8-september-2025": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.catalannews.com/society-science/item/court-chamber-trying-pro-independence-leaders-controlled-by-pp-show-leaked-chats": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://www.catalannews.com/society-science/item/former-barcelona-denounces-degrading-treatment-israel-flotilla-6-october-2025": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://www.catalannews.com/society-science/item/sants-train-station-welcoming-hundreds-of-ukrainian-refugees-daily": {
 "lectura": true,
@@ -1526,6 +2462,10 @@
 "https://www.cepc.es/sites/default/files/2021-12/233661983100-102949.pdf": {
 "lectura": false,
 "comprobado": "2026-11-13"
+},
+"https://www.ces.es/documents/10180/5382476/INF_012025.pdf/37703705-5571-1007-c4bf-80c80d60c30e": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://www.ceutaactualidad.com/articulo/actualidad/informe/20260902231320281408.html": {
 "lectura": true,
@@ -1543,6 +2483,18 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.cidob.org/cidob-en-medios/ultraderecha-llama-derechita-abascal-sale-del-rincon-luce-adeptos-jovenes": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.cidob.org/en/lider-politico/pedro-sanchez-perez-castejon": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.cidob.org/lider-politico/ada-colau-ballano": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.cidob.org/publicaciones/poblacion-extranjera-residente-espana-evolucion-caracteristicas-integracion-economica": {
 "lectura": true,
 "comprobado": "2026-11-13"
@@ -1555,9 +2507,77 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.coam.org/media/Default Files/fundacion/biblioteca/revista-arquitectura-100/2000-2008/docs/revista-articulos/revista-arquitectura-2006-n344-pag22-27.pdf": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.comunidad.madrid/transparencia/unidad-organizativa-responsable/planifica-madrid-proyectos-y-obras-sa": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.congreso.es/constitucion/ficheros/c78/cons_espa.pdf": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.congreso.es/constitucion/ficheros/leyes_espa/lo_012_1995.pdf": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.congreso.es/docu/MocCens/10062018_XIILegMocCen.pdf": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.congreso.es/docu/docum/ddocum/dosieres/sleg/legislatura_14/spl_9/pdfs/29.pdf": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.congreso.es/docu/inf_fiscTC/LegXV/251-156.pdf": {
+"lectura": false,
+"comprobado": "2026-11-14"
+},
 "https://www.congreso.es/docu/tramit/LegXV/AT/ATCD_15_PL_20260226.pdf": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://www.congreso.es/es/cem/mociones-de-censura": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.congreso.es/es/cem/sesiones-de-investidura": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.congreso.es/l15p/e10/e_0109652_n_000.pdf": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.congreso.es/l15p/e12/e_0120891_n_000.pdf": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.congreso.es/public_oficiales/L10/CONG/DS/CO/DSCD-10-CO-388.PDF": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.congreso.es/public_oficiales/L12/CONG/DS/PL/DSCD-12-PL-126.PDF": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.congreso.es/public_oficiales/L15/CONG/BOCG/A/BOCG-15-A-70-1.PDF": {
+"lectura": false,
+"comprobado": "2026-11-14"
+},
+"https://www.congreso.es/public_oficiales/L15/CONG/BOCG/B/BOCG-15-B-148-4.PDF": {
+"lectura": false,
+"comprobado": "2026-11-14"
+},
+"https://www.congreso.es/public_oficiales/L15/CONG/DS/CO/DSCD-15-CO-611.PDF": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.congreso.es/public_oficiales/L15/CONG/DS/PL/DSCD-15-PL-5.PDF": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://www.consejogestores.org/noticias/el-boe-publica-el-smi-para-2025-que-se-establece-en-1-184-euros/": {
 "lectura": true,
@@ -1566,6 +2586,10 @@
 "https://www.cope.es/actualidad/economia/noticias/renfe-e-iryo-eliminan-indemnizaciones-retrasos-debidos-limitaciones-velocidad-ouigo-mantiene-20260130_3298155.html": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://www.cope.es/actualidad/espana/noticias/cerco-judicial-legislatura-begona-gomez-zapatero-pasando-abalos-fiscal-general-hermano-david-sanchez-20261005_3448621.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://www.cope.es/actualidad/espana/noticias/moreno-psrm-recuerda-que-fue-rajoy-quien-recorto-mas-13000-efectivos-policia-nacional-guardia-civil-20240216_3150071": {
 "lectura": true,
@@ -1586,6 +2610,10 @@
 "https://www.cronista.com/espana/politica-es/oficial-el-gobierno-prepara-inversiones-de-20000-millones-en-transporte-el-plan-preve-mantenimiento-de-carreteras-mejoras-para-los-trenes-y-autobuses/": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://www.cronista.com/internacionales/pedro-sanchez-adelanta-las-elecciones-en-espana-tras-el-fracaso-de-sus-leyes-para-regular-la-vivienda/": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://www.cuatrecasas.com/es/latam/laboral/art/huelga-general-conflicto-gaza": {
 "lectura": true,
@@ -1655,6 +2683,14 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.democrata.es/actualidad/besteiro-respalda-las-protestas-contra-las-politicas-fascistas-de-vox-pero-se-desmarca-de-la-violencia/": {
+"lectura": false,
+"comprobado": "2026-11-14"
+},
+"https://www.democrata.es/ca/actualitat/l-acces-a-l-habitatge-continua-com-a-principal-preocupacio-per-als-catalans-28-segons-el-ceo/": {
+"lectura": false,
+"comprobado": "2026-11-14"
+},
 "https://www.democrata.es/economia/forbes-ricos-amancio-ortega-botin-iglesias-pino/": {
 "lectura": false,
 "comprobado": "2026-11-13"
@@ -1663,13 +2699,25 @@
 "lectura": false,
 "comprobado": "2026-11-13"
 },
+"https://www.democrata.es/economia/la-investigacion-del-siniestro-de-adamuz-se-alargara-mas-de-un-ano-por-ser-excepcionalmente-complejo/": {
+"lectura": false,
+"comprobado": "2026-11-14"
+},
 "https://www.democrata.es/economia/maquinistas-renfe-convocan-huelga-24-horas-29-octubre-fracasar-negociaciones/": {
 "lectura": false,
 "comprobado": "2026-11-13"
 },
+"https://www.democrata.es/elecciones-generales-espana/cuando-empieza-campana-electoral-29n-dia/": {
+"lectura": false,
+"comprobado": "2026-11-14"
+},
 "https://www.democrata.es/elecciones-generales-espana/feijoo-gobierno-pp-vox-ministros-entrevista/": {
 "lectura": false,
 "comprobado": "2026-11-13"
+},
+"https://www.democrata.es/elecciones-generales-espana/herramientas/resultados-23j": {
+"lectura": false,
+"comprobado": "2026-11-14"
 },
 "https://www.democrata.es/elecciones-generales-espana/microcreditos-partidos-intereses-elecciones-29n/": {
 "lectura": false,
@@ -1687,6 +2735,10 @@
 "lectura": false,
 "comprobado": "2026-11-13"
 },
+"https://www.democrata.es/en/current-events/the-adif-controllers-are-preparing-a-strike-after-urda-they-denounce-that-at-atocha-20-of-the-necessary-staff-is-missing/": {
+"lectura": false,
+"comprobado": "2026-11-14"
+},
 "https://www.democrata.es/en/general-elections-spain/we-can-start-its-primaries-with-irene-montero-while-colau-offers-to-take-a-step-back-to-unite-the-left/": {
 "lectura": false,
 "comprobado": "2026-11-13"
@@ -1694,6 +2746,10 @@
 "https://www.democrata.es/en/politics/ada-colau-urges-sumar-to-leave-the-government-if-the-psoe-does-not-act-after-the-eviction-of-maricarmen/": {
 "lectura": false,
 "comprobado": "2026-11-13"
+},
+"https://www.democrata.es/en/politics/colau-proposes-a-new-tax-to-curb-the-hoarding-of-housing-in-spain/": {
+"lectura": false,
+"comprobado": "2026-11-14"
 },
 "https://www.democrata.es/en/politics/colau-refuses-to-blame-the-workers-and-demands-that-puente-assume-his-responsibility/": {
 "lectura": false,
@@ -1727,9 +2783,25 @@
 "lectura": false,
 "comprobado": "2026-11-13"
 },
+"https://www.democrata.es/politica/decreto-seguridad-ferroviaria-jubilacion-maquinistas/": {
+"lectura": false,
+"comprobado": "2026-11-14"
+},
 "https://www.democrata.es/politica/elma-saiz-avanza-que-el-gobierno-prepara-el-cierre-gradual-de-plazas-temporales-para-inmigrantes-en-ceuta/": {
 "lectura": false,
 "comprobado": "2026-11-13"
+},
+"https://www.democrata.es/politica/feijoo-reconoce-una-fuga-de-indignados-hacia-vox-pero-defiende-que-el-pp-crece-y-atrae-voto-socialista/": {
+"lectura": false,
+"comprobado": "2026-11-14"
+},
+"https://www.democrata.es/politica/frente-amplio-destina-1-6-millones-a-su-campana-y-colau-prepara-actos-en-una-decena-de-comunidades/": {
+"lectura": false,
+"comprobado": "2026-11-14"
+},
+"https://www.democrata.es/politica/irene-montero-insiste-en-que-solo-unas-primarias-abiertas-permiten-un-pacto-con-frente-amplio/": {
+"lectura": false,
+"comprobado": "2026-11-14"
 },
 "https://www.diaridetarragona.com/espana/257246/boe-publica-real-decreto-aprueba-regularizacion-inmigrantes-requisitos-plazos.html": {
 "lectura": true,
@@ -1743,6 +2815,14 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.diaridetarragona.com/espana/270270/cni-alerto-llamamientos-redes-dia-entrada-masiva-ceuta.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.diaridetarragona.com/espana/274261/interrogantes-accidente-toledo-caida-sistema-posible-error-humano.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.diaridetarragona.com/espana/274761/puente-anuncia-inteligencia-artificial-reducir-errores-humanos-red-ferroviaria.html": {
 "lectura": true,
 "comprobado": "2026-11-13"
@@ -1755,9 +2835,29 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.diaridetarragona.com/espana/274820/sanchez-afirma-puente-dado-cara-decision-dimitir-dignifica-espana.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.diaridetarragona.com/espana/275089/policia-nacional-detiene-12-miembros-grupo-neonazi-nucleo-nacional-siete-provincias.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.diaridetarragona.com/internacional/102057/el-permiso-de-paternidad-sera-de-8-semanas-en-2019-y-llegara-a-las-16-en-2021-20181011-0038-jrdt201810110038.html": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://www.diaridetarragona.com/internacional/232753/sanchez-anuncia-una-auditoria-externa-y-una-reestructuracion-en-el-psoe-bd24362021.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.diaridetarragona.com/internacional/232754/santos-cerdan-dimite-de-sus-cargos-en-el-psoe-y-dejara-su-acta-de-diputado-od24360781.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.diaridetarragona.com/sucesos/274306/cronologia-tragedia-ferroviaria-toledo-fallo-seguridad-68-muertos.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://www.diariodecuyo.com.ar/mundo/pedro-sanchez-contra-feijoo-es-usted-para-la-politica-espanola-lo-que-la-criptomoneda-de-milei-para-los-votantes-argentinos-1705585.html": {
 "lectura": true,
@@ -1767,17 +2867,49 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.diariodeleon.es/castilla-y-leon/211219/73866/ave-llega-galicia-convierte-orense-nudo-ferroviario-leon.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.diariodeleon.es/economia/260723/2092107/822-000-inmigrantes-cuentan-permiso-trabajo-despues-haberse-acogido-regularizacion-extraordinaria.html": {
 "lectura": false,
 "comprobado": "2026-11-13"
+},
+"https://www.diariodeleon.es/economia/261010/2099819/guerra-iran-enquista-inflacion-precios-disparados.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.diariodeleon.es/nacional/190815/425609/ayuso-logra-investidura-prometer-cumplira-vox.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://www.diariodeleon.es/nacional/211030/900024/audiencia-nacional-pone-duda-veracidad-m-rajoy-barcenas_amp.html": {
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.diariodeleon.es/nacional/251127/2067600/jose-luis-abalos-koldo-garcia-ingresan-carcel-soto-real.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.diariodeleon.es/nacional/260124/2073353/puente-dimitira.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.diariodeleon.es/nacional/260203/2074474/sindicatos-dicen-mantenimiento-alta-velocidad-seguir-manos-privadas.html": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://www.diariodeleon.es/nacional/260429/2083272/ciaf-remarca-hipotesis-rotura-carril-adamuz.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.diariodeleon.es/nacional/260519/2085477/vivienda-celebra-jueves-sectorial-distribuir-fondos-nuevo-plan-estatal.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.diariodeleon.es/nacional/260611/2087977/tasacion-encargada-juez-estima-1-3-millones-euros-joyas-intervenidas-zapatero.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://www.diariodeleon.es/nacional/260718/2091573/uco-detecta-cerdan-disfruto-familia-323-000-euros-servinabars.html": {
 "lectura": true,
@@ -1799,6 +2931,18 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.diariodeleon.es/nacional/261002/2099098/boe-publica-derogacion-reales-decretos-ley-vivienda-congreso.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.diariodeleon.es/nacional/261005/2099390/deuda-deja-adelanto-electoral.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.diariodeleon.es/nacional/261006/2099432/boe-publica-rd-disolucion-cortes-convocatoria-electoral-29-noviembre.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.diariodeleon.es/nacional/261009/2099772/juez-descarta-imputar-psoe-caso-leire-diez-esperara-practicar-diligencias_amp.html": {
 "lectura": true,
 "comprobado": "2026-11-13"
@@ -1811,6 +2955,14 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.diariodesantiago.es/galicia/reacciones-el-dia-despues-de-los-disturbios-en-a-coruna-reproches-politicos-y-denuncias-por-la-actuacion-policial/": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.diarioestrategia.cl/texto-diario/mostrar/5695401/paises-bajos-afirma-plan-autonomia-marroqui-sahara-occidental-solucion-viable": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.diariojaen.es/espana/pedro-sanchez-anuncia-que-se-destinaran-500-millones-de-euros-para-un-plan-de-integracion-y-ciudadania-BN11495172": {
 "lectura": true,
 "comprobado": "2026-11-13"
@@ -1818,6 +2970,10 @@
 "https://www.diariosigloxxi.com/texto-ep/mostrar/20251120135720/figaredo-vox-no-condena-franquismo-dice-espana-padece-ahora-peor-gobierno-historia": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://www.dsca.gob.es//sites/default/files/prensa/Informe_2_concentracion_inmobiliaria.pdf": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://www.dsca.gob.es/es/comunicacion/notas-prensa/congreso-aprueba-ampliacion-del-gobierno-permisos-nacimiento-cuidados": {
 "lectura": true,
@@ -1842,6 +2998,10 @@
 "https://www.elcorreogallego.es/espana/2026/08/10/gobierno-invertido-79-millones-reforzar-fronteras-ceuta-melilla-133225236.html": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://www.elcorreogallego.es/galicia/2026/10/22/bng-psdeg-defienden-protestas-antifascistas-135636174.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://www.eldebate.com/cine-tv-series/20261113/post-2014-jordi-wild-recordado-pedro-sanchez-alabando-koldo-garcia-cnsm_480566.html": {
 "lectura": true,
@@ -1891,9 +3051,17 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.eldebate.com/espana/20230814/cambiado-programa-vox_133140.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.eldebate.com/espana/20241220/discurso-nadie-debe-olvidar-cuando-abalos-defendio-toma-poder-sanchez-decencia_254942.html": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://www.eldebate.com/espana/20251030/sanchez-comparece-senado-caso-psoe_349905.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://www.eldebate.com/espana/20251119/otra-mentira-sanchez-abuelo-materno-sabia-leer-escribir_356355.html": {
 "lectura": true,
@@ -1902,6 +3070,10 @@
 "https://www.eldebate.com/espana/20251217/juez-moreno-abre-pieza-separada-sobre-financiacion-ilegal-psoe-recibir-pen-drive-pagos-efectivo_366440.html": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://www.eldebate.com/espana/20260224/pp-fija-como-lineas-rojas-proporcionalidad-estabilidad-presupuestaria-respeto-institucional-marco-acuerdos-vox_388642.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://www.eldebate.com/espana/20260609/gobierno-niega-reuniones-entre-sanchez-leire-como-nego-tres-directora-guardia-civil_426818.html": {
 "lectura": true,
@@ -1947,6 +3119,10 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.eldebate.com/espana/defensa/20261105/defensa-moviliza-casi-7000-millones-dos-ultimos-consejos-ministros-fuerzas-armadas_477316.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.eldebate.com/espana/galicia/20260522/galicia-comunidades-envejecidas-europa-cada-tres-gallegos-tendra-65-anos-2039_420426_amp.html": {
 "lectura": true,
 "comprobado": "2026-11-13"
@@ -1955,6 +3131,14 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.eldebate.com/uploads/files/2026/09/09/Informe%20Policia%2028%20de%20julio.pdf": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.eldebate.com/uploads/files/2026/09/17/Texto%20sobre%20Ceuta.pdf": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.eldiario.ec/centro/el-consejo-de-seguridad-de-la-onu-convoca-sesion-de-urgencia-tras-operativo-militar-de-ee-uu-en-venezuela-20260103/": {
 "lectura": true,
 "comprobado": "2026-11-13"
@@ -1962,6 +3146,10 @@
 "https://www.eldiario.es/1_bd4047": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://www.eldiario.es/1_c54c03": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://www.eldiario.es/1_cd4426": {
 "lectura": true,
@@ -1975,6 +3163,18 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.eldiario.es/1_d01fa8": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.eldiario.es/1_d0246f": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.eldiario.es/1_d02a9f": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.eldiario.es/1_d0461b": {
 "lectura": true,
 "comprobado": "2026-11-13"
@@ -1982,6 +3182,14 @@
 "https://www.eldiario.es/andalucia/cadiz/agreden-lider-psoe-sanlucar-barrameda-grito-traidor_1_10671364.amp.html": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://www.eldiario.es/cantabria/ultimas-noticias/ferraz-resuelve-conflicto-cantabria-da-ganadora-herran-eleccion-delegados-congreso-federal_1_11764101.amp.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.eldiario.es/castilla-y-leon/politica/ferraz-suspende-legalidad-calendario-congreso-primarias-castilla-leon-psoe_1_11707887.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://www.eldiario.es/catalunya/Colau-inseguridad-Barcelona-Govern-Mossos_0_896610640.html": {
 "lectura": true,
@@ -1991,9 +3199,17 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.eldiario.es/catalunya/diputado-comuns-felix-alonso-niega-criterios-politicos-contratos-dedo-alcalde-altafulla_1_13305051.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.eldiario.es/catalunya/justicia-archiva-causa-colau-afea-exarquitecto-psc-via-penal_1_10785241.html": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://www.eldiario.es/economia/casa-47-nueva-empresa-publica-vivienda-suelo-echa-andar_1_12842696.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://www.eldiario.es/economia/feijoo-propone-medida-eximir-autonomos-pago-iva-aprobo-ue_1_12698806.html": {
 "lectura": true,
@@ -2043,17 +3259,45 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.eldiario.es/internacional/trump-anuncia-aranceles-adicionales-25-coches-camiones-ue_1_13188968.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.eldiario.es/madrid/investigaciones-muertes-residencias-madrid-avanzan-ayuso-insulta-familiares_1_12946573.amp.html": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://www.eldiario.es/madrid/madrilenos-refuerzan-ayuso-le-dan-anos-extrema-derecha-unico-socio_1_7898562.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://www.eldiario.es/madrid/somos/atico-comprado-gobierno-ayuso-reuniones-no-oficina-destinarse-vivienda_1_13414404.html": {
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.eldiario.es/madrid/vox-promete-contratar-desokupa-alcorcon-si-logra-gobernar-ayuntamiento_1_9757767.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.eldiario.es/navarra/ramon-alzorriz-numero-psn-acuerdo-firmado-eh-bildu-pamplona-avanza-etica-democracia_1_10770254.amp.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.eldiario.es/politica/alberto-nunez-feijoo-breve-biografia-no-gallegos_1_8901349.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.eldiario.es/politica/audiencia-nacional-deja-libertad-condicional-luis-barcenas_1_11907801.amp.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.eldiario.es/politica/feijoo-carga-zapatero-hormiguero-blanquea-dictadura-blanquear-capitales_1_13313278.amp.html": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://www.eldiario.es/politica/feijoo-culpa-escuela-rural-mal-ingles_1_13313786.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://www.eldiario.es/politica/feijoo-disculpas-error-infamia-acabo_1_5635076.html": {
 "lectura": true,
@@ -2071,9 +3315,33 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.eldiario.es/politica/gobierno-sortea-rechazo-pp-vox-junts-logra-prohibir-desahucios-2031-horas-iniciarse-campana_1_13657109.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.eldiario.es/politica/jose-luis-abalos-condenado-carcel-tribunal-supremo_1_13301658.html": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://www.eldiario.es/politica/juez-pedraz-abre-puerta-imputar-psoe-caso-leire-diez-permitir-analisis-seis-cuentas-bancarias_1_13420318.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.eldiario.es/politica/leire-diez-declara-mantuvo-reuniones-cerdan-periodista-niega-vinculacion-psoe_1_12775483.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.eldiario.es/politica/pedro-sanchez_1_1351680.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.eldiario.es/politica/perder-alcaldia-pamplona-reputacion-sola-frase_129_10800224.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.eldiario.es/politica/primer-juez-caso-leire-diez-eleva-audiencia-nacional-investiga-personas-jerarquia-trama_1_13445330.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://www.eldiario.es/politica/robles-defiende-labor-cni-ceuta-descarta-marruecos-participase-asalto-autogestion-individuos_1_13465716.html": {
 "lectura": true,
@@ -2083,13 +3351,25 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.eldiario.es/politica/sanchez-reafirma-2-1-gasto-militar-suficiente-pese-dudas-otan-no-arbitrario_1_12414062.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.eldiario.es/politica/sumar-relativiza-impacto-entrada-abalos-prision-pide-psoe-investigue-caiga-caiga_1_12806248.html": {
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.eldiario.es/politica/tribunal-supremo-consagra-existencia-financiacion-irregular-pp-durante-decadas_1_6293137.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.eldiario.es/politica/vox-anima-pp-mocion-censura-sanchez-psicopata_1_8127719.html": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://www.eldiario.es/politica/vox-autonomias-extrema-derecha_1_1165337.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://www.eldiario.es/vertele/videos/actualidad/lasexta-senala-imprecisiones-feijoo-hormiguero-migrantes-cobran-imv-multiplicado-3-cifra-oficial_7_13317252.html": {
 "lectura": true,
@@ -2123,13 +3403,25 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.elespanol.com/espana/20220521/congreso-pp-madrid-alberto-nunez-feijoo-isabel/674282567_10.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.elespanol.com/espana/20260503/koldo-mintio-supremo-numero-personal-presidente-sanchez-guardado-movil-numero/1003744230262_0.html": {
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.elespanol.com/espana/20260701/policia-calcula-migrantes-no-espana-colado-regularizacion-sanchez/1003744305705_0.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.elespanol.com/espana/20260727/anos-despues-psoe-dice-trabajar-ley-prostitucion-feministas-no-creen-amigos-sanchez-interesa/1003744331442_0.html": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://www.elespanol.com/espana/20260804/marlaska-sube-cifra-migrantes-irregulares-entraron-ceuta-niega-existencia-informes-cni/1003744343542_0.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://www.elespanol.com/espana/20260806/extrema-debilidad-sanchez-permite-infantino-negociar-entrega-marruecos-final-mundial/1003744345140_0.html": {
 "lectura": true,
@@ -2139,9 +3431,21 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.elespanol.com/espana/politica/20260228/sanchez-pronuncia-ataques-rechazamos-accion-militar-unilateral-eeuu-israel/1003744150050_0.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.elespanol.com/espana/politica/20260606/negacion-sanchez-notas-leire-cuestionan-no-andanzas-nunca-tolerado/1003744275524_0.html": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://www.elespanol.com/espana/politica/20260614/cuca-gamarra-sanchismo-estudiara-movimiento-ocupado-poder-lucrarse-tramas-criminales/1003744282442_0.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.elespanol.com/espana/politica/20260629/tellado-imputacion-presidenta-sepi-hoy-dia-psoe-imputados-diputados/1003744304113_0.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://www.elespanol.com/espana/politica/20260729/vivas-reclama-gobierno-mando-unico-desbordarse-ceuta-migrantes-semana/1003744337847_0.html": {
 "lectura": true,
@@ -2167,6 +3471,14 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.elespanol.com/espana/politica/20261110/feijoo-acusa-sanchez-no-respetar-muertos-urda-lleva-juez-difamacion-koldo-pp/1003744453358_0.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.elespanol.com/espana/politica/20261113/feijoo-gusta-jordi-wild-ingles-importante-admito-no-hecho-esfuerzos-insulto-ningun-idioma/1003744456829_0.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.elespanol.com/espana/tribunales/20260510/doce-causas-abiertas-meses-legislatura-calvario-judicial-queda-sanchez-despues-urnas/1003744239160_0.html": {
 "lectura": true,
 "comprobado": "2026-11-13"
@@ -2191,9 +3503,17 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.elespanol.com/invertia/economia/macroeconomia/20260502/gobierno-avanza-bruselas-no-ajustara-irpf-inflacion-ingresara-anuales-extra-via/1003744230492_0.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.elespanol.com/invertia/empresas/20260527/sepi-inflo-empleos-plus-ultra-cuota-mercado-minimizo-crisis-financiera-aprobar-rescate/1003744258402_0.html": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://www.elespanol.com/invertia/empresas/energia/20260922/redeia-anuncia-cable-submarino-conecta-sistema-electrico-peninsular-ceuta-operativo/1003744391932_0.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://www.elespanol.com/invertia/empresas/turismo/20251107/sepi-recuperado-rescates-empresas-covid-doble-previsto-devolucion-air-europa/1003744001957_0.html": {
 "lectura": true,
@@ -2202,6 +3522,10 @@
 "https://www.elespanol.com/invertia/observatorios/movilidad/20260127/gasto-real-mantener-red-alta-velocidad-cae-respecto-anos-anteriores-liberalizacion-ferroviaria/1003744100044_0.html": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://www.elespanol.com/invertia/observatorios/movilidad/20260428/guardia-civil-confirma-no-fallos-trenes-iryo-alvia-analisis-cajas-negras-videos/1003744225164_0.amp.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://www.elespanol.com/invertia/observatorios/movilidad/20260717/alta-velocidad-duplica-numero-viajeros-rebaja-precios-liberalizacion/1003744325128_0.html": {
 "lectura": true,
@@ -2227,6 +3551,14 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.elespanol.com/malaga/malaga-ciudad/20260503/malaga-deja-pisos-turisticos-edificios-apartamentos-disparan-cambian-modelo/1003744229497_0.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.elespanol.com/mundo/20261003/kaliningrado-expone-punto-ciego-otan-frente-rusia-cuestion-tiempo-bajas-suelo-ue/1003744405468_0.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.elespanol.com/mundo/europa/20240503/tunez-mauritania-egipto-ahora-libano-ue-avanza-externalizar-control-migratorio/852164991_0.amp.html": {
 "lectura": true,
 "comprobado": "2026-11-13"
@@ -2234,6 +3566,10 @@
 "https://www.elespanol.com/mundo/europa/20260901/informe-ue-ceuta-detecto-injerencia-rusia-no-israel-alla-cuentas-puntuales/1003744369476_0.html": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://www.elespanol.com/quincemil/a-coruna/20261021/ines-rey-protesta-maria-pita-cualquier-reivindicacion-pierde-legitimidad-recurre-violencia/1003744429092_0.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://www.elespanol.com/sociedad/20260417/alemania-da-leccion-espana-alquiler-inquilino-quedan-euros-vivir-despues-pagarlo/1003744200840_0.html": {
 "lectura": true,
@@ -2267,6 +3603,18 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.elindependiente.com/economia/2026/03/31/deuda-publica-roza-17-billones-cierre-2025-48-ano-anterior/amp/": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.elindependiente.com/economia/2026/04/13/otro-agujero-seguridad-social-coste-bajas-laborales-dispara-40/": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.elindependiente.com/economia/2026/06/18/banco-espana-alerta-inflacion-sube-36-escenario-central-adverso/": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.elindependiente.com/economia/2026/07/06/espana-no-sido-motor-economico-europa-inmigracion-mitad-crecimiento/": {
 "lectura": true,
 "comprobado": "2026-11-13"
@@ -2275,13 +3623,25 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.elindependiente.com/espana/2022/05/11/el-gobierno-rechaza-el-pacto-de-estado-de-feijoo-sobre-la-otan-y-la-seguridad/amp/": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.elindependiente.com/espana/2023/07/06/sumar-promete-en-su-programa-electoral-dar-marcha-atras-al-giro-en-el-sahara-occidental/amp/": {
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.elindependiente.com/espana/2023/07/28/baile-de-escanos-voto-cera/amp/": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.elindependiente.com/espana/2023/09/20/sanchez-abre-camino-hacia-la-amnistia-voy-a-ser-coherente-con-lo-hecho-y-estoy-diciendo-mucho/amp/": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://www.elindependiente.com/espana/2023/11/15/las-frases-mas-relevantes-de-sanchez-en-su-discurso-de-investidura/amp/": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://www.elindependiente.com/espana/2024/02/24/abascal-se-cita-con-trump-en-washington-conversacion-de-quince-minutos-y-foto-posterior/amp/": {
 "lectura": true,
@@ -2291,6 +3651,14 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.elindependiente.com/espana/2024/10/29/el-congreso-inicia-la-reforma-de-la-ley-mordaza-con-la-negativa-del-pp-y-vox-dan-a-bildu-la-proteccion-de-la-policia/amp/": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.elindependiente.com/espana/2025/07/01/feijoo-compensara-a-gamarra-con-un-puesto-destacado-en-un-futuro-gobierno-popular/amp/": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.elindependiente.com/espana/2025/11/12/sumar-podemos-y-bildu-exigen-a-sanchez-que-rectifique-en-el-sahara-deje-de-estar-plegado-a-la-dictadura-marroqui/amp/": {
 "lectura": true,
 "comprobado": "2026-11-13"
@@ -2299,9 +3667,17 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.elindependiente.com/espana/2026/04/23/absolutamente-falso-rajoy-niega-haber-recibido-sobres-barcenas-destruir-pruebas-caja-b/": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.elindependiente.com/espana/2026/05/06/moncloa-no-iva-franquiciado-pequenos-autonomos-junts-prorroga-alquileres/": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://www.elindependiente.com/espana/2026/06/22/supremo-condena-abalos-koldo-prision-por-mordidas-contratos-mascarillas/": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://www.elindependiente.com/espana/2026/07/29/colapso-ceuta-crisis-migratoria-1500-entradas-nado-marruecos/": {
 "lectura": false,
@@ -2319,6 +3695,10 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.elindependiente.com/espana/2026/09/28/gobierno-renuncia-reforma-ley-suelo-podemos-decreto-vivienda/": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.elindependiente.com/espana/2026/10/10/aznar-rajoy-y-ayuso-arropan-a-feijoo-en-su-primer-acto-de-precampana/": {
 "lectura": true,
 "comprobado": "2026-11-13"
@@ -2331,6 +3711,10 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.elindependiente.com/internacional/2025/09/17/bruselas-propone-retirar-ventajas-comerciales-a-israel-y-sancionar-a-2-ministros-es-necesario-un-alto-el-fuego/": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.elindependiente.com/politica/2017/03/25/la-hora-de-susana/": {
 "lectura": true,
 "comprobado": "2026-11-13"
@@ -2338,6 +3722,10 @@
 "https://www.elindependiente.com/politica/2017/10/13/acuerdo-rajoy-sanchez-dialogo-trabajo-codo-con-codo/amp/": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://www.elmundo.es/espana/2016/10/01/57effbe6468aebeb2f8b45fa.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://www.elnacional.cat/es/internacional/que-pruebas-hay-campana-desinformacion-sobre-ceuta-sanchez-atribuye-rusia-israel_1688587_102.html": {
 "lectura": true,
@@ -2367,6 +3755,18 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.elsaltodiario.com/barcelona/jaume-collboni-(psc)-elegido-alcalde-votos-colau-partido-popular": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.elsaltodiario.com/ceuta/violencia-todas-partes-denuncian-agresiones-continuas-personas-migrantes-ceuta": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.elsaltodiario.com/congreso-de-los-diputados/derecha-niega-voto-sanchez-hasta-cuando-juego-trileros": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.elsaltodiario.com/corrupcion/grande-marlaska-desestimo-recurso-fiscalia-absolucion-narco-relacionado-feijoo": {
 "lectura": true,
 "comprobado": "2026-11-13"
@@ -2391,13 +3791,29 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.elsaltodiario.com/politica/frente-amplio-pide-comparecencia-puente-accidente-toledo-adelante-andalucia-dimision": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.elsaltodiario.com/psoe/dimite-oscar-puente-no-ira-listas-proximas-elecciones": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.elsaltodiario.com/residencias-mayores/audiencia-provincial-madrid-reabre-una-causa-ayuso-muertes-residencias": {
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.elsaltodiario.com/vivienda/desahucio-maricarmen-desata-una-ola-indignacion-pone-al-gobierno-cuerdas": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.elsaltodiario.com/vivienda/entrevista-lucia-martin-vivienda-hemos-demostrado-ayuntamiento-transformar-barcelona": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://www.elsaltodiario.com/vivienda/forma-expropiacion-se-llama-tanteo-retracto": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://www.elsaltodiario.com/vivienda/miles-personas-salen-calle-senalar-responsabilidad-del-gobierno-desahucio-maricarmen": {
 "lectura": true,
@@ -2411,9 +3827,25 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.enciclopedia.cat/EC-GEC-0151556.xml": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.enciclopedia.cat/gran-enciclopedia-catalana/joan-clos-i-matheu": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://www.escudodigital.com/defensa/desarrollo-defensa/espana-pagara-1786-millones-por-seis-corbetas-epc-la-armada-pidio-patrulleros-y-el-boe-exige-escoltas.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.esdiario.com/economia/261005/199496/primera-vez-historia-espana-cierra-legislatura-entera-pge-aprobado.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.esdiario.com/nacional/260823/195982/sanchez-emerge-vacaciones-record-27-dias-buceando-ceuta-ahoga.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://www.esdiario.com/nacional/260831/196508/sanchez-marruecos-ceuta-derecho-vacaciones.html": {
 "lectura": true,
@@ -2431,6 +3863,14 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.esdiario.com/nacional/261105/202179/abalos-desesperado-salir-soto-real-ocho-razones-pone-sobre-mesa-constitucional.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.euronews.com/2025/10/06/greta-thunberg-among-171-flotilla-activists-deported-from-israel-after-failed-bid-to-reach": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.euronews.com/2026/03/11/how-high-could-europes-inflation-go-if-the-iran-war-continues": {
 "lectura": true,
 "comprobado": "2026-11-13"
@@ -2439,17 +3879,41 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.euronews.com/my-europe/2026/05/30/psoes-legal-storm-nine-cases-closing-in-on-spanish-pm-pedro-sanchez": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.excelsior.com.mx/internacional/israel-ha-matado-351-ninos-gaza-desde-que-empezo-tregua": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://www.exteriores.gob.es/Embajadas/washington/es/Comunicacion/Noticias/Paginas/Articulos/20221229_NOT01.aspx": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://www.exteriores.gob.es/ca/Comunicacion/Comunicados/Paginas/2025_COMUNICADOS/Comunicado-de-Espana-y-otros-15-paises-sobre-la-flotilla-a-Gaza.aspx": {
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.exteriores.gob.es/es/Comunicacion/Comunicados/Paginas/2025_COMUNICADOS/Comunicado-de-Espana-y-otros-15-paises-sobre-la-flotilla-a-Gaza.aspx": {
+"lectura": false,
+"comprobado": "2026-11-14"
+},
 "https://www.frontex.europa.eu/2025-in-brief/": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://www.frontex.europa.eu/assets/Migratory_routes/2026/EUROSUR_data_as_of_04NOV26.xlsx": {
+"lectura": false,
+"comprobado": "2026-11-14"
+},
+"https://www.frontex.europa.eu/media-centre/news/news-release/frontex-irregular-border-crossings-into-the-eu-down-29-in-the-first-ten-months-of-2026-Yj3qp4": {
+"lectura": false,
+"comprobado": "2026-11-14"
+},
+"https://www.funcas.es/wp-content/uploads/2025/07/La-gobernanza-fiscal-multinivel-en-Espana-Analisis-y-propuestas-de-reforma.pdf": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://www.galiciapress.es/articulo/politica/2026-08-18/5987531-figaredo-vox-reafirma-cazar-inmigrantes-ilegales-ceuta-centren-foco-interes-espanoles": {
 "lectura": true,
@@ -2459,13 +3923,49 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.gesetze-im-internet.de/bgb/__558.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.gesetze-im-internet.de/bgb/__573.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.grelinap.recerca.urv.cat/ca/projectes/diccionario-historia-ensenanza-frances-espana/entradas/130/ley-general-de-educacion-de-1970": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.hacienda.gob.es/DocLeyes/repositorio%20normativa/22992.htm": {
+"lectura": false,
+"comprobado": "2026-11-14"
+},
+"https://www.hacienda.gob.es/DocLeyes/repositorio%20normativa/84910.htm": {
+"lectura": false,
+"comprobado": "2026-11-14"
+},
+"https://www.hacienda.gob.es/cdi/estabilidad%20presupuestaria/planfiscalestructural/informe-progreso-2026.pdf": {
+"lectura": false,
+"comprobado": "2026-11-14"
+},
+"https://www.hacienda.gob.es/es-ES/Prensa/Noticias/Paginas/2026/20260707-NP-CM-TECHO-GASTOS-2027.aspx": {
+"lectura": false,
+"comprobado": "2026-11-14"
+},
 "https://www.hacienda.gob.es/es-es/prensa/noticias/noticiaspdf/536.pdf": {
 "lectura": false,
 "comprobado": "2026-11-13"
 },
+"https://www.hacienda.gob.es/eu-ES/Prensa/Noticias/Paginas/2026/20261027-NP-CM-HELICOPTEROS.aspx": {
+"lectura": false,
+"comprobado": "2026-11-14"
+},
 "https://www.hacienda.gob.es/gl-ES/Prensa/Noticias/Paginas/2026/20261103-NP-CM-REPROGRAMACION-DEFENSA.aspx": {
 "lectura": false,
 "comprobado": "2026-11-13"
+},
+"https://www.hacienda.gob.es/gl-es/prensa/noticias/noticiaspdf//471.pdf": {
+"lectura": false,
+"comprobado": "2026-11-14"
 },
 "https://www.hayderecho.com/2026/05/27/inflacion-e-irpf-una-forma-silenciosa-de-subirnos-los-impuestos/": {
 "lectura": false,
@@ -2475,13 +3975,29 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.hosteltur.com/128313_espana-pierde-posiciones-economias-competitivas-mundo.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.hosteltur.com/171841_renfe-iryo-y-ouigo-reducen-a-la-mitad-sus-perdidas-mientras-la-demanda-ferroviaria-se-dispara.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.hosteltur.com/176362_prestamos-sepi-cuanto-han-devuelto-air-europa-air-nostrum-volotea-y-plus-ultra.html": {
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.hosteltur.com/177375_arranca-la-nueva-autoridad-independiente-para-investigar-accidentes-en-el-transporte.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.hoyaragon.es/espana/rescates-aerolineas-pandemia-air-europa-plus-ultra/20260521060003131502.html": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://www.hrw.org/world-report/2026/country-chapters/argentina": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://www.idealista.com/news/etiquetas/ministerio-de-vivienda": {
 "lectura": true,
@@ -2499,6 +4015,10 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.idealista.com/news/node/851594": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.idealista.com/news/node/878279": {
 "lectura": true,
 "comprobado": "2026-11-13"
@@ -2507,13 +4027,25 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.idealista.com/news/taxonomy/term/13299": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.idescat.cat/poblacioestrangera/?geo=mun%3A251207&nac=a&b=0": {
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.ige.gal/estatico/html/gl/DatosBasicos/PDF/Poboacion.pdf": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.ige.gal/estatico/html/gl/DatosBasicos/PDF/Territorio.pdf": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://www.ign.es/resources/erupcion-la-palma-2021/index.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://www.igualdad.gob.es/comunicacion/sala-de-prensa/el-ministerio-de-igualdad-insta-a-la-fiscalia-y-a-la-autoridad-independiente-a-actuar-por-las-declaraciones-de-jose-maria-figaredo-sobre-los-migrantes-en-ceuta/": {
 "lectura": true,
@@ -2535,6 +4067,10 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.inclusion.gob.es/w/el-plazo-de-presentacion-de-solicitud-para-la-regularizacion-extraordinaria-concluye-con-1.174.978-solicitudes-recibidas": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.ine.es/dyngs/INEbase/es/operacion.htm?c=Estadistica_C&cid=1254736177006&menu=ultiDatos&idp=1254735573002": {
 "lectura": true,
 "comprobado": "2026-11-13"
@@ -2547,6 +4083,10 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.ine.es/dyngs/Prensa/ECP4T25.htm?print=1": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.ine.es/dyngs/Prensa/EPA3T26.htm": {
 "lectura": true,
 "comprobado": "2026-11-13"
@@ -2555,9 +4095,29 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.ine.es/dyngs/Prensa/PROP20262076.htm": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.ine.es/dyngs/Prensa/TV1225.htm": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.ine.es/dyngs/Prensa/adIPC1026.pdf": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.ine.es/dyngs/Prensa/pEF2025.htm": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.ine.es/prensa/cp_e2019_p.pdf": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://www.ine.es/prensa/pad_2018_p.pdf": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://www.infobae.com/america/agencias/2026/01/29/la-ue-apoya-la-autonomia-marroqui-para-el-sahara-occidental-para-lograr-una-solucion-mutuamente-aceptable/": {
 "lectura": true,
@@ -2575,6 +4135,10 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.infobae.com/america/agencias/2026/10/22/puente-asegura-que-milei-representa-el-modelo-que-pp-y-vox-quieren-implementar-en-espana/": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.infobae.com/espana/2023/10/04/feijoo-acusa-a-armengol-de-pactar-con-moncloa-la-fecha-de-su-investidura-y-de-presidir-el-congreso-como-una-militante-socialista/": {
 "lectura": true,
 "comprobado": "2026-11-13"
@@ -2582,6 +4146,10 @@
 "https://www.infobae.com/espana/2023/11/19/cientos-de-manifestantes-se-concentran-en-ferraz-por-decimoseptimo-dia-consecutivo/": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://www.infobae.com/espana/2024/02/14/la-moncloa-gallega-una-mansion-ideada-por-manuel-fraga-para-dignificar-la-xunta-y-que-feijoo-y-rueda-abocaron-al-desuso/": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://www.infobae.com/espana/2025/06/12/cronica-de-un-accidente-anunciado-el-viaje-de-sanchez-en-su-peugeot-en-2016-y-que-hoy-escenifica-la-caida-de-santos-cerdan-abalos-y-koldo-garcia/": {
 "lectura": true,
@@ -2643,6 +4211,10 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.infobae.com/espana/2026/11/11/los-8-momentos-de-la-entrevista-de-alberto-nunez-feijoo-en-el-hormiguero-el-29-de-noviembre-lo-siento-por-sanchez-pero-no-hay-huelga-y-vamos-a-ver-que-opinan-los-espanoles/": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.infobae.com/espana/2026/11/13/los-datos-sobre-la-nacionalidad-de-los-inmigrantes-que-han-hecho-trabajar-a-los-verificadores-de-jordi-wild-pedro-sanchez-asegura-que-un-40-son-latinoamericanos/": {
 "lectura": true,
 "comprobado": "2026-11-13"
@@ -2655,9 +4227,21 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.infobae.com/espana/agencias/2025/11/20/pedro-sanchez-inaugura-la-nueva-terminal-de-la-estacion-maritima-de-ceuta-en-su-cuarta-visita-a-ceuta/": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.infobae.com/espana/agencias/2026/03/11/hacienda-aclara-que-la-transposicion-de-la-directiva-del-iva-ya-esta-en-el-congreso/": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://www.infobae.com/espana/agencias/2026/03/26/sanchez-nombra-a-cuerpo-vicepresidente-primero-y-a-arcadi-espana-nuevo-ministro-de-hacienda/": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.infobae.com/espana/agencias/2026/04/21/como-sera-el-reparto-de-fondos-del-nuevo-plan-estatal-de-vivienda-2026-2030/": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://www.infobae.com/espana/agencias/2026/05/20/plus-ultra-una-de-las-4-aerolineas-a-las-que-la-sepi-concedio-prestamos-durante-la-covid/": {
 "lectura": true,
@@ -2723,6 +4307,10 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.infocop.es/el-congreso-de-los-diputados-renueva-el-pacto-de-estado-contra-la-violencia-de-genero/": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.infocop.es/la-incapacidad-temporal-en-trabajadores-por-cuenta-ajena-aumenta-en-espana-mientras-los-autonomos-presentan-cifras-muy-inferiores/": {
 "lectura": true,
 "comprobado": "2026-11-13"
@@ -2734,6 +4322,10 @@
 "https://www.infolibre.es/politica/juez-revela-feijoo-dorado-seguian-hablando-telefono-anos-despues-ruptura_1_1087733.html": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://www.infolibre.es/politica/yolanda-diaz-desmarca-sanchez-pide-respetar-voluntad-democratica-pueblo-sahararui_1_1222842.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://www.interempresas.net/Equipamiento_Municipal/351989-Barcelona-implanta-servicio-recogida-residuos-puerta-puerta-barrio-Sant-Andreu-Palomar.html": {
 "lectura": true,
@@ -2747,9 +4339,33 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.iustel.com/diario_del_derecho/noticia.asp?ref_iustel=1149930": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.izquierdadiario.es/Luis-Barcenas-ya-mas-en-la-calle-que-en-prision-y-cerca-de-la-libertad-condicional": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://www.juntadeandalucia.es/boja/2022/132/1": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.juntaelectoralcentral.es/cs/jec/documentos/Generales_2019-R_Resultados.pdf": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.juntaelectoralcentral.es/cs/jec/documentos/eg2026_calendario.pdf": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.juntaelectoralcentral.es/cs/jec/eleccionesEnCurso/Elecciones_generales_2026": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.laboral-social.com/consejo-ministros-acuerda-subida-3-1-por-ciento-SMI-hasta-1221-euros-mensuales-sin-tributacion": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://www.lamarea.com/2023/07/21/feijoo-reconoce-que-marcial-dorado-era-contrabandista-cuando-se-conocieron": {
 "lectura": true,
@@ -2891,6 +4507,10 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.larepublica.co/globoeconomia/discurso-de-sanchez-en-parlamento-espanol-ratifica-amnistia-para-independentistas-3749152": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.larepublica.co/globoeconomia/presidente-de-espana-acusa-a-rusia-e-israel-de-difundir-desinformacion-en-crisis-de-ceuta-4470759": {
 "lectura": true,
 "comprobado": "2026-11-13"
@@ -2898,6 +4518,14 @@
 "https://www.latercera.com/mundo/noticia/cancelan-la-ultima-etapa-de-la-vuelta-a-espana-2025-en-medio-de-manifestaciones-pro-palestina-en-madrid/": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://www.lavozdelanzarote.com/en/news/politics/pedro-sanchez-announces-nine-measures-against-israel-genocide-in-gaza_237636_102.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.lawandtrends.com/noticias/administrativo/la-diputacion-permanente-convalida-el-decreto-que-prohibe-los-desahucios-y-tumba-el-que-hacia-indefinidos-los-alquileres-1.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://www.legaltoday.com/actualidad-juridica/noticias-de-derecho/el-boe-publica-el-smi-para-2026-que-se-establece-en-1-221-euros-sin-tributacion-2026-02-19/": {
 "lectura": true,
@@ -2915,6 +4543,10 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.legaltoday.com/rincon-de-reuters/el-congreso-espanol-convierte-en-presidente-del-gobierno-a-pedro-sanchez-2018-06-01/": {
+"lectura": false,
+"comprobado": "2026-11-14"
+},
 "https://www.legaltoday.com/rincon-de-reuters/espanoles-indignados-llevan-a-la-calle-su-movilizacion-online-2011-05-17/": {
 "lectura": true,
 "comprobado": "2026-11-13"
@@ -2922,6 +4554,14 @@
 "https://www.legaltoday.com/rincon-de-reuters/nunez-feijoo-descarta-dimitir-por-unas-fotos-antiguas-con-un-narco-2013-04-02/": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://www.legaltoday.com/rincon-de-reuters/sanchez-elige-un-gobierno-social-galactico-y-de-mayoria-femenina-2018-06-07/": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.lex.gal/normativa/detalle/8767/pdf/": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://www.libertaddigital.com/espana/2013-02-09/feijoo-sobre-mato-tiene-que-dar-explicaciones-y-contundentes-1276481796/": {
 "lectura": false,
@@ -2939,6 +4579,18 @@
 "lectura": false,
 "comprobado": "2026-11-13"
 },
+"https://www.lisanews.org/internacional/los-11-principios-de-la-propaganda-nazi-de-goebbels/": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.lostiempos.com/actualidad/mundo/20161001/dimision-sanchez-abre-paso-formacion-gobierno-espana": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.mallorca.com/en/magazin/news/colau-fund-homes-malaga": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.menorca.info/actualidad/elecciones-23j/2023/11/16/2051241/ayuso-reconoce-insulto-sanchez-aprovecho-para-insultar-familia.html": {
 "lectura": true,
 "comprobado": "2026-11-13"
@@ -2947,13 +4599,29 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.menorca.info/actualidad/internacional/2026/07/24/2676359/bruselas-valora-positivamente-nuevos-aranceles-eeuu-por-ajustarse-acuerdo-ue.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.menorca.info/actualidad/nacional/2020/01/10/1613972/nuevo-gobierno-sanchez-sera-segundo-mas-grande-democracia-1.html": {
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.menorca.info/actualidad/nacional/2022/04/02/1717847/feijoo-elegido-nuevo-presidente-del-pp.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.menorca.info/actualidad/nacional/2022/12/20/1850459/sanchez-humillacion-rey-simplemente-cateto.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.menorca.info/actualidad/nacional/2024/02/27/2114499/psoe-suspende-cautelarmente-abalos-por-entregar-acta.html": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://www.menorca.info/actualidad/nacional/2024/05/30/2174477/ley-amnistia-aprobada-definitivamente-mayoria-del-congreso.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://www.menorca.info/actualidad/nacional/2025/06/18/2411283/yolanda-diaz-dos-ministros-sumar-faltan-congreso-protesta-por-presunta-trama-corrupta.html": {
 "lectura": true,
@@ -2971,9 +4639,17 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.menorca.info/actualidad/nacional/2026/07/31/2681031/gobierno-ayuso-defiende-con-atico-chamberi-actuo-transparencia-siente-pleno-apoyo-del-pp.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.menorca.info/actualidad/nacional/2026/07/31/2681077/gobierno-estima-25000-inmigrantes-han-retornado-marruecos-desde-ceuta-hasta-este-mediodia.html": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://www.menorca.info/actualidad/nacional/2026/08/01/2681671/pedro-sanchez-inicia-vacaciones-mareta-costa-teguise.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://www.merca2.es/2026/05/06/lista-ricos-espana-2026-2377075/": {
 "lectura": true,
@@ -2982,6 +4658,14 @@
 "https://www.merca2.es/2026/07/17/liberalizacion-ferroviaria-cnmc-viajeros-precios-2419507/": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://www.merca2.es/2026/11/13/huelga-ferroviaria-renfe-sin-fecha-2504169/": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.metro.pr/estilo-vida/2026/02/18/el-algoritmo-de-x-conduce-a-los-usuarios-hacia-posiciones-politicas-mas-conservadoras/": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://www.metro.pr/noticias/2025/01/17/totalmente-inaceptable-el-apoyo-de-musk-a-la-ultraderecha-europea/": {
 "lectura": true,
@@ -3111,13 +4795,41 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.motorpasion.com/seguridad/oscar-puente-dice-que-problema-no-inversion-espana-se-gasta-30-000-euros-km-via-al-ano-que-francia-teniendo-500-km-alta-velocidad": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.mundiario.com/articulo/politica/gerente-psoe-descarga-santos-cerdan-encargos-imputados-caso-leire-diez/20260910110316440311.html": {
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.mundiario.com/economia/gobierno-negocia-sindicatos-evitar-mas-huelgas-ferroviarias/20261112172728452514.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.nato.int/content/dam/nato/legacy-wcm/media_pdf/2024/6/pdf/240617-def-exp-2024-en.pdf": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.nato.int/content/dam/nato/webready/documents/finance/def-exp-2025-en.pdf": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.nato.int/content/dam/nato/webready/documents/finance/def-exp-2026-en.pdf": {
+"lectura": false,
+"comprobado": "2026-11-14"
+},
 "https://www.nato.int/cps/en/natohq/official_texts_236705.htm": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://www.natureasia.com/en/info/press-releases/detail/9242": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.nbcnewyork.com/elections/democrats-control-of-congress/6567437/": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://www.newarab.com/news/germany-backs-moroccan-autonomy-plan-w-sahara": {
 "lectura": true,
@@ -3134,6 +4846,10 @@
 "https://www.newtral.es/decreto-renovacion-automatica-contratos-alquiler/20261112/": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://www.newtral.es/delitos-barcelona-menas-factcheck/20221013/": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://www.newtral.es/deuda-galicia-2009-deficit-rueda-factcheck/20240110/": {
 "lectura": true,
@@ -3219,6 +4935,14 @@
 "lectura": false,
 "comprobado": "2026-11-13"
 },
+"https://www.ntn24.com/noticias-actualidad/espana-registro-casi-1-2-millones-de-solicitudes-de-regularizacion-de-inmigrantes-colombia-es-el-pais-de-origen-mas-representado-de-latinoamerica-630663": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.ochaopt.org/content/humanitarian-situation-update-357-gaza-strip": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.ocu.org/fincas-y-casas/gestion/alquiler/analisis-gratis/2024/02/indice-precios-alquiler-ministerio": {
 "lectura": true,
 "comprobado": "2026-11-13"
@@ -3263,6 +4987,30 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.ondavasca.com/quitar-competencias-y-privilegios-o-derogar-la-ley-del-aborto-entre-las-medidas-del-programa-electoral-de-vox/": {
+"lectura": false,
+"comprobado": "2026-11-14"
+},
+"https://www.opb.org/article/2026/06/18/over-1000-people-killed-during-gaza-ceasefire-palestinian-authorities-say/": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.pamplona.es/en/node/63968": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.pbs.org/newshour/amp/world/activist-flotilla-seeking-to-break-the-israeli-blockade-of-gaza-says-drones-attacked-its-boats": {
+"lectura": false,
+"comprobado": "2026-11-14"
+},
+"https://www.pbs.org/newshour/world/over-100000-pro-palestinian-protesters-forced-early-end-to-spanish-vuelta-authorities-say": {
+"lectura": false,
+"comprobado": "2026-11-14"
+},
+"https://www.pbs.org/newshour/world/us-strikes-venezuela-and-says-its-leader-maduro-has-been-captured-and-flown-out-of-the-country": {
+"lectura": false,
+"comprobado": "2026-11-14"
+},
 "https://www.perfil.com/internacional/milei-se-reunio-con-abascal-en-madrid-y-reforzo-su-alianza-con-la-ultraderecha-europea-aenlM9d2dM7R": {
 "lectura": true,
 "comprobado": "2026-11-13"
@@ -3275,9 +5023,69 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.pewresearch.org/politics/2025/06/26/behind-trumps-2024-victory/": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.physics.smu.edu/pseudo/Propaganda/principles.html": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://www.poderjudicial.es/cgpj/ca/Poder-Judicial/Novetats/El-juez-de-la-Audiencia-Nacional-abre-una-pieza-separada-para-investigar-al-expresidente-Jose-Luis-Rodriguez-Zapatero-en-relacion-con-las-joyas-halladas-en-el-registro-de-su-oficina-de-Ferraz": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.poderjudicial.es/cgpj/en/Judiciary/Novelties/La-Audiencia-Nacional-condena-a-23-personas-en-la-pieza-Gurtel-Boadilla": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.poderjudicial.es/cgpj/en/Judiciary/Supreme-Court/Judicial-News/El-instructor-del-Tribunal-Supremo-declara-la-perdida-de-competencia-en-la-pieza-separada-contra-el-exministro-Jose-Luis-Abalos-por-las-adjudicaciones-de-obras-publicas-y-la-remite-a-la-Audiencia-Nacional": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Audiencia-Nacional/Noticias-Judiciales/----La-Audiencia-Nacional-cita-al-expresidente-Jose-Luis-Rodriguez-Zapatero-como-investigado-por-delitos-de-trafico-de-influencias-y-otros-conexos": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Audiencia-Nacional/Noticias-Judiciales/El-juez-de-la-Audiencia-Nacional-abre-una-pieza-separada-para-investigar-al-expresidente-Jose-Luis-Rodriguez-Zapatero-en-relacion-con-las-joyas-halladas-en-el-registro-de-su-oficina-de-Ferraz": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Audiencia-Nacional/Noticias-Judiciales/El-juez-de-la-Audiencia-Nacional-del-caso-Plus-Ultra-rechaza-investigar-al-expresidente-del-Gobierno-Jose-Luis-Rodriguez-Zapatero-por-malversacion-por-quedarse-con-las-joyas": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Audiencia-Nacional/Noticias-Judiciales/El-juez-de-la-Audiencia-Nacional-rechaza-atribuir-por-el-momento-la-condicion-de-investigado-al-PSOE": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Audiencia-Nacional/Noticias-Judiciales/La-Audiencia-Nacional-condena-a-penas-de-hasta-51-anos-de-prision-a-29-de-los-37-acusados-en-el--caso-Gurtel-": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Audiencia-Nacional/Oficina-de-Comunicacion/Notas-de-prensa/El-Juzgado-de-Vigilancia-Penitenciaria-concede-la-libertad-condicional-al-extesorero-del-Partido-Popular-Luis-Barcenas": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Audiencia-Nacional/Oficina-de-Comunicacion/Notas-de-prensa/El-juez-de-la-Audiencia-Nacional-envia-exposicion-razonada-al-Tribunal-Supremo-para-investigar-al-diputado-del-Parlamento-Europeo-Luis-Perez--Alvise--por-delito-electoral-y-financiacion-ilegal-de-partidos-politicos--": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Consejo-General-del-Poder-Judicial/Oficina-de-Comunicacion/Notas-de-prensa/Los-organos-judiciales-practicaron-4-474-lanzamientos-en-el-segundo-trimestre--un-35-7---menos-que-en-el-mismo-periodo-del-ano-pasado": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Noticias-Judiciales/El-Tribunal-Supremo-condena-al-exministro-Jose-Luis-Abalos-y-a-su-exasesor-Koldo-Garcia-a-24-anos-y-19-anos-de-prision--respectivamente--por-delitos-de-organizacion-criminal--cohecho--malversacion-y-trafico-de-influencias": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Noticias-Judiciales/El-juez-de-la-Audiencia-Nacional-del-caso-Plus-Ultra-rechaza-investigar-al-expresidente-del-Gobierno-Jose-Luis-Rodriguez-Zapatero-por-malversacion-por-quedarse-con-las-joyas": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Noticias-Judiciales/La-Sala-de-Apelacion-del-Tribunal-Supremo-confirma-la-prision-provisional-sin-fianza-para-el-exministro-Jose-Luis-Abalos-y-su-exasistente-Koldo-Garcia-por-el-alto-riesgo-de-fuga": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Noticias-Judiciales/La-juez-de-la-Audiencia-Nacional-pide-al-Consejo-de-Ministros-desclasificar-documentos-e-informes-sobre-la-entrada-irregular-masiva-en-Ceuta": {
 "lectura": true,
@@ -3287,9 +5095,33 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Tribunal-Supremo/Noticias-Judiciales/El-Tribunal-Supremo-condena-al-exministro-Jose-Luis-Abalos-y-a-su-exasesor-Koldo-Garcia-a-24-anos-y-19-anos-de-prision--respectivamente--por-delitos-de-organizacion-criminal--cohecho--malversacion-y-trafico-de-influencias": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Tribunal-Supremo/Noticias-Judiciales/El-Tribunal-Supremo-confirma-penas-de-hasta-51-anos-de-prision-para-los-procesados-en-el--caso-Gurtel-": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Tribunal-Supremo/Noticias-Judiciales/El-instructor-del-Tribunal-Supremo-mantiene-la-prision-provisional-de-Santos-Cerdan-al-persistir-el-riesgo-de-destruccion-de-pruebas": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Tribunales-Superiores-de-Justicia/TSJ-Comunidad-Valenciana/Oficina-de-Comunicacion/Archivo-de-notas-de-prensa/El-TSJCV-desestima-los-recursos-de-suplica-y-confirma-su-decision-de-no-investigar-al-expresidente-de-la-Generalitat-por-la-gestion-de-la-Dana": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.poderjudicial.es/stfls/TRIBUNAL%20SUPREMO/DOCUMENTOS%20DE%20INTER%C3%89S/Nota%20resumen%20STS%20Causa%20Especial%2020775-2020%20Sala%20II%2022JUN26.docx": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.pp.es/actualidad/articulos/el-parlamento-europeo-reconoce-la-invasion-en-ceuta-y-exige-a-marruecos-respetar-la-soberania-espanola/": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://www.pp.es/estructura/maria-concepcion-gamarra-ruiz-clavijo/": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://www.pressdigital.es/articulo/politica/2026-06-03/5905813-leire-diez-responde-pp-ira-senado-ve-necia-peticion-page-psoe-querelle-contra": {
 "lectura": true,
@@ -3323,13 +5155,33 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.publico.es/actualidad/juez-marchena-renuncia-presidir-poder-judicial-polemico-whatsapp-portavoz-pp-senado.amp.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.publico.es/economia/deficit-historico-inversiones-division-renfe-adif-servicios-externalizados-grietas-sistema-ferroviario.html": {
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.publico.es/economia/deuda-publica-cierra-2018-97-2-pib-encima-objetivo-gobierno.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.publico.es/politica/abalos-renuncia-escano-congreso.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.publico.es/politica/anzuelo-ultra-vox-cala-galicia.amp.html": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://www.publico.es/politica/archivan-causa-ada-colau-abierta-meses-elecciones.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.publico.es/politica/congreso-rechaza-investidura-sanchez-segunda-vez-124-sies-155-noes-67-abstenciones.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://www.publico.es/politica/congreso/eh-bildu-busca-desatascar-reforma-ley-mordaza-502-dias-cajon.html": {
 "lectura": true,
@@ -3342,6 +5194,14 @@
 "https://www.publico.es/politica/diaz-coordinara-cinco-ministerios-pasa-oposicion.html": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://www.publico.es/politica/directo-reacciones-gurtel.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.publico.es/politica/feijoo-buen-gestor.amp.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://www.publico.es/politica/feijoo-llama-cobarde-sanchez-permitir-congreso-vota-debe-adelantar-elecciones.html": {
 "lectura": true,
@@ -3371,9 +5231,21 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.publico.es/politica/jueza-dana-pide-imputar-mazon.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.publico.es/politica/marcial-dorado-narcotraficante-amigo-feijoo.html": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://www.publico.es/politica/partidos/podemos-exige-gobierno-eliminar-reforma-ley-suelo-negociar-decreto-vivienda.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.publico.es/politica/pedro-sanchez-primer-presidente-no-diputado-otras-curiosidades-nuevo-jefe-ejecutivo.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://www.publico.es/politica/psoe-cambiado-posicion-respecto-sahara-aunque-niegue.amp.html": {
 "lectura": true,
@@ -3399,6 +5271,14 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.publico.es/sociedad/15-m-cambio-vida.html": {
+"lectura": false,
+"comprobado": "2026-11-14"
+},
+"https://www.publico.es/sociedad/audiencia-coruna-absuelve-exdirector-seguridad-adif-accidente-angrois.amp.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.publico.es/tremending/feijoo-acusa-puente-echar-culpa-operador-atocha-redes-rescatan-dijo-sobre-maquinista-angrois.html": {
 "lectura": true,
 "comprobado": "2026-11-13"
@@ -3414,6 +5294,14 @@
 "https://www.que.es/2021/04/14/sanchez-vox-vallecas-montar-bronca/": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://www.que.es/2023/07/29/psoe-cera-mismo-escenario/": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.que.es/2023/09/21/rajoy-sanchez-judicializacion-proces/": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://www.que.es/2026/06/03/alquiler-salario-medio-espana-bomba/": {
 "lectura": true,
@@ -3439,6 +5327,10 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.que.es/2026/11/03/contratos-defensa-4200-millones/": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.que.es/2026/11/11/11800-millones-defensa-gobierno/": {
 "lectura": true,
 "comprobado": "2026-11-13"
@@ -3454,6 +5346,10 @@
 "https://www.randstad.es/nosotros/sala-prensa/espana-perdera-trabajadores-por-envejecimiento-poblacion/": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://www.randstadresearch.es/wp-content/uploads/2019/03/RANDSTAD-RESEARCH-Informe-de-Absentismo-laboral-2018T3-FINAL.pdf": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://www.randstadresearch.es:443/wp-content/uploads/2019/03/RANDSTAD-RESEARCH-Informe-de-Absentismo-laboral-2018T3-FINAL.pdf": {
 "lectura": true,
@@ -3471,9 +5367,37 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.rtve.es/noticias/20250617/sanchez-perdon-militancia-carta-actuaron-contundencia/16628153.shtml": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.sanidad.gob.es/gabinete/notasPrensa.do?id=4277": {
+"lectura": false,
+"comprobado": "2026-11-14"
+},
 "https://www.sanidad.gob.es/gabinete/notasPrensa.do?id=6924": {
 "lectura": false,
 "comprobado": "2026-11-13"
+},
+"https://www.securitycouncilreport.org/whatsinblue/2026/01/venezuela-emergency-meeting.php": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.securitycouncilreport.org/whatsinblue/2026/10/western-sahara-vote-on-a-draft-resolution-renewing-minursos-mandate-4.php": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.seg-social.es/descarga/es/informe25": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10963/28393/28396/28472": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/2063/2064/2074/2075": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://www.semana.es/corazon/pedro-sanchez-muchas-veces-pienso-mi-abuelo-que-estuvo-viviendo-durante-40-anos-alemania-durante-dictadura-franquista-para-poder-alimentar-mi-padre_2821908": {
 "lectura": true,
@@ -3483,9 +5407,25 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.senado.es/web/conocersenado/normas/constitucion/detalleconstitucioncompleta/index.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.senat.fr/rap/a19-183/a19-1834.html": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://www.sepg.pap.hacienda.gob.es/Presup/PGE2023Ley/MaestroDocumentos/PGE-ROM/doc/3/1/3/2/N_23_E_A_1_2_2_1.PDF": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.sepg.pap.hacienda.gob.es/sitios/sepg/es-ES/Presupuestos/DocumentacionEstadisticas/Estadisticas/Documents/2021/01%20Presupuestos%20Generales%20del%20Estado%20Consolidados.pdf": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.sepi.es/es/sala-de-prensa/noticias/el-fondo-de-solvencia-ha-recuperado-el-66-de-la-financiacion-publica": {
+"lectura": false,
+"comprobado": "2026-11-14"
 },
 "https://www.servimedia.es/noticias/alta-velocidad-gano-12-2-viajeros-2025-alcanzo-record-43-78-millones/1412715698": {
 "lectura": true,
@@ -3507,6 +5447,10 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.stripes.com/theaters/europe/2026-11-04/poland-russia-border-threat-eucom-23360076.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.telecinco.es/noticias/espana/20260622/tribunal-supremo-condena-jose-luis-abalos-koldo-carcel-caso-mascarillas_18_019510924.html": {
 "lectura": true,
 "comprobado": "2026-11-13"
@@ -3514,6 +5458,10 @@
 "https://www.telecinco.es/noticias/espana/20260630/pedro-sanchez-anuncia-plan-integracion-migrantes_18_019583827.html": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://www.theolivepress.es/spain-news/2022/03/15/how-barcelonas-sants-station-became-the-gateway-for-ukrainian-refugees-in-spain%EF%BF%BC/": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://www.tiempodesanjuan.com/elmundo/2017/8/26/no-tinc-por-barcelona-vuelve-marchar-contra-terror-yihadista-188311.html": {
 "lectura": true,
@@ -3535,9 +5483,25 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.ultimahora.es/noticias/comunidades/2024/01/28/2094617/sanchez-asegura-incluir-junts-erc-gobernabilidad-espana-fortalece-democracia.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.ultimahora.es/noticias/elecciones-23j/2023/08/15/1995081/maria-chivite-investida-presidenta-navarra.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.ultimahora.es/noticias/nacional/2018/05/24/1002441/tribunal-verosimil-cuestiona-credibilidad-del-testimonio-rajoy.html": {
 "lectura": false,
 "comprobado": "2026-11-13"
+},
+"https://www.ultimahora.es/noticias/nacional/2019/07/18/1095221/sanchez-permite-entrada-gobierno-miembros-podemos-pero-iglesias.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.ultimahora.es/noticias/nacional/2019/07/23/1096209/sanchez-fracasa-primera-votacion-investidura-podemos-abstiene.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://www.ultimahora.es/noticias/nacional/2019/10/21/1115057/altercados-cataluna-abucheos-sanchez-hospital-sant-pau.html": {
 "lectura": false,
@@ -3547,6 +5511,18 @@
 "lectura": false,
 "comprobado": "2026-11-13"
 },
+"https://www.ultimahora.es/noticias/nacional/2024/01/19/2089397/fiscalia-investiga-abascal-por-decir-sanchez-querran-colgar-pies.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.ultimahora.es/noticias/nacional/2026/03/11/2586875/boe-confirma-gobierno-cesa-embajadora-israel-rebaja-representacion.html": {
+"lectura": false,
+"comprobado": "2026-11-14"
+},
+"https://www.ultimahora.es/noticias/nacional/2026/04/30/2620271/koldo-garcia-niega-hablase-sanchez-cuando-llego-moncloa-sentido-comun.html": {
+"lectura": false,
+"comprobado": "2026-11-14"
+},
 "https://www.ultimahora.es/sucesos/ultimas/2026/01/21/2553605/maquinistas-convocan-huelga-general-tras-accidentes-adamuz-gelida.html": {
 "lectura": false,
 "comprobado": "2026-11-13"
@@ -3554,6 +5530,10 @@
 "https://www.unicef.org/es/comunicados-prensa/al-menos-300-ninos-y-ninas-han-muerto-en-gaza-en-los-ultimos-300-dias": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://www.usb.it/leggi-notizia/usb-calls-for-general-strike-on-22-september-defend-the-flotilla-stop-the-genocide-in-gaza-end-the-war-economy-2042.pdf": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://www.vaticannews.va/en/pope/news/2026-10/pope-leo-xiv-votes-usa-midterm-elections.html": {
 "lectura": true,
@@ -3591,17 +5571,37 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.vozpopuli.com/amp/espana/politica/sanchez-cancela-todos-los-procesos-de-primarias-en-el-psoe-a-la-espera-de-los-resultados-del-29-n.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.vozpopuli.com/dolcevita/asi-es-ada-colau-52-la-separacion-de-sus-padres-los-problemas-economicos-de-su-familia-sus-dos-hijos-la-ruptura-con-su-exmarido-su-carrera-como-actriz-y-su-bisexualidad.html": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://www.vozpopuli.com/economia/empresas/el-gobierno-adjudico-a-fcc-ferrovial-ohla-y-azvi-el-cuidado-de-la-via-en-adamuz-por-56-millones-hasta-2028.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://www.vozpopuli.com/economia/empresas/el-gobierno-culpa-ahora-al-tecnico-de-adif-pese-a-crear-una-ley-para-protegerlos-ante-accidentes-como-el-de-toledo.html": {
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.vozpopuli.com/economia/empresas/florentino-perez-amplia-su-colchon-financiero-personal-hasta-los-718-millones-en-reservas-voluntarias.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.vozpopuli.com/economia/empresas/la-uco-pone-bajo-sospecha-dos-megacontratos-de-ferrovial-y-acciona-por-280-millones.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.vozpopuli.com/economia/inmobiliario/el-gobierno-engordara-casa-47-como-macrocasero-estatal-con-5000-millones-en-activos-y-fondos-antes-de-2029.html": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://www.vozpopuli.com/economia/record-historico-de-los-100-mas-ricos-de-espana-el-imperio-de-amancio-ortega-la-escalada-de-juan-roig-y-la-entrada-de-ana-botin.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://www.vozpopuli.com/economia/temor-empresarial-a-los-errores-no-forzados-del-pp-tras-el-tropiezo-de-las-pensiones.html": {
 "lectura": true,
@@ -3618,6 +5618,14 @@
 "https://www.vozpopuli.com/espana/184-000-viviendas-asequibles-prometidas-sanchez-barrena-proyecto-estancado-julio.html": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://www.vozpopuli.com/espana/feijoo-ayuso-madrid.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.vozpopuli.com/espana/madrid/el-gobierno-de-ayuso-vendera-el-atico-comprado-como-sede-y-dedicara-el-dinero-a-la-reconstruccion-tras-los-incendios.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://www.vozpopuli.com/espana/madrid/la-comunidad-de-madrid-publica-el-expediente-del-atico-avala-su-uso-como-despacho-y-alojamiento-ocasional.html": {
 "lectura": true,
@@ -3667,6 +5675,10 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.vozpopuli.com/espana/politica/vuelve-pedro_0_1028297456.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.vozpopuli.com/internacional/elon-musk-europa-alemania-afd-alice-weidel-elecciones.html": {
 "lectura": true,
 "comprobado": "2026-11-13"
@@ -3674,6 +5686,10 @@
 "https://www.vozpopuli.com/tribunales/la-audiencia-nacional-rechaza-investigar-a-zapatero-por-malversacion-por-quedarse-con-las-joyas.html": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://www.vozpopuli.com/tribunales/la-justicia-madrilena-congela-el-juicio-a-begona-gomez-y-ni-siquiera-elige-al-juez-que-presidira-el-jurado.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://www.wantedinrome.com/news/italy-dockworkers-threaten-to-block-shipments-to-israel-if-flotilla-for-gaza-stopped.html": {
 "lectura": true,
@@ -3683,6 +5699,10 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.wcax.com/2026/02/28/what-know-about-us-israel-attacks-iran/?outputType=amp": {
+"lectura": false,
+"comprobado": "2026-11-14"
+},
 "https://www.wdbo.com/news/trending/election-2026-democrats-capture-both-houses-congress/5ILOWTVABVDPZFYP7VBBCX4EWE/?outputType=amp": {
 "lectura": true,
 "comprobado": "2026-11-13"
@@ -3691,9 +5711,17 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.xataka.com/magnet/hay-colectivo-espana-al-que-amenaza-huelga-alquileres-no-le-quita-sueno-fondos-sociedades/amp": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.xataka.com/magnet/pregunta-pisos-turisticos-encarecen-precio-alquileres-tenemos-respuesta-30": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://www.xataka.com/movilidad/accidente-alta-velocidad-espanola-que-sabemos-choque-ave-iryo-urda-toledo": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://www.xunta.gal/dog/Publicados/2001/20010924/AnuncioF2B2_gl.html": {
 "lectura": true,
@@ -3702,6 +5730,26 @@
 "https://www.xunta.gal/dog/Publicados/2009/20090422/Anuncio176AE_es.html": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://www.xunta.gal/dog/Publicados/2009/20090619/Anuncio2011A_es.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.xunta.gal/dog/Publicados/2024/20240306/AnuncioG2453-050324-1_es.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.xunta.gal/es/os-anteriores-presidentes": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.xunta.gal/todos-os-presidentes": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www5.poderjudicial.es/secp10-11/Documentaci%C3%B3n%20Espa%C3%B1ol/Textos%20legales%20b%C3%A1sicos/Legislaci%C3%B3n%20general/Ley%20Org%C3%A1nica%20Poder%20Judicial.pdf": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://x.com/inclusiongob/status/1975577634470760454": {
 "lectura": true,
