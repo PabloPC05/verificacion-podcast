@@ -1,0 +1,712 @@
+[
+  {
+    "indice": 0,
+    "minuto": "0:29:41",
+    "afirmacion": "Los autónomos o pequeñas empresas que facturan menos de 85.000 euros no pagan (repercuten) IVA en el resto de Europa, porque lo permite una directiva europea que el Gobierno de España se ha negado a transponer.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.eldiario.es/economia/feijoo-propone-medida-eximir-autonomos-pago-iva-aprobo-ue_1_12698806.html",
+        "motivo": "Se abre, pero es redundante y se contradice internamente (dice que la directiva «ya quedó recogida en el BOE» y a la vez que está pendiente de transposición)."
+      },
+      {
+        "url": "https://maldita.es/malditateexplica/20251020/autonomos-iva-feijoo-directiva-europea/",
+        "motivo": "La página carga sin cuerpo de texto legible (591.000 caracteres de maquetación), no se pudo comprobar que diga lo atribuido."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Newtral: Qué dice la Directiva 2020/285 que exime de repercutir el IVA a los autónomos con facturación de hasta 85.000 euros",
+        "url": "https://www.newtral.es/directiva-europea-iva-autonomos/20251020/",
+        "tipo": "verificador"
+      },
+      {
+        "titulo": "Infobae/EFE (11-3-2026): Hacienda aclara que la transposición de la directiva del IVA ya está en el Congreso",
+        "url": "https://www.infobae.com/espana/agencias/2026/03/11/hacienda-aclara-que-la-transposicion-de-la-directiva-del-iva-ya-esta-en-el-congreso/",
+        "tipo": "agencia"
+      },
+      {
+        "titulo": "ARA (11-3-2026): Brussels takes Spain to European court for not exempting SMEs and the self-employed from declaring VAT",
+        "url": "https://en.ara.cat/economy/brussels-takes-spain-to-european-court-for-not-exempting-smes-and-the-self-employed-from-declaring-vat_1_5674905.html",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "El Independiente (6-5-2026): Moncloa rechaza la exención del IVA para los autónomos que le pide Junts",
+        "url": "https://www.elindependiente.com/espana/2026/05/06/moncloa-no-iva-franquiciado-pequenos-autonomos-junts-prorroga-alquileres/",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Reescrita la explicación con fuentes que he abierto: Newtral, EFE y ARA confirman la directiva, el plazo de 2025 y el recurso de la Comisión ante el TJUE; quito eldiario.es (contradictorio) y Maldita (ilegible). No he podido abrir la nota de prensa de la Comisión ni EUR-Lex (certificado/404), por lo que falta una fuente primaria y la confianza queda en media."
+  },
+  {
+    "indice": 1,
+    "minuto": "0:30:43",
+    "afirmacion": "En España hay tres millones y medio de autónomos.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [
+      {
+        "url": "https://pymesmagazine.es/actualidad/los-autonomos-superan-por-primera-vez-los-35-millones-mientras-espana-alcanza-un-nuevo-record-de-afiliacion/",
+        "motivo": "No la he abierto y ya hay fuente primaria y prensa de referencia; web especializada sin valor añadido."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Seguridad Social (revista.seg-social.es): Afiliación de octubre de 2026",
+        "url": "https://revista.seg-social.es/-/afiliacion-octubre-2026",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "The Objective (4-11-2026): La Seguridad Social sumó 186.612 afiliados en octubre y marcó un nuevo récord",
+        "url": "https://theobjective.com/economia/2026-11-04/seguridad-social-sumo-186-612-afiliados-octubre/",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Añadida la fuente primaria (nota de la Seguridad Social, abierta con curl) que confirma 3.501.598 autónomos; descarto Pymes Magazine por no haberla abierto. Sin cambio de veredicto."
+  },
+  {
+    "indice": 2,
+    "minuto": "0:30:43",
+    "afirmacion": "El Gobierno de Sánchez es el que más impuestos y más cotizaciones sociales ha cobrado en la historia de España.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Ministerio de Hacienda (31-3-2026): España cierra 2025 con un déficit del 2,2% y ingresos tributarios de 325.356 millones",
+        "url": "https://www.hacienda.gob.es/es-es/prensa/noticias/noticiaspdf/536.pdf",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Eurostat (gov_10a_taxag): impuestos y cotizaciones de las AAPP de España, 2018-2025, millones de euros",
+        "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/gov_10a_taxag?format=JSON&lang=EN&geo=ES&unit=MIO_EUR&na_item=D2_D5_D91_D61_M_D995&na_item=D61&na_item=D2REC&na_item=D5REC&sector=S13&sinceTimePeriod=2018",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Eurostat (gov_10a_taxag): impuestos y cotizaciones de las AAPP de España, 1995-2025, % del PIB",
+        "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/gov_10a_taxag?format=JSON&lang=EN&geo=ES&unit=PC_GDP&na_item=D2_D5_D91_D61_M_D995&sector=S13&sinceTimePeriod=1995",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Eurostat (gov_10a_main): ingresos totales de las AAPP de España, 1995-2025, % del PIB",
+        "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/gov_10a_main?format=JSON&lang=EN&geo=ES&sector=S13&unit=PC_GDP&na_item=TR&sinceTimePeriod=1995",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Mantengo el veredicto y subo la confianza a alta: he comprobado en Eurostat que la presión fiscal (impuestos y cotizaciones) también es máxima en % del PIB (38,0% en 2025), no solo en euros corrientes. Sustituyo la URL de gov_10a_main (era de ingresos en % del PIB sin comprobar) por la serie que he abierto y que respalda el 42,9%."
+  },
+  {
+    "indice": 3,
+    "minuto": "0:31:46",
+    "afirmacion": "El Gobierno no ha actualizado (deflactado) la tarifa del IRPF con la inflación, lo que hace que las subidas de sueldo nominales se paguen en tramos más altos.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.hayderecho.com/2026/05/27/inflacion-e-irpf-una-forma-silenciosa-de-subirnos-los-impuestos/",
+        "motivo": "Blog de opinión con estimaciones propias del autor; no es fuente válida como base."
+      },
+      {
+        "url": "https://www.elindependiente.com/economia/2026/10/09/trabajadores-pagaran-255-euros-irpf-hacienda-adaptar-impuesto-inflacion/",
+        "motivo": "Abre y es compatible, pero sus cifras son estimaciones de Funcas y no menciona AIReF ni la cifra oficial; sustituida por la fuente primaria."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Ministerio de Hacienda: Informe de Progreso Anual 2026 del Reino de España (cuadro 9, impacto de la no deflactación del IRPF)",
+        "url": "https://www.hacienda.gob.es/cdi/estabilidad%20presupuestaria/planfiscalestructural/informe-progreso-2026.pdf",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "El Español (2-5-2026): El Gobierno avanza a Bruselas que no ajustará el IRPF a la inflación e ingresará 2.200M anuales extra",
+        "url": "https://www.elespanol.com/invertia/economia/macroeconomia/20260502/gobierno-avanza-bruselas-no-ajustara-irpf-inflacion-ingresara-anuales-extra-via/1003744230492_0.html",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "ARA (4-4-2026): Hacienda solo ha ajustado el IRPF a la inflación en dos de los últimos veinte años",
+        "url": "https://es.ara.cat/economia/cuentas-publicas/hacienda-ajustado-irpf-inflacion-ultimos-20-anos_1_5698298.html",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Ministerio de Hacienda (31-3-2026): nota sobre el cierre de 2025 (rebaja del IRPF solo a perceptores del SMI)",
+        "url": "https://www.hacienda.gob.es/es-es/prensa/noticias/noticiaspdf/536.pdf",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Añadida la fuente primaria que faltaba: el Informe de Progreso Anual 2026 (Hacienda) cuantifica la no deflactación en 2.294 millones en 2025. Quito la atribución a AIReF y al Consejo General de Economistas que no pude comprobar y descarto el blog Hay Derecho. Veredicto verdadero con confianza alta."
+  },
+  {
+    "indice": 4,
+    "minuto": "0:31:46",
+    "afirmacion": "En España un trabajador con cáncer en baja médica no cobra el 100% de su sueldo salvo que su convenio colectivo lo mejore.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://guiafiscal.es/laboral/baja-laboral-it-2026/",
+        "motivo": "No carga (pantalla de verificación anti-bots); no se puede comprobar que diga lo atribuido."
+      },
+      {
+        "url": "https://sanidad.castillalamancha.es/sites/sescam.castillalamancha.es/files/documentos/pdf/20250911/incapacidad_temporal_web_2025.pdf",
+        "motivo": "No responde desde esta máquina (conexión rechazada)."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Seguridad Social: Incapacidad temporal, cuantía de la prestación",
+        "url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/2063/2064/2074/2075",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Sustituyo las dos fuentes que no cargan por la página de la Seguridad Social, que confirma 60%/75%. Mantengo mayormente verdadero con confianza media: la negación de una norma específica para el cáncer no se puede probar con una sola fuente y no he podido abrir el BOE."
+  },
+  {
+    "indice": 5,
+    "minuto": "0:33:47",
+    "afirmacion": "Cuando Feijóo llegó a la Xunta en 2009, el presupuesto aprobado preveía 10.000 millones de ingresos pero los ingresos reales eran 8.000 millones, es decir, un agujero de 2.000 millones.",
+    "veredicto_antes": "no_verificable",
+    "veredicto_despues": "no_verificable",
+    "cambia_veredicto": false,
+    "confianza_antes": "baja",
+    "confianza_despues": "baja",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2009-4369",
+        "motivo": "boe.es no responde desde esta máquina (conexión rechazada); no he podido comprobar la cifra de 10.573 millones que se le atribuía."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Atlántico Diario (5-7-2009): Marta Fernández, sobre la situación en la que estaban las cuentas de la Xunta",
+        "url": "https://www.atlantico.net/articulo/galicia/marta-fernandez-situacion-estaban-cuentas-xunta-era-peor-pensabamos/20090706140158067101.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Sigue no_verificable (confianza baja). La entrevista de la conselleira es de julio de 2009 y los 600/1.200 millones son la versión de la propia Xunta; quito la cifra de 10.573 millones porque no pude abrir el BOE y dejo claro que no hay liquidación definitiva consultada."
+  },
+  {
+    "indice": 6,
+    "minuto": "0:33:47",
+    "afirmacion": "Durante el mandato de Feijóo, Galicia fue la tercera comunidad autónoma con menor incremento de deuda pública, tras Madrid y Baleares.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Newtral (11-7-2023): Feijóo no fue el presidente autonómico que menos incrementó su deuda: en Madrid o Baleares aumentó menos",
+        "url": "https://www.newtral.es/deuda-galicia-feijoo-factcheck/20230711/",
+        "tipo": "verificador"
+      },
+      {
+        "titulo": "Newtral (10-1-2024): Galicia no es la comunidad autónoma que más ha reducido su deuda pública desde 2009",
+        "url": "https://www.newtral.es/deuda-galicia-2009-deficit-rueda-factcheck/20240110/",
+        "tipo": "verificador"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Mantengo verdadero con confianza media: he abierto los dos análisis de Newtral y confirman el puesto tercero (por detrás de Madrid y Baleares) en % de variación y en % del PIB. Falta la fuente primaria (Banco de España), que no he abierto, y añado el matiz de las cifras absolutas."
+  },
+  {
+    "indice": 7,
+    "minuto": "0:33:47",
+    "afirmacion": "Al llegar a la Xunta en 2009, Feijóo redujo en un 50% el número de altos cargos.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "no_verificable",
+    "cambia_veredicto": true,
+    "confianza_antes": "media",
+    "confianza_despues": "baja",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "DOG (22-4-2009): Decreto 83/2009, por el que se fija la estructura orgánica de los departamentos de la Xunta de Galicia",
+        "url": "https://www.xunta.gal/dog/Publicados/2009/20090422/Anuncio176AE_es.html",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Crónicas de la Emigración: La llegada de Feijóo a la Xunta centró la historia de la emigración gallega en 2009 («reducir en un 47% los altos cargos»)",
+        "url": "https://www.cronicasdelaemigracion.com/articulo/galicia/llegada-feijoo-xunta-centro-historia-emigracion-gallega/20091228104854018362.html",
+        "tipo": "apoyo"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Baja de mayormente_verdadero a no_verificable: al abrir el Decreto 83/2009 solo se documenta un 17% menos de direcciones y secretarías generales (y un 25% menos de consellerías), no un 47-50%; el 47% descansa en una crónica secundaria. No hay recuento oficial que lo confirme."
+  },
+  {
+    "indice": 8,
+    "minuto": "0:33:47",
+    "afirmacion": "Galicia tiene una población más envejecida que la media y la población más dispersa de España, con 35.000 núcleos de población.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "IGE: Datos básicos de Galicia, Territorio (entidades singulares y núcleos, INE 2023)",
+        "url": "https://www.ige.gal/estatico/html/gl/DatosBasicos/PDF/Territorio.pdf",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "IGE: Datos básicos de Galicia, Población (índice de envejecimiento 2024)",
+        "url": "https://www.ige.gal/estatico/html/gl/DatosBasicos/PDF/Poboacion.pdf",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "El Debate (22-5-2026): Uno de cada tres gallegos tendrá más de 65 años en 2039",
+        "url": "https://www.eldebate.com/espana/galicia/20260522/galicia-comunidades-envejecidas-europa-cada-tres-gallegos-tendra-65-anos-2039_420426_amp.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Mantengo el veredicto; añado el documento del IGE sobre población (172,78) y verifico en el de territorio que son 30.454 entidades singulares y 10.439 núcleos, frente a los 35.000 de Feijóo."
+  },
+  {
+    "indice": 9,
+    "minuto": "0:35:12",
+    "afirmacion": "En los últimos años Portugal, Irlanda y Grecia han tenido superávit público, a diferencia de España.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [
+      {
+        "url": "https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Government_finance_statistics",
+        "motivo": "Página genérica de Eurostat que no he abierto; la consulta de datos ya es la fuente primaria."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Eurostat (gov_10dd_edpt1): saldo de las AAPP de Portugal, Irlanda, Grecia y España, % del PIB, 2018-2025",
+        "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/gov_10dd_edpt1?format=JSON&lang=EN&geo=PT&geo=IE&geo=EL&geo=ES&sector=S13&unit=PC_GDP&na_item=B9&sinceTimePeriod=2018",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Mantengo el veredicto; corrijo los años de déficit de cada país (Grecia 2020-2023, Portugal 2020-2022, Irlanda 2020-2021) y el déficit español de 2024 (3,2% en los datos de Eurostat que he abierto). Consolido las tres URLs de Eurostat en una sola."
+  },
+  {
+    "indice": 10,
+    "minuto": "0:35:12",
+    "afirmacion": "La recaudación fiscal se ha incrementado un 69%, con más de 220.000 millones de euros más de impuestos en 2026 que en 2018.",
+    "veredicto_antes": "enganoso",
+    "veredicto_despues": "enganoso",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Ministerio de Hacienda (31-3-2026): ingresos tributarios de 2025, 325.356 millones (+10,4%)",
+        "url": "https://www.hacienda.gob.es/es-es/prensa/noticias/noticiaspdf/536.pdf",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Eurostat (gov_10a_taxag): impuestos y cotizaciones de las AAPP de España, 2018-2025, millones de euros",
+        "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/gov_10a_taxag?format=JSON&lang=EN&geo=ES&unit=MIO_EUR&na_item=D2_D5_D91_D61_M_D995&na_item=D61&na_item=D2REC&na_item=D5REC&sector=S13&sinceTimePeriod=2018",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Artículo 14 (9-4-2026): Los impuestos en España baten récord (AEAT: 208.685 millones en 2018 y 325.356 millones en 2025)",
+        "url": "https://www.articulo14.es/economia/los-impuestos-en-espana-baten-record-con-sanchez-hacienda-recauda-ya-mas-de-325-000-millones-20260409.html",
+        "tipo": "apoyo"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Mantengo enganoso (confianza media). Quito la afirmación de la explicación anterior sobre el «+10% acumulado hasta septiembre de 2026», que no he podido comprobar en la AEAT (no responde); confirmo con Hacienda y Eurostat que ni +56% ni +51% llegan al 69% de 2018 a 2025 y que 220.000 millones solo cuadra con impuestos más cotizaciones."
+  },
+  {
+    "indice": 11,
+    "minuto": "0:36:30",
+    "afirmacion": "España ha recibido unos 80.000 millones de euros a fondo perdido de Europa (fondos Next Generation) y esos fondos son deuda que España tiene que devolver.",
+    "veredicto_antes": "enganoso",
+    "veredicto_despues": "enganoso",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://en.wikipedia.org/wiki/NextGenerationEU",
+        "motivo": "Wikipedia no sirve como base única; sustituida por la propia Comisión Europea."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Comisión Europea: NextGenerationEU, devolución de la deuda (subvenciones con el presupuesto de la UE, préstamos por los Estados)",
+        "url": "https://commission.europa.eu/strategy-and-policy/eu-budget/eu-borrower-investor-relations/nextgenerationeu_en",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Ministerio de Hacienda: Informe de Progreso Anual 2026 (anexo II, subvenciones y préstamos del MRR)",
+        "url": "https://www.hacienda.gob.es/cdi/estabilidad%20presupuestaria/planfiscalestructural/informe-progreso-2026.pdf",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Mantengo enganoso: sustituyo Wikipedia por la página de la Comisión Europea (devolución hasta 2058, subvenciones con el presupuesto de la UE) y el informe de Hacienda. Sigue sin comprobarse el importe de 80.000 millones."
+  },
+  {
+    "indice": 12,
+    "minuto": "0:36:30",
+    "afirmacion": "España paga aproximadamente entre 40.000 y 42.000 millones de euros al año en intereses de la deuda.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Eurostat (gov_10a_main, D41PAY): intereses pagados por las AAPP de España, 2018-2025",
+        "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/gov_10a_main?format=JSON&lang=EN&geo=ES&sector=S13&unit=MIO_EUR&na_item=D41PAY&sinceTimePeriod=2018",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Sin cambios: reabro la serie de Eurostat y confirmo 40.432 millones de intereses pagados en 2025."
+  },
+  {
+    "indice": 13,
+    "minuto": "0:36:30",
+    "afirmacion": "Los bancos nunca ganan tanto dinero como cuando gobierna la izquierda (y aumenta la deuda).",
+    "veredicto_antes": "no_verificable",
+    "veredicto_despues": "no_verificable",
+    "cambia_veredicto": false,
+    "confianza_antes": "baja",
+    "confianza_despues": "baja",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambios (no_verificable): he buscado de nuevo una serie comparada de beneficios bancarios por legislatura sin encontrarla; se matiza la explicación."
+  },
+  {
+    "indice": 14,
+    "minuto": "0:36:30",
+    "afirmacion": "La deuda pública de Perú es del 35-37% del PIB (con un banco central muy independiente).",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "FMI DataMapper: deuda bruta de las administraciones públicas de Perú (% del PIB)",
+        "url": "https://www.imf.org/external/datamapper/api/v1/GGXWDG_NGDP/PER",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Mantengo mayormente_verdadero (cifra desfasada 5-7 puntos pero conclusión correcta): reabro el FMI y confirmo 30,1% en 2025 y 28,6% previsto para 2026. No he podido contrastar con las cifras del Ministerio de Economía de Perú."
+  },
+  {
+    "indice": 15,
+    "minuto": "0:37:34",
+    "afirmacion": "Feijóo consiguió superávit en los últimos presupuestos de Galicia que gestionó.",
+    "veredicto_antes": "no_verificable",
+    "veredicto_despues": "no_verificable",
+    "cambia_veredicto": false,
+    "confianza_antes": "baja",
+    "confianza_despues": "baja",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambios (no_verificable, baja): he intentado de nuevo localizar el saldo de Galicia en 2019-2021 en fuentes oficiales sin éxito (web de Hacienda y de la AEAT inaccesibles)."
+  },
+  {
+    "indice": 16,
+    "minuto": "0:37:34",
+    "afirmacion": "Actualmente hay varias comunidades autónomas en superávit.",
+    "veredicto_antes": "no_verificable",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": true,
+    "confianza_antes": "baja",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "AIReF (15-4-2026): Informe 5/26 sobre los presupuestos iniciales de las AA. PP. 2026",
+        "url": "https://www.airef.es/wp-content/uploads/2026/04/Presupuestos-iniciales-2026/Informe-Presupuestos-Iniciales-2026.pdf",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Ministerio de Hacienda (31-3-2026): déficit de 2025 por subsectores (CCAA: 0,3% del PIB)",
+        "url": "https://www.hacienda.gob.es/es-es/prensa/noticias/noticiaspdf/536.pdf",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Newtral (10-1-2024): Galicia no es la comunidad autónoma que más ha reducido su deuda pública desde 2009 (cinco comunidades con superávit en 2023)",
+        "url": "https://www.newtral.es/deuda-galicia-2009-deficit-rueda-factcheck/20240110/",
+        "tipo": "verificador"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Sube de no_verificable a mayormente_verdadero: la AIReF (15-4-2026) recoge seis comunidades con superávit previsto en 2026 y Newtral cinco con superávit en 2023. Queda en confianza media porque son previsiones y no tengo el desglose autonómico del último cierre mensual."
+  },
+  {
+    "indice": 17,
+    "minuto": "0:37:34",
+    "afirmacion": "Con el Gobierno de Sánchez se han cobrado más impuestos que nunca, el endeudamiento es el mayor de la historia y se han recibido más fondos europeos que nunca.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Eurostat (gov_10dd_edpt1): deuda bruta de las AAPP de España, 2009-2025 (millones de euros y % del PIB)",
+        "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/gov_10dd_edpt1?format=JSON&lang=EN&geo=ES&sector=S13&unit=MIO_EUR&unit=PC_GDP&na_item=GD&sinceTimePeriod=2009",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Ministerio de Hacienda (31-3-2026): ingresos tributarios de 2025",
+        "url": "https://www.hacienda.gob.es/es-es/prensa/noticias/noticiaspdf/536.pdf",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Eurostat (gov_10a_taxag): impuestos y cotizaciones de las AAPP de España, 1995-2025, % del PIB",
+        "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/gov_10a_taxag?format=JSON&lang=EN&geo=ES&unit=PC_GDP&na_item=D2_D5_D91_D61_M_D995&sector=S13&sinceTimePeriod=1995",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Mantengo el veredicto; añado el máximo del 38,0% del PIB en impuestos y cotizaciones (Eurostat) y confirmo la deuda nominal récord (1.698.355 millones) frente a los máximos en % del PIB de 2014 y 2020. Los fondos europeos siguen sin cuantificar."
+  },
+  {
+    "indice": 18,
+    "minuto": "0:37:34",
+    "afirmacion": "En la cumbre de la OTAN se acordó como objetivo subir el gasto en defensa al 3,5% del PIB y revisar la cifra en 2029.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [
+      {
+        "url": "https://en.wikipedia.org/wiki/2025_NATO_summit",
+        "motivo": "Wikipedia no es fuente válida como base; ya está el texto oficial de la declaración."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "OTAN: Declaración de la Cumbre de La Haya (2025)",
+        "url": "https://www.nato.int/cps/en/natohq/official_texts_236705.htm",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Sin cambio de veredicto: reabro el texto oficial de la OTAN (3,5% en 2035 y revisión en 2029) y descarto Wikipedia."
+  },
+  {
+    "indice": 19,
+    "minuto": "0:37:34",
+    "afirmacion": "Sánchez no planteó objeción alguna dentro de la cumbre de la OTAN y después, en rueda de prensa, dijo que no subiría el gasto en defensa por encima del 2%.",
+    "veredicto_antes": "enganoso",
+    "veredicto_despues": "enganoso",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://en.wikipedia.org/wiki/2025_NATO_summit",
+        "motivo": "Wikipedia no es fuente válida como base; usada solo para llegar a prensa y a la declaración."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "OTAN: Declaración de la Cumbre de La Haya (2025)",
+        "url": "https://www.nato.int/cps/en/natohq/official_texts_236705.htm",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "eldiario.es (25-6-2025): Sánchez reafirma que el 2,1% del PIB en gasto militar es suficiente pese a las dudas de la OTAN",
+        "url": "https://www.eldiario.es/politica/sanchez-reafirma-2-1-gasto-militar-suficiente-pese-dudas-otan-no-arbitrario_1_12414062.html",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Al Jazeera (19-6-2025): Spain rejects NATO's 5% defence spending hike as counterproductive",
+        "url": "https://www.aljazeera.com/economy/2025/6/19/spain-rejects-natos-5-defence-spending-hike-as-counterproductive",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Mantengo enganoso, con fuentes mejores: dos medios que he abierto (eldiario.es y Al Jazeera) prueban que España planteó su objeción antes de la cumbre y obtuvo una excepción, y que la cifra pública fue el 2,1%. Quito la referencia a AP, que no pude abrir, y la afirmación sobre la rueda de prensa que no he podido consultar."
+  },
+  {
+    "indice": 20,
+    "minuto": "0:38:52",
+    "afirmacion": "El gasto español en defensa estaba en torno al 1,2-1,3% del PIB en el momento de la cumbre de la OTAN.",
+    "veredicto_antes": "no_verificable",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": true,
+    "confianza_antes": "baja",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/gov_10a_exp?format=JSON&lang=EN&geo=ES&sector=S13&unit=PC_GDP&cofog99=GF02&na_item=TE&sinceTimePeriod=2018",
+        "motivo": "Es válida pero mide otra cosa (COFOG, 0,9%), no la métrica de la OTAN que se discute; no la he reabierto."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "OTAN: Defence Expenditure of NATO Countries (2014-2024), junio de 2024",
+        "url": "https://www.nato.int/content/dam/nato/legacy-wcm/media_pdf/2024/6/pdf/240617-def-exp-2024-en.pdf",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "OTAN: Defence Expenditure of NATO Countries (2014-2025), corte 3-6-2025",
+        "url": "https://www.nato.int/content/dam/nato/webready/documents/finance/def-exp-2025-en.pdf",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Al Jazeera (19-6-2025): Spain rejects NATO's 5% defence spending hike as counterproductive",
+        "url": "https://www.aljazeera.com/economy/2025/6/19/spain-rejects-natos-5-defence-spending-hike-as-counterproductive",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Sube de no_verificable a mayormente_verdadero: he localizado las tablas de la OTAN (junio de 2024: 1,19% en 2023 y 1,28% estimado en 2024; actualización de 2025: 1,43% en 2024 y 2,00% estimado en 2025) y Al Jazeera cita el 1,28% en junio de 2025. Queda en media por la revisión posterior de 2024 al 1,43%."
+  },
+  {
+    "indice": 21,
+    "minuto": "0:39:56",
+    "afirmacion": "Nadie sabe cuál es el gasto real en defensa de España ni quiénes son los adjudicatarios de los contratos de defensa.",
+    "veredicto_antes": "no_verificable",
+    "veredicto_despues": "no_verificable",
+    "cambia_veredicto": false,
+    "confianza_antes": "baja",
+    "confianza_despues": "baja",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "OTAN: Defence Expenditure of NATO Countries (2014-2025), corte 3-6-2025",
+        "url": "https://www.nato.int/content/dam/nato/webready/documents/finance/def-exp-2025-en.pdf",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Sin cambio de veredicto (no_verificable, baja): añado que la OTAN publica la cifra de gasto español, que choca con «nadie lo sabe» en sentido literal, pero no he podido evaluar la transparencia de los adjudicatarios."
+  },
+  {
+    "indice": 22,
+    "minuto": "0:39:56",
+    "afirmacion": "Se acaban de adjudicar 18.000 millones de euros en contratos de defensa durante la precampaña electoral.",
+    "veredicto_antes": "no_verificable",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": true,
+    "confianza_antes": "baja",
+    "confianza_despues": "baja",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "El Debate (5-11-2026): Defensa moviliza casi 7.000 millones en los dos últimos Consejos de Ministros",
+        "url": "https://www.eldebate.com/espana/defensa/20261105/defensa-moviliza-casi-7000-millones-dos-ultimos-consejos-ministros-fuerzas-armadas_477316.html",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Artículo 14 (2-11-2026): El Ejecutivo aprueba más de 2.500 millones para la modernización de la Armada y la compra de helicópteros H135 y H160",
+        "url": "https://www.articulo14.es/defensa/el-ejecutivo-aprueba-mas-de-2-500-millones-para-la-modernizacion-de-la-armada-y-la-compra-de-helicopteros-h135-y-h160-20261102.html",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Vozpópuli (21-10-2026): Robles y Hereu, decididos a sacar en los próximos días 14.000 millones para el sector de defensa a pesar de las elecciones",
+        "url": "https://www.vozpopuli.com/espana/politica/robles-y-hereu-decididos-a-sacar-en-los-proximos-dias-14000-millones-para-el-sector-de-defensa-a-pesar-de-las-elecciones-y-las-dudas-del-pp.html",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Diario Socialista (13-11-2026): El Gobierno autoriza 11.860 millones en armas en un solo Consejo de Ministros",
+        "url": "https://diariosocialista.net/2026/11/13/el-gobierno-autoriza-11-860-millones-en-armas-en-un-solo-consejo-de-ministros/",
+        "tipo": "apoyo"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Sube de no_verificable a mayormente_verdadero con confianza baja: encuentro tres Consejos de Ministros (27-10, 3-11, 10-11) que suman unos 18.700 millones en Defensa, aunque son autorizaciones y no adjudicaciones. No he podido abrir las referencias del Consejo de Ministros (lamoncloa.gob.es no responde) y el tramo de 11.860 millones solo lo recoge una web afín al PSOE."
+  },
+  {
+    "indice": 23,
+    "minuto": "0:39:56",
+    "afirmacion": "La campaña electoral de las elecciones generales empieza «esta noche».",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://en.wikipedia.org/wiki/2026_Spanish_general_election",
+        "motivo": "Wikipedia no es fuente válida como base; sustituida por dos medios que he abierto."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Demócrata: Cuándo empieza la campaña electoral del 29N y qué día será la pegada de carteles",
+        "url": "https://www.democrata.es/elecciones-generales-espana/cuando-empieza-campana-electoral-29n-dia/",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Artículo 14 (10-11-2026): Elecciones generales del 29N, cuándo publicarán PSOE, PP, Vox, Frente Amplio y demás partidos sus programas",
+        "url": "https://www.articulo14.es/politica/elecciones-generales-del-29n-cuando-publicaran-psoe-pp-vox-frente-amplio-y-demas-partidos-sus-programas-electorales-20261110.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Mantengo verdadero y cambio Wikipedia por dos medios que he abierto (inicio de campaña el 13-11 a las 00:00, elecciones el 29-11). No he podido abrir Interior ni el BOE (la web de Interior devuelve 403), así que no hay fuente primaria y la confianza queda en media."
+  },
+  {
+    "indice": 24,
+    "minuto": "0:39:56",
+    "afirmacion": "Ningún Gobierno puede gastar un presupuesto sin la autorización de las Cortes.",
+    "veredicto_antes": "enganoso",
+    "veredicto_despues": "enganoso",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [
+      {
+        "url": "https://es.wikisource.org/wiki/Constitución_española_de_1978/09",
+        "motivo": "Wikisource es una transcripción no oficial; sustituida por el texto oficial del Congreso."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Congreso de los Diputados: Constitución Española, artículo 134 (Presupuestos Generales del Estado)",
+        "url": "https://www.congreso.es/constitucion/ficheros/c78/cons_espa.pdf",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Forbes España (19-11-2025): Sánchez quiere presupuestos para 2026, pero defiende que los prorrogados «le sientan bien a la economía»",
+        "url": "https://forbes.es/economia/830463/sanchez-quiere-presupuestos-para-2026-pero-defiende-los-prorrogados-le-sientan-bien-a-la-economia/",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Corrijo la afirmación: quito el inciso sobre que Sánchez «no ha sometido a votación sus presupuestos», que no aparece en la cita. Mantengo enganoso, con confianza alta tras abrir el artículo 134 en el texto oficial del Congreso (apartado 4: prórroga automática)."
+  }
+]

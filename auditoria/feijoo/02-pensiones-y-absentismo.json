@@ -1,0 +1,533 @@
+[
+  {
+    "indice": 0,
+    "minuto": "0:19:19",
+    "afirmacion": "La economía española ha crecido más que la media de la UE, y lo ha hecho por el aumento de población y no por el de la productividad.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.deia.eus/economia/2026/03/26/ine-confirma-pib-crecio-2-10869286.amp.html",
+        "motivo": "No carga (HTTP 406); sustituida por la nota del INE."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Eurostat (API, nama_10_pe): empleo total en España, 2018-2025",
+        "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_pe?format=JSON&lang=EN&geo=ES&na_item=EMP_DC&unit=THS_PER&unit=THS_HW&sinceTimePeriod=2018",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "INE, Contabilidad Nacional Trimestral de España, 4.º trimestre de 2025 (PIB 2025 +2,8%; productividad)",
+        "url": "https://ine.es/dyngs/Prensa/CNTR4T25.htm?print=1",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "INE, Estadística Continua de Población, 2.º trimestre de 2026 (6/08/2026)",
+        "url": "https://www.ine.es/dyngs/Prensa/ECP2T26.htm",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "INE, Cifras de población a 1 de enero de 2019 (incluye 1 de enero de 2018 y extranjeros 2018)",
+        "url": "https://www.ine.es/prensa/cp_e2019_p.pdf",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Sin cambio de veredicto; sustituyo el enlace de Deia (no cargaba) por la contabilidad nacional del INE y añado las cifras de población del INE."
+  },
+  {
+    "indice": 1,
+    "minuto": "0:19:19",
+    "afirmacion": "La productividad en España ha bajado.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "INE, Contabilidad Nacional Trimestral de España, 4.º trimestre de 2025 (PIB 2025 +2,8%; productividad)",
+        "url": "https://ine.es/dyngs/Prensa/CNTR4T25.htm?print=1",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Sin cambio de veredicto; matizo que la caída es por ocupado y que por hora trabajada hay ligero aumento, y añado el INE como fuente primaria."
+  },
+  {
+    "indice": 2,
+    "minuto": "0:20:21",
+    "afirmacion": "La competitividad de la economía española ha bajado.",
+    "veredicto_antes": "no_verificable",
+    "veredicto_despues": "no_verificable",
+    "cambia_veredicto": false,
+    "confianza_antes": "baja",
+    "confianza_despues": "baja",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Hosteltur: España pierde posiciones entre las economías más competitivas del mundo (IMD 2018, 26/05/2018)",
+        "url": "https://www.hosteltur.com/128313_espana-pierde-posiciones-economias-competitivas-mundo.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio: sigue sin poder verificarse por no estar definido el indicador; añado el IMD de 2018 (36 de 63) frente a 2026 (39 de 70) con señales mezcladas."
+  },
+  {
+    "indice": 3,
+    "minuto": "0:20:21",
+    "afirmacion": "La población de España ha aumentado en más de 4 millones de personas, todas inmigrantes, porque el saldo vegetativo es negativo.",
+    "veredicto_antes": "enganoso",
+    "veredicto_despues": "falso",
+    "cambia_veredicto": true,
+    "confianza_antes": "media",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "INE, Estimación del Movimiento Natural de la Población 2025, datos provisionales (18/02/2026)",
+        "url": "https://ine.es/dyngs/Prensa/EDES_EMN2025.htm",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Pasa de engañoso a falso: la población solo creció 2,9-3,1 millones desde 2018 (INE), no más de 4; la dirección (inmigración, saldo vegetativo negativo) es correcta."
+  },
+  {
+    "indice": 4,
+    "minuto": "0:20:21",
+    "afirmacion": "El gasto público se ha incrementado un 22%.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [],
+    "tiene_fuente_primaria": true,
+    "nota": "Sin cambio de veredicto; el 22% solo cuadra en términos reales (nominal +52%) y lo señalo, incluida la mezcla de bases con la deuda."
+  },
+  {
+    "indice": 5,
+    "minuto": "0:20:21",
+    "afirmacion": "La deuda pública se ha incrementado un 40 y pico por ciento.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.bde.es/wbe/es/noticias-eventos/actualidad-banco-espana/deuda-aapp-marzo26.html",
+        "motivo": "No carga desde esta máquina (conexión rechazada); datos citados a través de Europa Press."
+      },
+      {
+        "url": "https://www.bde.es/f/webbde/GAP/Secciones/SalaPrensa/NotasInformativas/Briefing_notes/en/notabe230419en.pdf",
+        "motivo": "No carga desde esta máquina; dato de 2018 citado a través de Público."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Público: La deuda pública cierra 2018 en el 97,2% del PIB, por encima del objetivo del Gobierno (Banco de España, 29/03/2019)",
+        "url": "https://www.publico.es/economia/deuda-publica-cierra-2018-97-2-pib-encima-objetivo-gobierno.html",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Bolsamanía/Europa Press: La deuda pública cierra 2025 en el 100,7% del PIB (31/03/2026)",
+        "url": "https://www.bolsamania.com/noticias/economia/economia-amp-la-deuda-publica-cierra-2025-en-el-1007-del-pib-tras-caer-un-punto-y-mejora-el-objetivo-del-gobierno--22217329.html",
+        "tipo": "agencia"
+      },
+      {
+        "titulo": "El Independiente: La deuda pública roza los 1,7 billones al cierre de 2025 (31/03/2026)",
+        "url": "https://www.elindependiente.com/economia/2026/03/31/deuda-publica-roza-17-billones-cierre-2025-48-ano-anterior/amp/",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Sin cambio de veredicto; sustituyo las páginas del Banco de España (no abren) por prensa de referencia y añado la cifra de 2018 publicada entonces (+44,7%)."
+  },
+  {
+    "indice": 6,
+    "minuto": "0:20:21",
+    "afirmacion": "La generación de los años 60 (la de Feijóo) es la mayor que se jubila.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://es.wikipedia.org/wiki/Demograf%C3%ADa_de_Espa%C3%B1a",
+        "motivo": "Wikipedia: no válida como fuente única; no se pudo contrastar con el INE."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Seguridad Social: informe INTegraSS-2025, proyección del gasto en pensiones 2025-2070 (resumen ejecutivo)",
+        "url": "https://www.seg-social.es/descarga/es/informe25",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Euronews: La nómina de pensiones bate récords mientras la jubilación del baby boom tensiona las cuentas (19/10/2026)",
+        "url": "https://es.euronews.com/2026/10/19/nomina-pensiones-bate-records-mientras-jubilacion-del-baby-boom-tensiona-cuentas",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Sin cambio de veredicto; retiro Wikipedia y apoyo la afirmación en el informe de la Seguridad Social sobre el baby boom."
+  },
+  {
+    "indice": 7,
+    "minuto": "0:22:28",
+    "afirmacion": "Según los medios de hoy (13 de noviembre de 2026), el Gobierno ha adjudicado en los últimos Consejos de Ministros unos 18.000-19.000 millones en gasto de defensa.",
+    "veredicto_antes": "no_verificable",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": true,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.hacienda.gob.es/gl-ES/Prensa/Noticias/Paginas/2026/20261103-NP-CM-REPROGRAMACION-DEFENSA.aspx",
+        "motivo": "Carga, pero no contiene importes, así que no respalda la cifra."
+      },
+      {
+        "url": "https://www.vozpopuli.com/espana/politica/robles-y-hereu-decididos-a-sacar-en-los-proximos-dias-14000-millones-para-el-sector-de-defensa-a-pesar-de-las-elecciones-y-las-dudas-del-pp.html",
+        "motivo": "Es una previsión de 14.000 millones del 21/10/2026, no una autorización; no respalda la cifra."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Hacienda: nota del Consejo de Ministros del 27 de octubre de 2026 sobre helicópteros (392 millones)",
+        "url": "https://www.hacienda.gob.es/eu-ES/Prensa/Noticias/Paginas/2026/20261027-NP-CM-HELICOPTEROS.aspx",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Siete contratos de Defensa por 4.200 millones (Que.es, 03/11/2026)",
+        "url": "https://www.que.es/2026/11/03/contratos-defensa-4200-millones/",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Defensa gastará 12.000 millones para buques, submarinos y misiles (El Correo Gallego, 11/11/2026)",
+        "url": "https://www.elcorreogallego.es/espana/2026/11/11/defensa-12000-millones-buques-submarinos-misiles-136316809.html",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "España pagará 1.786 millones por seis corbetas EPC (Escudo Digital, 04/11/2026)",
+        "url": "https://www.escudodigital.com/defensa/desarrollo-defensa/espana-pagara-1786-millones-por-seis-corbetas-epc-la-armada-pidio-patrulleros-y-el-boe-exige-escoltas.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Pasa de no verificable a casi cierto: sumando los Consejos del 27 de octubre, 3 y 10 de noviembre salen unos 18.200 millones, compatibles con su cifra (con la imprecisión de «adjudicado»)."
+  },
+  {
+    "indice": 8,
+    "minuto": "0:22:28",
+    "afirmacion": "Es la primera vez en 50 años de democracia que un Gobierno termina la legislatura sin aprobar ni un solo año los presupuestos generales.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Congreso de los Diputados (XV Legislatura): respuesta del Gobierno a pregunta escrita 184/39196, PGE 2023 prorrogados",
+        "url": "https://www.congreso.es/l15p/e12/e_0120891_n_000.pdf",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Sin cambio de veredicto; añado una respuesta del Gobierno en el Congreso como fuente oficial de que rige la LPGE 2023 prorrogada."
+  },
+  {
+    "indice": 9,
+    "minuto": "0:23:28",
+    "afirmacion": "Se transfieren unos 50.000 millones de euros de impuestos al sistema de pensiones.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": true,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/inclusion/paginas/2025/120925-ingresos-cotizaciones-seguridad-social.aspx",
+        "motivo": "No carga desde esta máquina (conexión rechazada) y es un dato parcial de julio de 2025; sustituida por el balance de 2025 vía The Objective."
+      },
+      {
+        "url": "https://www.elindependiente.com/economia/2025/09/05/cotizaciones-cubren-73-ingresos-seguridad-social-pagar-pensiones/",
+        "motivo": "Carga, pero sus cifras son del primer semestre de 2025, no del año completo."
+      },
+      {
+        "url": "https://www.raisin.com/es-es/noticias/el-deficit-de-la-seguridad-social-supera-los-60-000-millones/",
+        "motivo": "Web comercial (comparador financiero) que reescribe el informe de Fedea; sustituida por el informe de Fedea y Artículo 14."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "The Objective: La Seguridad Social cierra 2025 con un déficit de 7.387 millones, el 0,4% del PIB (31/03/2026, datos del Ministerio de Inclusión)",
+        "url": "https://theobjective.com/economia/2026-03-31/seguridad-social-cierra-2025-deficit-7-387-millones/",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Fedea (Á. de la Fuente): Las cuentas de la Seguridad Social Ampliada, series 2005-2025, v1.3 (Apuntes 2026/03, enero de 2026)",
+        "url": "https://documentos.fedea.net/pubs/ap/2026/ap2026-03.pdf",
+        "tipo": "apoyo"
+      },
+      {
+        "titulo": "Artículo 14: El déficit de la Seguridad Social duplica el gasto militar comprometido con la OTAN (23/01/2026, sobre informe de Fedea)",
+        "url": "https://www.articulo14.es/economia/el-deficit-de-la-seguridad-social-duplica-el-gasto-militar-comprometido-con-la-otan-20260123.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Pasa de casi cierto a verdadero: las cifras oficiales de transferencias de 2025 (47.815-52.990 millones) hacen que «unos 50.000» sea correcto; retiro Raisin y la nota de 2025 parcial."
+  },
+  {
+    "indice": 10,
+    "minuto": "0:23:28",
+    "afirmacion": "La edad de jubilación llega actualmente hasta los 67 años.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": true,
+    "confianza_antes": "media",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.elindependiente.com/economia/2025/12/31/edad-jubilacion-2026/",
+        "motivo": "Carga, pero es incoherente (66 años y 6 meses y 66 años y 10 meses) y no precisa cuándo se llega a los 67."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Seguridad Social: edad de jubilación ordinaria por año (tabla 2026-2027)",
+        "url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10963/28393/28396/28472",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "La edad de jubilación sube a 66 años y 10 meses en 2026, último año de transición a los 67 (Valencia Plaza)",
+        "url": "https://valenciaplaza.com/valenciaplaza/nacional/edad-jubilacion-sube-66-anos-y-10-meses-2026-ultimo-ano-transicion-67",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Pasa de casi cierto a verdadero: la Seguridad Social fija 67 años como regla general (66 años y 10 meses en 2026) y el redondeo de dos meses es admisible."
+  },
+  {
+    "indice": 11,
+    "minuto": "0:25:31",
+    "afirmacion": "Construir un millón de viviendas crearía 500.000 puestos de trabajo.",
+    "veredicto_antes": "no_verificable",
+    "veredicto_despues": "no_verificable",
+    "cambia_veredicto": false,
+    "confianza_antes": "baja",
+    "confianza_despues": "baja",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "idealista: noticias sobre el plan de vivienda del PP (declaración de Feijóo del 26/05/2026)",
+        "url": "https://www.idealista.com/news/taxonomy/term/13299",
+        "tipo": "apoyo"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio: es una proyección sin metodología publicada ni estimación independiente."
+  },
+  {
+    "indice": 12,
+    "minuto": "0:25:31",
+    "afirmacion": "El gasto en absentismo (empresas y administración pública) fue de 13.000 millones de euros en 2018 y de más de 30.000 millones en 2025.",
+    "veredicto_antes": "no_verificable",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": true,
+    "confianza_antes": "baja",
+    "confianza_despues": "baja",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.eldebate.com/economia/20260707/feijoo-denuncia-grave-problema-absentismo-laboral-izquierda-le-echa-encima_437170.html",
+        "motivo": "Medio alineado que solo recoge las cifras de Feijóo; no las verifica."
+      },
+      {
+        "url": "https://www.infocop.es/wp-content/uploads/2026/02/notas-breves-umivale-activa-ivie-7.pdf",
+        "motivo": "Retirada por redundante o no aportar a la comprobación."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "AMAT: Informe sobre el Absentismo Laboral por Contingencias Comunes en España de 2018 a 2024",
+        "url": "https://www.amat.es/wp-content/uploads/2025/11/Informe-sobre-el-Absentismo-Laboral-por-Contingencias-Comunes-CC-en-Espana-de-2018-a-2024.pdf",
+        "tipo": "apoyo"
+      },
+      {
+        "titulo": "AMAT: Análisis de las bajas laborables derivadas de la ITCC, año 2025 (22/06/2026)",
+        "url": "https://www.amat.es/wp-content/uploads/2026/06/2026-06-22-Analisis-de-las-Bajas-Laborables-derivadas-de-la-ITCC-Ano-2025.pdf",
+        "tipo": "apoyo"
+      },
+      {
+        "titulo": "El Independiente: El otro agujero de la Seguridad Social, el coste de las bajas laborales se dispara (13/04/2026)",
+        "url": "https://www.elindependiente.com/economia/2026/04/13/otro-agujero-seguridad-social-coste-bajas-laborales-dispara-40/",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Pasa de no verificable a casi cierto con confianza baja: la serie de AMAT (14.561 millones en 2018, 33.280 en 2025) encaja con sus cifras, aunque es una fuente interesada y no oficial."
+  },
+  {
+    "indice": 13,
+    "minuto": "0:25:31",
+    "afirmacion": "En 2018 faltaban al trabajo de media diaria unas 450.000-470.000 personas y en 2025 más de un millón.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.articulo14.es/economia/espana-bate-records-de-absentismo-laboral-16-millones-de-ausencias-diarias-y-bajas-medicas-duplicadas-20260602.html",
+        "motivo": "No se abrió; la cifra de Randstad se apoya en el informe original."
+      },
+      {
+        "url": "https://www.bolsamania.com/noticias/economia/economia--el-45-de-los-ocupados-no-acude-a-su-puesto-de-trabajo-por-incapacidad-temporal-un-73-mas-que-en-2018--21559088.html",
+        "motivo": "No se abrió; redundante con el estudio de Umivale-Ivie."
+      },
+      {
+        "url": "https://www.randstadresearch.es:443/wp-content/uploads/2019/03/RANDSTAD-RESEARCH-Informe-de-Absentismo-laboral-2018T3-FINAL.pdf",
+        "motivo": "Retirada por redundante o no aportar a la comprobación."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "INE (API Tempus, serie EPA42962): ocupados que no han trabajado en la semana de referencia por enfermedad, accidente o incapacidad temporal",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/EPA42962?nult=200",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "BBVA Research: Observatorio EPA 4.º trimestre de 2025",
+        "url": "https://www.bbvaresearch.com/wp-content/uploads/2026/01/EPA4T25.pdf",
+        "tipo": "apoyo"
+      },
+      {
+        "titulo": "Randstad Research: Informe de absentismo laboral 2018 T3",
+        "url": "https://www.randstadresearch.es/wp-content/uploads/2019/03/RANDSTAD-RESEARCH-Informe-de-Absentismo-laboral-2018T3-FINAL.pdf",
+        "tipo": "apoyo"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Sin cambio de veredicto; ahora lo respalda la EPA del INE (476.000-513.000 en 2018; 1.042.900 en el 4T 2025) en lugar de estimaciones indirectas."
+  },
+  {
+    "indice": 14,
+    "minuto": "0:26:33",
+    "afirmacion": "El absentismo de los autónomos está en torno al 4% (Feijóo mantiene después que sus datos eran del 3,5-4%, frente al 1% que le señalan los verificadores del programa).",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio de veredicto; añado el matiz de que el 1% del programa parece ser incidencia mensual y no absentismo."
+  },
+  {
+    "indice": 15,
+    "minuto": "0:26:33",
+    "afirmacion": "Hay un pico de absentismo los lunes y los viernes, que son los días de la semana con mayor absentismo.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "no_verificable",
+    "cambia_veredicto": true,
+    "confianza_antes": "baja",
+    "confianza_despues": "baja",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.adeccoinstitute.es/wp-content/uploads/2019/06/VIII-Informe-Absentismo.pdf",
+        "motivo": "No se pudo abrir para comprobarlo."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "AMAT: Análisis de las bajas laborables derivadas de la ITCC, año 2025 (22/06/2026)",
+        "url": "https://www.amat.es/wp-content/uploads/2026/06/2026-06-22-Analisis-de-las-Bajas-Laborables-derivadas-de-la-ITCC-Ano-2025.pdf",
+        "tipo": "apoyo"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "ATRIBUCIÓN: la pregunta literal la formula Jordi Wild, pero Feijóo había afirmado el pico de lunes y viernes justo antes, por lo que se mantiene como afirmación suya. Pasa de casi cierto a no verificable: los datos de bajas iniciadas respaldan el lunes pero no el viernes."
+  },
+  {
+    "indice": 16,
+    "minuto": "0:26:33",
+    "afirmacion": "Cuando Feijóo presidía Correos faltaban 5.000 personas al día al trabajo, y entre 8.000 y 10.000 los lunes y los viernes.",
+    "veredicto_antes": "no_verificable",
+    "veredicto_despues": "no_verificable",
+    "cambia_veredicto": false,
+    "confianza_antes": "baja",
+    "confianza_despues": "baja",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio: sin fuente pública del dato de Correos."
+  },
+  {
+    "indice": 17,
+    "minuto": "0:27:33",
+    "afirmacion": "En Correos el absentismo era del 8% en el año 2000 y lo bajó al 4% tras un pacto con los sindicatos.",
+    "veredicto_antes": "no_verificable",
+    "veredicto_despues": "no_verificable",
+    "cambia_veredicto": false,
+    "confianza_antes": "baja",
+    "confianza_despues": "baja",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio: sin fuente pública del dato de Correos de 2000."
+  },
+  {
+    "indice": 18,
+    "minuto": "0:27:33",
+    "afirmacion": "Hoy hay absentismos del 12-14%.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": true,
+    "confianza_antes": "media",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [],
+    "tiene_fuente_primaria": false,
+    "nota": "Pasa de casi cierto a verdadero: es una afirmación de existencia (hay ramas con 12-14%) y Adecco/INE la confirman; no dice que sea la media."
+  },
+  {
+    "indice": 19,
+    "minuto": "0:27:33",
+    "afirmacion": "Los servicios de salud autonómicos tienen un 13-14% de absentismo.",
+    "veredicto_antes": "no_verificable",
+    "veredicto_despues": "no_verificable",
+    "cambia_veredicto": false,
+    "confianza_antes": "baja",
+    "confianza_despues": "baja",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio de veredicto; añado que la sanidad queda por debajo del 13-14% en la rama de Adecco, aunque no es la misma medida."
+  },
+  {
+    "indice": 20,
+    "minuto": "0:27:33",
+    "afirmacion": "Tras la pandemia se ha advertido un incremento de las patologías de salud mental.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio de veredicto; fuentes revisadas y válidas."
+  }
+]

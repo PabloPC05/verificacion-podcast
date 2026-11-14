@@ -1,0 +1,574 @@
+[
+  {
+    "indice": 0,
+    "minuto": "0:47:13",
+    "afirmacion": "Hay una causa judicial abierta que investiga la entrada masiva de personas en Ceuta de julio de 2026.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://es.wikipedia.org/wiki/Crisis_migratoria_de_Ceuta_de_2026",
+        "motivo": "Wikipedia: solo apoyo, no se usa como fuente; los datos se contrastan con fuentes primarias o prensa."
+      }
+    ],
+    "fuentes_nuevas": [],
+    "tiene_fuente_primaria": false,
+    "nota": "Se mantiene verdadero; se retira Wikipedia y se baja la confianza a media porque no se ha podido abrir una fuente judicial primaria, solo dos medios (Euronews y El Independiente) que coinciden."
+  },
+  {
+    "indice": 1,
+    "minuto": "0:48:15",
+    "afirmacion": "La Unión Europea ha externalizado parte de la gestión de sus fronteras a terceros países como Marruecos, mediante acuerdos y financiación.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.tni.org/files/publication-downloads/expandiendo_la_fortaleza_resumen_ejecutivo.pdf",
+        "motivo": "El PDF (más de 10 MB) no se pudo abrir ni leer; además es de un think tank militante (TNI), solo valdría como apoyo."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "SEAE (UE): La Unión Europea y Marruecos",
+        "url": "https://www.eeas.europa.eu/morocco/european-union-and-morocco_en",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Mismo veredicto; se retira el PDF de TNI (no legible) y se añade el SEAE (fuente primaria de la UE) sobre la cooperación migratoria con Marruecos. El Español 2024 no menciona Marruecos y queda solo como apoyo del patrón general."
+  },
+  {
+    "indice": 2,
+    "minuto": "0:48:15",
+    "afirmacion": "En la crisis de Ceuta de julio de 2026 entraron o se movieron unas 70.000 personas.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [
+      {
+        "url": "https://es.wikipedia.org/wiki/Crisis_migratoria_de_Ceuta_de_2026",
+        "motivo": "Wikipedia: solo apoyo, no se usa como fuente; los datos se contrastan con fuentes primarias o prensa."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Congreso de los Diputados: Diario de Sesiones, Comisión de Interior, comparecencia del ministro del Interior (28-08-2026)",
+        "url": "https://www.congreso.es/public_oficiales/L15/CONG/DS/CO/DSCD-15-CO-611.PDF",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Defensor del Pueblo: actúa de oficio por la situación humanitaria de los migrantes que continúan en Ceuta (13-08-2026)",
+        "url": "https://www.defensordelpueblo.es/noticias/se-dirige-a-migraciones-fge-c-a-de-ceuta-y-delegacion-de-gobierno/",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Mismo veredicto; sube la confianza a alta porque ahora hay dos fuentes oficiales (Interior en el Congreso y el Defensor del Pueblo) que dan 72.000 y más de 70.000; se retira Wikipedia."
+  },
+  {
+    "indice": 3,
+    "minuto": "0:49:19",
+    "afirmacion": "El Gobierno sostiene que el CNI detectó movimientos y avisó de más presión en la frontera de Ceuta, pero no de una entrada de tanta gente.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.moncloa.com/2026/10/02/vox-ceuta-cni-audiencia-nacional-marlaska-3441378/",
+        "motivo": "moncloa.com es un medio privado y no es el Gobierno; fuente no válida según la política."
+      },
+      {
+        "url": "https://es.wikipedia.org/wiki/Crisis_migratoria_de_Ceuta_de_2026",
+        "motivo": "Wikipedia: solo apoyo, no se usa como fuente; los datos se contrastan con fuentes primarias o prensa."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Congreso de los Diputados: Diario de Sesiones, Comisión de Interior, comparecencia del ministro del Interior (28-08-2026)",
+        "url": "https://www.congreso.es/public_oficiales/L15/CONG/DS/CO/DSCD-15-CO-611.PDF",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Ara: Robles y Marlaska se enredan con los avisos del CNI sobre Ceuta (26-08-2026)",
+        "url": "https://es.ara.cat/politica/gobierno-sanchez-rinde-cuentas-26-dias-despues-crisis-ceuta_1_5831446.html",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "El Español: Marlaska sube la cifra de migrantes irregulares que entraron en Ceuta y niega la existencia de informes del CNI (4-08-2026)",
+        "url": "https://www.elespanol.com/espana/20260804/marlaska-sube-cifra-migrantes-irregulares-entraron-ceuta-niega-existencia-informes-cni/1003744343542_0.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Mismo veredicto; se descartan moncloa.com y Wikipedia, y se añade el Diario de Sesiones del Congreso (declaración de Marlaska) más Ara y El Español. Se quita de la explicación la declaración ante la Audiencia Nacional del 2-10, que solo constaba en moncloa.com."
+  },
+  {
+    "indice": 4,
+    "minuto": "0:49:19",
+    "afirmacion": "Con la entrada masiva de julio de 2026 la población de Ceuta se duplicó.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [
+      {
+        "url": "https://es.wikipedia.org/wiki/Crisis_migratoria_de_Ceuta_de_2026",
+        "motivo": "Wikipedia: solo apoyo, no se usa como fuente; los datos se contrastan con fuentes primarias o prensa."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Congreso de los Diputados: Diario de Sesiones, Comisión de Interior, comparecencia del ministro del Interior (28-08-2026)",
+        "url": "https://www.congreso.es/public_oficiales/L15/CONG/DS/CO/DSCD-15-CO-611.PDF",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "INE (API Tempus): población de Ceuta por municipios, 2021 (83.517 habitantes)",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/2915?nult=1",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Mismo veredicto; sube la confianza a alta al contrastar población (INE y cifra citada por Interior) y entradas (Interior en el Congreso); se retira Wikipedia."
+  },
+  {
+    "indice": 5,
+    "minuto": "0:49:19",
+    "afirmacion": "Muchas de las personas migrantes que entraron o intentaron entrar en Ceuta en la crisis de julio de 2026 perdieron la vida.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [
+      {
+        "url": "https://es.wikipedia.org/wiki/Crisis_migratoria_de_Ceuta_de_2026",
+        "motivo": "Wikipedia: solo apoyo, no se usa como fuente; los datos se contrastan con fuentes primarias o prensa."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "El Independiente: La Audiencia Nacional abre diligencias por la entrada masiva de inmigrantes en Ceuta (3-08-2026)",
+        "url": "https://www.elindependiente.com/espana/2026/08/03/audiencia-nacional-abre-diligencias-por-la-entrada-masiva-inmigrantes-ceuta/",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Mismo veredicto; se retira Wikipedia y se añade El Independiente (72 muertos según la Delegación del Gobierno el 3-08) además de Euronews e Infobae."
+  },
+  {
+    "indice": 6,
+    "minuto": "0:49:19",
+    "afirmacion": "Durante la crisis de Ceuta hubo menores que quedaron en la calle, desatendidos y en situación vulnerable.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Defensor del Pueblo: Situación en la ciudad autónoma de Ceuta (7-08-2026)",
+        "url": "https://www.defensordelpueblo.es/noticias/situacion-en-la-ciudad-autonoma-de-ceuta/",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Mismo veredicto; se retira de la explicación la alerta de la Fiscalía (1.000 menores en almacenes) porque no se pudo comprobar en las fuentes abiertas, y se añade el comunicado del Defensor del Pueblo de 7-08."
+  },
+  {
+    "indice": 7,
+    "minuto": "0:50:40",
+    "afirmacion": "Colau critica que Pedro Sánchez se fuera de vacaciones en agosto con la crisis de Ceuta abierta y que la primera respuesta de la presidencia del Gobierno no fue la adecuada.",
+    "veredicto_antes": "enganoso",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": true,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Ara: Robles y Marlaska se enredan con los avisos del CNI sobre Ceuta (26-08-2026)",
+        "url": "https://es.ara.cat/politica/gobierno-sanchez-rinde-cuentas-26-dias-despues-crisis-ceuta_1_5831446.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "ATRIBUCIÓN: Colau no dice que la crisis ocurriera en agosto ni que Sánchez no fuera a Ceuta; critica las vacaciones y la primera respuesta. Se reformula la afirmación y el veredicto pasa de engañoso a mayormente verdadero, porque lo que sí afirma (vacaciones con la crisis abierta, respuesta inicial criticada) está documentado, con el matiz de la visita del 31-07."
+  },
+  {
+    "indice": 8,
+    "minuto": "0:50:40",
+    "afirmacion": "Tras una primera respuesta insuficiente, el Gobierno reaccionó y movilizó muchos más recursos en Ceuta.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://es.wikipedia.org/wiki/Crisis_migratoria_de_Ceuta_de_2026",
+        "motivo": "Wikipedia: solo apoyo, no se usa como fuente; los datos se contrastan con fuentes primarias o prensa."
+      },
+      {
+        "url": "https://www.diariodeleon.es/nacional/260826/2095279/salvese-pueda-robles-marlaska-contradicen-sobre-papel-cni-ceuta.html",
+        "motivo": "Válida, pero se sustituye por la versión de Ara y el Diario de Sesiones, que aportan más datos sobre la respuesta."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Congreso de los Diputados: Diario de Sesiones, Comisión de Interior, comparecencia del ministro del Interior (28-08-2026)",
+        "url": "https://www.congreso.es/public_oficiales/L15/CONG/DS/CO/DSCD-15-CO-611.PDF",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Euronews: Miles de menores siguen durmiendo en la calle en Ceuta dos semanas después (13-08-2026)",
+        "url": "https://es.euronews.com/2026/08/13/miles-de-menores-siguen-durmiendo-calle-ceuta-dos-semanas-despues-crisis-migratoria",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Ara: Robles y Marlaska se enredan con los avisos del CNI sobre Ceuta (26-08-2026)",
+        "url": "https://es.ara.cat/politica/gobierno-sanchez-rinde-cuentas-26-dias-despues-crisis-ceuta_1_5831446.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Mismo veredicto; se quitan de la explicación las cifras de «3.000 efectivos según Robles» y el traslado de 500 menores que solo constaban en Wikipedia, y se sustituyen por datos del Diario de Sesiones del Congreso y de Euronews."
+  },
+  {
+    "indice": 9,
+    "minuto": "0:51:42",
+    "afirmacion": "Cuando Rusia invadió Ucrania (febrero de 2022) Colau era alcaldesa de Barcelona y todas las administraciones colaboraron de inmediato para acoger a miles de refugiados ucranianos.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://es.wikipedia.org/wiki/Ada_Colau",
+        "motivo": "Wikipedia: solo apoyo; las fechas del mandato se contrastan con el Ajuntament."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "The Olive Press: How Barcelona's Sants station became the gateway for Ukrainian refugees in Spain (15-03-2022)",
+        "url": "https://www.theolivepress.es/spain-news/2022/03/15/how-barcelonas-sants-station-became-the-gateway-for-ukrainian-refugees-in-spain%EF%BF%BC/",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Ajuntament de Barcelona: Jaume Collboni, alcalde (elegido el 17-06-2023)",
+        "url": "https://ajuntament.barcelona.cat/alcalde/en",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Mismo veredicto; se retira Wikipedia, se añaden The Olive Press (coordinación ciudad, Generalitat y Estado) y el Ajuntament (fin del mandato) y se quita de la explicación la fecha de inicio del mandato y la activación del mecanismo europeo, que no se habían comprobado."
+  },
+  {
+    "indice": 10,
+    "minuto": "0:51:42",
+    "afirmacion": "El número de refugiados ucranianos acogidos (en poco tiempo y con respuesta ágil) fue muy superior al de personas que llegaron a Ceuta en julio de 2026.",
+    "veredicto_antes": "enganoso",
+    "veredicto_despues": "enganoso",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/interior/Paginas/2022/260422-desplazados-ucranianos.aspx",
+        "motivo": "No se pudo abrir (conexión rechazada desde esta máquina); la cifra de 75.000 no se ha podido comprobar directamente."
+      },
+      {
+        "url": "https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/interior/Paginas/2022/291122-refugiados-ucrania.aspx",
+        "motivo": "No se pudo abrir; se sustituye por la nota de Interior reproducida por Exteriores (160.756 a 28-12-2022)."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Ministerio de Asuntos Exteriores (reproduce nota de Interior): España supera las 160.000 protecciones temporales a refugiados de Ucrania (29-12-2022)",
+        "url": "https://www.exteriores.gob.es/Embajadas/washington/es/Comunicacion/Noticias/Paginas/Articulos/20221229_NOT01.aspx",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "The Objective: España supera las 50.000 protecciones a desplazados por la guerra en Ucrania (11-04-2022)",
+        "url": "https://theobjective.com/espana/2022-04-11/espana-supera-las-50-000-protecciones-a-desplazados-por-la-guerra-en-ucrania/",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Congreso de los Diputados: Diario de Sesiones, Comisión de Interior, comparecencia del ministro del Interior (28-08-2026)",
+        "url": "https://www.congreso.es/public_oficiales/L15/CONG/DS/CO/DSCD-15-CO-611.PDF",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Mismo veredicto (engañoso): el total de ucranianos supera las entradas de Ceuta, pero compara diez meses con dos días; se sustituyen las notas de Moncloa (no accesibles) por Exteriores, The Objective y el Diario de Sesiones, y se quita la cifra de 75.000 sin comprobar."
+  },
+  {
+    "indice": 11,
+    "minuto": "0:51:42",
+    "afirmacion": "En Barcelona los refugiados ucranianos llegaban en tren a la estación de Sants, donde Cruz Roja tenía recursos para acogerlos.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.3cat.cat/3catinfo/barcelona-tindra-un-dels-tres-grans-centres-per-rebre-refugiats-ucrainesos-a-espanya/noticia-amp/3150331/",
+        "motivo": "3Cat habla del centro de acogida y de Cruz Roja, pero no menciona la estación de Sants, así que no respalda este punto."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "The Olive Press: How Barcelona's Sants station became the gateway for Ukrainian refugees in Spain (15-03-2022)",
+        "url": "https://www.theolivepress.es/spain-news/2022/03/15/how-barcelonas-sants-station-became-the-gateway-for-ukrainian-refugees-in-spain%EF%BF%BC/",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Mismo veredicto; se retira 3Cat (no menciona Sants) y se añade The Olive Press como segunda fuente independiente."
+  },
+  {
+    "indice": 12,
+    "minuto": "0:52:43",
+    "afirmacion": "La mayoría de las personas que entraron en Ceuta en julio de 2026 acabó regresando a Marruecos.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [
+      {
+        "url": "https://es.wikipedia.org/wiki/Crisis_migratoria_de_Ceuta_de_2026",
+        "motivo": "Wikipedia: solo apoyo, no se usa como fuente; los datos se contrastan con fuentes primarias o prensa."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Congreso de los Diputados: Diario de Sesiones, Comisión de Interior, comparecencia del ministro del Interior (28-08-2026)",
+        "url": "https://www.congreso.es/public_oficiales/L15/CONG/DS/CO/DSCD-15-CO-611.PDF",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "EITB/Orain: Marlaska asegura que han regresado a Marruecos 70.000 de las 72.000 personas que entraron a Ceuta (4-08-2026)",
+        "url": "https://orain.eus/es/politica/2026/08/04/marlaska-asegura-han-regresado-marruecos-70-000-las-72-000-personas-entraron-ceuta/",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Mismo veredicto; se añaden el Diario de Sesiones del Congreso (fuente primaria) y EITB/Orain, se retira Wikipedia y se quita de la explicación el informe de la Guardia Civil de 88.146 retornos que solo constaba en Wikipedia."
+  },
+  {
+    "indice": 13,
+    "minuto": "0:52:43",
+    "afirmacion": "La ley obliga a acoger y atender a los menores extranjeros no acompañados que llegan a España.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.defensordelpueblo.es/noticias/se-dirige-a-migraciones-fge-c-a-de-ceuta-y-delegacion-de-gobierno/",
+        "motivo": "Es válida pero no habla de la obligación legal de acoger a los menores, sino de la actuación de oficio sobre la situación humanitaria."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Congreso de los Diputados: Diario de Sesiones, Comisión de Interior, comparecencia del ministro del Interior (28-08-2026)",
+        "url": "https://www.congreso.es/public_oficiales/L15/CONG/DS/CO/DSCD-15-CO-611.PDF",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Mismo veredicto y confianza media: el BOE no responde desde esta máquina; se añade el Diario de Sesiones (Marlaska alude a la tutela de menores y al artículo 35) y se descarta la actuación de oficio del Defensor por no tratar la obligación legal."
+  },
+  {
+    "indice": 14,
+    "minuto": "0:53:45",
+    "afirmacion": "Como alcaldesa de Barcelona le tocó gestionar la pandemia de COVID-19 y el atentado de la Rambla.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [
+      {
+        "url": "https://es.wikipedia.org/wiki/Ada_Colau",
+        "motivo": "Wikipedia: solo apoyo; se sustituye por webs del Ajuntament y prensa."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Ajuntament de Barcelona: Barcelona recorda les víctimes de l'atemptat del 17 d'agost del 2017 (17-08-2021)",
+        "url": "https://ajuntament.barcelona.cat/premsa/2021/08/17/barcelona-recorda-a-les-victimes-de-latemptat-del-17-dagost-del-2017/",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Ajuntament de Barcelona: Ada Colau assisteix a l'acte en record i homenatge a les víctimes de l'atemptat del 17 d'agost del 2017 (16-08-2019)",
+        "url": "https://ajuntament.barcelona.cat/premsa/2019/08/16/ada-colau-assisteix-a-lacte-en-record-i-homenatge-a-les-victimes-de-latemptat-del-17-dagost-del-2017-a-barcelona/",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Ajuntament de Barcelona: Jaume Collboni, alcalde (elegido el 17-06-2023)",
+        "url": "https://ajuntament.barcelona.cat/alcalde/en",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Metrópoli Abierta (El Español): Jaume Collboni, nuevo alcalde de Barcelona: se cierra la etapa Colau (17-06-2023)",
+        "url": "https://metropoliabierta.elespanol.com/informacion-municipal/20230617/jaume-collboni-nuevo-alcalde-de-barcelona-se-cierra-la-etapa-colau/772172840_0.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Mismo veredicto; se sustituye Wikipedia por comunicados del Ajuntament de Barcelona y prensa. Elemento excluido de la web (apartado 4 bis) pero publicado en la API."
+  },
+  {
+    "indice": 15,
+    "minuto": "0:55:48",
+    "afirmacion": "Mucha gente de Ceuta respondió con solidaridad hacia las personas que llegaron durante los primeros días de la crisis.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://es.wikipedia.org/wiki/Crisis_migratoria_de_Ceuta_de_2026",
+        "motivo": "Wikipedia: solo apoyo, no se usa como fuente; los datos se contrastan con fuentes primarias o prensa. Los detalles de ayuda vecinal (pista deportiva, Luna Blanca) y la manifestación del 9 de agosto no se pudieron comprobar."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Congreso de los Diputados: Diario de Sesiones, Comisión de Interior, comparecencia del ministro del Interior (28-08-2026)",
+        "url": "https://www.congreso.es/public_oficiales/L15/CONG/DS/CO/DSCD-15-CO-611.PDF",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Diario de León (Europa Press): Sánchez llega al helipuerto de Ceuta entre insultos y enfrentamientos (31-07-2026)",
+        "url": "https://www.diariodeleon.es/nacional/260731/2092874/sanchez-llega-helipuerto-ceuta-insultos-enfrentamientos-manifestantes-policia_amp.html",
+        "tipo": "agencia"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Mismo veredicto; se quitan los ejemplos de ayuda vecinal y la manifestación del 9-08 que solo constaban en Wikipedia, y se apoya en el Defensor del Pueblo y en el Diario de Sesiones."
+  },
+  {
+    "indice": 16,
+    "minuto": "0:56:48",
+    "afirmacion": "España tiene una responsabilidad directa en el conflicto del Sáhara Occidental.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://es.ara.cat/internacional/africa/consejo-seguridad-onu-avala-plan-marruecos-sahara-occidental_1_5547652.html",
+        "motivo": "Trata de la resolución de la ONU de 2025 y del apoyo español al plan marroquí, no de la responsabilidad de España en el conflicto; no respalda esta afirmación."
+      }
+    ],
+    "fuentes_nuevas": [],
+    "tiene_fuente_primaria": true,
+    "nota": "Mismo veredicto; se quitan de la explicación la afirmación sobre «gran parte de la doctrina» que no se pudo comprobar y la referencia a Ara, que no respalda el punto. La única fuente es primaria (documento de la ONU leído completo)."
+  },
+  {
+    "indice": 17,
+    "minuto": "0:56:48",
+    "afirmacion": "El Frente Amplio (y Sumar) no comparten el cambio de posición de Pedro Sánchez sobre el Sáhara y lo han dicho públicamente.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://es.wikipedia.org/wiki/Frente_Amplio_(Espa%C3%B1a)",
+        "motivo": "Wikipedia: solo apoyo, no se usa como fuente; los datos se contrastan con fuentes primarias o prensa."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "infoLibre: Díaz se desmarca de Sánchez y UP defiende el referéndum del pueblo saharaui (18-03-2022)",
+        "url": "https://www.infolibre.es/politica/yolanda-diaz-desmarca-sanchez-pide-respetar-voluntad-democratica-pueblo-sahararui_1_1222842.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Mismo veredicto; se añade infoLibre (reacción de Díaz e IU en 2022) y se retira Wikipedia. Sigue sin localizarse una declaración con la marca «Frente Amplio» ni de Catalunya en Comú."
+  },
+  {
+    "indice": 18,
+    "minuto": "0:58:50",
+    "afirmacion": "El fútbol español (la liga/la Supercopa) ha llevado competiciones a Arabia Saudí, que es una dictadura.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "RFEF: President visits the Supercopa Fan Zone in Jeddah (9-01-2026)",
+        "url": "https://rfef.es/en/noticias/RFEF-President-visits-the-Supercopa-Fan-Zone-in-Jeddah",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Mismo veredicto; se confirma con la web de la RFEF que la Supercopa de enero de 2026 se jugó en Yeda y se aclara que el editorial de Ara es de opinión."
+  },
+  {
+    "indice": 19,
+    "minuto": "0:59:51",
+    "afirmacion": "Marruecos mantiene una relación muy estrecha con Donald Trump.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "baja",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [],
+    "tiene_fuente_primaria": false,
+    "nota": "Mismo veredicto y confianza media; se ha comprobado cada fuente y se concreta en la explicación qué dice cada una (apoyo a la soberanía marroquí, resolución de la ONU y relación del embajador marroquí con la Administración Trump)."
+  },
+  {
+    "indice": 20,
+    "minuto": "0:59:51",
+    "afirmacion": "Donald Trump tiene una relación estrecha con la FIFA y con su presidente, Gianni Infantino.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [],
+    "tiene_fuente_primaria": false,
+    "nota": "Mismo veredicto; sube la confianza a alta porque dos medios distintos (3Cat y El Español) describen la misma relación Trump-Infantino. La frase la dice Colau."
+  },
+  {
+    "indice": 21,
+    "minuto": "0:58:50",
+    "afirmacion": "El hijo pequeño de Ada Colau juega en el club Martinenc.",
+    "veredicto_antes": "no_verificable",
+    "veredicto_despues": "no_verificable",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambios: sigue sin haber fuente pública sobre un dato familiar privado, y por eso queda no_verificable. Elemento excluido de la web (apartado 4 bis) pero publicado en la API."
+  }
+]

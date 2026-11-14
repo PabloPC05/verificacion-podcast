@@ -1,0 +1,708 @@
+[
+  {
+    "indice": 0,
+    "minuto": "0:14:55",
+    "afirmacion": "La inversión ferroviaria sufrió recortes durante el Gobierno de Rajoy (2011-2018) y ha hecho falta llegar a 2025-2026 (unos 15 años) para revertirlos.",
+    "veredicto_antes": "enganoso",
+    "veredicto_despues": "enganoso",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "baja",
+    "fuentes_descartadas": [
+      {
+        "url": "https://bilbaohiria.com/actualidad/inversion-ferroviaria-espana-por-anos-rajoy-sanchez/",
+        "motivo": "Se conserva solo como apoyo: reproduce una serie de un economista en redes sin citar la fuente primaria ni indicar si es nominal o real (valor 'apoyo', no única base)."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "El Observador: La inversión en la red ferroviaria de España cayó casi un 20% en los últimos 15 años",
+        "url": "https://www.elobservador.com.uy/espana/economia-y-finanzas/en-la-tragedia-toledo-tambien-fallo-la-economia-la-inversion-la-red-ferroviaria-espana-cayo-casi-un-20-los-ultimos-15-anos-n6062101",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "El Debate: Las trampas de Puente con los gráficos de inversión",
+        "url": "https://www.eldebate.com/economia/20260126/trampas-puente-graficos-inversion-real-mantener-red-alta-velocidad-menor-rajoy_378055.html",
+        "tipo": "apoyo"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Mantiene 'engañoso' pero con confianza baja: sin acceso a la serie oficial de Transportes/Adif (Moncloa no abre), solo hay prensa y una serie sin fuente primaria. Se descarta como única base la serie de Bilbao Hiria (apoyo) y se añaden El Observador y El Debate (este último, opinión, como apoyo)."
+  },
+  {
+    "indice": 1,
+    "minuto": "0:14:55",
+    "afirmacion": "Pedro Sánchez, como presidente del Gobierno, inauguró la línea de alta velocidad Madrid-Ourense (Galicia) y la línea Madrid-Murcia.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.lamoncloa.gob.es/presidente/actividades/Paginas/2021/201221-sanchez_ave-galicia.aspx",
+        "motivo": "no accesible desde el entorno de auditoría (ECONNREFUSED); no se pudo abrir (existe en buscadores, pero no se pudo abrir)"
+      },
+      {
+        "url": "https://www.lamoncloa.gob.es/presidente/actividades/Paginas/2022/191222-sanchez-murcia-ave.aspx",
+        "motivo": "no accesible desde el entorno de auditoría (ECONNREFUSED); no se pudo abrir"
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Diario de León: El AVE llega a Galicia",
+        "url": "https://www.diariodeleon.es/castilla-y-leon/211219/73866/ave-llega-galicia-convierte-orense-nudo-ferroviario-leon.html",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Euro Weekly News: AVE links Madrid with Galicia after 20 years",
+        "url": "https://euroweeklynews.com/2021/12/20/ave-links-madrid-with-galicia-after-20-years/",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Menorca.info: inauguración del AVE a Murcia",
+        "url": "https://www.menorca.info/actualidad/nacional/2022/12/20/1850459/sanchez-humillacion-rey-simplemente-cateto.html",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Railway News: Madrid-Murcia high-speed railway line opens",
+        "url": "https://railway-news.com/spain-madrid-murcia-high-speed-railway-line-opens",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio de veredicto. Las dos fuentes de La Moncloa no abren desde esta máquina, así que se sustituyen por prensa (Diario de León, Menorca.info, Euro Weekly News, Railway News) que confirma fechas y participación de Sánchez."
+  },
+  {
+    "indice": 2,
+    "minuto": "0:15:57",
+    "afirmacion": "En la línea de alta velocidad Madrid-Sevilla, donde ocurrieron los accidentes de Adamuz y Urda, la inversión se ha multiplicado por 20 en los últimos ocho años respecto al periodo anterior.",
+    "veredicto_antes": "no_verificable",
+    "veredicto_despues": "no_verificable",
+    "cambia_veredicto": false,
+    "confianza_antes": "baja",
+    "confianza_despues": "baja",
+    "fuentes_descartadas": [
+      {
+        "url": "https://es.wikipedia.org/wiki/Accidente_ferroviario_de_Adamuz",
+        "motivo": "Wikipedia: solo apoyo, no sirve como base."
+      },
+      {
+        "url": "https://www.adif.es/w/adif-contrata-m%C3%A1s-proyectos-de-la-renovaci%C3%B3n-integral-de-la-lav-madrid-sevilla-de-la-que-est%C3%A1-ya-en-marcha-una-inversi%C3%B3n-de-580-m%E2%82%AC",
+        "motivo": "HTTP 403 al abrirla; no se pudo comprobar lo que dice."
+      },
+      {
+        "url": "https://www.newtral.es/comparecencia-sanchez-adamuz-datos/20260211/",
+        "motivo": "HTTP 403 al abrirla; no se pudo comprobar."
+      },
+      {
+        "url": "https://www.verificat.cat/es/crecido-gasto-mantenimiento-alta-velocidad/",
+        "motivo": "ECONNREFUSED al abrirla; no se pudo comprobar."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Congreso: Respuesta del Gobierno 184/35772",
+        "url": "https://www.congreso.es/l15p/e10/e_0109652_n_000.pdf",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Artículo 14: Sánchez admite algo inédito en The Wild Project",
+        "url": "https://www.articulo14.es/politica/sanchez-admite-algo-inedito-en-the-wild-project-oscar-puente-ha-hecho-bien-en-dimitir-20261113.html",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Artículo 14: El deterioro de la alta velocidad en siete gráficos",
+        "url": "https://www.articulo14.es/economia/el-deterioro-de-la-alta-velocidad-en-siete-graficos-20261101.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Sigue 'no verificable'. Se descartan Wikipedia y tres enlaces que no abren (Adif, Newtral, Verificat) y se añaden la respuesta oficial del Gobierno al Congreso y dos piezas de Artículo 14; ninguna da la inversión previa de la línea Madrid-Sevilla."
+  },
+  {
+    "indice": 3,
+    "minuto": "0:17:02",
+    "afirmacion": "Con su Gobierno ha aumentado de forma muy notable el número de viajeros de alta velocidad y ha bajado de forma sustancial el precio del billete.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.merca2.es/2026/07/17/liberalizacion-ferroviaria-cnmc-viajeros-precios-2419507/",
+        "motivo": "Medio digital de menor fiabilidad; sus datos coinciden con El Español pero se prescinde de él al haber fuentes mejores."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "INE: Estadística de Transporte de Viajeros, diciembre y año 2025",
+        "url": "https://www.ine.es/dyngs/Prensa/TV1225.htm",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "El Español: La alta velocidad duplica el número de viajeros en 2025 (CNMC)",
+        "url": "https://www.elespanol.com/invertia/observatorios/movilidad/20260717/alta-velocidad-duplica-numero-viajeros-rebaja-precios-liberalizacion/1003744325128_0.html",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Hosteltur: informe CNMC liberalización 2024",
+        "url": "https://www.hosteltur.com/171841_renfe-iryo-y-ouigo-reducen-a-la-mitad-sus-perdidas-mientras-la-demanda-ferroviaria-se-dispara.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Sin cambio de veredicto. Se añade la nota del INE (primaria; la cifra anual de alta velocidad se confirma vía Servimedia) y el informe CNMC de 2024 vía Hosteltur, y se descarta Merca2. La CNMC no abrió, por eso la confianza sigue en media."
+  },
+  {
+    "indice": 4,
+    "minuto": "0:17:02",
+    "afirmacion": "El sistema ferroviario español es seguro (según estadísticas de siniestralidad, pese a los dos accidentes de 2026).",
+    "veredicto_antes": "enganoso",
+    "veredicto_despues": "enganoso",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://es.wikipedia.org/wiki/Accidente_ferroviario_de_Urda",
+        "motivo": "Wikipedia: solo apoyo, no abierta como base."
+      },
+      {
+        "url": "https://ec.europa.eu/eurostat/statistics-explained/index.php/Railway_safety_statistics_in_the_EU",
+        "motivo": "Al abrirla solo mostró la portada de Statistics Explained, sin cifras de España."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Eurostat: Rail transport fatalities drop by 11% in 2024",
+        "url": "https://ec.europa.eu/eurostat/web/products-eurostat-news/w/ddn-20251216-2",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Euronews: Gobierno aprueba medidas de seguridad ferroviaria (10/11/2026)",
+        "url": "https://es.euronews.com/2026/11/10/gobierno-espanol-aprueba-nuevas-medidas-reforzar-la-seguridad-ferroviaria",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Sin cambio de veredicto. Se quita la 'metodología ERA de media móvil' del texto previo, que no pude comprobar, y se reemplazan Wikipedia y la página de Eurostat sin datos por la noticia de Eurostat (UE) y Euronews; el dato de España 2024 sigue viniendo de Infobae."
+  },
+  {
+    "indice": 5,
+    "minuto": "0:17:02",
+    "afirmacion": "El Consejo de Ministros de ese día ha aprobado/impulsado coeficientes reductores de jubilación para los maquinistas.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.lamoncloa.gob.es/consejodeministros/resumenes/Paginas/2026/101126-rueda-prensa-ministros.aspx",
+        "motivo": "no accesible desde el entorno de auditoría (ECONNREFUSED); no se pudo abrir"
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Demócrata: decreto de seguridad ferroviaria y jubilación de maquinistas",
+        "url": "https://www.democrata.es/politica/decreto-seguridad-ferroviaria-jubilacion-maquinistas/",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Merca2: Transportes y sindicatos negocian la seguridad ferroviaria",
+        "url": "https://www.merca2.es/2026/11/13/huelga-ferroviaria-renfe-sin-fecha-2504169/",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio de veredicto. Se retira el enlace de La Moncloa (no abre) y se añaden Demócrata y Merca2; sigue sin haber fuente primaria accesible (ni Moncloa ni BOE), por lo que la confianza queda en media."
+  },
+  {
+    "indice": 6,
+    "minuto": "0:18:09",
+    "afirmacion": "El Gobierno ha adoptado o propuesto más descanso para los controladores del centro de control de Atocha, una auditoría extraordinaria de seguridad de la línea Madrid-Sevilla y una doble firma (validación) en las decisiones de los controladores.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio. Las dos fuentes abren y respaldan las tres medidas, aunque proceden del mismo origen (EFE/Diari de Tarragona): no hay segunda fuente independiente ni primaria, por eso la confianza sigue en media."
+  },
+  {
+    "indice": 7,
+    "minuto": "0:18:09",
+    "afirmacion": "El Gobierno se ha comprometido a invertir 19.000 millones de euros entre 2026 y 2030 en mantenimiento y seguridad de las vías ferroviarias.",
+    "veredicto_antes": "no_verificable",
+    "veredicto_despues": "enganoso",
+    "cambia_veredicto": true,
+    "confianza_antes": "baja",
+    "confianza_despues": "baja",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/transportes-movilidad-sostenible/Paginas/2026/090226-transportes-acuerdo-sindicatos-ferroviarios.aspx",
+        "motivo": "no accesible desde el entorno de auditoría (ECONNREFUSED); no se pudo abrir"
+      },
+      {
+        "url": "https://www.deia.eus/economia/2026/02/09/claves-acuerdo-transportes-maquinistas-desconvocar-renfe-10680263.html",
+        "motivo": "HTTP 406 al abrirla; sustituida por 3Cat, que da las mismas cifras."
+      },
+      {
+        "url": "https://www.articulo14.es/politica/sanchez-admite-algo-inedito-en-the-wild-project-oscar-puente-ha-hecho-bien-en-dimitir-20261113.html",
+        "motivo": "Abre, pero solo repite la cifra de Sánchez sin contrastarla; no sirve como prueba del compromiso."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Merca2: Transportes y sindicatos negocian la seguridad ferroviaria",
+        "url": "https://www.merca2.es/2026/11/13/huelga-ferroviaria-renfe-sin-fecha-2504169/",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Mundiario: El Gobierno negocia con los sindicatos para evitar más huelgas ferroviarias",
+        "url": "https://www.mundiario.com/economia/gobierno-negocia-sindicatos-evitar-mas-huelgas-ferroviarias/20261112172728452514.html",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "3Cat: les claus de l'acord per desconvocar la vaga de trens",
+        "url": "https://www.3cat.cat/3catinfo/mes-inversio-i-personal-a-renfe-i-adif-les-claus-de-lacord-per-desconvocar-la-vaga-de-trens/noticia-amp/3393758/",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Pasa de 'no verificable' a 'engañoso' (confianza baja): dos medios atribuyen a Transportes un marco de 19.000 M€ hasta 2030 para Adif, pero incluye obra nueva y el mantenimiento de los convenios de febrero es de unos 8.150 M€. Sin fuente primaria accesible."
+  },
+  {
+    "indice": 8,
+    "minuto": "0:19:10",
+    "afirmacion": "Casi un año después del accidente de Adamuz (18/01/2026) no se conoce con exactitud qué ocurrió, y siguen abiertas la investigación técnica independiente y la judicial.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://es.wikipedia.org/wiki/Accidente_ferroviario_de_Adamuz",
+        "motivo": "Wikipedia: solo apoyo."
+      },
+      {
+        "url": "https://es.wikipedia.org/wiki/Accidente_ferroviario_de_Urda",
+        "motivo": "Wikipedia: solo apoyo."
+      },
+      {
+        "url": "https://www.noticiasdenavarra.com/sucesos/2026/04/28/rotura-carril-produjo-accidente-adamuz-10997155.html",
+        "motivo": "HTTP 406 al abrirla; sustituida por Diario de León y El Español, que dan el mismo contenido."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Diario de León: La CIAF remarca la hipótesis de la rotura de carril en Adamuz",
+        "url": "https://www.diariodeleon.es/nacional/260429/2083272/ciaf-remarca-hipotesis-rotura-carril-adamuz.html",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "El Español: La Guardia Civil confirma que no hubo fallos en los trenes",
+        "url": "https://www.elespanol.com/invertia/observatorios/movilidad/20260428/guardia-civil-confirma-no-fallos-trenes-iryo-alvia-analisis-cajas-negras-videos/1003744225164_0.amp.html",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Demócrata (Europa Press): La investigación de Adamuz se alargará más de un año",
+        "url": "https://www.democrata.es/economia/la-investigacion-del-siniestro-de-adamuz-se-alargara-mas-de-un-ano-por-ser-excepcionalmente-complejo/",
+        "tipo": "agencia"
+      },
+      {
+        "titulo": "Hosteltur: Arranca la nueva autoridad independiente (AITAT)",
+        "url": "https://www.hosteltur.com/177375_arranca-la-nueva-autoridad-independiente-para-investigar-accidentes-en-el-transporte.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio de veredicto. Se sustituyen Wikipedia y un enlace que no abre por prensa y la nota de Europa Press del 15/10/2026 sobre la AITAT, que confirma que la investigación sigue abierta; no se abrieron los informes de la CIAF/AITAT."
+  },
+  {
+    "indice": 9,
+    "minuto": "0:18:09",
+    "afirmacion": "En el accidente de Urda (28/10/2026) cayó el sistema de seguridad de la línea (LZB) antes de la colisión.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [
+      {
+        "url": "https://es.wikipedia.org/wiki/Accidente_ferroviario_de_Urda",
+        "motivo": "Wikipedia: solo apoyo."
+      },
+      {
+        "url": "https://www.eleconomista.es/transportes-turismo/noticias/14024493/10/26/la-cadena-de-fallos-mas-alla-del-error-humano-que-provocaron-el-accidente-ferroviario-de-toledo.html",
+        "motivo": "HTTP 403 al abrirla; no se pudo comprobar."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Diari de Tarragona (EFE): Cronología de la tragedia ferroviaria de Toledo",
+        "url": "https://www.diaridetarragona.com/sucesos/274306/cronologia-tragedia-ferroviaria-toledo-fallo-seguridad-68-muertos.html",
+        "tipo": "agencia"
+      },
+      {
+        "titulo": "Xataka: Lo que sabemos del choque en Urda",
+        "url": "https://www.xataka.com/movilidad/accidente-alta-velocidad-espanola-que-sabemos-choque-ave-iryo-urda-toledo",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio de veredicto. Se sustituyen Wikipedia y un enlace que da 403 por la cronología de EFE y Xataka, que confirman la caída del LZB antes del choque."
+  },
+  {
+    "indice": 10,
+    "minuto": "0:21:14",
+    "afirmacion": "El protocolo vigente en Urda obligaba a circular a 40 km/h cuando fallaba el sistema operativo (LZB) y entraba el ASFA, y eso no se cumplió.",
+    "veredicto_antes": "no_verificable",
+    "veredicto_despues": "no_verificable",
+    "cambia_veredicto": false,
+    "confianza_antes": "baja",
+    "confianza_despues": "baja",
+    "fuentes_descartadas": [
+      {
+        "url": "https://es.wikipedia.org/wiki/Accidente_ferroviario_de_Urda",
+        "motivo": "Wikipedia: solo apoyo."
+      },
+      {
+        "url": "https://www.democrata.es/economia/iryo-reclama-a-la-seguridad-ferroviaria-fijar-40-km-h-si-se-averia-el-sistema-lzb/",
+        "motivo": "No se abrió en la auditoría."
+      },
+      {
+        "url": "https://orain.eus/en/current-events/society-and-social-news-now/2026/10/29/atocha-control-center-to-ave-driver-restart-with-normal-gear/",
+        "motivo": "No se abrió en la auditoría."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Diari de Tarragona (EFE): Interrogantes del accidente de Toledo",
+        "url": "https://www.diaridetarragona.com/espana/274261/interrogantes-accidente-toledo-caida-sistema-posible-error-humano.html",
+        "tipo": "agencia"
+      },
+      {
+        "titulo": "Diari de Tarragona (EFE): Cronología de la tragedia ferroviaria de Toledo",
+        "url": "https://www.diaridetarragona.com/sucesos/274306/cronologia-tragedia-ferroviaria-toledo-fallo-seguridad-68-muertos.html",
+        "tipo": "agencia"
+      },
+      {
+        "titulo": "Ara: Renfe trabaja para limitar a 40 km/h la reanudación de un tren",
+        "url": "https://es.ara.cat/sociedad/sucesos/renfe-trabaja-limitar-40km-h-reanudacion-tren-falla-sistema-seguridad_1_5897809.html",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Xataka: Lo que sabemos del choque en Urda",
+        "url": "https://www.xataka.com/movilidad/accidente-alta-velocidad-espanola-que-sabemos-choque-ave-iryo-urda-toledo",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Sigue 'no verificable'. Se corrige un error del texto previo (los 200 km/h eran la velocidad estimada del AVE, no un máximo autorizable) y se sustituye Wikipedia por EFE, Ara y Xataka; la existencia previa de la norma de 40 km/h solo la sostiene el Ministerio y la investigación no ha concluido."
+  },
+  {
+    "indice": 11,
+    "minuto": "0:20:11",
+    "afirmacion": "Las decisiones del Gobierno y del ministro de Transportes no influyeron directamente en el segundo accidente. (Nota: Wild le recuerda el aviso por escrito de un sindicato de maquinistas en agosto de 2025; la transcripción dice 'Magnesis', pero la carta fue de Semaf y pedía bajar de 300 a 250 km/h en cuatro líneas por vibraciones; Sánchez responde con el protocolo, sin negarlo.)",
+    "veredicto_antes": "no_verificable",
+    "veredicto_despues": "no_verificable",
+    "cambia_veredicto": false,
+    "confianza_antes": "baja",
+    "confianza_despues": "baja",
+    "fuentes_descartadas": [
+      {
+        "url": "https://es.wikipedia.org/wiki/Accidente_ferroviario_de_Urda",
+        "motivo": "Wikipedia: solo apoyo."
+      },
+      {
+        "url": "https://maldita.es/malditobulo/20260120/los-maquinistas-pidieron-hace-cinco-meses-reducir-la-velocidad-en-el-tramo-en-el-que-se-ha-producido-el-accidente-de-adamuz-por-el-estado-de-la-via/",
+        "motivo": "Al abrirla solo se leyó el título; el cuerpo no cargó."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Euronews: La Fiscalía Europea investiga un posible fraude (06/11/2026)",
+        "url": "https://es.euronews.com/2026/11/06/la-fiscalia-europea-investiga-un-posible-fraude-con-fondos-de-la-ue-tras-el-accidente-de-u",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Ara: La Fiscalía Europea investiga un posible fraude en obras en la alta velocidad",
+        "url": "https://es.ara.cat/sociedad/movilidad/fiscalia-europea-investiga-posible-fraude-obras-alta-velocidad-accidente-urda_1_5901934.html",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Artículo 14: El deterioro de la alta velocidad en siete gráficos",
+        "url": "https://www.articulo14.es/economia/el-deterioro-de-la-alta-velocidad-en-siete-graficos-20261101.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio de veredicto. Se corrige que la Fiscalía Europea investiga posible fraude (no 'malversación') y no se cita el importe, que las fuentes abiertas no confirman; se sustituyen Wikipedia y Maldita (cuerpo no cargó) por Euronews, Ara y Artículo 14."
+  },
+  {
+    "indice": 12,
+    "minuto": "0:22:15",
+    "afirmacion": "Cuando llegó al Gobierno la plantilla de Adif y de los controladores de circulación estaba bajo mínimos y su Gobierno la ha elevado de manera sustancial.",
+    "veredicto_antes": "no_verificable",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": true,
+    "confianza_antes": "baja",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/transportes-movilidad-sostenible/Paginas/2026/090226-transportes-acuerdo-sindicatos-ferroviarios.aspx",
+        "motivo": "no accesible desde el entorno de auditoría (ECONNREFUSED); no se pudo abrir; las cifras del acuerdo se toman de 3Cat"
+      },
+      {
+        "url": "https://www.vozpopuli.com/economia/transporte/hablan-los-operarios-de-adif-senalados-por-puente-la-carga-de-trabajo-es-insoportable-casi-ni-podemos-ir-al-bano.html",
+        "motivo": "No se abrió en la auditoría; medio de línea editorial marcada, solo apoyo."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Ministerio de Política Territorial: Balance de situación de efectivos 2024 (Adif 2010-2024)",
+        "url": "https://mptmd.gob.es/content/dam/mpt/delegaciones_gobierno/informe-evaluacion/2024/Balance%20de%20situaci%C3%B3n%20de%20efectivos.pdf",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "3Cat: les claus de l'acord (2.400 places a Adif)",
+        "url": "https://www.3cat.cat/3catinfo/mes-inversio-i-personal-a-renfe-i-adif-les-claus-de-lacord-per-desconvocar-la-vaga-de-trens/noticia-amp/3393758/",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Artículo 14: Las plazas de controladores de Adif cayeron en 2025",
+        "url": "https://www.articulo14.es/economia/las-plazas-de-controladores-de-adif-cayeron-en-2025-a-su-nivel-mas-bajo-desde-2020-20261031.html",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Demócrata: Los controladores de Adif preparan una huelga tras Urda",
+        "url": "https://www.democrata.es/en/current-events/the-adif-controllers-are-preparing-a-strike-after-urda-they-denounce-that-at-atocha-20-of-the-necessary-staff-is-missing/",
+        "tipo": "apoyo"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Pasa de 'no verificable' a 'casi cierto' porque aparece una serie oficial de plantilla de Adif (+11% sobre 2018, +19% sobre el mínimo de 2021). Lo de los controladores sigue sin serie y hay denuncias de falta de personal, por eso no es 'verdadero'."
+  },
+  {
+    "indice": 13,
+    "minuto": "0:20:11",
+    "afirmacion": "Óscar Puente aprobó un real decreto-ley de indemnizaciones y ayuda a las víctimas (con atención psicológica) y compareció en el Congreso tras los accidentes.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Artículo 14: El Gobierno aprueba 30 millones en ayudas para las víctimas de Urda",
+        "url": "https://www.articulo14.es/politica/el-gobierno-aprueba-30-millones-de-euros-en-ayudas-urgentes-para-las-victimas-del-accidente-de-urda-20261103.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Sin cambio de veredicto. El PDF del Congreso se leyó entero y confirma el RDL 1/2026; se añade Artículo 14 para el decreto del 3 de noviembre. La parte de 'ayuda psicológica' sigue sin confirmarse en los textos abiertos (BOE y Moncloa no abren)."
+  },
+  {
+    "indice": 14,
+    "minuto": "0:25:30",
+    "afirmacion": "Óscar Puente dio una rueda de prensa de más de dos horas y media tras los accidentes.",
+    "veredicto_antes": "no_verificable",
+    "veredicto_despues": "no_verificable",
+    "cambia_veredicto": false,
+    "confianza_antes": "baja",
+    "confianza_despues": "baja",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/transportes-movilidad-sostenible/Paginas/2026/230126-obras-inspecciones-adamuz-accidente.aspx",
+        "motivo": "no accesible desde el entorno de auditoría (ECONNREFUSED); no se pudo abrir"
+      },
+      {
+        "url": "https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/transportes-movilidad-sostenible/Paginas/2026/290126-oscar-puente-comparecencia-senado.aspx",
+        "motivo": "no accesible desde el entorno de auditoría (ECONNREFUSED); no se pudo abrir"
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Diario de León: Puente no dimitirá",
+        "url": "https://www.diariodeleon.es/nacional/260124/2073353/puente-dimitira.html",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Diari de Tarragona: Puente dimite por sorpresa seis días después de Urda",
+        "url": "https://www.diaridetarragona.com/espana/274817/puente-dimite-sorpresa-6-dias-despues-urda-dura-comparecencia-congreso.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Sigue 'no verificable' con confianza baja: las dos notas de Transportes no abren y ninguna fuente abierta da la duración de una rueda de prensa; lo más próximo es 'casi dos horas'."
+  },
+  {
+    "indice": 15,
+    "minuto": "0:27:33",
+    "afirmacion": "La dimisión de Óscar Puente fue decisión propia, no un cese ordenado por Sánchez.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Diari de Tarragona: Sánchez afirma que Puente ha dado la cara",
+        "url": "https://www.diaridetarragona.com/espana/274820/sanchez-afirma-puente-dado-cara-decision-dimitir-dignifica-espana.html",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "El Salto: Dimite Óscar Puente y no irá en las listas del PSOE",
+        "url": "https://www.elsaltodiario.com/psoe/dimite-oscar-puente-no-ira-listas-proximas-elecciones",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio de veredicto. Se añaden Diari de Tarragona (versión de fuentes del Gobierno) y El Salto (contexto del 'cueste lo que cueste'); el resto de fuentes abren y dicen lo atribuido."
+  },
+  {
+    "indice": 16,
+    "minuto": "0:25:30",
+    "afirmacion": "Tras el accidente de Angrois (24/07/2013), el PSOE, entonces en la oposición, no pidió la dimisión de la ministra de Fomento Ana Pastor.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": true,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.newtral.es/pastor-angrois-puente-factcheck/20260219/",
+        "motivo": "HTTP 403 al abrirla; no se pudo comprobar."
+      },
+      {
+        "url": "https://www.newtral.es/archivo-caso-angrois/20261030/",
+        "motivo": "HTTP 403 al abrirla; no se pudo comprobar."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Congreso: Diario de Sesiones, Comisión de Fomento, núm. 388 (9/08/2013)",
+        "url": "https://www.congreso.es/public_oficiales/L10/CONG/DS/CO/DSCD-10-CO-388.PDF",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Sube de 'casi cierto' a 'verdadero': el Diario de Sesiones del Congreso de 2013 (fuente primaria, hasta ahora ausente) muestra que el PSOE no pidió la dimisión de Pastor en su comparecencia. Se descartan dos enlaces de Newtral que dan 403."
+  },
+  {
+    "indice": 17,
+    "minuto": "0:25:30",
+    "afirmacion": "Alberto Núñez Feijóo, presidente de la Xunta en 2013, atribuyó el accidente de Angrois al maquinista.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.eldiario.es/galicia/hombres-frente-responsabilidad-tragedia-angrois-maquinista-exjefe-seguridad-adif_1_9620730.html",
+        "motivo": "Es de octubre de 2022 (durante el juicio): no recoge sentencia ni declaraciones de Feijóo."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Público (EFE): La Audiencia de A Coruña absuelve al exdirector de seguridad de Adif",
+        "url": "https://www.publico.es/sociedad/audiencia-coruna-absuelve-exdirector-seguridad-adif-accidente-angrois.amp.html",
+        "tipo": "agencia"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio de veredicto. Se descarta un enlace de 2022 que no dice lo atribuido y se añade la sentencia de enero de 2026 vía Público/EFE; falta la declaración original de 2013 con fecha."
+  },
+  {
+    "indice": 18,
+    "minuto": "0:23:20",
+    "afirmacion": "Durante sus más de ocho años como presidente del Gobierno han coincidido la pandemia, las guerras de Ucrania e Irán, varias danas e incendios, una erupción volcánica y dos accidentes ferroviarios mortales.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.lamoncloa.gob.es/presidente/actividades/Paginas/2026/040326-sanchez-declaracion-situacion-internacional.aspx",
+        "motivo": "no accesible desde el entorno de auditoría (ECONNREFUSED); no se pudo abrir"
+      },
+      {
+        "url": "https://es.wikipedia.org/wiki/Accidente_ferroviario_de_Adamuz",
+        "motivo": "Wikipedia: solo apoyo."
+      },
+      {
+        "url": "https://es.wikipedia.org/wiki/Accidente_ferroviario_de_Urda",
+        "motivo": "Wikipedia: solo apoyo."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "IGN: Erupción de La Palma 2021",
+        "url": "https://www.ign.es/resources/erupcion-la-palma-2021/index.html",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "El Español: Sánchez se pronuncia sobre los ataques a Irán (28/02/2026)",
+        "url": "https://www.elespanol.com/espana/politica/20260228/sanchez-pronuncia-ataques-rechazamos-accion-militar-unilateral-eeuu-israel/1003744150050_0.html",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Euronews: Gobierno aprueba medidas de seguridad ferroviaria (10/11/2026)",
+        "url": "https://es.euronews.com/2026/11/10/gobierno-espanol-aprueba-nuevas-medidas-reforzar-la-seguridad-ferroviaria",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Diari de Tarragona (EFE): Cronología de la tragedia ferroviaria de Toledo",
+        "url": "https://www.diaridetarragona.com/sucesos/274306/cronologia-tragedia-ferroviaria-toledo-fallo-seguridad-68-muertos.html",
+        "tipo": "agencia"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Sin cambio de veredicto (elemento excluido de la web, publicado en la API). Se corrige que el ataque a Irán fue el 28/02/2026, no en marzo, y se sustituyen La Moncloa (no abre) y Wikipedia por el IGN, El Español, Euronews y EFE."
+  },
+  {
+    "indice": 19,
+    "minuto": "0:21:14",
+    "afirmacion": "La responsabilidad de Ayuso en las residencias durante la pandemia fue por una decisión, y la de Mazón en la dana fue por omisión, a diferencia de la del ministro Puente.",
+    "veredicto_antes": "no_verificable",
+    "veredicto_despues": "no_verificable",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.deia.eus/sucesos/2026/05/05/jueza-dana-pide-fiscal-aclare-11026509.html",
+        "motivo": "No se abrió en la auditoría; sustituida por el CGPJ, Público y Ara."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Poder Judicial (CGPJ): El TSJCV confirma su decisión de no investigar a Mazón",
+        "url": "https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Tribunales-Superiores-de-Justicia/TSJ-Comunidad-Valenciana/Oficina-de-Comunicacion/Archivo-de-notas-de-prensa/El-TSJCV-desestima-los-recursos-de-suplica-y-confirma-su-decision-de-no-investigar-al-expresidente-de-la-Generalitat-por-la-gestion-de-la-Dana",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Público: La jueza de la DANA pide imputar a Mazón",
+        "url": "https://www.publico.es/politica/jueza-dana-pide-imputar-mazon.html",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Ara: El TSJ valenciano rechaza imputar ahora a Mazón",
+        "url": "https://en.ara.cat/politics/the-valencian-high-court-of-justice-rejects-charging-mazon-now_1_5679874.amp.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Sin cambio de veredicto. Se añade como fuente primaria la nota del CGPJ sobre el auto del TSJCV (posición de garante) y se retira Deia (no abierta); El Salto se conserva solo como apoyo (medio alineado con los familiares)."
+  }
+]

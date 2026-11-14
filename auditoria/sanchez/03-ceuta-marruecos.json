@@ -1,0 +1,978 @@
+[
+  {
+    "indice": 0,
+    "minuto": "0:29:57",
+    "afirmacion": "Pedro Sánchez es el presidente del Gobierno que, estando en el cargo, más veces ha visitado Ceuta y Melilla (lo repite en 0:42:49 y 0:45:10).",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Infobae/Europa Press: El viaje de los Reyes a Ceuta y Melilla, segundo de la monarquía en democracia (tabla de visitas de presidentes del Gobierno)",
+        "url": "https://www.infobae.com/espana/agencias/2026/10/01/el-viaje-de-los-reyes-a-ceuta-y-melilla-segundo-de-la-monarquia-en-democracia/",
+        "tipo": "agencia"
+      },
+      {
+        "titulo": "El Debate: Ceuta y Melilla, unas grandes desconocidas para los ministros de Sánchez",
+        "url": "https://www.eldebate.com/espana/20260805/ceuta-melilla-grandes-desconocidas-ministros-sanchez_446543.html",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Infobae/Europa Press: Pedro Sánchez inaugura la nueva terminal de la Estación Marítima de Ceuta en su cuarta visita a Ceuta (20-nov-2025)",
+        "url": "https://www.infobae.com/espana/agencias/2025/11/20/pedro-sanchez-inaugura-la-nueva-terminal-de-la-estacion-maritima-de-ceuta-en-su-cuarta-visita-a-ceuta/",
+        "tipo": "agencia"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio de veredicto: el recuento de Europa Press se confirma y se corrige el detalle (Zapatero y Suárez hicieron un viaje cada uno a las dos ciudades, no dos). Sin fuente primaria, la confianza sigue en media."
+  },
+  {
+    "indice": 1,
+    "minuto": "0:29:57",
+    "afirmacion": "En los cinco días previos al 30 de julio de 2026 hubo un pico de llegadas irregulares a Ceuta de unos 1.000-1.200 migrantes.",
+    "veredicto_antes": "no_verificable",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": true,
+    "confianza_antes": "baja",
+    "confianza_despues": "baja",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.articulo14.es/politica/marlaska-reconoce-que-habia-muchos-informes-y-preocupacion-sobre-la-llegada-de-inmigrantes-a-ceuta-pero-como-la-del-ano-pasado-20260828.html",
+        "motivo": "Las 1.026 entradas a nado y 2.857 interceptaciones que cita son las que Marruecos impidió, no llegadas a Ceuta; la explicación original las atribuía a Interior como entradas en julio, lo cual no es lo que dice la página."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Guardia Civil: Informe «Situación migratoria en Ceuta» (30-jul-2026), documento oficial reproducido por La Región",
+        "url": "https://static.laregion.es/laregion/public/content/file/original/2026/0909/16/20260730-jigc-3ii-inf-situacion-migratoria-ceuta-pdf.pdf",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Infobae: La Guardia Civil registró un incremento reseñable en las llegadas a nado la semana previa a la entrada masiva en Ceuta",
+        "url": "https://www.infobae.com/espana/agencias/2026/09/09/guardia-civil-registro-un-incremento-resenable-en-las-llegadas-a-nado-la-semana-previa-a-la-entrada-masiva-a-ceuta/",
+        "tipo": "agencia"
+      },
+      {
+        "titulo": "El Independiente (29-jul-2026): Colapso en Ceuta por las más de 1.500 entradas a nado",
+        "url": "https://www.elindependiente.com/espana/2026/07/29/colapso-ceuta-crisis-migratoria-1500-entradas-nado-marruecos/",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Cambia de no_verificable a mayormente_verdadero: he hallado el informe de la Guardia Civil del 30-jul (605 entradas en 24 h) y la cifra de 200 al día de la Presidencia de Ceuta; y he corregido el dato de las 1.026 entradas, que eran las impedidas por Marruecos. Confianza baja porque falta el recuento exacto de esos cinco días."
+  },
+  {
+    "indice": 2,
+    "minuto": "0:29:57",
+    "afirmacion": "El 30 y 31 de julio de 2026 entraron en Ceuta más de 80.000 personas.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://es.wikipedia.org/wiki/Crisis_migratoria_de_Ceuta_de_2026",
+        "motivo": "Wikipedia: solo vale como apoyo y no es necesaria al disponer de fuentes primarias o de prensa que sí he abierto."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Policía Nacional (CENIF): Informe sobre la entrada masiva irregular en Ceuta, requerido por la Audiencia Nacional (copia publicada por Confilegal)",
+        "url": "https://confilegal.com/wp-content/uploads/2026/09/Informe-parte-1.pdf",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Ceuta TV: Las cifras de Interior: 72.000 entradas y 75 fallecidos (4-ago-2026)",
+        "url": "https://www.ceutatv.com/articulo/politica/cifras-interior-72000-entradas-75-fallecidos-crisis-migratoria/20260804164717250844.html",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "El Debate: ¿Cuáles son las verdaderas cifras de la crisis de Ceuta? (17-sep-2026)",
+        "url": "https://www.eldebate.com/espana/20260917/cuales-son-verdaderas-cifras-invasion-ceuta-numero-entradas-salidas-alojados-calle_459327.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Sin cambio de veredicto; se sustituye la cita de Wikipedia por el informe de la Policía Nacional (primaria) y se elimina la cifra de 96.058, que no he podido contrastar."
+  },
+  {
+    "indice": 3,
+    "minuto": "0:34:24",
+    "afirmacion": "El Gobierno no recibió ningún aviso de ningún servicio de inteligencia (CNI incluido) de una entrada de la escala de la del 30-31 de julio; sí hubo reuniones con el gobierno ceutí y se aumentó la seguridad en frontera.",
+    "veredicto_antes": "enganoso",
+    "veredicto_despues": "enganoso",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.articulo14.es/politica/marlaska-reconoce-que-habia-muchos-informes-y-preocupacion-sobre-la-llegada-de-inmigrantes-a-ceuta-pero-como-la-del-ano-pasado-20260828.html",
+        "motivo": "No verifica lo que se le atribuía: solo recoge las cifras de entradas impedidas por Marruecos, no avisos de inteligencia."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Policía Nacional (CENIF): Informe sobre la entrada masiva irregular en Ceuta, requerido por la Audiencia Nacional (copia publicada por Confilegal)",
+        "url": "https://confilegal.com/wp-content/uploads/2026/09/Informe-parte-1.pdf",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "elDiario.es: Robles asegura que el CNI advirtió el día previo de la entrada a nado y Marlaska insiste en que no había informes",
+        "url": "https://www.eldiario.es/politica/robles-defiende-labor-cni-ceuta-descarta-marruecos-participase-asalto-autogestion-individuos_1_13465716.html",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "The Objective (25-ago-2026): Robles insiste en que el CNI avisó un día antes de la entrada a nado",
+        "url": "https://theobjective.com/espana/2026-08-25/robles-cni-aviso-entrada-inmigrantes-ceuta/",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Democrata: Choque en el Gobierno por el CNI en Ceuta (versiones de Robles, Marlaska, Delegación y Moncloa; versión en inglés)",
+        "url": "https://www.democrata.es/en/society/crisis-in-the-government-over-ceuta-robles-marlaska-and-the-delegation-offer-their-versions-on-the-warnings-from-the-cni/",
+        "tipo": "apoyo"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Mismo veredicto, con mejor base: el informe policial para la Audiencia Nacional confirma la alerta del 29-jul y se retira la reunión del 27-jul, que no consta en las fuentes abiertas, y la fuente de Articulo14, que no trataba de avisos."
+  },
+  {
+    "indice": 4,
+    "minuto": "0:31:09",
+    "afirmacion": "Antes de la entrada masiva circuló en redes una lectura interesada y falsa de una sentencia del Tribunal Supremo (que quien entra a nado no puede ser devuelto), que contribuyó a la movilización.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": true,
+    "confianza_antes": "media",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [
+      {
+        "url": "https://es.wikipedia.org/wiki/Crisis_migratoria_de_Ceuta_de_2026",
+        "motivo": "Wikipedia: solo vale como apoyo y no es necesaria al disponer de fuentes primarias o de prensa que sí he abierto."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Policía Nacional (CENIF): Informe sobre la entrada masiva irregular en Ceuta, requerido por la Audiencia Nacional (copia publicada por Confilegal)",
+        "url": "https://confilegal.com/wp-content/uploads/2026/09/Informe-parte-1.pdf",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Confilegal: La sentencia del Supremo que estableció que entrar en Ceuta nadando no activa la devolución en caliente",
+        "url": "https://confilegal.com/20260730-sts-2965-2026-ceuta-rechazo-frontera-cruces-nado/",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Confilegal: Félix Bolaños califica de bulo la interpretación de la sentencia del Tribunal Supremo",
+        "url": "https://confilegal.com/20260827-felix-bolanos-califica-de-bulo-la-interpretacion-de-la-sentencia-del-tribunal-supremo/",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Maldita.es: De la sentencia del Tribunal Supremo sobre Ceuta a la idea de una frontera abierta: cómo un mismo mensaje la disparó en Facebook en Marruecos el 30J",
+        "url": "https://maldita.es/investigaciones/20260806/tribunal-supremo-sentencia-ceuta-marruecos-facebook/",
+        "tipo": "verificador"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Pasa de mayormente_verdadero a verdadero: el informe de la Policía Nacional para la Audiencia Nacional confirma que la lectura distorsionada de la sentencia circuló antes y se usó para la convocatoria. Se retira Wikipedia."
+  },
+  {
+    "indice": 5,
+    "minuto": "0:32:14",
+    "afirmacion": "La entrada masiva coincidió con la Fiesta del Trono de Marruecos (30 de julio).",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [
+      {
+        "url": "https://es.wikipedia.org/wiki/Fiesta_del_Trono",
+        "motivo": "Wikipedia: solo vale como apoyo y no es necesaria al disponer de fuentes primarias o de prensa que sí he abierto. (no reabierta en esta auditoría)"
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Guardia Civil: Informe «Situación migratoria en Ceuta» (30-jul-2026), documento oficial reproducido por La Región",
+        "url": "https://static.laregion.es/laregion/public/content/file/original/2026/0909/16/20260730-jigc-3ii-inf-situacion-migratoria-ceuta-pdf.pdf",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Policía Nacional (CENIF): Informe sobre la entrada masiva irregular en Ceuta, requerido por la Audiencia Nacional (copia publicada por Confilegal)",
+        "url": "https://confilegal.com/wp-content/uploads/2026/09/Informe-parte-1.pdf",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "The Objective (25-ago-2026): Robles insiste en que el CNI avisó un día antes de la entrada a nado",
+        "url": "https://theobjective.com/espana/2026-08-25/robles-cni-aviso-entrada-inmigrantes-ceuta/",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Sin cambio de veredicto; se sustituye Wikipedia por el informe de la Guardia Civil y el de la Policía Nacional (primarias) y se matiza la parte interpretativa."
+  },
+  {
+    "indice": 6,
+    "minuto": "0:32:14",
+    "afirmacion": "La renta per cápita se multiplica por ocho entre el lado marroquí y el español de la frontera de Ceuta y Melilla (dijo «una de las fronteras más complejas del mundo», no «más desiguales»).",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://georank.org/economy/morocco/spain",
+        "motivo": "Agregador de datos; sustituido por la API del propio Banco Mundial."
+      },
+      {
+        "url": "https://www.elsaltodiario.es/opinion-socias/lecciones-ceuta",
+        "motivo": "Artículo de opinión; no se usa como base."
+      },
+      {
+        "url": "https://maldita.es/malditateexplica/20210525/ceuta-melilla-fronteras-mas-desiguales/",
+        "motivo": "La página carga, pero no he podido leer su contenido con las cifras; no la cito para no atribuirle lo que no he comprobado."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "INE: Contabilidad Regional de España 2024 (PIB per cápita de Ceuta, 23.228 euros)",
+        "url": "https://ine.es/dyngs/Prensa/avCRE2024.htm",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Banco Mundial (API): PIB per cápita en dólares corrientes, España y Marruecos, 2022-2025",
+        "url": "https://api.worldbank.org/v2/country/ESP;MAR/indicator/NY.GDP.PCAP.CD?format=json&date=2022:2025&per_page=20",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Banco Mundial (API): PIB per cápita en paridad de poder adquisitivo, España y Marruecos, 2022-2025",
+        "url": "https://api.worldbank.org/v2/country/ESP;MAR/indicator/NY.GDP.PCAP.PP.CD?format=json&date=2022:2025&per_page=20",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Sin cambio de veredicto; se sustituyen las fuentes agregadoras y de opinión por la API del Banco Mundial y se corrige el cálculo (cifras de 2024 y 2025 abiertas directamente)."
+  },
+  {
+    "indice": 7,
+    "minuto": "0:34:24",
+    "afirmacion": "La crisis de Ceuta de julio-agosto de 2026 causó más de 140 fallecidos.",
+    "veredicto_antes": "enganoso",
+    "veredicto_despues": "enganoso",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Policía Nacional (CENIF): Informe sobre la entrada masiva irregular en Ceuta, requerido por la Audiencia Nacional (copia publicada por Confilegal)",
+        "url": "https://confilegal.com/wp-content/uploads/2026/09/Informe-parte-1.pdf",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Infobae: El número de fallecidos durante la entrada masiva a Ceuta se eleva a 141, según la ONG Caminando Fronteras (5-ago-2026)",
+        "url": "https://www.infobae.com/espana/2026/08/05/el-numero-de-fallecidos-durante-la-entrada-masiva-a-ceuta-se-eleva-a-141-segun-la-ong-caminando-fronteras/",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Ceuta TV: Las cifras de Interior: 72.000 entradas y 75 fallecidos (4-ago-2026)",
+        "url": "https://www.ceutatv.com/articulo/politica/cifras-interior-72000-entradas-75-fallecidos-crisis-migratoria/20260804164717250844.html",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "El Pueblo de Ceuta: Crisis migratoria en Ceuta, las cifras que explican su magnitud (16-ago-2026)",
+        "url": "https://www.elpueblodeceuta.es/sec/politica/inmigracion/numeros-crisis-ceuta-sigue-batallando_1_1185686.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Mismo veredicto, confianza alta: el informe de la Policía Nacional para la Audiencia Nacional da un total oficial de 96 (82 en aguas españolas y 14 reconocidos por Marruecos)."
+  },
+  {
+    "indice": 8,
+    "minuto": "0:37:26",
+    "afirmacion": "La mayoría de los más de 140 fallecidos en la crisis de Ceuta eran menores de edad.",
+    "veredicto_antes": "no_verificable",
+    "veredicto_despues": "no_verificable",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "El Pueblo de Ceuta: Crisis migratoria en Ceuta, las cifras que explican su magnitud (16-ago-2026)",
+        "url": "https://www.elpueblodeceuta.es/sec/politica/inmigracion/numeros-crisis-ceuta-sigue-batallando_1_1185686.html",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Facthem: Sánchez, «141 fallecidos, en su mayoría niños y niñas»",
+        "url": "https://facthem.es/claim/la-crisis-migratoria-de-ceuta-causo-141-fallecidos-1ff35556.html",
+        "tipo": "apoyo"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio: no he hallado ningún desglose por edad. Facthem se trata solo como apoyo (no consta como verificador acreditado) y no hay fuente primaria, de ahí que sea no_verificable."
+  },
+  {
+    "indice": 9,
+    "minuto": "0:33:20",
+    "afirmacion": "Las personas que entraron en Ceuta el 30-31 de julio de 2026 eran sobre todo menores (lo repite en 0:50:42: «los que entraron eran, sobre todo, menores»).",
+    "veredicto_antes": "falso",
+    "veredicto_despues": "enganoso",
+    "cambia_veredicto": true,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.infobae.com/espana/2026/09/02/de-jovenes-con-neopreno-y-aletas-a-familias-con-ninos-en-ropa-deportiva-y-chancletas-asi-fue-la-entrada-masiva-de-los-migrantes-en-ceuta/",
+        "motivo": "No la he reabierto en esta auditoría; se sustituye por el informe policial original que esa noticia resume."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Policía Nacional (CENIF): Informe sobre la entrada masiva irregular en Ceuta, requerido por la Audiencia Nacional (copia publicada por Confilegal)",
+        "url": "https://confilegal.com/wp-content/uploads/2026/09/Informe-parte-1.pdf",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "El Pueblo de Ceuta: Crisis migratoria en Ceuta, las cifras que explican su magnitud (16-ago-2026)",
+        "url": "https://www.elpueblodeceuta.es/sec/politica/inmigracion/numeros-crisis-ceuta-sigue-batallando_1_1185686.html",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "El Debate: ¿Cuáles son las verdaderas cifras de la crisis de Ceuta? (17-sep-2026)",
+        "url": "https://www.eldebate.com/espana/20260917/cuales-son-verdaderas-cifras-invasion-ceuta-numero-entradas-salidas-alojados-calle_459327.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Cambia de falso a enganoso: no hay censo por edades de los que volvieron y la propia Policía describe un «alto porcentaje de menores» en dos de las tres oleadas, de modo que los datos no contradicen de forma directa la afirmación, solo no la respaldan para el conjunto."
+  },
+  {
+    "indice": 10,
+    "minuto": "0:37:26",
+    "afirmacion": "En las primeras 48 horas de la crisis salieron de Ceuta 9 de cada 10 de los migrantes que habían entrado.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.infobae.com/espana/2026/09/02/de-jovenes-con-neopreno-y-aletas-a-familias-con-ninos-en-ropa-deportiva-y-chancletas-asi-fue-la-entrada-masiva-de-los-migrantes-en-ceuta/",
+        "motivo": "No la he reabierto; se sustituye por el informe policial original."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Policía Nacional (CENIF): Informe sobre la entrada masiva irregular en Ceuta, requerido por la Audiencia Nacional (copia publicada por Confilegal)",
+        "url": "https://confilegal.com/wp-content/uploads/2026/09/Informe-parte-1.pdf",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Orain/EFE: Marlaska asegura que han regresado 70.000 de las 72.000 personas que entraron (4-ago-2026)",
+        "url": "https://orain.eus/es/politica/2026/08/04/marlaska-asegura-han-regresado-marruecos-70-000-las-72-000-personas-entraron-ceuta/",
+        "tipo": "agencia"
+      },
+      {
+        "titulo": "Menorca.info (Europa Press): retornos a Marruecos desde Ceuta el 31-jul-2026, según Interior",
+        "url": "https://www.menorca.info/actualidad/nacional/2026/07/31/2681077/gobierno-estima-25000-inmigrantes-han-retornado-marruecos-desde-ceuta-hasta-este-mediodia.html",
+        "tipo": "agencia"
+      },
+      {
+        "titulo": "El Debate: La Guardia Civil estima que 88.146 personas han regresado a Marruecos (cita a Torres: 90-95 % en 24-48 h)",
+        "url": "https://www.eldebate.com/espana/20261106/guardia-civil-estima-88146-personas-han-regresado-marruecos-invasion-ceuta_478298.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Sin cambio de veredicto; se añade el informe de la Policía Nacional (primaria) y se ajustan las cifras al contenido de las páginas abiertas."
+  },
+  {
+    "indice": 11,
+    "minuto": "0:38:31",
+    "afirmacion": "Desde el 20 de agosto de 2026 han salido voluntariamente de Ceuta más de 15.000 personas.",
+    "veredicto_antes": "enganoso",
+    "veredicto_despues": "enganoso",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Ceuta al Día: Torres cifra en más de 15.000 los retornos y anuncia el desmantelamiento de campamentos (4-nov-2026)",
+        "url": "https://www.ceutaldia.com/al-dia/administracion/torres-cifra-mas-15000-retornos-anuncia-desmantelamiento-campamentos/20261104173700323546.html",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Euronews: El desmantelamiento del campamento del puerto de Ceuta acelera los retornos a Marruecos (10-nov-2026)",
+        "url": "https://es.euronews.com/2026/11/10/desmantelamiento-campamento-puerto-ceuta-acelera-retornos-marruecos",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Democrata: Elma Saiz avanza el cierre gradual de plazas temporales (de unas 500 a más de 7.500 plazas; unos 13.000 retornos)",
+        "url": "https://www.democrata.es/politica/elma-saiz-avanza-que-el-gobierno-prepara-el-cierre-gradual-de-plazas-temporales-para-inmigrantes-en-ceuta/",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio de veredicto; cifras contrastadas con Ceuta al Día, Euronews y Democrata. Sin fuente primaria (cifras de ministros transmitidas por prensa), confianza media."
+  },
+  {
+    "indice": 12,
+    "minuto": "0:46:12",
+    "afirmacion": "El Gobierno amplió la capacidad de acogida temporal en Ceuta hasta más de 7.000 plazas «en tiempo récord».",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://es.wikipedia.org/wiki/Crisis_migratoria_de_Ceuta_de_2026",
+        "motivo": "Wikipedia: solo vale como apoyo y no es necesaria al disponer de fuentes primarias o de prensa que sí he abierto. Además la evolución de plazas que atribuía (1.500 el 17-ago, 3.300 el 31-ago, 6.000 en septiembre) no la he podido confirmar en fuentes abiertas."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Ceuta al Día: Torres cifra en más de 15.000 los retornos y anuncia el desmantelamiento de campamentos (4-nov-2026)",
+        "url": "https://www.ceutaldia.com/al-dia/administracion/torres-cifra-mas-15000-retornos-anuncia-desmantelamiento-campamentos/20261104173700323546.html",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Democrata: Elma Saiz avanza el cierre gradual de plazas temporales (de unas 500 a más de 7.500 plazas; unos 13.000 retornos)",
+        "url": "https://www.democrata.es/politica/elma-saiz-avanza-que-el-gobierno-prepara-el-cierre-gradual-de-plazas-temporales-para-inmigrantes-en-ceuta/",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Euronews: El desmantelamiento del campamento del puerto de Ceuta acelera los retornos a Marruecos (10-nov-2026)",
+        "url": "https://es.euronews.com/2026/11/10/desmantelamiento-campamento-puerto-ceuta-acelera-retornos-marruecos",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio de veredicto; se retira Wikipedia y la progresión de plazas que no he podido confirmar. Cifras oficiales solo vía prensa, confianza media."
+  },
+  {
+    "indice": 13,
+    "minuto": "0:38:31",
+    "afirmacion": "Esta semana (10-13 de noviembre de 2026) el Gobierno está desmantelando los centros de acogida temporal del puerto de Ceuta.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Infobae/EFE: El Gobierno empieza a desmantelar el primer gran centro de acogida temporal en Ceuta (10-nov-2026)",
+        "url": "https://www.infobae.com/espana/agencias/2026/11/10/el-gobierno-empieza-a-desmantelar-el-primer-gran-centro-de-acogida-temporal-en-ceuta/",
+        "tipo": "agencia"
+      },
+      {
+        "titulo": "Euronews: El desmantelamiento del campamento del puerto de Ceuta acelera los retornos a Marruecos (10-nov-2026)",
+        "url": "https://es.euronews.com/2026/11/10/desmantelamiento-campamento-puerto-ceuta-acelera-retornos-marruecos",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Ceuta al Día: Torres cifra en más de 15.000 los retornos y anuncia el desmantelamiento de campamentos (4-nov-2026)",
+        "url": "https://www.ceutaldia.com/al-dia/administracion/torres-cifra-mas-15000-retornos-anuncia-desmantelamiento-campamentos/20261104173700323546.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio de veredicto; el desmantelamiento se confirma con EFE, Euronews y Ceuta al Día (las dos primeras discrepan en un día, el 8 o el 10-nov)."
+  },
+  {
+    "indice": 14,
+    "minuto": "0:35:25",
+    "afirmacion": "Sánchez afirma que no tiene información que permita acusar al Gobierno de Marruecos de haber provocado la entrada masiva en Ceuta.",
+    "veredicto_antes": "no_verificable",
+    "veredicto_despues": "no_verificable",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.infobae.com/espana/2026/09/02/de-jovenes-con-neopreno-y-aletas-a-familias-con-ninos-en-ropa-deportiva-y-chancletas-asi-fue-la-entrada-masiva-de-los-migrantes-en-ceuta/",
+        "motivo": "No la he reabierto; se sustituye por el informe policial original."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Policía Nacional (CENIF): Informe sobre la entrada masiva irregular en Ceuta, requerido por la Audiencia Nacional (copia publicada por Confilegal)",
+        "url": "https://confilegal.com/wp-content/uploads/2026/09/Informe-parte-1.pdf",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "La República (Reuters): Presidente de España acusa a Rusia e Israel de difundir desinformación en la crisis de Ceuta (cita SER: «yo niego la mayor...»)",
+        "url": "https://www.larepublica.co/globoeconomia/presidente-de-espana-acusa-a-rusia-e-israel-de-difundir-desinformacion-en-crisis-de-ceuta-4470759",
+        "tipo": "agencia"
+      },
+      {
+        "titulo": "Infobae: Sánchez rebaja el papel de Rusia e Israel y dice que no hay evidencias (Congreso, 3-sep-2026)",
+        "url": "https://www.infobae.com/espana/2026/09/03/pedro-sanchez-rebaja-el-papel-de-rusia-e-israel-en-la-avalancha-migratoria-en-ceuta-y-dice-ahora-que-no-hay-evidencias-de-que-la-coordinasen/",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Sin cambio de veredicto (declaración sobre su conocimiento, no comprobable); se contrasta con el informe de la Policía Nacional, que no imputa al Estado marroquí."
+  },
+  {
+    "indice": 15,
+    "minuto": "0:35:25",
+    "afirmacion": "Sánchez niega haber culpado a Rusia e Israel de estar detrás de la crisis de Ceuta (la frase inicial es de Jordi Wild; el «No, no, no» es de Sánchez).",
+    "veredicto_antes": "enganoso",
+    "veredicto_despues": "enganoso",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "ElNacional.cat: ¿Qué pruebas hay de la campaña de desinformación sobre Ceuta que Sánchez atribuye a Rusia e Israel?",
+        "url": "https://www.elnacional.cat/es/internacional/que-pruebas-hay-campana-desinformacion-sobre-ceuta-sanchez-atribuye-rusia-israel_1688587_102.html",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "El Español: La UE desmiente a Sánchez: no hay evidencias de que Rusia, Israel u otro Estado extranjero provocaran la crisis (1-sep-2026)",
+        "url": "https://www.elespanol.com/mundo/europa/20260901/informe-ue-ceuta-detecto-injerencia-rusia-no-israel-alla-cuentas-puntuales/1003744369476_0.html",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Infobae: Sánchez rebaja el papel de Rusia e Israel y dice que no hay evidencias (Congreso, 3-sep-2026)",
+        "url": "https://www.infobae.com/espana/2026/09/03/pedro-sanchez-rebaja-el-papel-de-rusia-e-israel-en-la-avalancha-migratoria-en-ceuta-y-dice-ahora-que-no-hay-evidencias-de-que-la-coordinasen/",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "La República (Reuters): Presidente de España acusa a Rusia e Israel de difundir desinformación en la crisis de Ceuta (cita SER: «yo niego la mayor...»)",
+        "url": "https://www.larepublica.co/globoeconomia/presidente-de-espana-acusa-a-rusia-e-israel-de-difundir-desinformacion-en-crisis-de-ceuta-4470759",
+        "tipo": "agencia"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "ATRIBUCIÓN: la frase citada es de Jordi Wild; de Sánchez solo es el «No, no, no» con que la niega. Mismo veredicto: la negación omite que sí vinculó a Rusia e Israel con la desinformación."
+  },
+  {
+    "indice": 16,
+    "minuto": "0:40:45",
+    "afirmacion": "El móvil de Sánchez fue infectado con Pegasus y se denunció ante la Audiencia Nacional, igual que los de la ministra de Defensa y el ministro del Interior.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Orain: El software Pegasus también infectó los teléfonos de Sánchez y Robles (2-may-2022)",
+        "url": "https://orain.eus/es/politica/2022/05/02/espionaje-politico-de-pegasus-los-telefonos-moviles-de-pedro-sanchez-y-margarita-robles-infectados/",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Última Hora/Europa Press: Caso Pegasus, amplían la denuncia a los móviles de Marlaska y Planas (11-may-2022)",
+        "url": "https://www.ultimahora.es/noticias/nacional/2022/05/11/1732329/caso-pegasus-amplian-denuncia-moviles-marlaska-planas.html",
+        "tipo": "agencia"
+      },
+      {
+        "titulo": "Economist & Jurist: Archivada la investigación del caso Pegasus ante la falta de cooperación de Israel (10-jul-2023)",
+        "url": "https://www.economistjurist.es/actualidad-juridica/archivada-la-investigacion-por-el-caso-pegasus-ante-la-falta-de-cooperacion-de-israel/",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Ara: El Gobierno español denuncia espionaje Pegasus en los móviles de Sánchez y Robles",
+        "url": "https://es.ara.cat/politica/gobierno-espanol-denuncia-espionaje-pegasus-moviles-pedro-sanchez-margarita-robles_1_4357938.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Mismo veredicto, confianza media: el titular de Economist & Jurist es de julio de 2023, no de enero de 2026 como decía la fuente original, así que retiro la reapertura de 2024 y el archivo de 2026, que no he podido comprobar; sin fuente primaria abierta."
+  },
+  {
+    "indice": 17,
+    "minuto": "0:41:49",
+    "afirmacion": "Pegasus es un sistema (software espía) de origen israelí.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Economist & Jurist: Archivada la investigación del caso Pegasus ante la falta de cooperación de Israel (10-jul-2023)",
+        "url": "https://www.economistjurist.es/actualidad-juridica/archivada-la-investigacion-por-el-caso-pegasus-ante-la-falta-de-cooperacion-de-israel/",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Ara: El Gobierno español denuncia espionaje Pegasus en los móviles de Sánchez y Robles",
+        "url": "https://es.ara.cat/politica/gobierno-espanol-denuncia-espionaje-pegasus-moviles-pedro-sanchez-margarita-robles_1_4357938.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio de veredicto; verificado con Economist & Jurist y Ara."
+  },
+  {
+    "indice": 18,
+    "minuto": "0:42:49",
+    "afirmacion": "El Gobierno de Sánchez es el que más recursos económicos ha invertido en Ceuta y Melilla de toda la historia democrática.",
+    "veredicto_antes": "no_verificable",
+    "veredicto_despues": "no_verificable",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://planderecuperacion.gob.es/noticias/el-gobierno-aprueba-planes-integrales-de-desarrollo-socioeconomico-para-ceuta-y-melilla",
+        "motivo": "No se puede abrir desde esta máquina (conexión rechazada); no puedo confirmar los 711 millones que la versión original le atribuía."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "El Correo Gallego: El Gobierno ha invertido 79 millones en reforzar las fronteras de Ceuta y Melilla (10-ago-2026)",
+        "url": "https://www.elcorreogallego.es/espana/2026/08/10/gobierno-invertido-79-millones-reforzar-fronteras-ceuta-melilla-133225236.html",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Euronews: Así son las ayudas económicas que España ofrecerá a Ceuta: desglose de los 309 millones (5-sep-2026)",
+        "url": "https://es.euronews.com/2026/09/05/asi-son-las-ayudas-economicas-que-espana-ofrecera-ceuta-desglose-de-los-309-millones-de-eu",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio de veredicto: sigue sin haber serie histórica; retiro la fuente de planderecuperacion.gob.es, que no puedo abrir, y la cifra de 711 millones que dependía de ella."
+  },
+  {
+    "indice": 19,
+    "minuto": "0:47:14",
+    "afirmacion": "El Gobierno modernizó la terminal marítima de Ceuta y Sánchez la inauguró junto al presidente de la Ciudad, Juan Vivas.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.lamoncloa.gob.es/lang/en/presidente/news/Paginas/2025/20251120-ceuta-maritime-terminal.aspx",
+        "motivo": "No se puede abrir desde esta máquina (lamoncloa.gob.es rechaza la conexión); no se cita una URL no abierta."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Infobae/Europa Press: Pedro Sánchez inaugura la nueva terminal de la Estación Marítima de Ceuta en su cuarta visita a Ceuta (20-nov-2025)",
+        "url": "https://www.infobae.com/espana/agencias/2025/11/20/pedro-sanchez-inaugura-la-nueva-terminal-de-la-estacion-maritima-de-ceuta-en-su-cuarta-visita-a-ceuta/",
+        "tipo": "agencia"
+      },
+      {
+        "titulo": "Puertos del Estado: reafirma su compromiso con la cohesión territorial con la apertura de la nueva estación marítima de Ceuta (2-dic-2025)",
+        "url": "https://www.puertos.es/en/comunication/puertos-del-estado-reaffirms-its-commitment-territorial-cohesion-opening-new-maritime-station-ceuta",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Infobae/Europa Press: El viaje de los Reyes a Ceuta y Melilla, segundo de la monarquía en democracia (tabla de visitas de presidentes del Gobierno)",
+        "url": "https://www.infobae.com/espana/agencias/2026/10/01/el-viaje-de-los-reyes-a-ceuta-y-melilla-segundo-de-la-monarquia-en-democracia/",
+        "tipo": "agencia"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Sin cambio de veredicto; se confirma con Europa Press y Puertos del Estado. La página de La Moncloa que citaba la versión original no se abre desde aquí, así que la retiro."
+  },
+  {
+    "indice": 20,
+    "minuto": "0:47:14",
+    "afirmacion": "El Gobierno ha dotado a Ceuta de una conexión eléctrica por cable con la península.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.datacenterdynamics.com/es/noticias/redeia-activa-el-cable-submarino-que-conecta-ceuta-con-la-pen%C3%ADnsula/",
+        "motivo": "Responde 403 y no se puede abrir."
+      },
+      {
+        "url": "https://ree.es/en/press-office/news/press-release/2024/06/work-begins-on-electrical-interconnection-project-between-spanish-mainland-and-ceuta",
+        "motivo": "No la he abierto en esta auditoría."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Red Eléctrica (Redeia): Llega a Ceuta el primer cable submarino de la interconexión eléctrica con la Península (15-sep-2025)",
+        "url": "https://www.ree.es/sites/default/files/2025-09/NP_Llega_Ceuta_primer_cable_submarino_interconexi%C3%B3n_Pen%C3%ADnsula.pdf",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "El Español: Redeia anuncia que el cable submarino que conecta el sistema eléctrico peninsular con Ceuta ya está operativo (22-sep-2026)",
+        "url": "https://www.elespanol.com/invertia/empresas/energia/20260922/redeia-anuncia-cable-submarino-conecta-sistema-electrico-peninsular-ceuta-operativo/1003744391932_0.html",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Infobae/Europa Press: Pedro Sánchez inaugura la nueva terminal de la Estación Marítima de Ceuta en su cuarta visita a Ceuta (20-nov-2025)",
+        "url": "https://www.infobae.com/espana/agencias/2025/11/20/pedro-sanchez-inaugura-la-nueva-terminal-de-la-estacion-maritima-de-ceuta-en-su-cuarta-visita-a-ceuta/",
+        "tipo": "agencia"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Mismo veredicto; ahora documentado con la nota de Redeia y El Español (operativo desde el 10-ago-2026). Retiro DataCenterDynamics (403) y dejo constancia de la discrepancia con elEconomista."
+  },
+  {
+    "indice": 21,
+    "minuto": "0:47:14",
+    "afirmacion": "El Gobierno ha aprobado recursos económicos para los autónomos de Ceuta tras la crisis.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/presidencia/Paginas/2026/010926-plan-choque-ceuta.aspx",
+        "motivo": "No se puede abrir desde esta máquina (lamoncloa.gob.es rechaza la conexión); no se cita una URL no abierta."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Euronews: Así son las ayudas económicas que España ofrecerá a Ceuta: desglose de los 309 millones (5-sep-2026)",
+        "url": "https://es.euronews.com/2026/09/05/asi-son-las-ayudas-economicas-que-espana-ofrecera-ceuta-desglose-de-los-309-millones-de-eu",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Onda Vasca: Las ayudas directas a empresas y autónomos de Ceuta podrán pedirse hasta el 30 de noviembre",
+        "url": "https://www.ondavasca.com/las-ayudas-directas-a-empresas-y-autonomos-de-ceuta-podran-pedirse-hasta-el-30-de-noviembre/",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio de veredicto; se confirman los 309 millones y las ayudas de 5.000 euros, pero baja la confianza a media porque no he podido abrir el BOE ni La Moncloa."
+  },
+  {
+    "indice": 22,
+    "minuto": "0:45:10",
+    "afirmacion": "Al día siguiente de la entrada masiva (31 de julio de 2026) Sánchez viajó a Ceuta.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.lamoncloa.gob.es/lang/en/presidente/news/paginas/2026/20260731-visit-to-ceuta.aspx",
+        "motivo": "No se puede abrir desde esta máquina (lamoncloa.gob.es rechaza la conexión); no se cita una URL no abierta."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Press Digital: Pedro Sánchez visita este viernes Ceuta para abordar la crisis migratoria (31-jul-2026, agenda de la visita)",
+        "url": "https://www.pressdigital.es/articulo/politica/2026-07-31/5971247-pedro-sanchez-visita-viernes-ceuta-abordar-crisis-migratoria",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Infobae/Europa Press: El viaje de los Reyes a Ceuta y Melilla, segundo de la monarquía en democracia (tabla de visitas de presidentes del Gobierno)",
+        "url": "https://www.infobae.com/espana/agencias/2026/10/01/el-viaje-de-los-reyes-a-ceuta-y-melilla-segundo-de-la-monarquia-en-democracia/",
+        "tipo": "agencia"
+      },
+      {
+        "titulo": "El Debate: Ceuta y Melilla, unas grandes desconocidas para los ministros de Sánchez",
+        "url": "https://www.eldebate.com/espana/20260805/ceuta-melilla-grandes-desconocidas-ministros-sanchez_446543.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio de veredicto; la visita se confirma con Europa Press y El Debate (Press Digital solo la anunciaba). Retiro la URL de La Moncloa, que no puedo abrir."
+  },
+  {
+    "indice": 23,
+    "minuto": "0:45:10",
+    "afirmacion": "Sánchez no se fue de vacaciones durante la crisis de Ceuta: estuvo con su familia en otra residencia oficial (La Mareta) trabajando a tiempo completo (repetido en 0:49:32).",
+    "veredicto_antes": "enganoso",
+    "veredicto_despues": "enganoso",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Diario de Lanzarote (EFE): Pedro Sánchez comienza sus vacaciones de verano en La Mareta (1-ago-2026)",
+        "url": "https://www.diariodelanzarote.com/noticia/pedro-s%C3%A1nchez-comienza-sus-vacaciones-de-verano-en-la-residencia-de-la-mareta-en-lanzarote",
+        "tipo": "agencia"
+      },
+      {
+        "titulo": "El Independiente: Pedro Sánchez se va de vacaciones a La Mareta en plena crisis de Ceuta (1-ago-2026)",
+        "url": "https://www.elindependiente.com/espana/2026/08/01/pedro-sanchez-se-va-de-vacaciones-a-la-mareta-lanzarote-en-plena-crisis-de-ceuta/amp/",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Esdiario: Sánchez, Marruecos, Ceuta y su derecho a vacaciones (SER, 31-ago-2026)",
+        "url": "https://www.esdiario.com/nacional/260831/196508/sanchez-marruecos-ceuta-derecho-vacaciones.html",
+        "tipo": "apoyo"
+      },
+      {
+        "titulo": "El Debate: Moncloa asegura que las vacaciones de Sánchez en La Mareta solo costaron 271 euros (cita «he trabajado y he descansado»)",
+        "url": "https://www.eldebate.com/espana/20260921/moncloa-rie-todos-asegura-vacaciones-sanchez-mareta-mientras-ceuta-invadida-solo-costaron-271-euros_460682.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Mismo veredicto; fuentes verificadas (EFE vía Diario de Lanzarote, El Independiente, Esdiario y El Debate; las dos últimas de línea editorial marcada, solo como apoyo)."
+  },
+  {
+    "indice": 24,
+    "minuto": "0:49:32",
+    "afirmacion": "Sánchez no había anunciado que estaba de vacaciones.",
+    "veredicto_antes": "no_verificable",
+    "veredicto_despues": "no_verificable",
+    "cambia_veredicto": false,
+    "confianza_antes": "baja",
+    "confianza_despues": "baja",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Diario de Lanzarote (EFE): Pedro Sánchez comienza sus vacaciones de verano en La Mareta (1-ago-2026)",
+        "url": "https://www.diariodelanzarote.com/noticia/pedro-s%C3%A1nchez-comienza-sus-vacaciones-de-verano-en-la-residencia-de-la-mareta-en-lanzarote",
+        "tipo": "agencia"
+      },
+      {
+        "titulo": "El Independiente: Pedro Sánchez se va de vacaciones a La Mareta en plena crisis de Ceuta (1-ago-2026)",
+        "url": "https://www.elindependiente.com/espana/2026/08/01/pedro-sanchez-se-va-de-vacaciones-a-la-mareta-lanzarote-en-plena-crisis-de-ceuta/amp/",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "El Debate: Moncloa asegura que las vacaciones de Sánchez en La Mareta solo costaron 271 euros (cita «he trabajado y he descansado»)",
+        "url": "https://www.eldebate.com/espana/20260921/moncloa-rie-todos-asegura-vacaciones-sanchez-mareta-mientras-ceuta-invadida-solo-costaron-271-euros_460682.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio de veredicto. La transcripción dice «estabas» por «me iba» pero habla Sánchez; no hay prueba pública de anuncio ni de lo contrario."
+  },
+  {
+    "indice": 25,
+    "minuto": "0:48:30",
+    "afirmacion": "Sánchez no convocó el Consejo de Seguridad Nacional por la crisis de Ceuta porque no era necesario (Jordi Wild plantea que tardó unos 25 días).",
+    "veredicto_antes": "enganoso",
+    "veredicto_despues": "enganoso",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Aragón Play: El Consejo de Seguridad Nacional ratifica crear un mando único para abordar la crisis de Ceuta (reunión del 25-ago, presidida por Sánchez)",
+        "url": "https://www.aragonplay.es/aragonnoticias/espana/consejo-seguridad-nacional-ratifica-crear-mando-unico-abordar-crisis-ceuta.html",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Civio: El Gobierno declara la situación de interés para la seguridad nacional por la crisis de Ceuta casi un mes después (BOE 26-ago-2026)",
+        "url": "https://civio.es/el-boe-nuestro-de-cada-dia/2026/08/26/el-gobierno-declara-situacion-de-interes-para-la-seguridad-nacional-la-crisis-de-ceuta-casi-un-mes-despues/",
+        "tipo": "verificador"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Mismo veredicto, confianza media (antes alta): los hechos están claros (reunión del 25-ago), pero la lectura depende de si se interpreta «no lo convoqué» como «no de inmediato»."
+  },
+  {
+    "indice": 26,
+    "minuto": "0:48:30",
+    "afirmacion": "El presidente de Ceuta pidió un mando único, el Gobierno lo creó a los veintitantos días de la crisis y sigue en vigor.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "El Español: Vivas reclama al Gobierno un mando único (29-jul-2026)",
+        "url": "https://www.elespanol.com/espana/politica/20260729/vivas-reclama-gobierno-mando-unico-desbordarse-ceuta-migrantes-semana/1003744337847_0.html",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Civio: El Gobierno declara la situación de interés para la seguridad nacional por la crisis de Ceuta casi un mes después (BOE 26-ago-2026)",
+        "url": "https://civio.es/el-boe-nuestro-de-cada-dia/2026/08/26/el-gobierno-declara-situacion-de-interes-para-la-seguridad-nacional-la-crisis-de-ceuta-casi-un-mes-despues/",
+        "tipo": "verificador"
+      },
+      {
+        "titulo": "Press Digital: El mando único en Ceuta se extiende hasta el 31 de diciembre, con posibilidad de prórroga (26-ago-2026)",
+        "url": "https://www.pressdigital.es/articulo/politica/2026-08-26/5993768-mando-unico-ceuta-extiende-hasta-31-diciembre-posibilidad-prorroga",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Aragón Play: El Consejo de Seguridad Nacional ratifica crear un mando único para abordar la crisis de Ceuta (reunión del 25-ago, presidida por Sánchez)",
+        "url": "https://www.aragonplay.es/aragonnoticias/espana/consejo-seguridad-nacional-ratifica-crear-mando-unico-abordar-crisis-ceuta.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio de veredicto; se retiene lo confirmado en las páginas abiertas (petición de Vivas el 29-jul, decreto del 26-ago, vigencia hasta el 31-dic) y se elimina la petición «de nuevo a mediados de agosto», que no he podido comprobar."
+  },
+  {
+    "indice": 27,
+    "minuto": "0:49:32",
+    "afirmacion": "Durante la crisis de Ceuta hubo cada día un ministro o ministra presente en la ciudad.",
+    "veredicto_antes": "no_verificable",
+    "veredicto_despues": "no_verificable",
+    "cambia_veredicto": false,
+    "confianza_antes": "baja",
+    "confianza_despues": "baja",
+    "fuentes_descartadas": [
+      {
+        "url": "https://es.wikipedia.org/wiki/Crisis_migratoria_de_Ceuta_de_2026",
+        "motivo": "Wikipedia: solo vale como apoyo y no es necesaria al disponer de fuentes primarias o de prensa que sí he abierto. Además las visitas de García (16-ago) y Torres (25-ago) que atribuía no las he podido confirmar en fuentes abiertas."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "elDiario.es: El Gobierno refuerza su presencia en Ceuta por el temor a una nueva crisis fronteriza",
+        "url": "https://www.eldiario.es/politica/gobierno-refuerza-presencia-ceuta-temor-nueva-crisis-fronteriza_1_13441327.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio de veredicto; retiro Wikipedia y las visitas no confirmadas. Con una sola fuente abierta y sin fuente primaria, la confianza es baja."
+  },
+  {
+    "indice": 28,
+    "minuto": "0:50:42",
+    "afirmacion": "La atención a los menores migrantes no acompañados es competencia de las comunidades autónomas (con colaboración del Gobierno de España).",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://es.wikipedia.org/wiki/Menor_extranjero_no_acompa%C3%B1ado",
+        "motivo": "Wikipedia: solo vale como apoyo y no es necesaria al disponer de fuentes primarias o de prensa que sí he abierto. No dice por sí misma quién tiene la competencia."
+      },
+      {
+        "url": "https://es.wikipedia.org/wiki/Crisis_migratoria_de_Ceuta_de_2026",
+        "motivo": "Wikipedia: solo vale como apoyo y no es necesaria al disponer de fuentes primarias o de prensa que sí he abierto."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "El Debate: ¿Cuáles son las verdaderas cifras de la crisis de Ceuta? (17-sep-2026)",
+        "url": "https://www.eldebate.com/espana/20260917/cuales-son-verdaderas-cifras-invasion-ceuta-numero-entradas-salidas-alojados-calle_459327.html",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Euronews: El desmantelamiento del campamento del puerto de Ceuta acelera los retornos a Marruecos (10-nov-2026)",
+        "url": "https://es.euronews.com/2026/11/10/desmantelamiento-campamento-puerto-ceuta-acelera-retornos-marruecos",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Euronews: Así son las ayudas económicas que España ofrecerá a Ceuta: desglose de los 309 millones (5-sep-2026)",
+        "url": "https://es.euronews.com/2026/09/05/asi-son-las-ayudas-economicas-que-espana-ofrecera-ceuta-desglose-de-los-309-millones-de-eu",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio de veredicto; retiro Wikipedia y el traslado de 500 menores que no he podido confirmar; sin fuente primaria abierta, confianza media."
+  }
+]

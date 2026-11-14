@@ -1,0 +1,296 @@
+[
+  {
+    "indice": 0,
+    "minuto": "0:03:31",
+    "afirmacion": "Pedro Sánchez tiene 54 años (a fecha de la entrevista, noviembre de 2026).",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.lamoncloa.gob.es/presidente/biografia/Paginas/index.aspx",
+        "motivo": "La web de La Moncloa devolvió ECONNREFUSED y no se pudo abrir; no se puede afirmar que diga lo atribuido."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "CIDOB: Pedro Sánchez Pérez-Castejón (biografía)",
+        "url": "https://www.cidob.org/en/lider-politico/pedro-sanchez-perez-castejon",
+        "tipo": "apoyo"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Veredicto sin cambios; se retira la fuente de La Moncloa (no abre) y se añade CIDOB con la fecha de nacimiento. Confianza baja de alta a media por no llegar a una fuente primaria abierta."
+  },
+  {
+    "indice": 1,
+    "minuto": "0:04:35",
+    "afirmacion": "La madre de Sánchez lo tuvo con 18 años y su padre tenía 20 cuando nació.",
+    "veredicto_antes": "no_verificable",
+    "veredicto_despues": "no_verificable",
+    "cambia_veredicto": false,
+    "confianza_antes": "baja",
+    "confianza_despues": "baja",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.semana.es/corazon/pedro-sanchez-soy-hijo-de-clase-media-mi-madre-me-tuvo-a-los-20-anos-yo-he-tenido-una-madre-muy-joven-cuando-cumplio-los-40-se-saco-el-acceso-a-la-universidad_2821550",
+        "motivo": "Semana devolvió HTTP 403 y no se pudo abrir; además solo repite declaraciones del propio Sánchez."
+      }
+    ],
+    "fuentes_nuevas": [],
+    "tiene_fuente_primaria": false,
+    "nota": "Veredicto sin cambios (no verificable). Se descarta Semana (403) y se conserva solo El Español, que recoge sus propias palabras; sigue sin haber prueba documental de la edad de los padres."
+  },
+  {
+    "indice": 2,
+    "minuto": "0:04:35",
+    "afirmacion": "Un abuelo de Sánchez trabajó 40 años emigrado en Alemania durante el franquismo.",
+    "veredicto_antes": "no_verificable",
+    "veredicto_despues": "no_verificable",
+    "cambia_veredicto": false,
+    "confianza_antes": "baja",
+    "confianza_despues": "baja",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.semana.es/corazon/pedro-sanchez-muchas-veces-pienso-mi-abuelo-que-estuvo-viviendo-durante-40-anos-alemania-durante-dictadura-franquista-para-poder-alimentar-mi-padre_2821908",
+        "motivo": "Semana devolvió HTTP 403 y no se pudo abrir."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "El Español: Pedro Sánchez, años de infancia (12/10/2026)",
+        "url": "https://www.elespanol.com/corazon/20261012/pedro-sanchez-anos-infancia-hijo-clase-media-madre-padre/1003744410192_0.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Veredicto sin cambios. Se confirma la emigración a Alemania en los sesenta con Infobae y El Español, pero no la cifra de 40 años; se descarta Semana (403)."
+  },
+  {
+    "indice": 3,
+    "minuto": "0:04:35",
+    "afirmacion": "Los abuelos de Sánchez no sabían leer ni escribir.",
+    "veredicto_antes": "no_verificable",
+    "veredicto_despues": "no_verificable",
+    "cambia_veredicto": false,
+    "confianza_antes": "baja",
+    "confianza_despues": "baja",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.trendencias.com/celebrities/pedro-sanchez-2014-cuando-era-pequeno-mis-abuelos-vivian-aluche-cuando-mis-padres-estaban-trabajando-yo-les-acompanaba-a-escuela-mayores-para-aprender-a-leer-escribir",
+        "motivo": "Blog de estilo de vida (Trendencias); no es fuente válida y no se abrió."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "El Español: Pedro Sánchez, años de infancia (12/10/2026)",
+        "url": "https://www.elespanol.com/corazon/20261012/pedro-sanchez-anos-infancia-hijo-clase-media-madre-padre/1003744410192_0.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Veredicto sin cambios. Se descarta Trendencias (blog), se añade El Español y se aclara que El Debate es de línea crítica (apoyo) y que Maldita no ha verificado el caso."
+  },
+  {
+    "indice": 4,
+    "minuto": "0:06:39",
+    "afirmacion": "Sánchez lleva ocho años al frente del Gobierno de España (desde 2018).",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.lamoncloa.gob.es/presidente/actividades/Paginas/2018/010618pedrosanchez.aspx",
+        "motivo": "La web de La Moncloa devolvió ECONNREFUSED y no se pudo abrir."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Congreso de los Diputados: Diario de Sesiones nº 127, 1 de junio de 2018 (moción de censura)",
+        "url": "https://www.congreso.es/docu/MocCens/10062018_XIILegMocCen.pdf",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Reuters (LegalToday): El Congreso español convierte en presidente del Gobierno a Pedro Sánchez (1/6/2018)",
+        "url": "https://www.legaltoday.com/rincon-de-reuters/el-congreso-espanol-convierte-en-presidente-del-gobierno-a-pedro-sanchez-2018-06-01/",
+        "tipo": "agencia"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Veredicto sin cambios. Se sustituye la fuente de La Moncloa (no abre) por el Diario de Sesiones del Congreso y la crónica de Reuters; la primaria solo se abrió como PDF sin texto legible, de ahí que la prueba efectiva sea la agencia y la prensa."
+  },
+  {
+    "indice": 5,
+    "minuto": "0:08:41",
+    "afirmacion": "Santiago Abascal dijo que a Sánchez «hay que colgarle de los pies».",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Última Hora: La Fiscalía investiga a Abascal por la entrevista en la que hablaba de «colgar por los pies» a Sánchez (19/1/2024)",
+        "url": "https://www.ultimahora.es/noticias/nacional/2024/01/19/2089397/fiscalia-investiga-abascal-por-decir-sanchez-querran-colgar-pies.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Veredicto sin cambios; la atribución es correcta (lo dice Sánchez). Se confirma la cita exacta en The Objective y Público y se añade Última Hora para las diligencias de la Fiscalía; se matiza que Sánchez convierte una predicción en un «hay que»."
+  },
+  {
+    "indice": 6,
+    "minuto": "0:08:41",
+    "afirmacion": "Responsables políticos han llamado «dictador» y «psicópata» a Sánchez.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [],
+    "tiene_fuente_primaria": false,
+    "nota": "Veredicto sin cambios. Se abren las cuatro fuentes y se confirman las citas y fechas; la atribución es correcta (lo dice Sánchez)."
+  },
+  {
+    "indice": 7,
+    "minuto": "0:10:43",
+    "afirmacion": "Entre los «11 principios de la propaganda de Goebbels» figuran la simplificación y el enemigo único, la transposición (cargar al adversario con lo propio) y la verosimilitud (mezclar elementos ciertos para construir una mentira), tal como los describe Sánchez.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "baja",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.actuallynotes.com/propaganda-11-principios-goebbels-aplicados-politica-actual-espanola/",
+        "motivo": "Blog de opinión sobre política española; no es fuente válida y no se abrió."
+      },
+      {
+        "url": "https://www.physics.smu.edu/pseudo/Propaganda/principles.html",
+        "motivo": "No se pudo abrir (timeout/ECONNRESET) y es una página de divulgación de la universidad, no una fuente primaria sobre la lista de 11 principios."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "LISA News: Los 11 principios de la propaganda nazi de Goebbels",
+        "url": "https://www.lisanews.org/internacional/los-11-principios-de-la-propaganda-nazi-de-goebbels/",
+        "tipo": "apoyo"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Veredicto sin cambios, pero confianza baja de media a baja: solo hay fuentes divulgativas y no se llega al mínimo de fuentes fidedignas. Se retiran el blog y la página de SMU, que no se abrió; no se confirma el vínculo con Domenach que citaba la explicación anterior."
+  },
+  {
+    "indice": 8,
+    "minuto": "0:11:52",
+    "afirmacion": "Desde la ley de amnistía hubo cánticos fascistas, agresiones a militantes del PSOE, ataques a casas del pueblo y a la sede de Ferraz.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [],
+    "tiene_fuente_primaria": false,
+    "nota": "Veredicto sin cambios; la atribución es correcta. Se confirman las cuatro fuentes y se precisan fechas; las cifras de ataques siguen siendo del propio PSOE y no hay balance oficial abierto."
+  },
+  {
+    "indice": 9,
+    "minuto": "0:11:52",
+    "afirmacion": "Sánchez afirma que el PSOE ha condenado los intentos de asalto y la violencia contra los mítines de Vox en campaña (el hecho de los intentos lo plantea Jordi Wild; Sánchez solo añade que «nosotros las hemos condenado»).",
+    "veredicto_antes": "no_verificable",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": true,
+    "confianza_antes": "baja",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.moncloa.com/2026/10/21/abascal-protesta-coruna-detenidos-3452951/",
+        "motivo": "moncloa.com es un medio privado, no el Gobierno: fuente no válida según la política de fuentes."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Demócrata: Besteiro respalda las protestas contra Vox pero se desmarca de la violencia (22/10/2026)",
+        "url": "https://www.democrata.es/actualidad/besteiro-respalda-las-protestas-contra-las-politicas-fascistas-de-vox-pero-se-desmarca-de-la-violencia/",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "El Correo Gallego: El PSdeG rechaza la violencia «venga de donde venga» y el PP exige una condena (22/10/2026)",
+        "url": "https://www.elcorreogallego.es/galicia/2026/10/22/bng-psdeg-defienden-protestas-antifascistas-135636174.html",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Infobae/EFE: Puente asegura que Milei representa el modelo que PP y Vox quieren implementar en España (22/10/2026)",
+        "url": "https://www.infobae.com/america/agencias/2026/10/22/puente-asegura-que-milei-representa-el-modelo-que-pp-y-vox-quieren-implementar-en-espana/",
+        "tipo": "agencia"
+      },
+      {
+        "titulo": "El Español (Quincemil): Inés Rey sobre la protesta en María Pita (21/10/2026)",
+        "url": "https://www.elespanol.com/quincemil/a-coruna/20261021/ines-rey-protesta-maria-pita-cualquier-reivindicacion-pierde-legitimidad-recurre-violencia/1003744429092_0.html",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Diario de Santiago: Reacciones el día después de los disturbios en A Coruña (22/10/2026)",
+        "url": "https://www.diariodesantiago.es/galicia/reacciones-el-dia-despues-de-los-disturbios-en-a-coruna-reproches-politicos-y-denuncias-por-la-actuacion-policial/",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "ATRIBUCIÓN: la parte de los «intentos de asalto» la dice Jordi Wild; Sánchez solo responde «nosotros las hemos condenado», y la afirmación se reformula así. Veredicto de no_verificable a mayormente_verdadero porque hay condenas de cargos socialistas (Besteiro, Puente, Rey) a los disturbios de A Coruña, aunque no de Sánchez; se descarta moncloa.com por no ser válida."
+  },
+  {
+    "indice": 10,
+    "minuto": "0:12:53",
+    "afirmacion": "Sánchez no ha insultado ni al jefe de la oposición (Feijóo) ni al líder de Vox (Abascal).",
+    "veredicto_antes": "enganoso",
+    "veredicto_despues": "enganoso",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [],
+    "tiene_fuente_primaria": false,
+    "nota": "Veredicto sin cambios (engañoso). Se abren las cuatro fuentes y se confirman citas y fechas; Vozpópuli es de línea crítica con Sánchez, pero la cita se contrasta con Público y EFE."
+  },
+  {
+    "indice": 11,
+    "minuto": "0:09:42",
+    "afirmacion": "Sánchez nunca ha llamado «hijo de puta» a una persona ni a un adversario político; «me gusta la fruta» es el eufemismo asociado a ese insulto.",
+    "veredicto_antes": "no_verificable",
+    "veredicto_despues": "no_verificable",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [],
+    "tiene_fuente_primaria": false,
+    "nota": "Veredicto sin cambios; la atribución es correcta (lo dice Sánchez). Se abren las dos fuentes y se confirma el episodio de Ayuso; la negativa universal no se puede probar y no se halló ningún contraejemplo."
+  },
+  {
+    "indice": 12,
+    "minuto": "1:50:50",
+    "afirmacion": "El Papa ha votado (en las elecciones de mitad de mandato de Estados Unidos) y, según da a entender Sánchez, Patti Smith también.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": true,
+    "confianza_antes": "alta",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Vatican News: Pope Leo XIV votes in USA midterm elections (30/10/2026)",
+        "url": "https://www.vaticannews.va/en/pope/news/2026-10/pope-leo-xiv-votes-usa-midterm-elections.html",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "De verdadero a mayormente_verdadero: la parte del Papa está confirmada por la Santa Sede, pero la anterior reformulación cambiaba lo dicho (que Smith «se ha pronunciado») y no hay prueba de que ella votara. Se reformula la afirmación."
+  }
+]

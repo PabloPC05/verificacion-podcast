@@ -1,0 +1,376 @@
+[
+  {
+    "indice": 0,
+    "minuto": "0:40:58",
+    "afirmacion": "Los servicios de inteligencia (CNI) advirtieron ya el 26 y 27 de julio de 2026 de un movimiento en redes sociales, con más de 180.000 seguidores, para entrar en masa en Ceuta.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.moncloa.com/2026/10/19/cni-informe-juez-ceuta-3451326/",
+        "motivo": "moncloa.com es un medio privado, no el Gobierno; fuente no válida según la política."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "EFE (Diari de Tarragona): El CNI alertó de llamamientos en redes el día de la entrada masiva en Ceuta",
+        "url": "https://www.diaridetarragona.com/espana/270270/cni-alerto-llamamientos-redes-dia-entrada-masiva-ceuta.html",
+        "tipo": "agencia"
+      },
+      {
+        "titulo": "Euronews: España desclasifica los informes del CNI sobre Ceuta que pidió la jueza Tardón",
+        "url": "https://es.euronews.com/2026/11/10/gobierno-desclasifica-los-informes-del-cni-sobre-ceuta-que-pidio-la-jueza-tardon",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Sustituyo la fuente de moncloa.com (medio privado, no válida) por EFE y Euronews; corrijo la explicación (la alerta con los 180.000 seguidores es del 29 de julio, el 27 hubo un informe estratégico general). Mantengo el veredicto; sin fuente primaria abierta (la web de La Moncloa no responde)."
+  },
+  {
+    "indice": 1,
+    "minuto": "0:42:01",
+    "afirmacion": "La Comisaría General de Extranjería y Fronteras de la Policía Nacional advirtió, igual que el CNI, del riesgo de una entrada masiva en Ceuta antes del 30 de julio de 2026.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": true,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Policía Nacional (CENIF): Nota informativa de 28 de julio de 2026 (copia publicada por El Debate)",
+        "url": "https://www.eldebate.com/uploads/files/2026/09/09/Informe%20Policia%2028%20de%20julio.pdf",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Rebajo de verdadero a mayormente_verdadero: la nota del CENIF del 28 de julio (que he descargado y leído) era más matizada que lo que decía la explicación (descartaba indicios de asalto a la valla y calificaba de incipiente la señal en redes); el aviso inequívoco es del 29 de julio y el de la Brigada de Ceuta, del 27. El documento es una copia publicada por un diario, no la web oficial."
+  },
+  {
+    "indice": 2,
+    "minuto": "0:42:01",
+    "afirmacion": "La Fiesta del Trono de Marruecos se estaba celebrando a unos 25 kilómetros de la frontera con Ceuta cuando se produjo la entrada masiva.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.lanacion.com.ar/el-mundo/donde-queda-ceuta-como-es-su-frontera-con-marruecos-y-el-mapa-para-entender-el-paso-de-migrantes-nid31072026/",
+        "motivo": "Abierta: no da la distancia a Rincón/M'diq ni sitúa los actos de la Fiesta del Trono; no respalda lo que se le atribuía."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Policía Nacional (CENIF): Nota informativa de 28 de julio de 2026 (copia publicada por El Debate)",
+        "url": "https://www.eldebate.com/uploads/files/2026/09/09/Informe%20Policia%2028%20de%20julio.pdf",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Descarto La Nación: al abrirla no da ninguna distancia a Rincón/M'diq. Añado la nota del CENIF, que cita el Día del Trono como fecha de riesgo. Mantengo el veredicto; la distancia exacta no tiene fuente oficial."
+  },
+  {
+    "indice": 3,
+    "minuto": "0:42:01",
+    "afirmacion": "La Constitución española establece que las Fuerzas Armadas tienen la misión de garantizar/defender la integridad territorial de España.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.cepc.es/sites/default/files/2021-12/233661983100-102949.pdf",
+        "motivo": "No carga (conexión rechazada) desde esta máquina."
+      },
+      {
+        "url": "https://redopositor.com/constitucion/articulo-8/",
+        "motivo": "Web privada de preparación de oposiciones; no es fuente oficial y hay una oficial disponible."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Congreso de los Diputados: Constitución Española, texto (artículo 8)",
+        "url": "https://constitucion.congreso.es/constitucion-1978/texto-de-la-constitucion",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Sustituyo el PDF del CEPC (no se abre) y Redopositor (web de oposiciones, no válida) por el texto oficial en la web del Congreso, que confirma el artículo 8. Veredicto y confianza sin cambios."
+  },
+  {
+    "indice": 4,
+    "minuto": "0:43:06",
+    "afirmacion": "En la crisis de Ceuta de mayo de 2021 entraron 15.000 personas.",
+    "veredicto_antes": "falso",
+    "veredicto_despues": "falso",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "The Objective: el Gobierno oculta los inmigrantes de la crisis de Ceuta de 2021",
+        "url": "https://theobjective.com/espana/2022-01-12/gobierno-oculta-inmigrantes-ceuta-crisis/",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Mantengo falso, pero rehago la explicación solo con cifras que he comprobado (8.000-9.000 de Marlaska según Maldita; ~10.000 de Interior según The Objective); retiro la cifra de 12.000 del Gobierno de Ceuta, que no pude confirmar. Sin fuente primaria, la confianza queda en media."
+  },
+  {
+    "indice": 5,
+    "minuto": "0:44:06",
+    "afirmacion": "Sánchez prometió entregar los informes del CNI sobre Ceuta, los entregó recortados o incompletos, y por eso la jueza de la Audiencia Nacional le ha pedido desclasificarlos y remitirlos.",
+    "veredicto_antes": "enganoso",
+    "veredicto_despues": "enganoso",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.noticiasdealava.eus/politica/2026/10/27/jueza-pide-desclasificar-informes-cni-ceuta-11693439.html",
+        "motivo": "No se pudo abrir (HTTP 406)."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Euronews: España desclasifica los informes del CNI sobre Ceuta que pidió la jueza Tardón",
+        "url": "https://es.euronews.com/2026/11/10/gobierno-desclasifica-los-informes-del-cni-sobre-ceuta-que-pidio-la-jueza-tardon",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Sustituyo Noticias de Álava (devuelve error 406 al abrirla) por Euronews. Mantengo enganoso: la fuente primaria (CGPJ) confirma qué pidió la jueza y no vincula la petición a ningún recorte; añado que Feijóo lo afirmó antes de la publicación."
+  },
+  {
+    "indice": 6,
+    "minuto": "0:44:06",
+    "afirmacion": "El jefe de gabinete del delegado del Gobierno en Ceuta dimitió porque había sido avisado por el CNI, y después dimitió el propio delegado del Gobierno.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.moncloa.com/2026/09/12/dimision-ceuta-cni-delegacion-gobierno-3430053",
+        "motivo": "moncloa.com es un medio privado, no el Gobierno; no válida."
+      }
+    ],
+    "fuentes_nuevas": [],
+    "tiene_fuente_primaria": false,
+    "nota": "Retiro moncloa.com (medio privado, no válido) y bajo la confianza de alta a media por no haber fuente primaria. Veredicto sin cambios: ambas dimisiones están confirmadas por agencia y prensa."
+  },
+  {
+    "indice": 7,
+    "minuto": "0:44:06",
+    "afirmacion": "El ministro del Interior, Fernando Grande-Marlaska, no ha dimitido pese a la crisis de Ceuta.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "El Español: El Gobierno evita que la directora del CNI comparezca por Ceuta en la Comisión de Secretos",
+        "url": "https://www.elespanol.com/espana/politica/20260922/gobierno-evita-directora-cni-comparezca-ceuta-comision-secretos-ira-solo-ministra/1003744392605_0.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio de veredicto. Corrijo la explicación (el PP y IU lo piden, no Podemos ni Jupol, que no he comprobado) y añado el dato del 22 de septiembre como último en que consta en el cargo. Sin fuente primaria: confianza media."
+  },
+  {
+    "indice": 8,
+    "minuto": "0:44:06",
+    "afirmacion": "La ministra de Defensa, Margarita Robles, no permite que la directora del CNI comparezca en la Comisión de Secretos Oficiales del Congreso sobre Ceuta.",
+    "veredicto_antes": "enganoso",
+    "veredicto_despues": "enganoso",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.moncloa.com/2026/09/22/robles-cni-ceuta-comision-secretos-oficiales-3436049/",
+        "motivo": "moncloa.com es un medio privado, no el Gobierno; no válida."
+      }
+    ],
+    "fuentes_nuevas": [],
+    "tiene_fuente_primaria": false,
+    "nota": "Retiro moncloa.com (medio privado). Corrijo la explicación: lo que consta es que el Gobierno (Moncloa/PSOE) decidió que solo irían ministros, no que Robles lo vetara; no afirmo que Robles lo pidiera a Armengol, que no pude comprobar. Veredicto sin cambios."
+  },
+  {
+    "indice": 9,
+    "minuto": "0:44:06",
+    "afirmacion": "Feijóo fue presidente del Insalud y presidente de Correos, y por ese trabajo conoce Ceuta.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "elDiario.es: Alberto Núñez Feijóo, breve biografía para no gallegos",
+        "url": "https://www.eldiario.es/politica/alberto-nunez-feijoo-breve-biografia-no-gallegos_1_8901349.html",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Público: Feijóo, buen gestor",
+        "url": "https://www.publico.es/politica/feijoo-buen-gestor.amp.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Añado dos medios independientes (elDiario.es y Público) a la única fuente anterior (Wikipedia, que queda como apoyo); retiro la afirmación no verificada de que el Insalud gestionaba Ceuta y Melilla. Sin BOE (boe.es no responde), la confianza queda en media."
+  },
+  {
+    "indice": 10,
+    "minuto": "0:45:26",
+    "afirmacion": "La entrada masiva en Ceuta fue de unas 100.000 personas.",
+    "veredicto_antes": "enganoso",
+    "veredicto_despues": "enganoso",
+    "cambia_veredicto": false,
+    "confianza_antes": "baja",
+    "confianza_despues": "baja",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Artículo 14: Un informe del Gobierno de Ceuta eleva a 96.058 las entradas de julio",
+        "url": "https://www.articulo14.es/politica/un-informe-del-gobierno-de-ceuta-eleva-a-96-058-las-entradas-de-julio-un-34-mas-que-la-cifra-que-dio-marlaska-20261018.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Mantengo enganoso y confianza baja. Añado Artículo 14, que detalla el informe de Ceuta (96.058) y la cifra de 72.000 dada al Congreso; la fuente primaria de Interior no se pudo abrir."
+  },
+  {
+    "indice": 11,
+    "minuto": "0:45:26",
+    "afirmacion": "Se ha acreditado que los gendarmes marroquíes estaban ordenando y dirigiendo el paso de los migrantes hacia Ceuta.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [],
+    "tiene_fuente_primaria": false,
+    "nota": "Mantengo mayormente_verdadero. Retiro de la explicación la frase de que el Gobierno ha reconocido el paso permitido por gendarmes, que no he podido comprobar; añado la matización de que el informe habla de indicios y de agentes (en parte de paisano), no de un hecho probado."
+  },
+  {
+    "indice": 12,
+    "minuto": "0:45:26",
+    "afirmacion": "Sánchez acudió a Ceuta, habló de una violación de la integridad territorial, y después se fue de vacaciones unos 25 días en el Falcon y publicó su lista de Spotify.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.lamoncloa.gob.es/presidente/intervenciones/paginas/2026/202600731-transcripcion-pg-visita-ceuta.aspx",
+        "motivo": "No responde desde esta máquina (conexión rechazada); no se pudo comprobar."
+      },
+      {
+        "url": "https://www.canarias7.es/canarias/sanchez-llega-lanzarote-ultimas-vacaciones-mareta-20260801134702-nt.html",
+        "motivo": "Devuelve HTTP 403 al abrirla."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Menorca.info (Europa Press): Pedro Sánchez inicia sus vacaciones en La Mareta",
+        "url": "https://www.menorca.info/actualidad/nacional/2026/08/01/2681671/pedro-sanchez-inicia-vacaciones-mareta-costa-teguise.html",
+        "tipo": "agencia"
+      },
+      {
+        "titulo": "El Independiente: Pedro Sánchez se va de vacaciones a La Mareta en plena crisis de Ceuta",
+        "url": "https://www.elindependiente.com/espana/2026/08/01/pedro-sanchez-se-va-de-vacaciones-a-la-mareta-lanzarote-en-plena-crisis-de-ceuta/amp/",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "ESdiario: Sánchez emerge tras sus vacaciones de récord",
+        "url": "https://www.esdiario.com/nacional/260823/195982/sanchez-emerge-vacaciones-record-27-dias-buceando-ceuta-ahoga.html",
+        "tipo": "apoyo"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Retiro lamoncloa.gob.es (no responde) y Canarias7 (error 403). Corrijo la duración: vuelta el 23 de agosto según ESdiario (partidista, solo apoyo), no el 24; añado Europa Press y El Independiente para la llegada del 1 de agosto. Veredicto sin cambios."
+  },
+  {
+    "indice": 13,
+    "minuto": "0:46:27",
+    "afirmacion": "El Gobierno de España no llamó a consultas al embajador en Rabat ni convocó a la embajadora de Marruecos en España tras la entrada masiva en Ceuta.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio de veredicto. Matizo la explicación con lo que dicen las fuentes abiertas (el Ministerio habló de un encargado de negocios) y aclaro que Cuatro solo recoge la petición de Feijóo. Sin fuente primaria: confianza media."
+  },
+  {
+    "indice": 14,
+    "minuto": "0:46:27",
+    "afirmacion": "El PP y sus eurodiputados impulsaron en el Parlamento Europeo una resolución de condena de la invasión de Ceuta y el Gobierno de España (sus eurodiputados socialistas) votó en contra.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.moncloa.com/2026/09/17/parlamento-europeo-ceuta-invasion-3433163/",
+        "motivo": "moncloa.com es un medio privado, no el Gobierno; no válida."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Parlamento Europeo: Resolución P10_TA(2026)0317 (copia alojada por El Debate)",
+        "url": "https://www.eldebate.com/uploads/files/2026/09/17/Texto%20sobre%20Ceuta.pdf",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Euronews: la Eurocámara responsabiliza a Marruecos del asalto masivo a Ceuta pese al rechazo de los socialistas",
+        "url": "https://es.euronews.com/2026/09/17/eurocamara-responsabiliza-marruecos-asalto-masivo-ceuta-rechazo-socialistas",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Retiro moncloa.com (medio privado). Añado el texto de la resolución (con el membrete del Parlamento Europeo, copia alojada por El Debate porque no pude abrir europarl.europa.eu) y Euronews, con los 339-225-16. Veredicto y confianza sin cambios."
+  },
+  {
+    "indice": 15,
+    "minuto": "0:47:29",
+    "afirmacion": "Existen acuerdos comerciales entre la UE y Marruecos, y la UE considera a Marruecos un socio estratégico.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": true,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Comisión Europea (DG Comercio): relaciones comerciales de la UE con Marruecos",
+        "url": "https://policy.trade.ec.europa.eu/eu-trade-relationships-country-and-region/countries-and-regions/morocco_en",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Parlamento Europeo: Resolución P10_TA(2026)0317 (copia alojada por El Debate)",
+        "url": "https://www.eldebate.com/uploads/files/2026/09/17/Texto%20sobre%20Ceuta.pdf",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Subo de mayormente_verdadero a verdadero: la web de la Comisión confirma los acuerdos comerciales vigentes y el Parlamento Europeo llama a Marruecos «socio clave»; el reparo anterior (no verificar el estado de 2026) queda resuelto, aunque no hay negociación de nuevos acuerdos documentada."
+  }
+]

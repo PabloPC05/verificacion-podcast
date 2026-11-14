@@ -1,0 +1,544 @@
+[
+  {
+    "indice": 0,
+    "minuto": "0:54:09",
+    "afirmacion": "El proceso de regularización extraordinaria de migrantes de 2026 terminó antes de que se iniciara el verano.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/inclusion/paginas/2026/020726-balance-regularizacion-extraordinaria.aspx",
+        "motivo": "No cargó desde esta máquina (conexión rechazada); sustituida por la misma nota en inclusion.gob.es y en la revista de la Seguridad Social."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Ministerio de Inclusión, Seguridad Social y Migraciones: el plazo de presentación para la Regularización Extraordinaria concluye con 1.174.978 solicitudes recibidas (2/7/2026)",
+        "url": "https://www.inclusion.gob.es/w/el-plazo-de-presentacion-de-solicitud-para-la-regularizacion-extraordinaria-concluye-con-1.174.978-solicitudes-recibidas",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Seguridad Social (Revista): el plazo de presentación concluye con 1.174.978 solicitudes recibidas (2/7/2026)",
+        "url": "https://revista.seg-social.es/-/el-plazo-de-presentaci%C3%B3n-de-solicitud-para-la-regularizaci%C3%B3n-extraordinaria-concluye-con-1.174.978-solicitudes-recibidas",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Mantiene el veredicto y sube la confianza: se ha abierto la nota oficial del Ministerio (plazo 16/4-30/6/2026) y se matiza que el cierre fue nueve días después del inicio astronómico del verano."
+  },
+  {
+    "indice": 1,
+    "minuto": "0:54:09",
+    "afirmacion": "Los solicitantes de la regularización extraordinaria eran en su amplísima mayoría de origen latinoamericano y la primera nacionalidad fue la colombiana.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.infobae.com/espana/2026/01/27/la-mayoria-de-los-840000-migrantes-en-situacion-irregular-en-espana-son-latinoamericanos-con-colombia-peru-y-honduras-a-la-cabeza/",
+        "motivo": "Trata la estimación de irregulares de Funcas, no el origen de los solicitantes; sustituida por la nota oficial con el porcentaje latinoamericano real."
+      },
+      {
+        "url": "https://www.infobae.com/espana/2026/11/13/los-datos-sobre-la-nacionalidad-de-los-inmigrantes-que-han-hecho-trabajar-a-los-verificadores-de-jordi-wild-pedro-sanchez-asegura-que-un-40-son-latinoamericanos/",
+        "motivo": "Válida pero innecesaria: solo repite los porcentajes por país que ya da la nota oficial, sin el total latinoamericano."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Ministerio de Inclusión: el plazo de presentación para la Regularización Extraordinaria concluye con 1.174.978 solicitudes recibidas (2/7/2026)",
+        "url": "https://www.inclusion.gob.es/w/el-plazo-de-presentacion-de-solicitud-para-la-regularizacion-extraordinaria-concluye-con-1.174.978-solicitudes-recibidas",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "NTN24: España registró casi 1,2 millones de solicitudes de regularización; Colombia, el país más representado (2/7/2026)",
+        "url": "https://www.ntn24.com/noticias-actualidad/espana-registro-casi-1-2-millones-de-solicitudes-de-regularizacion-de-inmigrantes-colombia-es-el-pais-de-origen-mas-representado-de-latinoamerica-630663",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Euronews: 1,17 millones de solicitudes, España bate su récord histórico de regularización (2/7/2026)",
+        "url": "https://es.euronews.com/my-europe/2026/07/02/117-millones-de-solicitudes-espana-bate-su-record-historico-de-regularizacion-de-migrantes",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Se añade la fuente primaria que faltaba (nota del Ministerio con 2 de cada 3 solicitantes latinoamericanos y Colombia primera) y se sube la confianza a alta; el veredicto no cambia por el matiz de «amplísima»."
+  },
+  {
+    "indice": 2,
+    "minuto": "0:54:09",
+    "afirmacion": "De todos los migrantes que llegan a España, el 40% son europeos, otro 40% latinoamericanos y el resto africanos o asiáticos.",
+    "veredicto_antes": "falso",
+    "veredicto_despues": "falso",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [
+      {
+        "url": "https://infomigrante.es/2026/11/13/sanchez-regularizacion-500000-trabajando-cotizando/",
+        "motivo": "No analiza el origen continental de las llegadas; no respalda ni desmiente la cifra 40/40/20."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "INE (INEbase, tabla 69690): inmigraciones procedentes del extranjero por país de procedencia, 2021-2024",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/69690?nult=4",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "INE (INEbase, tabla 77019): población residente por nacionalidad (agrupación de países), 1/1/2025",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/77019?nult=2",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Mantiene «falso» y sube la confianza: se ha calculado el reparto por continente directamente con las tablas del INE (Europa 23,6%, Latinoamérica 48,8% en 2024) en lugar de apoyarse solo en prensa."
+  },
+  {
+    "indice": 3,
+    "minuto": "0:55:25",
+    "afirmacion": "El 25% del crecimiento económico de España de los últimos años se debe a la aportación de la inmigración.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "no_verificable",
+    "cambia_veredicto": true,
+    "confianza_antes": "baja",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.bde.es/f/webbe/SES/Secciones/Publicaciones/InformesBoletinesRevistas/BoletinEconomico/25/T2/Fich/be2502-art10.pdf",
+        "motivo": "No cargó desde esta máquina (conexión rechazada); sus cifras se citan a través de prensa que recoge la comparecencia del Banco de España."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "El Independiente: España no ha sido el motor económico de Europa, la inmigración explica la mitad del crecimiento (6/7/2026)",
+        "url": "https://www.elindependiente.com/economia/2026/07/06/espana-no-sido-motor-economico-europa-inmigracion-mitad-crecimiento/",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Cambia de «mayormente_verdadero» a «no_verificable»: el 25% no coincide con ninguna estimación publicada (≈46-50% del PIB total, ≈19% del per cápita, ≈40% según BBVA) y no se ha podido abrir la fuente primaria del Banco de España."
+  },
+  {
+    "indice": 4,
+    "minuto": "0:56:33",
+    "afirmacion": "Los migrantes son de la población que menos utiliza los servicios públicos sanitarios, en parte por ser más jóvenes.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "baja",
+    "fuentes_descartadas": [
+      {
+        "url": "https://scielosp.org/pdf/gs/2009.v23n3/208-215/es",
+        "motivo": "No se pudo abrir (HTTP 403 en WebFetch y en curl); además es un estudio de Murcia de 2006-2008, de ámbito local."
+      }
+    ],
+    "fuentes_nuevas": [],
+    "tiene_fuente_primaria": true,
+    "nota": "Mantiene el veredicto pero baja la confianza a baja: de las dos fuentes originales solo se ha podido abrir la del Ministerio de Sanidad (la Gaceta Sanitaria da 403) y no se alcanza el mínimo de dos fuentes independientes."
+  },
+  {
+    "indice": 5,
+    "minuto": "0:59:45",
+    "afirmacion": "La migración irregular supone entre un 5% y un 10% del conjunto de la migración en España, como mucho.",
+    "veredicto_antes": "enganoso",
+    "veredicto_despues": "enganoso",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "INE: Estadística Continua de Población a 1/1/2026 (10.004.581 nacidos fuera; 7.243.561 extranjeros)",
+        "url": "https://www.ine.es/dyngs/Prensa/ECP4T25.htm?print=1",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "INE (INEbase, tabla 77019): población residente por nacionalidad, 1/1/2025",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/77019?nult=2",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Ministerio de Inclusión: 1.174.978 solicitudes de regularización (79,6% arraigo; 20,4% protección internacional)",
+        "url": "https://www.inclusion.gob.es/w/el-plazo-de-presentacion-de-solicitud-para-la-regularizacion-extraordinaria-concluye-con-1.174.978-solicitudes-recibidas",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Mantiene «engañoso»: se aportan los denominadores del INE (nacidos fuera 8,9%-11,7% según la estimación; extranjeros 12%-16%) y la composición de las solicitudes, y se subraya que el límite del 10% depende de elegir el denominador más favorable."
+  },
+  {
+    "indice": 6,
+    "minuto": "0:59:45",
+    "afirmacion": "Muchos migrantes no llegan a España en cayuco sino en avión y en coche.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": true,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.infobae.com/espana/2026/01/27/la-mayoria-de-los-840000-migrantes-en-situacion-irregular-en-espana-son-latinoamericanos-con-colombia-peru-y-honduras-a-la-cabeza/",
+        "motivo": "Trata el origen nacional de los irregulares, no la vía de entrada."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "INE: Estadística de Migraciones y Cambios de Residencia 2024 (nota de prensa, 11/12/2025)",
+        "url": "https://ine.es/dyngs/Prensa/EMCR2024.htm?print=1",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "ACNUR: Europe Sea Arrivals, llegadas irregulares a España por mar y tierra 2024-2025",
+        "url": "http://data.unhcr.org/en/situations/europe-sea-arrivals/location/24567",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Cambia de «mayormente_verdadero» a «verdadero» y corrige la afirmación: Sánchez dice que «muchos vienen en avión y en coche», no que sea la mayoría de los irregulares; con los datos del INE y ACNUR (64.318 llegadas irregulares por mar y tierra frente a 1,29 millones de entradas en 2024) lo dicho es cierto."
+  },
+  {
+    "indice": 7,
+    "minuto": "0:59:45",
+    "afirmacion": "Los migrantes irregulares que llegan en avión no entran por Barajas sino por otros aeropuertos europeos.",
+    "veredicto_antes": "no_verificable",
+    "veredicto_despues": "no_verificable",
+    "cambia_veredicto": false,
+    "confianza_antes": "baja",
+    "confianza_despues": "baja",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambios: no hay datos públicos del desglose por aeropuerto de entrada; la única fuente válida localizada no lo ofrece."
+  },
+  {
+    "indice": 8,
+    "minuto": "1:00:47",
+    "afirmacion": "El permiso de paternidad ha pasado de cinco semanas a 19 semanas, equiparado al de maternidad.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [],
+    "tiene_fuente_primaria": true,
+    "nota": "Sin cambios: se han abierto las tres fuentes y confirman 5 semanas en 2018, 16 en 2021 y 19 por progenitor desde el RDL 9/2025."
+  },
+  {
+    "indice": 9,
+    "minuto": "1:01:53",
+    "afirmacion": "19 semanas equivalen a 100 días.",
+    "veredicto_antes": "falso",
+    "veredicto_despues": "falso",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [],
+    "tiene_fuente_primaria": true,
+    "nota": "Mantiene «falso» pero baja la confianza a media: 19 semanas son 133 días naturales, aunque en días laborables (95) la cifra se aproximaría a 100."
+  },
+  {
+    "indice": 10,
+    "minuto": "1:01:53",
+    "afirmacion": "Sin más inmigración, dentro de 20-30 años la fuerza laboral de España sería similar a la que había en 1980-1990.",
+    "veredicto_antes": "no_verificable",
+    "veredicto_despues": "no_verificable",
+    "cambia_veredicto": false,
+    "confianza_antes": "baja",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://futuros.gob.es/sites/default/files/2026-03/Espa%C3%B1a_ante_el_reto_migratorio_dos_futuros_posibles.pdf",
+        "motivo": "No cargó desde esta máquina (conexión rechazada) y no se puede citar lo que no se ha abierto."
+      },
+      {
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/reto-demografico/temas/documentos-interes/proyeccionesdemograficas_ine_airef_tcm30-517794.pdf",
+        "motivo": "Proyecciones antiguas (base 2020) con inmigración; no contemplan un escenario sin inmigración ni dicen nada sobre 1980-1990."
+      },
+      {
+        "url": "https://www.randstad.es/nosotros/sala-prensa/espana-perdera-trabajadores-por-envejecimiento-poblacion/",
+        "motivo": "Informe de una empresa privada con un único escenario (con inmigración); no incluye el supuesto sin inmigración."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "INE: Proyecciones de Población 2024-2074 (nota de prensa, 24/6/2024), escenario de saldo migratorio nulo",
+        "url": "https://www.ine.es/dyngs/Prensa/PROP20242074.htm",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "INE: Encuesta de Población Activa, tercer trimestre 2026 (27/10/2026)",
+        "url": "https://www.ine.es/dyngs/Prensa/EPA3T26.htm",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Sigue «no_verificable» pero con fuente primaria: el INE publica un escenario de saldo migratorio nulo (población y no fuerza laboral); se descartan tres fuentes que no cargaban o no trataban el supuesto."
+  },
+  {
+    "indice": 11,
+    "minuto": "1:03:13",
+    "afirmacion": "Cuando Sánchez tenía 15-16 años (hacia 1987-1988), el delegado del Gobierno en Madrid dijo «quien quiera seguridad, que se la pague».",
+    "veredicto_antes": "no_verificable",
+    "veredicto_despues": "no_verificable",
+    "cambia_veredicto": false,
+    "confianza_antes": "baja",
+    "confianza_despues": "baja",
+    "fuentes_descartadas": [
+      {
+        "url": "https://ellibrepensador.com/2011/11/29/quien-quiera-seguridad-que-se-la-pague",
+        "motivo": "Blog de opinión (2011), sin fecha ni cita original de la frase; no es fuente válida según la política."
+      },
+      {
+        "url": "https://www.psoealhaurindelatorre.com/seguridad-ciudadana/",
+        "motivo": "Web de una agrupación de partido y no cargó (página de verificación); no es fuente válida como única base."
+      }
+    ],
+    "fuentes_nuevas": [],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambios de veredicto; se retiran las dos fuentes (un blog de opinión y una web de partido que no cargó) y se deja la lista de fuentes vacía por no haber ninguna válida."
+  },
+  {
+    "indice": 12,
+    "minuto": "1:04:18",
+    "afirmacion": "Durante los gobiernos de Rajoy se recortaron las Fuerzas y Cuerpos de Seguridad del Estado en 15.000 efectivos.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.cope.es/actualidad/espana/noticias/moreno-psrm-recuerda-que-fue-rajoy-quien-recorto-mas-13000-efectivos-policia-nacional-guardia-civil-20240216_3150071",
+        "motivo": "Declaración de un dirigente del PSRM recogida por una cadena de radio: es voz de parte y no se ha abierto en esta auditoría."
+      }
+    ],
+    "fuentes_nuevas": [],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambios de veredicto; se retira la cita de COPE (declaración de un dirigente socialista) y se deja la cifra oficial de Interior vía EFE junto a la estimación del sindicato AUGC."
+  },
+  {
+    "indice": 13,
+    "minuto": "1:04:18",
+    "afirmacion": "Hoy hay 180.000 efectivos de Policía Nacional y Guardia Civil.",
+    "veredicto_antes": "no_verificable",
+    "veredicto_despues": "no_verificable",
+    "cambia_veredicto": false,
+    "confianza_antes": "baja",
+    "confianza_despues": "baja",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambios: hay una cifra de 183.150 que casa con lo dicho y otra de 156.463 que no, sin forma de reconciliarlas con fuente oficial, así que sigue «no_verificable»."
+  },
+  {
+    "indice": 14,
+    "minuto": "1:04:18",
+    "afirmacion": "España tiene índices de criminalidad bastante más bajos que Alemania, Francia, Finlandia y Suecia.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "baja",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.interior.gob.es/opencms/export/sites/default/.galleries/galeria-de-prensa/documentos-y-multimedia/balances-e-informes/2025/Balance-de-Criminalidad_Cuarto_Trimestre_2025.pdf",
+        "motivo": "Respondió HTTP 403 desde esta máquina; no compara con otros países y se sustituye por Eurostat."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Eurostat: delitos registrados por la policía por categoría ICCS, por 100.000 habitantes (homicidio, violencia sexual, robo con violencia, robo con fuerza), 2022-2024",
+        "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/crim_off_cat?format=JSON&lang=EN&unit=P_HTHAB&geo=ES&geo=DE&geo=FR&geo=FI&geo=SE&time=2022&time=2023&time=2024&iccs=ICCS0101&iccs=ICCS0401&iccs=ICCS0501&iccs=ICCS0301",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Eurostat: delitos registrados por la policía, hurtos (ICCS0502), por 100.000 habitantes, 2024",
+        "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/crim_off_cat?format=JSON&lang=EN&unit=P_HTHAB&geo=ES&geo=DE&geo=FR&geo=FI&geo=SE&time=2024&iccs=ICCS0502",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Mantiene el veredicto y pasa a tener fuente primaria: Eurostat confirma la comparación en homicidios, delitos sexuales y hurtos, y la desmiente en robo con violencia."
+  },
+  {
+    "indice": 15,
+    "minuto": "1:04:18",
+    "afirmacion": "Los índices de criminalidad en España han aumentado en los últimos años, en paralelo al aumento de la inmigración.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.interior.gob.es/opencms/export/sites/default/.galleries/galeria-de-prensa/documentos-y-multimedia/balances-e-informes/2025/Balance-de-Criminalidad_Cuarto_Trimestre_2025.pdf",
+        "motivo": "Respondió HTTP 403 desde esta máquina; el mismo balance se ha abierto en el portal estadisticasdecriminalidad.ses.mir.es del propio Ministerio."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Ministerio del Interior: Balance de Criminalidad, enero a diciembre de 2025 (portal estadístico de criminalidad)",
+        "url": "https://estadisticasdecriminalidad.ses.mir.es/publico/portalestadistico/dam/jcr:7d3776cd-9ca4-4c02-8ca4-96b2571dbee4/Balance%20de%20Criminalidad%20Cuarto%20Trimestre%202025.pdf",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Sin cambios de veredicto: se ha abierto el balance oficial en el portal estadístico del Ministerio y confirma todas las cifras citadas; se sustituye la URL que daba 403."
+  },
+  {
+    "indice": 16,
+    "minuto": "1:05:19",
+    "afirmacion": "El plan de regularización afecta a más o menos 1.200.000 personas.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/inclusion/paginas/2026/020726-balance-regularizacion-extraordinaria.aspx",
+        "motivo": "No cargó desde esta máquina (conexión rechazada); sustituida por la misma nota en inclusion.gob.es."
+      },
+      {
+        "url": "https://theobjective.com/espana/2026-07-27/policia-cifra-15-millones-inmigrantes-irregulares-espana-efecto-llamada/",
+        "motivo": "Válida como apoyo, pero la cifra de 400.000 se cita mejor en El Español, que la desarrolla."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Ministerio de Inclusión: el plazo de presentación para la Regularización Extraordinaria concluye con 1.174.978 solicitudes recibidas (2/7/2026)",
+        "url": "https://www.inclusion.gob.es/w/el-plazo-de-presentacion-de-solicitud-para-la-regularizacion-extraordinaria-concluye-con-1.174.978-solicitudes-recibidas",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "El Español: la Policía calcula que unos 400.000 migrantes no estaban en España y se colaron en la regularización (1/7/2026)",
+        "url": "https://www.elespanol.com/espana/20260701/policia-calcula-migrantes-no-espana-colado-regularizacion-sanchez/1003744305705_0.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Sin cambios: el número de solicitudes (1.174.978) se confirma con la nota oficial del Ministerio, que ahora sí se ha abierto; se mantiene «mayormente verdadero» porque son solicitudes y no regularizados."
+  },
+  {
+    "indice": 17,
+    "minuto": "1:05:19",
+    "afirmacion": "Medio millón de personas de la regularización ya trabajan y cotizan en la Seguridad Social.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [
+      {
+        "url": "https://theobjective.com/economia/2026-08-04/regularizacion-extraordinaria-262-475-afiliados/",
+        "motivo": "No se ha abierto en esta auditoría; se sustituye por la nota oficial de la Seguridad Social con el dato de octubre."
+      },
+      {
+        "url": "https://theobjective.com/espana/politica/2026-10-02/saiz-afiliacion-papel-regularizacion/",
+        "motivo": "No se ha abierto en esta auditoría; se sustituye por la nota oficial de la Seguridad Social."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Seguridad Social: La Seguridad Social registra cerca de 3.700.000 afiliados extranjeros, casi 600.000 más que hace un año (13/11/2026)",
+        "url": "https://revista.seg-social.es/-/afiliacion-extranjeros-octubre-2026",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Mantiene «verdadero» y pasa a fuente primaria: la nota de la Seguridad Social del 13/11/2026 da 490.586 altas a finales de octubre."
+  },
+  {
+    "indice": 18,
+    "minuto": "1:05:19",
+    "afirmacion": "La tasa de paro de los españoles (nacionales) ha bajado durante los últimos años.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": true,
+    "confianza_antes": "media",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [
+      {
+        "url": "https://ine.es/dyngs/Prensa/EPA4T25.htm?print=1",
+        "motivo": "No se ha abierto en esta auditoría; sustituida por la serie por nacionalidad de la tabla 65336."
+      },
+      {
+        "url": "https://www.caixabankresearch.com/es/publicaciones/notas-breves-actualidad-economica-y-financiera/espana/tasa-paro-cae-2t-al-103-minimo",
+        "motivo": "Trata la tasa de paro general del 2T 2025, no la de los españoles."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "INE (INEbase, tabla 65336): tasas de paro por nacionalidad, sexo y comunidad autónoma, 2018-2026",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/65336?date=20180101:20261101",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Cambia de «mayormente_verdadero» a «verdadero»: la tabla del INE de paro por nacionalidad, que antes no se había obtenido, muestra que la tasa de los españoles bajó del 13,70% (3T 2018) al 9,26% (3T 2026)."
+  },
+  {
+    "indice": 19,
+    "minuto": "1:05:19",
+    "afirmacion": "El Gobierno ha dotado con 500 millones de euros las políticas de integración vinculadas al proceso de regularización.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.lamoncloa.gob.es/presidente/actividades/Documents/2026/300626-sanchez-plan-integracion-ciudadania.pdf",
+        "motivo": "No cargó desde esta máquina (conexión rechazada)."
+      },
+      {
+        "url": "https://www.diariojaen.es/espana/pedro-sanchez-anuncia-que-se-destinaran-500-millones-de-euros-para-un-plan-de-integracion-y-ciudadania-BN11495172",
+        "motivo": "No cargó (conexión rechazada)."
+      }
+    ],
+    "fuentes_nuevas": [],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambios de veredicto; se retiran dos fuentes que no cargaban y se baja el alcance de lo comprobado a lo que dicen Telecinco y El Plural (505 millones, sin fuente primaria abierta)."
+  },
+  {
+    "indice": 20,
+    "minuto": "1:06:28",
+    "afirmacion": "Los 500 millones se han puesto a disposición de ayuntamientos y comunidades autónomas, que son quienes tienen las competencias en políticas de integración, para que las desarrollen.",
+    "veredicto_antes": "no_verificable",
+    "veredicto_despues": "no_verificable",
+    "cambia_veredicto": false,
+    "confianza_antes": "baja",
+    "confianza_despues": "baja",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.diariojaen.es/espana/pedro-sanchez-anuncia-que-se-destinaran-500-millones-de-euros-para-un-plan-de-integracion-y-ciudadania-BN11495172",
+        "motivo": "No cargó (conexión rechazada)."
+      }
+    ],
+    "fuentes_nuevas": [],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambios: ninguna fuente abierta indica qué parte de los fondos va a comunidades y ayuntamientos; se retira una fuente que no cargaba."
+  },
+  {
+    "indice": 21,
+    "minuto": "0:51:57",
+    "afirmacion": "El abuelo de Sánchez trabajó 40 años en Alemania y, cuando venía a España a ver a su familia, volvía a Alemania antes de que se cumplieran los tres meses que le permitía el visado.",
+    "veredicto_antes": "no_verificable",
+    "veredicto_despues": "no_verificable",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "baja",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [],
+    "tiene_fuente_primaria": false,
+    "nota": "Corrige la afirmación, que estaba mal reformulada (la cita dice que volvía a Alemania antes de los 3 meses de vigencia de la visa, no «tres meses del vencimiento») y baja la confianza de alta a baja porque no se ha localizado ninguna fuente."
+  }
+]

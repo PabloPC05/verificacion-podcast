@@ -4,12 +4,25 @@
     "cita": "de la regularización de migrantes Que nos llegó, que terminamos Antes de que se iniciara el verano",
     "afirmacion": "El proceso de regularización extraordinaria de migrantes de 2026 terminó antes de que se iniciara el verano.",
     "veredicto": "mayormente_verdadero",
-    "explicacion": "El plazo para presentar solicitudes fue del 16 de abril al 30 de junio de 2026, es decir, cerró unos nueve días después del inicio astronómico del verano (21 de junio), pero a efectos prácticos al final de la primavera. Lo que no había terminado es la tramitación: el balance oficial del 2 de julio cifraba 1.174.978 solicitudes, 609.737 ya tramitadas, y hacia el 8 de julio solo unas 12.000 resoluciones definitivas notificadas; no he encontrado un balance nacional posterior de resoluciones.",
-    "confianza": "media",
+    "explicacion": "El plazo de solicitudes de la regularización extraordinaria fue del 16 de abril al 30 de junio de 2026 (nota del Ministerio de Inclusión, 2/7/2026): cerró nueve días después del inicio astronómico del verano (21 de junio) pero antes de julio. Lo que siguió abierto fue la tramitación y la subsanación presencial hasta el 30 de septiembre: a 2 de julio había 609.737 expedientes tramitados de 1.174.978 y, según The Objective (8/7/2026), unas 12.000 resoluciones definitivas.",
+    "confianza": "alta",
     "fuentes": [
-      {"titulo": "Resueltas ya unas 12.000 solicitudes de regularización extraordinaria (The Objective, 8/7/2026)", "url": "https://theobjective.com/espana/2026-07-08/resueltas-12-000-solicitudes-regularizacion-extraordinaria/"},
-      {"titulo": "La Moncloa (Inclusión): el plazo de presentación concluye con 1.174.978 solicitudes recibidas", "url": "https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/inclusion/paginas/2026/020726-balance-regularizacion-extraordinaria.aspx"},
-      {"titulo": "Seis meses de regularización extraordinaria: más de un millón de solicitudes y pocas respuestas oficiales (Infomigrante, 16/10/2026)", "url": "https://infomigrante.es/2026/10/16/seis-meses-de-regularizacion-extraordinaria-en-espana-mas-de-un-millon-de-solicitudes-y-pocas-respuestas-oficiales/"}
+      {
+        "titulo": "Ministerio de Inclusión, Seguridad Social y Migraciones: el plazo de presentación para la Regularización Extraordinaria concluye con 1.174.978 solicitudes recibidas (2/7/2026)",
+        "url": "https://www.inclusion.gob.es/w/el-plazo-de-presentacion-de-solicitud-para-la-regularizacion-extraordinaria-concluye-con-1.174.978-solicitudes-recibidas"
+      },
+      {
+        "titulo": "Seguridad Social (Revista): el plazo de presentación concluye con 1.174.978 solicitudes recibidas (2/7/2026)",
+        "url": "https://revista.seg-social.es/-/el-plazo-de-presentaci%C3%B3n-de-solicitud-para-la-regularizaci%C3%B3n-extraordinaria-concluye-con-1.174.978-solicitudes-recibidas"
+      },
+      {
+        "titulo": "The Objective: Resueltas ya unas 12.000 solicitudes de regularización extraordinaria (8/7/2026)",
+        "url": "https://theobjective.com/espana/2026-07-08/resueltas-12-000-solicitudes-regularizacion-extraordinaria/"
+      },
+      {
+        "titulo": "Infomigrante: Seis meses de regularización extraordinaria (16/10/2026)",
+        "url": "https://infomigrante.es/2026/10/16/seis-meses-de-regularizacion-extraordinaria-en-espana-mas-de-un-millon-de-solicitudes-y-pocas-respuestas-oficiales/"
+      }
     ]
   },
   {
@@ -17,11 +30,21 @@
     "cita": "en su amplísima mayoría Sí, la gente que estaba aquí trabajando Era una población migrante Latinoamericana, la primera nacionalidad Colombiana",
     "afirmacion": "Los solicitantes de la regularización extraordinaria eran en su amplísima mayoría de origen latinoamericano y la primera nacionalidad fue la colombiana.",
     "veredicto": "mayormente_verdadero",
-    "explicacion": "Según los datos de La Moncloa que recoge Infobae, Colombia encabeza las solicitudes con el 25,9%, seguida de Marruecos (13,3%), Venezuela (11,8%), Perú (8,8%) y Honduras (4,9%). Los cuatro países latinoamericanos del top 5 suman ya el 51,4% y Funcas estimaba que unas 760.000 de las 840.000 personas en situación irregular a 1/1/2025 eran latinoamericanas (~90%), pero no he podido ver el porcentaje latinoamericano total de solicitudes, por lo que «amplísima» queda algo más fuerte de lo comprobado. Marruecos, segundo, no es latinoamericano.",
-    "confianza": "media",
+    "explicacion": "Según el Ministerio de Inclusión (2/7/2026), Colombia concentra el 25,9% de las solicitudes, seguida de Marruecos (13,3%), Venezuela (11,8%), Perú (8,8%) y Honduras (4,9%); dos de cada tres solicitantes proceden de América Central y del Sur, el 22,9% de África y el 8,3% de Asia. Colombia es la primera nacionalidad y los latinoamericanos son mayoría clara, pero dos tercios es una mayoría amplia, no «amplísima».",
+    "confianza": "alta",
     "fuentes": [
-      {"titulo": "Los datos sobre la nacionalidad de los inmigrantes que han hecho trabajar a los verificadores de Jordi Wild (Infobae, 13/11/2026)", "url": "https://www.infobae.com/espana/2026/11/13/los-datos-sobre-la-nacionalidad-de-los-inmigrantes-que-han-hecho-trabajar-a-los-verificadores-de-jordi-wild-pedro-sanchez-asegura-que-un-40-son-latinoamericanos/"},
-      {"titulo": "La mayoría de los 840.000 migrantes en situación irregular en España son latinoamericanos (Infobae, 27/1/2026, datos Funcas)", "url": "https://www.infobae.com/espana/2026/01/27/la-mayoria-de-los-840000-migrantes-en-situacion-irregular-en-espana-son-latinoamericanos-con-colombia-peru-y-honduras-a-la-cabeza/"}
+      {
+        "titulo": "Ministerio de Inclusión: el plazo de presentación para la Regularización Extraordinaria concluye con 1.174.978 solicitudes recibidas (2/7/2026)",
+        "url": "https://www.inclusion.gob.es/w/el-plazo-de-presentacion-de-solicitud-para-la-regularizacion-extraordinaria-concluye-con-1.174.978-solicitudes-recibidas"
+      },
+      {
+        "titulo": "NTN24: España registró casi 1,2 millones de solicitudes de regularización; Colombia, el país más representado (2/7/2026)",
+        "url": "https://www.ntn24.com/noticias-actualidad/espana-registro-casi-1-2-millones-de-solicitudes-de-regularizacion-de-inmigrantes-colombia-es-el-pais-de-origen-mas-representado-de-latinoamerica-630663"
+      },
+      {
+        "titulo": "Euronews: 1,17 millones de solicitudes, España bate su récord histórico de regularización (2/7/2026)",
+        "url": "https://es.euronews.com/my-europe/2026/07/02/117-millones-de-solicitudes-espana-bate-su-record-historico-de-regularizacion-de-migrantes"
+      }
     ]
   },
   {
@@ -29,25 +52,47 @@
     "cita": "del 100% de migrantes que nos llegan, el 40% son europeos, el otro 40% son latinoamericanos y el resto son o bien africanos o bien asiáticos",
     "afirmacion": "De todos los migrantes que llegan a España, el 40% son europeos, otro 40% latinoamericanos y el resto africanos o asiáticos.",
     "veredicto": "falso",
-    "explicacion": "Según la Estadística de Migraciones del INE (publicada el 11/12/2025), entre 2021 y 2024 llegaron del extranjero unos 4,69 millones de personas, de las cuales solo 762.416 (en torno al 16%) procedían de Europa y 708.516 (~15%) de África; tres países latinoamericanos (Colombia, Venezuela y Perú) ya suman 1,11 millones (~24%). Los tres primeros países en flujos de 2024 fueron Colombia (168.122), Marruecos (133.130) y Venezuela (103.225), como dijeron los verificadores del programa. El porcentaje europeo real es menos de la mitad del que cita Sánchez y África pesa casi igual que Europa, no es un «resto». Las cifras por origen proceden de la tabulación que recoge Infobae; no he visto la tabla continental del INE directamente.",
-    "confianza": "media",
+    "explicacion": "Según el INE (Estadística de Migraciones, 11/12/2025), de las 1.288.562 llegadas desde el extranjero en 2024, el 23,6% procedía de Europa, el 48,8% de América Central, Caribe y del Sur, el 16,8% de África y el 7,1% de Asia (27,8%, 46,7%, 15,5% y 6,4% en 2021-2024; cálculo propio con las tablas del INE). Los europeos son bastante menos del 40% y los latinoamericanos más. Ni siquiera el stock de extranjeros residentes (INE, 1/1/2025: 35% europeos, 35% latinoamericanos, 20% africanos, 8% asiáticos) encaja con 40/40/20.",
+    "confianza": "alta",
     "fuentes": [
-      {"titulo": "INE, Estadística de Migraciones y Cambios de Residencia 2024 (nota de prensa)", "url": "https://ine.es/dyngs/Prensa/EMCR2024.htm?print=1"},
-      {"titulo": "Los datos sobre la nacionalidad de los inmigrantes que han hecho trabajar a los verificadores de Jordi Wild (Infobae, 13/11/2026)", "url": "https://www.infobae.com/espana/2026/11/13/los-datos-sobre-la-nacionalidad-de-los-inmigrantes-que-han-hecho-trabajar-a-los-verificadores-de-jordi-wild-pedro-sanchez-asegura-que-un-40-son-latinoamericanos/"},
-      {"titulo": "Infomigrante: Sánchez defiende la regularización (13/11/2026)", "url": "https://infomigrante.es/2026/11/13/sanchez-regularizacion-500000-trabajando-cotizando/"}
+      {
+        "titulo": "INE: Estadística de Migraciones y Cambios de Residencia 2024 (nota de prensa, 11/12/2025)",
+        "url": "https://ine.es/dyngs/Prensa/EMCR2024.htm?print=1"
+      },
+      {
+        "titulo": "INE (INEbase, tabla 69690): inmigraciones procedentes del extranjero por país de procedencia, 2021-2024",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/69690?nult=4"
+      },
+      {
+        "titulo": "INE (INEbase, tabla 77019): población residente por nacionalidad (agrupación de países), 1/1/2025",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/77019?nult=2"
+      },
+      {
+        "titulo": "Infobae: los datos sobre la nacionalidad de los inmigrantes (13/11/2026)",
+        "url": "https://www.infobae.com/espana/2026/11/13/los-datos-sobre-la-nacionalidad-de-los-inmigrantes-que-han-hecho-trabajar-a-los-verificadores-de-jordi-wild-pedro-sanchez-asegura-que-un-40-son-latinoamericanos/"
+      }
     ]
   },
   {
     "minuto": "0:55:25",
     "cita": "el 25% del crecimiento económico que hemos experimentado durante todo este tiempo trae causa del aporte de la migración",
     "afirmacion": "El 25% del crecimiento económico de España de los últimos años se debe a la aportación de la inmigración.",
-    "veredicto": "mayormente_verdadero",
-    "explicacion": "No hay una cifra oficial única del 25%: el resultado depende de la medida y el periodo. El Banco de España (P. Cuadrado, 2/7/2026) estimó que entre 2022 y 2025 la población inmigrante aportó unos 1,7 puntos al crecimiento medio anual del PIB (3,7%), es decir cerca del 46%, y 0,5 puntos al del PIB per cápita (2,7%), alrededor del 18-19%; su Boletín Económico 2025/T2 daba 0,4-0,7 puntos sobre 2,9% per cápita (14-24%), y BBVA habla de ~40% del PIB per cápita bajo ciertos supuestos. El 25% queda dentro del rango plausible pero no coincide con ninguna de las cifras citadas, y el periodo («todo este tiempo») no está definido.",
-    "confianza": "baja",
+    "veredicto": "no_verificable",
+    "explicacion": "El Banco de España (P. Cuadrado, 2/7/2026; Informe Anual 2025, según El Independiente) estima que en 2022-2025 la inmigración aportó 1,7 puntos al crecimiento medio anual del PIB (3,7%), en torno a la mitad, y 0,5 puntos al del PIB per cápita (2,7%), cerca del 19%; BBVA Research habla de cerca del 40% del PIB per cápita con ciertos supuestos. Ninguna fuente fija el 25%: cae dentro del rango de estimaciones pero no coincide con ninguna y «todo este tiempo» no define periodo. No he podido abrir el documento del Banco de España, solo prensa que lo recoge.",
+    "confianza": "media",
     "fuentes": [
-      {"titulo": "Forbes España: los inmigrantes aportaron 1,7 puntos al PIB entre 2022 y 2025 y 0,5 al PIB per cápita", "url": "https://forbes.es/ultima-hora/970458/los-inmigrantes-aportaron-17-puntos-al-alza-del-pib-espanol-entre-2022-y-2025-y-05-puntos-al-pib-per-capita/"},
-      {"titulo": "Infobae (3/7/2026): La inmigración se consolida como motor del crecimiento económico de España", "url": "https://www.infobae.com/espana/2026/07/03/la-inmigracion-se-consolida-como-motor-del-crecimiento-economico-de-espana-ha-tenido-un-notable-impacto-en-el-aumento-del-pib/"},
-      {"titulo": "Banco de España, Boletín Económico 2025/T2: estimación de la contribución de la población extranjera al crecimiento", "url": "https://www.bde.es/f/webbe/SES/Secciones/Publicaciones/InformesBoletinesRevistas/BoletinEconomico/25/T2/Fich/be2502-art10.pdf"}
+      {
+        "titulo": "Forbes España (Europa Press): los inmigrantes aportaron 1,7 puntos al PIB entre 2022 y 2025 y 0,5 al PIB per cápita (2/7/2026)",
+        "url": "https://forbes.es/ultima-hora/970458/los-inmigrantes-aportaron-17-puntos-al-alza-del-pib-espanol-entre-2022-y-2025-y-05-puntos-al-pib-per-capita/"
+      },
+      {
+        "titulo": "Infobae: la inmigración se consolida como motor del crecimiento económico (3/7/2026)",
+        "url": "https://www.infobae.com/espana/2026/07/03/la-inmigracion-se-consolida-como-motor-del-crecimiento-economico-de-espana-ha-tenido-un-notable-impacto-en-el-aumento-del-pib/"
+      },
+      {
+        "titulo": "El Independiente: España no ha sido el motor económico de Europa, la inmigración explica la mitad del crecimiento (6/7/2026)",
+        "url": "https://www.elindependiente.com/economia/2026/07/06/espana-no-sido-motor-economico-europa-inmigracion-mitad-crecimiento/"
+      }
     ]
   },
   {
@@ -55,11 +100,13 @@
     "cita": "el migrante es de la población que menos utiliza esos servicios públicos",
     "afirmacion": "Los migrantes son de la población que menos utiliza los servicios públicos sanitarios, en parte por ser más jóvenes.",
     "veredicto": "mayormente_verdadero",
-    "explicacion": "El informe del Ministerio de Sanidad (1/6/2026) concluye que la población migrante tiene mejor salud y consume menos recursos sanitarios (p. ej., los nacidos en España consumen ~50-63% más medicamentos y tienen más multimorbilidad), y estudios previos (Gaceta Sanitaria, Murcia 2006-2008) apuntan igual en gasto hospitalario. Matices: acuden menos a atención primaria y consultas, pero más a urgencias y su acceso es más tardío; el informe es del propio Gobierno, no consta ajuste por edad en la nota de prensa y una columna crítica cuestiona su metodología. Sánchez limita su afirmación a sanidad al insistir en la edad; sobre otros servicios (transporte, etc.) no aporta ni se ha comprobado nada.",
-    "confianza": "media",
+    "explicacion": "El informe del Ministerio de Sanidad (1/6/2026) concluye que la población nacida en España tiene mayor prevalencia en 16 de 21 patologías y consume en dosis diarias un 62,7% más de medicamentos que la africana y casi un 50% más que la latinoamericana, lo que respalda que los migrantes usan menos el sistema sanitario. Matices: es un informe del propio Gobierno, no consta ajuste por edad, la salud migrante empeora con los años de estancia y no hay datos sobre otros servicios (transporte, etc.), que Wild planteó y Sánchez no cubre. Solo he podido abrir una fuente válida; la comparación con estudios independientes queda pendiente.",
+    "confianza": "baja",
     "fuentes": [
-      {"titulo": "Ministerio de Sanidad: Los migrantes están más sanos y consumen menos recursos sanitarios que los españoles (1/6/2026)", "url": "https://www.sanidad.gob.es/gabinete/notasPrensa.do?id=6924"},
-      {"titulo": "Gaceta Sanitaria (2009): utilización y costes hospitalarios de inmigrantes y españoles en Murcia", "url": "https://scielosp.org/pdf/gs/2009.v23n3/208-215/es"}
+      {
+        "titulo": "Ministerio de Sanidad: Los migrantes están más sanos y consumen menos recursos sanitarios que los españoles (1/6/2026)",
+        "url": "https://www.sanidad.gob.es/gabinete/notasPrensa.do?id=6924"
+      }
     ]
   },
   {
@@ -67,24 +114,55 @@
     "cita": "del conjunto de la migración de nuestro país, de lo que estamos hablando en cuanto a la migración irregular, probablemente estemos hablando de entre un 5 y un 10% como mucho",
     "afirmacion": "La migración irregular supone entre un 5% y un 10% del conjunto de la migración en España, como mucho.",
     "veredicto": "enganoso",
-    "explicacion": "Funcas estimó 840.000 personas en situación irregular a 1/1/2025 (17,2% de los extranjeros no comunitarios), cifra que equivale a ~8,9% de los 9,46 millones de nacidos fuera (Censo anual 1/1/2025), dentro de su rango. Pero esa estimación es anterior a la regularización: se presentaron 1.174.978 solicitudes (≈12% de esa base) y fuentes policiales citadas por The Objective (27/7/2026) calculan que los irregulares podrían acercarse a 1,5 millones (~16%), aunque esa cifra es discutida y parte de las solicitudes podría ser fraudulenta. Con los datos más recientes, el «como mucho 10%» queda por debajo de varias estimaciones; depende mucho del denominador y de la fecha.",
+    "explicacion": "Funcas estimó 840.000 irregulares a 1/1/2025 (17,2% de los extranjeros no comunitarios): es el 8,9% de los 9,46 millones de nacidos fuera (Censo anual) pero el 12% de los 6,91 millones de extranjeros (INE, 1/1/2025). Tras la regularización se presentaron 1.174.978 solicitudes (79,6% por arraigo y 20,4% de protección internacional), cerca del 12% de los 10,0 millones de nacidos fuera a 1/1/2026 (INE), y fuentes policiales anónimas hablan de hasta 1,5 millones. El «5-10% como mucho» solo se sostiene con el denominador y la estimación más favorables.",
     "confianza": "media",
     "fuentes": [
-      {"titulo": "Infobae (27/1/2026): 840.000 migrantes en situación irregular, estimación de Funcas", "url": "https://www.infobae.com/espana/2026/01/27/la-mayoria-de-los-840000-migrantes-en-situacion-irregular-en-espana-son-latinoamericanos-con-colombia-peru-y-honduras-a-la-cabeza/"},
-      {"titulo": "The Objective (27/7/2026): La Policía cifra en 1,5 millones los inmigrantes irregulares", "url": "https://theobjective.com/espana/2026-07-27/policia-cifra-15-millones-inmigrantes-irregulares-espana-efecto-llamada/"},
-      {"titulo": "Los datos sobre la nacionalidad de los inmigrantes (Infobae, 13/11/2026; Censo anual 1/1/2025: 9.464.210 nacidos fuera)", "url": "https://www.infobae.com/espana/2026/11/13/los-datos-sobre-la-nacionalidad-de-los-inmigrantes-que-han-hecho-trabajar-a-los-verificadores-de-jordi-wild-pedro-sanchez-asegura-que-un-40-son-latinoamericanos/"}
+      {
+        "titulo": "Infobae: 840.000 migrantes en situación irregular, estimación de Funcas a 1/1/2025 (27/1/2026)",
+        "url": "https://www.infobae.com/espana/2026/01/27/la-mayoria-de-los-840000-migrantes-en-situacion-irregular-en-espana-son-latinoamericanos-con-colombia-peru-y-honduras-a-la-cabeza/"
+      },
+      {
+        "titulo": "INE: Estadística Continua de Población a 1/1/2026 (10.004.581 nacidos fuera; 7.243.561 extranjeros)",
+        "url": "https://www.ine.es/dyngs/Prensa/ECP4T25.htm?print=1"
+      },
+      {
+        "titulo": "INE (INEbase, tabla 77019): población residente por nacionalidad, 1/1/2025",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/77019?nult=2"
+      },
+      {
+        "titulo": "Ministerio de Inclusión: 1.174.978 solicitudes de regularización (79,6% arraigo; 20,4% protección internacional)",
+        "url": "https://www.inclusion.gob.es/w/el-plazo-de-presentacion-de-solicitud-para-la-regularizacion-extraordinaria-concluye-con-1.174.978-solicitudes-recibidas"
+      },
+      {
+        "titulo": "Infobae: datos sobre la nacionalidad de los inmigrantes (Censo anual 1/1/2025: 9.464.210 nacidos fuera) (13/11/2026)",
+        "url": "https://www.infobae.com/espana/2026/11/13/los-datos-sobre-la-nacionalidad-de-los-inmigrantes-que-han-hecho-trabajar-a-los-verificadores-de-jordi-wild-pedro-sanchez-asegura-que-un-40-son-latinoamericanos/"
+      },
+      {
+        "titulo": "The Objective: La Policía cifra en 1,5 millones los inmigrantes irregulares (27/7/2026; fuentes policiales anónimas)",
+        "url": "https://theobjective.com/espana/2026-07-27/policia-cifra-15-millones-inmigrantes-irregulares-espana-efecto-llamada/"
+      }
     ]
   },
   {
     "minuto": "0:59:45",
     "cita": "muchas veces la gente piensa que el migrante te llega con un cayuco, como estamos viendo, por ejemplo, ahora en la Isla del Hierro. Claro, muchos vienen en avión y en coche.",
-    "afirmacion": "La mayoría de los migrantes irregulares no llegan en cayuco sino por vía aérea (con visados que luego caducan) o terrestre.",
-    "veredicto": "mayormente_verdadero",
-    "explicacion": "Fuentes policiales citadas por The Objective (27/7/2026) sitúan en un 60-65% las llegadas irregulares por aeropuertos, con visados de turista o corta estancia que se quedan tras caducar, mientras que Interior solo contabiliza como irregulares las entradas marítimas y terrestres (que cayeron un 42% en 2025). Además, Funcas calcula que ~90% de los irregulares son latinoamericanos, colectivo que llega por aire. Son estimaciones policiales no publicadas oficialmente, de ahí la confianza media.",
+    "afirmacion": "Muchos migrantes no llegan a España en cayuco sino en avión y en coche.",
+    "veredicto": "verdadero",
+    "explicacion": "El INE registró 1.288.562 llegadas desde el extranjero en 2024, mientras que las llegadas irregulares por mar y tierra fueron 64.318 en 2024 y 36.775 en 2025 (ACNUR, a partir de datos de Interior), es decir, en torno al 5% y por debajo; la gran mayoría entra por vías regulares. Para los irregulares, fuentes policiales anónimas citadas por The Objective (27/7/2026) sitúan en un 60-65% las entradas por aeropuerto con visados que luego caducan, dato no oficial. Sánchez dice «muchos», no «la mayoría de los irregulares», que es lo que decía la afirmación original.",
     "confianza": "media",
     "fuentes": [
-      {"titulo": "The Objective (27/7/2026): La Policía cifra en 1,5 millones los inmigrantes irregulares en España", "url": "https://theobjective.com/espana/2026-07-27/policia-cifra-15-millones-inmigrantes-irregulares-espana-efecto-llamada/"},
-      {"titulo": "Infobae (27/1/2026): migrantes irregulares, datos Funcas", "url": "https://www.infobae.com/espana/2026/01/27/la-mayoria-de-los-840000-migrantes-en-situacion-irregular-en-espana-son-latinoamericanos-con-colombia-peru-y-honduras-a-la-cabeza/"}
+      {
+        "titulo": "INE: Estadística de Migraciones y Cambios de Residencia 2024 (nota de prensa, 11/12/2025)",
+        "url": "https://ine.es/dyngs/Prensa/EMCR2024.htm?print=1"
+      },
+      {
+        "titulo": "ACNUR: Europe Sea Arrivals, llegadas irregulares a España por mar y tierra 2024-2025",
+        "url": "http://data.unhcr.org/en/situations/europe-sea-arrivals/location/24567"
+      },
+      {
+        "titulo": "The Objective: La Policía cifra en 1,5 millones los inmigrantes irregulares (27/7/2026; fuentes policiales anónimas)",
+        "url": "https://theobjective.com/espana/2026-07-27/policia-cifra-15-millones-inmigrantes-irregulares-espana-efecto-llamada/"
+      }
     ]
   },
   {
@@ -92,10 +170,13 @@
     "cita": "Y no te vienen, Jordi, por cierto, por barajas, te vienen por otros aeropuertos europeos.",
     "afirmacion": "Los migrantes irregulares que llegan en avión no entran por Barajas sino por otros aeropuertos europeos.",
     "veredicto": "no_verificable",
-    "explicacion": "Las fuentes policiales localizadas hablan de que el 60-65% de las llegadas irregulares es por aeropuertos, pero no desglosan por aeropuerto ni por país de entrada al espacio Schengen. No he encontrado datos que confirmen o desmientan que la entrada se haga mayoritariamente por otros aeropuertos europeos y no por Barajas.",
+    "explicacion": "Las fuentes policiales citadas por The Objective (27/7/2026) hablan de que el 60-65% de las llegadas irregulares es por aeropuerto, pero no desglosan por aeropuerto ni por país de entrada al espacio Schengen. No he encontrado datos oficiales que confirmen o desmientan que la entrada se haga mayoritariamente por otros aeropuertos europeos y no por Barajas, y no ha sido posible ampliar la búsqueda en esta auditoría.",
     "confianza": "baja",
     "fuentes": [
-      {"titulo": "The Objective (27/7/2026): La Policía cifra en 1,5 millones los inmigrantes irregulares en España", "url": "https://theobjective.com/espana/2026-07-27/policia-cifra-15-millones-inmigrantes-irregulares-espana-efecto-llamada/"}
+      {
+        "titulo": "The Objective: La Policía cifra en 1,5 millones los inmigrantes irregulares (27/7/2026; sin desglose por aeropuerto)",
+        "url": "https://theobjective.com/espana/2026-07-27/policia-cifra-15-millones-inmigrantes-irregulares-espana-efecto-llamada/"
+      }
     ]
   },
   {
@@ -103,12 +184,21 @@
     "cita": "nosotros lo que hemos hecho ha sido pasar de cinco semanas los permisos de paternidad y maternidad,",
     "afirmacion": "El permiso de paternidad ha pasado de cinco semanas a 19 semanas, equiparado al de maternidad.",
     "veredicto": "verdadero",
-    "explicacion": "El permiso de paternidad era de 5 semanas desde el 5 de julio de 2018, subió a 8 (2019), 12 (2020) y 16 semanas equiparadas (1/1/2021), y el Real Decreto-ley 9/2025 (convalidado el 9/9/2025) lo amplió a 19 semanas por progenitor (17 de nacimiento y cuidado más 2 retribuidas de cuidado flexibles hasta los 8 años), exigibles desde 2026 y con efectos desde el 2/8/2024. Matiz: las dos últimas semanas son un permiso de cuidado flexible, no de disfrute inmediato tras el parto.",
+    "explicacion": "El permiso de paternidad era de 5 semanas desde julio de 2018 (frente a 16 de la madre), subió a 8 (2019), 12 (2020) y 16 semanas equiparadas el 1/1/2021, y el Real Decreto-ley 9/2025 (convalidado el 9/9/2025) lo amplió a 19 semanas por progenitor (17 de nacimiento y 2 retribuidas de cuidado flexibles hasta los 8 años), con efectos desde el 2/8/2024. Matiz: la maternidad ya era de 16 semanas, y las dos últimas semanas son de cuidado flexible, no de disfrute inmediato tras el parto.",
     "confianza": "alta",
     "fuentes": [
-      {"titulo": "Ministerio de Derechos Sociales y Agenda 2030: el Congreso aprueba la ampliación de los permisos por nacimiento y cuidados a 19 semanas", "url": "https://www.dsca.gob.es/es/comunicacion/notas-prensa/congreso-aprueba-ampliacion-del-gobierno-permisos-nacimiento-cuidados"},
-      {"titulo": "El permiso de paternidad será de 8 semanas en 2019 y llegará a las 16 en 2021 (Diari de Tarragona)", "url": "https://www.diaridetarragona.com/internacional/102057/el-permiso-de-paternidad-sera-de-8-semanas-en-2019-y-llegara-a-las-16-en-2021-20181011-0038-jrdt201810110038.html"},
-      {"titulo": "Seguridad Social: el permiso por nacimiento será de 16 semanas para ambos progenitores", "url": "https://revista.seg-social.es/-/el-permiso-por-nacimiento-y-cuidado-de-menor-ser%C3%A1-de-16-semanas-para-ambos-progenitores-a-partir-de-enero"}
+      {
+        "titulo": "Ministerio de Derechos Sociales y Agenda 2030: el Congreso aprueba la ampliación de los permisos por nacimiento y cuidados a 19 semanas",
+        "url": "https://www.dsca.gob.es/es/comunicacion/notas-prensa/congreso-aprueba-ampliacion-del-gobierno-permisos-nacimiento-cuidados"
+      },
+      {
+        "titulo": "Seguridad Social: el permiso por nacimiento será de 16 semanas para ambos progenitores (23/12/2020)",
+        "url": "https://revista.seg-social.es/-/el-permiso-por-nacimiento-y-cuidado-de-menor-ser%C3%A1-de-16-semanas-para-ambos-progenitores-a-partir-de-enero"
+      },
+      {
+        "titulo": "Diari de Tarragona (EFE): el permiso de paternidad será de 8 semanas en 2019 y llegará a las 16 en 2021 (11/10/2018)",
+        "url": "https://www.diaridetarragona.com/internacional/102057/el-permiso-de-paternidad-sera-de-8-semanas-en-2019-y-llegara-a-las-16-en-2021-20181011-0038-jrdt201810110038.html"
+      }
     ]
   },
   {
@@ -116,10 +206,13 @@
     "cita": "A 19 semanas, que son 100 días.",
     "afirmacion": "19 semanas equivalen a 100 días.",
     "veredicto": "falso",
-    "explicacion": "19 semanas son 133 días (19 x 7); 100 días son unas 14 semanas. Es un error de cálculo oral, sin consecuencia para la medida, que son 19 semanas retribuidas por progenitor.",
-    "confianza": "alta",
+    "explicacion": "19 semanas son 133 días naturales (19 x 7), no 100; solo serían unos 95 días laborables (19 x 5). El permiso de 19 semanas por progenitor sí está confirmado (Ministerio de Derechos Sociales, RDL 9/2025 convalidado el 9/9/2025), de modo que es un error de cálculo oral que no afecta a la medida. La confianza es media porque podría haber querido decir días laborables, aunque no lo dijo.",
+    "confianza": "media",
     "fuentes": [
-      {"titulo": "Congreso aprueba la ampliación de los permisos por nacimiento y cuidados a 19 semanas", "url": "https://www.dsca.gob.es/es/comunicacion/notas-prensa/congreso-aprueba-ampliacion-del-gobierno-permisos-nacimiento-cuidados"}
+      {
+        "titulo": "Ministerio de Derechos Sociales y Agenda 2030: el Congreso aprueba la ampliación de los permisos por nacimiento y cuidados a 19 semanas",
+        "url": "https://www.dsca.gob.es/es/comunicacion/notas-prensa/congreso-aprueba-ampliacion-del-gobierno-permisos-nacimiento-cuidados"
+      }
     ]
   },
   {
@@ -127,12 +220,17 @@
     "cita": "Si nosotros no aumentamos la población migrante de nuestro país, lo que va a suceder de aquí a 20-30 años es lo siguiente, Jordi. Lo que va a suceder es que vamos a tener una fuerza laboral muy semejante a la que teníamos en 1980-1990",
     "afirmacion": "Sin más inmigración, dentro de 20-30 años la fuerza laboral de España sería similar a la que había en 1980-1990.",
     "veredicto": "no_verificable",
-    "explicacion": "Es una proyección contrafactual. No he encontrado un escenario oficial (INE, AIReF, Banco de España) de inmigración cero que dé ese resultado: AIReF prevé que la población en edad de trabajar empiece a caer desde 2029 aunque haya inmigración, el INE (con migración) la sitúa en 31,6 millones en 2050 y un informe de Futuros del Gobierno (marzo de 2026) estima ~24 millones de 16-64 años con baja inmigración. La población activa actual es de 25,3 millones (EPA 2T 2026), muy por encima de la de 1980-1990 (cifra no comprobada en esta búsqueda), por lo que un retorno a esos niveles no se sigue de las proyecciones consultadas, aunque la dirección (menor fuerza laboral sin inmigración) sí.",
-    "confianza": "baja",
+    "explicacion": "El escenario especial del INE de saldo migratorio nulo (Proyecciones 2024-2074, 24/6/2024) daría una población de 48,6 millones en 2024, 44,4 millones en 2045 y 42,8 millones en 2050, frente a 54,9 millones en el escenario central: sin inmigración, menos población y fuerza laboral, como dice Sánchez en dirección. Pero ese escenario no publica la población activa, y la actual es de 25,4 millones (EPA 3T 2026); no he podido comprobar que cayera al nivel de 1980-1990, por lo que la cifra concreta no se sostiene con las fuentes abiertas.",
+    "confianza": "media",
     "fuentes": [
-      {"titulo": "Futuros (Gobierno de España): España ante el reto migratorio, dos futuros posibles (marzo 2026)", "url": "https://futuros.gob.es/sites/default/files/2026-03/Espa%C3%B1a_ante_el_reto_migratorio_dos_futuros_posibles.pdf"},
-      {"titulo": "MITECO: proyecciones demográficas INE y AIReF", "url": "https://www.miteco.gob.es/content/dam/miteco/es/reto-demografico/temas/documentos-interes/proyeccionesdemograficas_ine_airef_tcm30-517794.pdf"},
-      {"titulo": "Randstad: España perderá 2,6 millones de trabajadores en 25 años", "url": "https://www.randstad.es/nosotros/sala-prensa/espana-perdera-trabajadores-por-envejecimiento-poblacion/"}
+      {
+        "titulo": "INE: Proyecciones de Población 2024-2074 (nota de prensa, 24/6/2024), escenario de saldo migratorio nulo",
+        "url": "https://www.ine.es/dyngs/Prensa/PROP20242074.htm"
+      },
+      {
+        "titulo": "INE: Encuesta de Población Activa, tercer trimestre 2026 (27/10/2026)",
+        "url": "https://www.ine.es/dyngs/Prensa/EPA3T26.htm"
+      }
     ]
   },
   {
@@ -140,24 +238,26 @@
     "cita": "yo vengo de una comunidad de Madrid. Yo cuando tenía, bueno, tengo 54 años, imagínate, 15, 16 años, el delegado del gobierno de entonces dijo, quien quiera seguridad que se la pague.",
     "afirmacion": "Cuando Sánchez tenía 15-16 años (hacia 1987-1988), el delegado del Gobierno en Madrid dijo «quien quiera seguridad, que se la pague».",
     "veredicto": "no_verificable",
-    "explicacion": "No he encontrado ninguna hemeroteca que fije la frase en 1987-1988. Las únicas referencias localizadas (una columna de opinión de 2011 y una web de partido) atribuyen la frase a Francisco Javier Ansuátegui, delegado del Gobierno en Madrid durante los gobiernos de Aznar (PP, 1996-2004), a raíz de la protección policial a Esperanza Aguirre; no aportan fecha ni cita original. Como en 1987-1988 gobernaba el PSOE de Felipe González, si Sánchez se refiere a esa etapa el dato no encajaría con lo localizado, pero la evidencia es débil y no permite afirmar que sea falso.",
+    "explicacion": "No he encontrado hemeroteca ni fuente fidedigna que sitúe la frase «quien quiera seguridad que se la pague» en la época en que Sánchez tenía 15-16 años (1987-1988). La única referencia localizada es un blog de opinión de 2011 que la atribuye a Francisco Javier Ansuátegui, delegado del Gobierno en Madrid con Aznar (años noventa y 2000), sin fecha ni cita original; esa fuente no es válida y no permite confirmar ni desmentir a Sánchez. No ha sido posible ampliar la búsqueda en esta auditoría.",
     "confianza": "baja",
-    "fuentes": [
-      {"titulo": "El Librepensador (29/11/2011): Quien quiera seguridad que se la pague", "url": "https://ellibrepensador.com/2011/11/29/quien-quiera-seguridad-que-se-la-pague"},
-      {"titulo": "PSOE Alhaurín de la Torre: Seguridad ciudadana, visión progresista vs visión liberal", "url": "https://www.psoealhaurindelatorre.com/seguridad-ciudadana/"}
-    ]
+    "fuentes": []
   },
   {
     "minuto": "1:04:18",
     "cita": "durante los años de Mariano Rajoy se recortaron las fuerzas y cuerpos de seguridad del Estado en 15.000 efectivos",
     "afirmacion": "Durante los gobiernos de Rajoy se recortaron las Fuerzas y Cuerpos de Seguridad del Estado en 15.000 efectivos.",
     "veredicto": "mayormente_verdadero",
-    "explicacion": "El Ministerio del Interior habla de recuperar los 13.077 efectivos perdidos entre 2011 y 2017, y una respuesta parlamentaria cita más de 13.000 entre 2012 y 2018; la AUGC rebaja la cifra a 11.339 y una estimación de Hacienda de la época hablaba de ~8.000. Sánchez redondea al alza (15.000 frente a ~13.000 oficiales), pero el orden de magnitud y la tendencia son correctos.",
+    "explicacion": "El Ministerio del Interior habla de recuperar los 13.077 efectivos perdidos entre 2011 y 2017 (nota de EFE, 15/4/2025); el sindicato AUGC, con respuestas parlamentarias, cifra la pérdida en 11.339 durante el Gobierno de Rajoy. Sánchez redondea al alza (15.000 frente a unos 13.000 oficiales), pero el orden de magnitud y la tendencia son correctos. La cifra de Interior la cito a través de EFE, no de su web.",
     "confianza": "media",
     "fuentes": [
-      {"titulo": "Infobae/Europa Press (15/4/2025): Interior convoca 6.032 nuevas plazas (13.077 efectivos perdidos 2011-2017)", "url": "https://www.infobae.com/espana/agencias/2025/04/15/interior-convoca-6032-nuevas-plazas-de-policia-nacional-y-guardia-civil-para-2025/"},
-      {"titulo": "AUGC: Marlaska reduce casi tres veces más el déficit de la plantilla de la Policía Nacional que el de la Guardia Civil (11.339 perdidos)", "url": "https://augc.org/article/noticias/fernando-grande-marlaska-reduce-casi-tres-veces-mas-el-deficit-de-la-plantilla-de-la-policia-nacional-que-el-de-la-guardia-civil"},
-      {"titulo": "COPE: Moreno (PSRM) recuerda que Rajoy recortó más de 13.000 efectivos", "url": "https://www.cope.es/actualidad/espana/noticias/moreno-psrm-recuerda-que-fue-rajoy-quien-recorto-mas-13000-efectivos-policia-nacional-guardia-civil-20240216_3150071"}
+      {
+        "titulo": "Infobae/EFE: Interior convoca 6.032 plazas de Policía Nacional y Guardia Civil para 2025; recuperar los 13.077 efectivos perdidos entre 2011 y 2017 (15/4/2025)",
+        "url": "https://www.infobae.com/espana/agencias/2025/04/15/interior-convoca-6032-nuevas-plazas-de-policia-nacional-y-guardia-civil-para-2025/"
+      },
+      {
+        "titulo": "AUGC: Marlaska reduce casi tres veces más el déficit de la Policía Nacional que el de la Guardia Civil (11.339 perdidos, 17/8/2022)",
+        "url": "https://augc.org/article/noticias/fernando-grande-marlaska-reduce-casi-tres-veces-mas-el-deficit-de-la-plantilla-de-la-policia-nacional-que-el-de-la-guardia-civil"
+      }
     ]
   },
   {
@@ -165,12 +265,21 @@
     "cita": "hoy hay 180.000 efectivos",
     "afirmacion": "Hoy hay 180.000 efectivos de Policía Nacional y Guardia Civil.",
     "veredicto": "no_verificable",
-    "explicacion": "Hay datos oficiales contradictorios: Infobae (10/3/2026) cita 183.150 agentes en activo entre ambos cuerpos, pero Interior informó en diciembre de 2024 de un máximo histórico de 156.463 y en octubre de 2026 se habla de casi 85.000 guardias civiles, cifras difíciles de reconciliar con 180.000 (un salto de ~26.000 en año y medio no consta). Sin la serie oficial de plantilla (Anuario de Interior) no puedo confirmar si 180.000 incluye otros colectivos o es una cifra de plantilla/previsión.",
+    "explicacion": "Una nota de Infobae (10/3/2026) cita 183.150 agentes en activo entre Policía Nacional y Guardia Civil, cifra compatible con los 180.000 de Sánchez, pero Interior informó en diciembre de 2024 de un máximo histórico de 156.463 agentes (EFE, 15/4/2025) y en octubre de 2026 habla de casi 85.000 guardias civiles. Esas cifras no se reconcilian (un salto de unos 27.000 en 15 meses no consta) y sin la serie oficial de plantillas no puedo saber si 180.000 incluye otros colectivos. La web de Interior no se pudo abrir.",
     "confianza": "baja",
     "fuentes": [
-      {"titulo": "Infobae (10/3/2026): la mayor oferta en 15 años del Ministerio del Interior (183.150 agentes en activo)", "url": "https://www.infobae.com/espana/2026/03/10/la-mayor-oferta-en-15-anos-del-ministerio-del-interior-se-convocan-3240-plazas-para-la-guardia-civil-y-2854-para-policia-nacional-en-2026/"},
-      {"titulo": "Infobae/Europa Press (15/4/2025): Interior convoca 6.032 nuevas plazas (156.463 agentes en dic. 2024)", "url": "https://www.infobae.com/espana/agencias/2025/04/15/interior-convoca-6032-nuevas-plazas-de-policia-nacional-y-guardia-civil-para-2025/"},
-      {"titulo": "Infobae (4/10/2026): Marlaska destaca la labor de la Guardia Civil", "url": "https://www.infobae.com/espana/agencias/2026/10/04/marlaska-destaca-la-labor-de-la-guardia-civil-frente-al-narcotrafico-y-el-reto-migratorio/"}
+      {
+        "titulo": "Infobae: la mayor oferta en 15 años del Ministerio del Interior (183.150 agentes en activo, 10/3/2026)",
+        "url": "https://www.infobae.com/espana/2026/03/10/la-mayor-oferta-en-15-anos-del-ministerio-del-interior-se-convocan-3240-plazas-para-la-guardia-civil-y-2854-para-policia-nacional-en-2026/"
+      },
+      {
+        "titulo": "Infobae/EFE: Interior convoca 6.032 plazas para 2025 (156.463 agentes en diciembre de 2024, 15/4/2025)",
+        "url": "https://www.infobae.com/espana/agencias/2025/04/15/interior-convoca-6032-nuevas-plazas-de-policia-nacional-y-guardia-civil-para-2025/"
+      },
+      {
+        "titulo": "Infobae/Europa Press: Marlaska destaca la labor de la Guardia Civil (casi 85.000 efectivos, 4/10/2026)",
+        "url": "https://www.infobae.com/espana/agencias/2026/10/04/marlaska-destaca-la-labor-de-la-guardia-civil-frente-al-narcotrafico-y-el-reto-migratorio/"
+      }
     ]
   },
   {
@@ -178,11 +287,21 @@
     "cita": "si nos comparamos con países como Alemania, Francia, Finlandia, Suecia, tenemos unos índices de criminalidad bastante bajos",
     "afirmacion": "España tiene índices de criminalidad bastante más bajos que Alemania, Francia, Finlandia y Suecia.",
     "veredicto": "mayormente_verdadero",
-    "explicacion": "Interior sitúa la tasa de criminalidad convencional de España en 40,4 delitos por mil habitantes en 2025, en la banda más baja de su serie histórica. En comparación europea, El Orden Mundial (con datos de Interior y Eurostat) da una criminalidad total de 5,13 por 100 habitantes en España (2023) frente a 6,1 en Alemania (2022) y una tasa de homicidios de 0,62 por 100.000 (2022), cuarta más baja de la región. No he podido contrastar en esta búsqueda los datos de Francia, Finlandia y Suecia, y las estadísticas policiales no son homogéneas entre países (además, en robos España superaba en 2020 a Alemania y Suecia según otras fuentes no verificadas aquí), por lo que la comparación es indicativa.",
-    "confianza": "baja",
+    "explicacion": "Eurostat (delitos registrados por la policía, por 100.000 habitantes, 2024) da a España el menor índice en homicidio intencional (0,72 frente a 0,83 Alemania, 0,87 Suecia, 1,28 Francia, 1,78 Finlandia), en violencia sexual (40 frente a 65, 141, 142 y 201) y en hurtos (451 frente a 1.377-2.510); en robo con fuerza (293) queda por debajo de Alemania, Francia y Suecia pero por encima de Finlandia (111), y en robo con violencia (130) supera a los cuatro (45-83). Las estadísticas policiales no son homogéneas entre países, así que la comparación es indicativa: en conjunto España queda mejor, con la excepción del robo con violencia.",
+    "confianza": "media",
     "fuentes": [
-      {"titulo": "Ministerio del Interior: Balance de Criminalidad, enero a diciembre de 2025", "url": "https://www.interior.gob.es/opencms/export/sites/default/.galleries/galeria-de-prensa/documentos-y-multimedia/balances-e-informes/2025/Balance-de-Criminalidad_Cuarto_Trimestre_2025.pdf"},
-      {"titulo": "El Orden Mundial: Datos contra la alarma del crimen en España, uno de los países más seguros", "url": "https://elordenmundial.com/mapas-y-graficos/seguridad-espana-crimen/"}
+      {
+        "titulo": "Eurostat: delitos registrados por la policía por categoría ICCS, por 100.000 habitantes (homicidio, violencia sexual, robo con violencia, robo con fuerza), 2022-2024",
+        "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/crim_off_cat?format=JSON&lang=EN&unit=P_HTHAB&geo=ES&geo=DE&geo=FR&geo=FI&geo=SE&time=2022&time=2023&time=2024&iccs=ICCS0101&iccs=ICCS0401&iccs=ICCS0501&iccs=ICCS0301"
+      },
+      {
+        "titulo": "Eurostat: delitos registrados por la policía, hurtos (ICCS0502), por 100.000 habitantes, 2024",
+        "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/crim_off_cat?format=JSON&lang=EN&unit=P_HTHAB&geo=ES&geo=DE&geo=FR&geo=FI&geo=SE&time=2024&iccs=ICCS0502"
+      },
+      {
+        "titulo": "El Orden Mundial: Datos contra la alarma del crimen en España, uno de los países más seguros",
+        "url": "https://elordenmundial.com/mapas-y-graficos/seguridad-espana-crimen/"
+      }
     ]
   },
   {
@@ -190,11 +309,17 @@
     "cita": "Los índices de criminalidad, pese a haber aumentado, como hemos aumentado la contribución de la migración",
     "afirmacion": "Los índices de criminalidad en España han aumentado en los últimos años, en paralelo al aumento de la inmigración.",
     "veredicto": "mayormente_verdadero",
-    "explicacion": "El Balance de Criminalidad de Interior de 2025 muestra 2.474.156 infracciones penales (+0,8% sobre 2024) por el alza de la cibercriminalidad (+5,3%), mientras que la criminalidad convencional bajó un 0,2% y su tasa (40,4 por mil) está en la banda más baja de la serie histórica; en el primer trimestre de 2026 la convencional subió un 1,0%. Algunos delitos graves suben (homicidios consumados +7,7% en 2025, lesiones +7,2%) y otros bajan (robos con fuerza -9,1%, hurtos -2,3%). Por tanto, el aumento es real pero se debe al ciberdelito y a ciertos delitos violentos, no a una subida de la tasa convencional; el balance no desglosa por nacionalidad, así que no prueba relación con la inmigración.",
+    "explicacion": "El Balance de Criminalidad de Interior de 2025 registra 2.474.156 infracciones penales (+0,8% sobre 2024) por la cibercriminalidad (+5,3%), mientras que la convencional bajó un 0,2% y su tasa (40,4 por mil) está en la banda más baja de la serie histórica; en el primer trimestre de 2026 el total subió un 1,0%. Algunos delitos graves suben (homicidios +7,7%, lesiones +7,2%) y otros bajan (robos con fuerza -9,1%, hurtos -2,3%). El aumento es real pero se debe sobre todo al ciberdelito y a ciertos delitos violentos; el balance no desglosa por nacionalidad, así que no prueba relación con la inmigración.",
     "confianza": "media",
     "fuentes": [
-      {"titulo": "Ministerio del Interior: Balance de Criminalidad, enero a diciembre de 2025", "url": "https://www.interior.gob.es/opencms/export/sites/default/.galleries/galeria-de-prensa/documentos-y-multimedia/balances-e-informes/2025/Balance-de-Criminalidad_Cuarto_Trimestre_2025.pdf"},
-      {"titulo": "Infobae (4/6/2026): La criminalidad sube en España con un aumento de homicidios (+10%) (1T 2026)", "url": "https://www.infobae.com/america/agencias/2026/06/04/la-criminalidad-sube-en-espana-con-un-aumento-de-homicidios-10-y-agresiones-sexuales-con-penetracion-38/"}
+      {
+        "titulo": "Ministerio del Interior: Balance de Criminalidad, enero a diciembre de 2025 (portal estadístico de criminalidad)",
+        "url": "https://estadisticasdecriminalidad.ses.mir.es/publico/portalestadistico/dam/jcr:7d3776cd-9ca4-4c02-8ca4-96b2571dbee4/Balance%20de%20Criminalidad%20Cuarto%20Trimestre%202025.pdf"
+      },
+      {
+        "titulo": "Infobae/Europa Press: La criminalidad sube en España con un aumento de homicidios (balance del primer trimestre de 2026, 4/6/2026)",
+        "url": "https://www.infobae.com/america/agencias/2026/06/04/la-criminalidad-sube-en-espana-con-un-aumento-de-homicidios-10-y-agresiones-sexuales-con-penetracion-38/"
+      }
     ]
   },
   {
@@ -202,12 +327,21 @@
     "cita": "Nosotros en el plan de regularización que hemos hecho, que más o menos es un millón doscientas mil personas… Y terminamos con esta aportación y vamos a otra cosita, ¿vale? No, pero 1.200.000 personas",
     "afirmacion": "El plan de regularización afecta a más o menos 1.200.000 personas.",
     "veredicto": "mayormente_verdadero",
-    "explicacion": "El Ministerio de Inclusión cerró el plazo con 1.174.978 solicitudes recibidas (el decreto estimaba inicialmente en torno a 500.000 beneficiarios). Son solicitudes, no regularizaciones concedidas: en julio solo había unas 12.000 resoluciones definitivas notificadas y no he hallado un balance posterior de concesiones y denegaciones; además, fuentes policiales cuestionan que unas 400.000 solicitudes sean de personas que nunca residieron en España.",
+    "explicacion": "El Ministerio de Inclusión cerró el plazo (30/6/2026) con 1.174.978 solicitudes registradas, 79,6% por arraigo extraordinario y 20,4% de protección internacional; Sánchez habla de 1.200.000. Son solicitudes, no regularizaciones concedidas: a 2 de julio había 609.737 tramitadas y unas 12.000 resoluciones definitivas notificadas (The Objective, 8/7/2026), y especialistas de la Policía Nacional estiman, según El Español, que unos 400.000 solicitantes no residían en España antes del 31/12/2025 (fuentes anónimas, no confirmadas).",
     "confianza": "media",
     "fuentes": [
-      {"titulo": "La Moncloa (Inclusión): el plazo concluye con 1.174.978 solicitudes recibidas", "url": "https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/inclusion/paginas/2026/020726-balance-regularizacion-extraordinaria.aspx"},
-      {"titulo": "Resueltas ya unas 12.000 solicitudes de regularización extraordinaria (The Objective, 8/7/2026)", "url": "https://theobjective.com/espana/2026-07-08/resueltas-12-000-solicitudes-regularizacion-extraordinaria/"},
-      {"titulo": "The Objective (27/7/2026): La Policía cifra en 1,5 millones los inmigrantes irregulares", "url": "https://theobjective.com/espana/2026-07-27/policia-cifra-15-millones-inmigrantes-irregulares-espana-efecto-llamada/"}
+      {
+        "titulo": "Ministerio de Inclusión: el plazo de presentación para la Regularización Extraordinaria concluye con 1.174.978 solicitudes recibidas (2/7/2026)",
+        "url": "https://www.inclusion.gob.es/w/el-plazo-de-presentacion-de-solicitud-para-la-regularizacion-extraordinaria-concluye-con-1.174.978-solicitudes-recibidas"
+      },
+      {
+        "titulo": "The Objective: Resueltas ya unas 12.000 solicitudes de regularización extraordinaria (8/7/2026)",
+        "url": "https://theobjective.com/espana/2026-07-08/resueltas-12-000-solicitudes-regularizacion-extraordinaria/"
+      },
+      {
+        "titulo": "El Español: la Policía calcula que unos 400.000 migrantes no estaban en España y se colaron en la regularización (1/7/2026)",
+        "url": "https://www.elespanol.com/espana/20260701/policia-calcula-migrantes-no-espana-colado-regularizacion-sanchez/1003744305705_0.html"
+      }
     ]
   },
   {
@@ -215,25 +349,35 @@
     "cita": "medio millón de ellas ya está trabajando y cotizando en la seguridad social",
     "afirmacion": "Medio millón de personas de la regularización ya trabajan y cotizan en la Seguridad Social.",
     "veredicto": "verdadero",
-    "explicacion": "Según el Ministerio de Inclusión, Seguridad Social y Migraciones, a 31 de octubre de 2026 había 490.586 afiliados en alta procedentes de la regularización extraordinaria, y 557.410 habían estado al menos un día de alta desde abril. La progresión oficial fue 262.475 (julio), 337.917 (agosto) y 421.306 (septiembre). «Medio millón» es un redondeo razonable.",
+    "explicacion": "Según la Seguridad Social (13/11/2026), a finales de octubre de 2026 había 490.586 afiliados en alta relacionados con el proceso de regularización, y 557.410 habían estado al menos un día en alta desde abril. «Medio millón» es un redondeo razonable de 490.586. Los datos miden altas en la Seguridad Social, no resoluciones favorables.",
     "confianza": "alta",
     "fuentes": [
-      {"titulo": "Infomigrante (13/11/2026): Sánchez defiende la regularización: 500.000 personas ya cotizan (datos del Ministerio)", "url": "https://infomigrante.es/2026/11/13/sanchez-regularizacion-500000-trabajando-cotizando/"},
-      {"titulo": "The Objective (4/8/2026): La regularización extraordinaria sumó 262.475 afiliados hasta julio", "url": "https://theobjective.com/economia/2026-08-04/regularizacion-extraordinaria-262-475-afiliados/"},
-      {"titulo": "The Objective (2/10/2026): Saiz celebra el mejor septiembre de la afiliación", "url": "https://theobjective.com/espana/politica/2026-10-02/saiz-afiliacion-papel-regularizacion/"}
+      {
+        "titulo": "Seguridad Social: La Seguridad Social registra cerca de 3.700.000 afiliados extranjeros, casi 600.000 más que hace un año (13/11/2026)",
+        "url": "https://revista.seg-social.es/-/afiliacion-extranjeros-octubre-2026"
+      },
+      {
+        "titulo": "Infomigrante: Sánchez defiende la regularización, 500.000 personas ya cotizan (13/11/2026)",
+        "url": "https://infomigrante.es/2026/11/13/sanchez-regularizacion-500000-trabajando-cotizando/"
+      }
     ]
   },
   {
     "minuto": "1:05:19",
     "cita": "la tasa de paro de los nacionales durante estos años ha bajado",
     "afirmacion": "La tasa de paro de los españoles (nacionales) ha bajado durante los últimos años.",
-    "veredicto": "mayormente_verdadero",
-    "explicacion": "La tasa de paro total cayó por debajo del 10% (9,93% en el 4T 2025) por primera vez desde 2008, y en el 4T 2025 el paro bajó en 107.700 personas entre los españoles; en el 3T 2026 la tasa es del 10,18%, tras subir 0,31 puntos en el trimestre, con 71.400 parados más entre los españoles. No he podido obtener la tasa de paro desglosada por nacionalidad del INE ni la serie de 2018, por lo que la afirmación se apoya en la tendencia de la tasa general (los extranjeros son una minoría de los parados) y es cierta a medio plazo pero con un repunte reciente.",
-    "confianza": "media",
+    "veredicto": "verdadero",
+    "explicacion": "Según la EPA del INE, la tasa de paro de los españoles pasó del 13,70% en el tercer trimestre de 2018 al 9,26% en el tercero de 2026 (9,49% un año antes). En el 3T 2026 subió 0,31 puntos respecto al segundo trimestre (8,95%), con 71.400 parados más entre los españoles, pero en el conjunto del periodo y en términos interanuales ha bajado. Los extranjeros bajaron de 20,64% a 14,50% en el mismo periodo.",
+    "confianza": "alta",
     "fuentes": [
-      {"titulo": "INE, EPA tercer trimestre 2026 (nota de prensa)", "url": "https://www.ine.es/dyngs/Prensa/EPA3T26.htm"},
-      {"titulo": "INE, EPA cuarto trimestre 2025 (nota de prensa)", "url": "https://ine.es/dyngs/Prensa/EPA4T25.htm?print=1"},
-      {"titulo": "CaixaBank Research: La tasa de paro cae en el 2T 2025 al 10,3%, mínimo desde 2008", "url": "https://www.caixabankresearch.com/es/publicaciones/notas-breves-actualidad-economica-y-financiera/espana/tasa-paro-cae-2t-al-103-minimo"}
+      {
+        "titulo": "INE: Encuesta de Población Activa, tercer trimestre 2026 (nota de prensa, 27/10/2026)",
+        "url": "https://www.ine.es/dyngs/Prensa/EPA3T26.htm"
+      },
+      {
+        "titulo": "INE (INEbase, tabla 65336): tasas de paro por nacionalidad, sexo y comunidad autónoma, 2018-2026",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/65336?date=20180101:20261101"
+      }
     ]
   },
   {
@@ -241,12 +385,17 @@
     "cita": "lo que hemos hecho ha sido poner 500 millones de euros encima de la mesa",
     "afirmacion": "El Gobierno ha dotado con 500 millones de euros las políticas de integración vinculadas al proceso de regularización.",
     "veredicto": "verdadero",
-    "explicacion": "El 30 de junio de 2026 Sánchez presentó el Plan de Integración y Ciudadanía 2026-2030 con 505 millones de euros en su primer año (empleo, formación profesional, convivencia y refuerzo de servicios públicos, con más de 260 millones para este último eje). El Gobierno lo presenta como el complemento de la regularización, aunque es un plan distinto del real decreto de regularización.",
+    "explicacion": "El 30 de junio de 2026 Sánchez presentó el Plan de Integración y Ciudadanía con 505 millones de euros en su primer año (hoja de ruta hasta 2030): más de 185 millones para empleo y formación, cerca de 30 para convivencia y más de 260 para reforzar servicios públicos. El Gobierno lo presenta como complemento de la regularización, aunque es un plan distinto del real decreto de regularización. No he podido abrir el documento oficial de la Moncloa y cito el plan a través de prensa.",
     "confianza": "media",
     "fuentes": [
-      {"titulo": "Telecinco: Sánchez anuncia más de 500 millones para un plan de integración (30/6/2026)", "url": "https://www.telecinco.es/noticias/espana/20260630/pedro-sanchez-anuncia-plan-integracion-migrantes_18_019583827.html"},
-      {"titulo": "El Plural: El Gobierno redobla su apuesta por la regularización con más de 500 millones", "url": "https://www.elplural.com/politica/espana/gobierno-redobla-apuesta-regularizacion-mas-500-millones-nuevo-plan-integracion-ciudadania_394363102"},
-      {"titulo": "La Moncloa: Plan de Integración y Ciudadanía 2026-2030", "url": "https://www.lamoncloa.gob.es/presidente/actividades/Documents/2026/300626-sanchez-plan-integracion-ciudadania.pdf"}
+      {
+        "titulo": "Telecinco: Pedro Sánchez anuncia un plan de integración de migrantes con 505 millones (30/6/2026)",
+        "url": "https://www.telecinco.es/noticias/espana/20260630/pedro-sanchez-anuncia-plan-integracion-migrantes_18_019583827.html"
+      },
+      {
+        "titulo": "El Plural: El Gobierno redobla su apuesta por la regularización con más de 500 millones (30/6/2026)",
+        "url": "https://www.elplural.com/politica/espana/gobierno-redobla-apuesta-regularizacion-mas-500-millones-nuevo-plan-integracion-ciudadania_394363102"
+      }
     ]
   },
   {
@@ -254,21 +403,26 @@
     "cita": "para que los ayuntamientos y las comunidades autónomas, que son las que, digamos, competencialmente, según la Constitución y en sus estatutos, tienen las competencias en políticas de integración, las puedan desarrollar",
     "afirmacion": "Los 500 millones se han puesto a disposición de ayuntamientos y comunidades autónomas, que son quienes tienen las competencias en políticas de integración, para que las desarrollen.",
     "veredicto": "no_verificable",
-    "explicacion": "Las fuentes consultadas describen el plan como del Ministerio de Inclusión, gestionado por una Comisión Interministerial, sin informar de cuánto se transfiere a comunidades o ayuntamientos ni de un reparto en Conferencia Sectorial. En mayo de 2026 la FEMP reclamaba financiación extraordinaria para los ayuntamientos y The Objective denunciaba que no había convenio ni presupuesto local (anterior al plan de junio). No he podido contrastar el texto del plan (la Moncloa no cargó) ni verificar el encaje constitucional/estatutario de las competencias de integración, que son compartidas con el Estado.",
+    "explicacion": "Las fuentes abiertas describen el plan de 505 millones como del Ministerio de Inclusión (con una futura Agencia Estatal de Movilidad Humana) y no dicen cuánto se transfiere a comunidades o ayuntamientos. El 6/5/2026 la FEMP reclamaba financiación extraordinaria y The Objective denunciaba que no había convenio ni presupuesto local, aunque es anterior al plan. No he podido abrir el texto del plan ni verificar el reparto de competencias de integración, que son compartidas con el Estado.",
     "confianza": "baja",
     "fuentes": [
-      {"titulo": "The Objective (6/5/2026): El Gobierno se olvida de los alcaldes e incumple su promesa de dar dinero para la regularización", "url": "https://theobjective.com/espana/politica/2026-05-06/gobierno-ayuntamientos-regularizacion/"},
-      {"titulo": "El Plural: El Gobierno redobla su apuesta por la regularización con más de 500 millones", "url": "https://www.elplural.com/politica/espana/gobierno-redobla-apuesta-regularizacion-mas-500-millones-nuevo-plan-integracion-ciudadania_394363102"},
-      {"titulo": "Diario Jaén/Europa Press: Sánchez anuncia 500 millones para un Plan de Integración y Ciudadanía", "url": "https://www.diariojaen.es/espana/pedro-sanchez-anuncia-que-se-destinaran-500-millones-de-euros-para-un-plan-de-integracion-y-ciudadania-BN11495172"}
+      {
+        "titulo": "The Objective: El Gobierno se olvida de los alcaldes e incumple su promesa de dar dinero para la regularización (6/5/2026)",
+        "url": "https://theobjective.com/espana/politica/2026-05-06/gobierno-ayuntamientos-regularizacion/"
+      },
+      {
+        "titulo": "El Plural: El Gobierno redobla su apuesta por la regularización con más de 500 millones (30/6/2026)",
+        "url": "https://www.elplural.com/politica/espana/gobierno-redobla-apuesta-regularizacion-mas-500-millones-nuevo-plan-integracion-ciudadania_394363102"
+      }
     ]
   },
   {
     "minuto": "0:51:57",
     "cita": "mi abuelo estuvo 40 años currando en Alemania, venía aquí a ver a sus hijos y a su mujer y antes de los 3 meses que le vencía la visa, lo que hacía era volver a Alemania",
-    "afirmacion": "El abuelo de Sánchez trabajó 40 años en Alemania y regresaba allí antes de que se cumplieran tres meses del vencimiento de su visado.",
+    "afirmacion": "El abuelo de Sánchez trabajó 40 años en Alemania y, cuando venía a España a ver a su familia, volvía a Alemania antes de que se cumplieran los tres meses que le permitía el visado.",
     "veredicto": "no_verificable",
-    "explicacion": "Es una anécdota familiar sin fuente pública contrastable. No se ha buscado ni hallado documentación al respecto, y no cabe confirmarla ni desmentirla con fuentes abiertas.",
-    "confianza": "alta",
+    "explicacion": "Es una anécdota familiar sin fuente pública contrastable: no hay documentación abierta sobre la trayectoria del abuelo del presidente ni sobre las condiciones de su visado. En esta auditoría no se ha podido ampliar la búsqueda, por lo que no se confirma ni se desmiente.",
+    "confianza": "baja",
     "fuentes": []
   }
 ]

@@ -1,0 +1,504 @@
+[
+  {
+    "indice": 0,
+    "minuto": "0:36:46",
+    "afirmacion": "Cuando ocurrió el primer accidente de alta velocidad (Adamuz, 18 de enero de 2026), el ministro de Transportes Óscar Puente llevaba poco tiempo en el cargo.",
+    "veredicto_antes": "falso",
+    "veredicto_despues": "enganoso",
+    "cambia_veredicto": true,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.lamoncloa.gob.es/gobierno/Paginas/biografias-xv-legislatura/ministro-oscar-puente.aspx",
+        "motivo": "No carga desde esta máquina (conexión rechazada), no verificable"
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Europa Press (vía Bolsamania): Sánchez nombra a Óscar Puente nuevo ministro de Transportes",
+        "url": "https://www.bolsamania.com/noticias/economia/economia--amp-sanchez-nombra-a-oscar-puente-nuevo-ministro-de-transportes-y-a-isabel-rodriguez-ministra-de-vivienda--15380418.html",
+        "tipo": "agencia"
+      },
+      {
+        "titulo": "Euronews: Sánchez nombra a Cuerpo ministro de Transporte tras la dimisión de Puente",
+        "url": "https://es.euronews.com/2026/11/04/sanchez-nombra-a-cuerpo-ministro-de-transporte-tras-la-dimision-de-oscar-puente",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Falso → engañoso: el dato (26 meses en el cargo) contradice la idea de «recién llegado», pero «poco tiempo» es una valoración subjetiva y no un dato verificable como falso. Se quita La Moncloa (no abre) y se añade Europa Press; el BOE tampoco abre. La frase la dice Colau (dice «ministra», error de la transcripción o lapsus), no Jordi Wild."
+  },
+  {
+    "indice": 1,
+    "minuto": "0:36:46",
+    "afirmacion": "Los problemas de la red ferroviaria que desembocaron en los accidentes venían de recortes de inversión acumulados durante muchos años.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "enganoso",
+    "cambia_veredicto": true,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.noticiasdenavarra.com/sucesos/2026/04/15/adif-dice-accidente-adamuz-problema-10944994.html",
+        "motivo": "Responde 406 y no se puede abrir"
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Congreso de los Diputados: respuesta escrita del Gobierno sobre inversión y mantenimiento de Adif (09/04/2026)",
+        "url": "https://www.congreso.es/l15p/e10/e_0109652_n_000.pdf",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Wikipedia: Accidente ferroviario de Adamuz (solo apoyo)",
+        "url": "https://es.wikipedia.org/wiki/Accidente_ferroviario_de_Adamuz",
+        "tipo": "apoyo"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Mayormente verdadero → engañoso: la premisa (caída de la inversión 2009-2016) es cierta, pero el mantenimiento ha subido desde 2017 y la causa de los accidentes no está probada, así que el nexo «desinversión → accidentes» no se sigue. Se añade la respuesta escrita del Gobierno en el Congreso (dato oficial) y se retira la fuente que no abre."
+  },
+  {
+    "indice": 2,
+    "minuto": "0:37:47",
+    "afirmacion": "La desinversión ferroviaria acumulada incluye recortes hechos por gobiernos del Partido Popular.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio de veredicto; se corrige la explicación (la caída 2011-2017 no es solo del periodo de Rajoy: arrancó en 2009-2011) y la confianza baja a media porque las cifras de Transportes solo se ven a través de prensa."
+  },
+  {
+    "indice": 3,
+    "minuto": "0:36:46",
+    "afirmacion": "Tras el segundo accidente (Urda, 28 de octubre de 2026), Colau pidió de inmediato y públicamente que el ministro Puente asumiera responsabilidades políticas y dimitiera.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": true,
+    "confianza_antes": "alta",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.esdiario.com/nacional/261030/201709/ada-colau-dimision-oscar-puente.html",
+        "motivo": "No la he abierto (el resultado de búsqueda no se pudo comprobar) y es un medio muy escorado; se prescinde de ella"
+      },
+      {
+        "url": "https://www.democrata.es/en/politics/colau-refuses-to-blame-the-workers-and-demands-that-puente-assume-his-responsibility/",
+        "motivo": "Dice que el 29/10 Colau NO pedía aún la dimisión: no respalda «inmediatamente»; además Demócrata parece un reescrito/agregador"
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Vozpópuli: Sánchez defiende a Puente a pesar de que sus socios ya reclaman su dimisión (01/11/2026)",
+        "url": "https://www.vozpopuli.com/espana/politica/sanchez-defiende-a-puente-a-pesar-de-que-sus-socios-ya-reclaman-su-dimision-por-el-accidente.html",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "El Salto: Frente Amplio pide la comparecencia de Puente (29/10/2026)",
+        "url": "https://www.elsaltodiario.com/politica/frente-amplio-pide-comparecencia-puente-accidente-toledo-adelante-andalucia-dimision",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Demócrata: Colau exige la dimisión inmediata de Puente",
+        "url": "https://www.democrata.es/en/politics/expansion-colau-demands-the-immediate-resignation-of-oscar-puente-after-the-railway-accident/",
+        "tipo": "apoyo"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Verdadero → mayormente verdadero: la cronología (28/10 responsabilidades, 29/10 comparecencia, 30/10 dimisión explícita) muestra que «inmediatamente» exagera dos días. Confianza alta → media (sin fuente primaria; declaraciones públicas contadas por prensa)."
+  },
+  {
+    "indice": 4,
+    "minuto": "0:38:47",
+    "afirmacion": "Los trabajadores ferroviarios llevaban tiempo avisando, antes de los accidentes, de la falta de mantenimiento, inversión y personal.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.ultimahora.es/sucesos/ultimas/2026/01/21/2553605/maquinistas-convocan-huelga-general-tras-accidentes-adamuz-gelida.html",
+        "motivo": "La huelga se convoca tras los accidentes y no menciona avisos previos: no respalda la afirmación"
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Público: Déficit histórico en inversiones, la división Renfe-Adif y servicios externalizados",
+        "url": "https://www.publico.es/economia/deficit-historico-inversiones-division-renfe-adif-servicios-externalizados-grietas-sistema-ferroviario.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio de veredicto. Se retira Última Hora (no apoya el aviso previo) y se añade Público (sindicato ferroviario denuncia contratas); la fuente principal es Vozpópuli (crítica con el Gobierno) y Demócrata solo sirve de apoyo."
+  },
+  {
+    "indice": 5,
+    "minuto": "0:38:47",
+    "afirmacion": "Ada Colau se ha reunido con trabajadores ferroviarios.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio. Las dos fuentes abren y coinciden, pero solo una (Onda Vasca) es un medio claramente identificable; Demócrata se trata como apoyo. Confianza media por no llegar a dos fuentes sólidas independientes."
+  },
+  {
+    "indice": 6,
+    "minuto": "0:38:47",
+    "afirmacion": "PP y PSOE han compartido un modelo de liberalización del sector ferroviario.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.boe.es/eli/es/l/2015/09/29/38",
+        "motivo": "El BOE no responde desde esta máquina (conexión rechazada)"
+      },
+      {
+        "url": "https://boe.es/buscar/epub/2003/BOE-A-2003-20978-consolidado.epub",
+        "motivo": "El BOE no responde desde esta máquina y es un epub"
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Público: Déficit histórico en inversiones, la división Renfe-Adif y servicios externalizados",
+        "url": "https://www.publico.es/economia/deficit-historico-inversiones-division-renfe-adif-servicios-externalizados-grietas-sistema-ferroviario.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio de veredicto; se retiran las dos URLs del BOE (no abren) y se añade Público. Confianza media: el contenido de las leyes no se ha podido contrastar en el BOE."
+  },
+  {
+    "indice": 7,
+    "minuto": "0:38:47",
+    "afirmacion": "El mantenimiento de la red ferroviaria se ha externalizado en manos de empresas subcontratadas privadas.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.adif.es/w/adjudicacion-mantenimiento-linea-alta-velocidad-madrid-este",
+        "motivo": "Responde 403 (acceso denegado) desde esta máquina, tampoco con curl"
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Vozpópuli: El Gobierno adjudicó a FCC, Ferrovial, OHLA y Azvi el cuidado de la vía en Adamuz por 56 millones hasta 2028",
+        "url": "https://www.vozpopuli.com/economia/empresas/el-gobierno-adjudico-a-fcc-ferrovial-ohla-y-azvi-el-cuidado-de-la-via-en-adamuz-por-56-millones-hasta-2028.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio de veredicto. Se retira la página de Adif (403) y se añade el contrato de Adamuz, que concreta qué parte del mantenimiento es privada y cuál sigue en Adif."
+  },
+  {
+    "indice": 8,
+    "minuto": "0:39:48",
+    "afirmacion": "Rodalies de Catalunya sufre retrasos y mal funcionamiento desde hace muchos años.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.moncloa.com/2026/10/21/rodalies-retrasos-septiembre-3452816/",
+        "motivo": "moncloa.com es un medio privado y no es fuente válida según la política"
+      },
+      {
+        "url": "https://www.apd.cat/en/girona/rodalies-ended-2025-with-only-50-punctuality-the-lowest-figure-of-all-the-cercanias-of-spain_4519_102.html",
+        "motivo": "Redirige a apdnoticies.com; se cita la URL final solo como apoyo (artículo asistido por IA, sin fuente de datos)"
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "APD: Rodalies terminó 2025 con solo un 50 % de puntualidad",
+        "url": "https://www.apdnoticies.com/en/girona/rodalies-ended-2025-with-only-50-punctuality-the-lowest-figure-of-all-the-cercanias-of-spain_4519_102.html",
+        "tipo": "apoyo"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio de veredicto. Se descarta moncloa.com (no válida) y se rebaja APD a apoyo; la explicación atribuye las 397 quejas a «los primeros meses de 2025» (no a todo el año). Sin serie de puntualidad previa ni fuente primaria, confianza media."
+  },
+  {
+    "indice": 9,
+    "minuto": "0:39:48",
+    "afirmacion": "Desde el Gobierno se insinuó que el accidente ferroviario podía deberse simplemente a un fallo humano.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio de veredicto; se ajusta la explicación para citar lo que dice cada fuente (la fuente de Colau y la insinuación del Ministerio). Dos de las tres fuentes son del mismo medio, crítico con el Gobierno, de ahí la confianza media."
+  },
+  {
+    "indice": 10,
+    "minuto": "0:40:48",
+    "afirmacion": "Con el modelo liberalizado, Renfe (operador) se separó de Adif (gestor de infraestructura).",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://boe.es/buscar/epub/2003/BOE-A-2003-20978-consolidado.epub",
+        "motivo": "El BOE no responde desde esta máquina"
+      },
+      {
+        "url": "https://www.infobae.com/espana/2026/11/01/cinco-anos-de-liberalizacion-ferroviaria-el-doble-de-viajeros-mas-presion-sobre-las-plantillas-y-una-inversion-que-no-sigue-el-ritmo/",
+        "motivo": "Abre, pero no trata la separación Renfe-Adif de 2005 (solo la liberalización desde 2021)"
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Wikipedia: Adif (solo apoyo)",
+        "url": "https://es.wikipedia.org/wiki/Adif",
+        "tipo": "apoyo"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio de veredicto; confianza alta → media porque el BOE no abre y queda una sola fuente de prensa sólida (Público) más Wikipedia como apoyo."
+  },
+  {
+    "indice": 11,
+    "minuto": "0:40:48",
+    "afirmacion": "Francia y Alemania tienen un único operador público ferroviario, a diferencia de España, donde se separaron Renfe y Adif.",
+    "veredicto_antes": "enganoso",
+    "veredicto_despues": "enganoso",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.rcf.fr/articles/actualite/sncf-trenitalia-renfe-que-change-la-concurrence-dans-le-rail-en-france",
+        "motivo": "Responde 403 y no se puede abrir"
+      },
+      {
+        "url": "https://www.senat.fr/rap/a19-183/a19-1834.html",
+        "motivo": "No carga desde esta máquina"
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Wikipedia (fr): SNCF Réseau",
+        "url": "https://fr.wikipedia.org/wiki/SNCF_Réseau",
+        "tipo": "apoyo"
+      },
+      {
+        "titulo": "Wikipedia (en): Deutsche Bahn",
+        "url": "https://en.wikipedia.org/wiki/Deutsche_Bahn",
+        "tipo": "apoyo"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio de veredicto. Se retiran el artículo de RCF y el informe del Senado francés (no abren); la parte alemana se apoya en Railway Gazette y la francesa solo en Wikipedia (apoyo), por lo que la confianza se queda en media."
+  },
+  {
+    "indice": 12,
+    "minuto": "0:41:49",
+    "afirmacion": "El gasto en mantenimiento ferroviario ha bajado.",
+    "veredicto_antes": "enganoso",
+    "veredicto_despues": "enganoso",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Congreso de los Diputados: respuesta escrita del Gobierno sobre inversión y mantenimiento de Adif (09/04/2026)",
+        "url": "https://www.congreso.es/l15p/e10/e_0109652_n_000.pdf",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "elDiario.es: el gasto en mantener la alta velocidad crece por detrás de los viajeros (24/01/2026)",
+        "url": "https://www.eldiario.es/1_c54c03",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Sin cambio de veredicto; se añade la respuesta oficial del Gobierno en el Congreso (+66 % por km desde 2017) como fuente primaria y elDiario.es; se matiza que el gasto por viajero sí cae. El Español sale como apoyo: usa la estimación de un economista, no un dato oficial."
+  },
+  {
+    "indice": 13,
+    "minuto": "0:41:49",
+    "afirmacion": "España invierte en mantenimiento ferroviario la mitad que Francia.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "baja",
+    "confianza_despues": "baja",
+    "fuentes_descartadas": [
+      {
+        "url": "https://diariosocialista.net/2026/10/29/espana-invierte-hasta-un-45-menos-por-kilometro-que-francia-en-mantener-la-mayor-red-de-alta-velocidad-de-europa/",
+        "motivo": "Web claramente alineada con el PSOE; no se usa ni como apoyo"
+      },
+      {
+        "url": "https://www.eldebate.com/economia/20261029/deterioro-inversion-ferroviaria-trenes-viajeros-menos-dinero-vias_474787.html",
+        "motivo": "Abre pero no compara con Francia; no respalda esta afirmación"
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "ARA: España dedica la mitad del presupuesto que Francia y Alemania al mantenimiento de la alta velocidad",
+        "url": "https://es.ara.cat/sociedad/espana-dedica-mitad-presupuesto-francia-alemania-mantenimiento-alta-velocidad_1_5894680.html",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Artículo 14: España destinó solo el 16 % de su gasto en alta velocidad al mantenimiento (2018-2022)",
+        "url": "https://www.articulo14.es/economia/espana-destino-solo-el-16-de-su-gasto-en-alta-velocidad-al-mantenimiento-entre-2018-y-2022-segun-la-ue-20261029.html",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Motorpasión: Puente dice que el problema no es la inversión",
+        "url": "https://www.motorpasion.com/seguridad/oscar-puente-dice-que-problema-no-inversion-espana-se-gasta-30-000-euros-km-via-al-ano-que-francia-teniendo-500-km-alta-velocidad",
+        "tipo": "apoyo"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio de veredicto (confianza baja se mantiene): se sustituyen las fuentes por las que abren y citan el informe de la Comisión (239 M€ vs 463 M€ al año), y se retira Diario Socialista (alineado con un partido) y El Debate (no trata Francia). El informe de la Comisión no ha podido abrirse, así que falta la fuente primaria."
+  },
+  {
+    "indice": 14,
+    "minuto": "0:41:49",
+    "afirmacion": "Con la liberalización entraron otras operadoras ferroviarias que no aceptan devolver el dinero por retrasos.",
+    "veredicto_antes": "falso",
+    "veredicto_despues": "falso",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.cope.es/actualidad/economia/noticias/renfe-e-iryo-eliminan-indemnizaciones-retrasos-debidos-a-limitaciones-de-velocidad-mientras-ouigo-mantiene-20260130_3298155.html",
+        "motivo": "Responde 404 y no se puede abrir (el hecho de las limitaciones de velocidad queda sin contrastar y se retira de la explicación)"
+      }
+    ],
+    "fuentes_nuevas": [],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio de veredicto, pero confianza alta → media: se retira COPE (404) y su dato sobre las limitaciones de velocidad, y no se han abierto las condiciones oficiales de Ouigo e Iryo (solo Xataka); se aclara que Renfe era antes más generosa, matiz que no convierte en cierta la frase «no aceptan devolver»."
+  },
+  {
+    "indice": 15,
+    "minuto": "0:42:50",
+    "afirmacion": "Tras la apertura a otras operadoras hay un 40 % o más de trenes, pero el personal solo ha subido un 10 % y el mantenimiento no ha subido.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Congreso de los Diputados: respuesta escrita del Gobierno sobre inversión y mantenimiento de Adif (09/04/2026)",
+        "url": "https://www.congreso.es/l15p/e10/e_0109652_n_000.pdf",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Sin cambio de veredicto; se añade la respuesta oficial del Gobierno en el Congreso (+66 % por km) y se ajusta la explicación: el mantenimiento sube en términos absolutos y solo «no sube» relativo al tráfico."
+  },
+  {
+    "indice": 16,
+    "minuto": "0:44:07",
+    "afirmacion": "El presidente del Gobierno, Pedro Sánchez, dijo que un segundo accidente grave en menos de un año era inasumible.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.shango.media/onda-cero-del-accidente-inasumible-al-respaldo-a-puente-sanchez-cierra-filas-con-su-ministro-pese-a-las-criticas-por-urda-11998787",
+        "motivo": "Responde 503 y no se puede abrir"
+      }
+    ],
+    "fuentes_nuevas": [],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio de veredicto; confianza alta → media: se retira la fuente de Shango (503) y Herqles es un medio poco conocido, de modo que la cita se apoya sobre todo en Vozpópuli."
+  },
+  {
+    "indice": 17,
+    "minuto": "0:45:09",
+    "afirmacion": "En el caso del accidente de Urda se han asumido responsabilidades políticas.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Euronews: Sánchez nombra a Cuerpo ministro de Transporte tras la dimisión de Óscar Puente",
+        "url": "https://es.euronews.com/2026/11/04/sanchez-nombra-a-cuerpo-ministro-de-transporte-tras-la-dimision-de-oscar-puente",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio de veredicto; se añade Euronews (línea editorial distinta de El Debate). Sin fuente primaria (BOE y Moncloa no abren), pero hecho confirmado por tres medios independientes."
+  },
+  {
+    "indice": 18,
+    "minuto": "0:45:09",
+    "afirmacion": "La derecha que pide la dimisión de Sánchez no ha dimitido nunca por cosas más graves, como la dana.",
+    "veredicto_antes": "falso",
+    "veredicto_despues": "falso",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio de veredicto. Se corrige un error de la explicación: el BOE publicó el cese el 7 de noviembre de 2025 (el decreto es del 5), no el 5. Sin BOE abierto, pero lo confirman dos verificadores y un diario."
+  },
+  {
+    "indice": 19,
+    "minuto": "0:46:09",
+    "afirmacion": "El atentado de La Rambla se produjo justo antes del referéndum de 2017, en pleno procés.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "The Objective: La marcha de las banderas contra el terrorismo (26/08/2017)",
+        "url": "https://theobjective.com/further/espana/2017-08-26/la-marcha-de-las-banderas-contra-el-terrorismo/",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio de veredicto. La fecha del atentado (17 de agosto) no figura explícita en VilaWeb (solo la etiqueta 17-A); se completa con la crónica de The Objective, que sitúa la marcha nueve días después. Fecha histórica notoria, sin fuente primaria."
+  },
+  {
+    "indice": 20,
+    "minuto": "0:46:09",
+    "afirmacion": "En los actos y manifestaciones tras el atentado de La Rambla no hablaron políticos, sino solo víctimas, y las víctimas iban delante y los políticos detrás.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [],
+    "tiene_fuente_primaria": true,
+    "nota": "Sin cambio de veredicto. Se precisa la explicación: la fuente oficial (Ajuntament) solo confirma el programa del acto de cierre (sin políticos), y la prensa que los políticos iban en segunda fila; no se pudo comprobar los demás actos de esos días."
+  }
+]

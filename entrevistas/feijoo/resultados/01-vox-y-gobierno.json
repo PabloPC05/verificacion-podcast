@@ -4,7 +4,7 @@
     "cita": "Estuve, no sé, en la SER, en una entrevista en El País, en la Sesta.",
     "afirmacion": "En esta campaña electoral Feijóo ha concedido entrevistas en la Cadena SER, El País, La Sexta, Mediaset y Atresmedia.",
     "veredicto": "mayormente_verdadero",
-    "explicacion": "En 2026 Feijóo ha dado entrevistas en la Cadena SER (23 de octubre, Hoy por Hoy), en El País (publicada el 8 de noviembre), en Telecinco (Mediaset) y en Atresmedia (El Hormiguero, junio, y Espejo Público, julio, ambos en Antena 3). No he encontrado una entrevista concreta en La Sexta, y algunas son anteriores al inicio formal de la campaña (13 de noviembre), por lo que «esta campaña» se usa en sentido amplio.",
+    "explicacion": "En 2026 Feijóo ha dado entrevistas en la Cadena SER (Hoy por Hoy, 23 de octubre), en Telecinco/Mediaset (2 de noviembre), en El País (publicada el 8 de noviembre) y en Atresmedia (El Hormiguero, en junio y de nuevo en noviembre, y el programa matinal de Susanna Griso en Antena 3, 6 de julio). No he encontrado ninguna entrevista concreta en La Sexta, de modo que la enumeración se confirma en cuatro de los cinco medios citados, y algunas son anteriores al inicio formal de la campaña, por lo que «esta campaña» se usa en sentido amplio. No hay fuente primaria posible para esto; se contrasta con prensa y agencia (Europa Press).",
     "confianza": "media",
     "fuentes": [
       {
@@ -12,25 +12,29 @@
         "url": "https://www.democrata.es/elecciones-generales-espana/feijoo-gobierno-pp-vox-ministros-entrevista/"
       },
       {
-        "titulo": "Artículo 14: Feijóo metería Igualdad dentro de otros ministerios (23-10-2026)",
+        "titulo": "Artículo 14: Feijóo metería Igualdad dentro de otros ministerios (entrevista en la Cadena SER, 23-10-2026)",
         "url": "https://www.articulo14.es/politica/feijoo-metera-igualdad-dentro-de-otros-ministerios-el-ministro-que-lo-lleve-se-encargara-de-otras-cosas-20261023.html"
       },
       {
-        "titulo": "Que.es: Susanna Griso arrincona a Feijóo en directo (Antena 3, julio 2026)",
+        "titulo": "Demócrata: Feijóo reconoce una fuga de indignados hacia Vox (entrevista en Telecinco recogida por Europa Press, 2-11-2026)",
+        "url": "https://www.democrata.es/politica/feijoo-reconoce-una-fuga-de-indignados-hacia-vox-pero-defiende-que-el-pp-crece-y-atrae-voto-socialista/"
+      },
+      {
+        "titulo": "Que.es: Susanna Griso arrincona a Feijóo en directo (Antena 3, 6-7-2026)",
         "url": "https://www.que.es/2026/07/08/susanna-griso-arrincona-feijoo/"
       },
       {
-        "titulo": "elDiario.es: Feijóo carga contra Zapatero desde El Hormiguero (Antena 3)",
-        "url": "https://www.eldiario.es/politica/feijoo-carga-zapatero-hormiguero-blanquea-dictadura-blanquear-capitales_1_13313278.amp.html"
+        "titulo": "Infobae: Los 8 momentos de la entrevista de Feijóo en El Hormiguero (11-11-2026)",
+        "url": "https://www.infobae.com/espana/2026/11/11/los-8-momentos-de-la-entrevista-de-alberto-nunez-feijoo-en-el-hormiguero-el-29-de-noviembre-lo-siento-por-sanchez-pero-no-hay-huelga-y-vamos-a-ver-que-opinan-los-espanoles/"
       }
     ]
   },
   {
     "minuto": "0:05:21",
     "cita": "una expresión que él lo refirió en muros del discurso de investidura de Sánchez del año 23",
-    "afirmacion": "Sánchez usó la imagen de los «muros» (bloques enfrentados) en su discurso de investidura de 2023.",
+    "afirmacion": "Sánchez usó la imagen del «muro» en su discurso de investidura de 2023.",
     "veredicto": "verdadero",
-    "explicacion": "En el debate de investidura del 15 de noviembre de 2023 Sánchez habló repetidamente de levantar «un muro» de democracia, convivencia y tolerancia frente a PP y Vox. Feijóo lo interpreta como una apuesta por los bloques; esa lectura es una valoración, pero el uso de la imagen es real.",
+    "explicacion": "En el debate de investidura del 15 de noviembre de 2023 Sánchez dijo, según las crónicas, «vamos a levantar un muro de democracia, de convivencia…», planteó «o alzamos un muro ante estos ataques o les damos un salvoconducto» y afirmó que «el único muro eficaz contra las políticas de la ultraderecha» había sido el Gobierno de coalición. La imagen del muro es, pues, real, aunque Sánchez la usa como barrera frente a PP y Vox; que eso equivalga a fomentar «bloques, muros y trincheras» es la interpretación de Feijóo, una valoración que no se verifica.",
     "confianza": "alta",
     "fuentes": [
       {
@@ -38,8 +42,12 @@
         "url": "https://rtvc.es/debate-investidura-pedro-sanchez-2023/"
       },
       {
-        "titulo": "Noticias de Navarra: Sánchez defiende la amnistía (15-11-2023)",
-        "url": "https://www.noticiasdenavarra.com/politica/2023/11/15/sanchez-defiende-amnistia-ahondar-camino-7519536.html"
+        "titulo": "La República: discurso de Sánchez en el Parlamento español ratifica amnistía para independentistas (investidura, 15-11-2023)",
+        "url": "https://www.larepublica.co/globoeconomia/discurso-de-sanchez-en-parlamento-espanol-ratifica-amnistia-para-independentistas-3749152"
+      },
+      {
+        "titulo": "El Independiente: las frases más relevantes de Sánchez en su discurso de investidura (15-11-2023)",
+        "url": "https://www.elindependiente.com/espana/2023/11/15/las-frases-mas-relevantes-de-sanchez-en-su-discurso-de-investidura/amp/"
       }
     ]
   },
@@ -47,13 +55,29 @@
     "minuto": "0:06:23",
     "cita": "El estado de las autonomías en la que ellos no creen, yo sí creo.",
     "afirmacion": "Vox no cree en el Estado de las autonomías, a diferencia del PP.",
-    "veredicto": "verdadero",
-    "explicacion": "Vox mantiene como exigencia la supresión o el vaciado del Estado autonómico, y el PP afirma que en los pactos de 2026 no aceptó esa condición previa de Vox (ni la cadena perpetua revisable como imposición). La diferencia entre ambos partidos en este punto está reconocida por las dos partes.",
+    "veredicto": "mayormente_verdadero",
+    "explicacion": "El programa de Vox para el 23-J de 2023 pedía que se «devuelvan al Estado las competencias en Educación, Sanidad, Seguridad y Justicia», limitar la capacidad legislativa autonómica y suspender la autonomía de comunidades que atenten contra la unidad nacional; su programa de 2019 apuntaba a «transformar el Estado autonómico en un Estado de Derecho unitario». En noviembre de 2024 Abascal calificó de «insultante» que Feijóo dijera que el Estado de las autonomías había funcionado ante la DANA. La caracterización de Feijóo es fundada, pero Vox ha presentado la supresión como objetivo a largo plazo y no como condición en pactos anteriores (elDiario.es, 2019) y gobierna en varias comunidades, por eso no es un «verdadero» rotundo.",
     "confianza": "media",
     "fuentes": [
       {
-        "titulo": "Moncloa.com: Gamarra fija el documento marco del PP como base para acuerdos con Vox en Andalucía (28-5-2026)",
-        "url": "https://www.moncloa.com/2026/05/28/gamarra-documento-marco-acuerdo-vox-andalucia-3380431/"
+        "titulo": "Onda Vasca (NTM): Quitar competencias y privilegios o derogar la ley del aborto, entre las medidas del programa electoral de Vox (7-7-2023)",
+        "url": "https://www.ondavasca.com/quitar-competencias-y-privilegios-o-derogar-la-ley-del-aborto-entre-las-medidas-del-programa-electoral-de-vox/"
+      },
+      {
+        "titulo": "El Debate: artículo sobre los cambios en el programa de Vox (14-8-2023)",
+        "url": "https://www.eldebate.com/espana/20230814/cambiado-programa-vox_133140.html"
+      },
+      {
+        "titulo": "elDiario.es: artículo sobre Vox y las autonomías (2-8-2019)",
+        "url": "https://www.eldiario.es/politica/vox-autonomias-extrema-derecha_1_1165337.html"
+      },
+      {
+        "titulo": "Alicante Plaza/EFE: Vox cree insultante que Feijóo diga que el Estado de las autonomías ha funcionado ante la DANA (9-11-2024)",
+        "url": "https://alicanteplaza.es/alicanteplaza/vox-cree-insultante-que-feijoo-diga-que-el-estado-de-las-autonomias-ha-funcionado-ante-la-dana"
+      },
+      {
+        "titulo": "The Objective: programa de desregulación de Vox (27-6-2026)",
+        "url": "https://theobjective.com/espana/politica/2026-06-27/desregulacion-motosierra-vox-podar-marana-burocratica/"
       }
     ]
   },
@@ -62,12 +86,16 @@
     "cita": "Lo llevo observando en los cuatro años que llevo haciendo política nacional",
     "afirmacion": "Feijóo lleva cuatro años haciendo política nacional.",
     "veredicto": "mayormente_verdadero",
-    "explicacion": "Feijóo es presidente del PP desde el 2 de abril de 2022 y senador desde mayo de 2022, es decir, unos cuatro años y siete meses en la política nacional actual. Antes ya había ocupado cargos nacionales en el Gobierno de Aznar (desde 1996), por lo que la cifra es un redondeo a la baja razonable.",
-    "confianza": "alta",
+    "explicacion": "Feijóo fue elegido presidente del PP en el congreso de Sevilla el 2 de abril de 2022 (EFE) y tomó posesión de su escaño de senador el 25 de mayo de 2022 (RTVC/EFE). Hasta noviembre de 2026 son unos cuatro años y siete meses al frente de la política nacional, así que «cuatro años» es un redondeo a la baja admisible en lenguaje oral.",
+    "confianza": "media",
     "fuentes": [
       {
-        "titulo": "Wikipedia: Alberto Núñez Feijóo",
-        "url": "https://es.wikipedia.org/wiki/Alberto_Núñez_Feijóo"
+        "titulo": "Menorca.info/EFE: Feijóo, elegido oficialmente nuevo presidente del PP (2-4-2022)",
+        "url": "https://www.menorca.info/actualidad/nacional/2022/04/02/1717847/feijoo-elegido-nuevo-presidente-del-pp.html"
+      },
+      {
+        "titulo": "RTVC/EFE: Feijóo toma posesión de su escaño como senador (25-5-2022)",
+        "url": "https://rtvc.es/feijoo-toma-posesion-de-su-escano-como-senador/"
       }
     ]
   },
@@ -76,16 +104,24 @@
     "cita": "hay un partido que saca un resultado que le da mayoría absoluta en el Senado que hay 16 diputados de diferencia en el Congreso",
     "afirmacion": "En las generales de 2023 el PP obtuvo mayoría absoluta en el Senado y 16 diputados más que el PSOE en el Congreso.",
     "veredicto": "verdadero",
-    "explicacion": "Resultado del 23-J de 2023: PP 137 diputados y PSOE 121 (16 de diferencia). En el Senado el PP logró 120 de los 208 senadores electos, mayoría absoluta de la Cámara, según los datos de la Junta Electoral Central publicados en el BOE.",
-    "confianza": "alta",
+    "explicacion": "Tras el escrutinio del voto CERA, el 23-J de 2023 dio al PP 137 escaños y al PSOE 121, es decir 16 de diferencia (el voto exterior le quitó al PSOE un escaño en Madrid). En el Senado el PP obtuvo 120 senadores electos y 23 de designación autonómica (143), mayoría absoluta de la Cámara. El BOE publicó la resolución de la Junta Electoral Central con los resultados oficiales el 1-9-2023, pero no se ha podido abrir desde aquí, así que las cifras se citan a través de prensa (Demócrata reproduce los datos de Interior y la JEC) y de Europa Press.",
+    "confianza": "media",
     "fuentes": [
       {
-        "titulo": "Wikipedia: Elecciones generales de España de 2023 (resultados JEC)",
-        "url": "https://es.wikipedia.org/wiki/Elecciones_generales_de_Espa%C3%B1a_de_2023"
+        "titulo": "Que.es: El PSOE señala que el escaño perdido por el escrutinio del voto CERA no cambia el escenario (29-7-2023)",
+        "url": "https://www.que.es/2023/07/29/psoe-cera-mismo-escenario/"
       },
       {
-        "titulo": "BOE-A-2023-18907: Resultados de las elecciones generales de 23 de julio de 2023",
-        "url": "https://boe.gob.es/boe/dias/2023/09/01/pdfs/BOE-A-2023-18907.pdf"
+        "titulo": "El Independiente: el baile de escaños por el voto CERA (28-7-2023)",
+        "url": "https://www.elindependiente.com/espana/2023/07/28/baile-de-escanos-voto-cera/amp/"
+      },
+      {
+        "titulo": "Demócrata: Resultados del 23J (datos de Interior y de la Junta Electoral Central)",
+        "url": "https://www.democrata.es/elecciones-generales-espana/herramientas/resultados-23j"
+      },
+      {
+        "titulo": "Orain (Europa Press): El PP logra mayoría absoluta en el Senado (24-7-2023)",
+        "url": "https://orain.eus/es/politica/2023/07/24/el-pp-logra-mayoria-absoluta-en-senado/"
       }
     ]
   },
@@ -94,7 +130,7 @@
     "cita": "hablaban del mes de la marmota de Ceijón",
     "afirmacion": "Tras el 23-J, el Gobierno y el PSOE hablaron del «mes de la marmota de Feijóo» por el plazo hasta su debate de investidura.",
     "veredicto": "verdadero",
-    "explicacion": "En septiembre y octubre de 2023 Pedro Sánchez y el PSOE criticaron el plazo de casi un mes hasta la investidura de Feijóo (26 y 27 de septiembre) llamándolo «el mes de la marmota de Feijóo». El propio Feijóo se quejó de esa expresión en una entrevista en Onda Cero (4 de octubre de 2023). La fuente principal reproduce la queja de Feijóo, por eso la confianza no es máxima.",
+    "explicacion": "El 4 de octubre de 2023 Infobae cuenta que Sánchez acusó a Feijóo de perder el tiempo con «el mes de la marmota de Feijóo», y The Objective atribuye la expresión al PSOE por el tiempo que Feijóo tardó en llegar a su investidura (26 y 27 de septiembre). Feijóo se quejó de ella en una entrevista en Onda Cero con Carlos Alsina. Ambos medios, de líneas distintas, coinciden en que la expresión existió y la usó el entorno de Sánchez, aunque la atribuyen a Sánchez o al PSOE de forma algo distinta.",
     "confianza": "media",
     "fuentes": [
       {
@@ -102,7 +138,7 @@
         "url": "https://www.infobae.com/espana/2023/10/04/feijoo-acusa-a-armengol-de-pactar-con-moncloa-la-fecha-de-su-investidura-y-de-presidir-el-congreso-como-una-militante-socialista/"
       },
       {
-        "titulo": "The Objective: Feijóo confirma que Armengol decidió con Moncloa la fecha de su investidura",
+        "titulo": "The Objective: Feijóo confirma que Armengol decidió con Moncloa la fecha de su investidura (4-10-2023)",
         "url": "https://theobjective.com/espana/politica/2023-10-04/feijoo-armengol-investidura-moncloa/"
       }
     ]
@@ -112,7 +148,7 @@
     "cita": "Yo he votado Felipe González en 1982. Es conocido.",
     "afirmacion": "Feijóo votó a Felipe González (PSOE) en las elecciones generales de 1982 y es algo conocido.",
     "veredicto": "no_verificable",
-    "explicacion": "El voto es secreto, así que no puede comprobarse. Sí consta que Feijóo lo declara públicamente desde hace años (por ejemplo, «Voté a González en el 82 y volvería a hacerlo», Público, 23 de septiembre de 2018), de modo que lo de «es conocido» es cierto, pero el hecho en sí solo descansa en su palabra. Tenía 21 años en 1982, por lo que podía votar.",
+    "explicacion": "El voto es secreto y no puede comprobarse. Sí consta que Feijóo lo dice públicamente desde hace años: en una entrevista publicada por El Mundo el 23 de septiembre de 2018 y recogida por Público afirmó «Voté a González en el 82 y volvería a hacerlo». Por tanto «es conocido» es cierto, pero el hecho en sí solo descansa en su palabra.",
     "confianza": "media",
     "fuentes": [
       {
@@ -126,16 +162,20 @@
     "cita": "Si a ti te han tenido que echar de tu partido, te echan de tu partido.",
     "afirmacion": "A Pedro Sánchez lo echaron de la secretaría general de su partido.",
     "veredicto": "mayormente_verdadero",
-    "explicacion": "El 1 de octubre de 2016 Sánchez perdió una votación en el Comité Federal del PSOE (132 votos contra 107) sobre su propuesta de congreso con primarias y dimitió como secretario general, forzado por la mayoría crítica encabezada por la dirección andaluza. Matiz: formalmente dimitió, no fue expulsado del partido, y recuperó el liderazgo en las primarias de 2017.",
+    "explicacion": "El 1 de octubre de 2016 Sánchez perdió en el Comité Federal del PSOE la votación sobre su propuesta de convocar un congreso extraordinario (132 votos en contra y 107 a favor según Orain y The Objective; 133 en contra según EFE) y dimitió como secretario general. Fue forzado por la mayoría crítica del partido, pero formalmente dimitió: no fue expulsado, de modo que «echar» es una expresión coloquial que simplifica los hechos.",
     "confianza": "media",
     "fuentes": [
       {
-        "titulo": "Wikipedia: 2016 PSOE crisis",
-        "url": "https://en.wikipedia.org/wiki/2016_PSOE_crisis"
+        "titulo": "Orain (agencias): Pedro Sánchez dimite como secretario general del PSOE (1-10-2016)",
+        "url": "https://orain.eus/es/politica/2016/10/01/pedro-sanchez-dimite-secretario-general-psoe/"
       },
       {
-        "titulo": "Orain: Pedro Sánchez dimite como secretario general del PSOE (1-10-2016)",
-        "url": "https://orain.eus/es/politica/2016/10/01/pedro-sanchez-dimite-secretario-general-psoe/"
+        "titulo": "The Objective: Pedro Sánchez dimite como secretario general del PSOE (1-10-2016)",
+        "url": "https://theobjective.com/espana/2016-10-01/pedro-sanchez-dimite-como-secretario-general-del-psoe/"
+      },
+      {
+        "titulo": "Los Tiempos/EFE: Dimisión de Sánchez abre paso a formación de Gobierno en España (1-10-2016)",
+        "url": "https://www.lostiempos.com/actualidad/mundo/20161001/dimision-sanchez-abre-paso-formacion-gobierno-espana"
       }
     ]
   },
@@ -144,7 +184,7 @@
     "cita": "yo me voy a presentar a secretario general si tú me apoyas, pero tú vas a ser la candidata a la presidencia del gobierno",
     "afirmacion": "Sánchez pactó con Susana Díaz que ella le apoyaría para ser secretario general y que ella sería la candidata a la presidencia del Gobierno, y lo incumplió.",
     "veredicto": "no_verificable",
-    "explicacion": "Hay versiones periodísticas y del entorno de Díaz de que su apoyo en 2014 implicaba que ella sería después la candidata a La Moncloa, pero no hay constancia documental de un pacto. Sánchez lo niega en su libro (Manual de resistencia, 2019): dice que Díaz no concurrió por su compromiso con Andalucía, no por un acuerdo con él. Con fuentes contradictorias y sin acuerdo público, no se puede confirmar ni desmentir.",
+    "explicacion": "Vozpópuli (22-5-2017) recoge que «mucho se ha hablado de un pacto no escrito, y menos confirmado por los implicados», según el cual Susana Díaz apoyaría a Sánchez en las primarias de 2014 a cambio de aplazar la decisión sobre la candidatura a La Moncloa. En su libro, Sánchez lo niega: «Susana no se presentó en aquel momento por su razonable compromiso con Andalucía, no por ningún pacto conmigo» (Libertad Digital, 20-2-2019). Sin constancia documental ni confirmación de las partes, no puede confirmarse ni desmentirse que hubiera un pacto ni que Sánchez lo incumpliera.",
     "confianza": "media",
     "fuentes": [
       {
@@ -152,12 +192,8 @@
         "url": "https://www.libertaddigital.com/espana/2019-02-20/sanchez-repudia-a-susana-diaz-en-su-libro-1276633466/"
       },
       {
-        "titulo": "El Independiente: La hora de Susana (25-3-2017)",
-        "url": "https://www.elindependiente.com/politica/2017/03/25/la-hora-de-susana/"
-      },
-      {
-        "titulo": "Wikipedia: 2016 PSOE crisis",
-        "url": "https://en.wikipedia.org/wiki/2016_PSOE_crisis"
+        "titulo": "Vozpópuli: Vuelve Pedro (22-5-2017)",
+        "url": "https://www.vozpopuli.com/espana/politica/vuelve-pedro_0_1028297456.html"
       }
     ]
   },
@@ -166,20 +202,24 @@
     "cita": "Vox es la tercera fuerza política de nuestro país le guste o no, le gusta a la izquierda o no pero tiene muchos más votos y mucha más expectativa electoral que toda la izquierda junta se ha excluido del Partido Socialista.",
     "afirmacion": "Vox es la tercera fuerza política y tiene muchos más votos y más expectativa electoral que toda la izquierda junta sin contar al PSOE.",
     "veredicto": "enganoso",
-    "explicacion": "Vox es tercera fuerza en votos y en las encuestas actuales (media del 13-11-2026: PP 31,4 %, PSOE 26,8 %, Vox 19,1 %, Frente Amplio 6,3 %, ERC 2,4 %, Podemos ~3 %), con ventaja de unos 5-6 puntos sobre la izquierda no socialista. Pero en votos reales (23-J de 2023) Vox sacó 3,06 millones frente a unos 4 millones de Sumar (3,04), ERC (0,47), Bildu (0,34) y BNG (0,15) juntos, así que «muchos más votos» es falso en el último resultado electoral y solo se sostiene como expectativa en sondeos.",
+    "explicacion": "Vox es la tercera fuerza y tiene más expectativa de voto: la media de encuestas del 13-11-2026 le da el 19,1 % frente al 6,3 % de Frente Amplio y el 2,4 % de ERC, y el CIS del 12-11 un 18,4 % frente al 4,7 % de Frente Amplio, 1,1 % de Podemos y 3,1 % de ERC. Pero en votos reales no tiene «muchos más»: en el 23-J de 2023 Vox obtuvo 3,06 millones y Sumar (3,04), ERC (0,47), Bildu (0,34) y BNG (0,15) sumaron unos 4,0 millones. La parte de las encuestas se sostiene; la de los votos, no.",
     "confianza": "media",
     "fuentes": [
       {
-        "titulo": "Demócrata: promedio de encuestas elecciones generales 2026 (13-11-2026)",
+        "titulo": "Demócrata: promedio de encuestas elecciones generales 2026 (actualizado el 13-11-2026)",
         "url": "https://www.democrata.es/encuestas/elecciones-generales/promedio-encuestas-elecciones-generales-adelanto-electoral-2026/"
       },
       {
-        "titulo": "Wikipedia: Elecciones generales de España de 2023 (votos por partido)",
-        "url": "https://es.wikipedia.org/wiki/Elecciones_generales_de_Espa%C3%B1a_de_2023"
+        "titulo": "Demócrata: Resultados del 23J (datos de Interior y de la Junta Electoral Central)",
+        "url": "https://www.democrata.es/elecciones-generales-espana/herramientas/resultados-23j"
       },
       {
         "titulo": "Artículo 14: Qué partidos forman Frente Amplio (7-11-2026)",
         "url": "https://www.articulo14.es/politica/que-partidos-forman-frente-amplio-integrantes-acuerdos-y-diferencias-con-sumar-20261107.html"
+      },
+      {
+        "titulo": "Ara: ¿Qué dicen las encuestas de las elecciones españolas del 29-N? (incluye CIS de 12-11-2026)",
+        "url": "https://es.ara.cat/politica/dicen-encuestas-elecciones-espanolas-29-n_1_5874092.html"
       }
     ]
   },
@@ -188,16 +228,16 @@
     "cita": "nos faltaron cuatro diputados para la mayoría suficiente para",
     "afirmacion": "En la legislatura anterior al PP le faltaron cuatro diputados para la mayoría necesaria para investir presidente a Feijóo.",
     "veredicto": "verdadero",
-    "explicacion": "Tras el 23-J de 2023, PP (137) + Vox (33) + UPN (1) + Coalición Canaria (1) sumaban 172 escaños, cuatro menos que la mayoría absoluta de 176 necesaria en la primera votación de investidura (septiembre de 2023, fallida).",
+    "explicacion": "En la primera votación de investidura del 27 de septiembre de 2023, el Diario de Sesiones del Congreso registra 350 votos emitidos: 172 a favor, 178 en contra y 0 abstenciones, y la Presidencia constata que no se alcanzó la mayoría absoluta exigida. La mayoría absoluta de 350 escaños son 176, es decir, cuatro más que los 172 apoyos de Feijóo (PP, Vox, UPN y Coalición Canaria), y RTVC lo resume como «a cuatro escaños de la mayoría absoluta».",
     "confianza": "alta",
     "fuentes": [
       {
-        "titulo": "Wikipedia: Elecciones generales de España de 2023",
-        "url": "https://es.wikipedia.org/wiki/Elecciones_generales_de_Espa%C3%B1a_de_2023"
+        "titulo": "Congreso de los Diputados: Diario de Sesiones, XV Legislatura, Pleno n.º 5 (debate de investidura de Feijóo, septiembre de 2023)",
+        "url": "https://www.congreso.es/public_oficiales/L15/CONG/DS/PL/DSCD-15-PL-5.PDF"
       },
       {
-        "titulo": "Noticias de Navarra: Feijóo, investidura fallida (25-9-2023)",
-        "url": "https://www.noticiasdenavarra.com/politica/2023/09/25/feijoo-investidura-fallida-7299315.html"
+        "titulo": "RTVC: Debate de investidura, el Congreso rechaza la candidatura de Feijóo (27-9-2023)",
+        "url": "https://rtvc.es/en-directo-segunda-sesion-debate-de-investidura-de-feijoo"
       }
     ]
   },
@@ -206,16 +246,24 @@
     "cita": "Tenemos que aprobar, por ejemplo, dos presupuestos en el año 27.",
     "afirmacion": "El próximo Gobierno tendrá que aprobar dos presupuestos generales en 2027: el de 2027 y el de 2028.",
     "veredicto": "mayormente_verdadero",
-    "explicacion": "Los PGE de 2023 siguen prorrogados desde 2024 (no se presentaron los de 2024, 2025 ni 2026), así que el nuevo Gobierno tendría que sacar adelante los de 2027, y el artículo 134 de la Constitución obliga a presentar los de 2028 al menos tres meses antes de acabar 2027 (antes del 1 de octubre), para su aprobación a final de ese año. Es una previsión, no un hecho consumado, y depende de que consiga mayoría en el Congreso.",
+    "explicacion": "España sigue con los PGE de 2023 prorrogados y el proyecto de 2027 no llegó a presentarse antes de disolverse las Cortes (Euronews, 27-9-2026; ESdiario, 5-10-2026), aunque Hacienda aprobó en julio de 2026 el techo de gasto de 2027 como base de ese proyecto. El nuevo Gobierno tendría, por tanto, que sacar adelante las cuentas de 2027 y, según el artículo 134.3 de la Constitución, presentar las de 2028 al menos tres meses antes de que expiren las de 2027 (antes del 1 de octubre de 2027). Es una previsión: la Constitución obliga a presentarlos, no a aprobarlos, y depende de tener mayoría.",
     "confianza": "media",
     "fuentes": [
       {
-        "titulo": "Wikipedia: Presupuestos Generales del Estado (estado de los PGE 2024-2026 y plazo del art. 134 CE)",
-        "url": "https://es.wikipedia.org/wiki/Presupuestos_Generales_del_Estado"
+        "titulo": "Ministerio de Hacienda: nota de prensa sobre el techo de gasto para 2027 (7-7-2026)",
+        "url": "https://www.hacienda.gob.es/es-ES/Prensa/Noticias/Paginas/2026/20260707-NP-CM-TECHO-GASTOS-2027.aspx"
       },
       {
-        "titulo": "Wikipedia: Tercer Gobierno de Pedro Sánchez (disolución de las Cortes el 5-10-2026)",
-        "url": "https://es.wikipedia.org/wiki/Tercer_Gobierno_de_Pedro_Sánchez"
+        "titulo": "Euronews: España cumple 1.000 días sin nuevos presupuestos (27-9-2026)",
+        "url": "https://es.euronews.com/2026/09/27/espana-cumple-1000-dias-sin-nuevos-presupuestos-es-un-hurto-a-los-ciudadanos"
+      },
+      {
+        "titulo": "ESdiario: primera vez en la historia que España cierra una legislatura entera sin PGE aprobados (5-10-2026)",
+        "url": "https://www.esdiario.com/economia/261005/199496/primera-vez-historia-espana-cierra-legislatura-entera-pge-aprobado.html"
+      },
+      {
+        "titulo": "Ministerio de Hacienda (repositorio normativo): Constitución Española, art. 134",
+        "url": "https://www.hacienda.gob.es/DocLeyes/repositorio%20normativa/22992.htm"
       }
     ]
   },
@@ -224,24 +272,28 @@
     "cita": "Ha habido cuatro pactos en los últimos meses. Andalucía, Castilla y León, Aragón y Extremadura con Vox. Hemos hecho un documento marco dentro de mi partido y ese documento se ha respetado.",
     "afirmacion": "En los últimos meses el PP ha cerrado cuatro pactos con Vox (Andalucía, Castilla y León, Aragón y Extremadura), basados en un documento marco del PP que se ha respetado.",
     "veredicto": "mayormente_verdadero",
-    "explicacion": "Los cuatro pactos existen: Extremadura (16 de abril de 2026), Aragón (22 de abril, Azcón investido el 29), Castilla y León (3 de junio) y Andalucía (2 de julio, con una vicepresidencia para Vox). El PP aprobó su documento marco en febrero de 2026 y Génova sostiene que se ha respetado, pero eso es su valoración: Vox y la oposición discuten su alcance, y los pactos incluyen la «prioridad nacional» en vivienda y ayudas, polémica que el PP interpreta como arraigo y dentro de la legalidad.",
+    "explicacion": "Los cuatro pactos con Vox existen: Extremadura (acuerdo del 16 de abril de 2026), Aragón (Azcón investido el 29 de abril), Castilla y León (acuerdo del 3 de junio) y Andalucía (Moreno reelegido el 2 de julio con una vicepresidencia para Vox). El PP hizo público su documento marco el 23 de febrero de 2026, con líneas rojas como la proporcionalidad, la coherencia programática, la igualdad entre ciudadanos y el respeto al reparto de competencias. Que «se ha respetado» es una valoración del PP: los pactos incluyen la «prioridad nacional» en ayudas y vivienda, que el PP defiende como criterio de arraigo y la oposición cuestiona, y Vox y la oposición discuten el alcance del documento.",
     "confianza": "media",
     "fuentes": [
       {
-        "titulo": "Moncloa.com: PP y Vox cierran el pacto de gobierno en Andalucía (3-7-2026)",
-        "url": "https://www.moncloa.com/2026/07/03/vox-andalucia-pacto-gobierno-consejerias-3393714"
+        "titulo": "RTVC/EFE: Juanma Moreno, reelegido presidente de Andalucía, con una vicepresidencia para Vox (3-7-2026)",
+        "url": "https://rtvc.es/moreno-reelegido-presidente-andalucia-con-vicepresidencia-vox-3-julio-2026/"
       },
       {
         "titulo": "The Objective: Azcón investido presidente de Aragón con el apoyo de Vox (29-4-2026)",
         "url": "https://theobjective.com/espana/politica/2026-04-29/azcon-investido-presidente-aragon-apoyo-vox/"
       },
       {
-        "titulo": "Deia: PP y Vox, una agenda común en cuatro comunidades (2-11-2026)",
-        "url": "https://www.deia.eus/politica/2026/11/02/pp-vox-agenda-comun-cuatro-11713781.html"
+        "titulo": "Euronews: PP y Vox cierran su acuerdo de gobierno en Castilla y León para investir a Mañueco (3-6-2026)",
+        "url": "https://es.euronews.com/2026/06/03/pp-y-vox-cierran-su-acuerdo-de-gobierno-en-castilla-y-leon-para-investir-a-manueco"
       },
       {
-        "titulo": "Moncloa.com: Gamarra fija el documento marco del PP como base para acuerdos con Vox (28-5-2026)",
-        "url": "https://www.moncloa.com/2026/05/28/gamarra-documento-marco-acuerdo-vox-andalucia-3380431/"
+        "titulo": "Ara: PP y Vox llegan a un acuerdo en Extremadura (16-4-2026)",
+        "url": "https://es.ara.cat/politica/pp-vox-llegan-acuerdo-extremadura_1_5709797.html"
+      },
+      {
+        "titulo": "El Debate: el PP fija como líneas rojas la proporcionalidad, la estabilidad presupuestaria y el respeto institucional en el marco de acuerdos con Vox (24-2-2026)",
+        "url": "https://www.eldebate.com/espana/20260224/pp-fija-como-lineas-rojas-proporcionalidad-estabilidad-presupuestaria-respeto-institucional-marco-acuerdos-vox_388642.html"
       }
     ]
   },
@@ -250,16 +302,20 @@
     "cita": "el primer pacto de Estado es en la época de Rajoy",
     "afirmacion": "El primer Pacto de Estado contra la violencia de género se aprobó en la época de Rajoy.",
     "veredicto": "verdadero",
-    "explicacion": "El Pacto de Estado contra la Violencia de Género se aprobó en el Congreso el 28 de septiembre de 2017 (268 votos a favor y 65 abstenciones) y en el Senado en septiembre de 2017, con Mariano Rajoy como presidente del Gobierno.",
+    "explicacion": "El Pleno del Congreso aprobó el Pacto de Estado contra la Violencia de Género el 28 de septiembre de 2017, con el apoyo del PP y la abstención de Unidos Podemos, y la Conferencia Sectorial de Igualdad lo aprobó con las comunidades el 27 de diciembre de 2017, bajo el Gobierno de Mariano Rajoy (nota del ministerio, con Dolors Montserrat al frente). Las fuentes difieren en el recuento exacto de votos (268 o 278 a favor), pero no en la fecha ni en el Gobierno.",
     "confianza": "alta",
     "fuentes": [
       {
-        "titulo": "Infocop: El Congreso de los Diputados aprueba el Pacto de Estado contra la violencia de género",
+        "titulo": "Infocop: El Congreso de los Diputados aprueba el Pacto de Estado contra la violencia de género (2-10-2017)",
         "url": "https://www.infocop.es/el-congreso-de-los-diputados-aprueba-el-pacto-de-estado-contra-la-violencia-de-genero/"
       },
       {
-        "titulo": "The Objective: Aprobado el Pacto de Estado de violencia de género con la abstención de Podemos",
+        "titulo": "The Objective: Aprobado el Pacto de Estado de violencia de género con la abstención de Podemos (28-9-2017)",
         "url": "https://theobjective.com/aprobado-el-pacto-de-estado-de-violencia-de-genero-con-la-abstencion-de-podemos/"
+      },
+      {
+        "titulo": "Ministerio de Sanidad, Servicios Sociales e Igualdad: Dolors Montserrat, «Hoy hemos logrado un acuerdo histórico aprobando el Pacto de Estado de violencia de género» (27-12-2017)",
+        "url": "https://www.sanidad.gob.es/gabinete/notasPrensa.do?id=4277"
       }
     ]
   },
@@ -267,8 +323,8 @@
     "minuto": "0:16:03",
     "cita": "Y yo a Sánchez le he suscrito el pacto al que hemos llegado hace unos meses, por tanto está vigente",
     "afirmacion": "Feijóo y el PP suscribieron con Sánchez la renovación del Pacto de Estado contra la violencia de género hace unos meses, y está vigente.",
-    "veredicto": "enganoso",
-    "explicacion": "La renovación del Pacto de Estado se aprobó en el Pleno del Congreso el 26 de febrero de 2025 con el voto favorable del PP y el PSOE y solo Vox en contra; no hay constancia de una renovación posterior en 2026. Es vigente, pero tiene casi dos años, no «unos meses», y fue un dictamen parlamentario votado por los grupos, no un pacto firmado personalmente entre Feijóo y Sánchez.",
+    "veredicto": "mayormente_verdadero",
+    "explicacion": "La renovación del Pacto de Estado se aprobó en comisión en febrero de 2025 y en el Pleno del Congreso el 26 de febrero de 2025, con el apoyo de todos los grupos salvo Vox, incluidos PP y PSOE; el pacto sigue vigente y no he encontrado una renovación posterior en 2026. La parte esencial (el PP respaldó la renovación y está en vigor) es cierta, pero no fue «hace unos meses» sino hace casi dos años, y fue un dictamen votado por los grupos, no un acuerdo firmado personalmente entre Feijóo y Sánchez.",
     "confianza": "media",
     "fuentes": [
       {
@@ -276,8 +332,8 @@
         "url": "https://www.articulo14.es/politica/el-congreso-aprueba-la-renovacion-del-pacto-contra-la-violencia-de-genero-20250226.html"
       },
       {
-        "titulo": "Infobae/EFE: Feijóo carga contra Sánchez por las pulseras antimaltrato (13-11-2026)",
-        "url": "https://www.infobae.com/espana/agencias/2026/11/13/feijoo-carga-contra-sanchez-por-las-pulseras-antimaltrato-de-aliexpres-este-gobierno-es-un-peligro-para-las-mujeres/"
+        "titulo": "Infocop: El Congreso de los Diputados renueva el Pacto de Estado contra la Violencia de Género (febrero de 2025)",
+        "url": "https://www.infocop.es/el-congreso-de-los-diputados-renueva-el-pacto-de-estado-contra-la-violencia-de-genero/"
       }
     ]
   },
@@ -286,16 +342,24 @@
     "cita": "Hay 22 ministerios. Hay 22 actualmente, son muchos.",
     "afirmacion": "Actualmente el Gobierno de España tiene 22 ministerios.",
     "veredicto": "verdadero",
-    "explicacion": "El Gobierno de Sánchez mantiene 22 ministerios desde noviembre de 2023; los cambios de 2025-2026 (salidas de Alegría y Montero, dimisión de Puente el 4 de noviembre de 2026) no han alterado el número de carteras. Carlos Cuerpo acumula ahora dos, de modo que 21 personas ocupan los 22 ministerios.",
+    "explicacion": "El Real Decreto 829/2023 fijó 22 departamentos ministeriales (texto consolidado en el repositorio de Hacienda, con reformas hasta enero de 2024) y EFE confirmó los 22 en noviembre de 2023. Los cambios posteriores han sido de personas, no de estructura: Arcadi España sustituyó a Montero en Hacienda en marzo de 2026 y, tras la dimisión de Óscar Puente en noviembre de 2026, Sánchez no nombró nuevo ministro y Carlos Cuerpo asume Transportes de forma transitoria, de modo que los 22 ministerios siguen existiendo. BOE y Moncloa no responden desde esta máquina, por lo que el recuento actual se apoya en este repositorio oficial y en prensa.",
     "confianza": "alta",
     "fuentes": [
       {
-        "titulo": "Wikipedia: Tercer Gobierno de Pedro Sánchez",
-        "url": "https://es.wikipedia.org/wiki/Tercer_Gobierno_de_Pedro_Sánchez"
+        "titulo": "Ministerio de Hacienda (repositorio normativo): Real Decreto 829/2023, de 20 de noviembre, por el que se reestructuran los departamentos ministeriales",
+        "url": "https://www.hacienda.gob.es/DocLeyes/repositorio%20normativa/84910.htm"
       },
       {
-        "titulo": "RTVC: Sánchez mantendrá un Gobierno con 22 ministerios, cinco para Sumar",
+        "titulo": "RTVC/EFE: Sánchez mantendrá un Gobierno con 22 ministerios, cinco para Sumar (20-11-2023)",
         "url": "https://rtvc.es/sanchez-mantendra-un-gobierno-con-22-ministerios-cinco-para-sumar/"
+      },
+      {
+        "titulo": "Artículo 14: Carlos Cuerpo asume de forma transitoria el Ministerio de Transportes (4-11-2026)",
+        "url": "https://www.articulo14.es/politica/cuerpo-asumira-de-forma-transitoria-el-ministerio-de-transportes-20261104.html"
+      },
+      {
+        "titulo": "Infobae (Europa Press): Sánchez nombra a Cuerpo vicepresidente primero y a Arcadi España nuevo ministro de Hacienda (26-3-2026)",
+        "url": "https://www.infobae.com/espana/agencias/2026/03/26/sanchez-nombra-a-cuerpo-vicepresidente-primero-y-a-arcadi-espana-nuevo-ministro-de-hacienda/"
       }
     ]
   },
@@ -304,7 +368,7 @@
     "cita": "el gobierno más mastodóntico de la democracia es el de Sánchez",
     "afirmacion": "El Gobierno de Sánchez es el más grande (más numeroso) de la democracia española.",
     "veredicto": "enganoso",
-    "explicacion": "Sus 22 ministerios son muchos y el máximo desde los años de Suárez, pero no es el mayor de la democracia: los gabinetes de Suárez de 1979-1981 tuvieron 22 y 23 ministros (24 miembros contando al presidente y los vicepresidentes, con varios sin cartera específica), según The Objective, Maldita.es y EFE. Los gobiernos de González, Aznar, Zapatero y Rajoy fueron bastante más pequeños, por lo que la frase es cierta solo en parte, según se cuenten ministerios o ministros.",
+    "explicacion": "El Gobierno de Sánchez, con 22 ministerios, es el mayor desde Suárez, pero no es el mayor de la democracia: según The Objective, los Consejos de Ministros de Suárez de 1979-1980 tuvieron 22 y 23 miembros sin contar al presidente (muchos sin cartera), y EFE (2020) ya describió el de Sánchez como el segundo más grande, con Suárez en 1979 por delante. Los de González (15), Zapatero (16), Aznar (14) y Rajoy (13) fueron más pequeños. El superlativo es exagerado, aunque la diferencia con Suárez es de uno o dos miembros según cómo se cuenten.",
     "confianza": "media",
     "fuentes": [
       {
@@ -312,11 +376,7 @@
         "url": "https://theobjective.com/espana/politica/2023-11-25/ministerios-italia-chipre-espana/"
       },
       {
-        "titulo": "Maldita.es: el nuevo Gobierno paritario y el tercero más numeroso de la historia (2020)",
-        "url": "https://maldita.es/malditodato/20200112/el-nuevo-gobierno-paritario-y-el-tercero-mas-numeroso-de-la-historia/"
-      },
-      {
-        "titulo": "Menorca.info/EFE: el Gobierno de Sánchez será el segundo más grande de la democracia (10-1-2020)",
+        "titulo": "Menorca.info/EFE: El Gobierno de Sánchez será el segundo más grande de la democracia (10-1-2020)",
         "url": "https://www.menorca.info/actualidad/nacional/2020/01/10/1613972/nuevo-gobierno-sanchez-sera-segundo-mas-grande-democracia-1.html"
       }
     ]
@@ -326,9 +386,13 @@
     "cita": "estamos ante el Estado más descentralizado de Europa",
     "afirmacion": "España es el Estado más descentralizado de Europa y probablemente del mundo.",
     "veredicto": "enganoso",
-    "explicacion": "España figura entre los países más descentralizados de Europa y de la OCDE (en gasto subnacional y autonomía regional, junto a Alemania, Suiza, Austria o Bélgica), pero ningún indicador la sitúa de forma inequívoca como la más descentralizada: según el índice de autoridad regional y el indicador escogido, Alemania o Suiza la superan, y en descentralización de ingresos las comunidades manejan relativamente menos presupuesto propio que, por ejemplo, las provincias canadienses. Con el «probablemente» queda atenuado, pero «el más descentralizado» es una exageración de un dato real.",
-    "confianza": "media",
+    "explicacion": "España es uno de los Estados más descentralizados del mundo, pero no el primero: Funcas (2025) señala que su ratio de gasto en manos de gobiernos autonómicos solo es superada por EE. UU., Canadá, Suiza y Australia, aunque lidera la autonomía tributaria regional dentro de la UE-27; en el índice de autoridad regional (RAI) Elcano la sitúa segunda del mundo, solo por detrás de Alemania, y El Orden Mundial cita a Alemania, Suiza y Austria entre los más descentralizados. «El más descentralizado de Europa» depende del indicador y «del mundo» no se sostiene; el «probablemente» solo atenúa en parte. No he podido abrir las fuentes primarias (OCDE, Eurostat, Banco de España), por lo que la confianza es baja.",
+    "confianza": "baja",
     "fuentes": [
+      {
+        "titulo": "Funcas: La gobernanza fiscal multinivel en España. Análisis y propuestas de reforma (12-2025)",
+        "url": "https://www.funcas.es/wp-content/uploads/2025/07/La-gobernanza-fiscal-multinivel-en-Espana-Analisis-y-propuestas-de-reforma.pdf"
+      },
       {
         "titulo": "El Orden Mundial: Las regiones con mayor autonomía de Europa",
         "url": "https://elordenmundial.com/mapas-y-graficos/regiones-mayor-autonomia-europa/"
@@ -336,10 +400,6 @@
       {
         "titulo": "Real Instituto Elcano: El conflicto independentista en Cataluña (índice de autoridad regional)",
         "url": "https://www.realinstitutoelcano.org/documento-de-trabajo/el-conflicto-independentista-en-cataluna/"
-      },
-      {
-        "titulo": "Banco de España: El gasto público en España desde una perspectiva europea",
-        "url": "https://www.bde.es/f/webbde/SES/Secciones/Publicaciones/PublicacionesSeriadas/DocumentosOcasionales/22/Fich/do2217.pdf"
       }
     ]
   },
@@ -348,16 +408,12 @@
     "cita": "que por cierto, son los representantes ordinarios del Estado en su ámbito territorial",
     "afirmacion": "Los presidentes de las comunidades autónomas son los representantes ordinarios del Estado en su territorio.",
     "veredicto": "verdadero",
-    "explicacion": "El artículo 152.1 de la Constitución y los estatutos de autonomía atribuyen al presidente de cada comunidad la dirección del Consejo de Gobierno, la suprema representación de la comunidad y «la ordinaria del Estado» en ella. La atribución es al presidente autonómico, no a las comunidades en abstracto, y es una representación formal sin efecto sobre las competencias estatales (que ejerce el delegado del Gobierno).",
-    "confianza": "media",
+    "explicacion": "El artículo 152.1 de la Constitución dispone que el presidente de la comunidad autónoma, elegido por la Asamblea y nombrado por el Rey, ostenta «la dirección del Consejo de Gobierno, la suprema representación de la respectiva Comunidad y la ordinaria del Estado en aquélla». La atribución es al presidente autonómico, no a la comunidad en abstracto, y es una representación formal que no altera el reparto de competencias.",
+    "confianza": "alta",
     "fuentes": [
       {
-        "titulo": "Portal de la Constitución (Congreso de los Diputados): texto de la Constitución, art. 152",
-        "url": "https://constitucion.congreso.es/constitucion-1978/texto-de-la-constitucion"
-      },
-      {
-        "titulo": "Wikipedia: Presidente de la Junta de Galicia (funciones según el Estatuto)",
-        "url": "https://es.wikipedia.org/wiki/Presidente_de_la_Junta_de_Galicia"
+        "titulo": "Ministerio de Hacienda (repositorio normativo): Constitución Española, art. 152.1",
+        "url": "https://www.hacienda.gob.es/DocLeyes/repositorio%20normativa/22992.htm"
       }
     ]
   },
@@ -365,17 +421,17 @@
     "minuto": "0:18:10",
     "cita": "igualdad en mi época de presidente de Galicia dependía de mí, de la presidencia del gobierno. Y después lo único en trabajo.",
     "afirmacion": "Durante su presidencia de la Xunta, la Secretaría General de Igualdad dependía de la Presidencia y después se integró con Trabajo/Empleo.",
-    "veredicto": "no_verificable",
-    "explicacion": "Está documentado que la Secretaría Xeral da Igualdade existió bajo su mandato (dirigida por Susana López Abella desde diciembre de 2012) y que en 2020 se creó la Consellería de Emprego e Igualdade, lo que respalda la segunda parte. No he podido confirmar con una fuente que antes dependiera orgánicamente de la Presidencia de la Xunta, ni las fechas exactas de cada adscripción.",
-    "confianza": "baja",
+    "veredicto": "verdadero",
+    "explicacion": "El Decreto 325/2009 (DOG del 19-6-2009, ya con Feijóo de presidente) disponía que la Secretaría General de la Igualdad dependía funcionalmente de la Presidencia de la Xunta y orgánicamente de la Consellería de Presidencia. En 2020 se creó la Consellería de Emprego e Igualdade, que, según el preámbulo del Decreto 215/2020, refundió el área de empleo con la Secretaría Xeral da Igualdade, hasta entonces incardinada en la Vicepresidencia y Consellería de Presidencia. Lo que dice Feijóo es, pues, correcto; la dependencia era de la Presidencia en sentido administrativo y su integración con empleo llegó en 2020, aún con él como presidente.",
+    "confianza": "alta",
     "fuentes": [
       {
-        "titulo": "Galipedia: Consellería de Emprego e Igualdade (creada en 2020)",
-        "url": "https://gl.wikipedia.org/wiki/Consellería_de_Emprego_e_Igualdade"
+        "titulo": "DOG núm. 119 (19-6-2009): Decreto 325/2009, de 18 de junio, de estructura orgánica de los órganos superiores dependientes de la Presidencia de la Xunta de Galicia",
+        "url": "https://www.xunta.gal/dog/Publicados/2009/20090619/Anuncio2011A_es.html"
       },
       {
-        "titulo": "Galipedia: Susana López Abella (Secretaria Xeral da Igualdade desde 2012)",
-        "url": "https://gl.wikipedia.org/wiki/Susana_López_Abella"
+        "titulo": "Xunta de Galicia (Lex.gal): Decreto 215/2020, do 3 de decembro, polo que se establece a estrutura orgánica da Consellería de Emprego e Igualdade",
+        "url": "https://www.lex.gal/normativa/detalle/8767/pdf/"
       }
     ]
   },
@@ -384,16 +440,12 @@
     "cita": "verás que en el Principado de Asturias no hay una Consejería de Igualdad",
     "afirmacion": "En el Principado de Asturias, gobernado por el PSOE, no existe una Consejería de Igualdad.",
     "veredicto": "mayormente_verdadero",
-    "explicacion": "No hay una consejería dedicada solo a Igualdad: el área está integrada en la de «Presidencia, Reto Demográfico, Igualdad y Turismo», dirigida por la vicepresidenta Gimena Llamedo en el segundo Gobierno de Adrián Barbón. Es el modelo de integración en otro departamento que Feijóo pone como ejemplo, aunque Igualdad sí figura en el nombre de esa consejería.",
+    "explicacion": "El Principado de Asturias no tiene una consejería dedicada solo a Igualdad: el área está integrada en la «Consejería de Presidencia, Reto Demográfico, Igualdad y Turismo», que sigue existiendo con esa denominación en el BOPA del 23 de junio de 2026 (resolución firmada por la consejera Gimena Llamedo). Es el modelo de integración que Feijóo pone de ejemplo, aunque Igualdad figura en el nombre de esa consejería, matiz que la frase omite.",
     "confianza": "media",
     "fuentes": [
       {
-        "titulo": "Wikipedia: Gobierno del Principado de Asturias (consejerías del segundo Gobierno Barbón)",
-        "url": "https://es.wikipedia.org/wiki/Gobierno_del_Principado_de_Asturias"
-      },
-      {
-        "titulo": "Wikipedia: Gobierno de Asturias",
-        "url": "https://es.wikipedia.org/wiki/Gobierno_de_Asturias"
+        "titulo": "BOPA núm. 119 (23-6-2026): Resolución de 28 de abril de 2026 de la Consejería de Presidencia, Reto Demográfico, Igualdad y Turismo",
+        "url": "https://www.asturias.es/bopa/2026/06/23/2026-05104.pdf"
       }
     ]
   }

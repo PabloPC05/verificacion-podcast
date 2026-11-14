@@ -4,13 +4,37 @@
     "cita": "Por un incremento masivo de población y, por lo tanto, se produce más. No, no, no, no, no de productividad, sino de población.",
     "afirmacion": "La economía española ha crecido más que la media de la UE, y lo ha hecho por el aumento de población y no por el de la productividad.",
     "veredicto": "mayormente_verdadero",
-    "explicacion": "Es cierto que España crece por encima de la UE: en 2025 el PIB real subió un 2,6% (Eurostat, provisional; el INE da 2,8%) frente al 1,4% de la UE. Entre 2018 y 2025 el PIB real español creció un 12,2% y la población un 6,3% (46,66 a 49,60 millones, INE), por lo que el PIB per cápita solo subió un 6,2%, menos que el 7,9% de la UE, y la productividad por ocupado no ha mejorado. La explicación es correcta a grandes rasgos, pero simplifica: la población explica aproximadamente la mitad del aumento, y el resto lo aportan más horas trabajadas y más empleo.",
+    "explicacion": "Es cierto que España crece por encima de la UE: en 2025 el PIB real subió un 2,6% (Eurostat, provisional; el INE da 2,8%) frente al 1,4% de la UE. Entre 2018 y 2025 el PIB real aumentó un 12,2% y la población un 6,3% (de 46,66 a 49,60 millones, INE), pero el PIB real per cápita solo creció un 6,2%, menos que el 7,9% de la UE, y el PIB por ocupado cayó un 1,5% (el empleo subió un 13,9%). La explicación es correcta a grandes rasgos, pero simplifica: la población explica aproximadamente la mitad del aumento y el resto lo aportan más empleo y más horas trabajadas.",
     "confianza": "media",
     "fuentes": [
-      {"titulo": "Eurostat (API, nama_10_gdp): crecimiento real del PIB de España y la UE-27, 2023-2025", "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_gdp?format=JSON&lang=EN&geo=ES&geo=EU27_2020&na_item=B1GQ&unit=CLV_PCH_PRE&sinceTimePeriod=2023"},
-      {"titulo": "Eurostat (API, nama_10_pc): PIB real per cápita de España y la UE-27, 2018-2025", "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_pc?format=JSON&lang=EN&geo=ES&geo=EU27_2020&na_item=B1GQ&unit=CLV10_EUR_HAB&sinceTimePeriod=2018"},
-      {"titulo": "Eurostat (API, nama_10_gdp): PIB de España en volumen encadenado, 2018-2025", "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_gdp?format=JSON&lang=EN&geo=ES&na_item=B1GQ&unit=CLV10_MEUR&sinceTimePeriod=2018"},
-      {"titulo": "El INE confirma que el PIB creció un 2,8% en 2025 (Deia, 26/03/2026)", "url": "https://www.deia.eus/economia/2026/03/26/ine-confirma-pib-crecio-2-10869286.amp.html"}
+      {
+        "titulo": "Eurostat (API, nama_10_gdp): crecimiento real del PIB de España y la UE-27, 2023-2025",
+        "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_gdp?format=JSON&lang=EN&geo=ES&geo=EU27_2020&na_item=B1GQ&unit=CLV_PCH_PRE&sinceTimePeriod=2023"
+      },
+      {
+        "titulo": "Eurostat (API, nama_10_pc): PIB real per cápita de España y la UE-27, 2018-2025",
+        "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_pc?format=JSON&lang=EN&geo=ES&geo=EU27_2020&na_item=B1GQ&unit=CLV10_EUR_HAB&sinceTimePeriod=2018"
+      },
+      {
+        "titulo": "Eurostat (API, nama_10_gdp): PIB de España en volumen encadenado, 2018-2025",
+        "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_gdp?format=JSON&lang=EN&geo=ES&na_item=B1GQ&unit=CLV10_MEUR&sinceTimePeriod=2018"
+      },
+      {
+        "titulo": "Eurostat (API, nama_10_pe): empleo total en España, 2018-2025",
+        "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_pe?format=JSON&lang=EN&geo=ES&na_item=EMP_DC&unit=THS_PER&unit=THS_HW&sinceTimePeriod=2018"
+      },
+      {
+        "titulo": "INE, Contabilidad Nacional Trimestral de España, 4.º trimestre de 2025 (PIB 2025 +2,8%; productividad)",
+        "url": "https://ine.es/dyngs/Prensa/CNTR4T25.htm?print=1"
+      },
+      {
+        "titulo": "INE, Estadística Continua de Población, 2.º trimestre de 2026 (6/08/2026)",
+        "url": "https://www.ine.es/dyngs/Prensa/ECP2T26.htm"
+      },
+      {
+        "titulo": "INE, Cifras de población a 1 de enero de 2019 (incluye 1 de enero de 2018 y extranjeros 2018)",
+        "url": "https://www.ine.es/prensa/cp_e2019_p.pdf"
+      }
     ]
   },
   {
@@ -18,13 +42,29 @@
     "cita": "La productividad en España ha bajado.",
     "afirmacion": "La productividad en España ha bajado.",
     "veredicto": "mayormente_verdadero",
-    "explicacion": "El PIB real por ocupado ha caído alrededor de un 1,5% entre 2018 y 2025 (PIB real +12,2% frente a empleo +13,9% en contabilidad nacional de Eurostat), y BBVA Research y Fedea señalan que el PIB por ocupado sigue por debajo del nivel prepandemia. La productividad por hora trabajada, en cambio, está un 1,4% por encima de 2019 (cuarto trimestre de 2025), es decir, estancada más que en descenso.",
+    "explicacion": "El PIB real por ocupado bajó alrededor de un 1,5% entre 2018 y 2025 (PIB real +12,2% frente a empleo +13,9% en contabilidad nacional de Eurostat), y BBVA Research y Fedea sitúan el PIB por ocupado por debajo del nivel prepandemia. En cambio, la productividad por hora está un 1,4% por encima de 2019 (BBVA Research/Fedea, 4.º trimestre de 2025) y el INE registra +0,5% interanual por hora y -0,1% por puesto equivalente a tiempo completo en ese trimestre. Es más estancamiento que caída, y «ha bajado» solo es exacto medida por persona ocupada.",
     "confianza": "media",
     "fuentes": [
-      {"titulo": "La productividad por hora apenas supera en un 1,4% los niveles previos a la pandemia (El Independiente, 25/02/2026, con datos de BBVA Research y Fedea)", "url": "https://www.elindependiente.com/economia/2026/02/25/la-productividad-por-hora-apenas-supera-en-un-14-los-niveles-previos-a-la-pandemia/amp/"},
-      {"titulo": "Eurostat (API, nama_10_pe): empleo total en España, 2018-2025", "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_pe?format=JSON&lang=EN&geo=ES&na_item=EMP_DC&unit=THS_PER&unit=THS_HW&sinceTimePeriod=2018"},
-      {"titulo": "Eurostat (API, nama_10_gdp): PIB de España en volumen encadenado, 2018-2025", "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_gdp?format=JSON&lang=EN&geo=ES&na_item=B1GQ&unit=CLV10_MEUR&sinceTimePeriod=2018"},
-      {"titulo": "Horas trabajadas y productividad: ¿es España un caso atípico en la UE? (CaixaBank Research, 06/02/2026)", "url": "https://www.caixabankresearch.com/es/economia-y-mercados/actividad-y-crecimiento/horas-trabajadas-y-productividad-espana-caso-atipico-ue"}
+      {
+        "titulo": "Eurostat (API, nama_10_gdp): PIB de España en volumen encadenado, 2018-2025",
+        "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_gdp?format=JSON&lang=EN&geo=ES&na_item=B1GQ&unit=CLV10_MEUR&sinceTimePeriod=2018"
+      },
+      {
+        "titulo": "Eurostat (API, nama_10_pe): empleo total en España, 2018-2025",
+        "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_pe?format=JSON&lang=EN&geo=ES&na_item=EMP_DC&unit=THS_PER&unit=THS_HW&sinceTimePeriod=2018"
+      },
+      {
+        "titulo": "INE, Contabilidad Nacional Trimestral de España, 4.º trimestre de 2025 (PIB 2025 +2,8%; productividad)",
+        "url": "https://ine.es/dyngs/Prensa/CNTR4T25.htm?print=1"
+      },
+      {
+        "titulo": "La productividad por hora apenas supera en un 1,4% los niveles previos a la pandemia (El Independiente, 25/02/2026, con datos de BBVA Research y Fedea)",
+        "url": "https://www.elindependiente.com/economia/2026/02/25/la-productividad-por-hora-apenas-supera-en-un-14-los-niveles-previos-a-la-pandemia/amp/"
+      },
+      {
+        "titulo": "CaixaBank Research: Horas trabajadas y productividad: ¿es España un caso atípico en la UE? (06/02/2026)",
+        "url": "https://www.caixabankresearch.com/es/economia-y-mercados/actividad-y-crecimiento/horas-trabajadas-y-productividad-espana-caso-atipico-ue"
+      }
     ]
   },
   {
@@ -32,24 +72,47 @@
     "cita": "La competitividad de nuestra economía ha bajado.",
     "afirmacion": "La competitividad de la economía española ha bajado.",
     "veredicto": "no_verificable",
-    "explicacion": "«Competitividad» no está definida y los indicadores dan señales mezcladas: el ranking IMD sitúa a España en el puesto 39 de 70 en 2026, igual que en 2025, y no he podido contrastar la posición de 2018 en una fuente consultable. Sin un indicador y un periodo de referencia concretos no se puede dar un veredicto.",
+    "explicacion": "«Competitividad» no está definida y los indicadores dan señales mezcladas: el ranking IMD situó a España en el puesto 36 de 63 en 2018 y en el 39 de 70 en 2026 (igual que en 2025), una caída pequeña en un ranking con más países, con el pilar de desempeño económico mejorando (de 35 a 22) y la productividad y la eficiencia del Gobierno empeorando (productividad del 40 al 47, eficiencia del Gobierno 58). Sin un indicador y un periodo concretos no se puede dar un veredicto; no he encontrado una fuente oficial que mida la competitividad en 2018 y hoy.",
     "confianza": "baja",
     "fuentes": [
-      {"titulo": "España se estanca en el índice mundial de competitividad (El Observador, 18/06/2026)", "url": "https://www.elobservador.com.uy/espana/economia-y-finanzas/espana-se-estanca-el-indice-mundial-competitividad-pesar-del-despliegue-los-fondos-europeos-n6047810"}
+      {
+        "titulo": "España se estanca en el índice mundial de competitividad (El Observador, 18/06/2026)",
+        "url": "https://www.elobservador.com.uy/espana/economia-y-finanzas/espana-se-estanca-el-indice-mundial-competitividad-pesar-del-despliegue-los-fondos-europeos-n6047810"
+      },
+      {
+        "titulo": "Hosteltur: España pierde posiciones entre las economías más competitivas del mundo (IMD 2018, 26/05/2018)",
+        "url": "https://www.hosteltur.com/128313_espana-pierde-posiciones-economias-competitivas-mundo.html"
+      }
     ]
   },
   {
     "minuto": "0:20:21",
     "cita": "Lo que se ha incrementado son más de 4 millones de ciudadanos, mayoritariamente inmigrantes, todos inmigrantes, porque el saldo vegetativo de España es negativo.",
     "afirmacion": "La población de España ha aumentado en más de 4 millones de personas, todas inmigrantes, porque el saldo vegetativo es negativo.",
-    "veredicto": "enganoso",
-    "explicacion": "La dirección es correcta, pero la cifra no: la población pasó de 46.658.447 (1 de enero de 2018) a 49.596.376 (1 de enero de 2026), unos 2,9 millones más, y a 49.801.559 el 1 de julio de 2026 (unos 3,1 millones más), no más de 4 millones. El aumento se debe casi por completo a los extranjeros (de 4,56 a 7,24 millones, unos +2,7 millones), pero la población de nacionalidad española no cayó (subió unos 0,25 millones, en parte por nacionalizaciones), así que «todos inmigrantes» es una simplificación. El saldo vegetativo es efectivamente negativo (unos -122.000 en 2025, según datos provisionales del INE).",
-    "confianza": "media",
+    "veredicto": "falso",
+    "explicacion": "La población pasó de 46.658.447 (1 de enero de 2018) a 49.596.376 (1 de enero de 2026) y a 49.801.559 el 1 de julio de 2026 (INE): entre 2,9 y 3,1 millones más, no «más de 4 millones». Acierta en la dirección: el aumento se debe casi todo a los extranjeros (de 4,56 a 7,24 millones, unos +2,7 millones) y el saldo vegetativo es negativo (unos -122.000 en 2025, dato provisional del INE). Pero la población de nacionalidad española no cayó (de 42,10 a 42,33 millones, +0,23 millones, en parte por nacionalizaciones), así que «todos inmigrantes» también simplifica.",
+    "confianza": "alta",
     "fuentes": [
-      {"titulo": "INE, Estadística Continua de Población, 2.º trimestre de 2026 (6/08/2026)", "url": "https://www.ine.es/dyngs/Prensa/ECP2T26.htm"},
-      {"titulo": "INE, Estadística Continua de Población, 4.º trimestre de 2025 (12/02/2026)", "url": "https://ine.es/dyngs/Prensa/ECP4T25.htm"},
-      {"titulo": "INE, Cifras de población a 1 de enero de 2019 (incluye 1 de enero de 2018)", "url": "https://www.ine.es/prensa/cp_e2019_p.pdf"},
-      {"titulo": "INE, Proyecciones de población 2026-2076 (saldo vegetativo negativo)", "url": "https://ine.es/dyngs/Prensa/PROP20262076.htm"}
+      {
+        "titulo": "INE, Estadística Continua de Población, 2.º trimestre de 2026 (6/08/2026)",
+        "url": "https://www.ine.es/dyngs/Prensa/ECP2T26.htm"
+      },
+      {
+        "titulo": "INE, Estadística Continua de Población, 4.º trimestre de 2025 (12/02/2026)",
+        "url": "https://ine.es/dyngs/Prensa/ECP4T25.htm"
+      },
+      {
+        "titulo": "INE, Cifras de población a 1 de enero de 2019 (incluye 1 de enero de 2018 y extranjeros 2018)",
+        "url": "https://www.ine.es/prensa/cp_e2019_p.pdf"
+      },
+      {
+        "titulo": "INE, Estimación del Movimiento Natural de la Población 2025, datos provisionales (18/02/2026)",
+        "url": "https://ine.es/dyngs/Prensa/EDES_EMN2025.htm"
+      },
+      {
+        "titulo": "INE, Proyecciones de población 2026-2076 (saldo vegetativo negativo)",
+        "url": "https://ine.es/dyngs/Prensa/PROP20262076.htm"
+      }
     ]
   },
   {
@@ -57,12 +120,21 @@
     "cita": "se ha incrementado un 22% el gasto público",
     "afirmacion": "El gasto público se ha incrementado un 22%.",
     "veredicto": "mayormente_verdadero",
-    "explicacion": "El gasto total de las administraciones públicas pasó de 503.193 millones en 2018 a 766.296 millones en 2025 (Eurostat), un +52% nominal. Deflactado con el deflactor del PIB (+24%) el aumento real es de aproximadamente +22,5%, que coincide con su cifra, pero Feijóo no aclara que habla en términos reales ni el periodo de partida. En porcentaje del PIB el gasto pasó del 41,5% al 45,3%.",
+    "explicacion": "El gasto total de las administraciones públicas pasó de 503.193 millones en 2018 a 766.296 millones en 2025 (Eurostat): +52% nominal. Deflactado con el deflactor del PIB (+24%) el aumento real es de aproximadamente +22,6%, que coincide con su cifra, pero Feijóo no aclara que habla en términos reales; en términos nominales sería +52%. Además mezcla bases: la deuda que cita a continuación (+40%) es nominal (en términos reales sería ≈+13%). En porcentaje del PIB, el gasto pasó del 41,5% al 45,3%.",
     "confianza": "media",
     "fuentes": [
-      {"titulo": "Eurostat (API, gov_10a_main): gasto total de las AA. PP. de España, 2018-2025", "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/gov_10a_main?format=JSON&lang=EN&geo=ES&na_item=TE&sector=S13&unit=MIO_EUR&sinceTimePeriod=2018"},
-      {"titulo": "Eurostat (API, nama_10_gdp): PIB de España a precios corrientes, 2018-2025", "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_gdp?format=JSON&lang=EN&geo=ES&na_item=B1GQ&unit=CP_MEUR&sinceTimePeriod=2018"},
-      {"titulo": "Eurostat (API, nama_10_gdp): PIB de España en volumen encadenado, 2018-2025", "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_gdp?format=JSON&lang=EN&geo=ES&na_item=B1GQ&unit=CLV10_MEUR&sinceTimePeriod=2018"}
+      {
+        "titulo": "Eurostat (API, gov_10a_main): gasto total de las AA. PP. de España, 2018-2025",
+        "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/gov_10a_main?format=JSON&lang=EN&geo=ES&na_item=TE&sector=S13&unit=MIO_EUR&sinceTimePeriod=2018"
+      },
+      {
+        "titulo": "Eurostat (API, nama_10_gdp): PIB de España a precios corrientes, 2018-2025",
+        "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_gdp?format=JSON&lang=EN&geo=ES&na_item=B1GQ&unit=CP_MEUR&sinceTimePeriod=2018"
+      },
+      {
+        "titulo": "Eurostat (API, nama_10_gdp): PIB de España en volumen encadenado, 2018-2025",
+        "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_gdp?format=JSON&lang=EN&geo=ES&na_item=B1GQ&unit=CLV10_MEUR&sinceTimePeriod=2018"
+      }
     ]
   },
   {
@@ -70,12 +142,25 @@
     "cita": "se ha incrementado un 40 y pico por ciento la deuda",
     "afirmacion": "La deuda pública se ha incrementado un 40 y pico por ciento.",
     "veredicto": "verdadero",
-    "explicacion": "Según Eurostat, la deuda pública consolidada pasó de 1.209.742 millones a finales de 2018 a 1.698.355 millones a finales de 2025, un +40,4% en valor absoluto. Con la serie del Banco de España (1,173 billones en 2018 a unos 1,74 billones en 2026) el aumento ronda el 48%. Como contexto, en proporción al PIB la deuda está casi igual que en 2018 (99,8% frente a 100,5% con los datos de Eurostat) y por debajo del pico de la pandemia.",
-    "confianza": "media",
+    "explicacion": "Según Eurostat, la deuda pública consolidada pasó de 1.209.742 millones a finales de 2018 a 1.698.355 millones a finales de 2025: +40,4%. Con la cifra publicada entonces por el Banco de España (1.173.988 millones, 97,2% del PIB, 29/03/2019) el aumento es del 44,7%; en ambos casos es «40 y pico». Como contexto, en proporción al PIB la deuda está prácticamente igual que en 2018 (100,7% a cierre de 2025 según el Banco de España vía Europa Press), no por encima. Las páginas del Banco de España no se dejaron abrir; se citan a través de prensa.",
+    "confianza": "alta",
     "fuentes": [
-      {"titulo": "Eurostat (API, gov_10dd_edpt1): deuda bruta consolidada de las AA. PP. de España, 2017-2025", "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/gov_10dd_edpt1?format=JSON&lang=EN&geo=ES&na_item=GD&sector=S13&unit=MIO_EUR&sinceTimePeriod=2017"},
-      {"titulo": "Banco de España: la deuda de las AA. PP. se situó en marzo de 2026 en el 101,6% del PIB", "url": "https://www.bde.es/wbe/es/noticias-eventos/actualidad-banco-espana/deuda-aapp-marzo26.html"},
-      {"titulo": "Banco de España: nota informativa sobre la deuda a cierre de 2018 (1.173 mm de euros)", "url": "https://www.bde.es/f/webbde/GAP/Secciones/SalaPrensa/NotasInformativas/Briefing_notes/en/notabe230419en.pdf"}
+      {
+        "titulo": "Eurostat (API, gov_10dd_edpt1): deuda bruta consolidada de las AA. PP. de España, 2017-2025",
+        "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/gov_10dd_edpt1?format=JSON&lang=EN&geo=ES&na_item=GD&sector=S13&unit=MIO_EUR&sinceTimePeriod=2017"
+      },
+      {
+        "titulo": "Público: La deuda pública cierra 2018 en el 97,2% del PIB, por encima del objetivo del Gobierno (Banco de España, 29/03/2019)",
+        "url": "https://www.publico.es/economia/deuda-publica-cierra-2018-97-2-pib-encima-objetivo-gobierno.html"
+      },
+      {
+        "titulo": "Bolsamanía/Europa Press: La deuda pública cierra 2025 en el 100,7% del PIB (31/03/2026)",
+        "url": "https://www.bolsamania.com/noticias/economia/economia-amp-la-deuda-publica-cierra-2025-en-el-1007-del-pib-tras-caer-un-punto-y-mejora-el-objetivo-del-gobierno--22217329.html"
+      },
+      {
+        "titulo": "El Independiente: La deuda pública roza los 1,7 billones al cierre de 2025 (31/03/2026)",
+        "url": "https://www.elindependiente.com/economia/2026/03/31/deuda-publica-roza-17-billones-cierre-2025-48-ano-anterior/amp/"
+      }
     ]
   },
   {
@@ -83,24 +168,51 @@
     "cita": "estamos ahora ante la mayor generación que se jubila",
     "afirmacion": "La generación de los años 60 (la de Feijóo) es la mayor que se jubila.",
     "veredicto": "mayormente_verdadero",
-    "explicacion": "Las cohortes nacidas entre 1958 y 1977 superan todas los 650.000 nacimientos anuales, con el máximo en 1964 (697.697) y otro pico en 1974 (688.711), por lo que los nacidos en los 60 alcanzan los 65-67 años entre mediados de los años 2020 y los 2030. Es la mayor generación en términos de tamaño, aunque las cohortes de los años 70 son prácticamente igual de numerosas y se jubilarán después. No he encontrado una fuente oficial que use esa formulación exacta, de ahí la confianza media.",
+    "explicacion": "La Seguridad Social (informe INTegraSS-2025) sitúa la jubilación de las cohortes del baby boom, nacidas entre finales de los años cincuenta y mediados de los setenta, como el principal motor del gasto en pensiones, con un máximo del 15,3% del PIB en 2049, y Euronews (con datos de la Seguridad Social) recoge que 2025 fue récord de nuevas jubilaciones (375.324). Es coherente con que sea la mayor generación que se jubila, aunque es una cohorte de unos veinte años de nacimientos, no solo los de los sesenta, y se jubilará hasta en torno a 2040. No he podido abrir una serie oficial de nacimientos por año; descarto Wikipedia como fuente.",
     "confianza": "media",
     "fuentes": [
-      {"titulo": "Demografía de España (Wikipedia): serie anual de nacimientos 1955-1980", "url": "https://es.wikipedia.org/wiki/Demograf%C3%ADa_de_Espa%C3%B1a"}
+      {
+        "titulo": "Seguridad Social: informe INTegraSS-2025, proyección del gasto en pensiones 2025-2070 (resumen ejecutivo)",
+        "url": "https://www.seg-social.es/descarga/es/informe25"
+      },
+      {
+        "titulo": "Euronews: La nómina de pensiones bate récords mientras la jubilación del baby boom tensiona las cuentas (19/10/2026)",
+        "url": "https://es.euronews.com/2026/10/19/nomina-pensiones-bate-records-mientras-jubilacion-del-baby-boom-tensiona-cuentas"
+      }
     ]
   },
   {
     "minuto": "0:22:28",
     "cita": "el gobierno lleva adjudicado en los últimos consejos de ministros unos 18.000, 19.000 millones en gasto de defensa",
     "afirmacion": "Según los medios de hoy (13 de noviembre de 2026), el Gobierno ha adjudicado en los últimos Consejos de Ministros unos 18.000-19.000 millones en gasto de defensa.",
-    "veredicto": "no_verificable",
-    "explicacion": "Está documentado que el Consejo de Ministros del 10 de noviembre de 2026 autorizó 13 expedientes de Defensa por 11.860 millones, y que el 3 de noviembre autorizó límites de gasto para reprogramar expedientes de armamento, sin cifra publicada en la nota de Hacienda. No he encontrado ninguna fuente que sume 18.000-19.000 millones; una de ellas habla de unos 4.200 millones el 3 de noviembre, lo que daría unos 16.000. Además, el Consejo autoriza el gasto y los contratos se adjudican después, por lo que «adjudicado» es impreciso.",
+    "veredicto": "mayormente_verdadero",
+    "explicacion": "Los últimos Consejos de Ministros suman unos 18.200 millones en Defensa: el 10 de noviembre de 2026 se autorizaron 13 expedientes por 11.860 millones, el 3 de noviembre siete contratos por unos 4.200 millones (la prensa habla de más de 16.000 en esos dos), y el 27 de octubre 392 millones en helicópteros (Hacienda) y 1.786 millones de financiación de seis corbetas (RD 922/2026). Su cifra de 18.000-19.000 millones es razonable, aunque «adjudicado» es impreciso (el Consejo autoriza el gasto y los contratos se formalizan después) y no he identificado qué medio da esa suma exacta. La Moncloa y el BOE no se dejaron abrir; las cifras de los Consejos se citan a través de prensa.",
     "confianza": "media",
     "fuentes": [
-      {"titulo": "El Gobierno inyecta 11.860 millones a Defensa (La Nación España, 13/11/2026)", "url": "https://www.lanocion.es/espanya/20261113/el-gobierno-inyecta-11860-millones-a-defensa-para-zd19f.html"},
-      {"titulo": "Hacienda: nota del Consejo de Ministros del 3 de noviembre de 2026 sobre reprogramación de Defensa", "url": "https://www.hacienda.gob.es/gl-ES/Prensa/Noticias/Paginas/2026/20261103-NP-CM-REPROGRAMACION-DEFENSA.aspx"},
-      {"titulo": "Los 11.800 millones para defensa que el Gobierno autoriza (Que.es, 11/11/2026)", "url": "https://www.que.es/2026/11/11/11800-millones-defensa-gobierno/"},
-      {"titulo": "Robles y Hereu, decididos a sacar 14.000 millones para el sector de defensa (Vozpópuli, 21/10/2026)", "url": "https://www.vozpopuli.com/espana/politica/robles-y-hereu-decididos-a-sacar-en-los-proximos-dias-14000-millones-para-el-sector-de-defensa-a-pesar-de-las-elecciones-y-las-dudas-del-pp.html"}
+      {
+        "titulo": "Hacienda: nota del Consejo de Ministros del 27 de octubre de 2026 sobre helicópteros (392 millones)",
+        "url": "https://www.hacienda.gob.es/eu-ES/Prensa/Noticias/Paginas/2026/20261027-NP-CM-HELICOPTEROS.aspx"
+      },
+      {
+        "titulo": "El Gobierno inyecta 11.860 millones a Defensa (La Nación España, 13/11/2026)",
+        "url": "https://www.lanocion.es/espanya/20261113/el-gobierno-inyecta-11860-millones-a-defensa-para-zd19f.html"
+      },
+      {
+        "titulo": "Los 11.800 millones para defensa que el Gobierno autoriza (Que.es, 11/11/2026)",
+        "url": "https://www.que.es/2026/11/11/11800-millones-defensa-gobierno/"
+      },
+      {
+        "titulo": "Siete contratos de Defensa por 4.200 millones (Que.es, 03/11/2026)",
+        "url": "https://www.que.es/2026/11/03/contratos-defensa-4200-millones/"
+      },
+      {
+        "titulo": "Defensa gastará 12.000 millones para buques, submarinos y misiles (El Correo Gallego, 11/11/2026)",
+        "url": "https://www.elcorreogallego.es/espana/2026/11/11/defensa-12000-millones-buques-submarinos-misiles-136316809.html"
+      },
+      {
+        "titulo": "España pagará 1.786 millones por seis corbetas EPC (Escudo Digital, 04/11/2026)",
+        "url": "https://www.escudodigital.com/defensa/desarrollo-defensa/espana-pagara-1786-millones-por-seis-corbetas-epc-la-armada-pidio-patrulleros-y-el-boe-exige-escoltas.html"
+      }
     ]
   },
   {
@@ -108,37 +220,69 @@
     "cita": "es la primera vez en 50 años de democracia que tenemos un gobierno que finalice la legislatura sin aprobar ni un solo año las cuentas",
     "afirmacion": "Es la primera vez en 50 años de democracia que un Gobierno termina la legislatura sin aprobar ni un solo año los presupuestos generales.",
     "veredicto": "mayormente_verdadero",
-    "explicacion": "Con las elecciones convocadas para el 29 de noviembre de 2026, la legislatura se cierra con los Presupuestos de 2023 prorrogados por tercera vez (2024, 2025 y 2026) y sin ningún presupuesto nuevo aprobado, algo que la prensa (Infobae, El Debate) presenta como inédito en la democracia; hubo otras prórrogas (1978, 1982, 1995, 2011, 2016, 2017, 2018) pero ninguna legislatura completa sin presupuestos. El matiz es que los PGE de 2023 sí los aprobó este Gobierno en diciembre de 2022 y estuvieron en vigor durante 2023, y que no he encontrado un análisis legislatura por legislatura de una fuente oficial.",
+    "explicacion": "Con las elecciones convocadas para el 29 de noviembre de 2026, la legislatura se cierra con los Presupuestos de 2023 prorrogados por tercera vez (2024, 2025 y 2026), algo que Europa Press (Infobae) y El Debate presentan como inédito desde 1978; las prórrogas anteriores fueron las de 1978, 1982, 1995, 2011, 2016, 2017 y 2018. Una respuesta del Gobierno en el Congreso (XV Legislatura, 2026) confirma que rige la LPGE 2023 prorrogada. El matiz es que los PGE de 2023 sí los aprobó este Gobierno (diciembre de 2022, en la legislatura anterior), y no he encontrado un análisis legislatura por legislatura de una fuente oficial.",
     "confianza": "media",
     "fuentes": [
-      {"titulo": "La legislatura se cierra sin nuevos Presupuestos por primera vez en la historia (Infobae/Europa Press, 05/10/2026)", "url": "https://www.infobae.com/america/agencias/2026/10/05/la-legislatura-se-cierra-sin-nuevos-presupuestos-por-primera-vez-en-la-historia/"},
-      {"titulo": "Sánchez terminará la legislatura sin haber aprobado un solo Presupuesto propio (El Debate, 05/10/2026)", "url": "https://www.eldebate.com/economia/20261005/sanchez-terminara-legislatura-haber-aprobado-solo-presupuesto-propio-cns_466092.html"},
-      {"titulo": "La legislatura de Pedro Sánchez termina sin nuevos PGE y con las cuentas de 2023 prorrogadas tres veces (El Diario de Madrid)", "url": "https://www.eldiariodemadrid.es/articulo/politica/legislatura-sanchez-nuevos-presupuestos-generales-estado-pge-2023-prorrogados/20261005103413143316.html"}
+      {
+        "titulo": "La legislatura se cierra sin nuevos Presupuestos por primera vez en la historia (Infobae/Europa Press, 05/10/2026)",
+        "url": "https://www.infobae.com/america/agencias/2026/10/05/la-legislatura-se-cierra-sin-nuevos-presupuestos-por-primera-vez-en-la-historia/"
+      },
+      {
+        "titulo": "Sánchez terminará la legislatura sin haber aprobado un solo Presupuesto propio (El Debate, 05/10/2026)",
+        "url": "https://www.eldebate.com/economia/20261005/sanchez-terminara-legislatura-haber-aprobado-solo-presupuesto-propio-cns_466092.html"
+      },
+      {
+        "titulo": "La legislatura de Pedro Sánchez termina sin nuevos PGE y con las cuentas de 2023 prorrogadas tres veces (El Diario de Madrid, 05/10/2026)",
+        "url": "https://www.eldiariodemadrid.es/articulo/politica/legislatura-sanchez-nuevos-presupuestos-generales-estado-pge-2023-prorrogados/20261005103413143316.html"
+      },
+      {
+        "titulo": "Congreso de los Diputados (XV Legislatura): respuesta del Gobierno a pregunta escrita 184/39196, PGE 2023 prorrogados",
+        "url": "https://www.congreso.es/l15p/e12/e_0120891_n_000.pdf"
+      }
     ]
   },
   {
     "minuto": "0:23:28",
     "cita": "Aproximadamente estamos hablando de unos 50.000 millones, más o menos, que se transfieren de impuestos a pensiones.",
     "afirmacion": "Se transfieren unos 50.000 millones de euros de impuestos al sistema de pensiones.",
-    "veredicto": "mayormente_verdadero",
-    "explicacion": "Las transferencias del Estado a la Seguridad Social ya superan esa cifra: la Seguridad Social había recibido 39.228 millones hasta julio de 2025 (+16,7% interanual) y Fedea cifra las transferencias corrientes de 2025 en 61.342 millones, lo que dejaría el déficit básico en unos 69.800 millones (4,15% del PIB). Feijóo se queda corto (unos 50.000 frente a unos 60.000), aunque parte de esas transferencias no financia pensiones contributivas en sentido estricto, de modo que el orden de magnitud es razonable. En el primer semestre de 2018 habían sido 8.083 millones.",
+    "veredicto": "verdadero",
+    "explicacion": "Según el balance de 2025 del Ministerio de Inclusión, la Seguridad Social recibió transferencias por 52.990 millones (+10,1%), de ellos 47.815 millones del Estado y organismos autónomos; Fedea las cifra en 61.342 millones para la Seguridad Social ampliada (déficit básico de unos 69.800 millones) y el Instituto Santalucía en 56.946 millones para el componente contributivo. «Unos 50.000 millones, más o menos» cae en el centro de ese rango. Parte de las transferencias financia otras prestaciones (ingreso mínimo vital, complementos a mínimas), no solo pensiones contributivas. La web de La Moncloa no se dejó abrir; las cifras del Ministerio se citan a través de The Objective.",
     "confianza": "media",
     "fuentes": [
-      {"titulo": "La Moncloa: ejecución presupuestaria de la Seguridad Social a 31 de julio de 2025", "url": "https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/inclusion/paginas/2025/120925-ingresos-cotizaciones-seguridad-social.aspx"},
-      {"titulo": "Las cotizaciones cubren el 73% de los ingresos de la Seguridad Social (El Independiente, 05/09/2025)", "url": "https://www.elindependiente.com/economia/2025/09/05/cotizaciones-cubren-73-ingresos-seguridad-social-pagar-pensiones/"},
-      {"titulo": "El déficit de la Seguridad Social supera los 60.000 millones (Raisin, 10/02/2026, sobre informe de Fedea)", "url": "https://www.raisin.com/es-es/noticias/el-deficit-de-la-seguridad-social-supera-los-60-000-millones/"}
+      {
+        "titulo": "The Objective: La Seguridad Social cierra 2025 con un déficit de 7.387 millones, el 0,4% del PIB (31/03/2026, datos del Ministerio de Inclusión)",
+        "url": "https://theobjective.com/economia/2026-03-31/seguridad-social-cierra-2025-deficit-7-387-millones/"
+      },
+      {
+        "titulo": "Fedea (Á. de la Fuente): Las cuentas de la Seguridad Social Ampliada, series 2005-2025, v1.3 (Apuntes 2026/03, enero de 2026)",
+        "url": "https://documentos.fedea.net/pubs/ap/2026/ap2026-03.pdf"
+      },
+      {
+        "titulo": "Artículo 14: El déficit de la Seguridad Social duplica el gasto militar comprometido con la OTAN (23/01/2026, sobre informe de Fedea)",
+        "url": "https://www.articulo14.es/economia/el-deficit-de-la-seguridad-social-duplica-el-gasto-militar-comprometido-con-la-otan-20260123.html"
+      }
     ]
   },
   {
     "minuto": "0:23:28",
     "cita": "La edad de jubilación en este momento llega hasta los 67 años.",
     "afirmacion": "La edad de jubilación llega actualmente hasta los 67 años.",
-    "veredicto": "mayormente_verdadero",
-    "explicacion": "En 2026 la edad legal de jubilación ordinaria es de 66 años y 10 meses para quien tenga menos de 38 años y 3 meses cotizados, y de 65 años para quien acredite 38 años y 3 meses o más; el escalón de 67 años se alcanza en 2027. Los 67 son el tope al que converge el calendario de la reforma, así que Feijóo redondea dos meses, y omite la opción de los 65 años con carrera larga.",
-    "confianza": "media",
+    "veredicto": "verdadero",
+    "explicacion": "La Seguridad Social fija la regla general en 67 años (65 con 38 años y 6 meses cotizados desde 2027). En 2026 la edad ordinaria es de 66 años y 10 meses (65 con 38 años y 3 meses o más cotizados) y en 2027 se alcanzan los 67. «Llega hasta los 67» es correcto como tope de la reforma; redondea dos meses y omite la opción de los 65 años con carrera larga. El BOE no se dejó abrir; se contrasta con la web de la Seguridad Social y prensa.",
+    "confianza": "alta",
     "fuentes": [
-      {"titulo": "La edad legal de jubilación sube a 66 años y 10 meses (El Derecho)", "url": "https://elderecho.com/la-edad-legal-de-jubilacion-sube-a-66-anos-y-10-meses"},
-      {"titulo": "Edad de jubilación en 2026 (El Independiente, 31/12/2025)", "url": "https://www.elindependiente.com/economia/2025/12/31/edad-jubilacion-2026/"}
+      {
+        "titulo": "Seguridad Social: edad de jubilación ordinaria por año (tabla 2026-2027)",
+        "url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10963/28393/28396/28472"
+      },
+      {
+        "titulo": "La edad de jubilación sube a 66 años y 10 meses en 2026, último año de transición a los 67 (Valencia Plaza)",
+        "url": "https://valenciaplaza.com/valenciaplaza/nacional/edad-jubilacion-sube-66-anos-y-10-meses-2026-ultimo-ano-transicion-67"
+      },
+      {
+        "titulo": "El Derecho: La edad legal de jubilación sube a 66 años y 10 meses",
+        "url": "https://elderecho.com/la-edad-legal-de-jubilacion-sube-a-66-anos-y-10-meses"
+      }
     ]
   },
   {
@@ -146,21 +290,39 @@
     "cita": "Si hacemos un millón de viviendas, crearemos 500.000 puestos de trabajo.",
     "afirmacion": "Construir un millón de viviendas crearía 500.000 puestos de trabajo.",
     "veredicto": "no_verificable",
-    "explicacion": "No he encontrado una estimación publicada para España con la que contrastar la cifra (0,5 empleos por vivienda). Las estimaciones internacionales localizadas varían mucho según se cuente empleo directo o indirecto y la duración de la obra, y no son comparables con el caso español. Es una proyección, no un dato.",
+    "explicacion": "Es una proyección de política, no un dato: Feijóo la repite desde 2026 (idealista recoge el 26/05/2026 que dijo que un millón de viviendas en una legislatura crearía «más de 500.000 puestos de trabajo»). No he encontrado ni la metodología del PP ni una estimación independiente para España con la que contrastar la ratio de 0,5 empleos por vivienda, que depende de si se cuenta empleo directo o indirecto y del plazo de obra.",
     "confianza": "baja",
-    "fuentes": []
+    "fuentes": [
+      {
+        "titulo": "idealista: noticias sobre el plan de vivienda del PP (declaración de Feijóo del 26/05/2026)",
+        "url": "https://www.idealista.com/news/taxonomy/term/13299"
+      }
+    ]
   },
   {
     "minuto": "0:25:31",
     "cita": "año 2018 gasto en asentismo, empresa de administración pública 13.000 millones año 2025 más de 30.000 millones",
     "afirmacion": "El gasto en absentismo (empresas y administración pública) fue de 13.000 millones de euros en 2018 y de más de 30.000 millones en 2025.",
-    "veredicto": "no_verificable",
-    "explicacion": "No he podido identificar la fuente de esa serie, y las estimaciones publicadas dependen mucho de la metodología: Adecco calcula el coste total del absentismo en 30.171 millones en 2019 y 59.109 millones en 2025, Umivale-Ivie lo sitúa en 92.000 millones en 2024, y el gasto de la Seguridad Social en subsidios de incapacidad temporal fue de unos 18.400 millones en 2025. Feijóo ha dado cifras distintas en otras intervenciones (14.000 o 13.000 millones en 2018; 31.000 o 33.000 en 2025). Sí se confirma que el coste se ha más que duplicado desde 2018-2019.",
+    "veredicto": "mayormente_verdadero",
+    "explicacion": "La asociación de mutuas AMAT, con datos del Ministerio de Inclusión, cifra el coste de las bajas por contingencias comunes (prestaciones de la Seguridad Social más coste directo para las empresas) en 14.561 millones en 2018 y 33.280 millones en 2025: más de 30.000 como dice Feijóo, y su 13.000 de 2018 queda algo corto (≈11%). Es una serie de una entidad interesada y con hipótesis, y otras medidas dan cifras muy distintas (Adecco: 59.109 millones en 2025 frente a 30.171 en 2019); el gasto de la Seguridad Social en IT fue de 18.407 millones en 2025 (ejecución presupuestaria, vía El Independiente). Se confirma que el coste se ha más que duplicado; no he podido identificar la fuente exacta que usa Feijóo.",
     "confianza": "baja",
     "fuentes": [
-      {"titulo": "XV Informe Adecco sobre Empresa Saludable y Gestión del Absentismo (nota de prensa, 14/07/2026)", "url": "https://www.adeccogroup.com/-/media/project/adecco-group/adeccogroup/spain-content/2026-press-releases/2026-07-14-ndp-xv-informe-anual-adecco-empresa-saludable-gestion-absentismo.pdf"},
-      {"titulo": "Umivale Activa e Ivie: Estudio sobre la incapacidad temporal y siniestralidad, nota breve 7 (enero 2026)", "url": "https://www.infocop.es/wp-content/uploads/2026/02/notas-breves-umivale-activa-ivie-7.pdf"},
-      {"titulo": "Feijóo denuncia el grave problema del absentismo laboral (El Debate, 07/07/2026)", "url": "https://www.eldebate.com/economia/20260707/feijoo-denuncia-grave-problema-absentismo-laboral-izquierda-le-echa-encima_437170.html"}
+      {
+        "titulo": "AMAT: Informe sobre el Absentismo Laboral por Contingencias Comunes en España de 2018 a 2024",
+        "url": "https://www.amat.es/wp-content/uploads/2025/11/Informe-sobre-el-Absentismo-Laboral-por-Contingencias-Comunes-CC-en-Espana-de-2018-a-2024.pdf"
+      },
+      {
+        "titulo": "AMAT: Análisis de las bajas laborables derivadas de la ITCC, año 2025 (22/06/2026)",
+        "url": "https://www.amat.es/wp-content/uploads/2026/06/2026-06-22-Analisis-de-las-Bajas-Laborables-derivadas-de-la-ITCC-Ano-2025.pdf"
+      },
+      {
+        "titulo": "El Independiente: El otro agujero de la Seguridad Social, el coste de las bajas laborales se dispara (13/04/2026)",
+        "url": "https://www.elindependiente.com/economia/2026/04/13/otro-agujero-seguridad-social-coste-bajas-laborales-dispara-40/"
+      },
+      {
+        "titulo": "Adecco Group Institute: XV Informe Adecco sobre Empresa Saludable y Gestión del Absentismo (nota de prensa, 14/07/2026)",
+        "url": "https://www.adeccogroup.com/-/media/project/adecco-group/adeccogroup/spain-content/2026-press-releases/2026-07-14-ndp-xv-informe-anual-adecco-empresa-saludable-gestion-absentismo.pdf"
+      }
     ]
   },
   {
@@ -168,13 +330,25 @@
     "cita": "año 2018 número de personas que vienen a trabajar de media diaria unas 450, 470.000 personas, año 25 más de un millón de personas diarias no acuden a su puesto de trabajo",
     "afirmacion": "En 2018 faltaban al trabajo de media diaria unas 450.000-470.000 personas y en 2025 más de un millón.",
     "veredicto": "mayormente_verdadero",
-    "explicacion": "Las cifras encajan con el indicador de ocupados ausentes por enfermedad o incapacidad en la semana de referencia: Umivale-Ivie (con datos europeos) cifra ese indicador en el 2,5% de los ocupados en 2018 (unas 490.000 personas) y en el 4,5% en 2024 (en torno a un millón). Otras fuentes miden más ausencias totales: Randstad calcula unas 874.000 ausencias diarias en el tercer trimestre de 2018 y casi 1,6 millones a finales de 2025. Según la medida, la cifra de 2018 es algo baja, pero el orden de magnitud y el aproximadamente doble aumento son correctos.",
+    "explicacion": "Según la EPA del INE, los ocupados que no trabajaron en la semana de referencia por enfermedad, accidente o incapacidad temporal fueron 476.000 en el 3.er trimestre de 2018 y 513.000 en el 4.º (media de 2018: unos 498.000), y 1.042.900 en el 4.º trimestre de 2025 (BBVA Research con datos de la EPA). Sus 450.000-470.000 quedan algo bajos y «más de un millón» se cumple en el último trimestre de 2025. Con otras medidas (días de baja por IT) las cifras de 2018 son mayores (unas 640.000-660.000 según Randstad y Umivale-Ivie) y la de 2024 es de 1,1 millones, de modo que el aumento es de entre un 60% y más del doble según el indicador.",
     "confianza": "media",
     "fuentes": [
-      {"titulo": "Umivale Activa e Ivie: Estudio sobre la incapacidad temporal y siniestralidad, nota breve 7 (enero 2026)", "url": "https://www.infocop.es/wp-content/uploads/2026/02/notas-breves-umivale-activa-ivie-7.pdf"},
-      {"titulo": "Randstad Research: Informe de absentismo laboral 2018 T3", "url": "https://www.randstadresearch.es:443/wp-content/uploads/2019/03/RANDSTAD-RESEARCH-Informe-de-Absentismo-laboral-2018T3-FINAL.pdf"},
-      {"titulo": "España bate récords de absentismo laboral: 1,6 millones de ausencias diarias (Artículo 14, 02/06/2026, con datos de Randstad Research)", "url": "https://www.articulo14.es/economia/espana-bate-records-de-absentismo-laboral-16-millones-de-ausencias-diarias-y-bajas-medicas-duplicadas-20260602.html"},
-      {"titulo": "El 4,5% de los ocupados no acude a su puesto por incapacidad temporal, un 73% más que en 2018 (Bolsamanía, 27/01/2026)", "url": "https://www.bolsamania.com/noticias/economia/economia--el-45-de-los-ocupados-no-acude-a-su-puesto-de-trabajo-por-incapacidad-temporal-un-73-mas-que-en-2018--21559088.html"}
+      {
+        "titulo": "INE (API Tempus, serie EPA42962): ocupados que no han trabajado en la semana de referencia por enfermedad, accidente o incapacidad temporal",
+        "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_SERIE/EPA42962?nult=200"
+      },
+      {
+        "titulo": "BBVA Research: Observatorio EPA 4.º trimestre de 2025",
+        "url": "https://www.bbvaresearch.com/wp-content/uploads/2026/01/EPA4T25.pdf"
+      },
+      {
+        "titulo": "Umivale Activa e Ivie: Estudio sobre la incapacidad temporal y siniestralidad, nota breve 7 (enero 2026)",
+        "url": "https://www.infocop.es/wp-content/uploads/2026/02/notas-breves-umivale-activa-ivie-7.pdf"
+      },
+      {
+        "titulo": "Randstad Research: Informe de absentismo laboral 2018 T3",
+        "url": "https://www.randstadresearch.es/wp-content/uploads/2019/03/RANDSTAD-RESEARCH-Informe-de-Absentismo-laboral-2018T3-FINAL.pdf"
+      }
     ]
   },
   {
@@ -182,23 +356,35 @@
     "cita": "Si no recuerdo mal, está en el entorno del 4%.",
     "afirmacion": "El absentismo de los autónomos está en torno al 4% (Feijóo mantiene después que sus datos eran del 3,5-4%, frente al 1% que le señalan los verificadores del programa).",
     "veredicto": "verdadero",
-    "explicacion": "El estudio de Umivale Activa e Ivie (enero 2026) sitúa el indicador de absentismo por incapacidad temporal de los autónomos en el 4,32% en 2024, en línea con lo que dice Feijóo. El 1% que le oponen en el programa parece corresponder a otra medida: la incidencia mensual de nuevos procesos de baja en el RETA (unos 10 por cada 1.000 protegidos en 2025, según el INSS), que no es una tasa de absentismo. Son magnitudes distintas, y su cifra es correcta con la medida habitual de porcentaje de jornadas perdidas.",
+    "explicacion": "El estudio de Umivale Activa e Ivie (enero 2026, con datos de la Seguridad Social) sitúa el indicador de absentismo por incapacidad temporal de los autónomos en el 4,32% de las jornadas en 2024 (3,30% en 2018), en línea con lo que dice Feijóo. El 1% que le señala el programa parece corresponder a otra medida: la incidencia mensual de nuevos procesos de baja en el RETA (unos 10 por cada 1.000 protegidos en 2025, según datos del INSS), que no es una tasa de absentismo. No he abierto una fuente oficial directa del INSS, de ahí la confianza media.",
     "confianza": "media",
     "fuentes": [
-      {"titulo": "Umivale Activa e Ivie: Estudio sobre la incapacidad temporal y siniestralidad, nota breve 7 (enero 2026)", "url": "https://www.infocop.es/wp-content/uploads/2026/02/notas-breves-umivale-activa-ivie-7.pdf"},
-      {"titulo": "La incapacidad temporal en trabajadores por cuenta ajena aumenta mientras los autónomos presentan cifras muy inferiores (Infocop, datos del INSS)", "url": "https://www.infocop.es/la-incapacidad-temporal-en-trabajadores-por-cuenta-ajena-aumenta-en-espana-mientras-los-autonomos-presentan-cifras-muy-inferiores/"}
+      {
+        "titulo": "Umivale Activa e Ivie: Estudio sobre la incapacidad temporal y siniestralidad, nota breve 7 (enero 2026)",
+        "url": "https://www.infocop.es/wp-content/uploads/2026/02/notas-breves-umivale-activa-ivie-7.pdf"
+      },
+      {
+        "titulo": "Infocop: La incapacidad temporal en trabajadores por cuenta ajena aumenta mientras los autónomos presentan cifras muy inferiores (datos del INSS y de Umivale Activa-Ivie)",
+        "url": "https://www.infocop.es/la-incapacidad-temporal-en-trabajadores-por-cuenta-ajena-aumenta-en-espana-mientras-los-autonomos-presentan-cifras-muy-inferiores/"
+      }
     ]
   },
   {
     "minuto": "0:26:33",
     "cita": "¿Por qué lunes y viernes son los días de la semana con mayor asentismo?",
-    "afirmacion": "Lunes y viernes son los días de la semana con mayor absentismo.",
-    "veredicto": "mayormente_verdadero",
-    "explicacion": "Randstad Research (con datos de la EPA) afirma que el absentismo se concentra principalmente en lunes y viernes, con unos 1,8 millones de personas ausentes esos días, y el informe Adecco documenta un «efecto lunes» en las bajas. Es un hallazgo de estudios privados basados en encuestas, no de estadística oficial por día de la semana, y la AIReF y los sindicatos discuten que el efecto lunes sea anómalo en las altas de IT, de modo que la evidencia es razonable pero no concluyente.",
+    "afirmacion": "Hay un pico de absentismo los lunes y los viernes, que son los días de la semana con mayor absentismo.",
+    "veredicto": "no_verificable",
+    "explicacion": "Randstad Research (según El Debate, 2024) afirma que el absentismo se concentra en lunes y viernes, con unos 1,8 millones de ausentes frente a una media diaria de 1,44 millones, pero la derivación de esa cifra no se explica. Los datos de procesos de baja iniciados de las mutuas (AMAT) muestran el lunes como el día con más bajas nuevas (26,7%-28,5% de las semanales) pero el viernes como el día laborable con menos (13,0%-13,8%), y no hay estadística oficial de ausentes por día de la semana. La evidencia respalda el lunes y no el viernes, así que no se puede dar un veredicto.",
     "confianza": "baja",
     "fuentes": [
-      {"titulo": "Absentismo laboral: como cada lunes, hoy no trabajarán 1,8 millones de españoles (El Debate, 28/10/2024, con datos de Randstad Research)", "url": "https://www.eldebate.com/economia/20241028/absentismo-laboral-como-cada-lunes-hoy-no-trabajar-18-millones-espanoles_239110.html"},
-      {"titulo": "Adecco Institute: VIII Informe Adecco sobre absentismo (2019), «efecto lunes»", "url": "https://www.adeccoinstitute.es/wp-content/uploads/2019/06/VIII-Informe-Absentismo.pdf"}
+      {
+        "titulo": "AMAT: Análisis de las bajas laborables derivadas de la ITCC, año 2025 (22/06/2026)",
+        "url": "https://www.amat.es/wp-content/uploads/2026/06/2026-06-22-Analisis-de-las-Bajas-Laborables-derivadas-de-la-ITCC-Ano-2025.pdf"
+      },
+      {
+        "titulo": "Absentismo laboral: como cada lunes, hoy no trabajarán 1,8 millones de españoles (El Debate, 28/10/2024, con datos de Randstad Research)",
+        "url": "https://www.eldebate.com/economia/20241028/absentismo-laboral-como-cada-lunes-hoy-no-trabajar-18-millones-espanoles_239110.html"
+      }
     ]
   },
   {
@@ -206,10 +392,13 @@
     "cita": "yo cuando estaba en Correos faltaban 5.000 personas a trabajar todos los días. Los lunes y los viernes me faltaban 9.000, 8.000, 10.000.",
     "afirmacion": "Cuando Feijóo presidía Correos faltaban 5.000 personas al día al trabajo, y entre 8.000 y 10.000 los lunes y los viernes.",
     "veredicto": "no_verificable",
-    "explicacion": "Es una cifra de gestión interna de hace más de veinte años, de la que no he encontrado ninguna fuente pública. Lo único comprobable hoy es que la rama de «Actividades postales y de correos» tiene la tasa de absentismo más alta de España en 2025 (13,0%, Adecco), pero eso no confirma ni desmiente su dato histórico.",
+    "explicacion": "Es una cifra de gestión interna de hace más de veinte años de la que no he encontrado ninguna fuente pública. Lo único comprobable hoy es que la rama «Actividades postales y de correos» tiene la tasa de absentismo más alta de España en 2025 (13,0%; 13,8% en el primer trimestre de 2026, Adecco con datos del INE), lo que ni confirma ni desmiente su dato histórico.",
     "confianza": "baja",
     "fuentes": [
-      {"titulo": "XV Informe Adecco sobre Empresa Saludable y Gestión del Absentismo (nota de prensa, 14/07/2026)", "url": "https://www.adeccogroup.com/-/media/project/adecco-group/adeccogroup/spain-content/2026-press-releases/2026-07-14-ndp-xv-informe-anual-adecco-empresa-saludable-gestion-absentismo.pdf"}
+      {
+        "titulo": "Adecco Group Institute: XV Informe Adecco sobre Empresa Saludable y Gestión del Absentismo (nota de prensa, 14/07/2026)",
+        "url": "https://www.adeccogroup.com/-/media/project/adecco-group/adeccogroup/spain-content/2026-press-releases/2026-07-14-ndp-xv-informe-anual-adecco-empresa-saludable-gestion-absentismo.pdf"
+      }
     ]
   },
   {
@@ -217,7 +406,7 @@
     "cita": "te estoy hablando del año 2000, y lo bajamos al 4",
     "afirmacion": "En Correos el absentismo era del 8% en el año 2000 y lo bajó al 4% tras un pacto con los sindicatos.",
     "veredicto": "no_verificable",
-    "explicacion": "No he encontrado ninguna fuente pública que recoja la tasa de absentismo de Correos en 2000-2002 ni el pacto con los sindicatos al que se refiere. Es un dato anecdótico de su etapa como presidente de la empresa y no es contrastable con la documentación disponible.",
+    "explicacion": "No he encontrado ninguna fuente pública que recoja la tasa de absentismo de Correos en 2000-2002 ni el pacto con los sindicatos al que se refiere; solo constan sus propias declaraciones. Es un dato de su etapa como presidente de la empresa y no es contrastable con la documentación disponible.",
     "confianza": "baja",
     "fuentes": []
   },
@@ -225,12 +414,18 @@
     "minuto": "0:27:33",
     "cita": "hay absentismos del 12, del 13, del 14%.",
     "afirmacion": "Hoy hay absentismos del 12-14%.",
-    "veredicto": "mayormente_verdadero",
-    "explicacion": "Esas tasas existen en actividades concretas: según el informe Adecco con datos del INE, en 2025 Correos tiene el 13,0%, servicios a edificios y jardinería el 12,5% y juegos de azar el 12,2%, y en el primer trimestre de 2026 Correos llegó al 13,8%. Sin embargo, la media nacional es del 7,6% de las horas pactadas (Adecco) o del 7,1% (Randstad), por lo que no es un nivel general.",
-    "confianza": "media",
+    "veredicto": "verdadero",
+    "explicacion": "Esas tasas existen en actividades concretas: según el informe Adecco con datos del INE, en 2025 Correos tiene el 13,0%, servicios a edificios y jardinería el 12,5% y juegos de azar el 12,2%, y en el primer trimestre de 2026 Correos llegó al 13,8%. Feijóo no dice que sea un nivel general: la media nacional es del 7,6% de las horas pactadas (Adecco).",
+    "confianza": "alta",
     "fuentes": [
-      {"titulo": "XV Informe Adecco sobre Empresa Saludable y Gestión del Absentismo (nota de prensa, 14/07/2026)", "url": "https://www.adeccogroup.com/-/media/project/adecco-group/adeccogroup/spain-content/2026-press-releases/2026-07-14-ndp-xv-informe-anual-adecco-empresa-saludable-gestion-absentismo.pdf"},
-      {"titulo": "XV Informe Adecco sobre absentismo anual (2026)", "url": "https://www.adeccoinstitute.es/wp-content/uploads/2026/07/xv-informe-absentismo-anual-2026.pdf"}
+      {
+        "titulo": "Adecco Group Institute: XV Informe Adecco sobre Empresa Saludable y Gestión del Absentismo (nota de prensa, 14/07/2026)",
+        "url": "https://www.adeccogroup.com/-/media/project/adecco-group/adeccogroup/spain-content/2026-press-releases/2026-07-14-ndp-xv-informe-anual-adecco-empresa-saludable-gestion-absentismo.pdf"
+      },
+      {
+        "titulo": "Adecco Group Institute: XV Informe Adecco sobre Absentismo Laboral 2026 (datos INE-ETCL)",
+        "url": "https://www.adeccoinstitute.es/wp-content/uploads/2026/07/xv-informe-absentismo-anual-2026.pdf"
+      }
     ]
   },
   {
@@ -238,10 +433,13 @@
     "cita": "los servicios de salud tienen un 13, un 14% de absentismo",
     "afirmacion": "Los servicios de salud autonómicos tienen un 13-14% de absentismo.",
     "veredicto": "no_verificable",
-    "explicacion": "No he encontrado una estadística que dé el absentismo del conjunto de los servicios de salud autonómicos. El informe Adecco con datos del INE sitúa la sanidad entre los sectores con mayor absentismo, pero sin la cifra de 13-14% y con una medición por rama de actividad, no por servicio autonómico, y las divisiones con tasas superiores al 13% que cita son otras (Correos, juegos de azar).",
+    "explicacion": "No he encontrado una estadística que dé el absentismo del conjunto de los servicios de salud autonómicos. El informe Adecco con datos del INE sitúa a la sanidad entre las ramas con más absentismo en 2025, pero por debajo de Correos (13,0%), servicios a edificios (12,5%) y juegos de azar (12,2%), es decir, por debajo del 13-14% que cita, y mide la rama de actividad, no los servicios públicos autonómicos.",
     "confianza": "baja",
     "fuentes": [
-      {"titulo": "XV Informe Adecco sobre absentismo anual (2026)", "url": "https://www.adeccoinstitute.es/wp-content/uploads/2026/07/xv-informe-absentismo-anual-2026.pdf"}
+      {
+        "titulo": "Adecco Group Institute: XV Informe Adecco sobre Absentismo Laboral 2026 (datos INE-ETCL)",
+        "url": "https://www.adeccoinstitute.es/wp-content/uploads/2026/07/xv-informe-absentismo-anual-2026.pdf"
+      }
     ]
   },
   {
@@ -252,8 +450,14 @@
     "explicacion": "Los datos de incapacidad temporal lo respaldan: las bajas por salud mental han crecido un 111% en cinco años y son ya la segunda causa de IT por número de episodios y la primera por duración media (Adecco, 2026). Umivale-Ivie atribuye a la salud mental y las dolencias musculoesqueléticas dos tercios del aumento del absentismo por IT entre 2018 y 2023, con un aumento de los procesos psicológicos del 88% en el Régimen General y del 75% en autónomos.",
     "confianza": "alta",
     "fuentes": [
-      {"titulo": "XV Informe Adecco sobre Empresa Saludable y Gestión del Absentismo (nota de prensa, 14/07/2026)", "url": "https://www.adeccogroup.com/-/media/project/adecco-group/adeccogroup/spain-content/2026-press-releases/2026-07-14-ndp-xv-informe-anual-adecco-empresa-saludable-gestion-absentismo.pdf"},
-      {"titulo": "La incapacidad temporal en trabajadores por cuenta ajena aumenta mientras los autónomos presentan cifras muy inferiores (Infocop, datos de Umivale Activa e Ivie)", "url": "https://www.infocop.es/la-incapacidad-temporal-en-trabajadores-por-cuenta-ajena-aumenta-en-espana-mientras-los-autonomos-presentan-cifras-muy-inferiores/"}
+      {
+        "titulo": "Adecco Group Institute: XV Informe Adecco sobre Empresa Saludable y Gestión del Absentismo (nota de prensa, 14/07/2026)",
+        "url": "https://www.adeccogroup.com/-/media/project/adecco-group/adeccogroup/spain-content/2026-press-releases/2026-07-14-ndp-xv-informe-anual-adecco-empresa-saludable-gestion-absentismo.pdf"
+      },
+      {
+        "titulo": "Infocop: La incapacidad temporal en trabajadores por cuenta ajena aumenta mientras los autónomos presentan cifras muy inferiores (datos del INSS y de Umivale Activa-Ivie)",
+        "url": "https://www.infocop.es/la-incapacidad-temporal-en-trabajadores-por-cuenta-ajena-aumenta-en-espana-mientras-los-autonomos-presentan-cifras-muy-inferiores/"
+      }
     ]
   }
 ]

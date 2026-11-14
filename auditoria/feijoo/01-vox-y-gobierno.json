@@ -1,0 +1,728 @@
+[
+  {
+    "indice": 0,
+    "minuto": "0:02:18",
+    "afirmacion": "En esta campaña electoral Feijóo ha concedido entrevistas en la Cadena SER, El País, La Sexta, Mediaset y Atresmedia.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.eldiario.es/politica/feijoo-carga-zapatero-hormiguero-blanquea-dictadura-blanquear-capitales_1_13313278.amp.html",
+        "motivo": "La página trata la entrevista en El Hormiguero pero no nombra la cadena (Antena 3); se sustituye por Que.es e Infobae."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Demócrata: Feijóo reconoce una fuga de indignados hacia Vox (entrevista en Telecinco recogida por Europa Press, 2-11-2026)",
+        "url": "https://www.democrata.es/politica/feijoo-reconoce-una-fuga-de-indignados-hacia-vox-pero-defiende-que-el-pp-crece-y-atrae-voto-socialista/",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Infobae: Los 8 momentos de la entrevista de Feijóo en El Hormiguero (11-11-2026)",
+        "url": "https://www.infobae.com/espana/2026/11/11/los-8-momentos-de-la-entrevista-de-alberto-nunez-feijoo-en-el-hormiguero-el-29-de-noviembre-lo-siento-por-sanchez-pero-no-hay-huelga-y-vamos-a-ver-que-opinan-los-espanoles/",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Verdicto y confianza sin cambios; se retira un enlace que no nombra la cadena y se añaden la entrevista de Telecinco (2-11-2026) y la de El Hormiguero de noviembre. La Sexta sigue sin confirmarse, por eso es «mayormente» verdadero."
+  },
+  {
+    "indice": 1,
+    "minuto": "0:05:21",
+    "afirmacion": "Sánchez usó la imagen del «muro» en su discurso de investidura de 2023.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.noticiasdenavarra.com/politica/2023/11/15/sanchez-defiende-amnistia-ahondar-camino-7519536.html",
+        "motivo": "El servidor respondió HTTP 406 y no se pudo abrir ni comprobar su contenido."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "RTVC/EFE: Sánchez defiende su investidura como un «muro» de progreso y convivencia frente a PP y Vox",
+        "url": "https://rtvc.es/debate-investidura-pedro-sanchez-2023/",
+        "tipo": "agencia"
+      },
+      {
+        "titulo": "La República: discurso de Sánchez en el Parlamento español ratifica amnistía para independentistas (investidura, 15-11-2023)",
+        "url": "https://www.larepublica.co/globoeconomia/discurso-de-sanchez-en-parlamento-espanol-ratifica-amnistia-para-independentistas-3749152",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "El Independiente: las frases más relevantes de Sánchez en su discurso de investidura (15-11-2023)",
+        "url": "https://www.elindependiente.com/espana/2023/11/15/las-frases-mas-relevantes-de-sanchez-en-su-discurso-de-investidura/amp/",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Veredicto igual; se amplía a tres fuentes abiertas (EFE, La República, El Independiente) con las citas literales del muro. Se corrige la afirmación: «bloques enfrentados» era la lectura de Feijóo, no lo que dijo Sánchez."
+  },
+  {
+    "indice": 2,
+    "minuto": "0:06:23",
+    "afirmacion": "Vox no cree en el Estado de las autonomías, a diferencia del PP.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": true,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.moncloa.com/2026/05/28/gamarra-documento-marco-acuerdo-vox-andalucia-3380431/",
+        "motivo": "moncloa.com es un medio privado, no válido según la política de fuentes, y además no trata la posición de Vox sobre las autonomías."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Onda Vasca (NTM): Quitar competencias y privilegios o derogar la ley del aborto, entre las medidas del programa electoral de Vox (7-7-2023)",
+        "url": "https://www.ondavasca.com/quitar-competencias-y-privilegios-o-derogar-la-ley-del-aborto-entre-las-medidas-del-programa-electoral-de-vox/",
+        "tipo": "agencia"
+      },
+      {
+        "titulo": "El Debate: artículo sobre los cambios en el programa de Vox (14-8-2023)",
+        "url": "https://www.eldebate.com/espana/20230814/cambiado-programa-vox_133140.html",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "elDiario.es: artículo sobre Vox y las autonomías (2-8-2019)",
+        "url": "https://www.eldiario.es/politica/vox-autonomias-extrema-derecha_1_1165337.html",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Alicante Plaza/EFE: Vox cree insultante que Feijóo diga que el Estado de las autonomías ha funcionado ante la DANA (9-11-2024)",
+        "url": "https://alicanteplaza.es/alicanteplaza/vox-cree-insultante-que-feijoo-diga-que-el-estado-de-las-autonomias-ha-funcionado-ante-la-dana",
+        "tipo": "agencia"
+      },
+      {
+        "titulo": "The Objective: programa de desregulación de Vox (27-6-2026)",
+        "url": "https://theobjective.com/espana/politica/2026-06-27/desregulacion-motosierra-vox-podar-marana-burocratica/",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Baja de «verdadero» a «mayormente verdadero»: la fuente original no era válida y la evidencia nueva (programas de Vox, reacción de Abascal en 2024) confirma la posición, pero con el matiz de que Vox la presenta como objetivo a largo plazo."
+  },
+  {
+    "indice": 3,
+    "minuto": "0:08:25",
+    "afirmacion": "Feijóo lleva cuatro años haciendo política nacional.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://es.wikipedia.org/wiki/Alberto_Núñez_Feijóo",
+        "motivo": "Wikipedia solo sirve como apoyo y no era la única base válida; se sustituye por EFE."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Menorca.info/EFE: Feijóo, elegido oficialmente nuevo presidente del PP (2-4-2022)",
+        "url": "https://www.menorca.info/actualidad/nacional/2022/04/02/1717847/feijoo-elegido-nuevo-presidente-del-pp.html",
+        "tipo": "agencia"
+      },
+      {
+        "titulo": "RTVC/EFE: Feijóo toma posesión de su escaño como senador (25-5-2022)",
+        "url": "https://rtvc.es/feijoo-toma-posesion-de-su-escano-como-senador/",
+        "tipo": "agencia"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Veredicto igual; se sustituye Wikipedia por dos despachos de EFE. Se baja la confianza a media porque no he podido abrir una fuente primaria (Senado o PP)."
+  },
+  {
+    "indice": 4,
+    "minuto": "0:08:25",
+    "afirmacion": "En las generales de 2023 el PP obtuvo mayoría absoluta en el Senado y 16 diputados más que el PSOE en el Congreso.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://boe.gob.es/boe/dias/2023/09/01/pdfs/BOE-A-2023-18907.pdf",
+        "motivo": "El BOE no responde desde esta máquina (conexión rechazada); no se pudo comprobar su contenido."
+      },
+      {
+        "url": "https://es.wikipedia.org/wiki/Elecciones_generales_de_Espa%C3%B1a_de_2023",
+        "motivo": "Wikipedia solo vale como apoyo para llegar a la fuente primaria."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Que.es: El PSOE señala que el escaño perdido por el escrutinio del voto CERA no cambia el escenario (29-7-2023)",
+        "url": "https://www.que.es/2023/07/29/psoe-cera-mismo-escenario/",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "El Independiente: el baile de escaños por el voto CERA (28-7-2023)",
+        "url": "https://www.elindependiente.com/espana/2023/07/28/baile-de-escanos-voto-cera/amp/",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Demócrata: Resultados del 23J (datos de Interior y de la Junta Electoral Central)",
+        "url": "https://www.democrata.es/elecciones-generales-espana/herramientas/resultados-23j",
+        "tipo": "apoyo"
+      },
+      {
+        "titulo": "Orain (Europa Press): El PP logra mayoría absoluta en el Senado (24-7-2023)",
+        "url": "https://orain.eus/es/politica/2023/07/24/el-pp-logra-mayoria-absoluta-en-senado/",
+        "tipo": "agencia"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Veredicto igual (137-121 y mayoría absoluta del PP en el Senado, confirmados). Se retiran Wikipedia y un BOE que no carga; confianza a media por no haber podido abrir ninguna fuente oficial (BOE, Interior)."
+  },
+  {
+    "indice": 5,
+    "minuto": "0:09:26",
+    "afirmacion": "Tras el 23-J, el Gobierno y el PSOE hablaron del «mes de la marmota de Feijóo» por el plazo hasta su debate de investidura.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Infobae: Feijóo acusa a Armengol de pactar con Moncloa la fecha de su investidura (4-10-2023)",
+        "url": "https://www.infobae.com/espana/2023/10/04/feijoo-acusa-a-armengol-de-pactar-con-moncloa-la-fecha-de-su-investidura-y-de-presidir-el-congreso-como-una-militante-socialista/",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "The Objective: Feijóo confirma que Armengol decidió con Moncloa la fecha de su investidura (4-10-2023)",
+        "url": "https://theobjective.com/espana/politica/2023-10-04/feijoo-armengol-investidura-moncloa/",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Veredicto igual; se abren y confirman las dos fuentes. La confianza sigue en media: ambas reproducen la queja de Feijóo y no hay cita directa de Sánchez o del PSOE."
+  },
+  {
+    "indice": 6,
+    "minuto": "0:09:26",
+    "afirmacion": "Feijóo votó a Felipe González (PSOE) en las elecciones generales de 1982 y es algo conocido.",
+    "veredicto_antes": "no_verificable",
+    "veredicto_despues": "no_verificable",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Público: Feijóo: «Voté a González en el 82 y volvería a hacerlo» (23-9-2018)",
+        "url": "https://www.publico.es/politica/feijoo-vote-gonzalez-82-volveria-hacerlo.amp.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Veredicto igual (no verificable); se confirma la cita de 2018 en Público. Solo hay una fuente: ninguna otra reproduce la declaración con claridad."
+  },
+  {
+    "indice": 7,
+    "minuto": "0:10:28",
+    "afirmacion": "A Pedro Sánchez lo echaron de la secretaría general de su partido.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://en.wikipedia.org/wiki/2016_PSOE_crisis",
+        "motivo": "Wikipedia solo vale como apoyo; se sustituye por agencia y prensa."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Orain (agencias): Pedro Sánchez dimite como secretario general del PSOE (1-10-2016)",
+        "url": "https://orain.eus/es/politica/2016/10/01/pedro-sanchez-dimite-secretario-general-psoe/",
+        "tipo": "agencia"
+      },
+      {
+        "titulo": "The Objective: Pedro Sánchez dimite como secretario general del PSOE (1-10-2016)",
+        "url": "https://theobjective.com/espana/2016-10-01/pedro-sanchez-dimite-como-secretario-general-del-psoe/",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Los Tiempos/EFE: Dimisión de Sánchez abre paso a formación de Gobierno en España (1-10-2016)",
+        "url": "https://www.lostiempos.com/actualidad/mundo/20161001/dimision-sanchez-abre-paso-formacion-gobierno-espana",
+        "tipo": "agencia"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Veredicto igual; se sustituye Wikipedia por EFE, Orain y The Objective y se anota la discrepancia 132/133 votos. Nota sobre atribución: la transcripción no etiqueta hablantes, pero el contexto indica que la frase es de Feijóo."
+  },
+  {
+    "indice": 8,
+    "minuto": "0:10:28",
+    "afirmacion": "Sánchez pactó con Susana Díaz que ella le apoyaría para ser secretario general y que ella sería la candidata a la presidencia del Gobierno, y lo incumplió.",
+    "veredicto_antes": "no_verificable",
+    "veredicto_despues": "no_verificable",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.elindependiente.com/politica/2017/03/25/la-hora-de-susana/",
+        "motivo": "La página existe pero no menciona ningún pacto de 2014 sobre la candidatura, así que no respalda lo que se le atribuía."
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/2016_PSOE_crisis",
+        "motivo": "Wikipedia solo vale como apoyo y no trata el supuesto pacto."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Libertad Digital: Sánchez repudia a Susana Díaz en su libro (20-2-2019)",
+        "url": "https://www.libertaddigital.com/espana/2019-02-20/sanchez-repudia-a-susana-diaz-en-su-libro-1276633466/",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Vozpópuli: Vuelve Pedro (22-5-2017)",
+        "url": "https://www.vozpopuli.com/espana/politica/vuelve-pedro_0_1028297456.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Veredicto igual (no verificable). Se sustituye El Independiente (no habla del pacto) por Vozpópuli, que sí recoge el pacto no escrito, y se retira Wikipedia."
+  },
+  {
+    "indice": 9,
+    "minuto": "0:11:31",
+    "afirmacion": "Vox es la tercera fuerza política y tiene muchos más votos y más expectativa electoral que toda la izquierda junta sin contar al PSOE.",
+    "veredicto_antes": "enganoso",
+    "veredicto_despues": "enganoso",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://es.wikipedia.org/wiki/Elecciones_generales_de_Espa%C3%B1a_de_2023",
+        "motivo": "Wikipedia solo vale como apoyo; las cifras se toman de Demócrata, que cita a Interior y a la JEC."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Demócrata: promedio de encuestas elecciones generales 2026 (actualizado el 13-11-2026)",
+        "url": "https://www.democrata.es/encuestas/elecciones-generales/promedio-encuestas-elecciones-generales-adelanto-electoral-2026/",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Demócrata: Resultados del 23J (datos de Interior y de la Junta Electoral Central)",
+        "url": "https://www.democrata.es/elecciones-generales-espana/herramientas/resultados-23j",
+        "tipo": "apoyo"
+      },
+      {
+        "titulo": "Artículo 14: Qué partidos forman Frente Amplio (7-11-2026)",
+        "url": "https://www.articulo14.es/politica/que-partidos-forman-frente-amplio-integrantes-acuerdos-y-diferencias-con-sumar-20261107.html",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Ara: ¿Qué dicen las encuestas de las elecciones españolas del 29-N? (incluye CIS de 12-11-2026)",
+        "url": "https://es.ara.cat/politica/dicen-encuestas-elecciones-espanolas-29-n_1_5874092.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Veredicto igual (engañoso); se añade el CIS del 12-11-2026 y se retira Wikipedia. La confianza sigue en media: no he podido abrir la fuente oficial de los resultados de 2023 (Interior/BOE)."
+  },
+  {
+    "indice": 10,
+    "minuto": "0:11:31",
+    "afirmacion": "En la legislatura anterior al PP le faltaron cuatro diputados para la mayoría necesaria para investir presidente a Feijóo.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.noticiasdenavarra.com/politica/2023/09/25/feijoo-investidura-fallida-7299315.html",
+        "motivo": "No se pudo comprobar (el sitio devolvió HTTP 406 en otras páginas) y su URL está fechada el 25-9-2023, antes de la votación del 27-9; se sustituye por el Diario de Sesiones."
+      },
+      {
+        "url": "https://es.wikipedia.org/wiki/Elecciones_generales_de_Espa%C3%B1a_de_2023",
+        "motivo": "Wikipedia solo vale como apoyo."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Congreso de los Diputados: Diario de Sesiones, XV Legislatura, Pleno n.º 5 (debate de investidura de Feijóo, septiembre de 2023)",
+        "url": "https://www.congreso.es/public_oficiales/L15/CONG/DS/PL/DSCD-15-PL-5.PDF",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "RTVC: Debate de investidura, el Congreso rechaza la candidatura de Feijóo (27-9-2023)",
+        "url": "https://rtvc.es/en-directo-segunda-sesion-debate-de-investidura-de-feijoo",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Veredicto igual; ahora con fuente primaria (Diario de Sesiones del Congreso: 172 a favor, 178 en contra) en lugar de Wikipedia."
+  },
+  {
+    "indice": 11,
+    "minuto": "0:13:33",
+    "afirmacion": "El próximo Gobierno tendrá que aprobar dos presupuestos generales en 2027: el de 2027 y el de 2028.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://es.wikipedia.org/wiki/Presupuestos_Generales_del_Estado",
+        "motivo": "Wikipedia solo vale como apoyo; se sustituye por Hacienda, la Constitución y prensa."
+      },
+      {
+        "url": "https://es.wikipedia.org/wiki/Tercer_Gobierno_de_Pedro_Sánchez",
+        "motivo": "Wikipedia solo vale como apoyo; la disolución de las Cortes se documenta con ESdiario."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Ministerio de Hacienda: nota de prensa sobre el techo de gasto para 2027 (7-7-2026)",
+        "url": "https://www.hacienda.gob.es/es-ES/Prensa/Noticias/Paginas/2026/20260707-NP-CM-TECHO-GASTOS-2027.aspx",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Euronews: España cumple 1.000 días sin nuevos presupuestos (27-9-2026)",
+        "url": "https://es.euronews.com/2026/09/27/espana-cumple-1000-dias-sin-nuevos-presupuestos-es-un-hurto-a-los-ciudadanos",
+        "tipo": "agencia"
+      },
+      {
+        "titulo": "ESdiario: primera vez en la historia que España cierra una legislatura entera sin PGE aprobados (5-10-2026)",
+        "url": "https://www.esdiario.com/economia/261005/199496/primera-vez-historia-espana-cierra-legislatura-entera-pge-aprobado.html",
+        "tipo": "apoyo"
+      },
+      {
+        "titulo": "Ministerio de Hacienda (repositorio normativo): Constitución Española, art. 134",
+        "url": "https://www.hacienda.gob.es/DocLeyes/repositorio%20normativa/22992.htm",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Veredicto igual; se sustituye Wikipedia por Hacienda (techo de gasto 2027), el texto del art. 134 CE y prensa que documenta la prórroga. Sigue siendo una previsión, por eso no es «verdadero»."
+  },
+  {
+    "indice": 12,
+    "minuto": "0:14:43",
+    "afirmacion": "En los últimos meses el PP ha cerrado cuatro pactos con Vox (Andalucía, Castilla y León, Aragón y Extremadura), basados en un documento marco del PP que se ha respetado.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.moncloa.com/2026/07/03/vox-andalucia-pacto-gobierno-consejerias-3393714",
+        "motivo": "moncloa.com es un medio privado, no válido según la política de fuentes."
+      },
+      {
+        "url": "https://www.moncloa.com/2026/05/28/gamarra-documento-marco-acuerdo-vox-andalucia-3380431/",
+        "motivo": "moncloa.com es un medio privado, no válido según la política de fuentes."
+      },
+      {
+        "url": "https://www.deia.eus/politica/2026/11/02/pp-vox-agenda-comun-cuatro-11713781.html",
+        "motivo": "El servidor respondió HTTP 406 y no se pudo abrir."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "RTVC/EFE: Juanma Moreno, reelegido presidente de Andalucía, con una vicepresidencia para Vox (3-7-2026)",
+        "url": "https://rtvc.es/moreno-reelegido-presidente-andalucia-con-vicepresidencia-vox-3-julio-2026/",
+        "tipo": "agencia"
+      },
+      {
+        "titulo": "The Objective: Azcón investido presidente de Aragón con el apoyo de Vox (29-4-2026)",
+        "url": "https://theobjective.com/espana/politica/2026-04-29/azcon-investido-presidente-aragon-apoyo-vox/",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Euronews: PP y Vox cierran su acuerdo de gobierno en Castilla y León para investir a Mañueco (3-6-2026)",
+        "url": "https://es.euronews.com/2026/06/03/pp-y-vox-cierran-su-acuerdo-de-gobierno-en-castilla-y-leon-para-investir-a-manueco",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Ara: PP y Vox llegan a un acuerdo en Extremadura (16-4-2026)",
+        "url": "https://es.ara.cat/politica/pp-vox-llegan-acuerdo-extremadura_1_5709797.html",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "El Debate: el PP fija como líneas rojas la proporcionalidad, la estabilidad presupuestaria y el respeto institucional en el marco de acuerdos con Vox (24-2-2026)",
+        "url": "https://www.eldebate.com/espana/20260224/pp-fija-como-lineas-rojas-proporcionalidad-estabilidad-presupuestaria-respeto-institucional-marco-acuerdos-vox_388642.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Veredicto igual; se retiran dos enlaces de moncloa.com (no válido) y uno que no abre, y se documentan los cuatro pactos y el documento marco con EFE, The Objective, Euronews, Ara y El Debate. No he podido contrastar de forma independiente si el documento «se ha respetado»."
+  },
+  {
+    "indice": 13,
+    "minuto": "0:16:03",
+    "afirmacion": "El primer Pacto de Estado contra la violencia de género se aprobó en la época de Rajoy.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Infocop: El Congreso de los Diputados aprueba el Pacto de Estado contra la violencia de género (2-10-2017)",
+        "url": "https://www.infocop.es/el-congreso-de-los-diputados-aprueba-el-pacto-de-estado-contra-la-violencia-de-genero/",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "The Objective: Aprobado el Pacto de Estado de violencia de género con la abstención de Podemos (28-9-2017)",
+        "url": "https://theobjective.com/aprobado-el-pacto-de-estado-de-violencia-de-genero-con-la-abstencion-de-podemos/",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Ministerio de Sanidad, Servicios Sociales e Igualdad: Dolors Montserrat, «Hoy hemos logrado un acuerdo histórico aprobando el Pacto de Estado de violencia de género» (27-12-2017)",
+        "url": "https://www.sanidad.gob.es/gabinete/notasPrensa.do?id=4277",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Veredicto igual; se añade como fuente primaria la nota del ministerio de diciembre de 2017 (Gobierno de Rajoy) y se señala la discrepancia en el recuento de votos entre medios."
+  },
+  {
+    "indice": 14,
+    "minuto": "0:16:03",
+    "afirmacion": "Feijóo y el PP suscribieron con Sánchez la renovación del Pacto de Estado contra la violencia de género hace unos meses, y está vigente.",
+    "veredicto_antes": "enganoso",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": true,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.infobae.com/espana/agencias/2026/11/13/feijoo-carga-contra-sanchez-por-las-pulseras-antimaltrato-de-aliexpres-este-gobierno-es-un-peligro-para-las-mujeres/",
+        "motivo": "La página existe pero no menciona el Pacto de Estado ni ninguna declaración sobre firmarlo o renovarlo."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Artículo 14: El Congreso aprueba la renovación del Pacto contra la violencia de género (26-2-2025)",
+        "url": "https://www.articulo14.es/politica/el-congreso-aprueba-la-renovacion-del-pacto-contra-la-violencia-de-genero-20250226.html",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Infocop: El Congreso de los Diputados renueva el Pacto de Estado contra la Violencia de Género (febrero de 2025)",
+        "url": "https://www.infocop.es/el-congreso-de-los-diputados-renueva-el-pacto-de-estado-contra-la-violencia-de-genero/",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Baja de «engañoso» a «mayormente verdadero»: lo esencial (el PP apoyó la renovación y el pacto está vigente) es cierto; el error es de plazo («unos meses» frente a casi dos años) y de forma (dictamen parlamentario, no pacto personal). Sin fuente primaria abierta (el Congreso no se pudo consultar), confianza media."
+  },
+  {
+    "indice": 15,
+    "minuto": "0:17:08",
+    "afirmacion": "Actualmente el Gobierno de España tiene 22 ministerios.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [
+      {
+        "url": "https://es.wikipedia.org/wiki/Tercer_Gobierno_de_Pedro_Sánchez",
+        "motivo": "Wikipedia solo vale como apoyo; se sustituye por el decreto oficial y prensa/agencias."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Ministerio de Hacienda (repositorio normativo): Real Decreto 829/2023, de 20 de noviembre, por el que se reestructuran los departamentos ministeriales",
+        "url": "https://www.hacienda.gob.es/DocLeyes/repositorio%20normativa/84910.htm",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "RTVC/EFE: Sánchez mantendrá un Gobierno con 22 ministerios, cinco para Sumar (20-11-2023)",
+        "url": "https://rtvc.es/sanchez-mantendra-un-gobierno-con-22-ministerios-cinco-para-sumar/",
+        "tipo": "agencia"
+      },
+      {
+        "titulo": "Artículo 14: Carlos Cuerpo asume de forma transitoria el Ministerio de Transportes (4-11-2026)",
+        "url": "https://www.articulo14.es/politica/cuerpo-asumira-de-forma-transitoria-el-ministerio-de-transportes-20261104.html",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Infobae (Europa Press): Sánchez nombra a Cuerpo vicepresidente primero y a Arcadi España nuevo ministro de Hacienda (26-3-2026)",
+        "url": "https://www.infobae.com/espana/agencias/2026/03/26/sanchez-nombra-a-cuerpo-vicepresidente-primero-y-a-arcadi-espana-nuevo-ministro-de-hacienda/",
+        "tipo": "agencia"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Veredicto igual; se añade como fuente primaria el Real Decreto 829/2023 (22 departamentos) y las fuentes de 2026 que muestran que los cambios fueron solo de titulares."
+  },
+  {
+    "indice": 16,
+    "minuto": "0:17:08",
+    "afirmacion": "El Gobierno de Sánchez es el más grande (más numeroso) de la democracia española.",
+    "veredicto_antes": "enganoso",
+    "veredicto_despues": "enganoso",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://maldita.es/malditodato/20200112/el-nuevo-gobierno-paritario-y-el-tercero-mas-numeroso-de-la-historia/",
+        "motivo": "Solo cargó el titular y no el cuerpo del artículo, así que no pude comprobar que dijera lo que se le atribuía; además es de 2020."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "The Objective: ministerios en España, Italia y Chipre (25-11-2023)",
+        "url": "https://theobjective.com/espana/politica/2023-11-25/ministerios-italia-chipre-espana/",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Menorca.info/EFE: El Gobierno de Sánchez será el segundo más grande de la democracia (10-1-2020)",
+        "url": "https://www.menorca.info/actualidad/nacional/2020/01/10/1613972/nuevo-gobierno-sanchez-sera-segundo-mas-grande-democracia-1.html",
+        "tipo": "agencia"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Veredicto igual (engañoso); se retira Maldita (no pude leer el cuerpo) y se mantienen The Objective y EFE, que sitúan a Suárez 1979-80 por delante o a la par. Confianza media por discrepancias entre fuentes en el recuento de Suárez (21 a 23 ministros)."
+  },
+  {
+    "indice": 17,
+    "minuto": "0:17:08",
+    "afirmacion": "España es el Estado más descentralizado de Europa y probablemente del mundo.",
+    "veredicto_antes": "enganoso",
+    "veredicto_despues": "enganoso",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "baja",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.bde.es/f/webbde/SES/Secciones/Publicaciones/PublicacionesSeriadas/DocumentosOcasionales/22/Fich/do2217.pdf",
+        "motivo": "No se pudo abrir (la conexión agotó el tiempo de espera, también con curl); no se puede comprobar que diga lo que se le atribuía."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Funcas: La gobernanza fiscal multinivel en España. Análisis y propuestas de reforma (12-2025)",
+        "url": "https://www.funcas.es/wp-content/uploads/2025/07/La-gobernanza-fiscal-multinivel-en-Espana-Analisis-y-propuestas-de-reforma.pdf",
+        "tipo": "apoyo"
+      },
+      {
+        "titulo": "El Orden Mundial: Las regiones con mayor autonomía de Europa",
+        "url": "https://elordenmundial.com/mapas-y-graficos/regiones-mayor-autonomia-europa/",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Real Instituto Elcano: El conflicto independentista en Cataluña (índice de autoridad regional)",
+        "url": "https://www.realinstitutoelcano.org/documento-de-trabajo/el-conflicto-independentista-en-cataluna/",
+        "tipo": "apoyo"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Veredicto igual (engañoso), con datos más concretos (Funcas 2025: solo superada en gasto regional por EE. UU., Canadá, Suiza y Australia). Se retira el Banco de España, que no cargó, y se baja la confianza a baja por no tener fuente primaria (OCDE/Eurostat)."
+  },
+  {
+    "indice": 18,
+    "minuto": "0:18:10",
+    "afirmacion": "Los presidentes de las comunidades autónomas son los representantes ordinarios del Estado en su territorio.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [
+      {
+        "url": "https://constitucion.congreso.es/constitucion-1978/texto-de-la-constitucion",
+        "motivo": "La página solo muestra el preámbulo y los artículos 1 a 19; no contiene el artículo 152."
+      },
+      {
+        "url": "https://es.wikipedia.org/wiki/Presidente_de_la_Junta_de_Galicia",
+        "motivo": "Wikipedia solo vale como apoyo; se sustituye por el texto constitucional."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Ministerio de Hacienda (repositorio normativo): Constitución Española, art. 152.1",
+        "url": "https://www.hacienda.gob.es/DocLeyes/repositorio%20normativa/22992.htm",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Veredicto igual; se sustituye una página que no contenía el art. 152 y Wikipedia por el texto de la Constitución en el repositorio de Hacienda, que cita literalmente «la ordinaria del Estado en aquélla». Confianza a alta."
+  },
+  {
+    "indice": 19,
+    "minuto": "0:18:10",
+    "afirmacion": "Durante su presidencia de la Xunta, la Secretaría General de Igualdad dependía de la Presidencia y después se integró con Trabajo/Empleo.",
+    "veredicto_antes": "no_verificable",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": true,
+    "confianza_antes": "baja",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [
+      {
+        "url": "https://gl.wikipedia.org/wiki/Consellería_de_Emprego_e_Igualdade",
+        "motivo": "Wikipedia (Galipedia) solo vale como apoyo; se sustituye por los decretos oficiales."
+      },
+      {
+        "url": "https://gl.wikipedia.org/wiki/Susana_López_Abella",
+        "motivo": "Wikipedia (Galipedia) solo vale como apoyo y no responde a la dependencia orgánica."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "DOG núm. 119 (19-6-2009): Decreto 325/2009, de 18 de junio, de estructura orgánica de los órganos superiores dependientes de la Presidencia de la Xunta de Galicia",
+        "url": "https://www.xunta.gal/dog/Publicados/2009/20090619/Anuncio2011A_es.html",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Xunta de Galicia (Lex.gal): Decreto 215/2020, do 3 de decembro, polo que se establece a estrutura orgánica da Consellería de Emprego e Igualdade",
+        "url": "https://www.lex.gal/normativa/detalle/8767/pdf/",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Sube de «no verificable» a «verdadero»: los decretos oficiales de la Xunta (DOG 2009 y Decreto 215/2020) confirman la dependencia de la Presidencia y la posterior fusión con empleo, que antes no se había podido comprobar."
+  },
+  {
+    "indice": 20,
+    "minuto": "0:18:10",
+    "afirmacion": "En el Principado de Asturias, gobernado por el PSOE, no existe una Consejería de Igualdad.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://es.wikipedia.org/wiki/Gobierno_del_Principado_de_Asturias",
+        "motivo": "Wikipedia solo vale como apoyo; se sustituye por el BOPA."
+      },
+      {
+        "url": "https://es.wikipedia.org/wiki/Gobierno_de_Asturias",
+        "motivo": "Wikipedia solo vale como apoyo; se sustituye por el BOPA."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "BOPA núm. 119 (23-6-2026): Resolución de 28 de abril de 2026 de la Consejería de Presidencia, Reto Demográfico, Igualdad y Turismo",
+        "url": "https://www.asturias.es/bopa/2026/06/23/2026-05104.pdf",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Veredicto igual; se sustituye Wikipedia por el BOPA de junio de 2026 que confirma el nombre vigente de la consejería. Confianza media: solo una fuente y no he revisado el organigrama completo."
+  }
+]

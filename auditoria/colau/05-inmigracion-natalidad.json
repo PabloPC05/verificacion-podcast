@@ -1,0 +1,394 @@
+[
+  {
+    "indice": 0,
+    "minuto": "1:05:14",
+    "afirmacion": "Ada Colau gestionó la ciudad de Barcelona durante ocho años, como alcaldesa.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "3Cat (CCMA): Ada Colau, investida alcaldessa, promet lleialtat a la ciutadania de Barcelona",
+        "url": "https://www.3cat.cat/3catinfo/ada-colau-investida-alcaldessa-promet-lleialtat-a-la-ciutadania-de-barcelona/noticia/2670635/",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Nació Digital: Els vots dels comuns i el PP fan alcalde Collboni",
+        "url": "https://naciodigital.cat/politica/els-vots-dels-comuns-i-el-pp-fan-alcalde-collboni.html",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "El Salto: Jaume Collboni (PSC), elegido alcalde con los votos de Colau y el Partido Popular",
+        "url": "https://www.elsaltodiario.com/barcelona/jaume-collboni-(psc)-elegido-alcalde-votos-colau-partido-popular",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "CIDOB: Ada Colau Ballano",
+        "url": "https://www.cidob.org/lider-politico/ada-colau-ballano",
+        "tipo": "apoyo"
+      },
+      {
+        "titulo": "Anexo: Alcaldes de Barcelona (Wikipedia)",
+        "url": "https://es.wikipedia.org/wiki/Anexo:Alcaldes_de_Barcelona",
+        "tipo": "apoyo"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Mismo veredicto; la cita es de Colau y el dato es correcto, pero baja la confianza a media porque solo se ha podido apoyar en Wikipedia (sin fuente primaria accesible). Excluido de la web por METODO.md 4 bis (duración de un cargo). Corrección: se han abierto 3Cat (investidura de Colau el 13-06-2015), Nació Digital y El Salto (elección de Collboni el 17-06-2023) y el CIDOB, que confirman las fechas; Wikipedia ya no es la base. Confianza alta; la web del Ajuntament no se pudo abrir."
+  },
+  {
+    "indice": 1,
+    "minuto": "1:05:14",
+    "afirmacion": "Asociar inmigración con delincuencia, como hace la derecha, es falso: no hay base estadística para esa asociación.",
+    "veredicto_antes": "enganoso",
+    "veredicto_despues": "enganoso",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://elderecho.com/el-70-de-los-condenados-en-espana-en-2025-fueron-espanoles-y-los-delitos-de-seguridad-vial-fueron-los-mas-numerosos",
+        "motivo": "Reproduce una nota de Europa Press con datos del INE; se sustituye por la nota primaria del INE."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "INE: Estadística de la población condenada, adultos, año 2025 (nota de prensa, 14 de julio de 2026)",
+        "url": "https://ine.es/dyngs/Prensa/EPCAEPCM2025.htm",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Mismo veredicto (enganoso). Sustituyo elderecho.com (reproduce una nota de Europa Press) por la nota primaria del INE de 2025 y confirmo todas las cifras en el INE; la cita es de Colau."
+  },
+  {
+    "indice": 2,
+    "minuto": "1:05:14",
+    "afirmacion": "En España viven millones de personas procedentes de otros países.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "INE: Estadística Continua de Población, 1 de julio de 2026 (datos provisionales, publicada el 6 de agosto de 2026)",
+        "url": "https://ine.es/dyngs/Prensa/ECP2T26.htm",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Mismo veredicto. Añado la nota primaria del INE de julio de 2026 (la cifra de 7,44 millones de extranjeros no salía en Euronews, solo en el INE); cita de Colau confirmada."
+  },
+  {
+    "indice": 3,
+    "minuto": "1:06:14",
+    "afirmacion": "Jordi Wild (no Ada Colau) afirma que la gran mayoría de las personas migrantes que viven en España no delinquen.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "INE: Estadística de la población condenada, adultos, año 2025 (nota de prensa, 14 de julio de 2026)",
+        "url": "https://ine.es/dyngs/Prensa/EPCAEPCM2025.htm",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "ATRIBUCIÓN: la frase la dice Jordi Wild, no Colau (es parte de su pregunta); reformulo la afirmación y añado el dato de 2025; el veredicto de fondo se mantiene."
+  },
+  {
+    "indice": 4,
+    "minuto": "1:08:25",
+    "afirmacion": "Los barrios populares de Barcelona los levantó la gente trabajadora migrante procedente de Extremadura y Andalucía, en una fuerte migración del campo a la ciudad, y a esas personas se les llamaba despectivamente «charnegos».",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Enciclopèdia Catalana: Xarnego",
+        "url": "https://www.enciclopedia.cat/EC-GEC-0151556.xml",
+        "tipo": "apoyo"
+      },
+      {
+        "titulo": "Universitat de Barcelona: Marcharse lejos. Migraciones granadinas a Barcelona durante el primer franquismo (tesis de Enrique Tudela Vázquez, 2019)",
+        "url": "https://diposit.ub.edu/dspace/handle/2445/147446",
+        "tipo": "apoyo"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Mismo veredicto; añado Enciclopèdia.cat y una tesis de la UB como fuentes de referencia (Wikipedia queda solo como apoyo). Cita de Colau confirmada."
+  },
+  {
+    "indice": 5,
+    "minuto": "1:08:25",
+    "afirmacion": "La familia de Ada Colau es andaluza y ella también tiene origen familiar en Huesca y en Soria.",
+    "veredicto_antes": "no_verificable",
+    "veredicto_despues": "no_verificable",
+    "cambia_veredicto": false,
+    "confianza_antes": "baja",
+    "confianza_despues": "baja",
+    "fuentes_descartadas": [
+      {
+        "url": "https://es.wikipedia.org/wiki/Ada_Colau",
+        "motivo": "Wikipedia solo vale como apoyo; no recoge nada del origen familiar."
+      }
+    ],
+    "fuentes_nuevas": [],
+    "tiene_fuente_primaria": false,
+    "nota": "Mismo veredicto; retiro la fuente (Wikipedia no dice nada sobre el origen familiar) y busco sin éxito constancia pública. Excluido de la web por METODO.md 4 bis (dato familiar)."
+  },
+  {
+    "indice": 6,
+    "minuto": "1:13:40",
+    "afirmacion": "La mayor parte de las personas migrantes en España trabajan y cotizan a la Seguridad Social, contribuyendo así a pagar las pensiones.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/inclusion/Paginas/2026/140926-afiliados-extranjeros-agosto-2026.aspx?qfr=2",
+        "motivo": "No se puede abrir desde esta máquina (conexión rechazada con WebFetch y curl); no se cita al no haberla comprobado."
+      },
+      {
+        "url": "https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/inclusion/Paginas/2025/121125-informe-ces.aspx",
+        "motivo": "No se puede abrir desde esta máquina (conexión rechazada con WebFetch y curl); no se cita al no haberla comprobado."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "CES: Informe 01/2025 «La realidad migratoria en España: prioridades para las políticas públicas» (aprobado el 29 de octubre de 2025)",
+        "url": "https://www.ces.es/documents/10180/5382476/INF_012025.pdf/37703705-5571-1007-c4bf-80c80d60c30e",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "The Conversation: Regularización de inmigrantes, ventajas económicas y desafíos institucionales (13 de abril de 2026)",
+        "url": "https://theconversation.com/regularizacion-de-inmigrantes-ventajas-economicas-y-desafios-institucionales-280122",
+        "tipo": "apoyo"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Mismo veredicto; descarto las URL de lamoncloa.gob.es (no se pueden abrir desde esta máquina) y la cifra de 3,55 millones de afiliados de agosto de 2026, que no he podido comprobar, y las sustituyo por el informe del CES. Cita de Colau confirmada."
+  },
+  {
+    "indice": 7,
+    "minuto": "1:14:48",
+    "afirmacion": "En Marruecos existen discriminaciones legales y sociales contra la mujer que no se dan en España.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Amnistía Internacional: Informe sobre Marruecos y el Sáhara Occidental (apartado de derechos de las mujeres)",
+        "url": "https://www.amnesty.org/en/location/middle-east-and-north-africa/morocco-and-western-sahara/report-morocco-and-western-sahara/",
+        "tipo": "apoyo"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Mismo veredicto; añado Amnistía Internacional (desigualdad en herencia y custodia) y rebajo la poligamia a «legal pero restringida». La cita es de Colau (concede el punto a Jordi Wild)."
+  },
+  {
+    "indice": 8,
+    "minuto": "1:15:49",
+    "afirmacion": "En lo que va de 2026 se han registrado 44 asesinatos de mujeres por violencia de género.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [],
+    "tiene_fuente_primaria": true,
+    "nota": "Mismo veredicto; verificado en el PDF oficial de Igualdad (44 víctimas a 30 de octubre de 2026). Cita de Colau confirmada."
+  },
+  {
+    "indice": 9,
+    "minuto": "1:15:49",
+    "afirmacion": "La mayoría de los autores de los asesinatos machistas de 2026 no son extranjeros, sino personas nacidas en España.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.eldebate.com/sociedad/20251226/asesinatos-violencia-genero-manos-extranjeros-crecen-sanchez-poder_368556.html",
+        "motivo": "Medio de línea editorial marcada y cifra de cálculo propio; no necesaria al bastar la estadística oficial de Igualdad."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "INE: Estadística Continua de Población, 1 de julio de 2026 (datos provisionales, publicada el 6 de agosto de 2026)",
+        "url": "https://ine.es/dyngs/Prensa/ECP2T26.htm",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Mismo veredicto; descarto El Debate (medio de línea editorial marcada, cálculo propio) y su dato de 2025, y contextualizo con el INE. Cifras de 2026 confirmadas en el PDF de Igualdad."
+  },
+  {
+    "indice": 10,
+    "minuto": "1:20:02",
+    "afirmacion": "Hay personas en España que dejan de tener hijos, o tienen menos de los que querrían, por las dificultades económicas y el coste de la vida.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://es.wikipedia.org/wiki/Demograf%C3%ADa_de_Espa%C3%B1a",
+        "motivo": "Wikipedia no es fuente válida por sí sola; se sustituye por la nota del INE."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "INE: Encuesta de Fecundidad 2025, datos avance (nota de prensa, 29 de septiembre de 2026)",
+        "url": "https://www.ine.es/dyngs/Prensa/pEF2025.htm",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Mismo veredicto, ahora con el desglose de motivos de la nota del INE (que antes no se consultó: las razones económicas son un motivo real pero no el principal); retiro Wikipedia y la cifra de fecundidad que no he podido contrastar."
+  },
+  {
+    "indice": 11,
+    "minuto": "1:21:14",
+    "afirmacion": "Europa ya ha advertido de que, por la baja natalidad, se necesita migración para sostener el estado del bienestar (pensiones, desempleo y servicios públicos).",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [],
+    "tiene_fuente_primaria": true,
+    "nota": "Mismo veredicto; confirmo los datos de Eurostat y de AIReF (esta última solo a través de El Independiente, pues no se pudo abrir airef.es) y añado las cifras de población en edad de trabajar."
+  },
+  {
+    "indice": 12,
+    "minuto": "1:21:14",
+    "afirmacion": "Actualmente la masa de personas que trabaja y paga impuestos en España se está cubriendo en gran parte gracias a la migración.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/inclusion/Paginas/2026/140926-afiliados-extranjeros-agosto-2026.aspx?qfr=2",
+        "motivo": "No se puede abrir desde esta máquina (conexión rechazada con WebFetch y curl); no se cita al no haberla comprobado."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "CES: Informe 01/2025 «La realidad migratoria en España: prioridades para las políticas públicas» (aprobado el 29 de octubre de 2025)",
+        "url": "https://www.ces.es/documents/10180/5382476/INF_012025.pdf/37703705-5571-1007-c4bf-80c80d60c30e",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Mismo veredicto; sustituyo la nota de lamoncloa.gob.es (no abierta) por el informe del CES; el dato del Banco de España sigue citado a través de prensa porque no se pudo abrir bde.es."
+  },
+  {
+    "indice": 13,
+    "minuto": "1:23:16",
+    "afirmacion": "Jordi Wild (no Ada Colau) afirma que, para acceder a un trabajo en España, ya es obligatorio (o muy difícil sin ello) hablar el idioma.",
+    "veredicto_antes": "no_verificable",
+    "veredicto_despues": "no_verificable",
+    "cambia_veredicto": false,
+    "confianza_antes": "baja",
+    "confianza_despues": "baja",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [],
+    "tiene_fuente_primaria": false,
+    "nota": "ATRIBUCIÓN: la frase la dice Jordi Wild, no Colau; reformulo la afirmación y mantengo no_verificable (sin fuentes aplicables)."
+  },
+  {
+    "indice": 14,
+    "minuto": "1:25:16",
+    "afirmacion": "Los inmigrantes aportan más a las cuentas públicas de lo que reciben; según datos oficiales del Ministerio, aportan el 10% de los ingresos de la Seguridad Social y suponen solo el 1% del gasto público.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "enganoso",
+    "cambia_veredicto": true,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/inclusion/Paginas/2025/121125-informe-ces.aspx",
+        "motivo": "No se puede abrir desde esta máquina (conexión rechazada con WebFetch y curl); no se cita al no haberla comprobado."
+      },
+      {
+        "url": "https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/inclusion/Documents/2025/121125-conclusiones-informe-ces.pdf",
+        "motivo": "No se puede abrir desde esta máquina (conexión rechazada con WebFetch y curl); no se cita al no haberla comprobado."
+      },
+      {
+        "url": "https://x.com/inclusiongob/status/1975577634470760454",
+        "motivo": "Red social: no abre (HTTP 402) y no es fuente válida salvo cuenta oficial verificable."
+      },
+      {
+        "url": "https://ine.es/dyngs/Prensa/ECP4T25.htm",
+        "motivo": "No aporta lo atribuido o se sustituye por fuente mejor."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "CES: Informe 01/2025 «La realidad migratoria en España: prioridades para las políticas públicas» (aprobado el 29 de octubre de 2025)",
+        "url": "https://www.ces.es/documents/10180/5382476/INF_012025.pdf/37703705-5571-1007-c4bf-80c80d60c30e",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "The Conversation: Regularización de inmigrantes, ventajas económicas y desafíos institucionales (13 de abril de 2026)",
+        "url": "https://theconversation.com/regularizacion-de-inmigrantes-ventajas-economicas-y-desafios-institucionales-280122",
+        "tipo": "apoyo"
+      },
+      {
+        "titulo": "INE: Estadística Continua de Población, 1 de julio de 2026 (datos provisionales, publicada el 6 de agosto de 2026)",
+        "url": "https://ine.es/dyngs/Prensa/ECP2T26.htm",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Cambia de mayormente_verdadero a enganoso: el CES habla de impacto fiscal «neutro o ligeramente positivo» (no «mucho más»), el 1% parece referirse a prestaciones y no a todo el gasto público, y las cifras no figuran en el informe del CES. Descarto el tuit del ministerio (no abre) y las URL de lamoncloa.gob.es (no abren)."
+  },
+  {
+    "indice": 15,
+    "minuto": "1:25:16",
+    "afirmacion": "Es falso que los inmigrantes vengan a España a vivir de «paguitas» y subvenciones.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/inclusion/Paginas/2025/121125-informe-ces.aspx",
+        "motivo": "No se puede abrir desde esta máquina (conexión rechazada con WebFetch y curl); no se cita al no haberla comprobado."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "CES: Informe 01/2025 «La realidad migratoria en España: prioridades para las políticas públicas» (aprobado el 29 de octubre de 2025)",
+        "url": "https://www.ces.es/documents/10180/5382476/INF_012025.pdf/37703705-5571-1007-c4bf-80c80d60c30e",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Mismo veredicto, con un matiz nuevo del CES (17,6% de beneficiarios del IMV extranjeros, algo por encima de su peso poblacional); retiro la referencia al 1% de gasto como dato del CES, pues no figura en el informe."
+  }
+]

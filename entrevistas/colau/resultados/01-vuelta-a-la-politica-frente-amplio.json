@@ -4,12 +4,18 @@
     "cita": "lo primero que me dijo mi hijo de 15 años fue, tienes que ir con Jordi Wilde",
     "afirmacion": "Ada Colau tiene un hijo de 15 años.",
     "veredicto": "mayormente_verdadero",
-    "explicacion": "Según el perfil biográfico de Vozpópuli, Colau tiene dos hijos: Luca, nacido en 2011, y Gael, nacido en abril de 2017. En noviembre de 2026 Luca tiene 14 o 15 años según el mes de su cumpleaños, que no consta públicamente, así que lo dicho es coherente con los datos disponibles.",
+    "explicacion": "Colau tiene dos hijos: Luca, nacido en 2011, y Gael, nacido en abril de 2017 (Vozpópuli y CIDOB). En octubre-noviembre de 2026 Luca tiene 14 o 15 años según el mes de su cumpleaños, que no consta públicamente, así que «15 años» es compatible con los datos aunque no se puede confirmar al día. Es un dato familiar sin fuente oficial.",
     "confianza": "media",
     "fuentes": [
       {
-        "titulo": "Vozpópuli - Así es Ada Colau a los 52: sus dos hijos, la ruptura con su exmarido...",
-        "url": "https://www.vozpopuli.com/dolcevita/asi-es-ada-colau-52-la-separacion-de-sus-padres-los-problemas-economicos-de-su-familia-sus-dos-hijos-la-ruptura-con-su-exmarido-su-carrera-como-actriz-y-su-bisexualidad.html"
+        "titulo": "Vozpópuli: Así es Ada Colau a los 52: sus dos hijos, la ruptura con su exmarido...",
+        "url": "https://www.vozpopuli.com/dolcevita/asi-es-ada-colau-52-la-separacion-de-sus-padres-los-problemas-economicos-de-su-familia-sus-dos-hijos-la-ruptura-con-su-exmarido-su-carrera-como-actriz-y-su-bisexualidad.html",
+        "tipo": "apoyo"
+      },
+      {
+        "titulo": "CIDOB: Ada Colau Ballano (biografía política)",
+        "url": "https://www.cidob.org/lider-politico/ada-colau-ballano",
+        "tipo": "apoyo"
       }
     ]
   },
@@ -18,15 +24,19 @@
     "cita": "Cuando yo dejé Twitter fue porque era alcaldesa y tenía muchísimo trabajo que hacer.",
     "afirmacion": "Colau abandonó Twitter cuando era alcaldesa de Barcelona.",
     "veredicto": "verdadero",
-    "explicacion": "Colau anunció el 11 de abril de 2021, siendo alcaldesa de Barcelona, que dejaba Twitter de forma indefinida. Su mandato como alcaldesa duró hasta junio de 2023. El motivo que da ahora (falta de tiempo) es una explicación suya; en 2021 su carta hablaba sobre todo de perfiles anónimos que, según ella, incitaban al odio y de que la red alejaba de la buena política.",
+    "explicacion": "Colau anunció el 11 de abril de 2021, siendo alcaldesa de Barcelona, que dejaba Twitter de forma indefinida; su mandato duró hasta el 17 de junio de 2023. El motivo que da ahora (falta de tiempo) es su versión: en 2021 su mensaje hablaba sobre todo de perfiles falsos y anónimos que incitan al odio y de que la red no ayuda a hacer buena política. La afirmación sobre el momento de la salida es correcta.",
     "confianza": "alta",
     "fuentes": [
       {
-        "titulo": "The Objective - Ada Colau deja Twitter de forma indefinida para hacer buena política (12/04/2021)",
+        "titulo": "The Objective: Ada Colau deja Twitter de forma indefinida para hacer buena política (12/04/2021)",
         "url": "https://theobjective.com/espana/2021-04-12/ada-colau-deja-twitter-de-forma-indefinida-para-hacer-buena-politica/"
       },
       {
-        "titulo": "NacióDigital - Colau torna a X en campanya pel 29-N cinc anys després d'abandonar la xarxa",
+        "titulo": "Ara: Colau vuelve a X cinco años después para aceptar la entrevista con Jordi Wild (20/10/2026)",
+        "url": "https://es.ara.cat/politica/elecciones-generales/colau-vuelve-x-cinco-anos-despues-aceptar-entrevista-jordi-wild_1_5884799.html"
+      },
+      {
+        "titulo": "NacióDigital: Colau torna a X en campanya pel 29-N cinc anys després d'abandonar la xarxa (20/10/2026)",
         "url": "https://naciodigital.cat/politica/colau-torna-a-x-en-campanya-pel-29-n-cinc-anys-despres-dabandonar-la-xarxa.html"
       }
     ]
@@ -36,20 +46,24 @@
     "cita": "he estado casi cuatro años fuera de la primera línea",
     "afirmacion": "Colau lleva casi cuatro años fuera de la primera línea política.",
     "veredicto": "mayormente_verdadero",
-    "explicacion": "Colau dejó de ser alcaldesa de Barcelona el 17 de junio de 2023, cuando Jaume Collboni fue investido, así que a 13 de noviembre de 2026 han pasado unos 3 años y 5 meses, no cuatro. Además siguió como concejala de la oposición hasta que dejó el acta en octubre de 2024, aunque eso difícilmente se considera primera línea. El redondeo es generoso pero razonable en lenguaje oral; ella misma habló en otro momento de «3-4 años».",
+    "explicacion": "Colau dejó la alcaldía de Barcelona el 17 de junio de 2023, al ser investido Jaume Collboni, y siguió como concejala de la oposición hasta que dejó el acta el 25 de octubre de 2024. A 13 de noviembre de 2026 han pasado unos 3 años y 5 meses desde la alcaldía y 2 años desde el acta, no cuatro. «Casi cuatro años» exagera por unos siete meses, un redondeo generoso pero propio del lenguaje oral.",
     "confianza": "media",
     "fuentes": [
       {
-        "titulo": "Artículo 14 - Quién encabeza Frente Amplio en el 29N: trayectoria política y personal de Ada Colau (05/11/2026)",
+        "titulo": "Artículo 14: Quién encabeza Frente Amplio en el 29N: trayectoria política y personal de Ada Colau (05/11/2026)",
         "url": "https://www.articulo14.es/politica/quien-encabeza-frente-amplio-en-el-29n-trayectoria-politica-y-personal-de-ada-colau-20261105.html"
       },
       {
-        "titulo": "The Objective - Collboni, nuevo alcalde de Barcelona gracias a los votos del PP y de los de Colau (17/06/2023)",
+        "titulo": "The Objective: Collboni, nuevo alcalde de Barcelona gracias a los votos del PP y de los de Colau (17/06/2023)",
         "url": "https://theobjective.com/espana/2023-06-17/collboni-nuevo-alcalde-de-barcelona-gracias-a-los-votos-de-pp-y-el-voto-de-los-de-colau/"
       },
       {
-        "titulo": "Libertad Digital - El último pleno de Ada Colau (25/10/2024)",
+        "titulo": "Libertad Digital: El último pleno de Ada Colau (25/10/2024)",
         "url": "https://www.libertaddigital.com/espana/politica/2024-10-25/el-ultimo-pleno-de-ada-colau-7178250/"
+      },
+      {
+        "titulo": "CIDOB: Ada Colau Ballano (biografía política)",
+        "url": "https://www.cidob.org/lider-politico/ada-colau-ballano"
       }
     ]
   },
@@ -57,17 +71,25 @@
     "minuto": "0:05:25",
     "cita": "tenemos mucho menos dinero para hacer campaña, por ejemplo, que otros partidos que son mucho más grandes y tienen más dinero",
     "afirmacion": "La candidatura del Frente Amplio dispone de mucho menos dinero para la campaña del 29N que otros partidos más grandes.",
-    "veredicto": "no_verificable",
-    "explicacion": "No se han encontrado cifras de presupuesto de campaña ni de crédito de la coalición frente a PP o PSOE. El marco legal (Orden HAC/1062/2026) liga la subvención electoral a escaños y votos conseguidos, lo que apunta a que los partidos con más resultados reciben más, pero la financiación real de campaña (créditos, microcréditos, donaciones) no está publicada por partido antes del 29N. La afirmación es plausible, pero no hay un dato que la confirme o la desmienta.",
+    "veredicto": "mayormente_verdadero",
+    "explicacion": "Frente Amplio ha reservado algo más de 1,6 millones de euros para la campaña del 29N (1,1 millones de gastos ordinarios y 530.125 euros de envíos), según informó su portavoz de campaña el 9 de noviembre de 2026. Como referencia oficial, el Tribunal de Cuentas (informe aprobado el 27 de marzo de 2025) justificó en las generales de 2023 gastos ordinarios de 10,9 millones al PP, 9,5 millones al PSOE y 3,4 millones a Sumar, además de los envíos. No hay presupuestos de campaña de 2026 publicados del PP ni del PSOE, por lo que la comparación se apoya en 2023 y la cifra de Frente Amplio procede de un solo medio; el orden de magnitud respalda lo dicho.",
     "confianza": "baja",
     "fuentes": [
       {
-        "titulo": "El Español/ESdiario - Cuánto dinero público hay detrás del 29N (08/10/2026)",
-        "url": "https://www.esdiario.com/nacional/261008/199778/cuanto-dinero-publico-hay-detras-29n-cifras-disparar-ingresos-partidos.html"
+        "titulo": "Tribunal de Cuentas (en el Congreso): Informe de fiscalización de la contabilidad de las elecciones a Cortes Generales de 23 de julio de 2023 (aprobado 27/03/2025)",
+        "url": "https://www.congreso.es/docu/inf_fiscTC/LegXV/251-156.pdf"
       },
       {
-        "titulo": "Demócrata - La prima de riesgo entra en la campaña del 29N: qué interés paga cada partido por sus microcréditos",
-        "url": "https://www.democrata.es/elecciones-generales-espana/microcreditos-partidos-intereses-elecciones-29n/"
+        "titulo": "Demócrata: Frente Amplio destina 1,6 millones a su campaña y Colau prepara actos en una decena de comunidades (09/11/2026)",
+        "url": "https://www.democrata.es/politica/frente-amplio-destina-1-6-millones-a-su-campana-y-colau-prepara-actos-en-una-decena-de-comunidades/"
+      },
+      {
+        "titulo": "Euronews: Las elecciones del 29N costarán más de 270 millones (08/10/2026)",
+        "url": "https://es.euronews.com/2026/10/08/elecciones-espana-presupuesto-superara-270-millones"
+      },
+      {
+        "titulo": "Artículo 14: El PSOE ofrece un interés récord del 3,75% para financiar su campaña electoral (20/10/2026)",
+        "url": "https://www.articulo14.es/politica/el-psoe-ofrece-un-interes-record-del-375-para-financiar-su-campana-electoral-20261020.html"
       }
     ]
   },
@@ -76,16 +98,20 @@
     "cita": "el algoritmo de Twitter, por ejemplo, va a favor de la derecha y la extrema derecha, porque está en manos de Elon Musk",
     "afirmacion": "El algoritmo de Twitter/X favorece a la derecha y la extrema derecha y eso se debe a que está en manos de Elon Musk.",
     "veredicto": "mayormente_verdadero",
-    "explicacion": "Un experimento aleatorizado publicado en Nature el 18 de febrero de 2026 (casi 5.000 usuarios de EE. UU., verano de 2023, ya con Musk como propietario) halló que el feed algorítmico de X desplazaba las opiniones políticas hacia posiciones más conservadoras frente al feed cronológico. Los expertos advierten que los datos son de EE. UU. y de 2023, que el efecto parece deberse al engagement más que a una intención ideológica, y el estudio no mide específicamente «extrema derecha» ni prueba que sea por decisión de Musk.",
+    "explicacion": "Un experimento aleatorizado publicado en Nature en febrero de 2026 (4.965 usuarios activos de EE. UU., siete semanas del verano de 2023, con Musk ya como propietario) halló que el feed algorítmico de X desplazaba las opiniones políticas hacia posiciones más conservadoras y que el algoritmo promovía publicaciones de activistas conservadores y reducía la visibilidad de los medios tradicionales. Los expertos advierten que los datos son de EE. UU. y de 2023, que el efecto parece deberse más al engagement que a una intención ideológica y que el estudio no mide «extrema derecha» ni prueba que se deba a decisiones de Musk.",
     "confianza": "media",
     "fuentes": [
       {
-        "titulo": "Science Media Centre España - Un estudio muestra que el algoritmo de X (Twitter) mueve al usuario a posiciones políticas más conservadoras",
+        "titulo": "Nature Asia-Pacific (nota de prensa de Nature): efectos políticos del algoritmo de X (19/02/2026)",
+        "url": "https://www.natureasia.com/en/info/press-releases/detail/9242"
+      },
+      {
+        "titulo": "Science Media Centre España: Un estudio muestra que el algoritmo de X (Twitter) mueve al usuario a posiciones políticas más conservadoras",
         "url": "https://sciencemediacentre.es/un-estudio-muestra-que-el-algoritmo-de-x-twitter-mueve-al-usuario-posiciones-politicas-mas"
       },
       {
-        "titulo": "Diálogo Político - El algoritmo que inclina la balanza: ¿X te hace más conservador o progresista?",
-        "url": "https://dialogopolitico.org/debates/analisis-debates/algoritmo-inclina-conservador-o-progresista-feed/"
+        "titulo": "Metro Puerto Rico (EFE): El algoritmo de X conduce a los usuarios hacia posiciones políticas más conservadoras (18/02/2026)",
+        "url": "https://www.metro.pr/estilo-vida/2026/02/18/el-algoritmo-de-x-conduce-a-los-usuarios-hacia-posiciones-politicas-mas-conservadoras/"
       }
     ]
   },
@@ -94,16 +120,24 @@
     "cita": "que claramente está posicionado con la extrema derecha",
     "afirmacion": "Elon Musk está claramente posicionado con la extrema derecha.",
     "veredicto": "mayormente_verdadero",
-    "explicacion": "El 21 de diciembre de 2024 Musk declaró en X su apoyo a Alternativa para Alemania (AfD), intervino por vídeo en un mitin del partido y entrevistó en X a su colíder Alice Weidel; también pidió la liberación del activista ultra británico Tommy Robinson. Es una caracterización política, pero respaldada por estos actos públicos de apoyo a partidos y figuras de extrema derecha europeos; él se presenta como defensor de la libertad de expresión.",
+    "explicacion": "Musk entrevistó en X a la candidata de AfD, Alice Weidel, a principios de enero de 2025, dijo que solo AfD puede «salvar a Alemania» y el 25 de enero intervino por videoenlace en el lanzamiento de campaña del partido, al que llamó la «mejor esperanza» de Alemania (AP). También pidió la liberación del activista ultra Tommy Robinson y en septiembre de 2025 intervino por vídeo en la marcha «Unite the Kingdom», que Robinson organizó, y fue criticado por Starmer. Es una caracterización política, pero respaldada por esos actos públicos; él se presenta como defensor de la libertad de expresión y no encontré actos más recientes de 2026.",
     "confianza": "media",
     "fuentes": [
       {
-        "titulo": "Vozpópuli - Elon Musk, Europa, Alemania, AfD y Alice Weidel",
+        "titulo": "Vozpópuli: Elon Musk, Europa, Alemania, AfD y Alice Weidel",
         "url": "https://www.vozpopuli.com/internacional/elon-musk-europa-alemania-afd-alice-weidel-elecciones.html"
       },
       {
-        "titulo": "Metro Puerto Rico - «Totalmente inaceptable» el apoyo de Musk a la ultraderecha europea (17/01/2025)",
+        "titulo": "Metro Puerto Rico (AP): «Totalmente inaceptable» el apoyo de Musk a la ultraderecha europea (17/01/2025)",
         "url": "https://www.metro.pr/noticias/2025/01/17/totalmente-inaceptable-el-apoyo-de-musk-a-la-ultraderecha-europea/"
+      },
+      {
+        "titulo": "WTOP (AP): Elon Musk speaks at Germany's AfD campaign launch as thousands protest the far-right party (26/01/2025)",
+        "url": "https://wtop.com/national/2025/01/elon-musk-speaks-at-germanys-afd-campaign-launch-as-thousands-protest-the-far-right-party/"
+      },
+      {
+        "titulo": "Jamaica Gleaner: Politicians condemn Elon Musk's comments at anti-migrant rally (16/09/2025)",
+        "url": "https://jamaica-gleaner.com/article/world-news/20250916/politicians-condemn-elon-musks-comments-anti-migrant-rally"
       }
     ]
   },
@@ -111,20 +145,20 @@
     "minuto": "0:06:26",
     "cita": "he decidido no volver a Twitter. Uso Instagram y uso otras redes, pero Twitter no.",
     "afirmacion": "Colau, personalmente, no ha vuelto a Twitter/X y usa Instagram y otras redes.",
-    "veredicto": "enganoso",
-    "explicacion": "El 20 de octubre de 2026 la cuenta @AdaColau publicó en X «Acepto la propuesta, será un placer», en respuesta a la invitación de Jordi Wild; la prensa lo tituló «Colau vuelve a X cinco años después». Según Vozpópuli la cuenta conserva los mismos 779.000 seguidores que tenía al dejarla en 2021, lo que apunta a su cuenta personal de siempre; ninguna fuente aclara si la gestiona ella o su equipo. Por tanto no es cierto que no haya vuelto a publicar allí, aunque puede referirse a que no la usará de forma habitual.",
-    "confianza": "media",
+    "veredicto": "no_verificable",
+    "explicacion": "El 20 de octubre de 2026 la cuenta @AdaColau publicó en X «Acepto la propuesta, será un placer» (a Jordi Wild) y la prensa lo tituló «Colau vuelve a X cinco años después»; según Vozpópuli conserva más de 779.000 seguidores, los de su cuenta de siempre. Ninguna fuente aclara si lo escribió ella o su equipo, y Colau distingue entre su uso «personal» y el de la campaña, que sí usará X. Su decisión personal de no volver y su uso de Instagram no se pueden comprobar más allá de lo que ella dice; lo que sí consta es que su cuenta está reactivada.",
+    "confianza": "baja",
     "fuentes": [
       {
-        "titulo": "Ara - Colau vuelve a X cinco años después para aceptar la entrevista con Jordi Wild",
+        "titulo": "Ara: Colau vuelve a X cinco años después para aceptar la entrevista con Jordi Wild (20/10/2026)",
         "url": "https://es.ara.cat/politica/elecciones-generales/colau-vuelve-x-cinco-anos-despues-aceptar-entrevista-jordi-wild_1_5884799.html"
       },
       {
-        "titulo": "NacióDigital - Colau torna a X en campanya pel 29-N cinc anys després d'abandonar la xarxa (20/10/2026)",
+        "titulo": "NacióDigital: Colau torna a X en campanya pel 29-N cinc anys després d'abandonar la xarxa (20/10/2026)",
         "url": "https://naciodigital.cat/politica/colau-torna-a-x-en-campanya-pel-29-n-cinc-anys-despres-dabandonar-la-xarxa.html"
       },
       {
-        "titulo": "Vozpópuli - La irrelevancia fuerza a Colau a regresar a la red social de Elon Musk",
+        "titulo": "Vozpópuli: La irrelevancia fuerza a Colau a regresar a la red social de Elon Musk (21/10/2026)",
         "url": "https://www.vozpopuli.com/espana/politica/la-irrelevancia-fuerza-a-colau-a-superar-su-fiebre-woke-y-regresar-a-la-red-social-de-elon-musk.html"
       }
     ]
@@ -132,21 +166,21 @@
   {
     "minuto": "0:06:26",
     "cita": "Elon Musk, ¿te acuerdas que hizo el saludo nazi?",
-    "afirmacion": "Elon Musk hizo un saludo nazi (en el acto posterior a la investidura de Trump, en enero de 2025).",
+    "afirmacion": "Jordi Wild afirma que Elon Musk hizo un saludo nazi (en el acto posterior a la investidura de Trump, enero de 2025); Colau responde «Sí, eso calentaríamos en un debate ahora» sin desarrollarlo.",
     "veredicto": "no_verificable",
-    "explicacion": "El 20 de enero de 2025, en el Capital One Arena de Washington (acto de celebración de la investidura de Trump), Musk se golpeó el pecho y extendió el brazo derecho con la palma hacia abajo hacia el público, y repitió el gesto hacia quienes tenía detrás; el gesto es real y está grabado. Que fuera un saludo nazi es una interpretación disputada: historiadores como Ruth Ben-Ghiat lo calificaron así, mientras que la ADL habló de un «gesto torpe en un momento de entusiasmo», otros historiadores lo rechazaron y Musk lo atribuyó a «sucios trucos» y dijo que «el ataque de que todos son Hitler es agotador». Sin prueba de intención, ni un consenso entre expertos, no se puede dar por cierto ni por falso; Colau lo presenta como un hecho.",
+    "explicacion": "La frase es de Jordi Wild; Colau solo contesta «Sí, eso calentaríamos en un debate ahora» y pasa a hablar de sus «discursos de odio». El 20 de enero de 2025, en el Capital One Arena de Washington, Musk se golpeó el pecho y extendió el brazo derecho con la palma hacia abajo, y repitió el gesto hacia quienes tenía detrás. Que fuera un saludo nazi es una interpretación disputada: la historiadora Ruth Ben-Ghiat lo calificó así, mientras que Richard Evans lo rechazó, Roger Griffin habló de «zona gris», la ADL de un gesto torpe y Musk de «sucios trucos». Sin consenso entre expertos ni prueba de intención no se puede dar por cierto ni por falso.",
     "confianza": "media",
     "fuentes": [
       {
-        "titulo": "El Tiempo - Musk se refirió al supuesto saludo nazi: «el ataque de todos son Hitler es agotador»",
+        "titulo": "El Tiempo: Musk se refirió al supuesto saludo nazi: «el ataque de todos son Hitler es agotador»",
         "url": "https://www.eltiempo.com/mundo/eeuu-y-canada/elon-musk-se-refirio-al-supuesto-saludo-nazi-en-la-investidura-de-donald-trump-el-ataque-de-todos-son-hitler-es-agotador-3419378"
       },
       {
-        "titulo": "Euronews - ¿Hizo Elon Musk un saludo nazi ante los seguidores de Trump?",
+        "titulo": "Euronews: ¿Hizo Elon Musk un saludo nazi ante los seguidores de Trump? (24/01/2025)",
         "url": "https://es.euronews.com/2025/01/24/hizo-elon-musk-un-saludo-nazi-ante-los-seguidores-de-trump"
       },
       {
-        "titulo": "Ara - El presunto saludo nazi de Elon Musk y otros momentos clave de la investidura de Trump",
+        "titulo": "Ara: El presunto saludo nazi de Elon Musk y otros momentos clave de la investidura de Trump (21/01/2025)",
         "url": "https://es.ara.cat/internacional/estados-unidos/presunto-saludo-nazi-elon-musk-momentos-clave-investidura-trump_1_5261264.html"
       }
     ]
@@ -156,15 +190,19 @@
     "cita": "Me propusieron ser ministra en el gobierno de Sánchez y dije que no.",
     "afirmacion": "Le propusieron ser ministra en el Gobierno de Pedro Sánchez y Colau rechazó.",
     "veredicto": "mayormente_verdadero",
-    "explicacion": "El 26 de octubre de 2023, en una entrevista en Rac1, Colau dijo: «Mi espacio político me ha pedido insistentemente que me plantease ser ministra, pero ya he dicho que no». En agosto de 2023 la prensa ya informaba de que Yolanda Díaz (Sumar) quería que dirigiese un Ministerio de Vivienda. La propuesta vino de su espacio político (Sumar/Comuns) para el Gobierno de coalición, no consta que partiera directamente del PSOE o de Sánchez.",
+    "explicacion": "El 26 de octubre de 2023, en Rac1, Colau dijo: «No seré ministra» y que su espacio político (los comunes, dentro de Sumar) le había pedido «insistentemente» que se planteara serlo. En agosto de 2023 El Debate ya informaba de que Yolanda Díaz quería que dirigiera un Ministerio de Vivienda. La propuesta vino de su espacio político (Sumar/Comuns) para un Gobierno de coalición con el PSOE; ninguna fuente dice que la hiciera directamente Sánchez, y es en buena parte una declaración de la propia Colau.",
     "confianza": "media",
     "fuentes": [
       {
-        "titulo": "El Debate - Colau anuncia que ha decidido no ser ministra pese a la insistencia de Sumar (26/10/2023)",
+        "titulo": "El Debate: Colau anuncia que ha decidido no ser ministra pese a la insistencia de Sumar (26/10/2023)",
         "url": "https://www.eldebate.com/espana/cataluna/20231026/colau-anuncia-decidido-no-ministra-pese-insistencia-sumar_149187.html"
       },
       {
-        "titulo": "El Debate - Díaz quiere que Colau dirija el Ministerio de Vivienda que Sánchez planea crear (10/08/2023)",
+        "titulo": "Ara: Colau: «He decidido no ser ministra, es una decisión totalmente tomada» (26/10/2023)",
+        "url": "https://es.ara.cat/politica/colau-he-decidido-no-ministra-decision-totalmente-tomada_1_4839092.html"
+      },
+      {
+        "titulo": "El Debate: Díaz quiere que Colau dirija el Ministerio de Vivienda que Sánchez planea crear (10/08/2023)",
         "url": "https://www.eldebate.com/espana/20230810/diaz-quiere-colau-dirija-ministerio-vivienda-sanchez-planea-crear_133240.html"
       }
     ]
@@ -174,15 +212,19 @@
     "cita": "Me propusieron presentarme a las europeas y dije que no",
     "afirmacion": "Le propusieron presentarse a las elecciones europeas y Colau dijo que no.",
     "veredicto": "verdadero",
-    "explicacion": "En enero de 2024 Colau descartó, en una entrevista en Catalunya Ràdio, encabezar la lista de Sumar a las elecciones europeas de junio de 2024, diciendo que quería quedarse en Barcelona. The Objective (15/01/2024) informaba de que fue Sumar, con Yolanda Díaz al frente, quien le ofreció la candidatura y de que ella la declinó.",
+    "explicacion": "El 13 de enero de 2024 Colau descartó en Catalunya Ràdio ir en las listas de las europeas de junio, diciendo que se quedaba en Barcelona. Según fuentes de Sumar citadas por The Objective (15 y 17/01/2024), Yolanda Díaz le había ofrecido encabezar la lista y Colau lo declinó, por lo que Díaz pensó en Errejón como alternativa. Que se lo propusieron proviene de fuentes de Sumar, no de una confirmación pública de Colau, pero coincide con lo que ella dice.",
     "confianza": "media",
     "fuentes": [
       {
-        "titulo": "The Objective - Colau rechaza ser candidata de Sumar a las europeas (15/01/2024)",
+        "titulo": "The Objective: Colau rechaza ser candidata de Sumar a las europeas (15/01/2024)",
         "url": "https://theobjective.com/espana/politica/2024-01-15/colau-candidata-europea-sumar-sustituto/"
       },
       {
-        "titulo": "Catalan News - Ada Colau rules herself out as Sumar candidate for European elections (13/01/2024)",
+        "titulo": "The Objective: Díaz, Sumar, Colau, Europa y Errejón (17/01/2024)",
+        "url": "https://theobjective.com/espana/politica/2024-01-17/diaz-sumar-colau-europa-errejon/"
+      },
+      {
+        "titulo": "Catalan News: Ada Colau rules herself out as Sumar candidate for European elections (13/01/2024)",
         "url": "https://www.catalannews.com/politics/item/ada-colau-rules-herself-out-as-european-elections-candidate"
       }
     ]
@@ -192,16 +234,20 @@
     "cita": "en mayo hará 4 años que dejé de ser alcaldesa",
     "afirmacion": "En mayo de 2027 se cumplirán 4 años desde que Colau dejó de ser alcaldesa de Barcelona.",
     "veredicto": "mayormente_verdadero",
-    "explicacion": "Las elecciones municipales fueron el 28 de mayo de 2023, pero Colau dejó la alcaldía el 17 de junio de 2023, al ser investido Jaume Collboni, por lo que los cuatro años exactos se cumplirán en junio de 2027, no en mayo. La diferencia es de semanas y es un redondeo razonable.",
+    "explicacion": "Las elecciones municipales fueron el 28 de mayo de 2023, pero Colau dejó la alcaldía el 17 de junio de 2023, al ser investido Jaume Collboni (23 de 41 votos), por lo que los cuatro años exactos se cumplirán en junio de 2027, no en mayo. La diferencia es de semanas y es un redondeo razonable en lenguaje oral.",
     "confianza": "alta",
     "fuentes": [
       {
-        "titulo": "Wikipedia - Ada Colau (alcaldesa de Barcelona del 13/06/2015 al 17/06/2023)",
-        "url": "https://en.wikipedia.org/wiki/Ada_Colau"
+        "titulo": "The Objective: Collboni, nuevo alcalde de Barcelona gracias a los votos del PP y de los de Colau (17/06/2023)",
+        "url": "https://theobjective.com/espana/2023-06-17/collboni-nuevo-alcalde-de-barcelona-gracias-a-los-votos-de-pp-y-el-voto-de-los-de-colau/"
       },
       {
-        "titulo": "The Objective - Collboni, nuevo alcalde de Barcelona gracias a los votos del PP y de los de Colau (17/06/2023)",
-        "url": "https://theobjective.com/espana/2023-06-17/collboni-nuevo-alcalde-de-barcelona-gracias-a-los-votos-de-pp-y-el-voto-de-los-de-colau/"
+        "titulo": "CIDOB: Ada Colau Ballano (biografía política)",
+        "url": "https://www.cidob.org/lider-politico/ada-colau-ballano"
+      },
+      {
+        "titulo": "Catalan News: Socialist Jaume Collboni appointed Barcelona mayor after last-minute plot twist (17/06/2023)",
+        "url": "https://www.catalannews.com/2023-local-elections/item/socialist-jaume-collboni-appointed-barcelona-mayor-after-last-minute-plot-twist"
       }
     ]
   },
@@ -210,16 +256,24 @@
     "cita": "esos 8 años de alcaldía",
     "afirmacion": "Colau fue alcaldesa de Barcelona durante 8 años.",
     "veredicto": "verdadero",
-    "explicacion": "Colau fue alcaldesa de Barcelona del 13 de junio de 2015 al 17 de junio de 2023, es decir, ocho años y cuatro días (dos mandatos).",
+    "explicacion": "Colau fue investida alcaldesa de Barcelona el 13 de junio de 2015 (en primera votación, con 21 votos) y dejó el cargo el 17 de junio de 2023, al ser investido Jaume Collboni: ocho años y cuatro días, en dos mandatos (2015 y reelección de 2019).",
     "confianza": "alta",
     "fuentes": [
       {
-        "titulo": "Wikipedia - Ada Colau",
-        "url": "https://en.wikipedia.org/wiki/Ada_Colau"
+        "titulo": "3Cat: Ada Colau, investida alcaldessa, promet lleialtat a la ciutadania de Barcelona (13/06/2015)",
+        "url": "https://www.3cat.cat/3catinfo/ada-colau-investida-alcaldessa-promet-lleialtat-a-la-ciutadania-de-barcelona/noticia/2670635/"
       },
       {
-        "titulo": "Catalan News - Socialist Jaume Collboni appointed Barcelona mayor after last-minute plot twist",
-        "url": "https://www.catalannews.com/2023-local-elections/item/socialist-jaume-collboni-appointed-barcelona-mayor-after-last-minute-plot-twist"
+        "titulo": "The Objective: Collboni, nuevo alcalde de Barcelona gracias a los votos del PP y de los de Colau (17/06/2023)",
+        "url": "https://theobjective.com/espana/2023-06-17/collboni-nuevo-alcalde-de-barcelona-gracias-a-los-votos-de-pp-y-el-voto-de-los-de-colau/"
+      },
+      {
+        "titulo": "CIDOB: Ada Colau Ballano (biografía política)",
+        "url": "https://www.cidob.org/lider-politico/ada-colau-ballano"
+      },
+      {
+        "titulo": "Ajuntament de Barcelona: Colau Ballano, Ada (distinciones y honores)",
+        "url": "https://ajuntament.barcelona.cat/distincions-honors/es/colau-ballano-ada"
       }
     ]
   },
@@ -228,19 +282,19 @@
     "cita": "ver a una mujer de 87 años que la sacan en camilla de su casa cuando no ha dejado de pagar ni un mes el alquiler porque un gran propietario quiere subir el precio",
     "afirmacion": "Maricarmen, de 87 años, fue sacada en camilla de su casa sin haber dejado de pagar el alquiler, porque un gran propietario quería subirle el precio.",
     "veredicto": "mayormente_verdadero",
-    "explicacion": "El 23 de septiembre de 2026, en el cuarto intento de desahucio, Maricarmen (87 años, Retiro, Madrid) salió en camilla y fue trasladada al hospital Gregorio Marañón. Su abogado y el Sindicato de Inquilinas aseguran que nunca dejó de pagar. El propietario, Urbagestión (inversor que compró el edificio en 2018), le exigía unos 1.650 euros frente a los unos 500 que pagaba con un contrato de renta antigua de 1956. La causa jurídica inmediata fue que, según el Supremo, el contrato de renta antigua ya había expirado (la subrogación acabó en 2007), no un impago; la subida de precio sí es el trasfondo.",
+    "explicacion": "El 23 de septiembre de 2026, en el cuarto intento de desahucio, Maricarmen (87 años, Retiro, Madrid) salió en camilla y fue trasladada al hospital Gregorio Marañón. Su abogada y el Sindicato de Inquilinas aseguran que nunca dejó de pagar los unos 500 euros de su contrato de renta antigua de 1956, mientras la propiedad (Urbagestión, que compró el edificio en 2018) le planteaba pasar a 1.650 euros. La causa jurídica fue que, según el Supremo, la subrogación del contrato terminó en 2007, no un impago; la subida de precio es el trasfondo, no la causa legal.",
     "confianza": "media",
     "fuentes": [
       {
-        "titulo": "Diario de Avisos (Europa Press) - Desahucio de Maricarmen (23/09/2026)",
+        "titulo": "Diario de Avisos: Desahucio de Maricarmen (23/09/2026)",
         "url": "https://diariodeavisos.elespanol.com/2026/09/desahucio-maricarmen/"
       },
       {
-        "titulo": "Ara - Desahuciada la vecina de 87 años de Madrid a quien le exigían un alquiler de 1.650 euros",
+        "titulo": "Ara: Desahuciada la vecina de 87 años de Madrid a quien le exigían un alquiler de 1.650 euros",
         "url": "https://es.ara.cat/sociedad/desahuciada-vecina-87-anos-madrid-le-exigian-alquiler-1-650-euros_1_5858449.html"
       },
       {
-        "titulo": "El Español - Confirmado: el desahucio de Maricarmen no es ilegal según la Ley de Arrendamientos Urbanos (24/09/2026)",
+        "titulo": "El Español: Confirmado: el desahucio de Maricarmen no es ilegal según la Ley de Arrendamientos Urbanos (24/09/2026)",
         "url": "https://www.elespanol.com/sociedad/20260924/confirmado-desahucio-maricarmen-anos-no-ilegal-ley-arrendamientos-urbanos-td/1003744395045_0.html"
       }
     ]
@@ -250,20 +304,24 @@
     "cita": "que cientos de miles salgan a la calle y digan, basta ya",
     "afirmacion": "Cientos de miles de personas salieron a la calle tras el desahucio de Maricarmen.",
     "veredicto": "enganoso",
-    "explicacion": "Los convocantes (Sindicato de Inquilinas) cifraron la manifestación de Madrid del 26 de septiembre en más de 300.000 personas y la del 3 de octubre en 500.000, pero la Delegación del Gobierno dio 25.000 y 70.000 respectivamente; las concentraciones del 23 de septiembre (varias ciudades) sumaron unas 10.000 personas según la Delegación. Hubo protestas masivas y en muchas ciudades, pero con las cifras oficiales ninguna convocatoria llegó a cientos de miles, y esa cifra solo la dan los organizadores.",
+    "explicacion": "El Sindicato de Inquilinas cifró la manifestación de Madrid del 26 de septiembre en unas 300.000 personas y la del 3 de octubre en 500.000, pero la Delegación del Gobierno dio 25.000 y 70.000 respectivamente; las concentraciones del 23 de septiembre en una decena de ciudades sumaron unas 10.000 personas según la Delegación. Hubo movilizaciones masivas y en muchas ciudades, pero con las cifras oficiales ninguna convocatoria llegó a cientos de miles; esa cifra solo la dan los organizadores y no hay recuento independiente.",
     "confianza": "media",
     "fuentes": [
       {
-        "titulo": "El Español - La manifestación por la vivienda supera... (04/10/2026): 70.000 según la Delegación, 500.000 según el Sindicato",
+        "titulo": "Euronews: La manifestación por Maricarmen acaba en una acampada en Sol (27/09/2026): 25.000 según la Delegación, 300.000 según el sindicato",
+        "url": "https://es.euronews.com/2026/09/27/la-manifestacion-por-maricarmen-y-el-problema-de-la-vivienda-acaba-en-una-acampada-en-sol-"
+      },
+      {
+        "titulo": "Euronews: Casi 500.000 personas protestan en Madrid por la crisis de la vivienda (03/10/2026): 70.000 según cifras oficiales",
+        "url": "https://es.euronews.com/2026/10/03/casi-500000-personas-protestan-en-madrid-por-la-crisis-de-la-vivienda-en-espana"
+      },
+      {
+        "titulo": "El Español: La manifestación por la vivienda supera... (04/10/2026): 70.000 según la Delegación, 500.000 según el Sindicato",
         "url": "https://www.elespanol.com/madrid/capital/20261004/manifestacion-vivienda-supera-queda-debajo-rentistas-poder/1003744407607_0.html"
       },
       {
-        "titulo": "El Salto - Miles de personas salen a la calle para señalar la responsabilidad del Gobierno en el desahucio de Maricarmen",
+        "titulo": "El Salto: Miles de personas salen a la calle para señalar la responsabilidad del Gobierno en el desahucio de Maricarmen",
         "url": "https://www.elsaltodiario.com/vivienda/miles-personas-salen-calle-senalar-responsabilidad-del-gobierno-desahucio-maricarmen"
-      },
-      {
-        "titulo": "El Salto - No se trata (solo) de Maricarmen: una gran manifestación presiona al Gobierno",
-        "url": "https://www.elsaltodiario.com/madrid/no-se-trata-solo-maricarmen-una-gran-manifestacion-presiona-al-gobierno-salga-paralisis"
       }
     ]
   },
@@ -272,16 +330,20 @@
     "cita": "lo que hice fue un vídeo totalmente espontáneo en mi Instagram, donde dije el gobierno tiene que responder sí o sí ya porque va tarde y no se puede seguir gobernando con el Partido Socialista si no se ataja ya esto",
     "afirmacion": "Antes de plantearse ser candidata, Colau publicó un vídeo en Instagram diciendo que no se podía seguir gobernando con el PSOE si no se atajaba el problema de la vivienda.",
     "veredicto": "mayormente_verdadero",
-    "explicacion": "El 23 de septiembre de 2026, tras el desahucio de Maricarmen, Colau difundió un vídeo en Instagram en el que pedía a Sumar que no fuese «cómplice» de la «cobardía» del PSOE en vivienda y que se planteara salir del Gobierno si el PSOE seguía bloqueando medidas valientes. La candidatura del Frente Amplio se le propuso el 12 de octubre, así que el vídeo es anterior. La frase literal no aparece en las crónicas, pero el sentido coincide.",
+    "explicacion": "Tras el desahucio de Maricarmen (23 de septiembre de 2026), Colau difundió un vídeo en Instagram en el que decía que Sumar no podía ser «cómplice de la cobardía del PSOE» y debía plantearse salir del Gobierno si el PSOE seguía bloqueando medidas contra los fondos buitre. La candidatura del Frente Amplio se le propuso formalmente el 12 de octubre, así que el vídeo es anterior. La frase literal de Colau no aparece en las crónicas, pero el sentido coincide.",
     "confianza": "media",
     "fuentes": [
       {
-        "titulo": "Demócrata - Ada Colau urges Sumar to leave the Government if the PSOE does not act after the eviction of Maricarmen (23/09/2026)",
-        "url": "https://www.democrata.es/en/politics/ada-colau-urges-sumar-to-leave-the-government-if-the-psoe-does-not-act-after-the-eviction-of-maricarmen/"
+        "titulo": "Ara: Lo que le queda pendiente a Ada Colau",
+        "url": "https://es.ara.cat/politica/le-queda-pendiente-ada-colau_129_5872893.html"
       },
       {
-        "titulo": "Onda Vasca - Colau acusa a Sánchez de llegar tarde al caso de Maricarmen",
-        "url": "https://www.ondavasca.com/colau-acusa-a-sanchez-de-llegar-tarde-al-caso-de-maricarmen/"
+        "titulo": "El Salto: El desahucio de Maricarmen desata una ola de indignación que empuja al Gobierno contra las cuerdas (24/09/2026)",
+        "url": "https://www.elsaltodiario.com/vivienda/desahucio-maricarmen-desata-una-ola-indignacion-pone-al-gobierno-cuerdas"
+      },
+      {
+        "titulo": "Demócrata: Ada Colau urges Sumar to leave the Government if the PSOE does not act after the eviction of Maricarmen (23/09/2026)",
+        "url": "https://www.democrata.es/en/politics/ada-colau-urges-sumar-to-leave-the-government-if-the-psoe-does-not-act-after-the-eviction-of-maricarmen/"
       }
     ]
   },
@@ -290,19 +352,27 @@
     "cita": "Pepe, Junts y Vox tumbaron esos decretos",
     "afirmacion": "Los dos decretos de vivienda (frenar desalojos y limitar las subidas del alquiler) fueron rechazados en el Congreso por los votos en contra de PP, Junts y Vox.",
     "veredicto": "verdadero",
-    "explicacion": "El Gobierno aprobó dos decretos de vivienda el 29 de septiembre de 2026 (protección antidesahucios de hogares vulnerables hasta 2030, prórroga de contratos y tope del 2 % a la subida anual de rentas, entre otras medidas). El 2 de octubre el Congreso los derogó: el primero por 172 votos a favor y 178 en contra, el segundo por 166 y 184; votaron en contra PP, Vox y Junts (y UPN según El Salto). «Pepe» es un error de transcripción de «PP».",
+    "explicacion": "El Gobierno aprobó dos reales decretos-ley de vivienda el 29 de septiembre de 2026 (RDL 26/2026 y 27/2026: protección antidesahucios de hogares vulnerables hasta 2030, prórroga y renovación de contratos y tope del 2 % a la subida anual de rentas, entre otras medidas). El 2 de octubre el Congreso los derogó: el primero por 172 votos a favor y 178 en contra, el segundo por 166 y 184. Votaron en contra PP, Vox y Junts (y UPN según El Salto; en el segundo, una crónica añade a PNV y CC), y Euronews dice que PP, Vox y Junts fueron determinantes. «Pepe» es un error de transcripción de «PP».",
     "confianza": "alta",
     "fuentes": [
       {
-        "titulo": "Euronews - El Congreso tumba los decretos de vivienda pese al aviso de Sánchez (02/10/2026)",
+        "titulo": "Euronews: El Congreso tumba los decretos de vivienda pese al aviso de Sánchez (02/10/2026)",
         "url": "https://es.euronews.com/2026/10/02/el-congreso-tumba-los-decretos-de-vivienda-pese-al-aviso-de-sanchez-seran-juzgados-antes-d"
       },
       {
-        "titulo": "El Salto - El Congreso tumba los dos decretos de vivienda y deja la legislatura al borde del fin",
+        "titulo": "Artículo 14: PP, Vox y Junts tumban los dos decretos de vivienda y asestan una dura derrota al Gobierno (02/10/2026)",
+        "url": "https://www.articulo14.es/politica/pp-vox-y-junts-tumban-los-dos-decretos-de-vivienda-y-asestan-una-dura-derrota-al-gobierno-20261002.html"
+      },
+      {
+        "titulo": "El Salto: El Congreso tumba los dos decretos de vivienda y deja la legislatura al borde del fin",
         "url": "https://www.elsaltodiario.com/politica/congreso-tumba-dos-decretos-vivienda-deja-legislatura-al-borde-del-fin"
       },
       {
-        "titulo": "The Objective - Las principales medidas de los decretos: escudo antidesahucios y prórroga de alquileres (29/09/2026)",
+        "titulo": "Diario de León: El BOE publica la derogación de los decretos de vivienda tras el «no» del Congreso (02/10/2026)",
+        "url": "https://www.diariodeleon.es/nacional/261002/2099098/boe-publica-derogacion-reales-decretos-ley-vivienda-congreso.html"
+      },
+      {
+        "titulo": "The Objective: Las principales medidas de los decretos: escudo antidesahucios y prórroga de alquileres (29/09/2026)",
         "url": "https://theobjective.com/economia/2026-09-29/principales-medidas-decretos-vivienda-gobierno/"
       }
     ]
@@ -312,20 +382,24 @@
     "cita": "Consecuencia de eso, Pedro Sánchez convocó elecciones.",
     "afirmacion": "Pedro Sánchez convocó elecciones como consecuencia de que el Congreso tumbara los decretos de vivienda.",
     "veredicto": "mayormente_verdadero",
-    "explicacion": "Sánchez disolvió las Cortes y convocó elecciones generales para el 29 de noviembre de 2026 mediante el Real Decreto 806/2026, de 5 de octubre (BOE del 6 de octubre), tres días después de la derrota de los decretos el 2 de octubre; la prensa lo presentó como respuesta a ese revés y a la pérdida de mayoría. Sin embargo, según Artículo 14, Sánchez no atribuyó formalmente la convocatoria a los decretos, sino a que había llegado el momento de que los ciudadanos decidieran; el nexo causal es una interpretación política muy extendida pero no una declaración oficial.",
+    "explicacion": "Sánchez disolvió las Cortes y convocó elecciones generales para el 29 de noviembre de 2026 mediante el Real Decreto 806/2026, de 5 de octubre (BOE del 6 de octubre), tres días después de que el Congreso tumbara los decretos de vivienda; la prensa lo presentó como respuesta a ese revés y a la pérdida de mayoría. Según Artículo 14, Sánchez justificó el momento por «el deterioro de la mayoría parlamentaria» y la necesidad de que los ciudadanos decidieran, sin atribuirlo formalmente a los decretos. El nexo causal es una interpretación muy extendida, pero no una declaración oficial.",
     "confianza": "media",
     "fuentes": [
       {
-        "titulo": "Artículo 14 - El BOE lo hace oficial: así es el decreto que convoca las elecciones generales del 29N (06/10/2026)",
+        "titulo": "Artículo 14: El BOE lo hace oficial: así es el decreto que convoca las elecciones generales del 29N (06/10/2026)",
         "url": "https://www.articulo14.es/politica/el-boe-lo-hace-oficial-asi-es-el-decreto-que-convoca-las-elecciones-generales-del-29n-20261006.html"
       },
       {
-        "titulo": "ESdiario - Sánchez adelanta las elecciones tras el batacazo de sus decretos de vivienda en el Congreso (05/10/2026)",
+        "titulo": "ESdiario (Europa Press): Sánchez adelanta las elecciones tras el batacazo de sus decretos de vivienda en el Congreso (05/10/2026)",
         "url": "https://www.esdiario.com/nacional/261005/199417/sanchez-adelanta-elecciones-batacazo-decretos-vivienda-congreso.html"
       },
       {
-        "titulo": "El Salto - El Congreso tumba los dos decretos de vivienda y deja la legislatura al borde del fin",
-        "url": "https://www.elsaltodiario.com/politica/congreso-tumba-dos-decretos-vivienda-deja-legislatura-al-borde-del-fin"
+        "titulo": "Euronews: Sánchez estudia convocar elecciones generales el próximo 29 de noviembre (04/10/2026)",
+        "url": "https://es.euronews.com/2026/10/04/sanchez-estudia-convocar-elecciones-generales-el-proximo-29-de-noviembre"
+      },
+      {
+        "titulo": "El Cronista: Pedro Sánchez adelanta las elecciones en España tras el fracaso de sus leyes para regular la vivienda",
+        "url": "https://www.cronista.com/internacionales/pedro-sanchez-adelanta-las-elecciones-en-espana-tras-el-fracaso-de-sus-leyes-para-regular-la-vivienda/"
       }
     ]
   },
@@ -334,16 +408,20 @@
     "cita": "con los últimos gobiernos se ha subido el salario mínimo",
     "afirmacion": "Con los últimos gobiernos se ha subido el salario mínimo de forma histórica.",
     "veredicto": "verdadero",
-    "explicacion": "El salario mínimo interprofesional pasó de 735,90 euros mensuales en 14 pagas en 2018 a 1.221 euros en 2026 (Real Decreto 126/2026, de 18 de febrero), un 65,9 % más en términos nominales y la cuantía más alta de su serie; la subida de 2026 respecto a 2025 (1.184 euros) fue del 3,1 %. Calificarla de «histórica» es una valoración, pero las cifras la respaldan.",
+    "explicacion": "El SMI pasó de 735,9 euros al mes en 14 pagas (10.303 euros al año) en 2018 a 1.221 euros (17.094 al año) en 2026, fijado por el Real Decreto 126/2026, de 18 de febrero (BOE del 19 de febrero); el Ministerio de Hacienda lo cifra en un 66 % más en ocho años, «la mayor subida jamás registrada». La subida de 2026 respecto a 2025 (1.184 euros) fue del 3,1 %. Son cifras nominales; calificarla de «histórica» es una valoración, pero los datos oficiales la respaldan.",
     "confianza": "alta",
     "fuentes": [
       {
-        "titulo": "Lo Entiendo - Salario Mínimo Interprofesional 2026 (RD 126/2026)",
-        "url": "https://loentiendo.com/salario-minimo-interprofesional/"
+        "titulo": "Ministerio de Hacienda: El Gobierno aprueba por cuarto año consecutivo una rebaja del IRPF que garantiza que los perceptores del SMI estarán exentos (17/02/2026)",
+        "url": "https://www.hacienda.gob.es/gl-es/prensa/noticias/noticiaspdf//471.pdf"
       },
       {
-        "titulo": "Lo Entiendo - SMI 2026: evolución desde 2018 (735,90 a 1.221 euros)",
-        "url": "https://loentiendo.com/subida-smi-2023-1080-euros-mensuales/"
+        "titulo": "Noticias Jurídicas: Real Decreto 126/2026, nuevo salario mínimo interprofesional para 2026",
+        "url": "https://noticias.juridicas.com/actualidad/noticias/20879-real-decreto-126-2026:nuevo-salario-minimo-interprofesional-para-2026/"
+      },
+      {
+        "titulo": "Laboral-Social (nota del Ministerio de Trabajo): El Consejo de Ministros acuerda la subida del 3,1 % del SMI hasta los 1.221 euros mensuales (17/02/2026)",
+        "url": "https://www.laboral-social.com/consejo-ministros-acuerda-subida-3-1-por-ciento-SMI-hasta-1221-euros-mensuales-sin-tributacion"
       }
     ]
   },
@@ -352,16 +430,24 @@
     "cita": "Florentino Pérez, tiene 4.900 millones de euros",
     "afirmacion": "Florentino Pérez tiene un patrimonio de 4.900 millones de euros.",
     "veredicto": "verdadero",
-    "explicacion": "La lista Forbes España de los 100 españoles más ricos de 2026, publicada el 3 de noviembre de 2026, estima la fortuna de Florentino Pérez en 4.900 millones de euros (un 58 % más que el año anterior). Es una estimación de la revista y otras valoraciones, como la mundial de Forbes, la sitúan algo por encima, pero la cifra coincide con la publicada.",
+    "explicacion": "La lista Forbes España de los 100 españoles más ricos de 2026, publicada el 3 de noviembre de 2026, estima la fortuna de Florentino Pérez (ACS y Real Madrid) en 4.900 millones de euros, un 58 % más que el año anterior, empatado con Tomás Olivo en el séptimo puesto según varios medios. Es una estimación de la revista y otras listas dan cifras distintas (el listado de El Mundo apunta una subida del 156 %), pero la cifra coincide con la publicada por Forbes.",
     "confianza": "media",
     "fuentes": [
       {
-        "titulo": "Demócrata - Forbes: los nuevos movimientos entre los 100 españoles más ricos (03/11/2026)",
-        "url": "https://www.democrata.es/economia/forbes-ricos-amancio-ortega-botin-iglesias-pino/"
+        "titulo": "Vozpópuli: Récord histórico de los 100 más ricos de España (03/11/2026)",
+        "url": "https://www.vozpopuli.com/economia/record-historico-de-los-100-mas-ricos-de-espana-el-imperio-de-amancio-ortega-la-escalada-de-juan-roig-y-la-entrada-de-ana-botin.html"
       },
       {
-        "titulo": "Merca2 - Los más ricos de España en 2026: Amancio Ortega lidera, Escribano y Pérez se disparan",
-        "url": "https://www.merca2.es/2026/05/06/lista-ricos-espana-2026-2377075/"
+        "titulo": "Artículo 14: Ana Botín, Pilar Líbano y Mercedes Daurella entran por primera vez en la lista Forbes de las más ricas de España (04/11/2026)",
+        "url": "https://www.articulo14.es/economia/ana-botin-pilar-libano-y-mercedes-daurella-entran-por-primera-vez-en-la-lista-forbes-de-las-mas-ricas-de-espana-20261104.html"
+      },
+      {
+        "titulo": "Euro Weekly News: Mercadona boss climbs to third as Spain's richest see fortunes hit €300bn (05/11/2026)",
+        "url": "https://euroweeklynews.com/2026/11/05/mercadona-boss-climbs-to-third-as-spains-richest-see-fortunes-hit-e300bn/"
+      },
+      {
+        "titulo": "Demócrata: Forbes: los nuevos movimientos entre los 100 españoles más ricos (03/11/2026)",
+        "url": "https://www.democrata.es/economia/forbes-ricos-amancio-ortega-botin-iglesias-pino/"
       }
     ]
   },
@@ -370,12 +456,12 @@
     "cita": "si ahora está pagando sobre sus beneficios 150 millones de euros",
     "afirmacion": "Florentino Pérez paga actualmente 150 millones de euros de impuestos sobre sus beneficios.",
     "veredicto": "no_verificable",
-    "explicacion": "No se ha encontrado ninguna fuente que cifre en 150 millones lo que tributa Florentino Pérez. No está claro si Colau se refiere al impuesto de sociedades de ACS, a los dividendos o a su tributación personal; la declaración personal no es pública y no se localizó el dato de ACS. En las búsquedas, los 150 millones aparecen solo en operaciones sin relación (una compra de acciones de ACS en 2026).",
+    "explicacion": "No se ha encontrado ninguna fuente que cifre en 150 millones lo que tributa Florentino Pérez, y Colau lo plantea de forma condicional («si ahora está pagando...»). No está claro si se refiere al impuesto de sociedades de ACS, a los dividendos o a su IRPF personal; su declaración no es pública y la información disponible (su sociedad Rosán Inversiones cobró unos 71 millones en dividendos de ACS en 2024 y los destinó a reservas) no da ninguna cifra de impuestos. Los 150 millones solo aparecen en una compra de acciones de ACS en 2026 sin relación con el dato.",
     "confianza": "baja",
     "fuentes": [
       {
-        "titulo": "Demócrata - Forbes: los nuevos movimientos entre los 100 españoles más ricos (contexto del patrimonio)",
-        "url": "https://www.democrata.es/economia/forbes-ricos-amancio-ortega-botin-iglesias-pino/"
+        "titulo": "Vozpópuli: Florentino Pérez amplía su colchón financiero personal hasta los 718 millones en reservas voluntarias (03/08/2025)",
+        "url": "https://www.vozpopuli.com/economia/empresas/florentino-perez-amplia-su-colchon-financiero-personal-hasta-los-718-millones-en-reservas-voluntarias.html"
       }
     ]
   },
@@ -384,24 +470,24 @@
     "cita": "si hay otra persona que sea más de consenso, yo me aparto y me pongo en otro sitio donde sea útil",
     "afirmacion": "Colau puso su candidatura a disposición y se ofreció a apartarse si había otra persona de más consenso, tras haber sido propuesta por las formaciones por ser una figura de consenso.",
     "veredicto": "verdadero",
-    "explicacion": "El 12 de octubre de 2026 Izquierda Unida, Comuns, Más Madrid y Movimiento Sumar la propusieron como candidata. El 8 de octubre ya había dicho en La Hora de La 1 «si estamos todas, yo también estaré, pero tenemos que estar todas», y el 14 de octubre, en TVE, se ofreció a renunciar a la candidatura y a cambiar el nombre de la coalición si había otra persona que generara más consenso, con el objetivo de integrar a Podemos y a Irene Montero.",
+    "explicacion": "El 12 de octubre de 2026 Izquierda Unida, Comuns, Más Madrid y Movimiento Sumar anunciaron a Colau como candidata, al considerarla la figura que mejor podía asumir el liderazgo. El 8 de octubre ya había dicho en La Hora de La 1 «si estamos todas, yo también estaré, pero tenemos que estar todas», y el 14 de octubre, en TVE, se ofreció a dejar de encabezar la candidatura y a cambiar el nombre de la coalición si eso facilitaba la integración de Podemos e Irene Montero.",
     "confianza": "alta",
     "fuentes": [
       {
-        "titulo": "Demócrata - Podemos starts its primaries with Irene Montero while Colau offers to take a step back (14/10/2026)",
-        "url": "https://www.democrata.es/en/general-elections-spain/we-can-start-its-primaries-with-irene-montero-while-colau-offers-to-take-a-step-back-to-unite-the-left/"
-      },
-      {
-        "titulo": "RTVC - Ada Colau se ofrece a renunciar a la candidatura para integrar a Podemos (14/10/2026)",
-        "url": "https://rtvc.es/ada-colau-se-ofrece-a-renunciar-a-la-candidatura-para-integrar-a-podemos-14-octubre-2026/"
-      },
-      {
-        "titulo": "Artículo 14 - Ada Colau, dispuesta a liderar Frente Amplio si se une Podemos: «Si estamos todas, estaré» (08/10/2026)",
+        "titulo": "Artículo 14: Ada Colau, dispuesta a liderar Frente Amplio si se une Podemos: «Si estamos todas, estaré» (08/10/2026)",
         "url": "https://www.articulo14.es/politica/ada-colau-dispuesta-a-liderar-frente-amplio-si-se-une-podemos-si-estamos-todas-estare-20261008.html"
       },
       {
-        "titulo": "elDiario.es - El Frente Amplio responde al órdago de Podemos y Rufián: confirma a Colau como candidata (12/10/2026)",
+        "titulo": "elDiario.es: El Frente Amplio responde al órdago de Podemos y Rufián: confirma a Colau como candidata (12/10/2026)",
         "url": "https://www.eldiario.es/politica/frente-amplio-responde-ordago-rufian-confirma-colau-candidata-llama-montero-sumarse_1_13580395.html"
+      },
+      {
+        "titulo": "RTVC: Ada Colau se ofrece a renunciar a la candidatura para integrar a Podemos (14/10/2026)",
+        "url": "https://rtvc.es/ada-colau-se-ofrece-a-renunciar-a-la-candidatura-para-integrar-a-podemos-14-octubre-2026/"
+      },
+      {
+        "titulo": "Demócrata: Podemos starts its primaries with Irene Montero while Colau offers to take a step back (14/10/2026)",
+        "url": "https://www.democrata.es/en/general-elections-spain/we-can-start-its-primaries-with-irene-montero-while-colau-offers-to-take-a-step-back-to-unite-the-left/"
       }
     ]
   },
@@ -410,23 +496,23 @@
     "cita": "lo propusimos y lo repropusimos y no quisieron ni sentarse a hablar",
     "afirmacion": "Podemos ni siquiera quiso sentarse a hablar con las demás formaciones del Frente Amplio para intentar una candidatura unitaria.",
     "veredicto": "enganoso",
-    "explicacion": "Hubo contactos y ofertas cruzadas: según Público, las conversaciones se alargaron hasta el viernes 16 de octubre con Colau y Montero al teléfono; el Frente Amplio envió esa noche una «última propuesta» (puesto de salida prioritario en Madrid y Cataluña) y Podemos la rechazó y planteó una contrapropuesta. Irene Montero confirmó en la Cadena SER que «conversaciones hay siempre». Lo que sí es cierto es que no hubo acuerdo, que Podemos exigía primarias abiertas y rechazó integrarse; la versión de que ni se sentaron a hablar no se sostiene con lo publicado, aunque no hay constancia de una reunión presencial.",
+    "explicacion": "Hubo contactos y ofertas cruzadas: según Público, las conversaciones se alargaron hasta el viernes 16 de octubre, con Colau y Montero al teléfono; esa noche Frente Amplio envió una «última propuesta» (puesto de salida prioritario en Madrid y Cataluña) y Podemos la rechazó y planteó una contrapropuesta. Montero confirmó que «hay conversaciones» y Diario Sabemos no recoge ninguna reunión formal. Es cierto que no hubo acuerdo y que Podemos rechazó integrarse; lo que no se sostiene con lo publicado es que «ni se sentaran a hablar», aunque no consta una reunión presencial.",
     "confianza": "media",
     "fuentes": [
       {
-        "titulo": "Público - Frente Amplio y Podemos concurrirán por separado el 29 de noviembre salvo en Canarias y País Valencià",
+        "titulo": "Público: Frente Amplio y Podemos concurrirán por separado el 29 de noviembre salvo en Canarias y País Valencià",
         "url": "https://www.publico.es/politica/frente-amplio-podemos-concurriran-separado-29-noviembre-salvo-canarias-pais-valencia.html"
       },
       {
-        "titulo": "Artículo 14 - ¿Por qué Podemos no se va a integrar en el Frente Amplio? (13/10/2026)",
+        "titulo": "Artículo 14: ¿Por qué Podemos no se va a integrar en el Frente Amplio? (13/10/2026)",
         "url": "https://www.articulo14.es/politica/por-que-podemos-no-se-va-a-integrar-en-el-frente-amplio-20261013.html"
       },
       {
-        "titulo": "El Salto - Colau, en el arranque de Frente Amplio: «Si alguien no se quiere sentar a una mesa, no se le puede obligar»",
+        "titulo": "El Salto: Colau, en el arranque de Frente Amplio: «Si alguien no se quiere sentar a una mesa, no se le puede obligar»",
         "url": "https://www.elsaltodiario.com/elecciones/ada-colau-arranque-frente-amplio-alguien-no-se-quiere-sentar-una-mesa-no-se-le-puede-obligar"
       },
       {
-        "titulo": "Diario Sabemos - Colau ofrece apartarse y cambiar el nombre de Frente Amplio, pero la coalición lanza su marca sin esperar a Podemos",
+        "titulo": "Diario Sabemos: Colau ofrece apartarse y cambiar el nombre de Frente Amplio, pero la coalición lanza su marca sin esperar a Podemos",
         "url": "https://diariosabemos.com/politica/colau-frente-amplio-podemos-irene-montero-unidad-izquierda-29n_519345_102.html"
       }
     ]
@@ -436,23 +522,19 @@
     "cita": "15 formaciones políticas finalmente van en el frente amplio",
     "afirmacion": "Quince formaciones políticas integran el Frente Amplio.",
     "veredicto": "enganoso",
-    "explicacion": "La cifra de 15 es la que da la propia coalición («Somos 15 organizaciones. Queríamos ser 16»), según Público y El Salto. Pero la coalición registrada ante la Junta Electoral Central el 16 de octubre la forman 11 partidos (Sumar, IU, Más Madrid, Comuns, Chunta, Izquierda Asturiana, Recortes Cero, Batzarre, Iniciativa del Pueblo Andaluz, Equo y Somos Partido Progresista), a los que se suman acuerdos con otras fuerzas (Somos Asturies, Partido Humanista) y candidaturas territoriales con marcas propias. Artículo 14, citando a la agencia EFE, habla de 11. El número depende de qué se cuente.",
+    "explicacion": "La cifra de 15 es la que da la propia coalición («somos 15 organizaciones», según Público y El Salto, que incluye a Batzarre, Iniciativa del Pueblo Andaluz, Somos Asturies y Recortes Cero). Pero la coalición registrada ante la Junta Electoral Central el 16 de octubre la forman 11 organizaciones, según EFE citada por Artículo 14 (Izquierda Unida, Sumar, Catalunya en Comú, Más Madrid, Chunta, Izquierda Asturiana, Recortes Cero, Batzarre, Iniciativa del Pueblo Andaluz, Equo y Somos Partido Progresista), más acuerdos territoriales con otras fuerzas. El número depende de qué se cuente; el registro oficial no se pudo consultar.",
     "confianza": "media",
     "fuentes": [
       {
-        "titulo": "Elecciones en España - Qué partidos forman el Frente Amplio (11) y dónde se presenta el 29-N",
-        "url": "https://eleccionesenespana.es/coaliciones/frente-amplio/"
-      },
-      {
-        "titulo": "Artículo 14 - Qué partidos forman Frente Amplio: integrantes, acuerdos y diferencias con Sumar (07/11/2026)",
+        "titulo": "Artículo 14: Qué partidos forman Frente Amplio: integrantes, acuerdos y diferencias con Sumar (07/11/2026)",
         "url": "https://www.articulo14.es/politica/que-partidos-forman-frente-amplio-integrantes-acuerdos-y-diferencias-con-sumar-20261107.html"
       },
       {
-        "titulo": "Público - Frente Amplio y Podemos concurrirán por separado el 29 de noviembre salvo en Canarias y País Valencià",
+        "titulo": "Público: Frente Amplio y Podemos concurrirán por separado el 29 de noviembre salvo en Canarias y País Valencià",
         "url": "https://www.publico.es/politica/frente-amplio-podemos-concurriran-separado-29-noviembre-salvo-canarias-pais-valencia.html"
       },
       {
-        "titulo": "El Salto - Colau, en el arranque de Frente Amplio",
+        "titulo": "El Salto: Colau, en el arranque de Frente Amplio: «Si alguien no se quiere sentar a una mesa, no se le puede obligar»",
         "url": "https://www.elsaltodiario.com/elecciones/ada-colau-arranque-frente-amplio-alguien-no-se-quiere-sentar-una-mesa-no-se-le-puede-obligar"
       }
     ]
@@ -462,19 +544,19 @@
     "cita": "No hicimos primarias porque no daba tiempo.",
     "afirmacion": "El Frente Amplio no hizo primarias porque no había tiempo.",
     "veredicto": "mayormente_verdadero",
-    "explicacion": "Es cierto que el Frente Amplio no celebró primarias: las cuatro formaciones impulsoras propusieron directamente a Colau el 12 de octubre de 2026, siete días después de la convocatoria electoral (5 de octubre) y cuatro antes de que acabara el plazo de inscripción de coaliciones (16 de octubre). El motivo que da es su explicación; según la prensa, el desacuerdo de fondo con Podemos era el procedimiento (Podemos exigía primarias abiertas de toda la izquierda, el Frente Amplio quería acordar antes el sistema), no solo el calendario.",
+    "explicacion": "Es cierto que el Frente Amplio no celebró primarias: IU, Comuns, Más Madrid y Movimiento Sumar propusieron directamente a Colau el 12 de octubre de 2026, siete días después de la convocatoria (5 de octubre) y cuatro antes de que venciera el plazo para registrar coaliciones (16 de octubre). Que «no daba tiempo» es su explicación; según la prensa, el desacuerdo de fondo con Podemos era el procedimiento (Podemos exigía primarias abiertas a toda la izquierda, el Frente Amplio quería acordar antes las reglas), y Podemos sí organizó las suyas el 14 y 15 de octubre.",
     "confianza": "media",
     "fuentes": [
       {
-        "titulo": "Artículo 14 - ¿Por qué Podemos no se va a integrar en el Frente Amplio? (13/10/2026)",
+        "titulo": "Artículo 14: ¿Por qué Podemos no se va a integrar en el Frente Amplio? (13/10/2026)",
         "url": "https://www.articulo14.es/politica/por-que-podemos-no-se-va-a-integrar-en-el-frente-amplio-20261013.html"
       },
       {
-        "titulo": "Demócrata - Podemos starts its primaries with Irene Montero while Colau offers to take a step back (14/10/2026)",
+        "titulo": "Demócrata: Podemos starts its primaries with Irene Montero while Colau offers to take a step back (14/10/2026)",
         "url": "https://www.democrata.es/en/general-elections-spain/we-can-start-its-primaries-with-irene-montero-while-colau-offers-to-take-a-step-back-to-unite-the-left/"
       },
       {
-        "titulo": "Artículo 14 - El BOE lo hace oficial: así es el decreto que convoca las elecciones generales del 29N (06/10/2026)",
+        "titulo": "Artículo 14: El BOE lo hace oficial: así es el decreto que convoca las elecciones generales del 29N (06/10/2026)",
         "url": "https://www.articulo14.es/politica/el-boe-lo-hace-oficial-asi-es-el-decreto-que-convoca-las-elecciones-generales-del-29n-20261006.html"
       }
     ]
@@ -484,20 +566,28 @@
     "cita": "Podemos nunca quiso sentarse a hablar de qué tipo de primarias hacer con las otras formaciones políticas",
     "afirmacion": "Podemos nunca quiso sentarse a negociar con el resto de formaciones qué tipo de primarias hacer.",
     "veredicto": "no_verificable",
-    "explicacion": "Las fuentes coinciden en que Podemos defendía primarias abiertas para toda la izquierda e invitó a otras formaciones a sumarse a las suyas, mientras que el Frente Amplio quería pactar antes el sistema de selección, pero ninguna recoge si se pidió o se rechazó una reunión específica sobre el tipo de primarias. Son versiones contrapuestas de las dos partes y sin prueba independiente.",
+    "explicacion": "Las fuentes coinciden en que Podemos defendía primarias abiertas a toda la izquierda («la única forma de llegar a acuerdos son las primarias», Montero, 8/10) y las convocó para el 14 y 15 de octubre, mientras que el Frente Amplio quería acordar antes las reglas y el sistema. Ninguna recoge si Frente Amplio pidió o Podemos rechazó una reunión específica sobre el tipo de primarias; Diario Sabemos no informa de ninguna reunión formal. Son versiones contrapuestas de las dos partes sin prueba independiente.",
     "confianza": "baja",
     "fuentes": [
       {
-        "titulo": "Demócrata - Podemos starts its primaries with Irene Montero while Colau offers to take a step back (14/10/2026)",
+        "titulo": "Demócrata: Podemos starts its primaries with Irene Montero while Colau offers to take a step back (14/10/2026)",
         "url": "https://www.democrata.es/en/general-elections-spain/we-can-start-its-primaries-with-irene-montero-while-colau-offers-to-take-a-step-back-to-unite-the-left/"
       },
       {
-        "titulo": "Diario Sabemos - Colau ofrece apartarse y cambiar el nombre de Frente Amplio",
-        "url": "https://diariosabemos.com/politica/colau-frente-amplio-podemos-irene-montero-unidad-izquierda-29n_519345_102.html"
+        "titulo": "Demócrata: Irene Montero insiste en que solo unas primarias abiertas permiten un pacto con Frente Amplio (08/10/2026)",
+        "url": "https://www.democrata.es/politica/irene-montero-insiste-en-que-solo-unas-primarias-abiertas-permiten-un-pacto-con-frente-amplio/"
       },
       {
-        "titulo": "Infobae/EFE - Podemos no se pronuncia sobre Colau y condiciona un acuerdo con Frente Amplio a primarias (08/10/2026)",
+        "titulo": "Infobae (EFE): Podemos no se pronuncia sobre Colau y condiciona un acuerdo con Frente Amplio a primarias (08/10/2026)",
         "url": "https://www.infobae.com/espana/agencias/2026/10/08/podemos-no-se-pronuncia-sobre-colau-y-condiciona-un-acuerdo-con-frente-amplio-a-primarias/"
+      },
+      {
+        "titulo": "Artículo 14: Podemos se desmarca de Frente Amplio y defiende su alianza con ERC (13/10/2026)",
+        "url": "https://www.articulo14.es/politica/podemos-se-desmarca-de-frente-amplio-y-defiende-su-alianza-con-erc-20261013.html"
+      },
+      {
+        "titulo": "Diario Sabemos: Colau ofrece apartarse y cambiar el nombre de Frente Amplio, pero la coalición lanza su marca sin esperar a Podemos",
+        "url": "https://diariosabemos.com/politica/colau-frente-amplio-podemos-irene-montero-unidad-izquierda-29n_519345_102.html"
       }
     ]
   },
@@ -510,16 +600,20 @@
     "confianza": "alta",
     "fuentes": [
       {
-        "titulo": "Artículo 14 - ¿Por qué Podemos no se va a integrar en el Frente Amplio? (13/10/2026)",
+        "titulo": "Artículo 14: ¿Por qué Podemos no se va a integrar en el Frente Amplio? (13/10/2026)",
         "url": "https://www.articulo14.es/politica/por-que-podemos-no-se-va-a-integrar-en-el-frente-amplio-20261013.html"
       },
       {
-        "titulo": "Infobae/EFE - Podemos no se pronuncia sobre Colau y condiciona un acuerdo con Frente Amplio a primarias (08/10/2026)",
+        "titulo": "Infobae (EFE): Podemos no se pronuncia sobre Colau y condiciona un acuerdo con Frente Amplio a primarias (08/10/2026)",
         "url": "https://www.infobae.com/espana/agencias/2026/10/08/podemos-no-se-pronuncia-sobre-colau-y-condiciona-un-acuerdo-con-frente-amplio-a-primarias/"
       },
       {
-        "titulo": "Público - Frente Amplio y Podemos concurrirán por separado el 29 de noviembre salvo en Canarias y País Valencià",
+        "titulo": "Público: Frente Amplio y Podemos concurrirán por separado el 29 de noviembre salvo en Canarias y País Valencià",
         "url": "https://www.publico.es/politica/frente-amplio-podemos-concurriran-separado-29-noviembre-salvo-canarias-pais-valencia.html"
+      },
+      {
+        "titulo": "Diario Sabemos: Colau ofrece apartarse y cambiar el nombre de Frente Amplio, pero la coalición lanza su marca sin esperar a Podemos",
+        "url": "https://diariosabemos.com/politica/colau-frente-amplio-podemos-irene-montero-unidad-izquierda-29n_519345_102.html"
       }
     ]
   }

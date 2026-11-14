@@ -1,0 +1,234 @@
+[
+  {
+    "indice": 0,
+    "minuto": "0:49:33",
+    "afirmacion": "El Gobierno de Pedro Sánchez lleva ocho años en el poder.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Público: Pedro Sánchez, primer presidente no diputado (1 de junio de 2018)",
+        "url": "https://www.publico.es/politica/pedro-sanchez-primer-presidente-no-diputado-otras-curiosidades-nuevo-jefe-ejecutivo.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Se mantiene verdadero, pero la única fuente era Wikipedia: se añade Público (prensa) para la moción y se baja la confianza a media porque el BOE (Real Decreto 354/2018) no se pudo abrir. La cita del minuto es ambigua en la transcripción (no distingue hablantes) pero encaja con Feijóo hablando del sanchismo."
+  },
+  {
+    "indice": 1,
+    "minuto": "0:51:38",
+    "afirmacion": "En España unos dos millones y medio de personas cobran el ingreso mínimo vital (IMV).",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/inclusion/Paginas/2026/070826-imv-julio.aspx",
+        "motivo": "No se pudo abrir (conexión rechazada desde esta máquina), así que no se puede confirmar lo que dice; la cifra de julio sale sobrando con la de octubre"
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Seguridad Social (Revista): IMV octubre de 2026, 2.781.679 personas",
+        "url": "https://revista.seg-social.es/-/el-ingreso-m%C3%ADnimo-vital-protege-en-octubre-a-cerca-de-2-8-millones-de-personas-que-viven-en-911.274-hogares",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Veredicto igual; se confirman con la fuente primaria las cifras de octubre (2.781.679) y marzo (2.532.284) y se quitan las de junio y julio, que no se pudieron comprobar, y el enlace de La Moncloa que no abre."
+  },
+  {
+    "indice": 2,
+    "minuto": "0:51:38",
+    "afirmacion": "Hay medio millón de inmigrantes que cobran el ingreso mínimo vital sin haber trabajado ni una sola hora en el último año.",
+    "veredicto_antes": "falso",
+    "veredicto_despues": "enganoso",
+    "cambia_veredicto": true,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [],
+    "tiene_fuente_primaria": false,
+    "nota": "Pasa de falso a engañoso: los datos oficiales no publican los beneficiarios por nacionalidad (Maldita), por lo que «medio millón» podría ser el total de miembros de hogares con titular extranjero, mientras que lo que sí contradicen las cifras es que no hayan trabajado. Sin fuente primaria abierta (la Seguridad Social no desglosa por nacionalidad), confianza media."
+  },
+  {
+    "indice": 3,
+    "minuto": "0:52:45",
+    "afirmacion": "El reglamento europeo de retorno fue aprobado en la UE por la inmensa mayoría de los países, con el voto en contra del Gobierno de Sánchez.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [],
+    "tiene_fuente_primaria": false,
+    "nota": "Veredicto igual. Se quita de la explicación que votaran en contra los socialistas europeos (no consta en las fuentes abiertas) y se señala la discrepancia 210/218 entre fuentes; confianza media por falta de fuente oficial del Consejo."
+  },
+  {
+    "indice": 4,
+    "minuto": "0:52:45",
+    "afirmacion": "El modelo de enviar migrantes a terceros países ha funcionado, al menos parcialmente, en Italia con su acuerdo con Albania.",
+    "veredicto_antes": "no_verificable",
+    "veredicto_despues": "no_verificable",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [],
+    "tiene_fuente_primaria": false,
+    "nota": "Se mantiene no verificable (valoración, no dato) y las dos fuentes se confirman; se ajustan las cifras al texto de Il Post (70 personas el 10 de junio) y se añade que los TJUE pendientes. Ni sentido ni fuentes cambian."
+  },
+  {
+    "indice": 5,
+    "minuto": "0:53:45",
+    "afirmacion": "España es, desde hace algunos años, el país de toda Europa con más inmigración irregular.",
+    "veredicto_antes": "enganoso",
+    "veredicto_despues": "enganoso",
+    "cambia_veredicto": false,
+    "confianza_antes": "baja",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://brusselssignal.eu/2026/10/illegal-immigration-into-spain-rises-as-the-rest-of-the-eu-records-sharp-falls/",
+        "motivo": "Medio de línea editorial marcada, solo apoyo; se sustituye por los comunicados y datos primarios de Frontex que recoge"
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Frontex: -29 % en los diez primeros meses de 2026 (13/11/2026)",
+        "url": "https://www.frontex.europa.eu/media-centre/news/news-release/frontex-irregular-border-crossings-into-the-eu-down-29-in-the-first-ten-months-of-2026-Yj3qp4",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Frontex: datos de detecciones por ruta (EUROSUR, a 4/11/2026)",
+        "url": "https://www.frontex.europa.eu/assets/Migratory_routes/2026/EUROSUR_data_as_of_04NOV26.xlsx",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Veredicto igual (engañoso), pero ahora con datos primarios de Frontex por ruta y año (2018-2026), que confirman que España no lidera desde 2018; se quita la fuente de Brussels Signal y la cifra de Ceuta de 49.000, que no se pudo contrastar. Confianza de baja a media."
+  },
+  {
+    "indice": 6,
+    "minuto": "0:54:46",
+    "afirmacion": "España necesita inmigración.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "INE: Proyecciones de población 2026-2076 (17/6/2026)",
+        "url": "https://www.ine.es/dyngs/Prensa/PROP20262076.htm",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Veredicto igual. Se sustituyen las cifras de la edición 2024-2074 del INE (y el error «desde 49,8 millones», que es la población de 2026, no de 2024) por las de la edición vigente 2026-2076, publicada en junio de 2026."
+  },
+  {
+    "indice": 7,
+    "minuto": "0:54:46",
+    "afirmacion": "El 20 % de la población residente en España es de origen extranjero.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [],
+    "tiene_fuente_primaria": true,
+    "nota": "Sin cambios: se comprueban en la nota del INE las cifras (10.291.807 nacidos en el extranjero de 49.801.559, 20,7 %) y la de Euronews."
+  },
+  {
+    "indice": 8,
+    "minuto": "0:54:46",
+    "afirmacion": "Más del 30 % de los empadronados de la ciudad de Lleida son inmigrantes.",
+    "veredicto_antes": "enganoso",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": true,
+    "confianza_antes": "alta",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [],
+    "tiene_fuente_primaria": true,
+    "nota": "Pasa de engañoso a casi cierto: el dato de Idescat/INE se confirma (27,8 % de nacidos en el extranjero), pero una desviación de unos dos puntos en una cifra que él mismo da como «aproximadamente» es una imprecisión menor, no una omisión de contexto ni una conclusión que no se siga."
+  },
+  {
+    "indice": 9,
+    "minuto": "0:55:47",
+    "afirmacion": "Del 20 % de población de origen extranjero, un 6 % ya está nacionalizado y un 14 % no.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [],
+    "tiene_fuente_primaria": true,
+    "nota": "Veredicto igual; se confirman con el INE las cifras exactas (3.370.854 y 6.920.953) y se sube la confianza de media a alta porque el dato es directo de la fuente primaria."
+  },
+  {
+    "indice": 10,
+    "minuto": "0:55:47",
+    "afirmacion": "Desde que llegó Sánchez (2018) el número de personas de origen extranjero que viven en España ha aumentado un 60 %, de unos 6 millones a más de 10 millones.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.cidob.org/publicaciones/poblacion-extranjera-residente-espana-evolucion-caracteristicas-integracion-economica",
+        "motivo": "Dato de 2018 de segunda mano (6,2 millones) que difiere de la nota original del INE (6.373.063); se sustituye por la fuente primaria"
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "INE: Avance del Padrón a 1 de enero de 2018 (6.373.063 nacidos en el extranjero)",
+        "url": "https://www.ine.es/prensa/pad_2018_p.pdf",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Veredicto igual, pero se sustituye CIDOB por la nota original del INE de 2018 (6.373.063 nacidos en el extranjero), con lo que el aumento sale un 61,5 % y la confianza sube de media a alta."
+  },
+  {
+    "indice": 11,
+    "minuto": "0:55:47",
+    "afirmacion": "Uno de cada tres inmigrantes que salen en cayuco hacia las costas españolas muere en el mar.",
+    "veredicto_antes": "falso",
+    "veredicto_despues": "falso",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [],
+    "tiene_fuente_primaria": false,
+    "nota": "Veredicto igual (falso). Se corrige el cálculo de la explicación (una por cada seis llegadas es menos de la mitad de lo que dice Feijóo) y se quita la cifra de la OIM, que no se pudo comprobar. Sin fuente primaria (cifras de una ONG y de Interior vía EFE), confianza media."
+  },
+  {
+    "indice": 12,
+    "minuto": "0:55:47",
+    "afirmacion": "España es el único país de la UE que está regularizando de forma indiscriminada a 1,3 millones de inmigrantes.",
+    "veredicto_antes": "enganoso",
+    "veredicto_despues": "enganoso",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [],
+    "tiene_fuente_primaria": false,
+    "nota": "Veredicto igual; se confirman las tres fuentes (1.174.978 solicitudes, 822.000 permisos, requisitos y precedentes en Italia y Grecia) y se quita el número «Real Decreto 316/2026», que no aparece en ninguna fuente abierta. Sin fuente primaria (el BOE no responde), confianza media."
+  }
+]

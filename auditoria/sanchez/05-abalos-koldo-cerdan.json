@@ -1,0 +1,424 @@
+[
+  {
+    "indice": 0,
+    "minuto": "1:07:28",
+    "afirmacion": "Jordi Wild afirma que José Luis Ábalos (24 años de cárcel) y Víctor de Aldama han sido condenados por el Tribunal Supremo en el caso mascarillas; Sánchez no lo corrige.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.moncloa.com/2026/10/14/condena-abalos-koldo-supremo-mascarillas-3448628/",
+        "motivo": "moncloa.com es un medio privado, no es el Gobierno (política de fuentes: no válida)."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Poder Judicial (CGPJ): El Tribunal Supremo condena al exministro José Luis Ábalos y a su exasesor Koldo García a 24 años y 19 años de prisión (22/6/2026)",
+        "url": "https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Noticias-Judiciales/El-Tribunal-Supremo-condena-al-exministro-Jose-Luis-Abalos-y-a-su-exasesor-Koldo-Garcia-a-24-anos-y-19-anos-de-prision--respectivamente--por-delitos-de-organizacion-criminal--cohecho--malversacion-y-trafico-de-influencias",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "elDiario.es: El Supremo condena a Ábalos a 24 años de cárcel y libra a Aldama de entrar en prisión",
+        "url": "https://www.eldiario.es/politica/jose-luis-abalos-condenado-carcel-tribunal-supremo_1_13301658.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "ATRIBUCIÓN: quien afirma la condena de Ábalos y Aldama es Jordi Wild; la he reformulado. Veredicto sin cambios; confianza baja a media por falta de fuente primaria (no accesible), y he quitado detalles que solo constaban en moncloa.com (unanimidad, octubre de 2026). Segunda pasada: abierta la nota oficial del CGPJ en poderjudicial.es (22/6/2026), que confirma 24 años y 3 meses para Ábalos y 4 años y 6 meses (suspendidos) para Aldama; ya hay fuente primaria y la confianza vuelve a alta.",
+    "necesita_primaria": true
+  },
+  {
+    "indice": 1,
+    "minuto": "1:08:29",
+    "afirmacion": "Durante las primarias del PSOE iba solo en su Peugeot, estuvo a punto de tener un accidente al dormirse al volante y a partir de entonces lo condujo Juan Manuel Serrano en su Mercedes.",
+    "veredicto_antes": "no_verificable",
+    "veredicto_despues": "no_verificable",
+    "cambia_veredicto": false,
+    "confianza_antes": "baja",
+    "confianza_despues": "baja",
+    "fuentes_descartadas": [
+      {
+        "url": "https://theobjective.com/espana/politica/2026-11-13/entrevista-wild-sanchez/",
+        "motivo": "Solo reproduce lo que dijo Sánchez en la entrevista; no contrasta el relato del coche (no es una verificación)."
+      }
+    ],
+    "fuentes_nuevas": [],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio de veredicto. He quitado «lo mantuvo hasta 2018» (no consta en la fuente abierta) y descartado The Objective, que solo reproduce la entrevista."
+  },
+  {
+    "indice": 2,
+    "minuto": "1:10:31",
+    "afirmacion": "Pedro Sánchez apenas tenía comunicación con Koldo García.",
+    "veredicto_antes": "no_verificable",
+    "veredicto_despues": "no_verificable",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Última Hora (EFE): Koldo García niega que hablase con Sánchez cuando llegó a Moncloa (30/4/2026)",
+        "url": "https://www.ultimahora.es/noticias/nacional/2026/04/30/2620271/koldo-garcia-niega-hablase-sanchez-cuando-llego-moncloa-sentido-comun.html",
+        "tipo": "agencia"
+      },
+      {
+        "titulo": "El Debate: Sánchez en la comisión del Senado (30/10/2025): avales de las primarias y relación con Koldo",
+        "url": "https://www.eldebate.com/espana/20251030/sanchez-comparece-senado-caso-psoe_349905.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio de veredicto. Corrijo el periodo de las copias de contactos (2018-2023, no 2018-2019) y añado lo que Koldo declaró sobre el número; no hay fuente primaria ni agencia. Segunda pasada: no hay fuente primaria que mida esa comunicación (es un hecho privado, no necesita primaria; bastan dos fuentes). Añado EFE (declaración de Koldo el 30/4/2026) y El Debate; las versiones de Koldo y Aldama chocan, así que sigue sin poder verificarse.",
+    "necesita_primaria": false
+  },
+  {
+    "indice": 3,
+    "minuto": "1:10:31",
+    "afirmacion": "La presencia de Koldo García junto a Sánchez en el coche de las primarias fue muy anecdótica y las fotografías de ambos corresponden a un único día.",
+    "veredicto_antes": "enganoso",
+    "veredicto_despues": "enganoso",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "El Debate: El post de 2014 que Jordi Wild ha recordado a Pedro Sánchez alabando a Koldo García (recoge que en el Senado, 30/10/2025, Sánchez calificó la relación de «anecdótica»)",
+        "url": "https://www.eldebate.com/cine-tv-series/20261113/post-2014-jordi-wild-recordado-pedro-sanchez-alabando-koldo-garcia-cnsm_480566.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio de veredicto. Quito la fecha exacta del 26/2/2017 (no confirmada en las fuentes abiertas), precisando que la foto es de 2017, y apoyo el matiz con The Objective y Valencia Plaza. Segunda pasada: hay más de dos fuentes válidas independientes (Maldita.es, Valencia Plaza con Cerdán en el Senado, The Objective, El Debate); no necesita fuente primaria. Mantengo «engañoso»: el matiz de la foto de un solo día no se sostiene, aunque «anecdótico» es una valoración.",
+    "necesita_primaria": false
+  },
+  {
+    "indice": 4,
+    "minuto": "1:10:31",
+    "afirmacion": "José Luis Ábalos nunca hizo comentarios machistas ni bromas de ese tipo delante de Sánchez.",
+    "veredicto_antes": "no_verificable",
+    "veredicto_despues": "no_verificable",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambios de fondo: la única fuente solo documenta que Sánchez lo dijo; no hay prueba externa a favor ni en contra. Segunda pasada: no he encontrado ninguna segunda fuente: lo único publicado es lo que dijo Sánchez en la entrevista (The Objective, 13/11/2026), sin testigo ni registro que lo contradiga o lo respalde. Sigue no_verificable (un hecho privado; no se alcanzan dos fuentes independientes).",
+    "necesita_primaria": false
+  },
+  {
+    "indice": 5,
+    "minuto": "1:10:31",
+    "afirmacion": "Sánchez no sabía que José Luis Ábalos consumía prostitución.",
+    "veredicto_antes": "no_verificable",
+    "veredicto_despues": "no_verificable",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio de veredicto; solo precisión de la procedencia del relato de Cerdán. Ambas fuentes son del mismo medio, por lo que la contrastación es limitada. Segunda pasada: la búsqueda extra no dio ninguna sentencia, sumario ni informe de la UCO sobre lo que Sánchez sabía; las dos fuentes que hay son del mismo medio. Sigue no_verificable (estado de conocimiento privado).",
+    "necesita_primaria": false
+  },
+  {
+    "indice": 6,
+    "minuto": "1:11:31",
+    "afirmacion": "Sánchez decidió exigir a Ábalos que entregara su acta de diputado y parte del partido no lo entendió.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.moncloa.com/2026/01/28/abalos-renuncia-diputado-3357918/",
+        "motivo": "moncloa.com es un medio privado, no es el Gobierno (política de fuentes: no válida)."
+      }
+    ],
+    "fuentes_nuevas": [],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio de veredicto. Descarto moncloa.com (quito la renuncia al acta de enero de 2026, que no era necesaria) y matizo el respaldo parcial a «no lo entendió». Segunda pasada: abro Europa Press (Menorca.info, 27/2/2024) y Valencia Plaza: confirmo la decisión de la Ejecutiva y corrijo la explicación sobre Ximo Puig, que respaldó la postura de la dirección (pensaba que Ábalos había sido engañado), no se mostró en contra. El comunicado del PSOE en psoe.es no se pudo abrir (web dinámica); no es obligatoria la fuente primaria (hecho del partido, con agencia).",
+    "necesita_primaria": false
+  },
+  {
+    "indice": 7,
+    "minuto": "1:11:31",
+    "afirmacion": "La salida de Ábalos del Gobierno en 2021 fue parte de una renovación del Ejecutivo tras el revés electoral del PSOE en Madrid, en la que salieron cinco o seis ministros.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.moncloa.com/2021/07/10/sanchez-gobierno-ascendiendo-calvino-bolanos/",
+        "motivo": "moncloa.com es un medio privado, no es el Gobierno (política de fuentes: no válida)."
+      },
+      {
+        "url": "https://www.noudiari.es/local-ibiza/sanchez-anuncia-una-profunda-remodelacion-del-ejecutivo-y-prescinde-de-calvo-y-abalos-entre-otros",
+        "motivo": "No cargó (conexión rechazada) en los intentos de la auditoría; no se puede citar."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "The Objective: Sánchez deja el PSOE en manos de Lastra y Cerdán hasta el 40º Congreso (12/7/2021)",
+        "url": "https://theobjective.com/espana/2021-07-12/sanchez-deja-el-psoe-en-manos-de-lastra-y-cerdan-hasta-el-40o-congreso/",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "elDiario.es: Los madrileños refuerzan a Ayuso (5/5/2021): el PSOE cae al tercer puesto y sufre su primera gran derrota desde que Sánchez llegó a Moncloa",
+        "url": "https://www.eldiario.es/madrid/madrilenos-refuerzan-ayuso-le-dan-anos-extrema-derecha-unico-socio_1_7898562.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio de veredicto; confianza baja a media porque solo queda una fuente válida (sin primaria; BOE y Moncloa no accesibles). Quito la frase sobre la versión oficial de Moncloa, que no pude comprobar. Segunda pasada: añado The Objective y elDiario.es (dos medios independientes más); el nº de ministros (siete) y el revés de Madrid quedan respaldados, pero la fuente oficial (BOE, Moncloa; resultados de la Comunidad de Madrid) no se pudo abrir, así que sigue sin primaria.",
+    "necesita_primaria": true
+  },
+  {
+    "indice": 8,
+    "minuto": "1:12:36",
+    "afirmacion": "En 2021, al cesar a Ábalos, Sánchez no lo expulsó del PSOE.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.moncloa.com/2021/07/12/abalos-renuncia-psoe-876385/",
+        "motivo": "moncloa.com es un medio privado, no es el Gobierno (política de fuentes: no válida)."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Menorca.info (Europa Press): El PSOE suspende cautelarmente a Ábalos por no entregar el acta",
+        "url": "https://www.menorca.info/actualidad/nacional/2024/02/27/2114499/psoe-suspende-cautelarmente-abalos-por-entregar-acta.html",
+        "tipo": "agencia"
+      },
+      {
+        "titulo": "The Objective: El PSOE expulsa a Ábalos del partido 15 meses después de que le abriesen expediente (16/6/2025)",
+        "url": "https://theobjective.com/espana/politica/2025-06-16/psoe-expulsa-abalos-expediente/",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio de veredicto. Descarto moncloa.com y corrijo la explicación: el 16/6/2025 fue la Ejecutiva Federal (no la comisión de ética) quien aprobó la expulsión, según Orain.eus. Segunda pasada: confirmo con The Objective (16/6/2025) y con Orain.eus que la expulsión se decidió en la Ejecutiva Federal el 16/6/2025 tras 15 meses de expediente; con Europa Press (27/2/2024) hay tres fuentes independientes. No necesita fuente primaria (hecho del partido, bien documentado por agencia); confianza sube a alta.",
+    "necesita_primaria": false
+  },
+  {
+    "indice": 9,
+    "minuto": "1:12:36",
+    "afirmacion": "Cuando cesó a Ábalos en julio de 2021, Sánchez no sabía nada de las irregularidades o de la conducta que luego saldrían a la luz.",
+    "veredicto_antes": "no_verificable",
+    "veredicto_despues": "no_verificable",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio de veredicto; cito literalmente la inferencia condicional de la UCO. Todas las fuentes son del mismo medio. Segunda pasada: no he encontrado ninguna fuente nueva ni resolución judicial sobre lo que sabía Sánchez en julio de 2021; todo lo publicado es indirecto y del mismo medio. Sigue no_verificable.",
+    "necesita_primaria": false
+  },
+  {
+    "indice": 10,
+    "minuto": "1:12:36",
+    "afirmacion": "Sánchez pidió perdón públicamente por los casos de corrupción en su partido.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": true,
+    "confianza_antes": "media",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [
+      {
+        "url": "https://maldita.es/malditahemeroteca/20250613/psoe-corrupcion-pedir-perdon-sanchez/",
+        "motivo": "El texto no se pudo leer (contenido ilegible) y su titular trata de otra cosa (cuando Sánchez decía que no bastaba con pedir perdón): no prueba la afirmación."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "RTVE (Europa Press): Sánchez pide perdón a la militancia en una carta y recuerda que actuaron «con contundencia» ante la corrupción (17/6/2025)",
+        "url": "https://www.rtve.es/noticias/20250617/sanchez-perdon-militancia-carta-actuaron-contundencia/16628153.shtml",
+        "tipo": "agencia"
+      },
+      {
+        "titulo": "Diari de Tarragona (Agencias/EFE): Sánchez anuncia una auditoría externa y una reestructuración en el PSOE (12/6/2025)",
+        "url": "https://www.diaridetarragona.com/internacional/232753/sanchez-anuncia-una-auditoria-externa-y-una-reestructuracion-en-el-psoe-bd24362021.html",
+        "tipo": "agencia"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio de veredicto. Solo queda una fuente válida y sin primaria; descarto Maldita Hemeroteca porque no se pudo leer su contenido. Segunda pasada: la frase de la entrevista es ambigua, pero con dos fuentes nuevas de agencia (EFE 12/6/2025 y Europa Press/RTVE 17/6/2025) que citan literalmente la petición de perdón, subo a verdadero y a confianza alta. Las webs oficiales (Moncloa, PSOE) no se pudieron abrir; no es obligatoria la fuente primaria (declaración pública, dos fuentes bastan).",
+    "necesita_primaria": false
+  },
+  {
+    "indice": 11,
+    "minuto": "1:14:39",
+    "afirmacion": "En 2016 el comité federal del PSOE lo apartó como secretario general, y él dimitió también como diputado para no facilitar con su voto la investidura de Rajoy.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "El Mundo: Los críticos tumban a Pedro Sánchez en un bochornoso Comité Federal (2/10/2016)",
+        "url": "https://www.elmundo.es/espana/2016/10/01/57effbe6468aebeb2f8b45fa.html",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "El País: Pedro Sánchez deja el escaño y lanza su candidatura a la secretaría general (30/10/2016)",
+        "url": "https://politica.elpais.com/politica/2016/10/29/actualidad/1477735635_217414.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio de veredicto; confianza baja a media porque ambas fuentes son del mismo medio y no pude abrir una fuente primaria (Congreso/PSOE) ni otro medio. Segunda pasada: añado El Mundo y El País (dos medios distintos del primero) con las cifras de la votación y las palabras de Sánchez; la confianza vuelve a alta. No he podido abrir el registro del Congreso de la baja como diputado, por lo que sigue sin fuente primaria.",
+    "necesita_primaria": true
+  },
+  {
+    "indice": 12,
+    "minuto": "1:15:41",
+    "afirmacion": "Los elogios de Sánchez a Koldo García en redes sociales son de 2014, antes de que fuera elegido secretario general por primera vez.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio de veredicto; confianza alta a media: una sola fuente (línea editorial crítica) y no pude abrir la publicación original. Segunda pasada: no he podido abrir la publicación original (Facebook oficial de Sánchez) ni encontrar una segunda fuente; el propio Sánchez aceptó en la entrevista la fecha de 2014 («fue precisamente antes de mi primera elección como secretario general»). Su elección como secretario general fue el 26/7/2014 (Wikipedia, solo como apoyo) y El País (30/10/2016) lo describe como líder durante «dos años y tres meses» hasta octubre de 2016, coherente con 2014. No se alcanzan dos fuentes independientes sobre el texto del post.",
+    "necesita_primaria": false
+  },
+  {
+    "indice": 13,
+    "minuto": "1:16:41",
+    "afirmacion": "Sánchez dice que no conocía a Koldo García como conocía a Santos Cerdán y a José Luis Ábalos (con quienes sí tenía relación), aunque admite que no era un desconocido.",
+    "veredicto_antes": "enganoso",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": true,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Valencia Plaza: Santos Cerdán confirma que Koldo custodió los avales de Sánchez",
+        "url": "https://valenciaplaza.com/santos-cerdan-confirma-koldo-custodio-avales-sanchez-fue-chofer-psoe",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "El Debate: Sánchez en el Senado (30/10/2025): «Se decidió que fuera Koldo García quien custodiara los avales»",
+        "url": "https://www.eldebate.com/espana/20251030/sanchez-comparece-senado-caso-psoe_349905.html",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Última Hora (EFE): Koldo García niega que hablase con Sánchez cuando llegó a Moncloa (30/4/2026)",
+        "url": "https://www.ultimahora.es/noticias/nacional/2026/04/30/2620271/koldo-garcia-niega-hablase-sanchez-cuando-llego-moncloa-sentido-comun.html",
+        "tipo": "agencia"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio de veredicto; añado Valencia Plaza (Cerdán en el Senado) como respaldo del hecho. Segunda pasada: la afirmación estaba mal reformulada: Sánchez comparó (no conocía a Koldo como a Ábalos y Cerdán) y precisó que no era un desconocido, según la transcripción (1:15:41 y 1:16:41). Con esa lectura, y sin cambiar la cita, el veredicto pasa de enganoso a mayormente_verdadero; dos fuentes bastan (relación personal), y las cita Valencia Plaza, El Debate y EFE.",
+    "necesita_primaria": false
+  },
+  {
+    "indice": 14,
+    "minuto": "1:17:42",
+    "afirmacion": "Ábalos y Cerdán fueron los dos secretarios de Organización que sostenían el partido mientras Sánchez gobernaba durante la pandemia de 2020.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.moncloa.com/2021/07/12/abalos-renuncia-psoe-876385/",
+        "motivo": "moncloa.com es un medio privado, no es el Gobierno (política de fuentes: no válida)."
+      },
+      {
+        "url": "https://www.noticiasdenavarra.com/politica/2021/10/17/navarro-santos-cerdan-mantiene-numero-2115319.html",
+        "motivo": "No se pudo abrir (HTTP 406 por bloqueo WAF); no se puede citar."
+      },
+      {
+        "url": "https://es.wikipedia.org/wiki/Santos_Cerdán",
+        "motivo": "Wikipedia solo vale como apoyo, nunca como única base; sustituida por The Objective, EFE y Orain.eus."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "The Objective: Sánchez deja el PSOE en manos de Lastra y Cerdán hasta el 40º Congreso (12/7/2021)",
+        "url": "https://theobjective.com/espana/2021-07-12/sanchez-deja-el-psoe-en-manos-de-lastra-y-cerdan-hasta-el-40o-congreso/",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Diari de Tarragona (EFE): Santos Cerdán dimite de sus cargos en el PSOE y dejará su acta de diputado (12/6/2025)",
+        "url": "https://www.diaridetarragona.com/internacional/232754/santos-cerdan-dimite-de-sus-cargos-en-el-psoe-y-dejara-su-acta-de-diputado-od24360781.html",
+        "tipo": "agencia"
+      },
+      {
+        "titulo": "Orain.eus: Nueva ejecutiva del PSOE de Sánchez (15/6/2017): Ábalos secretario de Organización y Cerdán en el área de Organización",
+        "url": "https://orain.eus/es/politica/2017/06/15/patxi-lopez-odon-elorza-nueva-ejecutiva-psoe-sanchez/",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio de veredicto, pero confianza media a baja: descarto moncloa.com, Noticias de Navarra no abre y solo queda Wikipedia como apoyo. Segunda pasada: añado The Objective, EFE y Orain.eus (tres fuentes válidas) y quito Wikipedia como única base; se confirma que en 2020 solo Ábalos era secretario de Organización. La ejecutiva del PSOE en psoe.es no se pudo abrir; no es obligatoria la fuente primaria (estructura interna del partido).",
+    "necesita_primaria": false
+  },
+  {
+    "indice": 15,
+    "minuto": "1:17:42",
+    "afirmacion": "De todos los ministros y ministras de sus gobiernos, solo uno (José Luis Ábalos) ha tenido problemas con la justicia por corrupción.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Poder Judicial (CGPJ): El Tribunal Supremo condena al exministro José Luis Ábalos y a su exasesor Koldo García a 24 años y 19 años de prisión (22/6/2026)",
+        "url": "https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Noticias-Judiciales/El-Tribunal-Supremo-condena-al-exministro-Jose-Luis-Abalos-y-a-su-exasesor-Koldo-Garcia-a-24-anos-y-19-anos-de-prision--respectivamente--por-delitos-de-organizacion-criminal--cohecho--malversacion-y-trafico-de-influencias",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Sin cambio de veredicto. Corrijo que las querellas por Ceuta apuntaban a Sánchez y al Consejo de Ministros (no consta Marlaska en la fuente abierta) y precisó la cita de Peinado. Segunda pasada: añado la nota oficial del CGPJ (condena de Ábalos), que da la fuente primaria al hecho judicial central; el resto (que ningún otro ministro tenga problemas por corrupción) es una afirmación negativa y solo se apoya en prensa y agencias hasta mayo de 2026.",
+    "necesita_primaria": true
+  },
+  {
+    "indice": 16,
+    "minuto": "1:18:43",
+    "afirmacion": "Quienes han cometido corrupción en el PSOE la han pagado con la salida del partido.",
+    "veredicto_antes": "enganoso",
+    "veredicto_despues": "enganoso",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.moncloa.com/2026/05/21/ferraz-no-expedienta-zapatero-3378516/",
+        "motivo": "moncloa.com es un medio privado, no es el Gobierno (política de fuentes: no válida)."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "The Objective: El PSOE expulsa a Ábalos del partido 15 meses después de que le abriesen expediente (16/6/2025)",
+        "url": "https://theobjective.com/espana/politica/2025-06-16/psoe-expulsa-abalos-expediente/",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio de veredicto. Descarto moncloa.com, corrijo lo de la «baja voluntaria» de Cerdán (la fuente abierta habla de suspensión de militancia) y marco que lo de Zapatero es solo a junio de 2026 y con una fuente de línea crítica. Segunda pasada: corrijo lo de Cerdán: Vozpópuli (13/6/2026) dice que se dio de baja, no que se le suspendiera, y añado The Objective para la expulsión de Ábalos; lo de Zapatero solo tiene una fuente (de línea crítica) y no se pudo contrastar con otra, por lo que se mantiene la confianza media.",
+    "necesita_primaria": false
+  }
+]

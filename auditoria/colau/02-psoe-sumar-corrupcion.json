@@ -1,0 +1,425 @@
+[
+  {
+    "indice": 0,
+    "minuto": "0:21:59",
+    "afirmacion": "España ha tenido dos mandatos consecutivos de gobierno progresista de coalición con el PSOE: en el primero participó Unidas Podemos y en el segundo, Sumar.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [
+      {
+        "url": "https://maldita.es/malditateexplica/20231120/ministros-gobierno-psoe-sumar/",
+        "motivo": "La página existe (título sobre las claves del Gobierno PSOE-Sumar), pero el cuerpo del artículo no se pudo leer en la extracción, así que no se comprobó que diga lo atribuido."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Orain (EITB): Composición del nuevo Gobierno de Pedro Sánchez (20/11/2023)",
+        "url": "https://orain.eus/es/politica/2023/11/20/composicion-del-nuevo-gobierno-de-pedro-sanchez-reparto-de-ministerios-y-vicepresidencias-hoy-20-noviembre/",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "El Derecho: El BOE hace oficial el nuevo Gobierno (21/11/2023)",
+        "url": "https://elderecho.com/el-boe-hace-oficial-el-nuevo-gobierno-con-cuatro-vicepresidentas-y-22-ministerios",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "The Objective: nuevo Gobierno de coalición PSOE-Unidas Podemos (13/01/2020)",
+        "url": "https://theobjective.com/further/espana/2020-01-13/18-ministerios-cuatro-vicepresidencias-y-seis-nuevas-caras-el-rompecabezas-del-nuevo-gobierno/",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Sigue verdadero. Se sustituye la fuente de Maldita (cuerpo ilegible) por Orain, The Objective y El Derecho (que cita el BOE); se elimina la comparación de «proporción» de ministerios que no constaba en las fuentes abiertas. Webs oficiales (Moncloa, BOE) inaccesibles desde el entorno."
+  },
+  {
+    "indice": 1,
+    "minuto": "0:23:02",
+    "afirmacion": "Cuando estalló el caso Cerdán/Ábalos (junio de 2025), tanto Colau en sus redes como Sumar proclamaron tolerancia cero con la corrupción.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "baja",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "The Objective: Sumar descarta salir del Gobierno (13/06/2025)",
+        "url": "https://theobjective.com/espana/politica/2025-06-13/sumar-descarta-salir-gobierno-problema-psoe/",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "The Objective: Mónica García pide la dimisión de Cerdán (12/06/2025)",
+        "url": "https://theobjective.com/espana/2025-06-12/monica-garcia-pide-dimision-cerdan-psoe-explicaciones/",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "The Objective: Urtasun y la «tolerancia cero» (20/11/2025)",
+        "url": "https://theobjective.com/espana/politica/2025-11-20/sumar-caso-cerdan-gobierno/",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Veredicto igual, confianza media -> baja. Ninguna de las fuentes originales contiene «tolerancia cero» ni un mensaje de Colau; la explicación anterior atribuía a Díaz frases («corrupción cero», «extrema gravedad») que no figuran en las páginas abiertas. Se corrige la explicación con lo que sí dicen las fuentes."
+  },
+  {
+    "indice": 2,
+    "minuto": "0:23:02",
+    "afirmacion": "Los implicados en el caso Ábalos/Cerdán fueron apartados inmediatamente del Gobierno y del partido.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.deia.eus/politica/2024/02/27/psoe-suspende-militancia-abalos-decision-7931165.html",
+        "motivo": "El servidor devolvió HTTP 406 y la página no se pudo abrir; se sustituye por Orain (EITB) de la misma fecha."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Orain (EITB): Ábalos retiene el acta y el PSOE le suspende de militancia (27/02/2024)",
+        "url": "https://orain.eus/es/politica/2024/02/27/abalos-anuncia-que-no-renuncia-al-acta-de-diputado-en-congreso-de-diputados/",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Público: El juez deja en libertad a Santos Cerdán (19/11/2025; recoge su ingreso en prisión el 30 de junio)",
+        "url": "https://www.publico.es/politica/juez-deja-libertad-santos-cerdan-casi-cinco-meses-prision.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Veredicto y confianza sin cambios. Se sustituye la fuente de Deia (no abre) por Orain y se acota la explicación a lo verificado (Cerdán inmediato, Ábalos suspendido a los pocos días de salir el caso pero expulsado 15 meses después, y no era Sumar quien decidía). No hay fuente primaria accesible sobre las decisiones internas del PSOE."
+  },
+  {
+    "indice": 3,
+    "minuto": "0:24:04",
+    "afirmacion": "En el caso Ábalos/Cerdán la justicia ha actuado y el implicado está en la cárcel.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Poder Judicial: El Tribunal Supremo condena a Ábalos y a Koldo García (22/06/2026)",
+        "url": "https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Noticias-Judiciales/El-Tribunal-Supremo-condena-al-exministro-Jose-Luis-Abalos-y-a-su-exasesor-Koldo-Garcia-a-24-anos-y-19-anos-de-prision--respectivamente--por-delitos-de-organizacion-criminal--cohecho--malversacion-y-trafico-de-influencias",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Poder Judicial: La Sala de Apelación confirma la prisión provisional sin fianza (19/01/2026)",
+        "url": "https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Noticias-Judiciales/La-Sala-de-Apelacion-del-Tribunal-Supremo-confirma-la-prision-provisional-sin-fianza-para-el-exministro-Jose-Luis-Abalos-y-su-exasistente-Koldo-Garcia-por-el-alto-riesgo-de-fuga",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Ara: Ábalos sostiene que ha sufrido un juicio «político» (25/06/2026)",
+        "url": "https://en.ara.cat/politics/abalos-maintains-that-he-has-suffered-political-and-predetermined-trial_1_5779479.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Veredicto igual (mayormente_verdadero), ahora con fuente primaria del Poder Judicial para la condena y la prisión provisional. La transcripción no marca hablantes; por contexto (responde a la objeción de Jordi Wild y usa su fórmula «tolerancia cero») se atribuye a Colau. Se cambia «sigue en Soto del Real» a lo que consta (junio de 2026)."
+  },
+  {
+    "indice": 4,
+    "minuto": "0:24:04",
+    "afirmacion": "El espacio político de Colau (ocho años en la alcaldía de Barcelona y presencia en el Gobierno del Estado) tiene cero casos de corrupción.",
+    "veredicto_antes": "enganoso",
+    "veredicto_despues": "enganoso",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "elDiario.es: El diputado de Comuns Félix Alonso niega criterios políticos (15/06/2026)",
+        "url": "https://www.eldiario.es/catalunya/diputado-comuns-felix-alonso-niega-criterios-politicos-contratos-dedo-alcalde-altafulla_1_13305051.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Veredicto igual (enganoso). Se elimina la afirmación de que Herrera está «hoy en los Comuns» (las fuentes abiertas solo lo describen como exlíder de Iniciativa) y se añade la fuente de elDiario que identifica a Alonso como diputado de Comuns-Sumar. Fuente primaria: nota del Poder Judicial."
+  },
+  {
+    "indice": 5,
+    "minuto": "0:25:07",
+    "afirmacion": "Los gobiernos de coalición subieron el salario mínimo, hicieron una reforma laboral y mejoraron la dependencia.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Ministerio de Derechos Sociales (DSCA): La lista de espera de la Dependencia baja casi un 20% en un año (16/01/2026)",
+        "url": "https://www.dsca.gob.es/es/comunicacion/notas-prensa/lista-espera-dependencia-baja-casi-20-ano-registra-maximo-historico",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "PwC Tax & Legal: Se aprueba el SMI para 2024 (RD 145/2024)",
+        "url": "https://periscopiofiscalylegal.pwc.es/wp-content/uploads/2024/02/Se-aprueba-el-Salario-Minimo-Interprofesional-para-2024-v.f.pdf",
+        "tipo": "apoyo"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Veredicto igual. Se añade la nota oficial del Ministerio de Derechos Sociales para la dependencia y se retiran cifras que no figuraban en las fuentes abiertas (SMI de 2018 y 2019, «+24,6%» etc.); el SMI y la reforma laboral se citan a través de prensa y análisis porque el BOE no abre desde el entorno. La parte de dependencia es discutible según la fuente, por eso no pasa a «verdadero»."
+  },
+  {
+    "indice": 6,
+    "minuto": "0:27:10",
+    "afirmacion": "El caso de Leire Díez sigue abierto judicialmente.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Ara: El juez imputa a la presidenta de la SEPI en el caso Leire Díez (29/06/2026)",
+        "url": "https://en.ara.cat/economy/the-judge-charges-the-president-of-sepi-in-the-leire-diez-case_1_5783733.amp.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Veredicto igual (verdadero); confianza alta -> media porque no hay fuente primaria accesible (los autos de la Audiencia Nacional no están publicados) y solo se cuenta con agencia y prensa. Se añade Ara con la ampliación de investigados de junio de 2026."
+  },
+  {
+    "indice": 7,
+    "minuto": "0:28:12",
+    "afirmacion": "Siendo alcaldesa le pusieron más de 22 querellas, algo sin precedentes en un alcalde, y todas fueron archivadas.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "baja",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [],
+    "tiene_fuente_primaria": false,
+    "nota": "Veredicto igual, confianza media -> baja: las dos fuentes son del mismo medio (Ara), el recuento de 22 no cita origen y la comparación con otros alcaldes no es verificable. Se precisa en la explicación que las causas eran contra su gobierno y no solo contra ella."
+  },
+  {
+    "indice": 8,
+    "minuto": "0:28:12",
+    "afirmacion": "En el archivo de la querella del fondo Vauras, la jueza escribió que el fondo la presentó porque no le gustaban las políticas de vivienda de Colau, es decir, que hizo un mal uso de la justicia.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": true,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.deia.eus/politica/2023/12/15/ada-colau-ve-archivada-causa-7639587.html",
+        "motivo": "El servidor devolvió HTTP 406 y la página no se pudo abrir (ni en versión amp)."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Público: Archivan una causa contra Ada Colau (21/12/2023)",
+        "url": "https://www.publico.es/politica/archivan-causa-ada-colau-abierta-meses-elecciones.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "mayormente_verdadero -> verdadero: Público confirma que la jueza atribuyó la querella a la discrepancia con las políticas de vivienda de Colau y al «efecto mediático», que es lo que ella dice; antes la cita se apoyaba en Deia, que no abre. El auto no es accesible, por eso la confianza sigue en media."
+  },
+  {
+    "indice": 9,
+    "minuto": "0:29:14",
+    "afirmacion": "A José Luis Rodríguez Zapatero le han encontrado joyas valoradas en más de un millón de euros.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [
+      {
+        "url": "https://maldita.es/desinfo/20260526/el-valor-de-las-joyas-encontradas-en-el-despacho-de-zapatero/",
+        "motivo": "Solo se pudo leer el titular (tasaciones de 1,3 y 1 millón); el cuerpo del artículo no se extrajo, así que se sustituye por el Poder Judicial y la prensa."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Poder Judicial: pieza separada por las joyas de Zapatero (12/06/2026)",
+        "url": "https://www.poderjudicial.es/cgpj/ca/Poder-Judicial/Novetats/El-juez-de-la-Audiencia-Nacional-abre-una-pieza-separada-para-investigar-al-expresidente-Jose-Luis-Rodriguez-Zapatero-en-relacion-con-las-joyas-halladas-en-el-registro-de-su-oficina-de-Ferraz",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Poder Judicial: rechaza investigar malversación por las joyas (06/11/2026)",
+        "url": "https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Noticias-Judiciales/El-juez-de-la-Audiencia-Nacional-del-caso-Plus-Ultra-rechaza-investigar-al-expresidente-del-Gobierno-Jose-Luis-Rodriguez-Zapatero-por-malversacion-por-quedarse-con-las-joyas",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Diario de León (Europa Press): tasación de 1,3 millones (11/06/2026)",
+        "url": "https://www.diariodeleon.es/nacional/260611/2087977/tasacion-encargada-juez-estima-1-3-millones-euros-joyas-intervenidas-zapatero.html",
+        "tipo": "agencia"
+      },
+      {
+        "titulo": "Artículo 14: informe de Yanes, 1,023 millones (01/11/2026)",
+        "url": "https://www.articulo14.es/politica/yanes-acredita-que-las-joyas-son-posteriores-al-relato-de-zapatero-y-apunta-a-una-comision-20261101.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Veredicto y confianza sin cambios (verdadero, alta), ahora con dos notas oficiales del Poder Judicial. Se corrige el detalle de la segunda tasación (Yanes, ~1,02 millones) con una fuente abierta y se descarta Maldita por contenido ilegible."
+  },
+  {
+    "indice": 10,
+    "minuto": "0:30:16",
+    "afirmacion": "Al acercarse el final del Gobierno se han acelerado en la cúpula judicial (el Supremo) muchos procedimientos que afectan al entorno de Pedro Sánchez (su mujer, su hermano), mientras casos del PP llevan años parados.",
+    "veredicto_antes": "enganoso",
+    "veredicto_despues": "enganoso",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.que.es/2026/07/18/juicio-begona-gomez-confirmado/",
+        "motivo": "Fuente única y secundaria con una incoherencia interna de fechas (dice «este jueves» en un artículo del sábado 18/07); sustituida por Vozpópuli y COPE."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Vozpópuli: La justicia madrileña «congela» el juicio a Begoña Gómez (19/10/2026)",
+        "url": "https://www.vozpopuli.com/tribunales/la-justicia-madrilena-congela-el-juicio-a-begona-gomez-y-ni-siquiera-elige-al-juez-que-presidira-el-jurado.html",
+        "tipo": "apoyo"
+      },
+      {
+        "titulo": "COPE: El cerco judicial de la legislatura (05/10/2026)",
+        "url": "https://www.cope.es/actualidad/espana/noticias/cerco-judicial-legislatura-begona-gomez-zapatero-pasando-abalos-fiscal-general-hermano-david-sanchez-20261005_3448621.html",
+        "tipo": "apoyo"
+      },
+      {
+        "titulo": "Euronews: PSOE's legal storm (30/05/2026)",
+        "url": "https://www.euronews.com/my-europe/2026/05/30/psoes-legal-storm-nine-cases-closing-in-on-spanish-pm-pedro-sanchez",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Poder Judicial: condena de Ábalos y Koldo García (22/06/2026)",
+        "url": "https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Noticias-Judiciales/El-Tribunal-Supremo-condena-al-exministro-Jose-Luis-Abalos-y-a-su-exasesor-Koldo-Garcia-a-24-anos-y-19-anos-de-prision--respectivamente--por-delitos-de-organizacion-criminal--cohecho--malversacion-y-trafico-de-influencias",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Veredicto igual (enganoso). Se reformula la afirmación para ajustarla a lo que dice Colau (la cúpula judicial, con el Supremo como ejemplo) y se actualiza la explicación: el caso de Begoña Gómez figura parado en octubre de 2026 y se retira Que.es. La parte sobre el PP sigue sin respaldo documental."
+  },
+  {
+    "indice": 11,
+    "minuto": "0:31:18",
+    "afirmacion": "A un portavoz del PP se le escapó un mensaje en el que decía que tenían el Supremo controlado «por la puerta de atrás».",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Público: Marchena renuncia a presidir el Poder Judicial tras el whatsapp de Cosidó (20/11/2018)",
+        "url": "https://www.publico.es/actualidad/juez-marchena-renuncia-presidir-poder-judicial-polemico-whatsapp-portavoz-pp-senado.amp.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Veredicto igual. Se añade Público (cita literal «la Sala Segunda desde detrás» y la renuncia de Marchena) y se matiza que Cosidó se desdijo; Catalan News solo parafrasea el mensaje en inglés. Sin fuente primaria (hecho político, no judicial)."
+  },
+  {
+    "indice": 12,
+    "minuto": "0:31:18",
+    "afirmacion": "El 15M, que Colau sitúa en 2015, fue una movilización masiva de la gente contra la corrupción y el bipartidismo.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.deia.eus/politica/2021/05/15/15-m-diez-anos-utopia-1962761.html",
+        "motivo": "El servidor devolvió HTTP 406 y la página no se pudo abrir."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "The Objective: 15M, cronología de un antes y un después (15/05/2021)",
+        "url": "https://theobjective.com/espana/2021-05-15/15m-cronologia-de-un-antes-y-un-despues-en-la-politica-en-espana/",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Público: El 15-M cambió la vida (14/05/2017)",
+        "url": "https://www.publico.es/sociedad/15-m-cambio-vida.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Veredicto igual (mayormente_verdadero), confianza alta -> media (fuentes cambiadas y fecha dudosa en la transcripción). La afirmación anterior decía «antes del 15M, en 2015», que no se entendía; se reformula. Se eliminan las cifras de asistencia de la Policía (no figuraban en ninguna fuente abierta) y se añade Público para el contenido del manifiesto, pues Reuters y The Objective no mencionan la corrupción."
+  },
+  {
+    "indice": 13,
+    "minuto": "0:31:18",
+    "afirmacion": "Joan Clos fue ministro y alcalde de Barcelona por el PSC-PSOE y después ha sido portavoz de los grandes propietarios y fondos inmobiliarios.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [],
+    "tiene_fuente_primaria": false,
+    "nota": "Veredicto y confianza sin cambios; las tres fuentes abren y dicen lo atribuido (La Marea, medio alineado, queda solo como apoyo; la base son la enciclopedia y la entrevista de Idealista). Se precisa que FIABCI no es solo «FIABCI España»."
+  },
+  {
+    "indice": 14,
+    "minuto": "0:34:43",
+    "afirmacion": "Una fuerte movilización de gente descontenta puede dar una sorpresa electoral, como ha pasado en Brasil y en Estados Unidos con Trump.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "baja",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Times Brasil: abstención al 19,21% en la segunda vuelta, según el TSE (25/10/2026)",
+        "url": "https://timesbrasil.com.br/eleicoes-2026/abstencao-eleitoral-cai-para-1921-no-segundo-turno-aponta-tse/",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Pew Research Center: Behind Trump's 2024 Victory (26/06/2025)",
+        "url": "https://www.pewresearch.org/politics/2025/06/26/behind-trumps-2024-victory/",
+        "tipo": "apoyo"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Veredicto igual; confianza baja -> media porque ahora hay datos de participación (TSE vía prensa y Pew) que respaldan la idea de movilización, pero la causalidad sigue siendo opinión. Se retiran de la explicación el 52%-45% de Pew y la «menor participación» de 2024, que no coincidían con lo que dicen las fuentes abiertas. No se pudo abrir el TSE ni resultados oficiales de EE. UU."
+  },
+  {
+    "indice": 15,
+    "minuto": "0:34:43",
+    "afirmacion": "Siendo Colau alcaldesa, Pedro Sánchez le prometió en 2019 regular los alquileres; no se hizo hasta 2024-2025 y durante esos años los precios subieron.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://boe.es/boe/dias/2023/05/25/pdfs/BOE-A-2023-12203.pdf",
+        "motivo": "No se pudo abrir (error de conexión con el BOE); la ley y la fecha de aplicación del tope se acreditan con Derecho Local."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Nació Digital: el alquiler medio en Barcelona, 1.160 euros en el cuarto trimestre de 2025 (Incasòl)",
+        "url": "https://naciodigital.cat/economia/el-lloguer-mitja-a-barcelona-arriba-als-1160-euros-al-mes.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Veredicto igual. Se retiran cifras que no figuraban en las fuentes abiertas (+24,6% acumulado en Barcelona 2015-2024 y 23,8 euros/m2 de idealista) y se ajusta con el IPVA del INE y Incasòl (la fuente primaria es el INE). El BOE no abre desde el entorno; Derecho Local es un análisis jurídico y se usa solo como apoyo."
+  }
+]
