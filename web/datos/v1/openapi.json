@@ -80,11 +80,11 @@
            "transcripcion_txt_url": "https://verificacion-podcast.vercel.app/api/v1/sanchez/transcripcion.txt",
            "total_afirmaciones": 147,
            "por_veredicto": {
-            "falso": 7,
+            "falso": 5,
             "enganoso": 23,
-            "mayormente_verdadero": 53,
-            "verdadero": 29,
-            "no_verificable": 35
+            "mayormente_verdadero": 52,
+            "verdadero": 33,
+            "no_verificable": 34
            },
            "excluidas": 10,
            "esencial": [
@@ -259,11 +259,11 @@
           "transcripcion_txt_url": "https://verificacion-podcast.vercel.app/api/v1/sanchez/transcripcion.txt",
           "total_afirmaciones": 147,
           "por_veredicto": {
-           "falso": 7,
+           "falso": 5,
            "enganoso": 23,
-           "mayormente_verdadero": 53,
-           "verdadero": 29,
-           "no_verificable": 35
+           "mayormente_verdadero": 52,
+           "verdadero": 33,
+           "no_verificable": 34
           },
           "excluidas": 10,
           "esencial": [
@@ -466,11 +466,11 @@
           "transcripcion_txt_url": "https://verificacion-podcast.vercel.app/api/v1/sanchez/transcripcion.txt",
           "total_afirmaciones": 147,
           "por_veredicto": {
-           "falso": 7,
+           "falso": 5,
            "enganoso": 23,
-           "mayormente_verdadero": 53,
-           "verdadero": 29,
-           "no_verificable": 35
+           "mayormente_verdadero": 52,
+           "verdadero": 33,
+           "no_verificable": 34
           },
           "excluidas": 10,
           "esencial": [
@@ -656,11 +656,11 @@
      }
     },
     "example": {
-     "falso": 7,
+     "falso": 5,
      "enganoso": 23,
-     "mayormente_verdadero": 53,
-     "verdadero": 29,
-     "no_verificable": 35
+     "mayormente_verdadero": 52,
+     "verdadero": 33,
+     "no_verificable": 34
     }
    },
    "Comun": {

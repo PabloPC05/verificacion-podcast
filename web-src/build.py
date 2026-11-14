@@ -1027,13 +1027,13 @@ def menu(entrevistas, actual=None):
     aqui_buscar = ' aria-current="page"' if actual == "buscar" else ""
     aqui_participa = ' aria-current="page"' if actual == "participa" else ""
     aqui_temas = ' aria-current="page"' if actual == "temas" else ""
-    enlaces = [("/temas", "Temas", aqui_temas, ""), ("/api", "Verifícalo tú", "", ""), ("/participa", "Participa", aqui_participa, ""), ("/metodologia", "Método", "", ""),
-               ("/quien", "Quién lo hace", "", ""), (REPO, "GitHub" + ICONO_EXTERNO, ' target="_blank" rel="noopener noreferrer"', " gh")]
+    enlaces = [("/temas", "Temas", aqui_temas, ""), ("/api", "Verifícalo tú", "", ""), ("/participa", "Participa", aqui_participa, ""), ("/metodologia", "Método", "", " seg"),
+               ("/quien", "Quién lo hace", "", " seg"), (REPO, "GitHub" + ICONO_EXTERNO, ' target="_blank" rel="noopener noreferrer"', " gh seg")]
     sueltos = "".join(f'<a class="sec{c}" href="{h}"{x}>{t}</a>' for h, t, x, c in enlaces)
     # En móvil no caben: van a un desplegable «Más» a la derecha, junto con el cambio de modo
     mas = ('<details class="desp mas"><summary aria-label="Más enlaces y modo oscuro" title="Más">'
            '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></summary><div class="lista">'
-           '<ul class="mas-lista">' + "".join(f'<li><a href="{h}"{x}>{t}</a></li>' for h, t, x, c in enlaces) + '</ul>'
+           '<ul class="mas-lista">' + "".join(f'<li class="{"seg" if "seg" in c else "pri"}"><a href="{h}"{x}>{t}</a></li>' for h, t, x, c in enlaces) + '</ul>'
            + BOTON_MODO.replace('class="modo"', 'class="modo-txt"').replace("</button>", '<span>Cambiar a modo oscuro</span></button>')
            + '</div></details>')
     return ('<header class="menu"><div class="ancho"><div class="m1"><a class="sello" href="/" title="Todas las entrevistas">Verificación</a>'
@@ -1990,7 +1990,10 @@ def afirmacion_api(m, a):
         "esencial": bool(a.get("_esencial")),
         "otros_verificadores": [{k: o.get(k) for k in ("medio", "titulo", "url", "fecha", "veredicto_medio", "alcance")}
                                 for o in a.get("_otros", [])],
-        "imagen_url": f'{BASE}/compartir/afirmaciones/{m["slug"]}/{a["_id"]}.png',
+        # la propia si ya está generada (herramientas/imagenes_compartir.py); si no, la del candidato, como la página
+        "imagen_url": (f'{BASE}/compartir/afirmaciones/{m["slug"]}/{a["_id"]}.png'
+                       if (RAIZ / "web-src" / "compartir" / "afirmaciones" / m["slug"] / f'{a["_id"]}.png').exists()
+                       else f'{BASE}/compartir/{imagen_de(m["slug"])}.png'),
     }
 
 
@@ -2798,7 +2801,6 @@ footer .pie-quien { margin-top:18px; }
 /* Entre 761 y 1200 px el menú tiene que caber en una línea: menos hueco y letra un punto menor, y por debajo de 900 px
    sale «GitHub ↗», que sigue en el pie de cada página */
 @media (min-width:761px) and (max-width:1200px) { .m1 { column-gap:14px; font-size:14px; } }
-@media (min-width:761px) and (max-width:900px) { .m1 > a.gh { display:none; } }
 @media (min-width:1001px) and (max-width:1060px) { .m1 { column-gap:12px; } }   /* ahí vuelven los nombres largos */
 @media (max-width:760px) { .m1 .sello { order:-2; } .m1 .buscar { order:-1; } }   /* en móvil el menú se desliza: Buscar va junto al título para que se vea */
 /* En móvil el menú y los filtros ocupan una sola fila que se desliza en horizontal; el botón de modo se queda fijo a la derecha */
@@ -3038,6 +3040,16 @@ CSS_MENU += """
 .ic { display:block; flex:none; width:14px; height:14px; fill:none; stroke:currentColor; stroke-width:2.2; stroke-linecap:round; stroke-linejoin:round; }
 .m1 > a.gh { display:inline-flex; align-items:center; gap:3px; }
 .desp.mas .mas-lista a .ic { margin-left:4px; }
+/* Entre 761 y 1060 px no cabe todo en una línea: Método, Quién lo hace y GitHub pasan al «Más», que solo enseña esos tres */
+@media (min-width:761px) and (max-width:1060px) {
+  .m1 > .sec.seg { display:none; }
+  .mas { display:block; }
+  .mas-lista li.pri, .desp.mas .modo-txt { display:none; }
+  .desp.mas .lista { left:auto; right:-14px; min-width:220px; }
+  .desp.mas > summary { display:grid; place-items:center; width:32px; height:32px; min-height:0; padding:0; border:1.5px solid var(--tinta) !important; border-radius:50%; }
+  .desp.mas > summary::after { display:none; }
+  .desp.mas[open] > summary { background:var(--tinta); color:var(--fondo); }
+  .desp.mas > summary svg { display:block; width:16px; height:16px; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; } }
 /* En la cabecera de cada entrevista: debajo del texto y de las cifras, ocupando las dos columnas */
 .resumenes.en-cabeza { grid-column:1 / -1; margin-top:28px; padding:18px 0 0; }
 """
@@ -3713,7 +3725,8 @@ function carrusel(muestra, animado) {
     return gsap.timeline()
       .fromTo(quien, { autoAlpha: 0, x: -10 }, { autoAlpha: 1, x: 0, duration: .35, ease: "power2.out" })
       .fromTo(it._palabras, { yPercent: 110 }, { yPercent: 0, duration: .55, stagger: .022, ease: "power3.out" }, "<.05")
-      .fromTo(estampa, { autoAlpha: 0, scale: 2, rotation: -18 }, { autoAlpha: 1, scale: 1, rotation: -4, duration: .38, ease: "back.out(2.6)" }, ">-.15")
+      // crece desde su borde derecho: en móvil va pegado al margen y, desde el centro, se salía de la pantalla
+      .fromTo(estampa, { autoAlpha: 0, scale: 2, rotation: -18, transformOrigin: "100% 50%" }, { autoAlpha: 1, scale: 1, rotation: -4, duration: .38, ease: "back.out(2.6)" }, ">-.15")
       .to(muestra, { keyframes: { x: [0, -3, 2.5, -1.5, 0] }, duration: .24, ease: "none", clearProps: "x" }, "<.22");
   };
   const salir = it => gsap.timeline()

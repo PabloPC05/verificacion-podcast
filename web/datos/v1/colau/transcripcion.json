@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-13T22:56:17+01:00",
+ "generado": "2026-11-14T10:22:15+01:00",
  "aviso": "Verificación asistida por IA, sin revisión de un equipo de periodistas. «falso» no implica intención de mentir. Contrasta siempre con las fuentes enlazadas.",
  "veredictos": {
   "verdadero": "Los datos lo confirman.",
@@ -26,12 +26,19 @@
   "total_afirmaciones": 153,
   "por_veredicto": {
    "falso": 5,
-   "enganoso": 24,
+   "enganoso": 22,
    "mayormente_verdadero": 73,
-   "verdadero": 36,
-   "no_verificable": 15
+   "verdadero": 37,
+   "no_verificable": 16
   },
   "excluidas": 12,
+  "esencial": [
+   "colau-m5982",
+   "colau-m7323",
+   "colau-m2564",
+   "colau-m1483",
+   "colau-m4569"
+  ],
   "temas": [
    {
     "n": 1,
@@ -170,10 +177,10 @@
     "total": 18,
     "por_veredicto": {
      "falso": 0,
-     "enganoso": 7,
-     "mayormente_verdadero": 5,
+     "enganoso": 5,
+     "mayormente_verdadero": 6,
      "verdadero": 3,
-     "no_verificable": 3
+     "no_verificable": 4
     }
    },
    {
@@ -183,10 +190,10 @@
     "total": 7,
     "por_veredicto": {
      "falso": 1,
-     "enganoso": 3,
+     "enganoso": 2,
      "mayormente_verdadero": 1,
      "verdadero": 1,
-     "no_verificable": 1
+     "no_verificable": 2
     }
    },
    {
@@ -196,10 +203,10 @@
     "total": 12,
     "por_veredicto": {
      "falso": 0,
-     "enganoso": 0,
+     "enganoso": 1,
      "mayormente_verdadero": 9,
      "verdadero": 1,
-     "no_verificable": 2
+     "no_verificable": 1
     }
    },
    {
@@ -210,8 +217,8 @@
     "por_veredicto": {
      "falso": 1,
      "enganoso": 4,
-     "mayormente_verdadero": 17,
-     "verdadero": 1,
+     "mayormente_verdadero": 16,
+     "verdadero": 2,
      "no_verificable": 4
     }
    }

@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-13T22:56:17+01:00",
+ "generado": "2026-11-14T10:22:15+01:00",
  "aviso": "Verificación asistida por IA, sin revisión de un equipo de periodistas. «falso» no implica intención de mentir. Contrasta siempre con las fuentes enlazadas.",
  "veredictos": {
   "verdadero": "Los datos lo confirman.",
@@ -26,12 +26,19 @@
   "total_afirmaciones": 153,
   "por_veredicto": {
    "falso": 4,
-   "enganoso": 27,
-   "mayormente_verdadero": 52,
-   "verdadero": 41,
-   "no_verificable": 29
+   "enganoso": 28,
+   "mayormente_verdadero": 51,
+   "verdadero": 40,
+   "no_verificable": 30
   },
   "excluidas": 15,
+  "esencial": [
+   "feijoo-m3123-2",
+   "feijoo-m2591",
+   "feijoo-m2159-2",
+   "feijoo-m3945-2",
+   "feijoo-m2201"
+  ],
   "temas": [
    {
     "n": 1,
@@ -133,8 +140,8 @@
      "falso": 0,
      "enganoso": 6,
      "mayormente_verdadero": 4,
-     "verdadero": 2,
-     "no_verificable": 3
+     "verdadero": 1,
+     "no_verificable": 4
     }
    },
    {
@@ -144,8 +151,8 @@
     "total": 30,
     "por_veredicto": {
      "falso": 1,
-     "enganoso": 3,
-     "mayormente_verdadero": 9,
+     "enganoso": 4,
+     "mayormente_verdadero": 8,
      "verdadero": 10,
      "no_verificable": 7
     }
