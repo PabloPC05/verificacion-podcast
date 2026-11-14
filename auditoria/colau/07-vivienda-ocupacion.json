@@ -1,0 +1,477 @@
+[
+  {
+    "indice": 0,
+    "minuto": "1:38:05",
+    "afirmacion": "El Sindicato de Inquilinas reclama en la calle no solo congelar sino bajar los precios de los alquileres.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.elespanol.com/madrid/20261003/valeria-racu-portavoz-sindicato-inquilinas-apunta-huelga-general-termino-tiempo-politicos/1003744407409_0.html",
+        "motivo": "Abierta: no recoge la rebaja del 50 %; solo una exigencia genérica de reducir el precio y una huelga general sin fecha. No respalda lo que se le atribuía."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Euronews: Casi 500.000 personas protestan en Madrid por la crisis de la vivienda en España (3-10-2026)",
+        "url": "https://es.euronews.com/2026/10/03/casi-500000-personas-protestan-en-madrid-por-la-crisis-de-la-vivienda-en-espana",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Artículo 14: Miles de personas claman por la vivienda en ciudades de toda España y presionan a los sindicatos para convocar una huelga general (3-10-2026)",
+        "url": "https://www.articulo14.es/sociedad/miles-de-personas-claman-por-la-vivienda-en-ciudades-de-toda-espana-y-presionan-a-los-sindicatos-para-convocar-una-huelga-general-20261003.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio de veredicto: sustituyo El Español, que no recoge el 50 %, por Euronews y Artículo 14 (3-10-2026), que sí lo recogen. No hay fuente primaria, es lo que reclama una organización."
+  },
+  {
+    "indice": 1,
+    "minuto": "1:39:06",
+    "afirmacion": "Con la actual ley de vivienda ya existe un índice de referencia de precios del alquiler, que Colau describe como proporcional a los salarios.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.economistjurist.es/articulos-juridicos-destacados/la-problematica-del-indice-de-precios-de-referencia-del-alquiler/",
+        "motivo": "Abierta: no explica cómo se calcula el índice ni menciona el IRPF ni los salarios. No respalda lo que se le atribuía."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Ministerio de Vivienda y Agenda Urbana: Índice alquiler de vivienda (Sistema Estatal de Referencia de Precios de Alquiler de Vivienda)",
+        "url": "https://serpavi.mivau.gob.es/",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Sin cambio de veredicto: añado la web oficial del SERPAVI y descarto Economist & Jurist, que no respalda lo atribuido. El BOE no respondió y la ley se cita a través de un verificador."
+  },
+  {
+    "indice": 2,
+    "minuto": "1:39:06",
+    "afirmacion": "Trece fondos internacionales poseen en España más de 100.000 viviendas.",
+    "veredicto_antes": "falso",
+    "veredicto_despues": "no_verificable",
+    "cambia_veredicto": true,
+    "confianza_antes": "media",
+    "confianza_despues": "baja",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Ministerio de Derechos Sociales, Consumo y Agenda 2030 y CSIC: El problema de la concentración inmobiliaria en España (Informe 2, 2026)",
+        "url": "https://www.dsca.gob.es//sites/default/files/prensa/Informe_2_concentracion_inmobiliaria.pdf",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Pasa de falso a no_verificable: que ninguna fuente respalde la cifra no la contradice, y las cifras de Civio y Atlas miden viviendas alquiladas, no el parque total en propiedad de los fondos. No hay cifra oficial."
+  },
+  {
+    "indice": 3,
+    "minuto": "1:39:06",
+    "afirmacion": "Expropiar implica pagar un justiprecio que está por debajo del precio de mercado.",
+    "veredicto_antes": "enganoso",
+    "veredicto_despues": "enganoso",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.legaltoday.com/historico/jurisprudencia/constitucional-comunitario/sentencia-num-2182015-tribunal-constitucional-madrid-22-10-2015-2016-04-28/",
+        "motivo": "Reproducción secundaria de la STC 218/2015; sustituida por el texto oficial del Tribunal Constitucional."
+      },
+      {
+        "url": "https://www.civil-mercantil.com/node/18983",
+        "motivo": "Resumen secundario de la STC 25/2025; sustituido por el texto oficial del Tribunal Constitucional."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Tribunal Constitucional: STC 25/2025, de 29 de enero (recurso de inconstitucionalidad 4038-2022)",
+        "url": "https://hj.tribunalconstitucional.es/es/Resolucion/GetDocumentResolucion/31403",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Tribunal Constitucional: STC 218/2015, de 22 de octubre",
+        "url": "https://hj.tribunalconstitucional.es/es/Resolucion/GetDocumentResolucion/24664",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Economist & Jurist: Lo malo de hablar con ligereza de una expropiación legislativa por Maricarmen (26-9-2026)",
+        "url": "https://www.economistjurist.es/articulos-juridicos-destacados/lo-malo-de-hablar-con-ligereza-de-una-expropiacion-legislativa-por-maricarmen/",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "El Salto: Una forma de expropiación se llama tanteo y retracto (opinión, 14-10-2026)",
+        "url": "https://www.elsaltodiario.com/vivienda/forma-expropiacion-se-llama-tanteo-retracto",
+        "tipo": "apoyo"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Sin cambio de veredicto: sustituyo las copias secundarias de las sentencias por el texto oficial del TC y añado dos fuentes sobre el justiprecio. No pude abrir el BOE para la Ley de Expropiación Forzosa."
+  },
+  {
+    "indice": 4,
+    "minuto": "1:40:08",
+    "afirmacion": "El gobierno de Colau en Barcelona compró 1.600 viviendas mediante tanteo y retracto.",
+    "veredicto_antes": "enganoso",
+    "veredicto_despues": "enganoso",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.verificat.cat/es/el-ayuntamiento-de-barcelona-ha-construido-1-442-viviendas-desde-2016-siete-veces-mas-de-las-que-asegura-anna-grau/",
+        "motivo": "No se pudo abrir (conexión rechazada) y por su título trata de viviendas construidas, no de compras por tanteo y retracto."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Ajuntament de Barcelona: Memòria econòmica de l'ordenança reguladora de la subjecció d'immobles destinats a habitatge als drets de tanteig i retracte (act. febrer 2025)",
+        "url": "https://ajuntament.barcelona.cat/transparencia/sites/default/files/2025-04/1.3_Memoria_economica_OTiR_2025_2_sgn_Censurado.pdf",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Ara: El Ayuntamiento y una entidad social (Habitat3) compran Casa Orsola (7-2-2025)",
+        "url": "https://es.ara.cat/sociedad/vivienda/ayuntamiento-barcelona-entidad-social-habitat-3-compran-casa-orsola_1_5277907.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Sin cambio de veredicto, ahora con documento oficial: la memoria económica municipal da 1.324 viviendas por todas las vías en 2015-2022 y 1.465 en total, y solo unas 300 por el tanteo y retracto del Plan General. Descarto Verificat, que no se pudo abrir."
+  },
+  {
+    "indice": 5,
+    "minuto": "1:40:08",
+    "afirmacion": "En el tanteo y retracto de Barcelona el ayuntamiento paga el precio de tasación, muy inferior al de mercado, y la norma la hicieron ellos.",
+    "veredicto_antes": "enganoso",
+    "veredicto_despues": "falso",
+    "cambia_veredicto": true,
+    "confianza_antes": "media",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Ajuntament de Barcelona: Memòria econòmica de l'ordenança reguladora de la subjecció d'immobles destinats a habitatge als drets de tanteig i retracte (act. febrer 2025)",
+        "url": "https://ajuntament.barcelona.cat/transparencia/sites/default/files/2025-04/1.3_Memoria_economica_OTiR_2025_2_sgn_Censurado.pdf",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Pasa de enganoso a falso: la memoria económica oficial dice que el Ayuntamiento paga el mismo precio y condiciones que ofrece el vendedor, no una tasación inferior al mercado. Solo es cierta la parte de que la norma del área la hizo el Ayuntamiento."
+  },
+  {
+    "indice": 6,
+    "minuto": "1:42:12",
+    "afirmacion": "En las ciudades hay viviendas suficientes para ofrecer alquiler asequible a quien lo necesite si se recuperan de la especulación.",
+    "veredicto_antes": "no_verificable",
+    "veredicto_despues": "no_verificable",
+    "cambia_veredicto": false,
+    "confianza_antes": "baja",
+    "confianza_despues": "baja",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [],
+    "tiene_fuente_primaria": true,
+    "nota": "Sin cambio: confirmo las cifras del INE y de Civio, que no permiten concluir si las viviendas bastarían."
+  },
+  {
+    "indice": 7,
+    "minuto": "1:44:19",
+    "afirmacion": "El Ayuntamiento de Barcelona, ante ocupaciones de viviendas vacías de pequeños propietarios por familias vulnerables, mediaba, realojaba a la familia o pagaba el alquiler al propietario.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "baja",
+    "confianza_despues": "baja",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Barcelona en Comú: respuesta a las demandas municipales de la PAH (2019), SIPHO y programa «Tu tens la clau» (fuente de parte)",
+        "url": "https://pahbarcelona.org/wp-content/uploads/2019/05/BComu-Resposta-demandes-PAH-Municipals-2019.pdf",
+        "tipo": "apoyo"
+      },
+      {
+        "titulo": "Ajuntament de Barcelona: Carta de serveis d'Habitatge (marzo de 2024), modalidad de atención en pérdida de vivienda y ocupaciones",
+        "url": "https://ajuntament.barcelona.cat/transparencia/sites/default/files/20240304_habitatge_carta-de-serveis.pdf",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Sin cambio de veredicto: confirmo el SIPHO y la inclusión de los ocupantes en la Mesa de Emergencias; el pago del alquiler al propietario sigue sin documentarse. Las fuentes de la etapa Colau son de parte."
+  },
+  {
+    "indice": 8,
+    "minuto": "1:45:20",
+    "afirmacion": "Si ocupan tu vivienda (morada), con la ley actual la policía desaloja en el mismo día.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Fiscalía General del Estado: Circular 1/2025, de 26 de junio, sobre los delitos de usurpación y allanamiento de morada (copia alojada en Confilegal)",
+        "url": "https://confilegal.com/wp-content/uploads/2025/06/Circular-FGE-1-2025_firmado.pdf",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Sin cambio de veredicto: añado la Circular 1/2025 de la Fiscalía; el BOE no respondió y la regla de flagrancia se cita a través de Maldita.es (IFCN) y OCU."
+  },
+  {
+    "indice": 9,
+    "minuto": "1:46:21",
+    "afirmacion": "El Ayuntamiento de Barcelona se personó judicialmente para desalojar unos bajos de Poble-sec ocupados por grupos de narcotraficantes.",
+    "veredicto_antes": "no_verificable",
+    "veredicto_despues": "no_verificable",
+    "cambia_veredicto": false,
+    "confianza_antes": "baja",
+    "confianza_despues": "baja",
+    "fuentes_descartadas": [
+      {
+        "url": "https://beteve.cat/societat/front-comu-poble-sec-combatre-narcopisos/",
+        "motivo": "Abierta: es de 2026 (gobierno de Collboni) y habla de narcopisos desarticulados por el distrito; no menciona personación judicial ni desalojo de bajos en la etapa Colau."
+      },
+      {
+        "url": "https://metropoliabierta.elespanol.com/sucesos/20261105/prision-provisional-multirreincidentes-barcelona-personarse-ayuntamiento-acusacion-particular/1003742809372_0.html",
+        "motivo": "Abierta: es del 5-11-2026 y trata de personaciones del Ayuntamiento de Collboni contra multirreincidentes; no menciona el Poble-sec ni la etapa Colau."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Betevé: narcolocal del Poble-sec, fuente constante de peleas (c. 2021, sin fecha visible)",
+        "url": "https://beteve.cat/societat/narcolocal-poble-sec-font-constant-baralles-video/",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio: no hallo la personación; descarto Betevé 2026 y Metrópoli Abierta, que tratan de la etapa Collboni."
+  },
+  {
+    "indice": 10,
+    "minuto": "1:47:23",
+    "afirmacion": "La propuesta de ley de Frente Amplio fija en la cuarta vivienda el punto a partir del cual se deja de ser pequeño propietario.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Democrata: Colau proposes a new tax to curb the hoarding of housing in Spain (28-10-2026)",
+        "url": "https://www.democrata.es/en/politics/colau-proposes-a-new-tax-to-curb-the-hoarding-of-housing-in-spain/",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio de veredicto: confirmo el umbral de la cuarta vivienda y el filtro de 800.000 euros con Qué.es y Democrata. Solo hay fuentes de prensa sobre una propuesta sin texto legal."
+  },
+  {
+    "indice": 11,
+    "minuto": "1:48:28",
+    "afirmacion": "La expropiación de viviendas que plantea Frente Amplio se limita a fondos buitre y grandes empresas tenedoras.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.democrata.es/politica/ada-colau-asegura-que-frente-amplio-expropiara-viviendas-a-los-fondos-buitre/",
+        "motivo": "Abierta: solo dice que Colau reiteró su compromiso de expropiar a los fondos buitre; no recoge la ley, los umbrales ni el alcance."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Mallorca.com: noticia sobre la ley de expropiación de viviendas a fondos anunciada por Colau en Málaga (6-11-2026)",
+        "url": "https://www.mallorca.com/en/magazin/news/colau-fund-homes-malaga",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio de veredicto: descarto Democrata, que no recoge la ley, y añado Mallorca.com. El umbral de 50 viviendas alcanza a empresas medianas."
+  },
+  {
+    "indice": 12,
+    "minuto": "1:49:30",
+    "afirmacion": "Frente Amplio propone un impuesto del 10 % del valor de la vivienda a los grandes propietarios que pongan precios abusivos o mantengan las viviendas vacías.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio de veredicto: el umbral real (cuarta vivienda con 800.000 euros, empresas desde la primera) es más amplio que el que describe Colau."
+  },
+  {
+    "indice": 13,
+    "minuto": "1:50:33",
+    "afirmacion": "La inmensa mayoría de los inquilinos paga el alquiler, según todas las estadísticas.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "CGPJ: Los órganos judiciales practicaron 4.474 lanzamientos en el segundo trimestre de 2026 (16-10-2026)",
+        "url": "https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Consejo-General-del-Poder-Judicial/Oficina-de-Comunicacion/Notas-de-prensa/Los-organos-judiciales-practicaron-4-474-lanzamientos-en-el-segundo-trimestre--un-35-7---menos-que-en-el-mismo-periodo-del-ano-pasado",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "INE: Censos de Población y Viviendas 2021, resultados sobre hogares y viviendas (30-6-2023)",
+        "url": "https://ine.es/prensa/censo_2021_jun.pdf",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Sin cambio de veredicto: añado el CGPJ (2.244 lanzamientos por alquiler en el segundo trimestre de 2026) y el Censo 2021 del INE para dimensionarlo. No existe una estadística oficial única de morosidad."
+  },
+  {
+    "indice": 14,
+    "minuto": "1:50:33",
+    "afirmacion": "Maricarmen, desahuciada de su vivienda, llevaba 40 años pagando el alquiler con muy pocos ingresos.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "baja",
+    "confianza_despues": "baja",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio de veredicto: Euronews confirma más de 70 años en el piso y una pensión de 1.350 euros; la identificación con Maricarmen Abascal es una suposición."
+  },
+  {
+    "indice": 15,
+    "minuto": "1:50:33",
+    "afirmacion": "En Alemania el alquiler es mucho más estable y está mucho más protegido que en España.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.elespanol.com/sociedad/20260417/alemania-da-leccion-espana-alquiler-inquilino-quedan-euros-vivir-despues-pagarlo/1003744200840_0.html",
+        "motivo": "Abierta: compara salarios con el alquiler de una habitación en el centro según un cálculo de una consultora de selección de personal; no trata la estabilidad ni la protección legal del inquilino."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Gesetze im Internet (Gobierno federal alemán): Bürgerliches Gesetzbuch, § 573 (Ordentliche Kündigung des Vermieters)",
+        "url": "https://www.gesetze-im-internet.de/bgb/__573.html",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Gesetze im Internet (Gobierno federal alemán): Bürgerliches Gesetzbuch, § 558 (Mieterhöhung bis zur ortsüblichen Vergleichsmiete)",
+        "url": "https://www.gesetze-im-internet.de/bgb/__558.html",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Eurostat: Housing cost overburden rate by tenure status (ilc_lvho07c), España, Alemania y UE, 2023-2025",
+        "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/ilc_lvho07c?format=JSON&lang=EN&geo=ES&geo=DE&geo=EU27_2020&sinceTimePeriod=2023",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Sin cambio de veredicto: sustituyo El Español, que compara el alquiler de una habitación, por el texto del BGB alemán y por Eurostat. La LAU se cita a través de Fundación Disenso porque el BOE no respondió."
+  },
+  {
+    "indice": 16,
+    "minuto": "1:51:33",
+    "afirmacion": "El Ayuntamiento de Barcelona, a través de las oficinas de vivienda, ofrecía a pequeños propietarios con alquiler asequible garantía de cobro aunque el inquilino no pudiera pagar.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "baja",
+    "confianza_despues": "baja",
+    "fuentes_descartadas": [
+      {
+        "url": "https://bcnroc.ajuntament.barcelona.cat/jspui/bitstream/11703/118900/3/claus_borsa_habitatge_lloguer-cat.pdf.txt",
+        "motivo": "No se pudo abrir (certificado no verificable y el servidor rechaza la descarga). Es un folleto anterior a 2020 cuyo contenido no se ha podido contrastar."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Ajuntament de Barcelona: Borsa d'habitatge de lloguer (web oficial, garantías para propietarios)",
+        "url": "https://www.barcelona.cat/habitatge/ca/ajuts-i-serveis/borsa-dhabitatge-de-lloguer",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Barcelona en Comú: respuesta a las demandas municipales de la PAH (2019), SIPHO y programa «Tu tens la clau» (fuente de parte)",
+        "url": "https://pahbarcelona.org/wp-content/uploads/2019/05/BComu-Resposta-demandes-PAH-Municipals-2019.pdf",
+        "tipo": "apoyo"
+      },
+      {
+        "titulo": "Ajuntament de Barcelona: Carta de serveis d'Habitatge (marzo de 2024), modalidad de atención en pérdida de vivienda y ocupaciones",
+        "url": "https://ajuntament.barcelona.cat/transparencia/sites/default/files/20240304_habitatge_carta-de-serveis.pdf",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Sin cambio de veredicto: confirmo la garantía de cobro en la web oficial de la Borsa, que es la actual (Collboni); no pude confirmar las condiciones de la etapa Colau y descarto el folleto antiguo, que no se pudo abrir."
+  },
+  {
+    "indice": 17,
+    "minuto": "1:52:35",
+    "afirmacion": "Mucha gente destina más de la mitad de su sueldo a pagar la vivienda.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Eurostat: Housing cost overburden rate by tenure status (ilc_lvho07c), España, Alemania y UE, 2023-2025",
+        "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/ilc_lvho07c?format=JSON&lang=EN&geo=ES&geo=DE&geo=EU27_2020&sinceTimePeriod=2023",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Sin cambio de veredicto: añado Eurostat (26,8 % de inquilinos con sobrecarga superior al 40 %); no hay dato oficial para el umbral del 50 %."
+  },
+  {
+    "indice": 18,
+    "minuto": "1:52:35",
+    "afirmacion": "Durante décadas se ha dejado la vivienda en manos del mercado y la situación actual es peor que nunca.",
+    "veredicto_antes": "no_verificable",
+    "veredicto_despues": "enganoso",
+    "cambia_veredicto": true,
+    "confianza_antes": "baja",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Eurostat: Standardised house price-to-income ratio (tipsho60), España, serie 2000-2025",
+        "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/tipsho60?format=JSON&lang=EN&geo=ES",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Eurostat: House price index, datos anuales (prc_hpi_a), España, 2005-2025",
+        "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/prc_hpi_a?format=JSON&lang=EN&geo=ES&unit=I15_A_AVG&purchase=TOTAL&sinceTimePeriod=2005",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Eurostat: Housing cost overburden rate by tenure status (ilc_lvho07c), España, serie 2007-2025",
+        "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/ilc_lvho07c?format=JSON&lang=EN&geo=ES&sinceTimePeriod=2005",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Pasa de no_verificable a enganoso: Eurostat muestra que la relación precio-renta de 2025 sigue por debajo de 2007 y que la sobrecarga de los inquilinos era mayor en 2014, aunque los precios nominales están en máximos."
+  }
+]

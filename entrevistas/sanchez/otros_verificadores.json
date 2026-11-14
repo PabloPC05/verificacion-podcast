@@ -1,0 +1,32 @@
+{
+ "nota": "Lo que otros verificadores profesionales publicaron sobre la misma frase (misma_frase) o sobre el mismo dato dicho por el candidato en otro momento (mismo_dato). Solo entra una pieza si trata esa afirmación concreta; un artículo general sobre el tema no cuenta. veredicto_medio es la etiqueta del propio medio, copiada tal cual.",
+ "enlaces": [
+  {
+   "id": "m6028",
+   "medio": "Maldita.es",
+   "titulo": "Qué dijo Pedro Sánchez en 2019 y qué no sobre “dormir tranquilo” con ministros de Podemos en el Gobierno",
+   "url": "https://maldita.es/malditobulo/20230620/pedro-sanchez-dormir-tranquilo-ministros-unidas-podemos-gobierno",
+   "fecha": "2023-06-20",
+   "veredicto_medio": null,
+   "alcance": "mismo_dato"
+  },
+  {
+   "id": "m6028",
+   "medio": "Maldita.es",
+   "titulo": "Cuando Sánchez no quería una coalición con Podemos: \"sería un presidente de Gobierno que no dormiría por la noche\"",
+   "url": "https://maldita.es/malditahemeroteca/cuando-sanchez-no-queria-una-coalicion-con-podemos-seria-un-presidente-de-gobierno-que-no-dormiria-por-la-noche",
+   "fecha": "2019-12-30",
+   "veredicto_medio": null,
+   "alcance": "mismo_dato"
+  },
+  {
+   "id": "m6003",
+   "medio": "Maldita.es",
+   "titulo": "Cuando Sánchez no quería una coalición con Podemos: \"sería un presidente de Gobierno que no dormiría por la noche\"",
+   "url": "https://maldita.es/malditahemeroteca/cuando-sanchez-no-queria-una-coalicion-con-podemos-seria-un-presidente-de-gobierno-que-no-dormiria-por-la-noche",
+   "fecha": "2019-12-30",
+   "veredicto_medio": null,
+   "alcance": "mismo_dato"
+  }
+ ]
+}

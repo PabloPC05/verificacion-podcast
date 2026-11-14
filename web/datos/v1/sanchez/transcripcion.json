@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-13T21:47:57+01:00",
+ "generado": "2026-11-14T10:22:15+01:00",
  "aviso": "Verificación asistida por IA, sin revisión de un equipo de periodistas. «falso» no implica intención de mentir. Contrasta siempre con las fuentes enlazadas.",
  "veredictos": {
   "verdadero": "Los datos lo confirman.",
@@ -25,13 +25,20 @@
   "transcripcion_txt_url": "https://verificacion-podcast.vercel.app/api/v1/sanchez/transcripcion.txt",
   "total_afirmaciones": 147,
   "por_veredicto": {
-   "falso": 7,
+   "falso": 5,
    "enganoso": 23,
-   "mayormente_verdadero": 53,
-   "verdadero": 29,
-   "no_verificable": 35
+   "mayormente_verdadero": 52,
+   "verdadero": 33,
+   "no_verificable": 34
   },
   "excluidas": 10,
+  "esencial": [
+   "sanchez-m5188",
+   "sanchez-m3267",
+   "sanchez-m2012",
+   "sanchez-m4742",
+   "sanchez-m6437"
+  ],
   "temas": [
    {
     "n": 1,
@@ -143,11 +150,11 @@
     "inicio_s": 5073,
     "total": 17,
     "por_veredicto": {
-     "falso": 1,
+     "falso": 0,
      "enganoso": 5,
-     "mayormente_verdadero": 6,
-     "verdadero": 1,
-     "no_verificable": 4
+     "mayormente_verdadero": 7,
+     "verdadero": 2,
+     "no_verificable": 3
     }
    },
    {
@@ -156,10 +163,10 @@
     "inicio_s": 5721,
     "total": 28,
     "por_veredicto": {
-     "falso": 2,
+     "falso": 1,
      "enganoso": 3,
-     "mayormente_verdadero": 12,
-     "verdadero": 8,
+     "mayormente_verdadero": 10,
+     "verdadero": 11,
      "no_verificable": 3
     }
    },
@@ -191,7 +198,7 @@
    }
   ]
  },
- "nota": "Transcripción automática (Whisper), que puede tener errores en nombres y cifras. El hablante de cada segmento sale de un reconocimiento automático de voces (acierto medido del 97 %; falla sobre todo en frases muy cortas).",
+ "nota": "Transcripción automática (Whisper), que puede tener errores en nombres y cifras. Los nombres mal transcritos más claros se corrigen con un glosario público (https://github.com/PabloPC05/verificacion-podcast/blob/main/entrevistas/glosario.json). El hablante de cada segmento sale de un reconocimiento automático de voces (acierto medido del 97 %; falla sobre todo en frases muy cortas).",
  "segmentos": [
   {
    "inicio_s": 0.0,
@@ -1463,7 +1470,7 @@
    "inicio_s": 678.74,
    "fin_s": 682.04,
    "hablante": "Pedro Sánchez",
-   "texto": "escucho a Abascal o a Feijó, por poner el caso de la oposición"
+   "texto": "escucho a Abascal o a Feijóo, por poner el caso de la oposición"
   },
   {
    "inicio_s": 682.04,
@@ -6503,7 +6510,7 @@
    "inicio_s": 3720.62,
    "fin_s": 3722.92,
    "hablante": "Jordi Wild",
-   "texto": "¿Qué tal, chicos? ¿Cómo estáis? Bienvenidos a un nuevo The Wall Project."
+   "texto": "¿Qué tal, chicos? ¿Cómo estáis? Bienvenidos a un nuevo The Wild Project."
   },
   {
    "inicio_s": 3722.98,
@@ -6917,7 +6924,7 @@
    "inicio_s": 4057.04,
    "fin_s": 4058.74,
    "hablante": "Jordi Wild",
-   "texto": "evidentemente, Coldo, toda esta"
+   "texto": "evidentemente, Koldo, toda esta"
   },
   {
    "inicio_s": 4058.74,
@@ -7481,7 +7488,7 @@
    "inicio_s": 4248.76,
    "fin_s": 4251.1,
    "hablante": "Jordi Wild",
-   "texto": "de verdad, Ábalos y Coldo no hicieran comentarios"
+   "texto": "de verdad, Ábalos y Koldo no hicieran comentarios"
   },
   {
    "inicio_s": 4251.1,
@@ -7517,7 +7524,7 @@
    "inicio_s": 4261.12,
    "fin_s": 4262.86,
    "hablante": "Pedro Sánchez",
-   "texto": "Yo con Coldo no tenía prácticamente"
+   "texto": "Yo con Koldo no tenía prácticamente"
   },
   {
    "inicio_s": 4262.86,
@@ -7745,7 +7752,7 @@
    "inicio_s": 4418.76,
    "fin_s": 4427.0,
    "hablante": "Jordi Wild",
-   "texto": "Me han pasado una cosita los verificadores. Estos son unos elogios tuyos a Coldo. ¿Esto de dónde lo habéis sacado?"
+   "texto": "Me han pasado una cosita los verificadores. Estos son unos elogios tuyos a Koldo. ¿Esto de dónde lo habéis sacado?"
   },
   {
    "inicio_s": 4427.0,
@@ -7769,7 +7776,7 @@
    "inicio_s": 4433.62,
    "fin_s": 4436.06,
    "hablante": "Jordi Wild",
-   "texto": "De ti hacia Coldo, con el que casi no tenías"
+   "texto": "De ti hacia Koldo, con el que casi no tenías"
   },
   {
    "inicio_s": 4436.06,
@@ -7805,7 +7812,7 @@
    "inicio_s": 4446.52,
    "fin_s": 4448.34,
    "hablante": "Jordi Wild",
-   "texto": "Socialismo de raíz. Así es Coldo."
+   "texto": "Socialismo de raíz. Así es Koldo."
   },
   {
    "inicio_s": 4448.72,
@@ -8093,7 +8100,7 @@
    "inicio_s": 4558.74,
    "fin_s": 4560.22,
    "hablante": "Jordi Wild",
-   "texto": "que Coldo no era un desconocido para ti"
+   "texto": "que Koldo no era un desconocido para ti"
   },
   {
    "inicio_s": 4560.22,
@@ -8135,7 +8142,7 @@
    "inicio_s": 4572.78,
    "fin_s": 4586.48,
    "hablante": "Jordi Wild",
-   "texto": "Pero Coldo, que aún, yo creo que si Ábalos era de tendencia picante, Coldo aún más. De Coldo no escuchabas nada, no te decía nada, no había bromas. Aquí yo veo que sientes admiración por él y fíjate lo que ha acabado pasando."
+   "texto": "Pero Koldo, que aún, yo creo que si Ábalos era de tendencia picante, Koldo aún más. De Koldo no escuchabas nada, no te decía nada, no había bromas. Aquí yo veo que sientes admiración por él y fíjate lo que ha acabado pasando."
   },
   {
    "inicio_s": 4587.4,
@@ -8249,13 +8256,13 @@
    "inicio_s": 4624.0,
    "fin_s": 4625.7,
    "hablante": "Pedro Sánchez",
-   "texto": "ha sido con José Luis Ábalos y con Santos Cerda."
+   "texto": "ha sido con José Luis Ábalos y con Santos Cerdán."
   },
   {
    "inicio_s": 4625.78,
    "fin_s": 4638.06,
    "hablante": "Pedro Sánchez",
-   "texto": "Con ellos sí tenía una relación. Y para mí esa sí que fue una decepción. Con Coldo García yo es que no le conocía, como conocía a Santos Cerdano, como conocía a José Luis Ábalos, y por tanto, pues la decepción es mucho más relativa."
+   "texto": "Con ellos sí tenía una relación. Y para mí esa sí que fue una decepción. Con Koldo García yo es que no le conocía, como conocía a Santos Cerdán, como conocía a José Luis Ábalos, y por tanto, pues la decepción es mucho más relativa."
   },
   {
    "inicio_s": 4638.32,
@@ -8591,7 +8598,7 @@
    "inicio_s": 4785.06,
    "fin_s": 4790.48,
    "hablante": "Jordi Wild",
-   "texto": "Otro tema que mucha gente tiene curiosidad es el de Leire Díaz."
+   "texto": "Otro tema que mucha gente tiene curiosidad es el de Leire Díez."
   },
   {
    "inicio_s": 4790.48,
@@ -8681,7 +8688,7 @@
    "inicio_s": 4820.28,
    "fin_s": 4821.58,
    "hablante": "Pedro Sánchez",
-   "texto": "contrataran a Leire Díaz,"
+   "texto": "contrataran a Leire Díez,"
   },
   {
    "inicio_s": 4822.34,
@@ -8747,7 +8754,7 @@
    "inicio_s": 4842.12,
    "fin_s": 4844.32,
    "hablante": "Jordi Wild",
-   "texto": "a Leire Díaz se refería a ti como The One."
+   "texto": "a Leire Díez se refería a ti como The One."
   },
   {
    "inicio_s": 4844.5,
@@ -12827,7 +12834,7 @@
    "inicio_s": 6555.2,
    "fin_s": 6556.5,
    "hablante": "Jordi Wild",
-   "texto": "Feijó"
+   "texto": "Feijóo"
   },
   {
    "inicio_s": 6556.5,

@@ -1,0 +1,454 @@
+[
+  {
+    "indice": 0,
+    "minuto": "1:26:18",
+    "afirmacion": "Muchas competencias que afectan a la vida de la ciudad (seguridad, justicia, etc.) no dependen del Ayuntamiento de Barcelona sino de la Generalitat y del Estado.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [
+      {
+        "url": "https://es.wikipedia.org/wiki/Estatuto_de_Autonom%C3%ADa_de_Catalu%C3%B1a_de_2006",
+        "motivo": "Wikipedia (solo apoyo): la página abierta solo recoge en su introducción que la Administración de Justicia es competencia exclusiva del Estado y el texto de las competencias no se pudo leer. Sustituida por el texto del Estatuto y de la LOPJ."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Diputació de Barcelona (CEMICAL): Llei orgànica 6/2006 de reforma de l'Estatut d'Autonomia de Catalunya, selección con el art. 164 (compilación, no es el BOE)",
+        "url": "https://cemical.diba.cat/codibasic/fitxers/Estatut_Autonomia.pdf",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "CGPJ: Ley Orgánica del Poder Judicial, texto de 2010 publicado en poderjudicial.es (arts. 35 a 37)",
+        "url": "https://www5.poderjudicial.es/secp10-11/Documentaci%C3%B3n%20Espa%C3%B1ol/Textos%20legales%20b%C3%A1sicos/Legislaci%C3%B3n%20general/Ley%20Org%C3%A1nica%20Poder%20Judicial.pdf",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Sin cambio de veredicto. Sustituyo Wikipedia por el texto del Estatuto (compilación de la Diputació) y de la LOPJ (CGPJ), y subo la confianza a alta porque ya hay texto legal y no solo fuentes secundarias."
+  },
+  {
+    "indice": 1,
+    "minuto": "1:27:27",
+    "afirmacion": "Durante la pandemia de covid-19 la mayoría de las decisiones las tomaron la Generalitat y el Estado, y el Ayuntamiento de Barcelona se limitaba a gestionarlas.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Congreso de los Diputados: Real Decreto 537/2020, de 22 de mayo, que prorroga el estado de alarma (texto consolidado del BOE, copia del Congreso)",
+        "url": "https://www.congreso.es/docu/docum/ddocum/dosieres/sleg/legislatura_14/spl_9/pdfs/29.pdf",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Sin cambio de veredicto. Añado el texto oficial del RD 537/2020 (copia del Congreso), que reparte funciones entre Gobierno, comunidades y administraciones locales; Wikipedia queda como apoyo."
+  },
+  {
+    "indice": 2,
+    "minuto": "1:27:27",
+    "afirmacion": "Hubo una campaña de desprestigio en algunas televisiones que exageraba la inseguridad de Barcelona (sucesos del Raval presentados en bucle como si la ciudad fuera un lugar de caos).",
+    "veredicto_antes": "no_verificable",
+    "veredicto_despues": "no_verificable",
+    "cambia_veredicto": false,
+    "confianza_antes": "baja",
+    "confianza_despues": "baja",
+    "fuentes_descartadas": [
+      {
+        "url": "https://metropoliabierta.elespanol.com/sucesos/20230615/balance-de-la-inseguridad-en-barcelona-criminalidad-se-dispara-los-ultimos-ocho-anos/771672967_0.html",
+        "motivo": "Abierta: las cifras coinciden con las de Interior, pero es prensa de línea editorial marcada y secundaria, y mezcla cifras de años distintos (167.698 es el total de 2022). Sustituida por las tablas primarias del Ministerio del Interior."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Ministerio del Interior: Balance de criminalidad 2016, 4º trimestre, indicadores por municipio (Barcelona, 2015 y 2016)",
+        "url": "https://estadisticasdecriminalidad.ses.mir.es/sec/jaxiPx/files/_px/es/csv_c/DatosBalanceAnt/l0/69012.csv_c?nocab=1",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Ministerio del Interior: Balance de criminalidad 2022, 4º trimestre, indicadores por municipio (Barcelona, 2019, 2021 y 2022)",
+        "url": "https://estadisticasdecriminalidad.ses.mir.es/sec/jaxiPx/files/_px/es/csv_c/DatosBalanceAnt/l0/1209012.csv_c?nocab=1",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Sin cambio de veredicto. Sigue sin existir un análisis de la cobertura televisiva; sustituyo Metrópoli Abierta por las tablas primarias de Interior. El cupo de búsquedas se agotó y no pude rastrear estudios de medios."
+  },
+  {
+    "indice": 3,
+    "minuto": "1:28:44",
+    "afirmacion": "Durante su mandato aumentaron la Guardia Urbana como hacía mucho tiempo que no se hacía: miles de agentes más.",
+    "veredicto_antes": "enganoso",
+    "veredicto_despues": "enganoso",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.verificat.cat/la-guardia-urbana-te-previst-augmentar-la-seva-plantilla-en-450-efectius-aquest-mandat-i-no-pas-en-1-000-agents-com-diu-colau/",
+        "motivo": "No carga: la conexión fue rechazada tanto con WebFetch como con curl, así que no se puede comprobar lo que dice sobre los 450 frente a los 1.000 agentes."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Maldita.es: Es falso que Ada Colau haya «puesto más agentes» de policía en Barcelona (12/08/2019)",
+        "url": "https://maldita.es/malditodato/20190812/es-falso-que-ada-colau-haya-puesto-mas-agentes-de-policia-en-barcelona-como-decia-la-alcaldesa-en-campana-electoral/",
+        "tipo": "verificador"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Sin cambio de veredicto. Descarto Verificat (no abre) y añado Maldita 2019, que documenta que no hubo aumento neto en el primer mandato; corrijo a Betevé: sus 3.403 son la plantilla actual, no la de 2023."
+  },
+  {
+    "indice": 4,
+    "minuto": "1:28:44",
+    "afirmacion": "Colau aceptó la Copa América de vela a finales de su segundo mandato; la decidieron también la Generalitat y otras administraciones; aportó poco y costó mucho dinero público.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio de veredicto. Las dos fuentes abren y dicen lo atribuido; completo la explicación con las cifras del informe de la UB y la crítica de Barcelona en Comú."
+  },
+  {
+    "indice": 5,
+    "minuto": "1:29:45",
+    "afirmacion": "Al salir de la pandemia, el Ayuntamiento empezó en Sant Andreu la recogida selectiva puerta a puerta, que la Unión Europea recomienda y con la que se recicla mucho más.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio de veredicto. Las tres fuentes abren y respaldan fechas y cifras; quedan sin comprobar la norma europea (no se pudo abrir EUR-Lex) y los datos propios del Ayuntamiento."
+  },
+  {
+    "indice": 6,
+    "minuto": "1:31:47",
+    "afirmacion": "La criminalidad en Barcelona tuvo cifras más o menos estables desde que entró el gobierno de Colau (2015) hasta que salió (2023), sin grandes cambios.",
+    "veredicto_antes": "enganoso",
+    "veredicto_despues": "enganoso",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [
+      {
+        "url": "https://metropoliabierta.elespanol.com/sucesos/20230615/balance-de-la-inseguridad-en-barcelona-criminalidad-se-dispara-los-ultimos-ocho-anos/771672967_0.html",
+        "motivo": "Abierta: las cifras coinciden con las de Interior, pero es prensa de línea editorial marcada y secundaria, y mezcla cifras de años distintos (167.698 es el total de 2022). Sustituida por las tablas primarias del Ministerio del Interior."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Ministerio del Interior: Balance de criminalidad 2016, 4º trimestre, indicadores por municipio (Barcelona, 2015 y 2016)",
+        "url": "https://estadisticasdecriminalidad.ses.mir.es/sec/jaxiPx/files/_px/es/csv_c/DatosBalanceAnt/l0/69012.csv_c?nocab=1",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Ministerio del Interior: Balance de criminalidad 2022, 4º trimestre, indicadores por municipio (Barcelona, 2019, 2021 y 2022)",
+        "url": "https://estadisticasdecriminalidad.ses.mir.es/sec/jaxiPx/files/_px/es/csv_c/DatosBalanceAnt/l0/1209012.csv_c?nocab=1",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Ministerio del Interior: Balance de criminalidad 2023, 4º trimestre, indicadores por municipio (Barcelona, 2022 y 2023)",
+        "url": "https://estadisticasdecriminalidad.ses.mir.es/sec/jaxiPx/files/_px/es/csv_c/DatosBalanceAnt/l0/1309012.csv_c?nocab=1",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Sin cambio de veredicto y confianza a alta. Sustituyo la cifra secundaria de Metrópoli Abierta por las tablas de Interior y corrijo que 167.698 es el total de 2022, no el del cierre del mandato."
+  },
+  {
+    "indice": 7,
+    "minuto": "1:31:47",
+    "afirmacion": "Durante su mandato se desarrollaron una política de vivienda, supermanzanas (superillas) y una política de protección de los entornos escolares.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "baja",
+    "confianza_despues": "baja",
+    "fuentes_descartadas": [
+      {
+        "url": "https://es.wikipedia.org/wiki/Ada_Colau",
+        "motivo": "Wikipedia (solo apoyo): no la he abierto y es redundante con la versión inglesa que sí abrí."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Ajuntament de Barcelona: Protegim les escoles",
+        "url": "https://ajuntament.barcelona.cat/educacio/ca/protegim-les-escoles",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Ajuntament de Barcelona: Superilles (índice de superilles de Poblenou, Sant Antoni y Eixample)",
+        "url": "https://ajuntament.barcelona.cat/superilles/en/noticia/984608",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Betevé: obras para pacificar los entornos de 75 escuelas de Barcelona (programa Protegim les escoles)",
+        "url": "https://beteve.cat/societat/juliol-comencen-obres-pacificar-entorns-75-escoles-barcelona/",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Sin cambio de veredicto. Aporto fuentes oficiales para escuelas y superilles; la política de vivienda sigue sin fuente oficial abierta, por eso la confianza se queda en baja."
+  },
+  {
+    "indice": 8,
+    "minuto": "1:32:49",
+    "afirmacion": "En una gran ciudad con mucho turismo como Barcelona, el grueso de los delitos son robos y hurtos.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [
+      {
+        "url": "https://metropoliabierta.elespanol.com/sucesos/20230615/balance-de-la-inseguridad-en-barcelona-criminalidad-se-dispara-los-ultimos-ocho-anos/771672967_0.html",
+        "motivo": "Abierta: las cifras coinciden con las de Interior, pero es prensa de línea editorial marcada y secundaria, y mezcla cifras de años distintos (167.698 es el total de 2022). Sustituida por las tablas primarias del Ministerio del Interior."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Ministerio del Interior: Balance de criminalidad 2023, 4º trimestre, indicadores por municipio (Barcelona, 2022 y 2023)",
+        "url": "https://estadisticasdecriminalidad.ses.mir.es/sec/jaxiPx/files/_px/es/csv_c/DatosBalanceAnt/l0/1309012.csv_c?nocab=1",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Maldita.es: Es falso que «los hurtos y los robos son más del 90% de los delitos» en Barcelona como dice Ada Colau (20/07/2019)",
+        "url": "https://maldita.es/malditodato/es-falso-que-los-hurtos-y-los-robos-son-mas-del-90-de-los-delitos-en-barcelona-como-dice-ada-colau",
+        "tipo": "verificador"
+      },
+      {
+        "titulo": "3Cat: Més delictes a Barcelona, el 50% són furts (balance 2023, 19/02/2024)",
+        "url": "https://www.3cat.cat/3catinfo/mes-delictes-a-barcelona-el-50-son-furts-pero-els-robatoris-amb-forca-a-botigues-es-disparen/noticia-amp/3277405/",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Sin cambio de veredicto, confianza a alta. Añado las tablas de Interior (64 % en 2023) y las cifras de Maldita de 2019 (69-70 %); quito Metrópoli Abierta."
+  },
+  {
+    "indice": 9,
+    "minuto": "1:32:49",
+    "afirmacion": "Tras el referéndum del 1-O de 2017 hubo disturbios durante meses en Barcelona y una «represión del Partido Popular».",
+    "veredicto_antes": "enganoso",
+    "veredicto_despues": "enganoso",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Catalan News: A week of turmoil in Catalonia (21/10/2019)",
+        "url": "https://www.catalannews.com/catalan-news-tv/item/a-week-of-turmoil-in-catalonia",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio. Todas las fuentes abren; la de The Objective tiene una URL que parece de otra noticia, pero el titular coincide con el que se cita. Añado Catalan News para situar en 2019 las protestas más intensas."
+  },
+  {
+    "indice": 10,
+    "minuto": "1:32:49",
+    "afirmacion": "El gobierno de Colau puso en marcha la policía de barrio para acercar la Guardia Urbana a los vecinos.",
+    "veredicto_antes": "enganoso",
+    "veredicto_despues": "enganoso",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Ajuntament de Barcelona, Guàrdia Urbana: Neighbourhood police",
+        "url": "https://ajuntament.barcelona.cat/guardiaurbana/en/services/our-services/neighbourhood-police",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Sin cambio de veredicto. Mantengo el Plan director y el PLS y añado la ficha de la Guardia Urbana; no pude abrir las memorias de la Guardia Urbana que podrían fechar el despliegue."
+  },
+  {
+    "indice": 11,
+    "minuto": "1:33:50",
+    "afirmacion": "El gobierno municipal pidió nuevos juzgados para poder celebrar juicios rápidos por los robos.",
+    "veredicto_antes": "no_verificable",
+    "veredicto_despues": "no_verificable",
+    "cambia_veredicto": false,
+    "confianza_antes": "baja",
+    "confianza_despues": "baja",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Ara: Més investigació contra els furts i les estrebades per frenar els delictes a Barcelona (Junta de Seguretat, 19/07/2019)",
+        "url": "https://www.ara.cat/societat/junta-seguretat-barcelona-investigacio-furts-estrebades-canvis-legislatius-reincidencia-comissaria-placa-catalunya-augment-delictes_1_2597731.html",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Ara: Foment reclama modificar el Codi Penal per aturar la multireincidència a Barcelona (03/09/2019)",
+        "url": "https://www.ara.cat/societat/psoe-reformar-codi-penal-reincidencia-furts-grande-marlaska_1_2646588.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Sin cambio de veredicto. Sigue sin haber prueba de que Colau pidiera juzgados; las crónicas de 2019 recogen otras peticiones. El cupo de búsquedas se agotó antes de poder rastrear otros años."
+  },
+  {
+    "indice": 12,
+    "minuto": "1:33:50",
+    "afirmacion": "El conseller de Interior de Junts dijo públicamente que debía Mossos a Barcelona pero que no los iba a poner, y ni siquiera iba a las juntas locales de seguridad.",
+    "veredicto_antes": "enganoso",
+    "veredicto_despues": "enganoso",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Ara: Més investigació contra els furts i les estrebades per frenar els delictes a Barcelona (Junta de Seguretat, 19/07/2019)",
+        "url": "https://www.ara.cat/societat/junta-seguretat-barcelona-investigacio-furts-estrebades-canvis-legislatius-reincidencia-comissaria-placa-catalunya-augment-delictes_1_2597731.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio de veredicto. Añado la crónica de Ara de la Junta del 19/07/2019, donde Buch asiste y habla de más Mossos, que contradice el «no nos iba a poner»."
+  },
+  {
+    "indice": 13,
+    "minuto": "1:33:50",
+    "afirmacion": "Los juzgados que harían juicios rápidos a los multirreincidentes no dependen del Ayuntamiento.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [
+      {
+        "url": "https://es.wikipedia.org/wiki/Estatuto_de_Autonom%C3%ADa_de_Catalu%C3%B1a_de_2006",
+        "motivo": "Wikipedia (solo apoyo): la página abierta solo recoge en su introducción que la Administración de Justicia es competencia exclusiva del Estado y el texto de las competencias no se pudo leer. Sustituida por el texto del Estatuto y de la LOPJ."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "CGPJ: Ley Orgánica del Poder Judicial, texto de 2010 publicado en poderjudicial.es (arts. 35 a 37)",
+        "url": "https://www5.poderjudicial.es/secp10-11/Documentaci%C3%B3n%20Espa%C3%B1ol/Textos%20legales%20b%C3%A1sicos/Legislaci%C3%B3n%20general/Ley%20Org%C3%A1nica%20Poder%20Judicial.pdf",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Sin cambio de veredicto, confianza a alta. Sustituyo Wikipedia por los arts. 36 y 37 de la LOPJ (copia del CGPJ de 2010; el BOE no se deja abrir)."
+  },
+  {
+    "indice": 14,
+    "minuto": "1:34:51",
+    "afirmacion": "Como alcaldesa presidía la Junta Local de Seguridad y se reunía cada trimestre con todas las policías para revisar los datos.",
+    "veredicto_antes": "no_verificable",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": true,
+    "confianza_antes": "baja",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Ajuntament de Barcelona: Local Security Board (Junta Local de Seguretat)",
+        "url": "https://ajuntament.barcelona.cat/seguretatiprevencio/en/about-us/collaborating-bodies/local-security-board",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Betevé: Junta Local de Seguretat de Barcelona, julio de 2020 (presidida por Colau)",
+        "url": "https://beteve.cat/politica/junta-local-seguretat-barcelona-juliol-2020/",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Pasa de no_verificable a mayormente_verdadero: la web municipal y Betevé confirman que la presidía y reunía a todos los cuerpos, pero la Junta se reúne dos veces al año y no cada trimestre."
+  },
+  {
+    "indice": 15,
+    "minuto": "1:34:51",
+    "afirmacion": "En los datos de delitos cometidos en Barcelona que vio como alcaldesa (en su mayoría hurtos), la principal nacionalidad de los autores era la española, no la extranjera.",
+    "veredicto_antes": "enganoso",
+    "veredicto_despues": "no_verificable",
+    "cambia_veredicto": true,
+    "confianza_antes": "media",
+    "confianza_despues": "baja",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.eldebate.com/espana/cataluna/20240121/multiculturalismo-hunde-barcelona-casi-80-delitos-fueron-cometidos-poblacion-extranjera_168590.html",
+        "motivo": "Abierta: medio de línea editorial marcada con titular valorativo; sus cifras (37.168 detenciones entre 2022 y 2023, cerca del 80 % extranjeras) coinciden con las de Metrópoli Abierta y Maldita, que se usan en su lugar, y no deja claro qué cifra corresponde a hurtos."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Newtral y Verificat: La Guardia Urbana no avala que el 80% de los delitos de Barcelona los cometan «menas» (13/10/2022)",
+        "url": "https://www.newtral.es/delitos-barcelona-menas-factcheck/20221013/",
+        "tipo": "verificador"
+      },
+      {
+        "titulo": "Maldita.es: «El 83% de los detenidos por robos con violencia y el 91% por hurtos en Barcelona son extranjeros» (12/05/2025)",
+        "url": "https://maldita.es/buloteca/claim/El-83-de-los-detenidos-por-robos-con-violencia-y-el-91-por-hurtos-en-Barcelona-son-extranjeros",
+        "tipo": "verificador"
+      },
+      {
+        "titulo": "Metrópoli Abierta: Ocho de cada diez detenidos en Barcelona son extranjeros (19/01/2024)",
+        "url": "https://metropoliabierta.elespanol.com/el-pulso-de-la-ciudad/20240119/ocho-de-cada-diez-detenidos-en-barcelona-son-extranjeros/826167448_0.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Pasa de enganoso a no_verificable: no existen datos públicos de nacionalidad de los autores en Barcelona para el mandato, y las únicas cifras, de detenciones, miden otra cosa. Descarto El Debate por sesgo y redundancia."
+  },
+  {
+    "indice": 16,
+    "minuto": "1:35:52",
+    "afirmacion": "La mayoría de los autores del conjunto de delitos cometidos en Barcelona durante su mandato eran de nacionalidad española.",
+    "veredicto_antes": "enganoso",
+    "veredicto_despues": "no_verificable",
+    "cambia_veredicto": true,
+    "confianza_antes": "baja",
+    "confianza_despues": "baja",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.eldebate.com/espana/cataluna/20240121/multiculturalismo-hunde-barcelona-casi-80-delitos-fueron-cometidos-poblacion-extranjera_168590.html",
+        "motivo": "Abierta: medio de línea editorial marcada con titular valorativo; sus cifras (37.168 detenciones entre 2022 y 2023, cerca del 80 % extranjeras) coinciden con las de Metrópoli Abierta y Maldita, que se usan en su lugar, y no deja claro qué cifra corresponde a hurtos."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Maldita.es: Qué sabemos sobre que, supuestamente, el 49% de los delitos en Cataluña son cometidos por extranjeros (27/10/2025)",
+        "url": "https://maldita.es/malditobulo/20251027/extranjeros-49-delitos-cataluna/",
+        "tipo": "verificador"
+      },
+      {
+        "titulo": "Metrópoli Abierta: Ocho de cada diez detenidos en Barcelona son extranjeros (19/01/2024)",
+        "url": "https://metropoliabierta.elespanol.com/el-pulso-de-la-ciudad/20240119/ocho-de-cada-diez-detenidos-en-barcelona-son-extranjeros/826167448_0.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Pasa de enganoso a no_verificable por el mismo motivo que la afirmación anterior: a escala catalana tiene apoyo y en la ciudad las detenciones apuntan en contra, sin serie comparable."
+  },
+  {
+    "indice": 17,
+    "minuto": "1:37:01",
+    "afirmacion": "Durante todos los años que fue alcaldesa, el 90% del conjunto de los delitos los cometían hombres.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [],
+    "tiene_fuente_primaria": true,
+    "nota": "Sin cambio. PLS e INE abren y confirman el 89,28 % y el 80,6 %; sigue sin poder comprobarse que fuera así todos los años."
+  }
+]

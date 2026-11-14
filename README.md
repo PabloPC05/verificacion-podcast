@@ -18,6 +18,10 @@ Todo está aquí para que cualquiera pueda revisarlo, discutirlo y corregirlo.
 | `entrevistas/<slug>/capitulos.json` | Capítulos del vídeo en YouTube. |
 | `entrevistas/<slug>/resultados/*.json` | Las afirmaciones verificadas, un fichero por bloque temático: cita literal, veredicto, explicación, confianza y fuentes. |
 | `entrevistas/<slug>/resumenes/*.json` | Resumen de una frase de cada explicación (el texto corto que muestra la web). |
+| `entrevistas/<slug>/esencial.json` | «Lo esencial»: las 3-5 afirmaciones clave de cada candidato y por qué. |
+| `entrevistas/<slug>/otros_verificadores.json` | Lo que Newtral, Maldita.es o EFE Verifica publicaron sobre la misma frase o el mismo dato. |
+| `entrevistas/temas.json` | Temas que comparten las entrevistas, para comparar a los candidatos en `/temas`. |
+| `entrevistas/archivo.json` | Copia de cada fuente en la Wayback Machine. La rellena `herramientas/archivar_fuentes.py`. |
 | `herramientas/transcribir.py` | Descarga el audio y lo transcribe en local con Whisper. |
 | `herramientas/hablantes.py` | Reconoce quién habla en cada segmento (Jordi, el invitado o los verificadores), en local. |
 | `entrevistas/<slug>/hablantes.json`, `transcripcion-hablantes.txt` | La voz de cada segmento y la transcripción por intervenciones. |
@@ -42,6 +46,7 @@ agentes de IA puedan revisar cada veredicto contra sus fuentes. Documentación: 
 |---|---|
 | Entrevistas, recuentos y temas | `/api/v1/entrevistas.json` |
 | Todas las afirmaciones | `/api/v1/afirmaciones.json` |
+| Temas comunes, con las afirmaciones de cada candidato | `/api/v1/temas.json` |
 | Afirmaciones de una entrevista | `/api/v1/{slug}.json` |
 | Transcripción con tiempos | `/api/v1/{slug}/transcripcion.json` y `.txt` |
 | Referencia completa y prompt para agentes de IA | `/api` |

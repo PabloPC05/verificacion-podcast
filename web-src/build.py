@@ -50,6 +50,24 @@ def hms(s):
     return f"{s // 3600}:{s % 3600 // 60:02d}:{s % 60:02d}"
 
 
+def _glosario():
+    """Correcciones de entrevistas/glosario.json (nombres que Whisper transcribe mal), ya compiladas."""
+    ruta = ENTREVISTAS / "glosario.json"
+    if not ruta.exists():
+        return []
+    return [(re.compile(c["buscar"]), c["poner"]) for c in json.loads(ruta.read_text(encoding="utf-8"))["correcciones"]]
+
+
+GLOSARIO = _glosario()
+
+
+def corregir(texto):
+    """Aplica el glosario a un texto de la transcripción. Solo para mostrarlo: la búsqueda de citas usa el original."""
+    for patron, poner in GLOSARIO:
+        texto = patron.sub(poner, texto)
+    return texto
+
+
 def _norm(t):
     t = unicodedata.normalize("NFD", t.lower())
     return re.sub(r"[^a-z0-9]+", " ", "".join(c for c in t if unicodedata.category(c) != "Mn")).strip()
@@ -337,13 +355,73 @@ def enlace_fuente(f):
 ACCESO = {}
 
 
+MESES = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre",
+         "noviembre", "diciembre"]
+
+
+def fecha_larga(iso):
+    """'2026-11-13' → '13 de noviembre de 2026' (si no es una fecha, la deja tal cual)."""
+    try:
+        d = dt.date.fromisoformat(str(iso))
+    except ValueError:
+        return str(iso)
+    return f"{d.day} de {MESES[d.month - 1]} de {d.year}"
+
+
+def fecha_corta(iso):
+    try:
+        return dt.date.fromisoformat(str(iso)).strftime("%d/%m/%Y")
+    except ValueError:
+        return str(iso)
+
+
+def _archivo():
+    """Copias de las fuentes en la Wayback Machine (las guarda herramientas/archivar_fuentes.py)."""
+    ruta = ENTREVISTAS / "archivo.json"
+    return json.loads(ruta.read_text(encoding="utf-8")) if ruta.exists() else {}
+
+
+ARCHIVO = _archivo()
+CONFIANZA = {"alta": "Confianza alta", "media": "Confianza media", "baja": "Confianza baja"}
+EXPLICA_CONFIANZA = {
+    "alta": "Las fuentes son oficiales o primarias y responden directamente a lo que se dijo.",
+    "media": "Hay fuentes fiables, pero indirectas o que no cubren todo lo que se dijo.",
+    "baja": "Las fuentes son escasas o parciales: el veredicto puede cambiar con más información.",
+}
+
+
+def fuentes_de(a):
+    return [f for f in a.get("fuentes", []) if isinstance(f, dict)
+            and str(f.get("url", "")).startswith(("http://", "https://"))]
+
+
+def lista_fuentes(a):
+    """<li> de cada fuente con su dominio y, si existe, el enlace a la copia archivada en la Wayback Machine."""
+    items = []
+    for f in fuentes_de(a):
+        copia = ARCHIVO.get(f["url"])
+        arch = (f' · <a class="arch" href="{e(copia["archivo"], quote=True)}" target="_blank" rel="noopener noreferrer" '
+                f'title="Copia guardada en la Wayback Machine el {e(fecha_corta(copia["fecha"]))}, por si la noticia cambia o desaparece">'
+                'copia archivada</a>') if copia else ""
+        items.append(f'<li>{enlace_fuente(f)} <span>{e(dominio(f["url"]))}{arch}</span></li>')
+    return "".join(items)
+
+
+def sello_fecha(a):
+    """«Verificada el …» y, si el veredicto se ha corregido, la etiqueta «Corregido» con la fecha de la última corrección."""
+    partes = []
+    if a.get("_correcciones"):
+        ultima = a["_correcciones"][-1]
+        partes.append(f'<span class="corregido" title="{e(ultima.get("motivo", ""), quote=True)}">Corregido el {e(fecha_corta(ultima["fecha"]))}</span>')
+    if a.get("_verificado"):
+        partes.append(f'<span>Verificada el {e(fecha_corta(a["_verificado"]))}</span>')
+    return " ".join(partes)
+
+
 def panel(a):
     v = a["veredicto"]
     s = a["_t"]
-    fuentes = [f for f in a.get("fuentes", []) if isinstance(f, dict)
-               and str(f.get("url", "")).startswith(("http://", "https://"))]
-    lista = "".join(
-        f'<li>{enlace_fuente(f)} <span>{e(dominio(f["url"]))}</span></li>' for f in fuentes)
+    lista = lista_fuentes(a)
     cita = a.get("cita", "").strip("«»\" ")
     resumen = a.get("_resumen") or a.get("explicacion", "")
     # «Explicación completa» lleva a la página de la afirmación; el texto se queda oculto en la tarjeta
@@ -359,13 +437,17 @@ def panel(a):
         + (f'<blockquote>«{e(cita)}»</blockquote>' if cita else "") + "</div>"
         f'<span class="punto" aria-hidden="true"></span><span class="flecha" aria-hidden="true"></span>'
         f'<article class="panel"><p class="ficha">{NOMBRE[v]}</p>'
-        f'<a class="expandir" href="/{a["_slug"]}/{a["_id"]}" title="Abrir en su propia página" '
+        + (f'<span class="conf conf-{e(a["confianza"])}" title="{e(EXPLICA_CONFIANZA[a["confianza"]], quote=True)}">'
+           f'{CONFIANZA[a["confianza"]]}</span>' if a.get("confianza") in CONFIANZA else "")
+        + f'<a class="expandir" href="/{a["_slug"]}/{a["_id"]}" title="Abrir en su propia página" '
         f'aria-label="Abrir esta afirmación en su propia página">{ICONO_EXPANDIR}</a>'
         + (f'<blockquote class="movil">«{e(cita)}»</blockquote>' if cita else "")
         + f'<p class="que">{e(a.get("afirmacion", ""))}</p>'
         f'<p class="porque"><b>Por qué:</b> {e(resumen)}</p>'
         + (f'<p class="rotulo">Fuentes</p><ol class="fuentes">{lista}</ol>' if lista else "")
-        + detalle + '<p class="contrasta"><button class="copiar" type="button">Copiar encargo para contrastarlo con una IA</button></p>'
+        + (f'<p class="otros-l">También lo verificó: <a href="/{a["_slug"]}/{a["_id"]}#otros">'
+           + e(", ".join(dict.fromkeys(o["medio"] for o in a["_otros"]))) + "</a></p>" if a.get("_otros") else "")
+        + detalle + (f'<p class="sello">{sello_fecha(a)}</p>' if sello_fecha(a) else "") + '<p class="contrasta"><button class="copiar" type="button">Copiar encargo para contrastarlo con una IA</button></p>'
         + "</article></li>"
     )
 
@@ -388,6 +470,10 @@ def cargar(carpeta, meta):
             a["_t"] = momento_exacto(a, indice)
             a["_video"] = meta["video"]
             a["_slug"] = meta["slug"]
+            # fecha en que se verificó: la de la afirmación si la trae, si no la de la entrevista (meta.json)
+            a["_verificado"] = a.get("verificado") or meta.get("verificado")
+            a["_correcciones"] = sorted((c for c in a.get("correcciones", []) if isinstance(c, dict) and c.get("fecha")),
+                                        key=lambda c: c["fecha"])
         todas += datos
     todas.sort(key=lambda a: a["_t"])
     return todas
@@ -491,12 +577,52 @@ def muestra_hero(hechas, por_veredicto=(("falso", "enganoso"), ("verdadero",), (
                 f'<span class="estampa"><span class="sr">Veredicto: </span>{NOMBRE[a["veredicto"]]}</span></a></li>')
     items = "".join(item(i, m, a) for i, (m, a) in enumerate(elegidas))
     return ('<section class="muestra" aria-roledescription="carrusel" aria-label="Afirmaciones verificadas, de muestra">'
-            '<p class="muestra-rot">Así se ve una afirmación comprobada</p><div class="muestra-barra">'
+            '<div class="muestra-cab"><p class="muestra-rot">Así se ve una afirmación comprobada</p><div class="muestra-barra">'
             '<button class="muestra-ant" type="button" aria-label="Afirmación anterior" title="Anterior">'
             '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>'
             '<button class="muestra-sig" type="button" aria-label="Afirmación siguiente" title="Siguiente">'
-            '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button></div>'
+            '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button></div></div>'
             f'<ul class="muestra-lista" aria-live="off">{items}</ul></section>')
+
+
+CUANTAS = {2: "dos", 3: "tres", 4: "cuatro", 5: "cinco"}
+
+
+def mini_resumen(hechas, actual=None, suelto=True):
+    """Resumen para el pie de cada página: de qué se habló (meta.json «resumen»), cuántas afirmaciones son falsas o
+    engañosas y el reparto por veredicto. En las páginas de una entrevista (`actual`) solo sale la suya; en las
+    generales, todas."""
+    if actual:
+        hechas = [m for m in hechas if m["slug"] == actual]
+    if not hechas:
+        return ""
+    tarjetas = []
+    for m in hechas:
+        s = e(m["slug"])
+        enlaces = (f'<p class="mini-acc"><a href="/{s}">Línea temporal{ICONO_SIGUE}</a>'
+                   f'<a href="/{s}/transcripcion">Transcripción{ICONO_SIGUE}</a></p>')
+        if not suelto:
+            # En la cabecera de la entrevista la foto, el nombre y las cifras ya están justo encima: solo el texto y los enlaces
+            tarjetas.append('<article class="mini-e">' + (f'<p class="mini-res">{e(m["resumen"])}</p>' if m.get("resumen") else "")
+                            + enlaces + "</article>")
+            continue
+        tarjetas.append(
+            f'<article class="mini-e"><div class="mini-cab">{retrato(m) or ""}<div>'
+            f'<h3><a href="/{s}">{e(m["invitado"])}</a></h3>'
+            f'<p class="mini-meta">{e(m.get("partido") or "")} · {e(m["programa"].replace("The Wild Project ", ""))} · {e(m["duracion"])}</p></div>'
+            + "</div>"
+            + (f'<p class="mini-res">{e(m["resumen"])}</p>' if m.get("resumen") else "")
+            + f'<p class="mini-num"><b>{m["malas"]}</b> falsas o engañosas de {m["suma"]} comprobadas</p>'
+            + barra_reparto(m, "barra-reparto mini-barra")
+            + enlaces + "</article>")
+    n = len(hechas)
+    titulo = "Esta entrevista, en corto" if actual else (f'Las {CUANTAS.get(n, n)} entrevistas, en corto' if n > 1 else "La entrevista, en corto")
+    # suelto: sección propia con su ancho; si no, va dentro de un contenedor que ya lo tiene (la cabecera de cada entrevista)
+    dentro = f'<h2 class="mini-t" id="mini-t">{titulo}</h2><div class="mini-lista">{"".join(tarjetas)}</div>'
+    if suelto:
+        dentro = f'<div class="ancho">{dentro}</div>'
+    clase = "resumenes" if suelto else "resumenes en-cabeza"
+    return f'<section class="{clase}" aria-labelledby="mini-t">{dentro}</section>'
 
 
 def creditos_fotos(entrevistas):
@@ -598,15 +724,18 @@ def copiar_compartir():
     origen = RAIZ / "web-src" / "compartir"
     (SALIDA / "compartir").mkdir(parents=True, exist_ok=True)
     for f in sorted(origen.glob("*")) if origen.is_dir() else []:
-        shutil.copy(f, SALIDA / ("" if f.name in ICONOS else "compartir") / f.name)
+        if f.is_dir():
+            shutil.copytree(f, SALIDA / "compartir" / f.name, dirs_exist_ok=True)
+        else:
+            shutil.copy(f, SALIDA / ("" if f.name in ICONOS else "compartir") / f.name)
     if not (SALIDA / "compartir" / f"{IMAGEN_GENERAL}.png").exists():
         print("AVISO: falta web-src/compartir/general.png: las páginas apuntarán a una imagen que no existe. "
               "Ejecuta: uv run --with pillow python herramientas/imagenes_compartir.py")
 
 
-def indexacion(hechas):
+def indexacion(hechas, temas=()):
     """robots.txt y sitemap.xml con las páginas publicadas."""
-    rutas = (["/", "/buscar", "/participa", "/metodologia", "/quien", "/api"]
+    rutas = (["/", "/temas"] + [f'/temas/{t["slug"]}' for t in temas] + ["/buscar", "/participa", "/metodologia", "/quien", "/api"]
              + [r for m in hechas for r in (f'/{m["slug"]}', f'/{m["slug"]}/transcripcion')]
              + [f'/{m["slug"]}/{a["_id"]}' for m in hechas for a in m["todas"]])
     (SALIDA / "sitemap.xml").write_text(
@@ -837,6 +966,22 @@ def preparar(meta):
     if sobran:
         print(f'AVISO: {meta["slug"]}: excluidas.json cita identificadores que no existen: {sorted(sobran)}')
     todas = [a for a in todas if a["_id"] not in fuera]
+    por_id = {a["_id"]: a for a in todas}
+    # «Lo esencial»: las 3-5 afirmaciones clave del candidato (esencial.json, criterio en el propio fichero)
+    ruta_es = carpeta / "esencial.json"
+    esencial = json.loads(ruta_es.read_text(encoding="utf-8")) if ruta_es.exists() else {"afirmaciones": []}
+    for x in esencial["afirmaciones"]:
+        if x["id"] in por_id:
+            por_id[x["id"]]["_esencial"] = x.get("por_que", "")
+        else:
+            print(f'AVISO: {meta["slug"]}: esencial.json cita {x["id"]}, que no existe o está excluida')
+    # Lo que otros verificadores (Newtral, Maldita, EFE…) publicaron sobre la misma frase o el mismo dato
+    ruta_ov = carpeta / "otros_verificadores.json"
+    for o in json.loads(ruta_ov.read_text(encoding="utf-8"))["enlaces"] if ruta_ov.exists() else []:
+        if o["id"] in por_id:
+            por_id[o["id"]].setdefault("_otros", []).append(o)
+        else:
+            print(f'AVISO: {meta["slug"]}: otros_verificadores.json cita {o["id"]}, que no existe o está excluida')
     temas = []
     for n, c in enumerate(capitulos, 1):
         ini, fin = int(c["start_time"]), int(c["end_time"])
@@ -847,7 +992,9 @@ def preparar(meta):
                       "malas": sum(a["veredicto"] in ("falso", "enganoso") for a in suyas)})
     total = {k: sum(a["veredicto"] == k for a in todas) for k in ORDEN}
     return dict(meta, carpeta=carpeta, todas=todas, temas=temas, capitulos=capitulos, total=total,
-                suma=len(todas), malas=total["falso"] + total["enganoso"], excluidas=excluidas)
+                suma=len(todas), malas=total["falso"] + total["enganoso"], excluidas=excluidas,
+                esencial=[por_id[x["id"]] for x in esencial["afirmaciones"] if x["id"] in por_id],
+                criterio_esencial=esencial.get("criterio", ""))
 
 
 def nombre_menu(nombre):
@@ -876,13 +1023,22 @@ def menu(entrevistas, actual=None):
             f'<p class="cuanto">{e(m.get("partido") or "")} · <b>{m["malas"]}</b> falsas o engañosas de {m["suma"]}</p></div></div>'
             f'<div class="lista-acc"><a class="principal" href="/{s}">{ICONO_LINEA}<span>Línea temporal</span></a>'
             f'<a href="/{s}/transcripcion">{ICONO_TEXTO}<span>Transcripción</span></a></div>'
-            f'<p class="rot">Temas <span>· en rojo, cuántas falsas o engañosas</span></p><ol class="lista-temas">{temas}</ol></div></details>')
+            f'<p class="rot">Temas con afirmaciones <span>· en rojo, las falsas o engañosas</span></p><ol class="lista-temas">{temas}</ol></div></details>')
     aqui_buscar = ' aria-current="page"' if actual == "buscar" else ""
     aqui_participa = ' aria-current="page"' if actual == "participa" else ""
+    aqui_temas = ' aria-current="page"' if actual == "temas" else ""
+    enlaces = [("/temas", "Temas", aqui_temas, ""), ("/api", "Verifícalo tú", "", ""), ("/participa", "Participa", aqui_participa, ""), ("/metodologia", "Método", "", " seg"),
+               ("/quien", "Quién lo hace", "", " seg"), (REPO, "GitHub" + ICONO_EXTERNO, ' target="_blank" rel="noopener noreferrer"', " gh seg")]
+    sueltos = "".join(f'<a class="sec{c}" href="{h}"{x}>{t}</a>' for h, t, x, c in enlaces)
+    # En móvil no caben: van a un desplegable «Más» a la derecha, junto con el cambio de modo
+    mas = ('<details class="desp mas"><summary aria-label="Más enlaces y modo oscuro" title="Más">'
+           '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></summary><div class="lista">'
+           '<ul class="mas-lista">' + "".join(f'<li class="{"seg" if "seg" in c else "pri"}"><a href="{h}"{x}>{t}</a></li>' for h, t, x, c in enlaces) + '</ul>'
+           + BOTON_MODO.replace('class="modo"', 'class="modo-txt"').replace("</button>", '<span>Cambiar a modo oscuro</span></button>')
+           + '</div></details>')
     return ('<header class="menu"><div class="ancho"><div class="m1"><a class="sello" href="/" title="Todas las entrevistas">Verificación</a>'
             + "".join(partes) + f'<a class="dcha buscar"{aqui_buscar} href="/buscar" title="Buscar una afirmación (tecla /)">{ICONO_LUPA}<span>Buscar</span></a>'
-            f'<a href="/api">Verifícalo tú</a><a href="/participa"{aqui_participa}>Participa</a><a href="/metodologia">Método</a><a href="/quien">Quién lo hace</a>'
-            f'<a class="gh" href="{REPO}" target="_blank" rel="noopener noreferrer">GitHub ↗</a>' + BOTON_MODO + '</div></div></header>' + JS_MENU)
+            + sueltos + BOTON_MODO + mas + '</div></div></header>' + JS_MENU)
 
 
 JS_MENU = """<script>
@@ -952,26 +1108,30 @@ const copiarTexto = (texto, ok) => {
   addEventListener("scroll", mirar, { passive: true }); mirar();
 })();
 // Modo claro/oscuro. Sin preferencia guardada manda el sistema (lo resuelve el CSS); al pulsar se guarda y manda sobre el sistema.
-const RAIZ = document.documentElement, botonModo = document.querySelector(".modo"), sistemaOscuro = matchMedia("(prefers-color-scheme: dark)");
+// Hay dos botones: el redondo del menú (pantallas anchas) y el de texto dentro de «Más» (móvil).
+const RAIZ = document.documentElement, botonesModo = document.querySelectorAll(".modo, .modo-txt"), sistemaOscuro = matchMedia("(prefers-color-scheme: dark)");
 const hayOscuro = () => (RAIZ.dataset.modo || (sistemaOscuro.matches ? "oscuro" : "claro")) === "oscuro";
 function etiquetarModo() {
   const t = hayOscuro() ? "Cambiar a modo claro" : "Cambiar a modo oscuro";
-  botonModo.setAttribute("aria-label", t); botonModo.title = t;
+  botonesModo.forEach(b => {
+    if (b.classList.contains("modo-txt")) b.querySelector("span").textContent = t;
+    else { b.setAttribute("aria-label", t); b.title = t; }
+  });
 }
 // Revelado circular desde el botón (View Transitions API); sin la API o con poco movimiento, el cambio es instantáneo.
-function revelarModo(cambiar) {
+function revelarModo(cambiar, boton) {
   if (!document.startViewTransition || matchMedia("(prefers-reduced-motion: reduce)").matches) { cambiar(); return; }
-  const c = botonModo.getBoundingClientRect(), x = c.left + c.width / 2, y = c.top + c.height / 2;
+  const c = boton.getBoundingClientRect(), x = c.left + c.width / 2, y = c.top + c.height / 2;
   const r = Math.hypot(Math.max(x, innerWidth - x), Math.max(y, innerHeight - y));
   document.startViewTransition(cambiar).ready.then(() => RAIZ.animate(
     { clipPath: [`circle(0px at ${x}px ${y}px)`, `circle(${r}px at ${x}px ${y}px)`] },
     { duration: 420, easing: "cubic-bezier(0.4, 0, 0.2, 1)", pseudoElement: "::view-transition-new(root)" })).catch(() => {});
 }
-botonModo.onclick = () => {
+botonesModo.forEach(b => b.onclick = () => {
   const nuevo = hayOscuro() ? "claro" : "oscuro";
-  revelarModo(() => { RAIZ.dataset.modo = nuevo; etiquetarModo(); });
+  revelarModo(() => { RAIZ.dataset.modo = nuevo; etiquetarModo(); }, b);
   try { localStorage.setItem("modo", nuevo); } catch (e) {}
-};
+});
 sistemaOscuro.addEventListener("change", etiquetarModo);
 etiquetarModo();
 </script>"""
@@ -985,6 +1145,9 @@ ICONO_LINEA = ('<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d=
 ICONO_LUPA = '<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg>'
 ICONO_TEXTO = '<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l4 4v14H6zM14 3v5h5M9 12h7M9 16h7"/></svg>'
 ICONO_FLECHA = '<svg class="flecha" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>'
+# Iconos pequeños que sustituyen a «↗» y «→» en el menú y en el resumen: un glifo de texto no queda centrado con la línea
+ICONO_EXTERNO = '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg>'
+ICONO_SIGUE = '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>'
 ICONO_EXPANDIR = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6M10 20H4v-6M20 4l-7 7M4 20l7-7"/></svg>'
 # Botón flotante (abajo a la izquierda) que despliega la leyenda de veredictos. Lo usan la portada y las páginas de cada entrevista.
 FAB_LEYENDA = """<div class="fab" id="fab">
@@ -1160,11 +1323,27 @@ BOTON_MODO = ('<button class="modo" type="button" aria-label="Cambiar a modo osc
               '<path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>')
 
 
-def filtros(m, extra=""):
-    return ('<div class="filtros"><div class="ancho"><div class="fila" id="filtros"><span class="rot">Filtros</span>'
+def filtros(m, extra="", antes=""):
+    return ('<div class="filtros"><div class="ancho"><div class="fila" id="filtros">' + antes + '<span class="rot">Filtros</span>'
             f'<button data-todas aria-pressed="false">Todas <b>{m["suma"]}</b></button>'
             + "".join(f'<button data-v="{k}" aria-pressed="false"><i></i>{PLURAL[k]} <b>{m["total"][k]}</b></button>'
                       for k in ORDEN) + extra + '<span class="cuenta" aria-live="polite"></span></div></div></div>')
+
+
+def chip_v(v):
+    return f'<span class="chip-v" data-v="{v}">{NOMBRE[v]}</span>'
+
+
+def seccion_esencial(m):
+    """Las 3-5 afirmaciones clave del candidato (esencial.json), encima de la línea temporal."""
+    if not m.get("esencial"):
+        return ""
+    tarjetas = "".join(
+        f'<li data-v="{a["veredicto"]}"><p class="es-tema">{e(a["_esencial"].rstrip("."))}</p>{chip_v(a["veredicto"])}'
+        f'<a class="es-que" href="/{m["slug"]}/{a["_id"]}">{e(" ".join(a.get("afirmacion", "").split()))}</a>'
+        f'<p class="es-min">Minuto {hms(a["_t"])}</p></li>' for a in m["esencial"])
+    return (f'<section class="esencial ancho" aria-labelledby="esencial-t"><h2 id="esencial-t">Lo esencial</h2>'
+            f'<p class="es-nota">{e(m["criterio_esencial"])}</p><ol class="es-lista">{tarjetas}</ol></section>')
 
 
 def pagina_entrevista(m, entrevistas):
@@ -1179,13 +1358,21 @@ def pagina_entrevista(m, entrevistas):
             for k in ORDEN if cuenta[k])
         barra = "".join(f'<i class="tono-{k}" style="flex:{cuenta[k]}"></i>' for k in ORDEN if cuenta[k])
         fin = min(t["fin"], 10 ** 6)
+        if t["total"]:
+            n_afirm = "1 afirmación" if t["total"] == 1 else f'{t["total"]} afirmaciones'
+            ver = "la afirmación" if t["total"] == 1 else f'sus {t["total"]} afirmaciones'
+            recuento = (f'<p class="recuento">{n_afirm}: {recuento}</p><div class="barra-tema" aria-hidden="true">{barra}</div>'
+                        # Solo se ve cuando el filtro deja el tema vacío: el tema se pliega en vez de desaparecer
+                        f'<p class="sin-filtro">Ninguna con el filtro actual. <button type="button" class="ver-tema">'
+                        f'Ver {ver}</button></p>')
+        else:
+            recuento = '<p class="recuento sin">Sin afirmaciones comprobables en este tema.</p>'
         filas.append(
-            f'<li class="capitulo" id="tema-{t["n"]}" data-etiqueta="Tema {t["n"]} · {e(t["titulo"], quote=True)}">'
+            f'<li class="capitulo{"" if t["total"] else " vacio"}" id="tema-{t["n"]}" data-etiqueta="Tema {t["n"]} · {e(t["titulo"], quote=True)}">'
             f'<a class="minuto" href="https://www.youtube.com/watch?v={m["video"]}&t={t["ini"]}s" data-min target="_blank" '
             f'rel="noopener noreferrer">{hms(t["ini"])}</a><span class="marca" aria-hidden="true">{t["n"]}</span>'
             f'<div class="cab-tema"><p class="num-tema">Tema {t["n"]} de {n_temas} · {hms(t["ini"])} – {hms(fin)}</p>'
-            f'<h2>{e(t["titulo"])}</h2><p class="recuento">{t["total"]} afirmaciones: {recuento}</p>'
-            f'<div class="barra-tema" aria-hidden="true">{barra}</div></div></li>')
+            f'<h2>{e(t["titulo"])}</h2>{recuento}</div></li>')
         filas += [panel(a) for a in t["suyas"]]
     excl = len(m["excluidas"])
     nota_excl = (f' Se han dejado fuera {excl} afirmaciones sin interés para el debate público (datos personales, anécdotas, '
@@ -1199,7 +1386,7 @@ def pagina_entrevista(m, entrevistas):
         alt=f'Verificación dato a dato: {m["invitado"]} ({m.get("partido") or "sin partido"}) en {m["programa"]}')
     n_preguntas = preguntas_jordi(m)
     pagina = rellenar(
-        PLANTILLA, VISOR=VISOR_FUENTE, CABECERA=cab, PREGUNTAS=JS_PREGUNTAS if n_preguntas else "", FAB=FAB_LEYENDA, BARRA=barra_reparto(m, "barra-reparto grande"), RETRATO=retrato(m) or "", CREDITOS=creditos_fotos([m]), MENU=menu(entrevistas, m["slug"]), CSS_MENU=CSS_MENU, LEYENDA=LEYENDA, NOTA_EXCL=nota_excl,
+        PLANTILLA, VISOR=VISOR_FUENTE, CABECERA=cab, ESENCIAL=seccion_esencial(m), PREGUNTAS=JS_PREGUNTAS if n_preguntas else "", FAB=FAB_LEYENDA, MINI=mini_resumen([x for x in entrevistas if x.get("publicar")], m["slug"], suelto=False), BARRA=barra_reparto(m, "barra-reparto grande"), RETRATO=retrato(m) or "", CREDITOS=creditos_fotos([m]), MENU=menu(entrevistas, m["slug"]), CSS_MENU=CSS_MENU, LEYENDA=LEYENDA, NOTA_EXCL=nota_excl,
         FILTROS=filtros(m, '<span class="tema-actual" id="tema-actual"></span>'), SUMA=m["suma"], MALAS=m["malas"],
         FALSAS=m["total"]["falso"], ENGANOSAS=m["total"]["enganoso"], CASI=m["total"]["mayormente_verdadero"],
         VERDADERAS=m["total"]["verdadero"], NV=m["total"]["no_verificable"], FILAS="".join(filas),
@@ -1295,7 +1482,7 @@ def pagina_transcripcion(m, entrevistas):
             k1 = k0
             while k1 + 1 < len(ks) and marca.get(ks[k1 + 1]) is a:
                 k1 += 1
-            texto = e(" ".join(segmentos[k]["t"].strip() for k in ks[k0:k1 + 1]))
+            texto = e(corregir(" ".join(segmentos[k]["t"].strip() for k in ks[k0:k1 + 1])))
             if a is None:
                 trozos.append(texto)
             else:
@@ -1350,12 +1537,15 @@ def pagina_transcripcion(m, entrevistas):
         f'Transcripción completa de la entrevista de Jordi Wild a {m["invitado"]} ({m["programa"]}), con marcas de tiempo '
         'enlazadas al vídeo y a cada afirmación verificada.', imagen_de(m["slug"]),
         alt=f'Verificación dato a dato: {m["invitado"]} ({m.get("partido") or "sin partido"}) en {m["programa"]}')
+    con_titulo = [t for t in m["temas"] if any(d.startswith(f'<h2 id="tema-{t["n"]}"') for d in cuerpo)]
     indice_temas = "".join(
-        f'<li><a href="#tema-{t["n"]}"><span>{e(t["titulo"])}</span><small>{hms(t["ini"])}</small></a></li>'
-        for t in m["temas"] if any(d.startswith(f'<h2 id="tema-{t["n"]}"') for d in cuerpo))
+        f'<li><a href="#tema-{t["n"]}"><span>{e(t["titulo"])}</span><small>{hms(t["ini"])}</small></a></li>' for t in con_titulo)
+    # En pantallas sin hueco para el índice lateral, un desplegable en la barra de filtros hace lo mismo
+    ir_tema = ('<select class="ir-tema" id="ir-tema" aria-label="Ir a un tema de la entrevista"><option value="">Temas…</option>'
+               + "".join(f'<option value="tema-{t["n"]}">{t["n"]}. {e(t["titulo"])}</option>' for t in con_titulo) + '</select>')
     pagina = rellenar(
-        TRANSCRIPCION, CABECERA=cab, FAB=FAB_LEYENDA, INDICE=indice_temas, RETRATO=retrato(m, " peque") or "", MENU=menu(entrevistas, m["slug"]),
-        CSS_MENU=CSS_MENU, LEYENDA=LEYENDA, FILTROS=filtros(m, solo), NOTA_VOCES=nota_voces,
+        TRANSCRIPCION, CABECERA=cab, FAB=FAB_LEYENDA, MINI=mini_resumen([x for x in entrevistas if x.get("publicar")], m["slug"]), INDICE=indice_temas, RETRATO=retrato(m, " peque") or "", MENU=menu(entrevistas, m["slug"]),
+        CSS_MENU=CSS_MENU, LEYENDA=LEYENDA, FILTROS=filtros(m, solo, ir_tema), NOTA_VOCES=nota_voces,
         CUERPO=f'<div class="dialogo{" con-voces" if voces else ""}">{"".join(cuerpo)}</div>',
         INVITADO=e(m["invitado"]), PROGRAMA=e(m["programa"]), FECHA_VIDEO=e(m["fecha"]), DURACION=e(m["duracion"]),
         VIDEO=m["video"], SLUG=m["slug"], REPO=REPO)
@@ -1535,15 +1725,37 @@ def pagina_afirmacion(m, a, entrevistas, anterior, siguiente):
     if a.get("explicacion"):
         por_que += f'<p class="explicacion">{e(a["explicacion"])}</p>'
     if a.get("confianza"):
-        por_que += f'<p class="confianza">Confianza: <b>{e(str(a["confianza"]))}</b></p>'
+        por_que += (f'<p class="confianza">Confianza: <b>{e(str(a["confianza"]))}</b>'
+                    + (f'. {EXPLICA_CONFIANZA[a["confianza"]]}' if a["confianza"] in EXPLICA_CONFIANZA else "") + "</p>")
 
-    fuentes = [f for f in a.get("fuentes", []) if isinstance(f, dict)
-               and str(f.get("url", "")).startswith(("http://", "https://"))]
+    items = lista_fuentes(a)
     fuentes_html = ""
-    if fuentes:
-        items = "".join(
-            f'<li>{enlace_fuente(f)} <span>{e(dominio(f["url"]))}</span></li>' for f in fuentes)
-        fuentes_html = f'<section class="seccion"><h2>Fuentes</h2><ol class="fuentes">{items}</ol></section>'
+    if items:
+        n_arch = sum(1 for f in fuentes_de(a) if f["url"] in ARCHIVO)
+        nota_arch = ('<p class="nota-arch">«Copia archivada» abre la fuente tal como estaba guardada en la '
+                     '<a href="https://web.archive.org/" target="_blank" rel="noopener noreferrer">Wayback Machine</a>, '
+                     'por si la noticia original cambia o desaparece.</p>') if n_arch else ""
+        fuentes_html = f'<section class="seccion"><h2>Fuentes</h2><ol class="fuentes">{items}</ol>{nota_arch}</section>'
+    if a.get("_otros"):
+        ALCANCE = {"misma_frase": "Sobre esta misma frase", "mismo_dato": f'Sobre el mismo dato, dicho por {m["invitado"]} en otro momento'}
+        otros = "".join(
+            f'<li><a href="{e(o["url"], quote=True)}" target="_blank" rel="noopener noreferrer">{e(o.get("titulo") or o["url"])}</a>'
+            f'<span class="medio">{e(o["medio"])}' + (f' · {e(fecha_corta(o["fecha"]))}' if o.get("fecha") else "")
+            + (f' · su veredicto: <b>{e(o["veredicto_medio"])}</b>' if o.get("veredicto_medio") else "") + "</span>"
+            + (f'<span class="alcance">{ALCANCE[o["alcance"]]}</span>' if o.get("alcance") in ALCANCE else "") + "</li>"
+            for o in a["_otros"])
+        fuentes_html += (f'<section class="seccion" id="otros"><h2>Otros verificadores</h2><ul class="otros">{otros}</ul>'
+                         '<p class="nota-arch">Piezas de verificadores profesionales sobre lo mismo. Pueden llegar a otra '
+                         'conclusión; la etiqueta que aparece es la del propio medio.</p></section>')
+    historial = ""
+    if a.get("_verificado") or a.get("_correcciones"):
+        filas = "".join(
+            f'<li><b>Corregido el {e(fecha_larga(c["fecha"]))}.</b> '
+            + (f'Antes: «{e(NOMBRE.get(c.get("antes"), c.get("antes", "")))}». ' if c.get("antes") else "")
+            + f'{e(c.get("motivo", ""))}</li>' for c in reversed(a["_correcciones"]))
+        if a.get("_verificado"):
+            filas += f'<li>Verificada el {e(fecha_larga(a["_verificado"]))}.</li>'
+        historial = f'<section class="seccion historial"><h2>Historial</h2><ul>{filas}</ul></section>'
 
     ver_tema = f"/{slug}/transcripcion" + (f"#tema-{a['_tema']}" if a.get("_tema") else "")
     contexto = (f'<section class="seccion"><h2>Contexto en la entrevista</h2><div class="contexto">{contexto_cita(m, a)}</div>'
@@ -1562,13 +1774,19 @@ def pagina_afirmacion(m, a, entrevistas, anterior, siguiente):
                 f'<small>{e(recortar(b.get("afirmacion", ""), 80))}</small></a>')
 
     descripcion = recortar(resumen, 200) or f"Verificación de una afirmación de {m['invitado']} en The Wild Project."
+    # imagen propia (herramientas/imagenes_compartir.py); si aún no se ha generado, la del candidato
+    propia = f"afirmaciones/{slug}/{idx}"
+    imagen = propia if (RAIZ / "web-src" / "compartir" / f"{propia}.png").exists() else imagen_de(slug)
     cab = cabecera(
-        ruta, f'{NOMBRE[v]}: {recortar(afirmacion, 90)} · {m["invitado"]}', descripcion, imagen_de(slug),
+        ruta, f'{NOMBRE[v]}: {recortar(afirmacion, 90)} · {m["invitado"]}', descripcion, imagen,
         titulo_social=f'{NOMBRE[v]}: {afirmacion}',
-        alt=f'Verificación dato a dato: {m["invitado"]} ({m.get("partido") or "sin partido"}) en {m["programa"]}')
+        alt=(f'{NOMBRE[v]}: {recortar(afirmacion, 200)} ({m["invitado"]}, {m["programa"]}, minuto {minuto})' if imagen == propia else
+             f'Verificación dato a dato: {m["invitado"]} ({m.get("partido") or "sin partido"}) en {m["programa"]}'))
     pagina = rellenar(
         AFIRMACION, VISOR=VISOR_FUENTE, CABECERA=cab, CSS_MENU=CSS_MENU, MENU=menu(entrevistas, slug), MIGAS=migas, V=v,
-        VEREDICTO=NOMBRE[v], AFIRMACION=e(afirmacion), CITA=cita_html, POR_QUE=por_que, FUENTES=fuentes_html,
+        VEREDICTO=NOMBRE[v], AFIRMACION=e(afirmacion), CITA=cita_html, POR_QUE=por_que, FUENTES=fuentes_html + historial,
+        SELLO=(f'<span class="corregido">Corregido</span>' if a.get("_correcciones") else "")
+        + (f'<span class="esencial-chip" title="{e(a["_esencial"], quote=True)}">Lo esencial</span>' if a.get("_esencial") else ""),
         CONTEXTO=contexto, VER_LINEA=f"/{slug}#{idx}", URL_PAGINA=e(BASE + ruta, quote=True), URL_ERROR=e(url_error, quote=True),
         ANTERIOR=vecina(anterior, "ant", "← Anterior"), SIGUIENTE=vecina(siguiente, "sig", "Siguiente →"))
     destino = SALIDA / slug / idx
@@ -1646,6 +1864,99 @@ def pagina_buscar(entrevistas, hechas):
         CLAVES=json.dumps(ORDEN), REPO=REPO), encoding="utf-8")
 
 
+# ───────────────────────── Temas comunes (/temas) ─────────────────────────
+
+def temas_comunes(hechas):
+    """Temas de entrevistas/temas.json con las afirmaciones de cada candidato. Solo los que tratan dos candidatos o más."""
+    ruta = ENTREVISTAS / "temas.json"
+    if not ruta.exists():
+        return []
+    por_slug = {m["slug"]: m for m in hechas}
+    salida = []
+    for t in json.loads(ruta.read_text(encoding="utf-8"))["temas"]:
+        bloques = []
+        for slug, caps in t["capitulos"].items():
+            m = por_slug.get(slug)
+            if not m:
+                continue
+            suyas = sorted((a for a in m["todas"] if a.get("_tema") in caps), key=lambda a: (ORDEN.index(a["veredicto"]), a["_t"]))
+            if not suyas:
+                continue
+            total = {k: sum(a["veredicto"] == k for a in suyas) for k in ORDEN}
+            bloques.append({"m": m, "caps": caps, "suyas": suyas, "total": total, "suma": len(suyas),
+                            "malas": total["falso"] + total["enganoso"]})
+        if len(bloques) >= 2:
+            orden = {m["slug"]: n for n, m in enumerate(hechas)}
+            bloques.sort(key=lambda b: orden[b["m"]["slug"]])
+            salida.append(dict(t, bloques=bloques))
+    return salida
+
+
+SINGULAR = {"falso": "falsa", "enganoso": "engañosa", "mayormente_verdadero": "casi cierta",
+            "verdadero": "verdadera", "no_verificable": "no verificable"}
+
+
+def pagina_temas(entrevistas, temas):
+    if not temas:
+        return
+    tarjetas = []
+    for t in temas:
+        filas = "".join(
+            f'<li><span class="t-cand">{retrato(b["m"], " chica", decorativo=True, con_insignia=False) or ""}{e(b["m"]["invitado"])}</span>'
+            f'<span class="t-num"><b>{b["malas"]}</b> de {b["suma"]}</span>{barra_reparto(b, "barra-reparto fina")}</li>'
+            for b in t["bloques"])
+        tarjetas.append(
+            f'<article class="tema-c"><h2><a href="/temas/{e(t["slug"])}">{e(t["titulo"])}</a></h2><p class="t-desc">{e(t["descripcion"])}</p>'
+            f'<p class="t-rot">Falsas o engañosas, de las comprobadas</p><ul class="t-filas">{filas}</ul>'
+            f'<p class="t-ir"><a href="/temas/{e(t["slug"])}">Ver qué dijo cada uno <span class="sr">sobre {e(t["titulo"])}</span>{ICONO_FLECHA}</a></p></article>')
+    cuerpo = f'<div class="temas-rej">{"".join(tarjetas)}</div>'
+    (SALIDA / "temas").mkdir(exist_ok=True)
+    (SALIDA / "temas" / "index.html").write_text(rellenar(
+        TEMAS, CABECERA=cabecera("/temas", "Los candidatos, tema a tema · Verificación The Wild Project",
+                                 "Qué dijo cada candidato sobre vivienda, inmigración, Ceuta, corrupción y otros temas, y cómo salen sus afirmaciones."),
+        MENU=menu(entrevistas, "temas"), CSS_MENU=CSS_MENU, MIGAS="", TITULO="Los candidatos, tema a tema",
+        ENTRADA="Las afirmaciones de cada entrevista agrupadas por los temas que comparten, para ver qué dijo cada candidato sobre lo mismo. "
+                "Solo salen los temas que tratan al menos dos. El número es cuántas resultaron falsas o engañosas de las que se pudieron comprobar.",
+        CUERPO=cuerpo), encoding="utf-8")
+    for t in temas:
+        columnas = []
+        for b in t["bloques"]:
+            m = b["m"]
+            caps = ", ".join(f'<a href="/{m["slug"]}#tema-{n}">{e(next(x["titulo"] for x in m["temas"] if x["n"] == n))}</a>' for n in b["caps"])
+            items = "".join(
+                f'<li data-v="{a["veredicto"]}">{chip_v(a["veredicto"])}'
+                f'<a href="/{m["slug"]}/{a["_id"]}">{e(" ".join(a.get("afirmacion", "").split()))}</a>'
+                f'<span class="t-min">{hms(a["_t"])}</span></li>' for a in b["suyas"])
+            desglose = " · ".join(f'<span class="tono-{k}">{b["total"][k]} {SINGULAR[k] if b["total"][k] == 1 else PLURAL[k].lower()}</span>'
+                                  for k in ORDEN if b["total"][k])
+            columnas.append(
+                f'<section class="cand"><header class="cand-cab">{retrato(m, " tema", decorativo=True) or ""}<div><h2><a href="/{m["slug"]}">{e(m["invitado"])}</a></h2>'
+                f'<p class="par">{e(m.get("partido") or "")}</p></div></header>'
+                f'<p class="cand-num"><b>{b["malas"]}</b> {"falsa o engañosa" if b["malas"] == 1 else "falsas o engañosas"} de {b["suma"]}</p>'
+                f'{barra_reparto(b)}<p class="cand-des">{desglose}</p>'
+                f'<p class="cand-caps">En la entrevista: {caps}</p><ol class="t-lista">{items}</ol></section>')
+        otros = " · ".join(f'<a href="/temas/{e(x["slug"])}">{e(x["titulo"])}</a>' for x in temas if x is not t)
+        cuerpo = (f'<div class="comparar">{"".join(columnas)}</div>'
+                  f'<p class="otros-temas"><b>Otros temas:</b> {otros}</p>'
+                  '<p class="nota-t">Cuántas afirmaciones se pueden comprobar depende de las preguntas y del tiempo que se dedicó al tema '
+                  'en cada entrevista, así que no es un ranking. Primero salen las falsas y engañosas.</p>')
+        (SALIDA / "temas" / t["slug"]).mkdir(parents=True, exist_ok=True)
+        (SALIDA / "temas" / t["slug"] / "index.html").write_text(rellenar(
+            TEMAS, CABECERA=cabecera(f'/temas/{t["slug"]}', f'{t["titulo"]}: qué dijo cada candidato · Verificación The Wild Project',
+                                     f'{t["descripcion"]} Las afirmaciones de ' + ", ".join(b["m"]["invitado"] for b in t["bloques"])
+                                     + ' sobre este tema, verificadas una a una.'),
+            MENU=menu(entrevistas, "temas"), CSS_MENU=CSS_MENU, MIGAS='<nav class="migas" aria-label="Ruta"><a href="/temas">Temas</a> › ' + e(t["titulo"]) + "</nav>",
+            TITULO=e(t["titulo"]), ENTRADA=e(t["descripcion"]) + " Lo que dijo cada candidato, con su veredicto.", CUERPO=cuerpo), encoding="utf-8")
+
+
+def temas_api(temas):
+    return [{"slug": t["slug"], "titulo": t["titulo"], "descripcion": t["descripcion"], "web_url": f'{BASE}/temas/{t["slug"]}',
+             "candidatos": [{"entrevista": b["m"]["slug"], "invitado": b["m"]["invitado"], "capitulos": b["caps"],
+                             "total": b["suma"], "por_veredicto": b["total"],
+                             "afirmaciones": [f'{b["m"]["slug"]}-{a["_id"]}' for a in b["suyas"]]} for b in t["bloques"]]}
+            for t in temas]
+
+
 # ───────────────────────── API estática (JSON) ─────────────────────────
 
 def ficha_api(m):
@@ -1657,6 +1968,7 @@ def ficha_api(m):
         "transcripcion_url": f"{BASE}/api/v1/{s}/transcripcion.json",
         "transcripcion_txt_url": f"{BASE}/api/v1/{s}/transcripcion.txt",
         "total_afirmaciones": m["suma"], "por_veredicto": m["total"], "excluidas": len(m.get("excluidas", [])),
+        "esencial": [f'{s}-{a["_id"]}' for a in m.get("esencial", [])],
         "temas": [{"n": t["n"], "titulo": t["titulo"], "inicio_s": t["ini"], "total": t["total"],
                    "por_veredicto": {k: sum(a["veredicto"] == k for a in t["suyas"]) for k in ORDEN}} for t in m["temas"]],
     }
@@ -1671,8 +1983,17 @@ def afirmacion_api(m, a):
         "video_url": f'https://www.youtube.com/watch?v={m["video"]}&t={a["_t"]}s', "web_url": f'{BASE}/{m["slug"]}#{a["_id"]}', "pagina_url": f'{BASE}/{m["slug"]}/{a["_id"]}',
         "cita": a.get("cita", ""), "afirmacion": a.get("afirmacion", ""), "veredicto": a["veredicto"],
         "resumen": a.get("_resumen"), "explicacion": a.get("explicacion", ""), "confianza": a.get("confianza"),
-        "fuentes": [{"titulo": f.get("titulo", ""), "url": f["url"]} for f in a.get("fuentes", [])
-                    if isinstance(f, dict) and str(f.get("url", "")).startswith(("http://", "https://"))],
+        "fuentes": [dict({"titulo": f.get("titulo", ""), "url": f["url"]},
+                         **({"archivo": ARCHIVO[f["url"]]["archivo"]} if f["url"] in ARCHIVO else {})) for f in fuentes_de(a)],
+        "verificado": a.get("_verificado"),
+        "correcciones": [{"fecha": c["fecha"], "antes": c.get("antes"), "motivo": c.get("motivo", "")} for c in a.get("_correcciones", [])],
+        "esencial": bool(a.get("_esencial")),
+        "otros_verificadores": [{k: o.get(k) for k in ("medio", "titulo", "url", "fecha", "veredicto_medio", "alcance")}
+                                for o in a.get("_otros", [])],
+        # la propia si ya está generada (herramientas/imagenes_compartir.py); si no, la del candidato, como la página
+        "imagen_url": (f'{BASE}/compartir/afirmaciones/{m["slug"]}/{a["_id"]}.png'
+                       if (RAIZ / "web-src" / "compartir" / "afirmaciones" / m["slug"] / f'{a["_id"]}.png').exists()
+                       else f'{BASE}/compartir/{imagen_de(m["slug"])}.png'),
     }
 
 
@@ -1681,7 +2002,7 @@ def escribir_json(ruta, datos):
     ruta.write_text(json.dumps(datos, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
 
 
-def generar_api(hechas):
+def generar_api(hechas, temas=()):
     # Restos de cuando los datos vivían en web/api/ y del panel privado de visitas, ya retirado.
     shutil.rmtree(SALIDA / "api", ignore_errors=True)
     shutil.rmtree(SALIDA / "panel", ignore_errors=True)
@@ -1707,12 +2028,17 @@ def generar_api(hechas):
                  else [None] * len(segs))
         escribir_json(api / m["slug"] / "transcripcion.json", dict(
             comun, entrevista=ficha_api(m),
-            nota="Transcripción automática (Whisper), que puede tener errores en nombres y cifras. El hablante de cada segmento sale de un reconocimiento automático de voces (acierto medido del 97 %; falla sobre todo en frases muy cortas).",
-            segmentos=[{"inicio_s": round(x["i"], 2), "fin_s": round(x["f"], 2), "hablante": v, "texto": x["t"].strip()}
+            nota="Transcripción automática (Whisper), que puede tener errores en nombres y cifras. Los nombres mal transcritos "
+                 f"más claros se corrigen con un glosario público ({REPO}/blob/main/entrevistas/glosario.json). El hablante de cada "
+                 "segmento sale de un reconocimiento automático de voces (acierto medido del 97 %; falla sobre todo en frases muy cortas).",
+            segmentos=[{"inicio_s": round(x["i"], 2), "fin_s": round(x["f"], 2), "hablante": v, "texto": corregir(x["t"].strip())}
                        for x, v in zip(segs, voces)]))
         (api / m["slug"] / "transcripcion.txt").write_text(
-            (m["carpeta"] / "transcripcion.txt").read_text(encoding="utf-8"), encoding="utf-8")
+            corregir((m["carpeta"] / "transcripcion.txt").read_text(encoding="utf-8")), encoding="utf-8")
     escribir_json(api / "afirmaciones.json", dict(comun, total=len(todas), afirmaciones=todas))
+    escribir_json(api / "temas.json", dict(comun, nota="Temas que comparten varias entrevistas. Cada candidato trae los capítulos "
+                                                       "de su entrevista que entran en el tema y los id de sus afirmaciones.",
+                                          temas=temas_api(temas)))
     api_publica.escribir_csv(api / "afirmaciones.csv", todas)
     slugs = [m["slug"] for m in hechas]
     ejemplo = slugs[0] if slugs else "sanchez"
@@ -1734,7 +2060,11 @@ API de solo lectura, JSON estático, sin clave, CORS abierto. Base: {BASE}/api/v
 
 Campos de cada afirmación: id, entrevista, invitado, tema, segundo, minuto, video_url, web_url, cita (literal de la
 transcripción), afirmacion (reformulada), veredicto (verdadero | mayormente_verdadero | enganoso | falso | no_verificable),
-resumen, explicacion, confianza (alta | media | baja), fuentes [{{titulo, url}}].
+resumen, explicacion, confianza (alta | media | baja), fuentes [{{titulo, url, archivo}}] (archivo: copia en la Wayback
+Machine), verificado (fecha), correcciones [{{fecha, antes, motivo}}], esencial (si es de las clave del candidato),
+otros_verificadores [{{medio, titulo, url, fecha, veredicto_medio, alcance}}] e imagen_url.
+
+- [Temas comunes]({BASE}/api/v1/temas.json): las afirmaciones de cada candidato agrupadas por tema (vivienda, inmigración…).
 
 Para volver a comprobar una afirmación: lee `cita` y `afirmacion`, abre cada `fuentes[].url`, y contrasta con la `explicacion`.
 Los errores se comunican en {REPO}/issues.
@@ -2015,7 +2345,21 @@ entrevistas.forEach(e => console.log(e.invitado, e.por_veredicto));
                                }},
                 "Fuente": {"type": "object", "required": ["titulo", "url"],
                            "properties": {"titulo": {"type": "string", "description": "Medio o organismo y título del documento."},
-                                          "url": dict(url, description="Siempre `http` o `https`.")}},
+                                          "url": dict(url, description="Siempre `http` o `https`."),
+                                          "archivo": dict(url, description="Copia de la fuente en la Wayback Machine (archive.org), por si la "
+                                                                           "original cambia o desaparece. Solo si ya se ha archivado.")}},
+                "Correccion": {"type": "object", "required": ["fecha", "motivo"],
+                               "properties": {"fecha": {"type": "string", "format": "date"},
+                                              "antes": {"anyOf": [ref("Veredicto"), {"type": "null"}], "description": "Veredicto anterior, si cambió."},
+                                              "motivo": {"type": "string", "description": "Qué se corrigió y por qué."}}},
+                "OtroVerificador": {"type": "object", "required": ["medio", "url"],
+                                    "properties": {"medio": {"type": "string", "description": "Newtral, Maldita.es, EFE Verifica…"},
+                                                   "titulo": {"type": ["string", "null"]}, "url": url,
+                                                   "fecha": {"type": ["string", "null"], "format": "date"},
+                                                   "veredicto_medio": {"type": ["string", "null"], "description": "La etiqueta del propio medio, literal."},
+                                                   "alcance": {"type": ["string", "null"], "enum": ["misma_frase", "mismo_dato", None],
+                                                               "description": "`misma_frase`: verificó lo dicho en esta entrevista. "
+                                                                              "`mismo_dato`: el mismo dato dicho por el candidato en otro momento."}}},
                 "Afirmacion": {"type": "object", "description": "Una afirmación comprobable del invitado y su verificación.",
                                "required": ["id", "entrevista", "invitado", "tema_n", "tema", "segundo", "minuto", "video_url",
                                             "web_url", "pagina_url", "cita", "afirmacion", "veredicto", "resumen", "explicacion", "confianza", "fuentes"],
@@ -2038,6 +2382,13 @@ entrevistas.forEach(e => console.log(e.invitado, e.por_veredicto));
                                    "confianza": {"anyOf": [ref("Confianza"), {"type": "null"}]},
                                    "fuentes": {"type": "array", "items": ref("Fuente"),
                                                "description": "Fuentes que sustentan el veredicto. Puede venir vacía, sobre todo con `no_verificable`."},
+                                   "verificado": {"type": ["string", "null"], "format": "date", "description": "Fecha en que se verificó."},
+                                   "correcciones": {"type": "array", "items": ref("Correccion"),
+                                                    "description": "Cambios hechos después de publicar, del más antiguo al más reciente. Vacía si no se ha corregido."},
+                                   "esencial": {"type": "boolean", "description": "Si está entre las 3-5 afirmaciones clave del candidato («Lo esencial»)."},
+                                   "otros_verificadores": {"type": "array", "items": ref("OtroVerificador"),
+                                                           "description": "Lo que otros verificadores publicaron sobre la misma frase o el mismo dato."},
+                                   "imagen_url": dict(url, description="Imagen de 1200×630 para compartir la afirmación."),
                                }},
                 "Segmento": {"type": "object", "required": ["inicio_s", "fin_s", "texto"],
                              "properties": {"inicio_s": {"type": "number", "minimum": 0, "description": "Segundo de inicio, con dos decimales."},
@@ -2148,7 +2499,7 @@ def comparativa(hechas):
     if len(hechas) < 2:
         return ""
     filas_v = [("falso", "Falsas"), ("enganoso", "Engañosas")]
-    resto_v = [("mayormente_verdadero", "Casi ciertas"), ("verdadero", "Verdaderas"), ("no_verificable", "No verificables")]
+    buenas_v = [("mayormente_verdadero", "Casi ciertas"), ("verdadero", "Verdaderas")]
 
     def pct(n, total):
         return f"{round(100 * n / total)} %" if total else "—"
@@ -2178,7 +2529,11 @@ def comparativa(hechas):
               for k, nombre in filas_v]
     filas.append(("Falsas o engañosas", "".join(celda_n(m, m["malas"]) for m in hechas), ' class="fuerte"'))
     filas += [(f'<i class="tono-{k}"></i>{nombre}', "".join(celda_n(m, m["total"][k]) for m in hechas), f' class="tono-{k}"')
-              for k, nombre in resto_v]
+              for k, nombre in buenas_v]
+    filas.append(("Verdaderas o casi ciertas", "".join(
+        celda_n(m, m["total"]["verdadero"] + m["total"]["mayormente_verdadero"]) for m in hechas), ' class="fuerte"'))
+    filas.append(('<i class="tono-no_verificable"></i>No verificables',
+                  "".join(celda_n(m, m["total"]["no_verificable"]) for m in hechas), ' class="tono-no_verificable"'))
     filas.append(("Reparto", "".join(
         '<td><div class="reparto">' + "".join(f'<i class="tono-{k}" style="flex:{m["total"][k]}"></i>' for k in ORDEN if m["total"][k])
         + "</div></td>" for m in hechas), ""))
@@ -2189,7 +2544,8 @@ def comparativa(hechas):
             f'<div class="tabla-c"><table><thead><tr><td></td>{cab}</tr></thead><tbody>{cuerpo}</tbody></table></div>'
             '<p class="nota-c">Los porcentajes son sobre las afirmaciones comprobadas de cada candidato. Cuántas se pueden comprobar '
             'depende de la duración de la entrevista, de las preguntas y de cuántos datos da cada invitado, así que esto no es un ranking: '
-            'sirve para ver dónde mirar. Cada cifra lleva a su línea temporal.</p></section>')
+            'sirve para ver dónde mirar. Cada cifra lleva a su línea temporal. Para ver qué dijo cada uno sobre lo mismo, '
+            '<a href="/temas">compáralos tema a tema</a>.</p></section>')
 
 
 def main():
@@ -2219,11 +2575,13 @@ def main():
             pagina_afirmacion(m, a, entrevistas,
                               m["todas"][n - 1] if n > 0 else None,
                               m["todas"][n + 1] if n + 1 < len(m["todas"]) else None)
-    ejemplo, slugs = generar_api(hechas)
+    temas = temas_comunes(hechas)
+    pagina_temas(entrevistas, temas)
+    ejemplo, slugs = generar_api(hechas, temas)
     indice_busqueda(hechas)
     pagina_buscar(entrevistas, hechas)
     copiar_compartir()
-    indexacion(hechas)
+    indexacion(hechas, temas)
     (SALIDA / "fotos").mkdir(exist_ok=True)
     for f in (RAIZ / "web-src" / "fotos").glob("*.jpg"):
         shutil.copy(f, SALIDA / "fotos" / f.name)
@@ -2271,7 +2629,7 @@ def main():
         QUIEN, ANALITICA=ANALITICA_QUIEN if UMAMI_ID else SIN_ANALITICA_QUIEN, CABECERA=cabecera(
             "/quien", "Quién hace esto · Verificación The Wild Project",
             "Quién hace esta verificación, su independencia, quién la paga, cómo se hace y cómo se corrigen los errores."),
-        MENU=menu(entrevistas), CSS_MENU=CSS_MENU, REPO=REPO, REPO_PABLO=REPO_PABLO, BIO_PABLO=BIO_PABLO, ENLACES_PABLO=ENLACES_PABLO, BIO_DIEGO=BIO_DIEGO, ENLACES_DIEGO=ENLACES_DIEGO), encoding="utf-8")
+        MENU=menu(entrevistas), MINI=mini_resumen(hechas), CSS_MENU=CSS_MENU, REPO=REPO, REPO_PABLO=REPO_PABLO, BIO_PABLO=BIO_PABLO, ENLACES_PABLO=ENLACES_PABLO, BIO_DIEGO=BIO_DIEGO, ENLACES_DIEGO=ENLACES_DIEGO), encoding="utf-8")
     # formularios que no salen de la web (avisar de un error y proponer un hecho) y su función de Vercel
     for ruta_f, plantilla_f, titulo_f, desc_f in (
             ("avisar", avisos.PAGINA, "Avisar de un error",
@@ -2297,7 +2655,7 @@ def main():
         PAGINA_API, CABECERA=cabecera(
             "/api", "Verifícalo tú · API abierta · Verificación The Wild Project",
             "Cómo comprobar por tu cuenta cada veredicto, con la API abierta en JSON y CSV (sin clave), un encargo para que "
-            "cualquier IA audite la verificación y un prompt listo para agentes de IA."), PROMPT=e(prompt_agente(hechas)), MENU=menu(entrevistas), CSS_MENU=CSS_MENU, BASE=BASE, REPO=REPO,
+            "cualquier IA audite la verificación y un prompt listo para agentes de IA."), PROMPT=e(prompt_agente(hechas)), MENU=menu(entrevistas), MINI=mini_resumen(hechas), CSS_MENU=CSS_MENU, BASE=BASE, REPO=REPO,
         SCALAR=SCALAR, SCALAR_SRI=SCALAR_SRI), encoding="utf-8")
     # La referencia vivió unas horas en /api/referencia: se redirige (aquí y en vercel.json).
     (DATOS / "referencia").mkdir(exist_ok=True)
@@ -2360,7 +2718,7 @@ html { scroll-behavior:smooth; scroll-padding-top:calc(var(--menu, 48px) + 64px)
 .ancho { max-width:1360px; margin:0 auto; padding-left:clamp(16px,4vw,48px); padding-right:clamp(16px,4vw,48px); }
 .menu { position:sticky; top:0; z-index:10; background:var(--fondo); border-bottom:2px solid var(--tinta); }
 .menu .ancho { padding-top:9px; padding-bottom:9px; position:relative; }
-.m1 { display:flex; flex-wrap:wrap; align-items:center; gap:4px 24px; font-size:14.5px; }
+.m1 { display:flex; flex-wrap:wrap; align-items:center; gap:4px 24px; font-size:14.5px; line-height:22px; }   /* alto de línea entero: así la fila mide píxeles enteros y el botón de modo queda centrado sin medio píxel */
 .m1 a, .desp summary { color:var(--tinta); text-decoration:none; font-weight:600; padding:3px 0; border-bottom:2px solid transparent; }
 /* Subrayado del menú: se dibuja de izquierda a derecha al pasar el ratón y se recoge hacia la derecha al salir */
 .m1 > a:not(.sello), .desp summary { position:relative; border-bottom-color:transparent !important; }
@@ -2368,13 +2726,13 @@ html { scroll-behavior:smooth; scroll-padding-top:calc(var(--menu, 48px) + 64px)
   transform:scaleX(0); transform-origin:right center; transition:transform .28s cubic-bezier(.4,0,.2,1); }
 .m1 > a:not(.sello):hover::after, .m1 > a:not(.sello):focus-visible::after, .desp summary:hover::after, .desp summary:focus-visible::after,
 .desp.actual summary::after, .desp[open] summary::after { transform:scaleX(1); transform-origin:left center; }
-.m1 .sello { font:700 17px/1.2 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; }
+.m1 .sello { font:700 17px/22px "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; }   /* alto entero: la fila del menú mide píxeles enteros y lo centrado cae en píxel exacto */
 .m1 .off { color:var(--gris-claro); } .m1 .dcha { margin-left:auto; }
 .modo { flex:none; display:inline-grid; place-items:center; width:26px; height:26px; padding:0; margin:0 0 0 -8px; cursor:pointer;
   color:var(--tinta); background:var(--fondo); border:1.5px solid var(--tinta); border-radius:50%; }
 .modo:hover { background:var(--tinta); color:var(--fondo); }
 .modo { line-height:0; font-size:0; }
-.modo svg { display:block; width:15px; height:15px; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+.modo svg { display:block; width:16px; height:16px; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
 .modo .luna { display:var(--luna); } .modo .sol { display:var(--sol); }
 .rot { font-size:10.5px; font-weight:700; text-transform:uppercase; letter-spacing:.09em; color:var(--gris); flex:none; }
 .desp { position:relative; margin:0; padding:0; border:0; font-size:inherit; }
@@ -2443,7 +2801,6 @@ footer .pie-quien { margin-top:18px; }
 /* Entre 761 y 1200 px el menú tiene que caber en una línea: menos hueco y letra un punto menor, y por debajo de 900 px
    sale «GitHub ↗», que sigue en el pie de cada página */
 @media (min-width:761px) and (max-width:1200px) { .m1 { column-gap:14px; font-size:14px; } }
-@media (min-width:761px) and (max-width:900px) { .m1 > a.gh { display:none; } }
 @media (min-width:1001px) and (max-width:1060px) { .m1 { column-gap:12px; } }   /* ahí vuelven los nombres largos */
 @media (max-width:760px) { .m1 .sello { order:-2; } .m1 .buscar { order:-1; } }   /* en móvil el menú se desliza: Buscar va junto al título para que se vea */
 /* En móvil el menú y los filtros ocupan una sola fila que se desliza en horizontal; el botón de modo se queda fijo a la derecha */
@@ -2460,7 +2817,7 @@ footer .pie-quien { margin-top:18px; }
   .m1 > a:not(.sello)::after, .desp summary::after { bottom:5px; }
   .m1 { padding-right:72px; }
   .modo { position:absolute; right:12px; top:calc(50% - 16px); margin:0; width:32px; height:32px; }
-  .modo svg { width:17px; height:17px; }
+  .modo svg { width:18px; height:18px; }
   .menu .ancho::after { content:""; position:absolute; top:0; bottom:0; right:52px; width:28px; pointer-events:none;
     background:linear-gradient(to right, transparent, var(--fondo)); }
   .menu .ancho::before { content:""; position:absolute; top:0; bottom:0; right:0; width:52px; background:var(--fondo); pointer-events:none; z-index:1; }
@@ -2545,6 +2902,8 @@ CSS_MENU += """
 .retrato.res-foto { width:clamp(44px,5.5vw,54px); height:clamp(44px,5.5vw,54px); align-self:center; }
 .retrato.res-foto .insignia { animation:none; }
 .retrato.chica { width:24px; height:24px; align-self:center; }
+.chip-v { align-self:flex-start; display:inline-block; padding:2px 8px; font-size:11.5px; font-weight:700; text-transform:uppercase; letter-spacing:.08em;
+  background:var(--tono); color:var(--sobre-tono); border-radius:var(--r-mini); white-space:nowrap; }
 .retrato.chica > img { border-width:1.5px; }
 .fila button[aria-pressed=true] .retrato > img { border-color:var(--fondo); }
 .creditos { font-size:12.5px; color:var(--gris); }
@@ -2638,6 +2997,61 @@ html.con-repro .arriba { bottom:calc(var(--repro-h, 0px) + 28px + env(safe-area-
   html.con-repro .fab, html.con-repro .arriba { bottom:calc(var(--repro-h, 0px) + 12px); }
   html.con-repro .aviso { bottom:calc(var(--repro-h, 0px) + 16px); }
   html.con-repro .fab-panel { max-height:calc(100dvh - var(--menu, 48px) - 100px - var(--repro-h, 0px)); } }
+/* Menú «Más»: en pantallas anchas no existe (los enlaces van sueltos); en móvil recoge los enlaces secundarios y el cambio de modo */
+.desp > summary { font-size:inherit; }
+.mas { display:none; }
+.mas-lista { list-style:none; margin:0; padding:0; }
+.desp.mas .mas-lista a { display:flex; align-items:center; min-height:48px; padding:0 10px; font-size:16px; font-weight:600; color:var(--tinta);
+  border-bottom:1px solid var(--claro); border-radius:0; text-decoration:none; }
+.desp.mas .mas-lista a:hover, .desp.mas .mas-lista a:focus-visible { background:var(--resalte); }
+.modo-txt { display:flex; align-items:center; gap:10px; width:100%; min-height:48px; padding:0 10px; margin:0; font:inherit; font-size:16px; font-weight:600;
+  color:var(--tinta); background:none; border:0; cursor:pointer; text-align:left; border-radius:var(--r-boton); }
+.modo-txt:hover { background:var(--resalte); }
+.modo-txt svg { display:block; flex:none; width:18px; height:18px; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+.modo-txt .luna { display:var(--luna); } .modo-txt .sol { display:var(--sol); }
+@media (max-width:760px) {
+  .m1 > .sec, .m1 > .modo { display:none; }
+  .mas { display:block; }
+  .desp.mas > summary { position:absolute; right:12px; top:calc(50% - 18px); z-index:2; display:grid; place-items:center; width:36px; height:36px;
+    min-height:0; padding:0; border:1.5px solid var(--tinta) !important; border-radius:50%; background:var(--fondo); color:var(--tinta); }
+  .desp.mas > summary::after { display:none; }
+  .desp.mas[open] > summary { background:var(--tinta); color:var(--fondo); }
+  .desp.mas > summary svg { display:block; width:18px; height:18px; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; }
+  .m1 .buscar span { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; } .m1 .buscar { gap:0; }   /* solo la lupa */
+  .m1 { gap:0 14px; } }
+"""
+CSS_MENU += """
+/* Resumen al pie de cada página: la entrevista de la página o, en las generales, una tarjeta por candidato */
+.resumenes { border-top:3px solid var(--tinta); padding:26px 0 34px; margin-top:24px; }
+.resumenes .mini-t { font:700 22px/1.2 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; margin:0 0 16px; padding:0; border:0; letter-spacing:0; }
+.mini-lista { display:grid; gap:12px; grid-template-columns:repeat(auto-fit, minmax(min(100%, 280px), 1fr)); }
+.mini-e { display:flex; flex-direction:column; gap:9px; border:1.5px solid var(--tinta); border-radius:var(--r-caja); padding:14px 16px 12px; background:var(--fondo); }
+.mini-cab { display:flex; align-items:center; gap:12px; }
+.mini-cab .retrato { width:44px; height:44px; } .mini-cab .retrato .insignia { display:none; }
+.mini-cab h3 { margin:0; font:700 18px/1.2 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; }
+.mini-cab h3 a { color:var(--tinta); text-decoration:none; } .mini-cab h3 a:hover { text-decoration:underline; }
+.mini-meta { margin:2px 0 0; font-size:12.5px; color:var(--gris); }
+.mini-res { margin:0; font-size:14.5px; line-height:1.5; max-width:none; }
+.mini-num { margin:0; font-size:13.5px; } .mini-num b { font:700 21px/1 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; margin-right:2px; }
+.barra-reparto.mini-barra { margin:0; height:8px; animation:none; }
+.mini-acc { margin:auto 0 0; display:flex; flex-wrap:wrap; gap:0 18px; font-size:13.5px; font-weight:600; }
+.mini-acc a { display:inline-flex; align-items:center; gap:4px; min-height:36px; color:var(--tinta); }
+/* Iconos de «↗» y «→» (ICONO_EXTERNO, ICONO_SIGUE): trazo que hereda el color, a la altura de la letra */
+.ic { display:block; flex:none; width:14px; height:14px; fill:none; stroke:currentColor; stroke-width:2.2; stroke-linecap:round; stroke-linejoin:round; }
+.m1 > a.gh { display:inline-flex; align-items:center; gap:3px; }
+.desp.mas .mas-lista a .ic { margin-left:4px; }
+/* Entre 761 y 1060 px no cabe todo en una línea: Método, Quién lo hace y GitHub pasan al «Más», que solo enseña esos tres */
+@media (min-width:761px) and (max-width:1060px) {
+  .m1 > .sec.seg { display:none; }
+  .mas { display:block; }
+  .mas-lista li.pri, .desp.mas .modo-txt { display:none; }
+  .desp.mas .lista { left:auto; right:-14px; min-width:220px; }
+  .desp.mas > summary { display:grid; place-items:center; width:32px; height:32px; min-height:0; padding:0; border:1.5px solid var(--tinta) !important; border-radius:50%; }
+  .desp.mas > summary::after { display:none; }
+  .desp.mas[open] > summary { background:var(--tinta); color:var(--fondo); }
+  .desp.mas > summary svg { display:block; width:16px; height:16px; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; } }
+/* En la cabecera de cada entrevista: debajo del texto y de las cifras, ocupando las dos columnas */
+.resumenes.en-cabeza { grid-column:1 / -1; margin-top:28px; padding:18px 0 0; }
 """
 CSS_MENU = (CSS_MENU.replace("@@CLARO@@", _CLARO).replace("@@OSCURO@@", _OSCURO)
             .replace("@@CLASES_TONO@@", "\n".join(f"[data-v={k}], .tono-{k} {{ --tono:var(--v-{k}); }}" for k in ORDEN)))
@@ -2750,6 +3164,7 @@ h1 { font:700 clamp(30px,5.2vw,58px)/1.05 var(--serif); letter-spacing:-0.02em; 
 </section>
 </div>
 </main>
+@@MINI@@
 <footer class="pie-solo"><div class="ancho">@@PIE@@</div></footer>
 </body>
 </html>
@@ -2938,6 +3353,7 @@ body.light-mode, body.dark-mode, body .scalar-app {
 <p class="saltos"><a href="#verificalo" data-ancla="verifícalo-tú">Cómo comprobarlo ↓</a><a href="#agentes" data-ancla="prompt-para-agentes-de-ia">Prompt para agentes de IA ↓</a><a href="#referencia">Referencia de la API ↓</a><a href="/api/v1/openapi.json">openapi.json</a><a href="/llms.txt">llms.txt</a></p>
 </div></header>
 <div id="referencia"></div>
+@@MINI@@
 <footer class="pie-solo"><div class="ancho">@@PIE@@</div></footer>
 <noscript><p>La referencia interactiva necesita JavaScript. Tienes la misma información en <a href="/api/v1/openapi.json">openapi.json</a>.</p></noscript>
 <script src="https://cdn.jsdelivr.net/npm/@scalar/api-reference@@@SCALAR@@/dist/browser/standalone.js" integrity="@@SCALAR_SRI@@" crossorigin="anonymous"></script>
@@ -3185,11 +3601,12 @@ footer .leyenda-f { max-width:820px; }
 /* ── Hero con GSAP: el titular sube por líneas y se subraya «dato a dato»; debajo, un carrusel de afirmaciones reales que reciben su veredicto como un sello */
 .subraya { font-style:normal; background:linear-gradient(var(--tinta),var(--tinta)) no-repeat 0 96% / var(--subrayado,100%) .075em;
   -webkit-box-decoration-break:clone; box-decoration-break:clone; }
-/* Sin marco: la etiqueta de quién y cuándo lleva delante las flechas, la cita debajo y el sello del veredicto a la derecha */
+/* Sin marco: arriba el rótulo con las flechas a su derecha; debajo quién y cuándo, la cita y el sello del veredicto a la derecha */
 .muestra { position:relative; margin-top:20px; max-width:62ch; }
-.muestra-rot { margin:0 0 8px; font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--gris); }
-.muestra-barra { position:absolute; left:-8px; z-index:1; display:flex; gap:2px; margin:0; transform:translateY(-6px); }
-.muestra-barra button { display:grid; place-items:center; width:36px; height:36px; padding:0; cursor:pointer; border:0; border-radius:var(--r-boton);
+.muestra-cab { display:flex; align-items:center; justify-content:space-between; gap:12px; margin:0 0 4px; }
+.muestra-rot { margin:0; min-width:0; font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--gris); }
+.muestra-barra { display:flex; flex:none; gap:2px; margin:0 -8px 0 0; }
+.muestra-barra button { display:grid; place-items:center; width:40px; height:40px; padding:0; cursor:pointer; border:0; border-radius:var(--r-boton);
   background:transparent; color:var(--tinta); transition:background-color .15s ease-out, transform .12s ease-out; }
 .muestra-barra button:hover { background:var(--claro); }
 .muestra-barra button:active { transform:scale(.92); }
@@ -3199,14 +3616,15 @@ footer .leyenda-f { max-width:820px; }
 .muestra-item { grid-area:1 / 1; visibility:hidden; min-width:0; }
 .muestra-item.activa { visibility:visible; }
 .muestra-item a { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:6px 20px; align-items:center; color:inherit; text-decoration:none; }
-.muestra-quien { grid-column:1; padding-left:70px; font-size:12.5px; font-weight:700; line-height:24px; color:var(--suave); }
+.muestra-quien { grid-column:1; font-size:12.5px; font-weight:700; line-height:24px; color:var(--suave); }
 .muestra-cita { grid-column:1; font:italic 400 clamp(17px,1.55vw,21px)/1.3 var(--serif); text-wrap:pretty; }
+.muestra-cita .palabra-mask { padding:0 .12em .08em; margin:0 -.12em -.08em; }
 .muestra-item a:hover .muestra-cita { text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:3px; }
 .muestra-item a:focus-visible { outline:2px solid var(--tinta); outline-offset:4px; border-radius:var(--r-mini); }
 .estampa { grid-column:2; grid-row:1 / span 2; justify-self:end; align-self:center; padding:8px 12px; border:2.5px solid currentColor; border-radius:var(--r-mini);
   color:var(--tono); background:color-mix(in srgb, var(--tono) 8%, var(--fondo)); transform:rotate(-4deg);
   font:800 14px/1 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; letter-spacing:.09em; text-transform:uppercase; white-space:nowrap; }
-@media (max-width:560px) { .muestra-item a { column-gap:12px; } .estampa { padding:7px 9px; font-size:12px; } }
+@media (max-width:560px) { .muestra-rot { letter-spacing:.05em; } .muestra-item a { column-gap:12px; } .estampa { padding:7px 9px; font-size:12px; } }
 /* Escritorio: a la izquierda el titular con la entradilla debajo; a la derecha el carrusel, más grande y centrado en vertical */
 @media (min-width:1000px) {
   .cabeza { grid-template-columns:minmax(0,1.3fr) minmax(0,1fr); }
@@ -3235,7 +3653,7 @@ footer .leyenda-f { max-width:820px; }
 <main class="ancho">
 <div class="primera">
 <div class="cabeza">
-<h1>Las entrevistas de The Wild Project, comprobadas <em class="subraya">dato a dato</em></h1>
+<h1>Las entrevistas de The Wild Project, comprobadas<br> <em class="subraya">dato a dato</em></h1>
 <p class="entrada">Jordi Wild ha entrevistado a los candidatos a las elecciones generales del 29 de noviembre. Comprobamos cada dato que dan con fuentes públicas, con el mismo método y la misma vara de medir para todos.</p>
 @@MUESTRA@@
 </div>
@@ -3300,24 +3718,20 @@ function carrusel(muestra, animado) {
   // Empieza en una afirmación al azar: si no, cada visita abriría con el mismo candidato y el mismo veredicto
   const inicio = Math.floor(Math.random() * items.length);
   if (inicio) { activar(items[0], items[inicio]); actual = inicio; }
+  // Cada cita se parte en palabras una sola vez y se queda partida: deshacer el corte al acabar recolocaba el texto un píxel
+  if (animado) items.forEach(it => { it._palabras = SplitText.create(it.querySelector(".muestra-cita"), { type: "words", mask: "words", wordsClass: "palabra" }).words; });
   const entrar = it => {
-    const cita = it.querySelector(".muestra-cita"), [quien, estampa] = partes(it);
-    it._split = SplitText.create(cita, { type: "words", mask: "words" });
+    const [quien, estampa] = partes(it);
     return gsap.timeline()
-      .from(quien, { autoAlpha: 0, x: -10, duration: .35, ease: "power2.out" })
-      .from(it._split.words, { yPercent: 110, duration: .55, stagger: .022, ease: "power3.out" }, "<.05")
-      .fromTo(estampa, { autoAlpha: 0, scale: 2, rotation: -18 }, { autoAlpha: 1, scale: 1, rotation: -4, duration: .38, ease: "back.out(2.6)" }, ">-.15")
-      .to(muestra, { keyframes: { x: [0, -3, 2.5, -1.5, 0] }, duration: .24, ease: "none" }, "<.22")
-      .add(() => { it._split.revert(); it._split = null; });
+      .fromTo(quien, { autoAlpha: 0, x: -10 }, { autoAlpha: 1, x: 0, duration: .35, ease: "power2.out" })
+      .fromTo(it._palabras, { yPercent: 110 }, { yPercent: 0, duration: .55, stagger: .022, ease: "power3.out" }, "<.05")
+      // crece desde su borde derecho: en móvil va pegado al margen y, desde el centro, se salía de la pantalla
+      .fromTo(estampa, { autoAlpha: 0, scale: 2, rotation: -18, transformOrigin: "100% 50%" }, { autoAlpha: 1, scale: 1, rotation: -4, duration: .38, ease: "back.out(2.6)" }, ">-.15")
+      .to(muestra, { keyframes: { x: [0, -3, 2.5, -1.5, 0] }, duration: .24, ease: "none", clearProps: "x" }, "<.22");
   };
-  const salir = it => {
-    const cita = it.querySelector(".muestra-cita");
-    it._split = SplitText.create(cita, { type: "words", mask: "words" });
-    return gsap.timeline()
-      .to(it._split.words, { yPercent: -110, duration: .3, stagger: .01, ease: "power2.in" })
-      .to(partes(it), { autoAlpha: 0, duration: .22, ease: "power1.in" }, "<")
-      .add(() => { it._split.revert(); it._split = null; gsap.set(partes(it), { clearProps: "all" }); });
-  };
+  const salir = it => gsap.timeline()
+    .to(it._palabras, { yPercent: -110, duration: .3, stagger: .01, ease: "power2.in" })
+    .to(partes(it), { autoAlpha: 0, duration: .22, ease: "power1.in" }, "<");
   // Pasa sola cada ESPERA segundos y solo se para mientras el ratón o el foco del teclado están encima.
   // Las flechas cambian de afirmación y vuelven a empezar la cuenta. Lo que pasa solo no se anuncia al lector de pantalla.
   const esperar = () => {
@@ -3420,6 +3834,12 @@ img.cara { border:0; background:var(--claro); }
   .quien { align-items:center; gap:8px; padding-top:0; } .nom { flex-direction:row; align-items:baseline; gap:6px; padding-top:0; }
   .cara { width:28px; height:28px; font-size:11px; }
   .turno[data-voz=G] .par p { padding-left:12px; } .turno:not([data-voz=G]) .par p { padding-left:0; } }
+.ir-tema { flex:none; max-width:min(240px, 52vw); font:inherit; font-size:12.5px; font-weight:700; color:var(--fondo); background:var(--tinta);
+  border:1.5px solid var(--tinta); border-radius:999px; padding:3px 26px 3px 11px; text-overflow:ellipsis; -webkit-appearance:none; appearance:none;
+  background-image:linear-gradient(45deg, transparent 50%, var(--fondo) 50%), linear-gradient(135deg, var(--fondo) 50%, transparent 50%);
+  background-position:calc(100% - 15px) 52%, calc(100% - 10px) 52%; background-size:5px 5px; background-repeat:no-repeat; }
+@media (min-width:1180px) { .ir-tema { display:none; } }
+@media (max-width:760px) { .ir-tema { font-size:13px; min-height:34px; } }
 @@CSS_MENU@@
 </style>
 </head>
@@ -3430,11 +3850,12 @@ img.cara { border:0; background:var(--claro); }
 <nav class="indice" aria-label="Temas de la entrevista"><p>Temas</p><ol>@@INDICE@@</ol></nav>
 <div class="lectura">
 <div class="titular">@@RETRATO@@<h1>Transcripción completa: @@INVITADO@@ con Jordi Wild</h1></div>
-<p class="entrada">@@PROGRAMA@@ · @@FECHA_VIDEO@@ · @@DURACION@@. Transcripción automática (Whisper), que puede tener errores en nombres y cifras. @@NOTA_VOCES@@Cada minuto abre el <a href="https://www.youtube.com/watch?v=@@VIDEO@@" target="_blank" rel="noopener noreferrer">vídeo</a> en ese punto. <b>Lo subrayado es una afirmación analizada</b>: el color es su veredicto, y al pulsarla vas a su tarjeta en la <a href="/@@SLUG@@">línea temporal</a>, con la justificación y las fuentes. Si ves algo sin subrayar que habría que comprobar, <a href="/proponer?e=@@SLUG@@">propónlo</a>.</p>
+<p class="entrada">@@PROGRAMA@@ · @@FECHA_VIDEO@@ · @@DURACION@@. Transcripción automática (Whisper), que puede tener errores en nombres y cifras; los nombres mal transcritos más claros se corrigen con un <a href="@@REPO@@/blob/main/entrevistas/glosario.json" target="_blank" rel="noopener noreferrer">glosario público</a>. @@NOTA_VOCES@@Cada minuto abre el <a href="https://www.youtube.com/watch?v=@@VIDEO@@" target="_blank" rel="noopener noreferrer">vídeo</a> en ese punto. <b>Lo subrayado es una afirmación analizada</b>: el color es su veredicto, y al pulsarla vas a su tarjeta en la <a href="/@@SLUG@@">línea temporal</a>, con la justificación y las fuentes. Si ves algo sin subrayar que habría que comprobar, <a href="/proponer?e=@@SLUG@@">propónlo</a>.</p>
 @@CUERPO@@
 <div style="border-top:3px solid var(--tinta); margin-top:48px; padding-top:22px">@@LEYENDA@@</div>
 </div>
 </main>
+@@MINI@@
 <footer class="pie-solo"><div class="ancho">@@PIE@@</div></footer>
 @@REPRODUCTOR@@
 <script>
@@ -3477,11 +3898,18 @@ todas.onclick = () => { botones.forEach(b => activos.add(b.dataset.v)); pintar()
 soloB.onclick = () => { solo = !solo; pintar(); };
 pintar();
 const enIndice = new Map([...document.querySelectorAll(".indice a")].map(a => [a.hash.slice(1), a]));
+const irTema = document.getElementById("ir-tema");
+irTema.onchange = () => {
+  const h = irTema.value && document.getElementById(irTema.value);
+  if (!h) return;
+  h.scrollIntoView(); history.replaceState(null, "", "#" + h.id);
+};
 if (enIndice.size && "IntersectionObserver" in window) {
   const obs = new IntersectionObserver(es => es.forEach(x => {
     if (!x.isIntersecting) return;
     enIndice.forEach(a => a.classList.remove("aqui"));
     enIndice.get(x.target.id)?.classList.add("aqui");
+    irTema.value = x.target.id;
   }), { rootMargin: "0px 0px -70% 0px" });
   enIndice.forEach((a, id) => { const h = document.getElementById(id); if (h) obs.observe(h); });
 }
@@ -3508,6 +3936,17 @@ a { color:var(--tinta); }
 .cima { display:flex; justify-content:space-between; gap:12px; padding-top:18px; font-size:13px; }
 .cima a { font-weight:600; white-space:nowrap; }
 .portada { padding-top:clamp(28px,5vw,48px); padding-bottom:28px; }
+/* Lo esencial: las afirmaciones clave, en fichas que se reparten solas en columnas */
+.esencial { padding-bottom:30px; }
+.esencial h2 { font:700 clamp(24px,2.4vw,28px)/1.2 var(--serif); margin:0 0 6px; padding-top:12px; border-top:3px solid var(--tinta); }
+.es-nota { margin:0 0 16px; font-size:14px; color:var(--suave); max-width:68ch; }
+.es-lista { list-style:none; margin:0; padding:0; display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr)); gap:clamp(10px,1.4vw,16px); }
+.es-lista li { min-width:0; display:flex; flex-direction:column; gap:8px; border:2px solid var(--tinta); border-radius:var(--r-caja); padding:14px 16px;
+  box-shadow:inset 0 5px 0 var(--tono); padding-top:18px; }
+.es-tema { margin:0; font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--gris); }
+.es-que { font:600 16.5px/1.38 var(--serif); text-decoration:none; text-wrap:pretty; }
+.es-que:hover { text-decoration:underline; }
+.es-min { margin:auto 0 0; font-size:12.5px; color:var(--gris); font-variant-numeric:tabular-nums; }
 h1 { font:700 clamp(30px,5.2vw,56px)/1.05 var(--serif); letter-spacing:-0.02em; margin:0 0 18px; text-wrap:balance; max-width:22ch; }
 .entrada { font-size:17px; margin:0 0 20px; max-width:62ch; }
 .intro .abrir { margin:0; }
@@ -3552,6 +3991,16 @@ h1 { font:700 clamp(30px,5.2vw,56px)/1.05 var(--serif); letter-spacing:-0.02em; 
 [data-v=falso] .ficha { background:var(--tinta); color:var(--fondo); }
 blockquote { margin:0 0 8px; font:italic 19px/1.38 var(--serif); text-wrap:pretty; }
 .que { margin:0 0 12px; font-size:14px; color:var(--gris); line-height:1.45; }
+.conf { display:inline-block; margin:0 0 10px 8px; font-size:11.5px; font-weight:600; color:var(--gris); letter-spacing:.02em; cursor:help; }
+.conf::before { content:""; display:inline-block; width:22px; height:6px; margin-right:6px; vertical-align:1px; border-radius:3px;
+  background:linear-gradient(90deg, var(--suave) var(--lleno), var(--claro) var(--lleno)); }
+.conf-alta { --lleno:100%; } .conf-media { --lleno:66%; } .conf-baja { --lleno:33%; }
+.otros-l { margin:8px 0 0; font-size:13px; color:var(--suave); }
+.otros-l a { font-weight:600; }
+.sello { margin:10px 0 0; font-size:12px; color:var(--gris); }
+.sello .corregido { display:inline-block; margin-right:6px; padding:1px 7px; font-weight:700; text-transform:uppercase; letter-spacing:.08em;
+  font-size:11px; color:var(--tinta); border:1.5px solid var(--tinta); border-radius:var(--r-mini); }
+.fuentes .arch { color:var(--gris); }
 .porque { margin:0 0 12px; font-size:15.5px; }
 .rotulo { margin:0 0 4px; font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.09em; }
 .fuentes { margin:0; padding-left:20px; font-size:13.5px; }
@@ -3583,6 +4032,19 @@ h2 { font:700 23px/1.2 var(--serif); margin:0; letter-spacing:-0.01em; text-wrap
 .recuento span { color:var(--tono); }
 .barra-tema { display:flex; gap:2px; height:6px; max-width:420px; margin-top:8px; border-radius:3px; overflow:hidden; }
 .barra-tema i { display:block; min-width:3px; background:var(--tono); }
+/* Tema plegado: sin afirmaciones (vacio) o sin ninguna que pase el filtro (plegado). Se queda en la línea, más pequeño y en gris */
+.sin-filtro { display:none; margin:8px 0 0; font-size:13.5px; color:var(--gris); }
+.capitulo.plegado .sin-filtro { display:block; }
+.capitulo.plegado .barra-tema { display:none; }
+.recuento.sin { color:var(--gris); font-weight:500; }
+.ver-tema { font:inherit; font-size:13px; font-weight:600; color:var(--tinta); background:var(--fondo); border:1.5px solid var(--tinta);
+  border-radius:var(--r-boton); padding:3px 10px; margin-left:4px; cursor:pointer; }
+.ver-tema:hover { background:var(--tinta); color:var(--fondo); }
+.capitulo.plegado, .capitulo.vacio { margin-top:28px; padding:16px 0 6px; border-top-width:1px; }
+.capitulo.plegado .cab-tema h2, .capitulo.vacio .cab-tema h2 { font-size:21px; }
+.capitulo.plegado .marca, .capitulo.vacio .marca { background:var(--fondo); color:var(--gris); border:1.5px solid var(--gris);
+  width:30px; height:30px; left:calc(var(--col) - 14px); top:-16px; font-size:14px; }
+@media (max-width:600px) { .ver-tema { min-height:36px; margin:6px 0 0; display:block; } .capitulo.plegado .cab-tema h2, .capitulo.vacio .cab-tema h2 { font-size:19px; } }
 .tema-actual { margin-left:auto; font-size:13px; font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
   max-width:46ch; padding-left:10px; }
 .tema-actual:empty { display:none; }
@@ -3680,7 +4142,9 @@ footer .leyenda-f { margin-bottom:34px; max-width:820px; }
   @@BARRA@@
   <p class="resto">El resto: @@VERDADERAS@@ verdaderas, @@CASI@@ casi ciertas y @@NV@@ que no se han podido verificar.@@NOTA_EXCL@@</p>
   </div>
+  @@MINI@@
 </div>
+@@ESENCIAL@@
 @@FILTROS@@
 <main class="ancho"><ol class="linea">@@FILAS@@</ol></main>
 <footer><div class="ancho pie">
@@ -3710,16 +4174,18 @@ const aqui = location.pathname.replace(/\\/$/, "");
 function pintar() {
   botones.forEach(b => b.setAttribute("aria-pressed", activos.has(b.dataset.v)));
   todas.setAttribute("aria-pressed", activos.size === botones.length);
+  // Un tema que el filtro deja sin afirmaciones no desaparece: se pliega y ofrece ver las suyas
   let cap = null, n = 0;
+  const plegar = () => { if (cap) cap.classList.toggle("plegado", n === 0 && !cap.classList.contains("vacio")); };
   document.querySelectorAll(".linea > li").forEach(li => {
-    if (li.classList.contains("capitulo")) { if (cap) cap.hidden = n === 0; cap = li; n = 0; }
+    if (li.classList.contains("capitulo")) { plegar(); cap = li; n = 0; }
     else { li.hidden = !activos.has(li.dataset.v); if (!li.hidden) n++; }
   });
-  if (cap) cap.hidden = n === 0;
+  plegar();
   const vistas = document.querySelectorAll(".linea > .hito:not([hidden])").length;
   document.querySelector("#filtros .cuenta").textContent = `Mostrando ${vistas} de ${@@SUMA@@}`;
   document.querySelectorAll(".lista a[data-tema]").forEach(a => {
-    if (a.pathname.replace(/\\/$/, "") === aqui) a.classList.toggle("off", document.getElementById(a.dataset.tema).hidden);
+    if (a.pathname.replace(/\\/$/, "") === aqui) a.classList.toggle("off", document.getElementById(a.dataset.tema).classList.contains("plegado"));
   });
 }
 function verTodo() { botones.forEach(b => activos.add(b.dataset.v)); }
@@ -3747,9 +4213,15 @@ todas.onclick = () => {
 function irAlAncla() {
   const d = location.hash.length > 1 && document.getElementById(location.hash.slice(1));
   if (!d) return;
-  if (d.hidden) { if (d.dataset.v) activos.add(d.dataset.v); else verTodo(); pintar(); }
+  if (d.hidden) { activos.add(d.dataset.v); pintar(); }
+  else if (d.classList.contains("plegado")) { verTodo(); pintar(); }
   d.scrollIntoView();
 }
+document.querySelectorAll(".ver-tema").forEach(b => b.onclick = () => {
+  const cap = b.closest(".capitulo");
+  verTodo(); pintar(); cap.scrollIntoView(); marcarTema();
+  cap.querySelector("h2").setAttribute("tabindex", "-1"); cap.querySelector("h2").focus({ preventScroll: true });
+});
 pintar(); irAlAncla(); marcarTema();
 addEventListener("hashchange", irAlAncla);
 @@PREGUNTAS@@
@@ -3757,7 +4229,7 @@ document.addEventListener("click", ev => {
   const b = ev.target.closest(".copiar");
   if (!b) return;
   const h = b.closest(".hito"), t = sel => (h.querySelector(sel)?.textContent || "").trim();
-  const fuentes = [...h.querySelectorAll(".fuentes a")].map(a => "- " + a.textContent.trim() + ": " + a.href).join("\\n");
+  const fuentes = [...h.querySelectorAll(".fuentes a:not(.arch)")].map(a => "- " + a.textContent.trim() + ": " + a.href).join("\\n");
   const texto = `Actúa como verificador de datos riguroso e imparcial.
 
 En la entrevista de Jordi Wild a @@INVITADO@@ (@@PROGRAMA@@, @@FECHA_VIDEO@@), en el minuto ${t(".minuto")} (${h.querySelector(".minuto").href}), se dijo literalmente:
@@ -3816,6 +4288,18 @@ blockquote { margin:0; padding-left:16px; border-left:4px solid var(--tono); fon
 .resumen { margin:0 0 12px; font-size:19px; font-weight:600; line-height:1.45; }
 .explicacion { margin:0; font-size:17px; }
 .confianza { margin:14px 0 0; font-size:14px; color:var(--suave); }
+.corregido, .esencial-chip { display:inline-block; vertical-align:middle; margin:22px 0 0 10px; padding:4px 10px; font-size:12px; font-weight:700;
+  text-transform:uppercase; letter-spacing:.08em; border:2px solid var(--tinta); border-radius:var(--r-mini); }
+.esencial-chip { border-color:var(--gris); color:var(--suave); }
+.nota-arch { margin:12px 0 0; font-size:13.5px; color:var(--suave); max-width:62ch; }
+.fuentes .arch { color:var(--gris); font-weight:600; }
+.otros { margin:0; padding-left:0; list-style:none; font-size:15px; }
+.otros li { margin:0 0 12px; overflow-wrap:anywhere; }
+.otros a { font-weight:600; }
+.otros .medio, .otros .alcance { display:block; font-size:13.5px; color:var(--suave); }
+.otros .alcance { color:var(--gris); }
+.historial ul { margin:0; padding-left:20px; font-size:15px; }
+.historial li { margin:4px 0; }
 .fuentes { margin:0; padding-left:22px; font-size:15px; }
 .fuentes li { margin:6px 0; overflow-wrap:anywhere; }
 .fuentes span { color:var(--gris); font-size:13px; white-space:nowrap; }
@@ -3866,7 +4350,7 @@ footer { border-top:3px solid var(--tinta); margin-top:48px; padding:24px 0 72px
 @@MENU@@
 <main class="ancho" data-v="@@V@@">
 <nav class="migas" aria-label="Ruta">@@MIGAS@@</nav>
-<p class="veredicto" data-v="@@V@@">@@VEREDICTO@@</p>
+<p class="veredicto" data-v="@@V@@">@@VEREDICTO@@</p>@@SELLO@@
 <h1>@@AFIRMACION@@</h1>
 <section class="seccion"><h2>Lo que dijo</h2>@@CITA@@</section>
 <section class="seccion"><h2>Por qué</h2>@@POR_QUE@@</section>
@@ -3889,6 +4373,79 @@ footer { border-top:3px solid var(--tinta); margin-top:48px; padding:24px 0 72px
 document.querySelector("[data-copiar]").addEventListener("click", ev => copiarTexto(ev.currentTarget.dataset.enlace, "Enlace copiado."));
 </script>
 @@VISOR@@
+</body>
+</html>
+"""
+
+TEMAS = """<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+@@HEAD_MODO@@
+@@CABECERA@@
+<style>
+:root { --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--fondo); color:var(--tinta); font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; -webkit-text-size-adjust:100%; overflow-wrap:break-word; }
+a { color:var(--tinta); text-underline-offset:3px; }
+main.ancho { padding-bottom:72px; }
+.migas { font-size:14px; color:var(--gris); padding-top:18px; }
+.migas a { font-weight:600; color:var(--suave); }
+.cabeza { padding:clamp(24px,4vw,48px) 0 clamp(24px,3.4vw,40px); }
+h1 { font:700 clamp(30px,5.2vw,58px)/1.05 var(--serif); letter-spacing:-0.02em; margin:0 0 14px; text-wrap:balance; }
+.entrada { font-size:17px; max-width:62ch; margin:0; }
+@media (min-width:1000px) { .cabeza { display:grid; grid-template-columns:minmax(0,1.2fr) minmax(0,1fr); gap:0 clamp(32px,5vw,80px); align-items:end; }
+  .cabeza h1 { margin:0; } }
+/* índice de temas: una ficha por tema */
+.temas-rej { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr)); gap:clamp(14px,2vw,24px); }
+.tema-c { min-width:0; display:flex; flex-direction:column; border:2px solid var(--tinta); border-radius:var(--r-caja); padding:clamp(16px,2.2vw,24px); }
+.tema-c h2 { font:700 clamp(22px,2.2vw,26px)/1.15 var(--serif); margin:0 0 6px; }
+.tema-c h2 a { text-decoration:none; } .tema-c h2 a:hover { text-decoration:underline; }
+.t-desc { margin:0 0 14px; font-size:14.5px; color:var(--suave); }
+.t-rot { margin:0 0 6px; font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--gris); }
+.t-filas { list-style:none; margin:0 0 14px; padding:0; }
+.t-filas li { display:grid; grid-template-columns:minmax(0,1fr) auto; align-items:center; gap:2px 12px; padding:8px 0; border-top:1px solid var(--claro); }
+.t-cand { display:flex; align-items:center; gap:8px; font-weight:600; font-size:15px; min-width:0; }
+.t-num { font-size:14px; color:var(--suave); font-variant-numeric:tabular-nums; } .t-num b { color:var(--v-falso); font-size:16px; }
+.barra-reparto.fina { grid-column:1 / -1; height:6px; }
+.t-ir { margin:auto 0 0; font-weight:700; font-size:15px; }
+.t-ir a { display:inline-flex; align-items:center; gap:6px; min-height:40px; text-decoration:none; }
+.t-ir a:hover { text-decoration:underline; }
+.t-ir .flecha { width:18px; height:18px; fill:none; stroke:currentColor; stroke-width:2.2; }
+/* un tema: una columna por candidato */
+.comparar { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr)); gap:clamp(16px,2.4vw,32px); align-items:start; }
+.cand { min-width:0; border-top:3px solid var(--tinta); padding-top:14px; }
+.cand-cab { display:flex; align-items:center; gap:12px; margin:0 0 10px; }
+.retrato.tema { width:52px; height:52px; } .retrato.tema .insignia { width:22px; height:22px; }
+.cand h2 { font:700 clamp(22px,2.2vw,26px)/1.1 var(--serif); margin:0; }
+.cand h2 a { text-decoration:none; } .cand h2 a:hover { text-decoration:underline; }
+.par { margin:2px 0 0; font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--gris); }
+.cand-num { margin:0 0 8px; font-size:15px; } .cand-num b { font:700 30px/1 var(--serif); color:var(--v-falso); margin-right:4px; }
+.cand-des { margin:8px 0 0; font-size:13px; font-weight:600; } .cand-des span { color:var(--tono); }
+.cand-caps { margin:8px 0 14px; font-size:13.5px; color:var(--suave); }
+.t-lista { list-style:none; margin:0; padding:0; }
+.t-lista li { display:flex; flex-direction:column; gap:5px; padding:11px 0; border-top:1px solid var(--claro); }
+.t-lista li > a { font-size:15.5px; line-height:1.42; text-decoration:none; } .t-lista li > a:hover { text-decoration:underline; }
+.t-lista li:not([data-v=falso]):not([data-v=enganoso]) > a { color:var(--suave); }
+.t-lista .chip-v { font-size:10.5px; }
+.t-lista li:not([data-v=falso]):not([data-v=enganoso]) .chip-v { background:none; color:var(--tono); box-shadow:inset 0 0 0 1.5px var(--tono); }
+.t-min { font-size:12px; color:var(--gris); font-variant-numeric:tabular-nums; }
+.otros-temas { margin:40px 0 0; padding-top:14px; border-top:2px solid var(--tinta); font-size:15px; max-width:none; }
+.otros-temas a { font-weight:600; white-space:nowrap; }
+.nota-t { font-size:14px; color:var(--suave); max-width:68ch; }
+footer { border-top:3px solid var(--tinta); margin-top:24px; padding:24px 0 72px; font-size:14.5px; }
+@@CSS_MENU@@
+</style>
+</head>
+<body>
+@@MENU@@
+<main class="ancho">
+@@MIGAS@@
+<div class="cabeza"><h1>@@TITULO@@</h1><p class="entrada">@@ENTRADA@@</p></div>
+@@CUERPO@@
+</main>
+<footer class="pie-solo"><div class="ancho">@@PIE@@</div></footer>
 </body>
 </html>
 """

@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-13T21:47:57+01:00",
+ "generado": "2026-11-14T10:22:15+01:00",
  "aviso": "Verificación asistida por IA, sin revisión de un equipo de periodistas. «falso» no implica intención de mentir. Contrasta siempre con las fuentes enlazadas.",
  "veredictos": {
   "verdadero": "Los datos lo confirman.",
@@ -26,12 +26,19 @@
   "total_afirmaciones": 153,
   "por_veredicto": {
    "falso": 5,
-   "enganoso": 24,
+   "enganoso": 22,
    "mayormente_verdadero": 73,
-   "verdadero": 36,
-   "no_verificable": 15
+   "verdadero": 37,
+   "no_verificable": 16
   },
   "excluidas": 12,
+  "esencial": [
+   "colau-m5982",
+   "colau-m7323",
+   "colau-m2564",
+   "colau-m1483",
+   "colau-m4569"
+  ],
   "temas": [
    {
     "n": 1,
@@ -170,10 +177,10 @@
     "total": 18,
     "por_veredicto": {
      "falso": 0,
-     "enganoso": 7,
-     "mayormente_verdadero": 5,
+     "enganoso": 5,
+     "mayormente_verdadero": 6,
      "verdadero": 3,
-     "no_verificable": 3
+     "no_verificable": 4
     }
    },
    {
@@ -183,10 +190,10 @@
     "total": 7,
     "por_veredicto": {
      "falso": 1,
-     "enganoso": 3,
+     "enganoso": 2,
      "mayormente_verdadero": 1,
      "verdadero": 1,
-     "no_verificable": 1
+     "no_verificable": 2
     }
    },
    {
@@ -196,10 +203,10 @@
     "total": 12,
     "por_veredicto": {
      "falso": 0,
-     "enganoso": 0,
+     "enganoso": 1,
      "mayormente_verdadero": 9,
      "verdadero": 1,
-     "no_verificable": 2
+     "no_verificable": 1
     }
    },
    {
@@ -210,14 +217,14 @@
     "por_veredicto": {
      "falso": 1,
      "enganoso": 4,
-     "mayormente_verdadero": 17,
-     "verdadero": 1,
+     "mayormente_verdadero": 16,
+     "verdadero": 2,
      "no_verificable": 4
     }
    }
   ]
  },
- "nota": "Transcripción automática (Whisper), que puede tener errores en nombres y cifras. El hablante de cada segmento sale de un reconocimiento automático de voces (acierto medido del 97 %; falla sobre todo en frases muy cortas).",
+ "nota": "Transcripción automática (Whisper), que puede tener errores en nombres y cifras. Los nombres mal transcritos más claros se corrigen con un glosario público (https://github.com/PabloPC05/verificacion-podcast/blob/main/entrevistas/glosario.json). El hablante de cada segmento sale de un reconocimiento automático de voces (acierto medido del 97 %; falla sobre todo en frases muy cortas).",
  "segmentos": [
   {
    "inicio_s": 0.0,
@@ -247,7 +254,7 @@
    "inicio_s": 77.88,
    "fin_s": 96.3,
    "hablante": "Jordi Wild",
-   "texto": "Bueno, bueno, bueno. Hacemos historia aquí en The Wall Project con esta serie de entrevistas en las que voy a tener a los cuatro candidatos para presidente, presidenta del país."
+   "texto": "Bueno, bueno, bueno. Hacemos historia aquí en The Wild Project con esta serie de entrevistas en las que voy a tener a los cuatro candidatos para presidente, presidenta del país."
   },
   {
    "inicio_s": 96.3,
@@ -541,7 +548,7 @@
    "inicio_s": 224.98,
    "fin_s": 227.28,
    "hablante": "Ada Colau",
-   "texto": "con Jordi Wilde. Es lo primero que me dijo."
+   "texto": "con Jordi Wild. Es lo primero que me dijo."
   },
   {
    "inicio_s": 228.04,
@@ -3391,7 +3398,7 @@
    "inicio_s": 1623.78,
    "fin_s": 1626.32,
    "hablante": "Jordi Wild",
-   "texto": "Pero eso es lo que la gente de The World Project quiere escuchar, que os mojéis."
+   "texto": "Pero eso es lo que la gente de The Wild Project quiere escuchar, que os mojéis."
   },
   {
    "inicio_s": 1626.44,
@@ -11083,7 +11090,7 @@
    "inicio_s": 5067.92,
    "fin_s": 5070.04,
    "hablante": "Jordi Wild",
-   "texto": "Javier Goyado, Iván Muñoz"
+   "texto": "Javier Collado, Iván Muñoz"
   },
   {
    "inicio_s": 5070.04,
@@ -16243,13 +16250,13 @@
    "inicio_s": 7312.9,
    "fin_s": 7313.7,
    "hablante": "Jordi Wild",
-   "texto": "Alberto Núñez Feijo."
+   "texto": "Alberto Núñez Feijóo."
   },
   {
    "inicio_s": 7315.4,
    "fin_s": 7325.96,
    "hablante": "Ada Colau",
-   "texto": "Alberto Núñez Feijo es un hombre de derechas bastante sincero, porque ha empezado la campaña dándonos argumentos para no votarle."
+   "texto": "Alberto Núñez Feijóo es un hombre de derechas bastante sincero, porque ha empezado la campaña dándonos argumentos para no votarle."
   },
   {
    "inicio_s": 7325.96,

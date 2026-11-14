@@ -1,0 +1,25 @@
+{
+ "criterio": "Las afirmaciones con un dato concreto sobre los temas centrales de la campaña, elegidas con el mismo criterio para los tres candidatos, salgan bien o mal.",
+ "afirmaciones": [
+  {
+   "id": "m5982",
+   "por_que": "Vivienda: cuántas casas tienen los grandes fondos."
+  },
+  {
+   "id": "m7323",
+   "por_que": "Rivales: lo que atribuye a Feijóo sobre pensiones y salario mínimo."
+  },
+  {
+   "id": "m2564",
+   "por_que": "Trenes: las devoluciones por retraso tras la liberalización."
+  },
+  {
+   "id": "m1483",
+   "por_que": "Corrupción: el historial de su espacio político."
+  },
+  {
+   "id": "m4569",
+   "por_que": "Violencia machista: el origen de los autores."
+  }
+ ]
+}

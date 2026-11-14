@@ -1,0 +1,727 @@
+[
+  {
+    "indice": 0,
+    "minuto": "1:53:36",
+    "afirmacion": "Donald Trump está provocando guerras en distintos lugares del mundo.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "PBS NewsHour (AP): US strikes Venezuela and says its leader Maduro has been captured and flown out of the country",
+        "url": "https://www.pbs.org/newshour/world/us-strikes-venezuela-and-says-its-leader-maduro-has-been-captured-and-flown-out-of-the-country",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Security Council Report: Venezuela, emergency meeting (What's in Blue, 5-1-2026)",
+        "url": "https://www.securitycouncilreport.org/whatsinblue/2026/01/venezuela-emergency-meeting.php",
+        "tipo": "apoyo"
+      },
+      {
+        "titulo": "AP (WCAX): What to know about U.S.-Israel attacks on Iran (28-2-2026)",
+        "url": "https://www.wcax.com/2026/02/28/what-know-about-us-israel-attacks-iran/?outputType=amp",
+        "tipo": "agencia"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio de veredicto. Confirmo fechas con AP y PBS (3-1-2026 y 28-2-2026) y añado Security Council Report; la valoración de peligro para España queda fuera de lo comprobable."
+  },
+  {
+    "indice": 1,
+    "minuto": "1:53:36",
+    "afirmacion": "Trump está castigando con aranceles a Europa y a España.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.eldiario.es/internacional/trump-anuncia-aranceles-adicionales-25-coches-camiones-ue_1_13188968.amp.html",
+        "motivo": "Versión AMP de la misma noticia; se cita la versión canónica que sí se ha abierto."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "elDiario.es: Trump anuncia aranceles adicionales del 25 % a coches y camiones de la UE (1-5-2026)",
+        "url": "https://www.eldiario.es/internacional/trump-anuncia-aranceles-adicionales-25-coches-camiones-ue_1_13188968.html",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Euronews: La UE aprueba un acuerdo comercial con EE UU pese a la incertidumbre transatlántica (20-5-2026)",
+        "url": "https://es.euronews.com/2026/05/20/la-ue-aprueba-un-acuerdo-comercial-con-eeuu-pese-a-la-incertidumbre-transatlantica",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Euronews: Trump amenaza a Europa con aranceles del 100 % por la tasa digital (26-6-2026)",
+        "url": "https://es.euronews.com/2026/06/26/trump-amenaza-a-europa-con-aranceles-del-100-por-la-tasa-digital",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Menorca.info: Bruselas valora positivamente los nuevos aranceles de EEUU por ajustarse al acuerdo con la UE (24-7-2026)",
+        "url": "https://www.menorca.info/actualidad/internacional/2026/07/24/2676359/bruselas-valora-positivamente-nuevos-aranceles-eeuu-por-ajustarse-acuerdo-ue.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio de veredicto. Corrijo la explicación: el 25 % anunciado el 1-5-2026 no consta aplicado y el régimen vigente es el pacto con techo del 15 % y el esquema del 24-7-2026; añado Euronews y Menorca.info (Europa Press)."
+  },
+  {
+    "indice": 2,
+    "minuto": "1:54:37",
+    "afirmacion": "La inflación que sufre España está relacionada con las guerras que provoca Trump.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.que.es/2026/10/30/ipc-octubre-2026-coste-vida/",
+        "motivo": "Compara el 4,9 % con febrero de 2023, dato que no coincide con la nota del INE; se sustituye por la nota oficial del INE."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "INE: Indicador adelantado del IPC, octubre de 2026 (nota de prensa, 30-10-2026)",
+        "url": "https://www.ine.es/dyngs/Prensa/adIPC1026.pdf",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Diario de León: La guerra en Irán enquista la inflación y deja los precios disparados hasta 2027 (10-10-2026)",
+        "url": "https://www.diariodeleon.es/economia/261010/2099819/guerra-iran-enquista-inflacion-precios-disparados.html",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "El Independiente: El Banco de España alerta de que la inflación sube al 3,6 % en el escenario central (18-6-2026)",
+        "url": "https://www.elindependiente.com/economia/2026/06/18/banco-espana-alerta-inflacion-sube-36-escenario-central-adverso/",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Sin cambio de veredicto. Sustituyo Que.es por la nota del INE (fuente primaria del 4,9 %) y apoyo el vínculo con la guerra en el Banco de España (vía prensa), Bloomberg Línea y Euronews."
+  },
+  {
+    "indice": 3,
+    "minuto": "1:54:37",
+    "afirmacion": "Trump interviene en terceros países, emprende acciones bélicas sin respetar a la ONU y cambia gobiernos ajenos.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "PBS NewsHour (AP): US strikes Venezuela and says its leader Maduro has been captured and flown out of the country",
+        "url": "https://www.pbs.org/newshour/world/us-strikes-venezuela-and-says-its-leader-maduro-has-been-captured-and-flown-out-of-the-country",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Security Council Report: Venezuela, emergency meeting (What's in Blue, 5-1-2026)",
+        "url": "https://www.securitycouncilreport.org/whatsinblue/2026/01/venezuela-emergency-meeting.php",
+        "tipo": "apoyo"
+      },
+      {
+        "titulo": "AP (WCAX): What to know about U.S.-Israel attacks on Iran (28-2-2026)",
+        "url": "https://www.wcax.com/2026/02/28/what-know-about-us-israel-attacks-iran/?outputType=amp",
+        "tipo": "agencia"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio de veredicto. Quito la mención a Delcy Rodríguez como presidenta encargada, que no se pudo contrastar en fuentes abiertas, y añado PBS/AP, Security Council Report y AP sobre Irán."
+  },
+  {
+    "indice": 4,
+    "minuto": "1:55:38",
+    "afirmacion": "Durante dos años se masacró a la población de Gaza, en concreto a niños y niñas, mientras los gobiernos europeos no actuaron.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "ONU (UN News): Informe de la Comisión Internacional Independiente de Investigación sobre los niños de Gaza (23-6-2026)",
+        "url": "https://news.un.org/en/story/2026/06/1167790",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Congreso de los Diputados: BOCG, Proyecto de Ley de medidas urgentes contra el genocidio en Gaza (procedente del Real Decreto-ley 10/2025, 17-10-2025)",
+        "url": "https://www.congreso.es/public_oficiales/L15/CONG/BOCG/A/BOCG-15-A-70-1.PDF",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "El Independiente: Bruselas propone retirar ventajas comerciales a Israel y sancionar a 2 ministros (17-9-2025)",
+        "url": "https://www.elindependiente.com/internacional/2025/09/17/bruselas-propone-retirar-ventajas-comerciales-a-israel-y-sancionar-a-2-ministros-es-necesario-un-alto-el-fuego/",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Sin cambio de veredicto. Corrijo la atribución de la cifra (comisión de la ONU, no UNICEF) y sustituyo el «embargo de facto desde 2023» por el decreto-ley 10/2025, citado desde el BOCG."
+  },
+  {
+    "indice": 5,
+    "minuto": "1:56:41",
+    "afirmacion": "Con la flotilla, por primera vez 14 o 15 gobiernos emitieron un comunicado contra el Gobierno de Israel diciendo que la flotilla estaba bajo su protección por ser una misión humanitaria, algo sin precedentes.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.exteriores.gob.es/ca/Comunicacion/Comunicados/Paginas/2025_COMUNICADOS/Comunicado-de-Espana-y-otros-15-paises-sobre-la-flotilla-a-Gaza.aspx",
+        "motivo": "Versión en catalán del mismo comunicado; se cita la versión en español, leída completa."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Ministerio de Asuntos Exteriores: Comunicado de España y otros países sobre la flotilla a Gaza (16-9-2025)",
+        "url": "https://www.exteriores.gob.es/es/Comunicacion/Comunicados/Paginas/2025_COMUNICADOS/Comunicado-de-Espana-y-otros-15-paises-sobre-la-flotilla-a-Gaza.aspx",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "Euronews: La flotilla está en aguas internacionales sobrevolada por drones (28-9-2025)",
+        "url": "https://es.euronews.com/2025/09/28/la-flotilla-esta-en-aguas-internacionales-sobrevolada-por-drones",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Sin cambio de veredicto. El texto oficial lleva 17 firmantes (no 15 o 16), no nombra a Israel ni habla de protección, y «primera vez» no es comprobable; el cierre de la cita «eso no había pasado nunca» es de Colau aunque la separación de voces lo asigna a Wild por solaparse ambas voces."
+  },
+  {
+    "indice": 6,
+    "minuto": "1:56:41",
+    "afirmacion": "Hubo manifestaciones masivas en España contra la Vuelta ciclista y una huelga general por Palestina.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "PBS NewsHour (AP): Over 100,000 pro-Palestinian protesters forced early end to Spanish Vuelta, authorities say (14-9-2025)",
+        "url": "https://www.pbs.org/newshour/world/over-100000-pro-palestinian-protesters-forced-early-end-to-spanish-vuelta-authorities-say",
+        "tipo": "agencia"
+      },
+      {
+        "titulo": "RTVC: Trabajadores y estudiantes secundan paros y salen a la calle en toda España por Gaza (15-10-2025)",
+        "url": "https://rtvc.es/canarias-huelga-general-palestina-15-octubre-2025/",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio de veredicto. Añado la cifra de manifestantes (AP/PBS) y la cobertura de RTVC, que describe un seguimiento desigual el 15-10; la huelga fue parcial."
+  },
+  {
+    "indice": 7,
+    "minuto": "1:57:42",
+    "afirmacion": "Los puertos italianos impulsaron la huelga general en Italia al advertir de que paralizarían todos los puertos si se tocaba la flotilla.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "USB (Unione Sindacale di Base): USB calls for general strike on 22 September: defend the Flotilla, stop the genocide in Gaza, end the war economy (20-9-2025)",
+        "url": "https://www.usb.it/leggi-notizia/usb-calls-for-general-strike-on-22-september-defend-the-flotilla-stop-the-genocide-in-gaza-end-the-war-economy-2042.pdf",
+        "tipo": "apoyo"
+      },
+      {
+        "titulo": "Euronews: Las huelgas generales y las protestas perturbarán los desplazamientos en Italia (3-10-2025)",
+        "url": "https://es.euronews.com/2025/10/03/las-huelgas-generales-y-las-protestas-perturbaran-los-desplazamientos-en-italia",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio de veredicto. Añado el comunicado de USB (asamblea de estibadores en Génova) y Euronews; precisa que hubo dos huelgas (22-9 y 3-10)."
+  },
+  {
+    "indice": 8,
+    "minuto": "1:57:42",
+    "afirmacion": "La presión social logró que gobiernos europeos que no cuestionaban la presencia de Israel en Eurovisión, ni suspender acuerdos comerciales o revisar el tráfico de armas, cambiaran su posición.",
+    "veredicto_antes": "enganoso",
+    "veredicto_despues": "enganoso",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Euronews: España suspende su participación en el festival de Eurovisión (4-12-2025)",
+        "url": "https://es.euronews.com/2025/12/04/espana-suspende-su-participacion-en-el-festival-de-eurovision",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Congreso de los Diputados: BOCG, Proyecto de Ley de medidas urgentes contra el genocidio en Gaza (procedente del Real Decreto-ley 10/2025, 17-10-2025)",
+        "url": "https://www.congreso.es/public_oficiales/L15/CONG/BOCG/A/BOCG-15-A-70-1.PDF",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "El Independiente: Bruselas propone retirar ventajas comerciales a Israel y sancionar a 2 ministros (17-9-2025)",
+        "url": "https://www.elindependiente.com/internacional/2025/09/17/bruselas-propone-retirar-ventajas-comerciales-a-israel-y-sancionar-a-2-ministros-es-necesario-un-alto-el-fuego/",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Sin cambio de veredicto (enganoso). Añado que las retiradas de Eurovisión las decidieron cadenas públicas y sustituyo el «embargo de facto desde 2023» por el BOCG y la aprobación en el Congreso."
+  },
+  {
+    "indice": 9,
+    "minuto": "1:58:42",
+    "afirmacion": "A los miembros de la flotilla les atacaron con drones, el ejército israelí los detuvo y los metió en la cárcel.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://cnnespanol.cnn.com/2025/10/02/mundo/que-paso-flotilla-global-sumud-gaza-israel-trax",
+        "motivo": "No se pudo abrir (HTTP 451, bloqueado por motivos legales)."
+      },
+      {
+        "url": "https://maldita.es/malditobulo/20251007/desinformaciones-flotilla-global-sumud-gaza/",
+        "motivo": "La página se abre pero el cuerpo del artículo no es legible de forma automática, por lo que no se pudo comprobar lo que dice sobre los drones."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Catalan News: Former Barcelona mayor denounces 'degrading treatment' by Israel after flotilla interception (6-10-2025)",
+        "url": "https://www.catalannews.com/society-science/item/former-barcelona-denounces-degrading-treatment-israel-flotilla-6-october-2025",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "PBS NewsHour (AP): Activist flotilla seeking to break the Israeli blockade of Gaza says drones attacked its boats (24-9-2025)",
+        "url": "https://www.pbs.org/newshour/amp/world/activist-flotilla-seeking-to-break-the-israeli-blockade-of-gaza-says-drones-attacked-its-boats",
+        "tipo": "agencia"
+      },
+      {
+        "titulo": "Euronews: Greta Thunberg among 171 flotilla activists deported from Israel after failed bid to reach Gaza (6-10-2025)",
+        "url": "https://www.euronews.com/2025/10/06/greta-thunberg-among-171-flotilla-activists-deported-from-israel-after-failed-bid-to-reach",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio de veredicto. Sustituyo CNN (HTTP 451) y Maldita (ilegible) por AP/PBS y Euronews, y acoto lo documentado sobre los drones: explosiones y objetos lanzados, sin autoría acreditada."
+  },
+  {
+    "indice": 10,
+    "minuto": "1:58:42",
+    "afirmacion": "Tras la flotilla la violencia en Gaza continuó pero con menor intensidad, y Europa empezó a modificar su posición.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "AP (OPB): Over 1,000 people killed during Gaza ceasefire, Palestinian authorities say (18-6-2026)",
+        "url": "https://www.opb.org/article/2026/06/18/over-1000-people-killed-during-gaza-ceasefire-palestinian-authorities-say/",
+        "tipo": "agencia"
+      },
+      {
+        "titulo": "OCHA: Humanitarian Situation Update #357, Gaza Strip (12-2-2026)",
+        "url": "https://www.ochaopt.org/content/humanitarian-situation-update-357-gaza-strip",
+        "tipo": "primaria"
+      },
+      {
+        "titulo": "El Independiente: Bruselas propone retirar ventajas comerciales a Israel y sancionar a 2 ministros (17-9-2025)",
+        "url": "https://www.elindependiente.com/internacional/2025/09/17/bruselas-propone-retirar-ventajas-comerciales-a-israel-y-sancionar-a-2-ministros-es-necesario-un-alto-el-fuego/",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Sin cambio de veredicto. Aporto cifras de AP, UNICEF y OCHA para comparar la intensidad antes y después del alto el fuego y añado la propuesta de la Comisión Europea como cambio de posición."
+  },
+  {
+    "indice": 11,
+    "minuto": "1:59:45",
+    "afirmacion": "El PSOE (Gobierno) empezó siendo favorable a Israel y ahora es de los gobiernos europeos que más se ha posicionado a favor de Palestina y más ha cambiado sus relaciones con Israel.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.lamoncloa.gob.es/presidente/actividades/Paginas/2023/231123-sanchez-viaje-israel.aspx",
+        "motivo": "No se pudo abrir desde el entorno de auditoría (conexión rechazada por el servidor); no se cita lo que no se ha leído."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Congreso de los Diputados: BOCG, Proyecto de Ley de medidas urgentes contra el genocidio en Gaza (procedente del Real Decreto-ley 10/2025, 17-10-2025)",
+        "url": "https://www.congreso.es/public_oficiales/L15/CONG/BOCG/A/BOCG-15-A-70-1.PDF",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Sin cambio de veredicto. Descarto la página de Moncloa porque no se pudo abrir y apoyo la evolución con Ara, Al Jazeera y el BOCG; añado que el Gobierno afirmaba en 2023 que no exportaba armas."
+  },
+  {
+    "indice": 12,
+    "minuto": "2:01:52",
+    "afirmacion": "Feijóo ha empezado la campaña diciendo que bajará las pensiones y el salario mínimo.",
+    "veredicto_antes": "falso",
+    "veredicto_despues": "falso",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Ara: El PP se vuelve a liar con las pensiones: Esther Muñoz dice que el sistema «colapsará» (14-10-2026)",
+        "url": "https://es.ara.cat/politica/pp-vuelve-liar-pensiones-esther-munoz-dice-sistema-colapsara_1_5879033.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio de veredicto (falso, alta). Añado la fuente de Ara sobre las palabras de Ester Muñoz y la respuesta de Feijóo; ninguna fuente le atribuye anunciar bajadas."
+  },
+  {
+    "indice": 13,
+    "minuto": "2:01:52",
+    "afirmacion": "José María Figaredo, diputado de Vox, dijo que hay que salir a cazar inmigrantes.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Galicia Press (Europa Press): Figaredo (Vox) se reafirma en «cazar» a inmigrantes ilegales en Ceuta (18-8-2026)",
+        "url": "https://www.galiciapress.es/articulo/politica/2026-08-18/5987531-figaredo-vox-reafirma-cazar-inmigrantes-ilegales-ceuta-centren-foco-interes-espanoles",
+        "tipo": "agencia"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Sin cambio de veredicto. Añado El Plural y Europa Press (Galicia Press) sobre la reafirmación del 18-8 y la comunicación oficial de Igualdad; quito fuentes no abiertas."
+  },
+  {
+    "indice": 14,
+    "minuto": "2:01:52",
+    "afirmacion": "Tras las palabras de Figaredo hubo agresiones a inmigrantes en la calle y existe una relación directa entre el discurso de odio y esa violencia.",
+    "veredicto_antes": "no_verificable",
+    "veredicto_despues": "no_verificable",
+    "cambia_veredicto": false,
+    "confianza_antes": "baja",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.galiciapress.es/articulo/politica/2026-08-18/5987531-figaredo-vox-reafirma-cazar-inmigrantes-ilegales-ceuta-centren-foco-interes-espanoles",
+        "motivo": "Recoge la reafirmación de Figaredo del 18-8-2026 pero no documenta agresiones a inmigrantes; se usa en la afirmación sobre Figaredo."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Africanews: Police in Ceuta clash with anti-migrant protesters as tensions rise (28-8-2026)",
+        "url": "https://www.africanews.com/amp/2026/08/28/police-in-ceuta-clash-with-anti-migrant-protesters-as-tensions-rise/",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Le360: Ceuta protests turn violent as migrant camps attacked, aid convoy blocked (28-8-2026)",
+        "url": "https://en.le360.ma/society/ceuta-protests-turn-violent-as-migrant-camps-attacked-aid-convoy-blocked_AKN3LR736FFC3DHFG6BFF6XGKQ/",
+        "tipo": "apoyo"
+      },
+      {
+        "titulo": "El Salto: «La violencia está en todas partes»: denuncian agresiones continuas contra las personas migrantes en Ceuta (3-9-2026)",
+        "url": "https://www.elsaltodiario.com/ceuta/violencia-todas-partes-denuncian-agresiones-continuas-personas-migrantes-ceuta",
+        "tipo": "apoyo"
+      },
+      {
+        "titulo": "Diario de León: Nueva denuncia contra Figaredo (Vox) por llamar a «cazar» a los migrantes que entraron ilegalmente en Ceuta (10-8-2026)",
+        "url": "https://www.diariodeleon.es/nacional/260810/2093922/nueva-denuncia-figaredo-vox-llamar-cazar-migrantes-entraron-ilegalmente-ceuta.html",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Ministerio de Igualdad: El Ministerio de Igualdad insta a la Fiscalía y a la Autoridad Independiente a actuar por las declaraciones de José María Figaredo sobre los migrantes en Ceuta (11-8-2026)",
+        "url": "https://www.igualdad.gob.es/comunicacion/sala-de-prensa/el-ministerio-de-igualdad-insta-a-la-fiscalia-y-a-la-autoridad-independiente-a-actuar-por-las-declaraciones-de-jose-maria-figaredo-sobre-los-migrantes-en-ceuta/",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio de veredicto. Con una búsqueda más completa hay agresiones documentadas en Ceuta, pero ninguna fuente las liga con Figaredo; subo la confianza de baja a media."
+  },
+  {
+    "indice": 15,
+    "minuto": "2:02:58",
+    "afirmacion": "Vox dice que el franquismo fue bueno.",
+    "veredicto_antes": "enganoso",
+    "veredicto_despues": "enganoso",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://maldita.es/malditahemeroteca/20220714/el-discurso-y-la-posicion-de-vox-sobre-el-franquismo/",
+        "motivo": "La página se abre pero el cuerpo del artículo no es legible de forma automática, por lo que no se pudo comprobar qué documenta."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Ara: Sobre los que piensan que el franquismo fue «bueno» o «muy bueno» (octubre de 2025, datos del CIS)",
+        "url": "https://es.ara.cat/politica/piensan-franquismo-bueno-bueno_129_5533086.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "ATRIBUCIÓN: «Lo dice literalmente» corresponde a una pregunta de Jordi Wild (segmento de 1 s asignado a su voz) y Colau responde con «muchos exponentes de Vox han reivindicado…», así que reformulo la afirmación sin «literalmente». Veredicto sin cambio (enganoso): no hay declaración oficial de Vox que diga que el franquismo fue bueno."
+  },
+  {
+    "indice": 16,
+    "minuto": "2:02:58",
+    "afirmacion": "Muchos exponentes de Vox han reivindicado o banalizado el franquismo.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.deia.eus/actualidad/2020/10/26/ortega-smith-niega-condenar-franquismo-4672031.amp.html",
+        "motivo": "No se pudo abrir (HTTP 406), por lo que no se puede comprobar lo que dice."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Ara: Sobre los que piensan que el franquismo fue «bueno» o «muy bueno» (octubre de 2025, datos del CIS)",
+        "url": "https://es.ara.cat/politica/piensan-franquismo-bueno-bueno_129_5533086.html",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "Europa Press (vía Diario Siglo XXI): Figaredo (Vox) no condena el franquismo y dice que España padece ahora el peor Gobierno de la historia (20-11-2025)",
+        "url": "https://www.diariosigloxxi.com/texto-ep/mostrar/20251120135720/figaredo-vox-no-condena-franquismo-dice-espana-padece-ahora-peor-gobierno-historia",
+        "tipo": "agencia"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio de veredicto. Descarto Deia (HTTP 406) y la referencia a Ortega Smith de 2020, que no se pudo verificar; la afirmación se apoya en Público, Ara y Europa Press."
+  },
+  {
+    "indice": 17,
+    "minuto": "2:02:58",
+    "afirmacion": "La dictadura franquista mató a cientos de miles de personas.",
+    "veredicto_antes": "enganoso",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": true,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Público: Vox amplifica su apología del franquismo mientras un PP incómodo busca apartarlo del debate público",
+        "url": "https://www.publico.es/politica/vox-amplifica-apologia-franquismo-pp-incomodo-busca-apartarlo-debate-publico.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Cambio enganoso → mayormente_verdadero: la historiografía va de 130.000 a 200.000 víctimas, así que «cientos de miles» es un redondeo al alza dentro de ese rango. No he podido abrir una fuente oficial (BOE y Ministerio no respondieron), por eso la confianza es media."
+  },
+  {
+    "indice": 18,
+    "minuto": "2:03:58",
+    "afirmacion": "Acaban de detener a la cúpula de Núcleo Nacional, un grupo que se dedica a dar palizas a la gente por la calle.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "enganoso",
+    "cambia_veredicto": true,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Diari de Tarragona (Europa Press): La Policía Nacional detiene a 12 miembros del grupo neonazi Núcleo Nacional en siete provincias (6-11-2026)",
+        "url": "https://www.diaridetarragona.com/espana/275089/policia-nacional-detiene-12-miembros-grupo-neonazi-nucleo-nacional-siete-provincias.html",
+        "tipo": "agencia"
+      },
+      {
+        "titulo": "elDiario.es: Detenidos 14 miembros de la cúpula de Núcleo Nacional (6-11-2026)",
+        "url": "https://www.eldiario.es/1_d02e0f",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Cambio mayormente_verdadero → enganoso: la detención de la cúpula es cierta, pero los cargos conocidos (odio, asociación ilícita, armas) no incluyen palizas y rige la presunción de inocencia. Añado Diari de Tarragona (Europa Press) y elDiario.es."
+  },
+  {
+    "indice": 19,
+    "minuto": "2:03:58",
+    "afirmacion": "Vox tiene complicidades con grupos que son directamente nazis.",
+    "veredicto_antes": "no_verificable",
+    "veredicto_despues": "no_verificable",
+    "cambia_veredicto": false,
+    "confianza_antes": "baja",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Demócrata: Who are the detainees of Núcleo Nacional",
+        "url": "https://www.democrata.es/en/courts/who-are-the-detainees-of-nucleo-nacional-the-neo-nazi-alberto-pugilato-and-the-founder-of-noviembre-nacional-among-the-14-arrested/",
+        "tipo": "prensa"
+      },
+      {
+        "titulo": "CIDOB (reproduce El País, 25-10-2025): La ultraderecha que llama «derechita» a Abascal sale del rincón y luce adeptos jóvenes",
+        "url": "https://www.cidob.org/cidob-en-medios/ultraderecha-llama-derechita-abascal-sale-del-rincon-luce-adeptos-jovenes",
+        "tipo": "apoyo"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio de veredicto (no_verificable). Tras buscar vínculos entre Vox y Núcleo Nacional sin hallarlos en fuentes fidedignas subo la confianza a media; añado CIDOB y Demócrata."
+  },
+  {
+    "indice": 20,
+    "minuto": "2:03:58",
+    "afirmacion": "Vox es cómplice de Desokupa, que da palizas a la gente por la calle.",
+    "veredicto_antes": "no_verificable",
+    "veredicto_despues": "no_verificable",
+    "cambia_veredicto": false,
+    "confianza_antes": "baja",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.lamarea.com/2024/07/13/oficinas-antiocupas-pp-vox",
+        "motivo": "La página se abre pero no trata la relación entre Vox y Desokupa; no dice lo que se le atribuía."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "elDiario.es: Vox promete contratar a Desokupa en Alcorcón si logra gobernar el Ayuntamiento (30-11-2022)",
+        "url": "https://www.eldiario.es/madrid/vox-promete-contratar-desokupa-alcorcon-si-logra-gobernar-ayuntamiento_1_9757767.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio de veredicto (no_verificable). Descarto La Marea (no trata la relación Vox-Desokupa) y añado el dato de Vox Alcorcón (elDiario.es); confianza a media."
+  },
+  {
+    "indice": 21,
+    "minuto": "2:03:58",
+    "afirmacion": "Vox y Desokupa se manifiestan y se fotografían juntos.",
+    "veredicto_antes": "no_verificable",
+    "veredicto_despues": "no_verificable",
+    "cambia_veredicto": false,
+    "confianza_antes": "baja",
+    "confianza_despues": "baja",
+    "fuentes_descartadas": [
+      {
+        "url": "https://www.lamarea.com/2024/07/13/oficinas-antiocupas-pp-vox",
+        "motivo": "La página se abre pero no trata la relación entre Vox y Desokupa; no dice lo que se le atribuía."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "elDiario.es: Vox promete contratar a Desokupa en Alcorcón si logra gobernar el Ayuntamiento (30-11-2022)",
+        "url": "https://www.eldiario.es/madrid/vox-promete-contratar-desokupa-alcorcon-si-logra-gobernar-ayuntamiento_1_9757767.html",
+        "tipo": "prensa"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio de veredicto (no_verificable). Hallada una aparición conjunta Esteve-Abascal (marzo de 2024) pero ninguna manifestación conjunta; la confianza sigue baja porque la búsqueda se agotó por límite de consultas."
+  },
+  {
+    "indice": 22,
+    "minuto": "2:03:58",
+    "afirmacion": "Vox (Abascal) se fotografía con Milei y con Trump.",
+    "veredicto_antes": "verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "alta",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio de veredicto. Corrijo la fecha del encuentro con Milei: noviembre de 2026 (Perfil, 4-11-2026), no el 14-3-2026 de la verificación anterior."
+  },
+  {
+    "indice": 23,
+    "minuto": "2:05:00",
+    "afirmacion": "Milei está destrozando la economía y los servicios públicos de Argentina.",
+    "veredicto_antes": "enganoso",
+    "veredicto_despues": "enganoso",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio de veredicto (enganoso). Corrijo un dato: el «32,3 % de pobreza en el primer semestre de 2026» no figura en ninguna fuente abierta y coincide con el aumento salarial; el último dato citado de pobreza es 28,2 % (2S 2025). INDEC no se pudo abrir."
+  },
+  {
+    "indice": 24,
+    "minuto": "2:05:00",
+    "afirmacion": "Milei reprime con fuerza las protestas sociales en Argentina.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "alta",
+    "fuentes_descartadas": [
+      {
+        "url": "https://misionesonline.net/2025/01/13/amnistia-internacional-lanza-duras-criticas-al-protocolo-antipiquetes-de-milei-observamos-el-uso-abusivo-y-desproporcionado-de-gases-lacrimogenos-y-balas-de-goma/",
+        "motivo": "No se pudo abrir (HTTP 402)."
+      },
+      {
+        "url": "https://www.elciudadano.com/?p=1141827",
+        "motivo": "No se pudo abrir (HTTP 403)."
+      }
+    ],
+    "fuentes_nuevas": [
+      {
+        "titulo": "Human Rights Watch: Informe mundial 2026, Argentina",
+        "url": "https://www.hrw.org/world-report/2026/country-chapters/argentina",
+        "tipo": "apoyo"
+      },
+      {
+        "titulo": "Amnistía Internacional: Informe sobre Argentina (diciembre de 2024 a noviembre de 2025)",
+        "url": "https://www.amnesty.org/es/location/americas/south-america/argentina/report-argentina/",
+        "tipo": "apoyo"
+      }
+    ],
+    "tiene_fuente_primaria": false,
+    "nota": "Sin cambio de veredicto; subo la confianza a alta con el informe de Amnistía y el informe mundial 2026 de HRW (informes originales de las organizaciones). Descarto Misiones Online (HTTP 402) y El Ciudadano (HTTP 403)."
+  },
+  {
+    "indice": 25,
+    "minuto": "2:06:01",
+    "afirmacion": "En un mitin Colau criticó a Cayetana Álvarez de Toledo y habló de subir los impuestos a sus «amigos pijos».",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "verdadero",
+    "cambia_veredicto": true,
+    "confianza_antes": "alta",
+    "confianza_despues": "media",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [],
+    "tiene_fuente_primaria": false,
+    "nota": "Cambio mayormente_verdadero → verdadero: la cita de Ara coincide literalmente con lo que Colau cuenta («amigos pijos»); «crujir» y «ricachones» son de Wild. Bajo la confianza a media porque solo hay cobertura de Ara (una fuente independiente)."
+  },
+  {
+    "indice": 26,
+    "minuto": "2:08:04",
+    "afirmacion": "Pedro Sánchez dice que la economía va estupendamente.",
+    "veredicto_antes": "mayormente_verdadero",
+    "veredicto_despues": "mayormente_verdadero",
+    "cambia_veredicto": false,
+    "confianza_antes": "media",
+    "confianza_despues": "baja",
+    "fuentes_descartadas": [],
+    "fuentes_nuevas": [
+      {
+        "titulo": "INE: Indicador adelantado del IPC, octubre de 2026 (nota de prensa, 30-10-2026)",
+        "url": "https://www.ine.es/dyngs/Prensa/adIPC1026.pdf",
+        "tipo": "primaria"
+      }
+    ],
+    "tiene_fuente_primaria": true,
+    "nota": "Sin cambio de veredicto; bajo la confianza a baja: solo hay una cita de Sánchez (mayo de 2024, «cohete») y ninguna de 2026 con «estupendamente». Añado el INE como fuente de la inflación."
+  }
+]

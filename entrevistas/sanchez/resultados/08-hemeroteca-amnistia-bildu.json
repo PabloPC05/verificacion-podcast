@@ -4,25 +4,47 @@
     "cita": "yo creo que efectivamente cambio de opinión Y además lo he reconocido.",
     "afirmacion": "Pedro Sánchez ha cambiado de opinión sobre los indultos y la amnistía a los líderes del procés y lo ha reconocido públicamente.",
     "veredicto": "verdadero",
-    "explicacion": "Antes del 23-J de 2023 Sánchez negó repetidamente que fuera posible una amnistía (10-11-2022 en laSexta: «no entra en la legislación y en la Constitución española»; 19 y 20-7-2023 en laSexta y TVE). El 28-1-2024, en una entrevista en La Vanguardia, reconoció expresamente su «cambio de opinión» respecto a la amnistía, aunque lo atribuyó a que «la situación [en Cataluña] ha evolucionado». Tras la sentencia del TC de 26-6-2025 el PSOE sostuvo que siempre defendió su constitucionalidad, lo que matiza ese reconocimiento.",
+    "explicacion": "Antes del 23-J de 2023 Sánchez negó la amnistía (10-11-2022 en laSexta: «no entra en la legislación y en la Constitución española») y, el 28-1-2024, en una entrevista en La Vanguardia reconoció su «cambio de opinión», que atribuyó a que «la situación [en Cataluña] ha evolucionado» (Maldita); Europa Press recoge esa entrevista y su justificación: «una apuesta clara por la convivencia». Con los indultos pasó algo parecido: en 2014 pidió acabar con los indultos políticos, tras la sentencia de 2019 dijo que los condenados cumplirían «íntegramente las penas» y el 21-6-2021 anunció que propondría indultar a los nueve condenados (Maldita).",
     "confianza": "alta",
     "fuentes": [
-      {"titulo": "Maldita.es: Cuando Pedro Sánchez decía 'no' a la amnistía: «No entra en la Constitución» (actualizado 27-6-2025)", "url": "https://maldita.es/malditahemeroteca/20231031/pedro-sanchez-amnistia-constitucion/"}
+      {
+        "titulo": "Maldita.es: Cuando Pedro Sánchez decía 'no' a la amnistía: «No entra en la Constitución»",
+        "url": "https://maldita.es/malditahemeroteca/20231031/pedro-sanchez-amnistia-constitucion/"
+      },
+      {
+        "titulo": "Última Hora (Europa Press): Sánchez asegura que incluir a Junts o ERC en la gobernabilidad de España fortalece la democracia (28-1-2024)",
+        "url": "https://www.ultimahora.es/noticias/comunidades/2024/01/28/2094617/sanchez-asegura-incluir-junts-erc-gobernabilidad-espana-fortalece-democracia.html"
+      },
+      {
+        "titulo": "Maldita.es: Cuando Pedro Sánchez se oponía a otorgar los indultos a los líderes del 'procés' condenados y en prisión (23-6-2021)",
+        "url": "https://maldita.es/malditahemeroteca/20210623/indultos-proces-cataluna-sanchez/"
+      }
     ]
   },
   {
     "minuto": "1:36:34",
     "cita": "para mí la catarsis, no sé si la he contado en alguna ocasión, pero si no la comparto contigo, fue durante las elecciones de 2019, después de la sentencia del Tribunal Supremo ir a un hospital de Cataluña encontrarme con profesionales sanitarios gente de clase media que lo que me decía Jordi era estáis encarcelando a nuestros líderes",
     "afirmacion": "Su cambio de posición sobre el procés se debió a una visita a un hospital de Cataluña en la campaña de 2019, tras la sentencia del Supremo, donde profesionales sanitarios de clase media le reprocharon que estuvieran encarcelando a sus líderes.",
-    "veredicto": "enganoso",
-    "explicacion": "La visita existió: el 21-10-2019 (una semana después de la sentencia y en plena campaña del 10-N) Sánchez fue a Barcelona a visitar a policías heridos en los disturbios, en el Hospital de Sant Pau y el Sagrat Cor, y a la Jefatura de Via Laietana. Las crónicas (Última Hora, 3Cat, Moncloa.com) no recogen una conversación con personal sanitario: cuentan que unas 200 personas, entre ellas trabajadores del hospital, le abuchearon a la salida con gritos de «llibertat presos polítics»; la Generalitat se quejó de que visitó solo a los agentes y no a otros heridos. Que de ahí surgiera su cambio es una explicación no contrastable, y es difícil de casar con que semanas después, en el debate del 4-11-2019, propusiera penalizar los referéndums ilegales (promesa que luego se aparcó) y los indultos llegaran en junio de 2021.",
+    "veredicto": "mayormente_verdadero",
+    "explicacion": "La visita existió: el 21-10-2019, una semana después de la sentencia y en plena campaña del 10-N, Sánchez visitó a policías heridos en los disturbios en los hospitales Sagrat Cor y Sant Pau. Última Hora cuenta que varios integrantes del personal sanitario le abuchearon y 3Cat que le gritaron «pocavergonya» y «llibertat presos polítics», lo que encaja con su relato, aunque ninguna crónica recoge una conversación con ellos. Que aquello fuera su «catarsis» es un relato personal que no se puede comprobar, y el giro fue más lento: en la campaña del 10-N prometió tipificar de nuevo el referéndum ilegal (elDiario.es, 21-2-2020) y tras la sentencia dijo que los indultos «no estaban encima de la mesa» (Maldita).",
     "confianza": "media",
     "fuentes": [
-      {"titulo": "Última Hora: Abucheos a Sánchez en Hospital Sant Pau (21-10-2019)", "url": "https://www.ultimahora.es/noticias/nacional/2019/10/21/1115057/altercados-cataluna-abucheos-sanchez-hospital-sant-pau.html"},
-      {"titulo": "3Cat: «Pocavergonya» i «llibertat presos polítics»: crits a Sánchez a l'Hospital de Sant Pau", "url": "https://www.3cat.cat/3catinfo/pocavergonya-i-llibertat-presos-politics-crits-a-sanchez-a-lhospital-de-sant-pau/noticia/2957250/"},
-      {"titulo": "Moncloa.com: El amargo día de Sánchez en Barcelona: entre abucheos y reproches", "url": "https://www.moncloa.com/2019/10/21/sanchez-abucheos-visita-hospital-57335"},
-      {"titulo": "RR (Portugal): Sánchez quer penalizar referendos ilegais (debate 4-11-2019)", "url": "https://rr.pt/noticia/mundo/2019/11/04/debate-em-espanha-sanchez-propoe-pacto-para-acabar-com-bloqueio-politico-e-quer-penalizar-referendos-ilegais/170547/"},
-      {"titulo": "eldiario.es: El Gobierno renuncia definitivamente a tipificar como delito el referéndum ilegal", "url": "https://www.eldiario.es/politica/gobierno-renuncia-definitivamente-tipificar-referendum_1_1122474.html"}
+      {
+        "titulo": "Última Hora: Abucheos a Sánchez en Hospital Sant Pau (21-10-2019)",
+        "url": "https://www.ultimahora.es/noticias/nacional/2019/10/21/1115057/altercados-cataluna-abucheos-sanchez-hospital-sant-pau.html"
+      },
+      {
+        "titulo": "3Cat: «Pocavergonya» i «llibertat presos polítics»: crits a Sánchez a l'Hospital de Sant Pau",
+        "url": "https://www.3cat.cat/3catinfo/pocavergonya-i-llibertat-presos-politics-crits-a-sanchez-a-lhospital-de-sant-pau/noticia/2957250/"
+      },
+      {
+        "titulo": "eldiario.es: El Gobierno renuncia definitivamente a tipificar como delito el referéndum ilegal (21-2-2020)",
+        "url": "https://www.eldiario.es/politica/gobierno-renuncia-definitivamente-tipificar-referendum_1_1122474.html"
+      },
+      {
+        "titulo": "Maldita.es: Cuando Pedro Sánchez se oponía a otorgar los indultos a los líderes del 'procés' condenados y en prisión (23-6-2021)",
+        "url": "https://maldita.es/malditahemeroteca/20210623/indultos-proces-cataluna-sanchez/"
+      }
     ]
   },
   {
@@ -30,12 +52,21 @@
     "cita": "probablemente no sea la principal prioridad de la sociedad catalana.",
     "afirmacion": "Hoy la independencia no es probablemente la principal prioridad de la sociedad catalana, aunque el movimiento independentista exista.",
     "veredicto": "mayormente_verdadero",
-    "explicacion": "El barómetro del CEO publicado el 9-7-2026 (campo del 21-5 al 25-6) sitúa la vivienda como principal problema (28%), mientras las relaciones Cataluña-España solo aparecen citadas por el 2% y la insatisfacción con la política por el 8%. Sin embargo, el mismo barómetro muestra que el apoyo a la independencia sube al 45% (el nivel más alto en seis años, frente al 51% en contra) y que el Estado independiente (36%) vuelve a ser el modelo preferido por primera vez desde 2023; es decir, no es prioridad, pero la tendencia que omite Sánchez va al alza. Su frase está además matizada con «probablemente» y es en parte una valoración.",
-    "confianza": "alta",
+    "explicacion": "El barómetro del CEO publicado el 9-7-2026 (trabajo de campo del 21-5 al 25-6) sitúa el acceso a la vivienda como principal problema para el 28 % de los catalanes, mientras que las relaciones Cataluña-España lo son para el 2 % y la insatisfacción con la política para el 8 % (NacióDigital). El mismo estudio recoge el apoyo a la independencia en el 45 % frente al 51 % en contra, el nivel más alto en seis años (VilaWeb), así que la independencia no es la prioridad pero su apoyo va al alza, algo que Sánchez no menciona. La frase va además matizada con «probablemente». La nota de prensa del CEO en govern.cat devuelve 403, por eso cito la prensa que la recoge.",
+    "confianza": "media",
     "fuentes": [
-      {"titulo": "NacióDigital: La preocupació per la immigració i la inseguretat s'estanca molt per sota de l'habitatge (CEO 9-7-2026)", "url": "https://naciodigital.cat/societat/la-preocupacio-per-la-immigracio-i-la-inseguretat-sestanca-molt-per-sota-de-lhabitatge.html"},
-      {"titulo": "VilaWeb: L'independentisme assoleix el nivell més alt de suport en sis anys, segons el CEO", "url": "https://www.vilaweb.cat/noticies/independentisme-assoleix-nivell-mes-alt-suport-sis-anys-segons-ceo/"},
-      {"titulo": "Moncloa.com: El barómetro del CEO de 2026 revela que Illa pierde seis escaños y la mayoría independentista se rompe", "url": "https://www.moncloa.com/2026/07/12/barometro-ceo-2026-illa-escanos-independentismo-3397816/"}
+      {
+        "titulo": "NacióDigital: La preocupació per la immigració i la inseguretat s'estanca molt per sota de l'habitatge (CEO, 9-7-2026)",
+        "url": "https://naciodigital.cat/societat/la-preocupacio-per-la-immigracio-i-la-inseguretat-sestanca-molt-per-sota-de-lhabitatge.html"
+      },
+      {
+        "titulo": "VilaWeb: L'independentisme assoleix el nivell més alt de suport en sis anys, segons el CEO (9-7-2026)",
+        "url": "https://www.vilaweb.cat/noticies/independentisme-assoleix-nivell-mes-alt-suport-sis-anys-segons-ceo/"
+      },
+      {
+        "titulo": "Demócrata (Agencias): L'accés a l'habitatge continua com a principal preocupació per als catalans (28%), segons el CEO",
+        "url": "https://www.democrata.es/ca/actualitat/l-acces-a-l-habitatge-continua-com-a-principal-preocupacio-per-als-catalans-28-segons-el-ceo/"
+      }
     ]
   },
   {
@@ -43,14 +74,37 @@
     "cita": "la posición de España es la misma que se expresa en la resolución del Consejo de Seguridad de Naciones Unidas y a la cual, por cierto, se han adherido los principales países europeos. Francia, Alemania, Holanda, España.",
     "afirmacion": "La posición actual de España sobre el Sáhara Occidental coincide con la de la resolución del Consejo de Seguridad de la ONU, a la que se han sumado Francia, Alemania y Países Bajos.",
     "veredicto": "mayormente_verdadero",
-    "explicacion": "La resolución 2797 (31-10-2025; 11 votos a favor, 3 abstenciones, Argelia sin votar) afirma que una autonomía genuina bajo soberanía marroquí podría ser la solución más viable y toma el plan marroquí de 2007 como base de negociación, y España (carta de marzo de 2022), Francia (julio de 2024), Alemania («base seria y creíble») y Países Bajos (diciembre de 2025, «solución más viable») respaldan ese plan; la UE lo hizo el 29-1-2026. Matiz: Alemania y Países Bajos no eran miembros del Consejo, así que lo han acogido y apoyado, no «adherido» formalmente, y la resolución no reconoce soberanía marroquí ni elimina formalmente la autodeterminación. No he podido confirmar el resultado de la renovación de MINURSO de octubre de 2026: un titular de TelQuel del 30-10-2026 habla de doble veto y mandato no renovado, sin verificar.",
+    "explicacion": "La resolución 2797 del Consejo de Seguridad (31-10-2025; 11 votos a favor, 3 abstenciones y Argelia sin votar) afirma que una «autonomía genuina bajo soberanía marroquí» podría ser la solución más viable y toma la propuesta marroquí de 2007 como base de negociación, con una solución que prevea la autodeterminación (CIDOB; un-project.org; Security Council Report). España respaldó ese plan en su carta de marzo de 2022, Francia en julio de 2024 (CIDOB), Países Bajos en un comunicado de diciembre de 2025 (Europa Press) y la UE el 29-1-2026 (Europa Press); de Alemania solo he confirmado su apoyo de 2022 como «buena base» (The New Arab). Alemania y Países Bajos no estaban en el Consejo, así que apoyan el plan y no «se adhieren» a la resolución en sentido formal. El 30-10-2026 el Consejo no logró renovar la misión MINURSO por el veto ruso a un texto de EE. UU. (ONU), un hecho posterior a esa resolución.",
     "confianza": "media",
     "fuentes": [
-      {"titulo": "CIDOB: El Sáhara Occidental y la Resolución 2797: la nueva geopolítica importa", "url": "https://www.cidob.org/publicaciones/sahara-occidental-resolucion-2797-nueva-geopolitica-importa"},
-      {"titulo": "Germany backs Moroccan autonomy plan for W. Sahara (The New Arab)", "url": "https://www.newarab.com/news/germany-backs-moroccan-autonomy-plan-w-sahara"},
-      {"titulo": "The Netherlands Says Morocco's Autonomy Plan Offers Most Viable Solution to Sahara Dispute (GNA, 12-2025)", "url": "https://gna.org.gh/2025/12/the-netherlands-says-moroccos-autonomy-plan-offers-most-viable-solution-to-sahara-dispute/"},
-      {"titulo": "Infobae/Europa Press: La UE apoya la autonomía marroquí para el Sáhara Occidental (29-1-2026)", "url": "https://www.infobae.com/america/agencias/2026/01/29/la-ue-apoya-la-autonomia-marroqui-para-el-sahara-occidental-para-lograr-una-solucion-mutuamente-aceptable/"},
-      {"titulo": "TelQuel: Sahara: double veto au Conseil de sécurité, le mandat de la MINURSO n'est pas renouvelé (30-10-2026, solo titular, no verificado)", "url": "https://telquel.ma/2026/10/30/sahara-la-russie-torpille-les-avancees-sur-le-sahara_2016033"}
+      {
+        "titulo": "CIDOB: El Sáhara Occidental y la Resolución 2797: la nueva geopolítica importa",
+        "url": "https://www.cidob.org/publicaciones/sahara-occidental-resolucion-2797-nueva-geopolitica-importa"
+      },
+      {
+        "titulo": "Security Council Report: Western Sahara, vote on a draft resolution renewing MINURSO's mandate (octubre 2026)",
+        "url": "https://www.securitycouncilreport.org/whatsinblue/2026/10/western-sahara-vote-on-a-draft-resolution-renewing-minursos-mandate-4.php"
+      },
+      {
+        "titulo": "ONU (press.un.org): Following Contentious Debate, Security Council Fails to Adopt Resolution to Extend UN Mission for Referendum in Western Sahara (30-10-2026)",
+        "url": "https://press.un.org/en/2026/sc16498"
+      },
+      {
+        "titulo": "un-project.org: S/RES/2797 (2025), votación y texto",
+        "url": "https://un-project.org/votes/resolution/S-RES-2797(2025)"
+      },
+      {
+        "titulo": "Diario Estrategia (Europa Press): Países Bajos afirma que el plan de autonomía marroquí para el Sáhara Occidental es la «solución más viable» (5-12-2025)",
+        "url": "https://www.diarioestrategia.cl/texto-diario/mostrar/5695401/paises-bajos-afirma-plan-autonomia-marroqui-sahara-occidental-solucion-viable"
+      },
+      {
+        "titulo": "The New Arab: Germany backs Moroccan autonomy plan for W. Sahara (2022)",
+        "url": "https://www.newarab.com/news/germany-backs-moroccan-autonomy-plan-w-sahara"
+      },
+      {
+        "titulo": "Infobae/Europa Press: La UE apoya la autonomía marroquí para el Sáhara Occidental (29-1-2026)",
+        "url": "https://www.infobae.com/america/agencias/2026/01/29/la-ue-apoya-la-autonomia-marroqui-para-el-sahara-occidental-para-lograr-una-solucion-mutuamente-aceptable/"
+      }
     ]
   },
   {
@@ -58,45 +112,95 @@
     "cita": "no es que nosotros hayamos cambiado, sino que después de 50 años...",
     "afirmacion": "España no ha cambiado su posición sobre el Sáhara Occidental; es la ONU la que ha evolucionado después de 50 años.",
     "veredicto": "enganoso",
-    "explicacion": "El Gobierno sí cambió: en la carta de Sánchez a Mohamed VI (14-3-2022, difundida por el Gabinete Real marroquí el 18-3) España calificó el plan de autonomía de 2007 como la «base más seria, realista y creíble» (Maldita), la primera vez que usaba un lenguaje de autonomía tan explícito (Público). Hasta entonces la línea del PSOE era la de las resoluciones de la ONU con referéndum/autodeterminación; el programa del PSOE a las europeas de 2019 hablaba de «derecho de autodeterminación del pueblo saharaui» y el de 2024 lo eliminó (El Independiente). Alinearse ahora con una resolución de la ONU que se acerca al plan marroquí (2025) refleja ese cambio, no lo desmiente; no he podido verificar qué dijo Sánchez en 2018 sobre libre determinación.",
-    "confianza": "media",
+    "explicacion": "El Gobierno sí cambió de posición en 2022: la carta de Sánchez a Mohamed VI (marzo de 2022, difundida por Rabat el 18-3) calificó el plan de autonomía de 2007 como «la base más seria, realista y creíble» para resolver el conflicto, un lenguaje que, según Público, va mucho más lejos que el de cualquier Gobierno anterior (Público, 26-3-2022; Maldita). Hasta entonces el PSOE hablaba de cumplir las resoluciones de la ONU y de respetar la autodeterminación (programa de 2019), y su programa de 2024 eliminó la mención al «derecho de autodeterminación del pueblo saharaui» (El Independiente, 1-6-2024). Alinearse ahora con una resolución de la ONU que toma el plan marroquí como base confirma ese giro y no lo desmiente.",
+    "confianza": "alta",
     "fuentes": [
-      {"titulo": "Maldita.es: De hablar de referéndum de autodeterminación y la ONU a centrarse en la propuesta de autonomía de Marruecos (23-3-2022)", "url": "https://maldita.es/malditahemeroteca/20220323/psoe-sahara-referendum-autonomia-marruecos/"},
-      {"titulo": "Público: El PSOE ha cambiado su posición respecto al Sáhara aunque lo niegue", "url": "https://www.publico.es/politica/psoe-cambiado-posicion-respecto-sahara-aunque-niegue.amp.html"},
-      {"titulo": "El Independiente: El PSOE renuncia al derecho de autodeterminación del pueblo saharaui que defendió en las europeas de 2019 (1-6-2024)", "url": "https://www.elindependiente.com/espana/2024/06/01/el-psoe-renuncia-al-derecho-de-autodeterminacion-del-pueblo-saharaui-que-defendio-en-las-europeas-de-2019/"}
+      {
+        "titulo": "Maldita.es: De hablar de referéndum de autodeterminación y la ONU a centrarse en la propuesta de autonomía de Marruecos (23-3-2022)",
+        "url": "https://maldita.es/malditahemeroteca/20220323/psoe-sahara-referendum-autonomia-marruecos/"
+      },
+      {
+        "titulo": "Público: El PSOE ha cambiado su posición respecto al Sáhara aunque lo niegue (26-3-2022)",
+        "url": "https://www.publico.es/politica/psoe-cambiado-posicion-respecto-sahara-aunque-niegue.amp.html"
+      },
+      {
+        "titulo": "El Independiente: El PSOE renuncia al derecho de autodeterminación del pueblo saharaui que defendió en las europeas de 2019 (1-6-2024)",
+        "url": "https://www.elindependiente.com/espana/2024/06/01/el-psoe-renuncia-al-derecho-de-autodeterminacion-del-pueblo-saharaui-que-defendio-en-las-europeas-de-2019/"
+      }
     ]
   },
   {
     "minuto": "1:38:37",
     "cita": "Yo no he gobernado con Bildu.",
     "afirmacion": "Sánchez no ha gobernado con EH Bildu.",
-    "veredicto": "mayormente_verdadero",
-    "explicacion": "Literalmente es cierto: Bildu no ha tenido ministros ni ha formado parte del Gobierno ni ha cogobernado con el PSOE. Pero el Gobierno ha dependido de sus votos: Bildu votó a favor de la investidura de Sánchez el 16-11-2023, apoyó 80 iniciativas legislativas del Gobierno en la XIV legislatura (todos los presupuestos, leyes de memoria democrática y de vivienda) y en 2020 firmó con PSOE y Unidas Podemos un documento político para abstenerse en la quinta prórroga del estado de alarma. En 2015 y 2019 Sánchez había dicho «con Bildu no vamos a pactar» y «con Bildu no se acuerda nada» (Maldita).",
-    "confianza": "alta",
+    "veredicto": "verdadero",
+    "explicacion": "Bildu no ha tenido ministros ni forma parte del Gobierno, que es una coalición de PSOE y Sumar (Orain, 22-7-2026). Maldita recoge que entre 2019 y el 23-J de 2023 PSOE y EH Bildu no compartieron gobierno en ninguna institución y cita a Sánchez: «No hay ministros, no hay consejeros». Lo que sí hubo fue apoyo parlamentario: Bildu votó a favor de la investidura de Sánchez el 16-11-2023, de 80 iniciativas legislativas del Gobierno y de todos los presupuestos de la XIV Legislatura, y en 2020 firmó con PSOE y Unidas Podemos un documento para abstenerse en la quinta prórroga del estado de alarma. En 2015 y 2019 Sánchez había dicho «Con Bildu no vamos a pactar» y «con Bildu no se acuerda nada» (Maldita).",
+    "confianza": "media",
     "fuentes": [
-      {"titulo": "Maldita.es: La relación de Bildu y el PSOE: cronología de acuerdos, apoyos de iniciativas y formación de gobiernos", "url": "https://maldita.es/malditateexplica/20240125/cronologia-relacion-bildu-psoe/"}
+      {
+        "titulo": "Maldita.es: La relación de Bildu y el PSOE: cronología de acuerdos, apoyos de iniciativas y formación de gobiernos",
+        "url": "https://maldita.es/malditateexplica/20240125/cronologia-relacion-bildu-psoe/"
+      },
+      {
+        "titulo": "Maldita.es: La relación del PSOE y Bildu durante la XIV legislatura: preguntas y respuestas (23-6-2023)",
+        "url": "https://maldita.es/malditateexplica/20230623/pactos-psoe-bildu/"
+      },
+      {
+        "titulo": "Orain: PSOE y Sumar pactan prorrogar dos años los alquileres que acaban antes del 30 de junio de 2028 (22-7-2026)",
+        "url": "https://orain.eus/en/politika/2026/07/22/psoe-sumar-pactan-prorrogar-2-anos-los-alquileres-acaban-antes-del-30-junio-2028/"
+      }
     ]
   },
   {
     "minuto": "1:38:37",
     "cita": "yo no he pactado un gobierno en Euskadi ni en Navarra",
     "afirmacion": "Sánchez (el PSOE) no ha pactado un gobierno con Bildu en Euskadi ni en Navarra.",
-    "veredicto": "mayormente_verdadero",
-    "explicacion": "No hay coalición con Bildu en ninguna de las dos comunidades: en Euskadi el PSE gobierna con el PNV y en Navarra gobierna María Chivite (PSN) con otros socios. Pero la abstención de Bildu permitió investir a Chivite en 2019 y 2023 (Maldita) y, ya en el ámbito municipal, el PSN votó el 28-12-2023 la moción de censura que hizo alcalde de Pamplona a Joseba Asirón (EH Bildu), lo que Sánchez admite como pacto. Maldita señala que no ha trascendido un acuerdo público del PSOE con Bildu tras el 23-J, y que en Vitoria PSOE y PNV pactaron los presupuestos con EH Bildu el 25-1-2024.",
+    "veredicto": "verdadero",
+    "explicacion": "En Euskadi gobierna una coalición PNV-PSE-EE: Pradales fue investido lehendakari el 20-6-2024 con 27 votos del PNV y 12 del PSE-EE, y EH Bildu quedó en la oposición (Orain). En Navarra, Chivite fue investida en agosto de 2023 con los votos de PSN, Geroa Bai y Contigo y la abstención de EH Bildu, y gobierna en coalición con Geroa Bai y Contigo (Última Hora); Maldita recuerda que Bildu también se abstuvo en 2019. Bildu facilitó el Gobierno navarro sin entrar en él, y el PSN sí votó en diciembre de 2023 la moción de censura que dio la alcaldía de Pamplona a EH Bildu, que es un ayuntamiento y no un gobierno autonómico.",
     "confianza": "media",
     "fuentes": [
-      {"titulo": "Maldita.es: La relación de Bildu y el PSOE: cronología de acuerdos, apoyos de iniciativas y formación de gobiernos", "url": "https://maldita.es/malditateexplica/20240125/cronologia-relacion-bildu-psoe/"}
+      {
+        "titulo": "Orain: Imanol Pradales, elegido lehendakari del Gobierno Vasco (20-6-2024)",
+        "url": "https://orain.eus/es/politica/2024/06/20/imanol-pradales-elegido-lehendakari-con-votos-del-pnv-y-pseee/"
+      },
+      {
+        "titulo": "Última Hora: María Chivite, investida presidenta de Navarra (15-8-2023)",
+        "url": "https://www.ultimahora.es/noticias/elecciones-23j/2023/08/15/1995081/maria-chivite-investida-presidenta-navarra.html"
+      },
+      {
+        "titulo": "Maldita.es: La relación de Bildu y el PSOE: cronología de acuerdos, apoyos de iniciativas y formación de gobiernos",
+        "url": "https://maldita.es/malditateexplica/20240125/cronologia-relacion-bildu-psoe/"
+      }
     ]
   },
   {
     "minuto": "1:39:37",
     "cita": "yo sé bueno, pero es un pacto bueno, claro",
-    "afirmacion": "El PSOE (PSN) pactó con Bildu la moción de censura que hizo alcalde de Pamplona a Joseba Asirón (EH Bildu).",
+    "afirmacion": "Jordi Wild dice que el PSOE (PSN) pactó con Bildu la moción de censura que hizo alcalde de Pamplona a Joseba Asirón (EH Bildu), y Sánchez lo acepta con un «bueno, claro» sin negarlo.",
     "veredicto": "verdadero",
-    "explicacion": "El 28-12-2023 el PSN votó a favor de la moción de censura contra Cristina Ibarrola (UPN) y Joseba Asirón, cabeza de lista de EH Bildu, fue investido alcalde; gobierna en coalición con Geroa Bai y Contigo-Zurekin gracias a los votos socialistas. Es un cambio respecto al 28-M de 2023, cuando el PSN votó en blanco y Ibarrola fue alcaldesa, algo que defendió el propio Sánchez. Sánchez lo reconoce en la entrevista como pacto.",
+    "explicacion": "La frase es de Jordi Wild («pactasteis con Bildu una moción que hizo alcalde de Pamplona») y Sánchez la acepta con un «bueno, claro» sin negarla. Los hechos: el PSN y EH Bildu anunciaron el 13-12-2023 un acuerdo para presentar la moción contra la alcaldesa de UPN, Cristina Ibarrola (el Ayuntamiento de Pamplona recoge que la presentaron EH Bildu, PSN, Geroa Bai y el Grupo Mixto), y el 28-12-2023 Joseba Asirón (EH Bildu) fue elegido alcalde con los votos socialistas; el PSN no entró en el gobierno municipal. El secretario de Organización del PSN, Ramón Alzórriz, defendió ese acuerdo firmado con EH Bildu en elDiario.es (15-12-2023). Los medios difieren en el recuento de votos (15 a 11 en elDiario.es, 16 de 27 concejales en The Objective), no en el resultado.",
     "confianza": "alta",
     "fuentes": [
-      {"titulo": "Maldita.es: La relación de Bildu y el PSOE: cronología de acuerdos, apoyos de iniciativas y formación de gobiernos", "url": "https://maldita.es/malditateexplica/20240125/cronologia-relacion-bildu-psoe/"}
+      {
+        "titulo": "Ayuntamiento de Pamplona: El Pleno del Ayuntamiento de Pamplona debatirá este jueves la moción de censura a la alcaldía",
+        "url": "https://www.pamplona.es/en/node/63968"
+      },
+      {
+        "titulo": "elDiario.es: Entrevista al secretario de Organización del PSN, Ramón Alzórriz (15-12-2023)",
+        "url": "https://www.eldiario.es/navarra/ramon-alzorriz-numero-psn-acuerdo-firmado-eh-bildu-pamplona-avanza-etica-democracia_1_10770254.amp.html"
+      },
+      {
+        "titulo": "The Objective: crónica de la moción de censura de Pamplona (28-12-2023)",
+        "url": "https://theobjective.com/espana/politica/2023-12-28/bildu-alcaldia-pamplona-mocion-psoe/"
+      },
+      {
+        "titulo": "elDiario.es: artículo sobre la moción de censura de Pamplona y su resultado (15 a 11)",
+        "url": "https://www.eldiario.es/politica/perder-alcaldia-pamplona-reputacion-sola-frase_129_10800224.html"
+      },
+      {
+        "titulo": "Maldita.es: La relación de Bildu y el PSOE: cronología de acuerdos, apoyos de iniciativas y formación de gobiernos",
+        "url": "https://maldita.es/malditateexplica/20240125/cronologia-relacion-bildu-psoe/"
+      }
     ]
   },
   {
@@ -104,11 +208,17 @@
     "cita": "yo nunca dije nunca dije que no quería que Pablo Iglesias estuviera en el gobierno",
     "afirmacion": "Sánchez nunca dijo que no quería que Pablo Iglesias estuviera en el Gobierno.",
     "veredicto": "falso",
-    "explicacion": "El 18-7-2019, en la víspera del fallido debate de investidura (entrevista en Al Rojo Vivo, laSexta, según la transcripción de Moncloa), Sánchez dijo: «no se dan las condiciones para que el señor Iglesias sea miembro de ese Gobierno» y lo definió como el «principal escollo» para un gobierno de coalición con Unidas Podemos (Moncloa.com, 18-7-2019). Ante la cita literal en la propia entrevista, Sánchez admite «Es una frase clara», con lo que rectifica de hecho su negación inicial.",
+    "explicacion": "El 18-7-2019, en laSexta, Sánchez dijo que «no se dan las condiciones» para que Pablo Iglesias sea miembro de un Gobierno de coalición y que su exigencia de entrar en el Consejo de Ministros era el «principal escollo» para un acuerdo con Unidas Podemos; añadió que necesitaría un vicepresidente «que defienda la democracia española» (Última Hora; Orain). En esta misma entrevista Jordi Wild le recuerda la frase y Sánchez responde «Es una frase clara», con lo que rectifica de hecho su negación inicial. La transcripción oficial de La Moncloa no respondió (conexión rechazada), por eso cito la prensa que recoge la entrevista.",
     "confianza": "alta",
     "fuentes": [
-      {"titulo": "Moncloa.com: Sánchez hace público que no quiere a Iglesias en su Gobierno (18-7-2019)", "url": "https://www.moncloa.com/2019/07/18/sanchez-iglesias-gobierno-46184/"},
-      {"titulo": "La Moncloa: Entrevista al presidente del Gobierno en funciones en Al Rojo Vivo de La Sexta (18-7-2019)", "url": "https://www.lamoncloa.gob.es/presidente/intervenciones/Paginas/2019/prs18072019.aspx"}
+      {
+        "titulo": "Última Hora: Sánchez permite la entrada en el Gobierno de miembros de Podemos pero no de Iglesias (18-7-2019)",
+        "url": "https://www.ultimahora.es/noticias/nacional/2019/07/18/1095221/sanchez-permite-entrada-gobierno-miembros-podemos-pero-iglesias.html"
+      },
+      {
+        "titulo": "Orain: Investidura: Pedro Sánchez veta a Pablo Iglesias (18-7-2019)",
+        "url": "https://orain.eus/es/politica/2019/07/18/investidura-pedro-sanchez-veta-pablo-iglesias-18-julio-2019/"
+      }
     ]
   },
   {
@@ -116,24 +226,35 @@
     "cita": "yo lo que dije es que lo que me quitaba el sueño es que por ejemplo la seguridad social o la Hacienda la llevar a Podemos.",
     "afirmacion": "Lo que Sánchez dijo en 2019 es que le quitaba el sueño que Podemos llevara ministerios como la Seguridad Social o Hacienda.",
     "veredicto": "mayormente_verdadero",
-    "explicacion": "En Al Rojo Vivo (laSexta, 19-9-2019) Sánchez dijo que aceptar las propuestas de coalición de Unidas Podemos habría supuesto que el ministro de Hacienda, el de política energética o el de Seguridad Social fueran personas del círculo de Iglesias «con poca experiencia política o de gestión pública», y que entonces «sería un presidente del Gobierno que no dormiría por la noche, junto con el 95% de los ciudadanos de este país». Es la misma versión que dio en Onda Cero el 19-6-2023 («ningún ministerio de Estado podría estar en manos de Unidas Podemos»). Es cierto, pero parcial: omite que dos meses antes ya había vetado a Iglesias personalmente (18-7-2019).",
+    "explicacion": "En Al Rojo Vivo (laSexta, 19-9-2019) Sánchez dijo que aceptar las condiciones de Unidas Podemos habría supuesto que Hacienda, Energía o Seguridad Social las llevara «una persona del círculo cercano y de confianza del señor Iglesias con poca experiencia» y que entonces sería «un presidente del Gobierno que no dormiría por la noche» (elDiario.es). En Onda Cero, en junio de 2023, dio la misma versión: ningún ministerio de Estado podría estar en manos de Unidas Podemos (Maldita). Es cierto, pero parcial: lo presenta como lo único que dijo, cuando dos meses antes ya había vetado a Iglesias personalmente (18-7-2019).",
     "confianza": "alta",
     "fuentes": [
-      {"titulo": "Maldita.es: Qué dijo Pedro Sánchez en 2019 y qué no sobre «dormir tranquilo» con ministros de Podemos (20-6-2023)", "url": "https://maldita.es/malditobulo/20230620/pedro-sanchez-dormir-tranquilo-ministros-unidas-podemos-gobierno"},
-      {"titulo": "eldiario.es: Españoles, tenéis que volver a votar para que Sánchez pueda dormir por las noches (19-9-2019)", "url": "https://www.eldiario.es/politica/sanchez-entrevista_1_1351546.html"}
+      {
+        "titulo": "elDiario.es: Sánchez dice que «no dormiría» como presidente del Gobierno si hubiera cedido Hacienda o Energía a Iglesias (19-9-2019)",
+        "url": "https://www.eldiario.es/politica/pedro-sanchez_1_1351680.html"
+      },
+      {
+        "titulo": "Maldita.es: Qué dijo Pedro Sánchez en 2019 y qué no sobre «dormir tranquilo» con ministros de Podemos (20-6-2023)",
+        "url": "https://maldita.es/malditobulo/20230620/pedro-sanchez-dormir-tranquilo-ministros-unidas-podemos-gobierno"
+      }
     ]
   },
   {
     "minuto": "1:39:37",
     "cita": "Yo no he dicho lo de dormir, de hecho.",
     "afirmacion": "Sánchez no dijo en 2019 lo de que no dormiría (por tener a Podemos en el Gobierno), y es un bulo.",
-    "veredicto": "falso",
-    "explicacion": "Sí dijo literalmente, en Al Rojo Vivo (laSexta, 19-9-2019), que «sería un presidente del Gobierno que no dormiría por la noche, junto con el 95% de los ciudadanos de este país, que tampoco se sentirían tranquilos» (Maldita, con minutos 3:35 y 3:43). Lo cierto es que la versión que circula («no podría dormir tranquilo con Podemos en el Gobierno») omite la condición de los ministerios clave y Maldita la considera manipulada; por eso calificar todo como «bulo» es exagerado, pero negar haber dicho lo de dormir no se sostiene. En 2023 en Onda Cero Sánchez ya reconoció haber dicho que «no podría dormir» con esos ministerios en manos de Podemos.",
-    "confianza": "alta",
+    "veredicto": "enganoso",
+    "explicacion": "Sánchez sí dijo en laSexta, el 19-9-2019, que «sería un presidente del Gobierno que no dormiría por la noche» si aceptaba que Hacienda, Energía o Seguridad Social fueran para personas del círculo de Iglesias «con poca experiencia» (elDiario.es), y en esa misma respuesta él habla de lo que «me quitaba el sueño». Maldita considera manipulada la versión viral («no podría dormir tranquilo con Podemos en el Gobierno») porque omite que se refería a esos ministerios, y en Onda Cero (junio de 2023) Sánchez dijo «No dije exactamente eso». Negar haber dicho nada sobre dormir es inexacto, pero atribuirle el sentido general que circula también lo es, y llamar «bulo» a todo es excesivo.",
+    "confianza": "media",
     "fuentes": [
-      {"titulo": "Maldita.es: Qué dijo Pedro Sánchez en 2019 y qué no sobre «dormir tranquilo» con ministros de Podemos (20-6-2023)", "url": "https://maldita.es/malditobulo/20230620/pedro-sanchez-dormir-tranquilo-ministros-unidas-podemos-gobierno"},
-      {"titulo": "eldiario.es: Españoles, tenéis que volver a votar para que Sánchez pueda dormir por las noches (19-9-2019)", "url": "https://www.eldiario.es/politica/sanchez-entrevista_1_1351546.html"},
-      {"titulo": "La Moncloa: Entrevista La Sexta, 19-9-2019 (transcripción)", "url": "https://www.lamoncloa.gob.es/presidente/intervenciones/Documents/2019/ENTREVISTA. LA SEXTA. PRESIDENTE. 190919.pdf"}
+      {
+        "titulo": "elDiario.es: Sánchez dice que «no dormiría» como presidente del Gobierno si hubiera cedido Hacienda o Energía a Iglesias (19-9-2019)",
+        "url": "https://www.eldiario.es/politica/pedro-sanchez_1_1351680.html"
+      },
+      {
+        "titulo": "Maldita.es: Qué dijo Pedro Sánchez en 2019 y qué no sobre «dormir tranquilo» con ministros de Podemos (20-6-2023)",
+        "url": "https://maldita.es/malditobulo/20230620/pedro-sanchez-dormir-tranquilo-ministros-unidas-podemos-gobierno"
+      }
     ]
   },
   {
@@ -141,11 +262,29 @@
     "cita": "Yo repetí las elecciones Y en ese momento el Partido Popular, por supuesto, no apoyó ni facilitó la formación de un gobierno, siendo yo, por cierto, en entonces la primera formación política.",
     "afirmacion": "En 2019 el PSOE era la primera fuerza y el PP no apoyó ni facilitó la formación de gobierno, lo que llevó a la repetición electoral.",
     "veredicto": "mayormente_verdadero",
-    "explicacion": "El PSOE ganó el 28-A de 2019 con 123 escaños (PP, 66). En la investidura de julio de 2019 Sánchez obtuvo 124 votos a favor frente a 170 en contra y 52 abstenciones (23-7) y 155 en contra y 67 abstenciones (25-7), de modo que PP y Cs no le facilitaron el gobierno. Pero la causa inmediata del bloqueo fue el fracaso de la negociación con Unidas Podemos (Sánchez lo reconoce a continuación como «repetición por no pactar con Pablo Iglesias»); las Cortes se disolvieron el 24-9-2019 y las elecciones fueron el 10-11-2019. No he localizado en esta sesión una fuente que detalle el voto concreto del PP ni si hubo una petición formal de abstención.",
+    "explicacion": "El PSOE ganó el 28-A de 2019 con 123 escaños (PP, 66; Cs, 57) (The Objective). Sánchez pidió la abstención a PP y Cs en la investidura de julio y ambos votaron en contra (23-7: 124 a favor, 170 en contra y 52 abstenciones; 25-7: 124, 155 y 67) (Congreso; Última Hora; Público; El Salto), de modo que el PP no apoyó ni facilitó su gobierno. Omite que el bloqueo vino de no cerrar un acuerdo de coalición con Unidas Podemos, algo que él mismo reconoce minutos después (1:46:44).",
     "confianza": "media",
     "fuentes": [
-      {"titulo": "Wikipedia: XIII Legislatura de España", "url": "https://es.wikipedia.org/wiki/XIII_Legislatura_de_España"},
-      {"titulo": "Wikipedia: Elecciones generales de España de abril de 2019", "url": "https://es.wikipedia.org/wiki/Elecciones_generales_de_España_de_abril_de_2019"}
+      {
+        "titulo": "Congreso de los Diputados: Sesiones de investidura (XIII y XIV Legislatura)",
+        "url": "https://www.congreso.es/es/cem/sesiones-de-investidura"
+      },
+      {
+        "titulo": "Última Hora: Sánchez fracasa en la primera votación de investidura en la que Podemos se abstiene (23-7-2019)",
+        "url": "https://www.ultimahora.es/noticias/nacional/2019/07/23/1096209/sanchez-fracasa-primera-votacion-investidura-podemos-abstiene.html"
+      },
+      {
+        "titulo": "Público: El Congreso rechaza la investidura de Sánchez por segunda vez con 124 síes, 155 noes y 67 abstenciones (25-7-2019)",
+        "url": "https://www.publico.es/politica/congreso-rechaza-investidura-sanchez-segunda-vez-124-sies-155-noes-67-abstenciones.html"
+      },
+      {
+        "titulo": "The Objective: El PSOE gana las elecciones pero necesita a Podemos y a los independentistas para gobernar (29-4-2019)",
+        "url": "https://theobjective.com/el-psoe-gana-las-elecciones-pero-necesita-a-podemos-y-a-los-independentistas-para-gobernar/"
+      },
+      {
+        "titulo": "El Salto: La derecha niega el voto a Sánchez: «¿Hasta cuándo va a jugar a este juego de trileros?»",
+        "url": "https://www.elsaltodiario.com/congreso-de-los-diputados/derecha-niega-voto-sanchez-hasta-cuando-juego-trileros"
+      }
     ]
   },
   {
@@ -153,12 +292,29 @@
     "cita": "nosotros como gobierno hemos llevado una propuesta a los grupos parlamentarios en el Congreso, está en el Congreso de los Diputados, desgraciadamente se ha acabado la legislatura y volverá en la próxima legislatura",
     "afirmacion": "El Gobierno llevó al Congreso una propuesta de derogación de la ley mordaza, que ha decaído al acabar la legislatura, y el bloqueo es más cosa de los grupos parlamentarios que del Gobierno.",
     "veredicto": "enganoso",
-    "explicacion": "No fue una iniciativa del Gobierno sino una proposición de ley de grupos: la firmaron el 4-10-2024 PSOE, Sumar, EH Bildu y PNV y se tomó en consideración ese mes, más de seis años después de que Sánchez llegara a La Moncloa (2018) y nueve de su promesa de 2015. Desde diciembre de 2024 estuvo atascada en la comisión de Interior; la ponencia no se reunió ni una sola vez y los grupos no acordaron el informe (vetos cruzados de PNV, Bildu, Podemos y Junts sobre pelotas de goma, devoluciones en caliente y desobediencia a la autoridad). Decae con la disolución de las Cortes (6-10-2026). Además es una reforma parcial (rebaja infracciones, prohíbe pelotas de goma), no una derogación; en 2019 y 2023 hubo intentos previos que tampoco prosperaron.",
+    "explicacion": "No fue una iniciativa del Gobierno sino una proposición de ley orgánica de los grupos Socialista, Sumar, EH Bildu y PNV (BOCG, 11-10-2024), tomada en consideración el 29-10-2024 por 176 votos a favor y 160 en contra (El Independiente) y enviada a la Comisión de Interior por la vía de urgencia (BOCG, 12-11-2024). Desde diciembre de 2024 estuvo atascada ahí: el 18-2-2026 llevaba 428 días sin acuerdo sobre el informe de ponencia y el PSOE hablaba de «vetos cruzados entre grupos» (Público). Con la disolución de las Cortes (RD 806/2026, BOE del 6-10-2026) la reforma vuelve a quedar pendiente (Diario de León), más de seis años después de que Sánchez llegara a La Moncloa. Además propone sustituir la ley por otra con cambios en faltas de respeto, desobediencia, pelotas de goma y devoluciones en caliente (El Independiente), no derogarla sin más.",
     "confianza": "alta",
     "fuentes": [
-      {"titulo": "Público: EH Bildu busca desatascar la reforma de la 'ley mordaza' tras 502 días en un cajón (18-2-2026)", "url": "https://www.publico.es/politica/congreso/eh-bildu-busca-desatascar-reforma-ley-mordaza-502-dias-cajon.html"},
-      {"titulo": "Moncloa.com: Tercer fracaso de la reforma de la ley mordaza (28-10-2026)", "url": "https://www.moncloa.com/2026/10/28/tercer-fracaso-reforma-ley-mordaza-3457130/"},
-      {"titulo": "Wikipedia: XV Legislatura de España (disolución 6-10-2026)", "url": "https://es.wikipedia.org/wiki/XV_Legislatura_de_España"}
+      {
+        "titulo": "Congreso de los Diputados: BOCG serie B, núm. 148-4. Proposición de Ley Orgánica de protección de las libertades y seguridad ciudadana (acuerdo subsiguiente a la toma en consideración, 15-11-2024)",
+        "url": "https://www.congreso.es/public_oficiales/L15/CONG/BOCG/B/BOCG-15-B-148-4.PDF"
+      },
+      {
+        "titulo": "El Independiente: El Congreso inicia la reforma de la ley mordaza con la negativa del PP y Vox (29-10-2024)",
+        "url": "https://www.elindependiente.com/espana/2024/10/29/el-congreso-inicia-la-reforma-de-la-ley-mordaza-con-la-negativa-del-pp-y-vox-dan-a-bildu-la-proteccion-de-la-policia/amp/"
+      },
+      {
+        "titulo": "Público: EH Bildu busca desatascar la reforma de la 'ley mordaza' tras 502 días en un cajón (18-2-2026)",
+        "url": "https://www.publico.es/politica/congreso/eh-bildu-busca-desatascar-reforma-ley-mordaza-502-dias-cajon.html"
+      },
+      {
+        "titulo": "Diario de León: El BOE publica el real decreto de disolución de las Cortes y la convocatoria electoral del 29-N (6-10-2026)",
+        "url": "https://www.diariodeleon.es/nacional/261006/2099432/boe-publica-rd-disolucion-cortes-convocatoria-electoral-29-noviembre.html"
+      },
+      {
+        "titulo": "Diario de León: La deuda que deja el adelanto electoral (5-10-2026)",
+        "url": "https://www.diariodeleon.es/nacional/261005/2099390/deuda-deja-adelanto-electoral.html"
+      }
     ]
   },
   {
@@ -166,10 +322,21 @@
     "cita": "el gobierno de España es un gobierno en coalición, en minoría parlamentaria",
     "afirmacion": "El Gobierno de España es un gobierno de coalición que gobierna en minoría parlamentaria.",
     "veredicto": "verdadero",
-    "explicacion": "Tras el 23-J de 2023 el PSOE (121 escaños) y Sumar (31) suman 152, lejos de los 176 de la mayoría absoluta; gobierna una coalición PSOE-Sumar con apoyos externos para cada votación.",
+    "explicacion": "El Gobierno es una coalición de PSOE y Sumar (Orain, 22-7-2026) con 121 escaños socialistas (Público, 28-1-2026) más los del grupo de Sumar, muy lejos de los 176 de la mayoría absoluta. La investidura de noviembre de 2023 salió con 179 votos a favor y 171 en contra gracias al apoyo de otros partidos (Congreso), y en julio de 2026 el decreto de alquileres necesitaba «votos imprescindibles de Junts» (Orain).",
     "confianza": "alta",
     "fuentes": [
-      {"titulo": "Wikipedia: Elecciones generales de España de 2023", "url": "https://es.wikipedia.org/wiki/Elecciones_generales_de_España_de_2023"}
+      {
+        "titulo": "Congreso de los Diputados: Sesiones de investidura (XV Legislatura, 15-16 de noviembre de 2023)",
+        "url": "https://www.congreso.es/es/cem/sesiones-de-investidura"
+      },
+      {
+        "titulo": "Orain: PSOE y Sumar pactan prorrogar dos años los alquileres que acaban antes del 30 de junio de 2028 (22-7-2026)",
+        "url": "https://orain.eus/en/politika/2026/07/22/psoe-sumar-pactan-prorrogar-2-anos-los-alquileres-acaban-antes-del-30-junio-2028/"
+      },
+      {
+        "titulo": "Público: José Luis Ábalos renuncia a su escaño en el Congreso (28-1-2026)",
+        "url": "https://www.publico.es/politica/abalos-renuncia-escano-congreso.html"
+      }
     ]
   },
   {
@@ -177,25 +344,39 @@
     "cita": "si en lugar de tener 121 escaños como tengo del año 2023",
     "afirmacion": "Sánchez tiene 121 escaños en el Congreso desde 2023.",
     "veredicto": "mayormente_verdadero",
-    "explicacion": "El PSOE obtuvo 121 escaños el 23-J de 2023 (PP, 137; Vox, 33; Sumar, 31). Desde que José Luis Ábalos pasó al Grupo Mixto en febrero de 2024 el PSOE tuvo 120 hasta que Ábalos renunció al acta en enero de 2026 y recuperó el 121. La cifra es correcta como resultado electoral y hoy, no de forma continua desde 2023.",
+    "explicacion": "El PSOE obtuvo 121 escaños el 23-J de 2023. Desde que José Luis Ábalos pasó al Grupo Mixto en febrero de 2024 el grupo tuvo 120 (Maldita, 27-2-2024), y con la renuncia de Ábalos al acta, el 28-1-2026, el PSOE recupera el escaño y suma 121 (Público). La cifra es correcta como resultado electoral y hoy, no de forma continua desde 2023.",
     "confianza": "media",
     "fuentes": [
-      {"titulo": "Wikipedia: Elecciones generales de España de 2023", "url": "https://es.wikipedia.org/wiki/Elecciones_generales_de_España_de_2023"},
-      {"titulo": "Maldita.es: Ábalos y su acta de diputado en el Grupo Mixto (27-2-2024)", "url": "https://maldita.es/malditateexplica/20240227/abalos-acta-diputado-grupo-mixto/"},
-      {"titulo": "Noticias de Navarra: El PSOE recupera un escaño con la renuncia de Ábalos (28-1-2026)", "url": "https://www.noticiasdenavarra.com/politica/2026/01/28/psoe-recupera-escano-renuncia-abalos-10630708.html"}
+      {
+        "titulo": "Maldita.es: Ábalos y su acta de diputado en el Grupo Mixto (27-2-2024)",
+        "url": "https://maldita.es/malditateexplica/20240227/abalos-acta-diputado-grupo-mixto/"
+      },
+      {
+        "titulo": "Público: José Luis Ábalos renuncia a su escaño en el Congreso (28-1-2026)",
+        "url": "https://www.publico.es/politica/abalos-renuncia-escano-congreso.html"
+      }
     ]
   },
   {
     "minuto": "1:42:40",
     "cita": "Creo que el Partido de los Socialistas Catalanes no solamente a nivel de Cataluña, sino de muchos municipios se ha visto respaldado",
     "afirmacion": "El PSC se ha visto respaldado electoralmente en Cataluña y en muchos municipios.",
-    "veredicto": "mayormente_verdadero",
-    "explicacion": "El PSC fue la lista más votada en las autonómicas del 12-5-2024 (42 escaños, 27,96%, frente a 35 de Junts) y el CEO de julio de 2026 sigue colocándolo primero (36-38 escaños estimados). Lo de «muchos municipios» no lo he podido comprobar: en Barcelona, en las municipales de 2023, Junts fue la lista más votada y el PSC quedó segundo.",
+    "veredicto": "verdadero",
+    "explicacion": "El PSC ganó las autonómicas del 12-5-2024 con 42 escaños y el 27,9 % de los votos frente a 35 escaños de Junts (resultados de la Generalitat con el 98,96 % escrutado, copiados por el Ajuntament d'Abrera; Orain). En las municipales de 2023 fue la fuerza más votada de Cataluña, su primera victoria municipal desde 2007, y primera en Girona, Lleida y Tarragona, aunque Junts ganó en Barcelona (NacióDigital, 28-5-2023). La afirmación de que el PSC se ha visto respaldado en Cataluña y en muchos municipios se sostiene.",
     "confianza": "media",
     "fuentes": [
-      {"titulo": "Wikipedia: Elecciones al Parlamento de Cataluña de 2024", "url": "https://es.wikipedia.org/wiki/Elecciones_al_Parlamento_de_Cataluña_de_2024"},
-      {"titulo": "Moncloa.com: El barómetro del CEO de 2026 (PSC primera fuerza)", "url": "https://www.moncloa.com/2026/07/12/barometro-ceo-2026-illa-escanos-independentismo-3397816/"},
-      {"titulo": "Wikipedia: Elecciones municipales de España de 2023", "url": "https://es.wikipedia.org/wiki/Elecciones_municipales_de_España_de_2023"}
+      {
+        "titulo": "Ajuntament d'Abrera (copia de los resultados provisionales de la Generalitat): Resultats eleccions al Parlament de Catalunya 2024 (98,96 % escrutat)",
+        "url": "https://ajuntamentabrera.cat/files/doc6084/resultats-eleccions-al-parlament-de-catalunya-2024.pdf"
+      },
+      {
+        "titulo": "Orain: El PSC gana las elecciones en Cataluña y Junts supera a ERC (12-5-2024)",
+        "url": "https://orain.eus/es/politica/2024/05/12/resultados-de-elecciones-al-parlamento-de-cataluna-12-mayo-2024/"
+      },
+      {
+        "titulo": "NacióDigital: El PSC recupera amb autoritat l'hegemonia municipal (28-5-2023)",
+        "url": "https://naciodigital.cat/politica/el-psc-recupera-amb-autoritat-lhegemonia-municipal.html"
+      }
     ]
   },
   {
@@ -203,13 +384,25 @@
     "cita": "yo advertí a Mariano Rajoy entonces de que judicializar la crisis política de Cataluña era un tremendo error cuando activó a la Fiscalía General del Estado contra los líderes del procés, abriendo la causa en la audiencia nacional.",
     "afirmacion": "En 2017 Sánchez advirtió a Rajoy de que judicializar la crisis catalana era un tremendo error cuando la Fiscalía General del Estado actuó contra los líderes del procés.",
     "veredicto": "no_verificable",
-    "explicacion": "Es una conversación privada. Sánchez la contó por primera vez el 20-9-2023 en Nueva York, pero con otras palabras: dijo que en otoño de 2017 trasladó a Rajoy su «malestar» cuando el fiscal general Maza «abrió la puerta a todas las causas judiciales», porque el PSOE no había sido consultado y el conflicto era de «raíz política»; Rajoy lo negó (21-9-2023: «No me dijo nada, en absoluto»). En la hemeroteca pública de la época no hay una advertencia así: el 7-9-2017 Sánchez tuiteó «Responsabilidad en la defensa de la ley» y, cuando Maza presentó la querella por rebelión, sedición y malversación (30-10-2017), el PSOE dijo que no valoraba «decisiones judiciales» (Óscar Puente). Sánchez apoyó el 155 en la oposición. No he localizado hemeroteca de 2017-2018 sobre rebelión ni sobre endurecer ese delito.",
+    "explicacion": "Es una conversación privada. El 20-9-2023 Sánchez dijo que en otoño de 2017 trasladó a Rajoy su «malestar» cuando el fiscal general Maza «abrió la puerta a todas las causas judiciales», porque el PSOE no había sido consultado y el conflicto tenía «raíz política» (El Independiente), con otras palabras que el «tremendo error» de la entrevista. Rajoy lo desmintió al día siguiente: «No me dijo nada, en absoluto» y «no me habló ni de judicializar ni de no judicializar» (Que.es). No he localizado ninguna advertencia pública de la época: el 7-9-2017 Sánchez tuiteó que el conflicto se resolvería «mediante el diálogo y la suma de voluntades» y defendió la ley (The Objective), y el 30-10-2017, cuando la Fiscalía presentó la querella, el PSOE dijo por boca de Óscar Puente que no valoraba decisiones judiciales (OKDiario, solo como apoyo).",
     "confianza": "media",
     "fuentes": [
-      {"titulo": "El Independiente: Sánchez abre el camino hacia la amnistía (20-9-2023)", "url": "https://www.elindependiente.com/espana/2023/09/20/sanchez-abre-camino-hacia-la-amnistia-voy-a-ser-coherente-con-lo-hecho-y-estoy-diciendo-mucho/amp/"},
-      {"titulo": "Moncloa.com: Rajoy asegura que Sánchez no le dijo que fuera un error la judicialización del 'procés' (21-9-2023)", "url": "https://www.moncloa.com/2023/09/21/rajoy-sanchez-judicializacion-proces-2193613/"},
-      {"titulo": "OKDiario: El PSOE «no entra a valorar» la querella de la Fiscalía contra Puigdemont (30-10-2017)", "url": "https://okdiario.com/espana/1467734-1467734"},
-      {"titulo": "The Objective: Sánchez respalda al Gobierno ante el desafío soberanista (7-9-2017)", "url": "https://theobjective.com/sanchez-respalda-al-gobierno-ante-el-desafio-soberano/"}
+      {
+        "titulo": "El Independiente: Sánchez abre el camino hacia la amnistía (20-9-2023)",
+        "url": "https://www.elindependiente.com/espana/2023/09/20/sanchez-abre-camino-hacia-la-amnistia-voy-a-ser-coherente-con-lo-hecho-y-estoy-diciendo-mucho/amp/"
+      },
+      {
+        "titulo": "Que.es: Rajoy asegura que Sánchez no le dijo que fuera un error la judicialización del 'procés' (21-9-2023)",
+        "url": "https://www.que.es/2023/09/21/rajoy-sanchez-judicializacion-proces/"
+      },
+      {
+        "titulo": "The Objective: Sánchez respalda al Gobierno ante el desafío soberanista (7-9-2017)",
+        "url": "https://theobjective.com/sanchez-respalda-al-gobierno-ante-el-desafio-soberano/"
+      },
+      {
+        "titulo": "OKDiario: El PSOE «no entra a valorar» la querella de la Fiscalía contra Puigdemont (30-10-2017)",
+        "url": "https://okdiario.com/espana/1467734-1467734"
+      }
     ]
   },
   {
@@ -217,10 +410,17 @@
     "cita": "yo les he apoyado cuando he estado en la oposición en una crisis territorial, probablemente la más grave de la historia de la Constitución española durante estos últimos 45 años.",
     "afirmacion": "Sánchez, en la oposición, apoyó al PP (y la aplicación del artículo 155) durante la crisis catalana de 2017.",
     "veredicto": "verdadero",
-    "explicacion": "El 11-10-2017 Sánchez y Rajoy acordaron que el PSOE acompañaría al Gobierno en la aplicación del 155 si Puigdemont persistía, a cambio de abrir en seis meses una comisión para reformar la Constitución. Que sea la crisis más grave en «45 años» es una valoración (la Constitución tiene casi 48).",
-    "confianza": "alta",
+    "explicacion": "El 11-10-2017 Sánchez y Rajoy pactaron que el PSOE «acompañaría» al Gobierno en la aplicación del 155 si Puigdemont persistía, a cambio de abrir en seis meses una comisión para reformar la Constitución (El Independiente). El 27-10-2017 el Senado aprobó el 155 con 214 votos a favor, 47 en contra y una abstención, y el PSOE apoyó las medidas con enmiendas para una aplicación proporcional y reversible (The Objective). Que sea la crisis más grave «de los últimos 45 años» es una valoración (la Constitución tiene casi 48).",
+    "confianza": "media",
     "fuentes": [
-      {"titulo": "El Independiente: Acuerdo Rajoy-Sánchez: diálogo y trabajo codo con codo (13-10-2017)", "url": "https://www.elindependiente.com/politica/2017/10/13/acuerdo-rajoy-sanchez-dialogo-trabajo-codo-con-codo/amp/"}
+      {
+        "titulo": "El Independiente: Acuerdo Rajoy-Sánchez: diálogo y trabajo codo con codo (13-10-2017)",
+        "url": "https://www.elindependiente.com/politica/2017/10/13/acuerdo-rajoy-sanchez-dialogo-trabajo-codo-con-codo/amp/"
+      },
+      {
+        "titulo": "The Objective: El Senado aprueba la aplicación del artículo 155 en Cataluña (27-10-2017)",
+        "url": "https://theobjective.com/rajoy-defiende-ante-el-senado-la-aplicacion-del-articulo-155/"
+      }
     ]
   },
   {
@@ -228,10 +428,29 @@
     "cita": "he puesto encima de la mesa propuestas políticas para recuperar esa normalidad, no he contado con el apoyo del Partido Popular que ellos en cambio sí tuvieron.",
     "afirmacion": "El PP no ha apoyado las propuestas políticas de Sánchez en Cataluña, pese a que él sí apoyó al PP en 2017.",
     "veredicto": "mayormente_verdadero",
-    "explicacion": "El PP votó en contra de la ley de amnistía (aprobada el 30-5-2024 con 177 votos a favor y 172 en contra) y recurrió al Tribunal Constitucional, que la declaró constitucional salvo tres artículos el 26-6-2025 (6 votos contra 4). Que el PP no le apoyara en indultos o la reforma de la sedición es de dominio público, pero no lo he contrastado en esta sesión con fuente propia.",
+    "explicacion": "El PP votó en contra de la ley de amnistía (aprobada definitivamente el 30-5-2024 por 177 votos a favor y 172 en contra) y un diputado del PSOE dijo antes de la votación que todos los grupos la apoyaban salvo PP y Vox (The Objective; Menorca.info). El PP recurrió esa ley ante el Constitucional, que el 26-6-2025 la avaló por 6 votos a 4 y rechazó casi todo el recurso (RTVC; Ara), y en 2021 recurrió los indultos ante el Supremo (Ara). No he comprobado el resto de propuestas políticas de Sánchez sobre Cataluña (mesas de diálogo, reforma de la sedición), de ahí que sea «casi cierto».",
     "confianza": "media",
     "fuentes": [
-      {"titulo": "Wikipedia: Ley de amnistía de España de 2024", "url": "https://es.wikipedia.org/wiki/Ley_de_amnistía_de_España_de_2024"}
+      {
+        "titulo": "The Objective: La ley de amnistía en el Congreso, en directo (30-5-2024)",
+        "url": "https://theobjective.com/politica/2024-05-30/ley-amnistia-congreso/directo/"
+      },
+      {
+        "titulo": "Menorca.info (Agencias): Ley de amnistía aprobada definitivamente por la mayoría del Congreso (30-5-2024)",
+        "url": "https://www.menorca.info/actualidad/nacional/2024/05/30/2174477/ley-amnistia-aprobada-definitivamente-mayoria-del-congreso.html"
+      },
+      {
+        "titulo": "RTVC: El Constitucional avala la ley de amnistía (26-6-2025)",
+        "url": "https://rtvc.es/el-constitucional-avala-la-ley-de-amnistia-26-junio-2025/"
+      },
+      {
+        "titulo": "Ara: El Constitucional avala la amnistía: todas las claves de la sentencia",
+        "url": "https://es.ara.cat/politica/finalidad-legitima-explicita-razonable-claves-sentencia_1_5423708.html"
+      },
+      {
+        "titulo": "Ara: El PP recurre los indultos ante el Supremo (30-6-2021)",
+        "url": "https://es.ara.cat/politica/pp-recurre-indultos-supremo_1_4038288.html"
+      }
     ]
   },
   {
@@ -239,10 +458,21 @@
     "cita": "es evidente que la Constitución articula mecanismos políticos, que no judiciales, para poder resolver esta situación. Y eso fue el artículo 155.",
     "afirmacion": "El artículo 155 de la Constitución es un mecanismo político, no judicial, para responder a la declaración unilateral de independencia.",
     "veredicto": "verdadero",
-    "explicacion": "El 155 es una medida de naturaleza política y constitucional: la adopta el Gobierno con aprobación por mayoría absoluta del Senado, y se aplicó en octubre de 2017. Pero en paralelo siguió la vía judicial (querellas de la Fiscalía del 30-10-2017), que es justamente la que Sánchez critica. No he podido abrir el texto constitucional en esta sesión, de ahí la confianza media.",
-    "confianza": "media",
+    "explicacion": "El artículo 155 lo aplica el Gobierno, previo requerimiento al presidente de la comunidad autónoma y con la aprobación por mayoría absoluta del Senado (texto de la Constitución en el Senado), y así se hizo: el Senado lo aprobó el 27-10-2017 con 214 votos a favor, 47 en contra y una abstención (The Objective). Es un mecanismo político y constitucional distinto de la vía judicial, que siguió en paralelo con la querella de la Fiscalía contra los dirigentes del 'procés' (Que.es), que es justo lo que Sánchez critica.",
+    "confianza": "alta",
     "fuentes": [
-      {"titulo": "El Independiente: Acuerdo Rajoy-Sánchez: diálogo y trabajo codo con codo (13-10-2017)", "url": "https://www.elindependiente.com/politica/2017/10/13/acuerdo-rajoy-sanchez-dialogo-trabajo-codo-con-codo/amp/"}
+      {
+        "titulo": "Senado: Constitución Española, artículo 155",
+        "url": "https://www.senado.es/web/conocersenado/normas/constitucion/detalleconstitucioncompleta/index.html"
+      },
+      {
+        "titulo": "The Objective: El Senado aprueba la aplicación del artículo 155 en Cataluña (27-10-2017)",
+        "url": "https://theobjective.com/rajoy-defiende-ante-el-senado-la-aplicacion-del-articulo-155/"
+      },
+      {
+        "titulo": "Que.es: Rajoy asegura que Sánchez no le dijo que fuera un error la judicialización del 'procés' (21-9-2023)",
+        "url": "https://www.que.es/2023/09/21/rajoy-sanchez-judicializacion-proces/"
+      }
     ]
   },
   {
@@ -250,10 +480,17 @@
     "cita": "que se especulara durante esta legislatura, con que Feijóo iba a llamar a Puigdemont para hacer una moción de censura junto con Vox y quitarme del gobierno",
     "afirmacion": "Durante la legislatura se especuló con que Feijóo contactaría con Puigdemont para una moción de censura junto con Vox.",
     "veredicto": "mayormente_verdadero",
-    "explicacion": "Tras la entrada en prisión de Santos Cerdán (julio de 2025), Feijóo exploró una moción de censura buscando los votos de los socios de Sánchez; Junts le retó a reunirse con Puigdemont en Waterloo y Vox ironizó con que, sin ellos, Feijóo «ya estaría camino de Waterloo». El PP lo descartó (Tellado: «Nadie nos va a encontrar allí»), así que fue especulación mediática y política, no un hecho. Que eso sea un «reconocimiento implícito del éxito de la ley de amnistía» es una opinión.",
+    "explicacion": "Tras el ingreso en prisión de Santos Cerdán, Feijóo encargó a Tellado explorar si conseguía los votos que le faltaban para una moción de censura; Junts le retó a reunirse con Puigdemont en Bélgica, Vox ironizó con que «si Vox no existiera, el señor Feijóo ya estaría camino de Waterloo» y Tellado descartó ese encuentro (Ara, 1-7-2025). En octubre de 2025, tras romper Junts con el PSOE, Puigdemont dijo que no apoyaría una moción de censura (Orain, 28-10-2025). Hubo, pues, especulación política y mediática sobre ese escenario, no un hecho; que eso sea un «reconocimiento implícito del éxito de la amnistía» es una opinión.",
     "confianza": "media",
     "fuentes": [
-      {"titulo": "Ara: Feijóo explora la moción de censura y los socios de Sánchez le dan la espalda (1-7-2025)", "url": "https://es.ara.cat/politica/feijoo-explora-mocion-censura-socios-sanchez-le-dan-espalda_1_5428803.amp.html"}
+      {
+        "titulo": "Ara: Feijóo explora la moción de censura y los socios de Sánchez le dan la espalda (1-7-2025)",
+        "url": "https://es.ara.cat/politica/feijoo-explora-mocion-censura-socios-sanchez-le-dan-espalda_1_5428803.amp.html"
+      },
+      {
+        "titulo": "Orain: After the breakup of Junts, what now? (28-10-2025)",
+        "url": "https://orain.eus/en/politika/2025/10/28/after-the-breakup-of-junts-what-now/"
+      }
     ]
   },
   {
@@ -261,11 +498,25 @@
     "cita": "yo fui a una repetición electoral por no pactar con Pablo Iglesias",
     "afirmacion": "En 2019 Sánchez fue a una repetición electoral por no pactar con Pablo Iglesias.",
     "veredicto": "verdadero",
-    "explicacion": "Las negociaciones PSOE-Unidas Podemos fracasaron tras la investidura fallida de julio de 2019; el rey no halló candidato viable en septiembre, las Cortes se disolvieron el 24-9-2019 y hubo elecciones el 10-11-2019 (cinco días antes, en La Sexta, Sánchez había dicho que no aceptaría ministerios clave en manos de Podemos). Contrasta con el relato que da unos minutos antes (1:40:39), donde atribuye la repetición a que el PP no facilitó la investidura.",
+    "explicacion": "En julio de 2019 la investidura de Sánchez fracasó (23-7: 124 a favor, 170 en contra y 52 abstenciones; 25-7: 124, 155 y 67; Congreso) sin acuerdo de coalición con Unidas Podemos (Última Hora; Público), y el 19-9-2019 él mismo descartó la coalición con Podemos «de cara al 10N» y dijo que aceptarla le habría permitido ser presidente (elDiario.es). Se repitieron las elecciones el 10-11-2019 y la investidura llegó el 7-1-2020 (167 votos a favor y 165 en contra; Congreso). Contrasta con lo que dice minutos antes (1:40:39), donde atribuye la repetición a que el PP no facilitó la investidura.",
     "confianza": "alta",
     "fuentes": [
-      {"titulo": "Wikipedia: XIII Legislatura de España", "url": "https://es.wikipedia.org/wiki/XIII_Legislatura_de_España"},
-      {"titulo": "Maldita.es: Qué dijo Pedro Sánchez en 2019 y qué no sobre «dormir tranquilo»", "url": "https://maldita.es/malditobulo/20230620/pedro-sanchez-dormir-tranquilo-ministros-unidas-podemos-gobierno"}
+      {
+        "titulo": "Congreso de los Diputados: Sesiones de investidura (XIII y XIV Legislatura)",
+        "url": "https://www.congreso.es/es/cem/sesiones-de-investidura"
+      },
+      {
+        "titulo": "Última Hora: Sánchez fracasa en la primera votación de investidura en la que Podemos se abstiene (23-7-2019)",
+        "url": "https://www.ultimahora.es/noticias/nacional/2019/07/23/1096209/sanchez-fracasa-primera-votacion-investidura-podemos-abstiene.html"
+      },
+      {
+        "titulo": "Público: El Congreso rechaza la investidura de Sánchez por segunda vez con 124 síes, 155 noes y 67 abstenciones (25-7-2019)",
+        "url": "https://www.publico.es/politica/congreso-rechaza-investidura-sanchez-segunda-vez-124-sies-155-noes-67-abstenciones.html"
+      },
+      {
+        "titulo": "elDiario.es: Sánchez dice que «no dormiría» como presidente del Gobierno si hubiera cedido Hacienda o Energía a Iglesias (19-9-2019)",
+        "url": "https://www.eldiario.es/politica/pedro-sanchez_1_1351680.html"
+      }
     ]
   },
   {
@@ -273,11 +524,21 @@
     "cita": "dije que iba a subir el salario mínimo interprofesional y lo he subido",
     "afirmacion": "Sánchez prometió subir el salario mínimo interprofesional y lo ha subido.",
     "veredicto": "verdadero",
-    "explicacion": "Según el Ministerio de Trabajo ha habido ocho subidas desde 2018, con un incremento acumulado del 66%: de unos 735 euros mensuales en 14 pagas (2018) a 1.221 euros en 2026 (RD 126/2026, de 18 de febrero, con efectos desde el 1-1-2026, +3,1%).",
+    "explicacion": "Según Eurostat, el salario mínimo español, expresado en doce pagas, pasó de 859 euros mensuales en 2018 a 1.425 en el primer semestre de 2026 (+66 %); en catorce pagas, de unos 735 a 1.221 euros. La subida del 3,1 % para 2026 (1.221 euros frente a 1.184 en 2025) la aprobó el Consejo de Ministros el 17-2-2026 (Europa Press, vía Deia; Noticias de Navarra).",
     "confianza": "alta",
     "fuentes": [
-      {"titulo": "Deia: El Gobierno español da luz verde a la subida del SMI hasta los 1.221 euros (17-2-2026)", "url": "https://www.deia.eus/economia/2026/02/17/gobierno-espanol-da-luz-verde-10711068.html"},
-      {"titulo": "Noticias de Navarra: Díaz firma con los sindicatos el incremento del SMI (16-2-2026)", "url": "https://www.noticiasdenavarra.com/economia/2026/02/16/diaz-firma-lunes-ccoo-ugt-smi-10705616.amp.html"}
+      {
+        "titulo": "Eurostat: Monthly minimum wages, bi-annual data (earn_mw_cur), España, actualizado el 31-7-2026",
+        "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/earn_mw_cur?geo=ES&currency=EUR&format=JSON&lang=EN"
+      },
+      {
+        "titulo": "Deia (Europa Press): El Gobierno español da luz verde a la subida del SMI hasta los 1.221 euros (17-2-2026)",
+        "url": "https://www.deia.eus/economia/2026/02/17/gobierno-espanol-da-luz-verde-10711068.html"
+      },
+      {
+        "titulo": "Noticias de Navarra (Europa Press): Díaz firma con los sindicatos el incremento del SMI (16-2-2026)",
+        "url": "https://www.noticiasdenavarra.com/economia/2026/02/16/diaz-firma-lunes-ccoo-ugt-smi-10705616.amp.html"
+      }
     ]
   },
   {
@@ -285,11 +546,13 @@
     "cita": "dije que iba a regularizar las pensiones conforme al IPC y lo he hecho.",
     "afirmacion": "Sánchez prometió revalorizar las pensiones conforme al IPC y lo ha hecho.",
     "veredicto": "verdadero",
-    "explicacion": "Según el Ministerio de Inclusión (nota de La Moncloa, 10-2-2026), es el quinto año en que las pensiones se revalorizan según el IPC: 2,5% en 2022, 8,5% en 2023, 3,8% en 2024, 2,8% en 2025 y 2,7% en 2026; las mínimas suben un 7% en 2026. Los datos que he consultado no detallan las subidas de 2018-2021 (antes de que la fórmula del IPC se fijara por ley).",
+    "explicacion": "El BOE del 24-12-2025 publicó la subida de las pensiones contributivas de 2026 en el 2,7 %, calculada con el valor medio de las tasas interanuales del IPC de los doce meses previos a diciembre, y las mínimas un 7 %; antes subieron un 2,8 % en 2025, un 3,8 % en 2024 y un 8,5 % en 2023 (Europa Press, vía Deia). No he comprobado las subidas de 2018 a 2022. La nota de prensa de La Moncloa no respondió, por eso cito la agencia que recoge el decreto-ley.",
     "confianza": "media",
     "fuentes": [
-      {"titulo": "La Moncloa: Pensiones 2026: subida y revalorización", "url": "https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/inclusion/paginas/2026/subida-pensiones-2026.aspx"},
-      {"titulo": "Deia: El BOE publica la subida de las pensiones para 2026 (24-12-2025)", "url": "https://www.deia.eus/economia/2025/12/24/boe-publica-subida-pensiones-2026-10511410.html"}
+      {
+        "titulo": "Deia (Europa Press): El BOE publica la subida de las pensiones para 2026 (24-12-2025)",
+        "url": "https://www.deia.eus/economia/2025/12/24/boe-publica-subida-pensiones-2026-10511410.html"
+      }
     ]
   },
   {
@@ -297,19 +560,35 @@
     "cita": "dije que iba a apostar por la educación pública, la formación profesional y lo he hecho, dije que iba a apostar por la sanidad pública y lo he hecho",
     "afirmacion": "Sánchez ha cumplido su promesa de apostar por la educación pública, la formación profesional y la sanidad pública.",
     "veredicto": "no_verificable",
-    "explicacion": "Es una valoración genérica («apostar por») sin cifra ni compromiso concreto que contrastar; habría que definir indicadores (gasto, plazas, becas) y no los he evaluado aquí.",
-    "confianza": "baja",
-    "fuentes": []
+    "explicacion": "Es una valoración genérica sin cifra ni compromiso medible. Eurostat da un gasto público de España en educación del 3,9 % del PIB en 2018 y del 4,1 % en 2024 (con un máximo del 4,6 % en 2020), y en sanidad del 6,0 % al 6,5 %, siempre por debajo de la media de la UE-27 (4,7 % y 7,3 % en 2024). El gasto ha subido algo respecto al PIB, pero sin un umbral que defina qué es «apostar» y sin datos de Formación Profesional, no se puede dar un veredicto.",
+    "confianza": "media",
+    "fuentes": [
+      {
+        "titulo": "Eurostat: Government expenditure by function (COFOG), gov_10a_exp, % del PIB, España y UE-27",
+        "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/gov_10a_exp?geo=ES&geo=EU27_2020&cofog99=GF09&cofog99=GF07&unit=PC_GDP&sector=S13&na_item=TE&format=JSON&lang=EN&sinceTimePeriod=2015"
+      },
+      {
+        "titulo": "Eurostat: Government expenditure on education (Statistics Explained)",
+        "url": "https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Government_expenditure_on_education"
+      }
+    ]
   },
   {
     "minuto": "1:46:44",
     "cita": "Le dije al señor Trump que no al 5% del presupuesto de defensa y lo he mantenido.",
     "afirmacion": "Sánchez dijo no al 5% de gasto en defensa que pedía Trump y mantiene ese rechazo.",
     "veredicto": "mayormente_verdadero",
-    "explicacion": "En la cumbre de La Haya (24-25-6-2025) la OTAN fijó un objetivo del 5% del PIB en 2035 (3,5% de defensa básica y 1,5% de gasto relacionado); España se opuso, se le reconoció una excepción (la declaración dice que todos los aliados menos España aceptaron el objetivo) y se limitó a prometer llegar al 2,1% del PIB. Matices: es el 5% del PIB, no del presupuesto, y España firmó la declaración; la fuente consultada no menciona amenaza arancelaria de Trump. No he verificado si lo ha mantenido en 2026.",
+    "explicacion": "En La Haya (25-6-2025) los aliados se comprometieron a invertir el 5 % del PIB anual en defensa y seguridad: 3,5 % en defensa básica y hasta un 1,5 % en gasto relacionado, con revisión en 2029; es el 5 % del PIB y no del presupuesto, y el texto de la declaración no menciona a España ni una excepción (OTAN). El informe de la OTAN de julio de 2026 estima el gasto español en defensa básica en el 2,00 % del PIB para 2026, lejos del 3,5 %, así que su negativa se mantiene en la práctica. No he podido abrir las crónicas que cuentan la excepción española ni la reacción de Trump (AP, 22-6-2025; Washington Post, 25-6-2025), y no consta en fuentes abiertas que se lo dijera personalmente a Trump.",
     "confianza": "media",
     "fuentes": [
-      {"titulo": "Wikipedia: 2025 NATO summit", "url": "https://en.wikipedia.org/wiki/2025_NATO_summit"}
+      {
+        "titulo": "OTAN: The Hague Summit Declaration (25-6-2025)",
+        "url": "https://www.nato.int/cps/en/natohq/official_texts_236705.htm"
+      },
+      {
+        "titulo": "OTAN: Defence Investment of NATO Countries (2014-2026), tabla 4 (corte 3-7-2026)",
+        "url": "https://www.nato.int/content/dam/nato/webready/documents/finance/def-exp-2026-en.pdf"
+      }
     ]
   },
   {
@@ -317,10 +596,33 @@
     "cita": "Dije que no al genocidio en Gaza y lo he mantenido.",
     "afirmacion": "Sánchez dijo no al genocidio en Gaza y ha mantenido esa posición con medidas.",
     "veredicto": "mayormente_verdadero",
-    "explicacion": "España reconoció el Estado palestino (mayo de 2024); el 8-9-2025 Sánchez anunció nueve medidas, entre ellas un embargo total de armas a Israel y vetos a puertos y espacio aéreo; en marzo de 2026 retiró formalmente al embajador y el 19-4-2026 propuso poner fin al acuerdo de asociación UE-Israel. Matices: se informó de que en diciembre de 2025 se exceptuó a Airbus del veto a productos militares y de doble uso israelíes, y la fuente consultada atribuye la palabra «genocidio» a Robles, no cita a Sánchez; el resto es posición política, no un dato verificable.",
+    "explicacion": "El 8-9-2025 Sánchez anunció un paquete de medidas «para detener el genocidio en Gaza»: un real decreto-ley que da rango legal al embargo de armas a Israel, vetos a los barcos con combustible y a los aviones con material de defensa para el ejército israelí, prohibición de entrada a quienes participen en el «genocidio» y de importar productos de los asentamientos, y más ayuda a Gaza y a la UNRWA (Al Jazeera; Catalan News, agencia ACN; EFE, vía La Voz de Lanzarote). Calificó la ofensiva israelí de exterminio de un pueblo indefenso (Al Jazeera), y su embajadora en Tel Aviv, llamada a consultas en septiembre de 2025, fue cesada por el Consejo de Ministros el 10-3-2026, con la legación en manos de una encargada de negocios (EFE, vía Última Hora; Al Jazeera). La postura se mantiene, pues, al menos hasta marzo de 2026; no he podido comprobar la aprobación del decreto-ley ni la propuesta de abril de 2026 de acabar con el acuerdo de asociación UE-Israel, y el resto es una posición política más que un dato verificable.",
     "confianza": "media",
     "fuentes": [
-      {"titulo": "Wikipedia: Spain–Israel relations", "url": "https://en.wikipedia.org/wiki/Spain–Israel_relations"}
+      {
+        "titulo": "Al Jazeera: Spain PM Sanchez imposes arms embargo on Israel to 'stop Gaza genocide' (8-9-2025)",
+        "url": "https://www.aljazeera.com/news/2025/9/8/spain-imposes-total-arms-embargo-on-israel-to-stop-genocide-in"
+      },
+      {
+        "titulo": "Catalan News (ACN): Spain announces arms embargo on Israel and entry ban on 'genocide promoters' (8-9-2025)",
+        "url": "https://www.catalannews.com/politics/item/spain-arms-embargo-israel-palestine-genocide-promoters-8-september-2025"
+      },
+      {
+        "titulo": "La Voz de Lanzarote (EFE): Pedro Sánchez Announces Nine Measures Against Israel's \"Genocide\" in Gaza",
+        "url": "https://www.lavozdelanzarote.com/en/news/politics/pedro-sanchez-announces-nine-measures-against-israel-genocide-in-gaza_237636_102.html"
+      },
+      {
+        "titulo": "Última Hora (EFE): El BOE lo confirma: El Gobierno cesa a la embajadora en Israel y rebaja la representación (11-3-2026)",
+        "url": "https://www.ultimahora.es/noticias/nacional/2026/03/11/2586875/boe-confirma-gobierno-cesa-embajadora-israel-rebaja-representacion.html"
+      },
+      {
+        "titulo": "Al Jazeera: Spain removes ambassador from Israel in protest to Iran war, Gaza genocide (11-3-2026)",
+        "url": "https://www.aljazeera.com/news/2026/3/11/spain-removes-ambassador-from-israel-as-opposes-war-on-iran-gaza-genocide"
+      },
+      {
+        "titulo": "The Objective: crónica del 8-9-2025 sobre las medidas de Sánchez y la embajadora en Israel (solo apoyo)",
+        "url": "https://theobjective.com/espana/politica/2025-09-08/espana-consultas-embajadora-israel/"
+      }
     ]
   },
   {
@@ -328,7 +630,7 @@
     "cita": "Independencia judicial. Tú promovías en 2015-16 que el gobierno dejara de proponer magistrados del Constitucional y acabaste proponiendo a tu exministro de Justicia, Juan Carlos Capó, para Constitucional.",
     "afirmacion": "Contexto (planteado por Jordi Wild, no respondido por Sánchez): en 2015-16 el PSOE defendía que el Gobierno dejara de proponer magistrados del Constitucional y luego el Gobierno propuso al exministro de Justicia Juan Carlos Campo; Sánchez también consideró inviables los topes al alquiler de Podemos.",
     "veredicto": "no_verificable",
-    "explicacion": "Contexto sin veredicto: es una afirmación de Jordi Wild y Sánchez no la responde (tampoco lo de los topes de alquiler). Whisper transcribe «Capó» por Campo. No he contrastado estas hemerotecas en esta sesión.",
+    "explicacion": "Contexto sin veredicto: la lista de cambios de postura es de Jordi Wild y Sánchez no responde a esta parte (la de Campo para el Constitucional) ni a la de los topes de alquiler. Whisper transcribe «Capó» por Campo (el exministro de Justicia Juan Carlos Campo). No he contrastado esas hemerotecas.",
     "confianza": "baja",
     "fuentes": []
   }
