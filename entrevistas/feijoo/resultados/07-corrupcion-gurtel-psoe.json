@@ -301,6 +301,13 @@
         "titulo": "Tribunal Supremo: Nota resumen de la sentencia de la causa especial 20775/2020, «caso Ábalos» o «caso mascarillas» (22/6/2026)",
         "url": "https://www.poderjudicial.es/stfls/TRIBUNAL%20SUPREMO/DOCUMENTOS%20DE%20INTER%C3%89S/Nota%20resumen%20STS%20Causa%20Especial%2020775-2020%20Sala%20II%2022JUN26.docx"
       }
+    ],
+    "correcciones": [
+      {
+        "fecha": "2026-11-14",
+        "antes": "mayormente_verdadero",
+        "motivo": "Dos medios fechan la licitación de forma distinta (25/6/2018 y 4/6/2018, esta última anterior a la llegada de Ábalos), la obra se adjudicó el 31/1/2019 y la sospecha procede solo de la UCO."
+      }
     ]
   },
   {
@@ -517,6 +524,13 @@
         "titulo": "Artículo 14: El PP rechaza que el paso a un lado de Alberto Durán tenga relación con su reunión con Koldo García (7/11/2026)",
         "url": "https://www.articulo14.es/politica/el-pp-rechaza-que-el-paso-a-un-lado-de-alberto-duran-tenga-relacion-con-su-reunion-con-koldo-garcia-20261107.html"
       }
+    ],
+    "correcciones": [
+      {
+        "fecha": "2026-11-14",
+        "antes": "no_verificable",
+        "motivo": "Gamarra es vicesecretaria de Regeneración Institucional del PP, según la ficha del partido, y tres medios sitúan Justicia en su área, aunque el PP no publica el reparto interno."
+      }
     ]
   },
   {
@@ -538,6 +552,13 @@
       {
         "titulo": "elDiario.es: Koldo García acusa al abogado del PP de ofrecerle un millón de euros (5/11/2026)",
         "url": "https://www.eldiario.es/1_d01fa8"
+      }
+    ],
+    "correcciones": [
+      {
+        "fecha": "2026-11-14",
+        "antes": "mayormente_verdadero",
+        "motivo": "El 9/11/2026 Gamarra reconoció la reunión entre Durán y Koldo García, pero ninguna fuente muestra que Durán hablara con otros abogados de las partes ni que Gamarra lo supiera."
       }
     ]
   },

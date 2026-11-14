@@ -80,11 +80,11 @@
            "transcripcion_txt_url": "https://verificacion-podcast.vercel.app/api/v1/sanchez/transcripcion.txt",
            "total_afirmaciones": 147,
            "por_veredicto": {
-            "falso": 5,
-            "enganoso": 23,
-            "mayormente_verdadero": 52,
-            "verdadero": 33,
-            "no_verificable": 34
+            "falso": 4,
+            "enganoso": 24,
+            "mayormente_verdadero": 50,
+            "verdadero": 38,
+            "no_verificable": 31
            },
            "excluidas": 10,
            "esencial": [
@@ -176,8 +176,8 @@
            "cita": "A mí me han llamado dictador, me han llamado psicópata",
            "afirmacion": "Responsables políticos han llamado «dictador» y «psicópata» a Sánchez.",
            "veredicto": "verdadero",
-           "resumen": "Abascal lo llamó «dictador» el 9 de noviembre de 2023 y Buxadé «psicópata» el 12 de julio de 2021; Sánchez ya citaba estos insultos en diciembre de 2023.",
-           "explicacion": "Abascal lo llamó «dictador» el 9 de noviembre de 2023 («O el dictador acaba en el banquillo...») y, según Sánchez, de nuevo «autócrata y dictador» (sesión de control del 9 de septiembre de 2026). Jorge Buxadé (Vox) lo llamó «un auténtico psicópata» el 12 de julio de 2021, y Abascal «psicópata peligroso» en otra ocasión; el propio Sánchez ya citaba estos insultos en diciembre de 2023, junto al «enfermo mental» atribuido a Feijóo.",
+           "resumen": "Abascal lo llamó «dictador» en 2023 y «psicópata peligroso» en septiembre de 2026, y Buxadé lo tachó de «psicópata» en 2021.",
+           "explicacion": "Abascal llamó «dictador» a Sánchez el 9 de noviembre de 2023 (VilaWeb), Jorge Buxadé (Vox) dijo que era «un auténtico psicópata» el 12 de julio de 2021 (EFE vía eldiario.es) y el propio Abascal lo tachó de «un psicópata peligroso» el 2 de septiembre de 2026 (Demócrata, agencias). El 9 de septiembre de 2026 Sánchez le recordó en el Congreso que lo había llamado «autócrata, dictador» (Diari de Tarragona/EFE).",
            "confianza": "alta",
            "fuentes": [
             {
@@ -189,7 +189,7 @@
              "url": "https://www.eldiario.es/politica/vox-anima-pp-mocion-censura-sanchez-psicopata_1_8127719.html"
             },
             {
-             "titulo": "Democrata: Abascal tacha a Sánchez de «un psicópata peligroso»",
+             "titulo": "Demócrata: Abascal tacha a Sánchez de «un psicópata peligroso» (2/9/2026)",
              "url": "https://www.democrata.es/politica/abascal-tacha-a-sanchez-de-un-psicopata-peligroso-y-le-acusa-de-traicionar-a-los-ceuties/"
             },
             {
@@ -259,11 +259,11 @@
           "transcripcion_txt_url": "https://verificacion-podcast.vercel.app/api/v1/sanchez/transcripcion.txt",
           "total_afirmaciones": 147,
           "por_veredicto": {
-           "falso": 5,
-           "enganoso": 23,
-           "mayormente_verdadero": 52,
-           "verdadero": 33,
-           "no_verificable": 34
+           "falso": 4,
+           "enganoso": 24,
+           "mayormente_verdadero": 50,
+           "verdadero": 38,
+           "no_verificable": 31
           },
           "excluidas": 10,
           "esencial": [
@@ -317,8 +317,8 @@
            "cita": "A mí me han llamado dictador, me han llamado psicópata",
            "afirmacion": "Responsables políticos han llamado «dictador» y «psicópata» a Sánchez.",
            "veredicto": "verdadero",
-           "resumen": "Abascal lo llamó «dictador» el 9 de noviembre de 2023 y Buxadé «psicópata» el 12 de julio de 2021; Sánchez ya citaba estos insultos en diciembre de 2023.",
-           "explicacion": "Abascal lo llamó «dictador» el 9 de noviembre de 2023 («O el dictador acaba en el banquillo...») y, según Sánchez, de nuevo «autócrata y dictador» (sesión de control del 9 de septiembre de 2026). Jorge Buxadé (Vox) lo llamó «un auténtico psicópata» el 12 de julio de 2021, y Abascal «psicópata peligroso» en otra ocasión; el propio Sánchez ya citaba estos insultos en diciembre de 2023, junto al «enfermo mental» atribuido a Feijóo.",
+           "resumen": "Abascal lo llamó «dictador» en 2023 y «psicópata peligroso» en septiembre de 2026, y Buxadé lo tachó de «psicópata» en 2021.",
+           "explicacion": "Abascal llamó «dictador» a Sánchez el 9 de noviembre de 2023 (VilaWeb), Jorge Buxadé (Vox) dijo que era «un auténtico psicópata» el 12 de julio de 2021 (EFE vía eldiario.es) y el propio Abascal lo tachó de «un psicópata peligroso» el 2 de septiembre de 2026 (Demócrata, agencias). El 9 de septiembre de 2026 Sánchez le recordó en el Congreso que lo había llamado «autócrata, dictador» (Diari de Tarragona/EFE).",
            "confianza": "alta",
            "fuentes": [
             {
@@ -330,7 +330,7 @@
              "url": "https://www.eldiario.es/politica/vox-anima-pp-mocion-censura-sanchez-psicopata_1_8127719.html"
             },
             {
-             "titulo": "Democrata: Abascal tacha a Sánchez de «un psicópata peligroso»",
+             "titulo": "Demócrata: Abascal tacha a Sánchez de «un psicópata peligroso» (2/9/2026)",
              "url": "https://www.democrata.es/politica/abascal-tacha-a-sanchez-de-un-psicopata-peligroso-y-le-acusa-de-traicionar-a-los-ceuties/"
             },
             {
@@ -380,7 +380,7 @@
         "schema": {
          "type": "string"
         },
-        "example": "id,entrevista,invitado,tema,minuto,segundo,veredicto,confianza,cita,afirmacion,resumen,explicacion,fuentes,video_url,web_url\nsanchez-m566,sanchez,Pedro Sánchez,\"Insultos, polarización y crispación en la política española\",0:09:26,566,verdadero,alta,\"A mí me han llamado dictador, me han llamado psicópata\",Responsables políticos han llamado «dictador» y «psicópata» a Sánchez.,Abascal lo llamó «dictador» el 9 de noviembre de 2023 y Buxadé «psicópata» el 12 de julio de 2021; Sánchez ya citaba estos insultos en diciembre de 2023.,\"Abascal lo llamó «dictador» el 9 de noviembre de 2023 («O el dictador acaba en el banquillo...») y, según Sánchez, de nuevo «autócrata y dictador» (sesión de control del 9 de septiembre de 2026). Jorge Buxadé (Vox) lo llamó «un auténtico psicópata» el 12 de julio de 2021, y Abascal «psicópata peligroso» en otra ocasión; el propio Sánchez ya citaba estos insultos en diciembre de 2023, junto al «enfermo mental» atribuido a Feijóo.\",https://www.vilaweb.cat/noticies/abascal-sanchez-dictador-banc-acusats/ | https://www.eldiario.es/politica/vox-anima-pp-mocion-censura-sanchez-psicopata_1_8127719.html | https://www.democrata.es/politica/abascal-tacha-a-sanchez-de-un-psicopata-peligroso-y-le-acusa-de-traicionar-a-los-ceuties/ | https://www.diaridetarragona.com/espana/270259/sanchez-abascal-diferencia-sere-perro-amo.html,https://www.youtube.com/watch?v=mStOFBvToUI&t=566s,https://verificacion-podcast.vercel.app/sanchez#m566\n"
+        "example": "id,entrevista,invitado,tema,minuto,segundo,veredicto,confianza,cita,afirmacion,resumen,explicacion,fuentes,video_url,web_url\nsanchez-m566,sanchez,Pedro Sánchez,\"Insultos, polarización y crispación en la política española\",0:09:26,566,verdadero,alta,\"A mí me han llamado dictador, me han llamado psicópata\",Responsables políticos han llamado «dictador» y «psicópata» a Sánchez.,\"Abascal lo llamó «dictador» en 2023 y «psicópata peligroso» en septiembre de 2026, y Buxadé lo tachó de «psicópata» en 2021.\",\"Abascal llamó «dictador» a Sánchez el 9 de noviembre de 2023 (VilaWeb), Jorge Buxadé (Vox) dijo que era «un auténtico psicópata» el 12 de julio de 2021 (EFE vía eldiario.es) y el propio Abascal lo tachó de «un psicópata peligroso» el 2 de septiembre de 2026 (Demócrata, agencias). El 9 de septiembre de 2026 Sánchez le recordó en el Congreso que lo había llamado «autócrata, dictador» (Diari de Tarragona/EFE).\",https://www.vilaweb.cat/noticies/abascal-sanchez-dictador-banc-acusats/ | https://www.eldiario.es/politica/vox-anima-pp-mocion-censura-sanchez-psicopata_1_8127719.html | https://www.democrata.es/politica/abascal-tacha-a-sanchez-de-un-psicopata-peligroso-y-le-acusa-de-traicionar-a-los-ceuties/ | https://www.diaridetarragona.com/espana/270259/sanchez-abascal-diferencia-sere-perro-amo.html,https://www.youtube.com/watch?v=mStOFBvToUI&t=566s,https://verificacion-podcast.vercel.app/sanchez#m566\n"
        }
       }
      }
@@ -408,7 +408,7 @@
         "schema": {
          "type": "string"
         },
-        "example": "id,entrevista,invitado,tema,minuto,segundo,veredicto,confianza,cita,afirmacion,resumen,explicacion,fuentes,video_url,web_url\nsanchez-m566,sanchez,Pedro Sánchez,\"Insultos, polarización y crispación en la política española\",0:09:26,566,verdadero,alta,\"A mí me han llamado dictador, me han llamado psicópata\",Responsables políticos han llamado «dictador» y «psicópata» a Sánchez.,Abascal lo llamó «dictador» el 9 de noviembre de 2023 y Buxadé «psicópata» el 12 de julio de 2021; Sánchez ya citaba estos insultos en diciembre de 2023.,\"Abascal lo llamó «dictador» el 9 de noviembre de 2023 («O el dictador acaba en el banquillo...») y, según Sánchez, de nuevo «autócrata y dictador» (sesión de control del 9 de septiembre de 2026). Jorge Buxadé (Vox) lo llamó «un auténtico psicópata» el 12 de julio de 2021, y Abascal «psicópata peligroso» en otra ocasión; el propio Sánchez ya citaba estos insultos en diciembre de 2023, junto al «enfermo mental» atribuido a Feijóo.\",https://www.vilaweb.cat/noticies/abascal-sanchez-dictador-banc-acusats/ | https://www.eldiario.es/politica/vox-anima-pp-mocion-censura-sanchez-psicopata_1_8127719.html | https://www.democrata.es/politica/abascal-tacha-a-sanchez-de-un-psicopata-peligroso-y-le-acusa-de-traicionar-a-los-ceuties/ | https://www.diaridetarragona.com/espana/270259/sanchez-abascal-diferencia-sere-perro-amo.html,https://www.youtube.com/watch?v=mStOFBvToUI&t=566s,https://verificacion-podcast.vercel.app/sanchez#m566\n"
+        "example": "id,entrevista,invitado,tema,minuto,segundo,veredicto,confianza,cita,afirmacion,resumen,explicacion,fuentes,video_url,web_url\nsanchez-m566,sanchez,Pedro Sánchez,\"Insultos, polarización y crispación en la política española\",0:09:26,566,verdadero,alta,\"A mí me han llamado dictador, me han llamado psicópata\",Responsables políticos han llamado «dictador» y «psicópata» a Sánchez.,\"Abascal lo llamó «dictador» en 2023 y «psicópata peligroso» en septiembre de 2026, y Buxadé lo tachó de «psicópata» en 2021.\",\"Abascal llamó «dictador» a Sánchez el 9 de noviembre de 2023 (VilaWeb), Jorge Buxadé (Vox) dijo que era «un auténtico psicópata» el 12 de julio de 2021 (EFE vía eldiario.es) y el propio Abascal lo tachó de «un psicópata peligroso» el 2 de septiembre de 2026 (Demócrata, agencias). El 9 de septiembre de 2026 Sánchez le recordó en el Congreso que lo había llamado «autócrata, dictador» (Diari de Tarragona/EFE).\",https://www.vilaweb.cat/noticies/abascal-sanchez-dictador-banc-acusats/ | https://www.eldiario.es/politica/vox-anima-pp-mocion-censura-sanchez-psicopata_1_8127719.html | https://www.democrata.es/politica/abascal-tacha-a-sanchez-de-un-psicopata-peligroso-y-le-acusa-de-traicionar-a-los-ceuties/ | https://www.diaridetarragona.com/espana/270259/sanchez-abascal-diferencia-sere-perro-amo.html,https://www.youtube.com/watch?v=mStOFBvToUI&t=566s,https://verificacion-podcast.vercel.app/sanchez#m566\n"
        }
       }
      },
@@ -466,11 +466,11 @@
           "transcripcion_txt_url": "https://verificacion-podcast.vercel.app/api/v1/sanchez/transcripcion.txt",
           "total_afirmaciones": 147,
           "por_veredicto": {
-           "falso": 5,
-           "enganoso": 23,
-           "mayormente_verdadero": 52,
-           "verdadero": 33,
-           "no_verificable": 34
+           "falso": 4,
+           "enganoso": 24,
+           "mayormente_verdadero": 50,
+           "verdadero": 38,
+           "no_verificable": 31
           },
           "excluidas": 10,
           "esencial": [
@@ -656,11 +656,11 @@
      }
     },
     "example": {
-     "falso": 5,
-     "enganoso": 23,
-     "mayormente_verdadero": 52,
-     "verdadero": 33,
-     "no_verificable": 34
+     "falso": 4,
+     "enganoso": 24,
+     "mayormente_verdadero": 50,
+     "verdadero": 38,
+     "no_verificable": 31
     }
    },
    "Comun": {

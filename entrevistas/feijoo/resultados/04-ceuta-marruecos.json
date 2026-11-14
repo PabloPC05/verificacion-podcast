@@ -45,6 +45,13 @@
         "titulo": "Policía Nacional (CENIF): Nota informativa de 28 de julio de 2026 (documento publicado por El Debate)",
         "url": "https://www.eldebate.com/uploads/files/2026/09/09/Informe%20Policia%2028%20de%20julio.pdf"
       }
+    ],
+    "correcciones": [
+      {
+        "fecha": "2026-11-14",
+        "antes": "verdadero",
+        "motivo": "La nota del CENIF del 28 de julio era más matizada de lo que se decía: no apreciaba indicadores de un salto masivo a la valla y calificaba de incipientes las señales; el aviso inequívoco es del 29 de julio."
+      }
     ]
   },
   {
@@ -356,6 +363,13 @@
       {
         "titulo": "El Independiente: Marruecos carga contra la justicia europea y reclama a la UE que preserve su asociación",
         "url": "https://www.elindependiente.com/internacional/2024/10/04/marruecos-carga-contra-la-justicia-europea-y-reclama-a-la-ue-que-preserve-su-asociacion/amp/"
+      }
+    ],
+    "correcciones": [
+      {
+        "fecha": "2026-11-14",
+        "antes": "mayormente_verdadero",
+        "motivo": "La web de la Comisión Europea confirma los acuerdos comerciales vigentes con Marruecos y el Parlamento Europeo lo llama «socio clave», lo que resuelve el reparo anterior sobre su situación en 2026."
       }
     ]
   }

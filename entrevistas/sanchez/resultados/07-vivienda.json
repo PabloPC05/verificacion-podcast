@@ -15,6 +15,13 @@
     "titulo": "Diario de Pontevedra: Jordi Wild aprieta a Colau, Feijóo y Sánchez (13/11/2026)",
     "url": "https://www.diariodepontevedra.es/articulo/elecciones-generales-29n/asi-han-sido-entrevistas-jordi-wild-colau-feijoo-sanchez-candidatos-elecciones-generales-29n/202611131459511476899.html"
    }
+  ],
+  "correcciones": [
+   {
+    "fecha": "2026-11-14",
+    "antes": "enganoso",
+    "motivo": "Lo que Sánchez ha oído no se puede comprobar y no aparece la frase literal de Colau, aunque el 3 de noviembre de 2026 dijo, según Europa Press, que el Ministerio de Vivienda «no ha hecho nada» en esta legislatura."
+   }
   ]
  },
  {
@@ -75,6 +82,13 @@
     "titulo": "El Español: Málaga deja los pisos turísticos por los apartamentos en edificios (3/5/2026)",
     "url": "https://www.elespanol.com/malaga/malaga-ciudad/20260503/malaga-deja-pisos-turisticos-edificios-apartamentos-disparan-cambian-modelo/1003744229497_0.html"
    }
+  ],
+  "correcciones": [
+   {
+    "fecha": "2026-11-14",
+    "antes": "enganoso",
+    "motivo": "Hay indicios, pero ni el Banco de España ni la Universidad de Málaga miden la brecha con Manresa y sus estudios tratan de alquileres, no de precios de venta, así que la causa no se puede confirmar ni descartar."
+   }
   ]
  },
  {
@@ -112,6 +126,13 @@
    {
     "titulo": "El Debate: El truco de Sánchez para presumir de haber construido «un millón» de casas (23/10/2026)",
     "url": "https://www.eldebate.com/economia/20261023/truco-sanchez-presumir-haber-construido-millon-casas-atribuirse-viviendas-rajoy_473104.html"
+   }
+  ],
+  "correcciones": [
+   {
+    "fecha": "2026-11-14",
+    "antes": "falso",
+    "motivo": "Según las tablas oficiales, el millón y el 13 % encajan con las viviendas iniciadas desde 2018 (947.600 y 13,1 %), no con las terminadas (726.100), y los «más de 150.000» protegidas no cuadran (unas 124.000 iniciadas)."
    }
   ]
  },
@@ -194,6 +215,13 @@
    {
     "titulo": "RTVC: CASA 47, el primer portal del parque público estatal de vivienda (7/9/2026, Sánchez repite «multiplicado por ocho»)",
     "url": "https://rtvc.es/casa-47-primer-portal-parque-publico-estatal-vivienda-7-septiembre-2026/"
+   }
+  ],
+  "correcciones": [
+   {
+    "fecha": "2026-11-14",
+    "antes": "no_verificable",
+    "motivo": "El «ocho» sale del preámbulo del Real Decreto 326/2026, que cuenta 20.988 millones movilizados con financiación y fondos europeos, mientras que en los Presupuestos el crédito nacional solo se duplicó de 2018 a 2023, de 481 a 997 millones."
    }
   ]
  },
@@ -287,6 +315,13 @@
     "titulo": "LawAndTrends: La Diputación Permanente convalida el decreto que prohíbe los desahucios y tumba el que hacía indefinidos los alquileres (13/11/2026)",
     "url": "https://www.lawandtrends.com/noticias/administrativo/la-diputacion-permanente-convalida-el-decreto-que-prohibe-los-desahucios-y-tumba-el-que-hacia-indefinidos-los-alquileres-1.html"
    }
+  ],
+  "correcciones": [
+   {
+    "fecha": "2026-11-14",
+    "antes": "no_verificable",
+    "motivo": "Los dos reales decretos-ley estaban pendientes de convalidación y se votaron el 12 de noviembre de 2026, aunque el resultado fue mixto: uno salió adelante y el otro decayó."
+   }
   ]
  },
  {
@@ -312,6 +347,13 @@
    {
     "titulo": "The Objective: Sumar celebra la retirada de la ley del suelo (23/5/2024)",
     "url": "https://theobjective.com/espana/politica/2024-05-23/sumar-celebra-retirada-ley-suelo/"
+   }
+  ],
+  "correcciones": [
+   {
+    "fecha": "2026-11-14",
+    "antes": "no_verificable",
+    "motivo": "La izquierda se ha opuesto a las reformas de la ley del suelo (Sumar y Podemos en 2025, Podemos en 2026), pero no consta posición de Colau y Sumar aceptó incluirla en el borrador de julio de 2026."
    }
   ]
  },

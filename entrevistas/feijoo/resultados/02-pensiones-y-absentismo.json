@@ -113,6 +113,13 @@
         "titulo": "INE, Proyecciones de población 2026-2076 (saldo vegetativo negativo)",
         "url": "https://ine.es/dyngs/Prensa/PROP20262076.htm"
       }
+    ],
+    "correcciones": [
+      {
+        "fecha": "2026-11-14",
+        "antes": "enganoso",
+        "motivo": "Según el INE, la población creció entre 2,9 y 3,1 millones desde 2018, no más de 4 millones; la dirección de lo dicho (inmigración y saldo vegetativo negativo) sí es correcta."
+      }
     ]
   },
   {
@@ -213,6 +220,13 @@
         "titulo": "España pagará 1.786 millones por seis corbetas EPC (Escudo Digital, 04/11/2026)",
         "url": "https://www.escudodigital.com/defensa/desarrollo-defensa/espana-pagara-1786-millones-por-seis-corbetas-epc-la-armada-pidio-patrulleros-y-el-boe-exige-escoltas.html"
       }
+    ],
+    "correcciones": [
+      {
+        "fecha": "2026-11-14",
+        "antes": "no_verificable",
+        "motivo": "Sumando los Consejos de Ministros del 27 de octubre y del 3 y 10 de noviembre salen unos 18.200 millones en Defensa, compatibles con su cifra, aunque «adjudicado» es impreciso."
+      }
     ]
   },
   {
@@ -261,6 +275,13 @@
         "titulo": "Artículo 14: El déficit de la Seguridad Social duplica el gasto militar comprometido con la OTAN (23/01/2026, sobre informe de Fedea)",
         "url": "https://www.articulo14.es/economia/el-deficit-de-la-seguridad-social-duplica-el-gasto-militar-comprometido-con-la-otan-20260123.html"
       }
+    ],
+    "correcciones": [
+      {
+        "fecha": "2026-11-14",
+        "antes": "mayormente_verdadero",
+        "motivo": "Las cifras oficiales de transferencias de 2025 (52.990 millones en total, 47.815 del Estado y organismos autónomos, según el Ministerio de Inclusión) hacen correcto «unos 50.000 millones»."
+      }
     ]
   },
   {
@@ -282,6 +303,13 @@
       {
         "titulo": "El Derecho: La edad legal de jubilación sube a 66 años y 10 meses",
         "url": "https://elderecho.com/la-edad-legal-de-jubilacion-sube-a-66-anos-y-10-meses"
+      }
+    ],
+    "correcciones": [
+      {
+        "fecha": "2026-11-14",
+        "antes": "mayormente_verdadero",
+        "motivo": "La Seguridad Social fija 67 años como regla general (66 años y 10 meses en 2026), por lo que el redondeo de dos meses es admisible."
       }
     ]
   },
@@ -322,6 +350,13 @@
       {
         "titulo": "Adecco Group Institute: XV Informe Adecco sobre Empresa Saludable y Gestión del Absentismo (nota de prensa, 14/07/2026)",
         "url": "https://www.adeccogroup.com/-/media/project/adecco-group/adeccogroup/spain-content/2026-press-releases/2026-07-14-ndp-xv-informe-anual-adecco-empresa-saludable-gestion-absentismo.pdf"
+      }
+    ],
+    "correcciones": [
+      {
+        "fecha": "2026-11-14",
+        "antes": "no_verificable",
+        "motivo": "La serie de la asociación de mutuas AMAT cifra el coste de las bajas en 14.561 millones en 2018 y 33.280 en 2025, lo que encaja con lo dicho, aunque es una fuente interesada y no oficial."
       }
     ]
   },
@@ -385,6 +420,13 @@
         "titulo": "Absentismo laboral: como cada lunes, hoy no trabajarán 1,8 millones de españoles (El Debate, 28/10/2024, con datos de Randstad Research)",
         "url": "https://www.eldebate.com/economia/20241028/absentismo-laboral-como-cada-lunes-hoy-no-trabajar-18-millones-espanoles_239110.html"
       }
+    ],
+    "correcciones": [
+      {
+        "fecha": "2026-11-14",
+        "antes": "mayormente_verdadero",
+        "motivo": "Los datos de bajas iniciadas de las mutuas (AMAT) respaldan el lunes como día con más bajas nuevas, pero no el viernes, y no hay estadística oficial de ausentes por día de la semana."
+      }
     ]
   },
   {
@@ -425,6 +467,13 @@
       {
         "titulo": "Adecco Group Institute: XV Informe Adecco sobre Absentismo Laboral 2026 (datos INE-ETCL)",
         "url": "https://www.adeccoinstitute.es/wp-content/uploads/2026/07/xv-informe-absentismo-anual-2026.pdf"
+      }
+    ],
+    "correcciones": [
+      {
+        "fecha": "2026-11-14",
+        "antes": "mayormente_verdadero",
+        "motivo": "Existen actividades con esas tasas (Correos, 13,0 % en 2025; servicios a edificios, 12,5 %, según Adecco con datos del INE) y Feijóo no dice que sea la media nacional, que es del 7,6 %."
       }
     ]
   },

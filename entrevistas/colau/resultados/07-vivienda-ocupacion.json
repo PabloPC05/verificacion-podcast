@@ -71,6 +71,13 @@
         "titulo": "Ministerio de Derechos Sociales, Consumo y Agenda 2030 y CSIC: El problema de la concentración inmobiliaria en España (Informe 2, 2026)",
         "url": "https://www.dsca.gob.es//sites/default/files/prensa/Informe_2_concentracion_inmobiliaria.pdf"
       }
+    ],
+    "correcciones": [
+      {
+        "fecha": "2026-11-14",
+        "antes": "falso",
+        "motivo": "Ninguna fuente respalda la cifra, pero tampoco la contradice: no hay un registro público de las viviendas de los fondos y las cifras de Civio y Atlas miden viviendas alquiladas, no el parque total en propiedad."
+      }
     ]
   },
   {
@@ -160,6 +167,13 @@
       {
         "titulo": "Idealista: Más freno al inmobiliario en Barcelona, nueva ordenanza de tanteo y retracto (5-1-2026)",
         "url": "https://www.idealista.com/news/node/878279"
+      }
+    ],
+    "correcciones": [
+      {
+        "fecha": "2026-11-14",
+        "antes": "enganoso",
+        "motivo": "La memoria económica oficial de la ordenanza dice que el Ayuntamiento paga el mismo precio y condiciones que se ofrecen, no una tasación inferior al mercado; solo es cierto que la norma del área la hizo el Ayuntamiento."
       }
     ]
   },
@@ -442,6 +456,13 @@
       {
         "titulo": "Qué.es: El alquiler ya absorbe el 50 % del salario medio en España (3-6-2026)",
         "url": "https://www.que.es/2026/06/03/alquiler-salario-medio-espana-bomba/"
+      }
+    ],
+    "correcciones": [
+      {
+        "fecha": "2026-11-14",
+        "antes": "no_verificable",
+        "motivo": "Según Eurostat, la relación precio-renta de 2025 sigue por debajo de la de 2007 y la sobrecarga de los inquilinos era mayor en 2014, aunque los precios nominales están en máximos."
       }
     ]
   }

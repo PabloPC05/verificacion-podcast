@@ -275,6 +275,13 @@
         "titulo": "elDiario.es (30/05/2022): La «Moncloa gallega», residencia presidencial de 10 millones",
         "url": "https://www.eldiario.es/galicia/moncloa-gallega-residencia-presidencial-10-millones-euros-camino-casa-fantasma_1_9031243.html"
       }
+    ],
+    "correcciones": [
+      {
+        "fecha": "2026-11-14",
+        "antes": "no_verificable",
+        "motivo": "Las obras de la residencia se adjudicaron en 2001 y el edificio se fecha en 2002, de modo que «2000» es una aproximación con un error de uno o dos años."
+      }
     ]
   },
   {
@@ -318,6 +325,13 @@
       {
         "titulo": "Universitat Rovira i Virgili, Diccionario de historia de la enseñanza: Ley General de Educación de 1970",
         "url": "https://www.grelinap.recerca.urv.cat/ca/projectes/diccionario-historia-ensenanza-frances-espana/entradas/130/ley-general-de-educacion-de-1970"
+      }
+    ],
+    "correcciones": [
+      {
+        "fecha": "2026-11-14",
+        "antes": "no_verificable",
+        "motivo": "Nacido en septiembre de 1961, y con los calendarios de EGB (1970-71) y de BUP (1975-76, según el BOE de 1975), Feijóo encaja en las primeras cohortes; es una deducción, no una fuente que lo diga."
       }
     ]
   },

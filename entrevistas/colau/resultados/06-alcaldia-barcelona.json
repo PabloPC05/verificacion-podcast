@@ -339,6 +339,13 @@
         "titulo": "Nació Digital: Cauen un 23% els delictes a Barcelona però augmenten les denúncies per agressions sexuals respecte al 2019 (07/07/2022)",
         "url": "https://naciodigital.cat/politica/cauen-un-23-els-delictes-a-barcelona-pero-augmenten-les-denuncies-per-agressions-sexuals-respecte-2019.html"
       }
+    ],
+    "correcciones": [
+      {
+        "fecha": "2026-11-14",
+        "antes": "no_verificable",
+        "motivo": "La web del Ayuntamiento y Betevé confirman que el alcalde preside la Junta Local de Seguridad y que reúne a todos los cuerpos, pero la Junta se reúne dos veces al año, no cada trimestre."
+      }
     ]
   },
   {
@@ -369,6 +376,13 @@
         "titulo": "Ara: Los extranjeros cometen delitos menos graves y tienen menos permisos (datos de los Mossos de 2023 para Cataluña)",
         "url": "https://es.ara.cat/sociedad/inmigracion/extranjeros-cometen-delitos-graves-permisos_130_4934748.html"
       }
+    ],
+    "correcciones": [
+      {
+        "fecha": "2026-11-14",
+        "antes": "enganoso",
+        "motivo": "No existen datos públicos de la nacionalidad de los autores de delitos en Barcelona durante el mandato, y las únicas cifras disponibles, las de detenciones, miden otra cosa."
+      }
     ]
   },
   {
@@ -390,6 +404,13 @@
       {
         "titulo": "Metrópoli Abierta: Ocho de cada diez detenidos en Barcelona son extranjeros (19/01/2024)",
         "url": "https://metropoliabierta.elespanol.com/el-pulso-de-la-ciudad/20240119/ocho-de-cada-diez-detenidos-en-barcelona-son-extranjeros/826167448_0.html"
+      }
+    ],
+    "correcciones": [
+      {
+        "fecha": "2026-11-14",
+        "antes": "enganoso",
+        "motivo": "No hay una serie de Barcelona sobre la nacionalidad de los autores: a escala catalana hay apoyo (55 % de delitos de autores españoles en 2023, según los Mossos), pero en la ciudad las detenciones apuntan en sentido contrario."
       }
     ]
   },

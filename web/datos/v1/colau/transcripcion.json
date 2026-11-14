@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-14T10:22:15+01:00",
+ "generado": "2026-11-14T10:32:58+01:00",
  "aviso": "Verificación asistida por IA, sin revisión de un equipo de periodistas. «falso» no implica intención de mentir. Contrasta siempre con las fuentes enlazadas.",
  "veredictos": {
   "verdadero": "Los datos lo confirman.",
@@ -25,11 +25,11 @@
   "transcripcion_txt_url": "https://verificacion-podcast.vercel.app/api/v1/colau/transcripcion.txt",
   "total_afirmaciones": 153,
   "por_veredicto": {
-   "falso": 5,
-   "enganoso": 22,
+   "falso": 4,
+   "enganoso": 24,
    "mayormente_verdadero": 73,
    "verdadero": 37,
-   "no_verificable": 16
+   "no_verificable": 15
   },
   "excluidas": 12,
   "esencial": [
@@ -74,9 +74,9 @@
     "por_veredicto": {
      "falso": 0,
      "enganoso": 0,
-     "mayormente_verdadero": 2,
+     "mayormente_verdadero": 3,
      "verdadero": 0,
-     "no_verificable": 2
+     "no_verificable": 1
     }
    },
    {
@@ -113,8 +113,8 @@
     "por_veredicto": {
      "falso": 0,
      "enganoso": 2,
-     "mayormente_verdadero": 11,
-     "verdadero": 3,
+     "mayormente_verdadero": 10,
+     "verdadero": 4,
      "no_verificable": 0
     }
    },
@@ -124,10 +124,10 @@
     "inicio_s": 2186,
     "total": 21,
     "por_veredicto": {
-     "falso": 3,
-     "enganoso": 2,
+     "falso": 2,
+     "enganoso": 4,
      "mayormente_verdadero": 8,
-     "verdadero": 8,
+     "verdadero": 7,
      "no_verificable": 0
     }
    },
@@ -138,8 +138,8 @@
     "total": 20,
     "por_veredicto": {
      "falso": 0,
-     "enganoso": 2,
-     "mayormente_verdadero": 10,
+     "enganoso": 1,
+     "mayormente_verdadero": 11,
      "verdadero": 8,
      "no_verificable": 0
     }
@@ -164,8 +164,8 @@
     "total": 6,
     "por_veredicto": {
      "falso": 0,
-     "enganoso": 0,
-     "mayormente_verdadero": 5,
+     "enganoso": 1,
+     "mayormente_verdadero": 4,
      "verdadero": 0,
      "no_verificable": 1
     }

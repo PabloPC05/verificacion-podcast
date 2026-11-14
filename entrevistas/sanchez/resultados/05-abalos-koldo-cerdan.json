@@ -247,6 +247,13 @@
         "titulo": "Diari de Tarragona (Agencias/EFE): Sánchez anuncia una auditoría externa y una reestructuración en el PSOE (12/6/2025)",
         "url": "https://www.diaridetarragona.com/internacional/232753/sanchez-anuncia-una-auditoria-externa-y-una-reestructuracion-en-el-psoe-bd24362021.html"
       }
+    ],
+    "correcciones": [
+      {
+        "fecha": "2026-11-14",
+        "antes": "mayormente_verdadero",
+        "motivo": "Dos agencias recogen literalmente su petición de perdón, EFE el 12/6/2025 y Europa Press/RTVE el 17/6/2025; la frase de la entrevista es ambigua, pero la petición pública consta."
+      }
     ]
   },
   {
@@ -320,6 +327,13 @@
       {
         "titulo": "Última Hora (EFE): Koldo García niega que hablase con Sánchez cuando llegó a Moncloa (30/4/2026)",
         "url": "https://www.ultimahora.es/noticias/nacional/2026/04/30/2620271/koldo-garcia-niega-hablase-sanchez-cuando-llego-moncloa-sentido-comun.html"
+      }
+    ],
+    "correcciones": [
+      {
+        "fecha": "2026-11-14",
+        "antes": "enganoso",
+        "motivo": "La afirmación estaba mal reformulada: Sánchez comparó (no conocía a Koldo como a Ábalos y Cerdán) y precisó que no era un desconocido; Valencia Plaza, El Debate y EFE respaldan esa relación menor."
       }
     ]
   },

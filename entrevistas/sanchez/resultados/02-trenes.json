@@ -189,6 +189,13 @@
         "titulo": "El Cronista: El Gobierno prepara inversiones de 20.000 millones en transporte (24/04/2026)",
         "url": "https://www.cronista.com/espana/politica-es/oficial-el-gobierno-prepara-inversiones-de-20000-millones-en-transporte-el-plan-preve-mantenimiento-de-carreteras-mejoras-para-los-trenes-y-autobuses/"
       }
+    ],
+    "correcciones": [
+      {
+        "fecha": "2026-11-14",
+        "antes": "no_verificable",
+        "motivo": "Merca2 y Mundiario atribuyen a Transportes un marco de 19.000 millones hasta 2030 para Adif, pero incluye obra nueva y los convenios de febrero fijan el mantenimiento en unos 8.150 millones."
+      }
     ]
   },
   {
@@ -315,6 +322,13 @@
         "titulo": "Demócrata: Los controladores de Adif preparan una huelga tras Urda (20% de plantilla que falta en Atocha, según el Sindicato de Circulación)",
         "url": "https://www.democrata.es/en/current-events/the-adif-controllers-are-preparing-a-strike-after-urda-they-denounce-that-at-atocha-20-of-the-necessary-staff-is-missing/"
       }
+    ],
+    "correcciones": [
+      {
+        "fecha": "2026-11-14",
+        "antes": "no_verificable",
+        "motivo": "La serie oficial de plantilla de Adif muestra un +11 % sobre 2018 y un +19 % sobre el mínimo de 2021; de los controladores no hay serie y hay denuncias de falta de personal."
+      }
     ]
   },
   {
@@ -410,6 +424,13 @@
       {
         "titulo": "Galicia Press: Lastra afirma que 'algunos deberían aprender' de Rubalcaba, que no pidió la dimisión de Pastor por Angrois (03/11/2026)",
         "url": "https://www.galiciapress.es/articulo/politica/2026-11-03/6076340-lastra-afirma-algunos-deberian-aprender-rubalcaba-no-pidio-dimision-pastor-angrois"
+      }
+    ],
+    "correcciones": [
+      {
+        "fecha": "2026-11-14",
+        "antes": "mayormente_verdadero",
+        "motivo": "El Diario de Sesiones del Congreso de 2013 muestra que, en la comparecencia de Pastor, el portavoz socialista pidió explicaciones, medidas y una comisión, pero no su dimisión."
       }
     ]
   },

@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-14T10:22:15+01:00",
+ "generado": "2026-11-14T10:32:58+01:00",
  "aviso": "Verificación asistida por IA, sin revisión de un equipo de periodistas. «falso» no implica intención de mentir. Contrasta siempre con las fuentes enlazadas.",
  "veredictos": {
   "verdadero": "Los datos lo confirman.",
@@ -108,9 +108,9 @@
      "por_veredicto": {
       "falso": 2,
       "enganoso": 1,
-      "mayormente_verdadero": 10,
-      "verdadero": 3,
-      "no_verificable": 5
+      "mayormente_verdadero": 7,
+      "verdadero": 5,
+      "no_verificable": 6
      },
      "afirmaciones": [
       "sanchez-m3267",
@@ -118,17 +118,17 @@
       "sanchez-m3620",
       "sanchez-m3251",
       "sanchez-m3257",
-      "sanchez-m3378",
       "sanchez-m3418",
-      "sanchez-m3602",
       "sanchez-m3856",
       "sanchez-m3873",
       "sanchez-m3873-2",
       "sanchez-m3918",
-      "sanchez-m3929-2",
+      "sanchez-m3602",
       "sanchez-m3706",
       "sanchez-m3929",
+      "sanchez-m3929-2",
       "sanchez-m3976",
+      "sanchez-m3378",
       "sanchez-m3613",
       "sanchez-m3754",
       "sanchez-m3844",
@@ -144,20 +144,20 @@
      ],
      "total": 12,
      "por_veredicto": {
-      "falso": 2,
+      "falso": 1,
       "enganoso": 3,
-      "mayormente_verdadero": 3,
+      "mayormente_verdadero": 4,
       "verdadero": 3,
       "no_verificable": 1
      },
      "afirmaciones": [
-      "feijoo-m3123-2",
       "feijoo-m3377",
+      "feijoo-m3123-2",
       "feijoo-m3225",
-      "feijoo-m3334",
       "feijoo-m3389",
       "feijoo-m3123",
       "feijoo-m3315",
+      "feijoo-m3334",
       "feijoo-m3345",
       "feijoo-m3187",
       "feijoo-m3321",
@@ -175,18 +175,18 @@
      "total": 14,
      "por_veredicto": {
       "falso": 0,
-      "enganoso": 1,
-      "mayormente_verdadero": 6,
+      "enganoso": 2,
+      "mayormente_verdadero": 5,
       "verdadero": 6,
       "no_verificable": 1
      },
      "afirmaciones": [
       "colau-m3952",
+      "colau-m5132",
       "colau-m4457",
       "colau-m4823",
       "colau-m4896",
       "colau-m4919",
-      "colau-m5132",
       "colau-m5154",
       "colau-m3922",
       "colau-m3984",
@@ -213,11 +213,11 @@
      ],
      "total": 29,
      "por_veredicto": {
-      "falso": 1,
-      "enganoso": 6,
+      "falso": 0,
+      "enganoso": 7,
       "mayormente_verdadero": 6,
-      "verdadero": 10,
-      "no_verificable": 6
+      "verdadero": 11,
+      "no_verificable": 5
      },
      "afirmaciones": [
       "sanchez-m2012",
@@ -227,13 +227,14 @@
       "sanchez-m2353",
       "sanchez-m2718",
       "sanchez-m2908",
+      "sanchez-m1846",
       "sanchez-m1846-2",
-      "sanchez-m1911",
       "sanchez-m1976",
       "sanchez-m2270",
       "sanchez-m2770",
       "sanchez-m2847-2",
       "sanchez-m1803",
+      "sanchez-m1911",
       "sanchez-m1932",
       "sanchez-m2368",
       "sanchez-m2490",
@@ -243,7 +244,6 @@
       "sanchez-m2847-3",
       "sanchez-m2949",
       "sanchez-m3074",
-      "sanchez-m1846",
       "sanchez-m2161",
       "sanchez-m2247",
       "sanchez-m2592",
@@ -271,16 +271,16 @@
       "feijoo-m2663-3",
       "feijoo-m2726",
       "feijoo-m2507",
+      "feijoo-m2526",
       "feijoo-m2532",
       "feijoo-m2733",
       "feijoo-m2772",
       "feijoo-m2795",
       "feijoo-m2813",
-      "feijoo-m2894",
-      "feijoo-m2526",
       "feijoo-m2576",
       "feijoo-m2663",
-      "feijoo-m2663-2"
+      "feijoo-m2663-2",
+      "feijoo-m2894"
      ]
     },
     {
@@ -292,17 +292,17 @@
      "total": 20,
      "por_veredicto": {
       "falso": 0,
-      "enganoso": 2,
-      "mayormente_verdadero": 10,
+      "enganoso": 1,
+      "mayormente_verdadero": 11,
       "verdadero": 8,
       "no_verificable": 0
      },
      "afirmaciones": [
-      "colau-m3058",
       "colau-m3136",
       "colau-m2912",
       "colau-m2995",
       "colau-m3013",
+      "colau-m3058",
       "colau-m3077",
       "colau-m3128",
       "colau-m3346",
@@ -338,29 +338,29 @@
      "total": 26,
      "por_veredicto": {
       "falso": 1,
-      "enganoso": 5,
+      "enganoso": 4,
       "mayormente_verdadero": 9,
-      "verdadero": 3,
+      "verdadero": 4,
       "no_verificable": 8
      },
      "afirmaciones": [
       "sanchez-m4938",
       "sanchez-m4262",
-      "sanchez-m4623",
       "sanchez-m4742",
       "sanchez-m4808",
       "sanchez-m4823",
       "sanchez-m4309",
       "sanchez-m4331",
-      "sanchez-m4377",
       "sanchez-m4485",
       "sanchez-m4560",
+      "sanchez-m4623",
       "sanchez-m4660",
       "sanchez-m4683",
       "sanchez-m4891",
       "sanchez-m4983",
       "sanchez-m4080",
       "sanchez-m4360",
+      "sanchez-m4377",
       "sanchez-m4939",
       "sanchez-m4259",
       "sanchez-m4277",
@@ -445,8 +445,8 @@
      "por_veredicto": {
       "falso": 0,
       "enganoso": 2,
-      "mayormente_verdadero": 11,
-      "verdadero": 3,
+      "mayormente_verdadero": 10,
+      "verdadero": 4,
       "no_verificable": 0
      },
      "afirmaciones": [
@@ -457,7 +457,6 @@
       "colau-m1444",
       "colau-m1561",
       "colau-m1700",
-      "colau-m1719",
       "colau-m1877",
       "colau-m1919",
       "colau-m1933",
@@ -465,6 +464,7 @@
       "colau-m2110",
       "colau-m1321",
       "colau-m1646",
+      "colau-m1719",
       "colau-m1806"
      ]
     }
@@ -485,30 +485,30 @@
      "total": 19,
      "por_veredicto": {
       "falso": 0,
-      "enganoso": 2,
+      "enganoso": 3,
       "mayormente_verdadero": 7,
-      "verdadero": 3,
-      "no_verificable": 7
+      "verdadero": 4,
+      "no_verificable": 5
      },
      "afirmaciones": [
       "sanchez-m914",
       "sanchez-m1034",
+      "sanchez-m1087-2",
       "sanchez-m1020",
       "sanchez-m1087",
       "sanchez-m1185",
       "sanchez-m1217",
-      "sanchez-m1556",
+      "sanchez-m1358",
       "sanchez-m1570",
       "sanchez-m1673",
       "sanchez-m937",
       "sanchez-m1079",
       "sanchez-m1109",
+      "sanchez-m1556",
       "sanchez-m947",
-      "sanchez-m1087-2",
       "sanchez-m1243",
       "sanchez-m1279",
       "sanchez-m1310",
-      "sanchez-m1358",
       "sanchez-m1537"
      ]
     },
@@ -520,19 +520,20 @@
      ],
      "total": 21,
      "por_veredicto": {
-      "falso": 3,
-      "enganoso": 2,
+      "falso": 2,
+      "enganoso": 4,
       "mayormente_verdadero": 8,
-      "verdadero": 8,
+      "verdadero": 7,
       "no_verificable": 0
      },
      "afirmaciones": [
-      "colau-m2221",
       "colau-m2564",
       "colau-m2732",
+      "colau-m2221",
+      "colau-m2236",
       "colau-m2499",
       "colau-m2507",
-      "colau-m2236",
+      "colau-m2245",
       "colau-m2346",
       "colau-m2359",
       "colau-m2418",
@@ -540,7 +541,6 @@
       "colau-m2596",
       "colau-m2799",
       "colau-m2815",
-      "colau-m2245",
       "colau-m2281",
       "colau-m2341",
       "colau-m2354",
@@ -612,30 +612,30 @@
      "total": 18,
      "por_veredicto": {
       "falso": 0,
-      "enganoso": 4,
-      "mayormente_verdadero": 4,
+      "enganoso": 3,
+      "mayormente_verdadero": 6,
       "verdadero": 8,
-      "no_verificable": 2
+      "no_verificable": 1
      },
      "afirmaciones": [
       "feijoo-m718",
-      "feijoo-m971",
       "feijoo-m1053",
       "feijoo-m1085",
+      "feijoo-m434",
       "feijoo-m639",
       "feijoo-m853",
       "feijoo-m901",
+      "feijoo-m971",
       "feijoo-m1137",
       "feijoo-m357",
-      "feijoo-m434",
       "feijoo-m554",
       "feijoo-m567",
       "feijoo-m743",
       "feijoo-m966",
       "feijoo-m1026",
       "feijoo-m1095",
-      "feijoo-m675",
-      "feijoo-m1131"
+      "feijoo-m1131",
+      "feijoo-m675"
      ]
     },
     {
@@ -679,18 +679,18 @@
      "por_veredicto": {
       "falso": 0,
       "enganoso": 1,
-      "mayormente_verdadero": 3,
+      "mayormente_verdadero": 4,
       "verdadero": 1,
-      "no_verificable": 2
+      "no_verificable": 1
      },
      "afirmaciones": [
       "sanchez-m805",
       "sanchez-m570",
       "sanchez-m648",
+      "sanchez-m710",
       "sanchez-m734",
       "sanchez-m566",
-      "sanchez-m638",
-      "sanchez-m710"
+      "sanchez-m638"
      ]
     },
     {
@@ -702,30 +702,30 @@
      "total": 18,
      "por_veredicto": {
       "falso": 0,
-      "enganoso": 4,
-      "mayormente_verdadero": 4,
+      "enganoso": 3,
+      "mayormente_verdadero": 6,
       "verdadero": 8,
-      "no_verificable": 2
+      "no_verificable": 1
      },
      "afirmaciones": [
       "feijoo-m718",
-      "feijoo-m971",
       "feijoo-m1053",
       "feijoo-m1085",
+      "feijoo-m434",
       "feijoo-m639",
       "feijoo-m853",
       "feijoo-m901",
+      "feijoo-m971",
       "feijoo-m1137",
       "feijoo-m357",
-      "feijoo-m434",
       "feijoo-m554",
       "feijoo-m567",
       "feijoo-m743",
       "feijoo-m966",
       "feijoo-m1026",
       "feijoo-m1095",
-      "feijoo-m675",
-      "feijoo-m1131"
+      "feijoo-m1131",
+      "feijoo-m675"
      ]
     },
     {
@@ -738,14 +738,14 @@
      "por_veredicto": {
       "falso": 0,
       "enganoso": 0,
-      "mayormente_verdadero": 2,
+      "mayormente_verdadero": 3,
       "verdadero": 0,
-      "no_verificable": 2
+      "no_verificable": 1
      },
      "afirmaciones": [
+      "colau-m355",
       "colau-m355-2",
       "colau-m355-3",
-      "colau-m355",
       "colau-m437"
      ]
     }

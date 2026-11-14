@@ -55,6 +55,13 @@
         "titulo": "Maldita.es: los españoles superan a los extranjeros entre los titulares del IMV desde 2020",
         "url": "https://maldita.es/prebunking/20260710/ingreso-minimo-vital-espa%C3%B1oles-extranjeros/"
       }
+    ],
+    "correcciones": [
+      {
+        "fecha": "2026-11-14",
+        "antes": "falso",
+        "motivo": "Los datos oficiales no publican los beneficiarios por nacionalidad, por lo que «medio millón» podría ser el total de miembros de hogares con titular extranjero; lo que las cifras ministeriales sí contradicen es que no hayan trabajado."
+      }
     ]
   },
   {
@@ -174,6 +181,13 @@
       {
         "titulo": "Idescat: población a 1 de enero, total y extranjera, municipio de Lleida (147.369 habitantes en 2025; 34.274 extranjeros, 23,26 %)",
         "url": "https://www.idescat.cat/poblacioestrangera/?geo=mun%3A251207&nac=a&b=0"
+      }
+    ],
+    "correcciones": [
+      {
+        "fecha": "2026-11-14",
+        "antes": "enganoso",
+        "motivo": "Idescat, con datos del INE, da un 27,8 % de nacidos en el extranjero en Lleida a 1 de enero de 2025; una desviación de unos dos puntos en una cifra dada como «aproximadamente» es una imprecisión menor."
       }
     ]
   },

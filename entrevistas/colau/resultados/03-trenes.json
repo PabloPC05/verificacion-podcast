@@ -23,6 +23,13 @@
         "titulo": "Wikipedia: Accidente ferroviario de Adamuz (solo apoyo)",
         "url": "https://es.wikipedia.org/wiki/Accidente_ferroviario_de_Adamuz"
       }
+    ],
+    "correcciones": [
+      {
+        "fecha": "2026-11-14",
+        "antes": "falso",
+        "motivo": "Puente fue nombrado ministro el 20 de noviembre de 2023, unos 26 meses antes del accidente, lo que contradice la idea de recién llegado; pero «poco tiempo» es una valoración subjetiva, no un dato que pueda desmentirse."
+      }
     ]
   },
   {
@@ -52,6 +59,13 @@
       {
         "titulo": "Wikipedia: Accidente ferroviario de Adamuz (solo apoyo)",
         "url": "https://es.wikipedia.org/wiki/Accidente_ferroviario_de_Adamuz"
+      }
+    ],
+    "correcciones": [
+      {
+        "fecha": "2026-11-14",
+        "antes": "mayormente_verdadero",
+        "motivo": "La inversión ferroviaria cayó de 8.772 millones en 2009 a 1.652 en 2016, pero el mantenimiento de Adif subió desde 2017 y la causa de los accidentes sigue en investigación, así que el nexo con la desinversión no está demostrado."
       }
     ]
   },
@@ -96,6 +110,13 @@
       {
         "titulo": "Demócrata: Colau exige la dimisión inmediata de Óscar Puente (30/10/2026)",
         "url": "https://www.democrata.es/en/politics/expansion-colau-demands-the-immediate-resignation-of-oscar-puente-after-the-railway-accident/"
+      }
+    ],
+    "correcciones": [
+      {
+        "fecha": "2026-11-14",
+        "antes": "verdadero",
+        "motivo": "La cronología muestra que Colau exigió «responsabilidades» el 28 de octubre, pero la petición explícita de dimisión llegó el 30, dos días después del accidente de Urda, y no «inmediatamente»."
       }
     ]
   },

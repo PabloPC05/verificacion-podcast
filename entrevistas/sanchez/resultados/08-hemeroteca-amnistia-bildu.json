@@ -45,6 +45,13 @@
         "titulo": "Maldita.es: Cuando Pedro Sánchez se oponía a otorgar los indultos a los líderes del 'procés' condenados y en prisión (23-6-2021)",
         "url": "https://maldita.es/malditahemeroteca/20210623/indultos-proces-cataluna-sanchez/"
       }
+    ],
+    "correcciones": [
+      {
+        "fecha": "2026-11-14",
+        "antes": "enganoso",
+        "motivo": "La visita a los hospitales Sagrat Cor y Sant Pau el 21-10-2019 y los gritos del personal sanitario encajan con su relato; lo único que no se puede comprobar es su motivación personal."
+      }
     ]
   },
   {
@@ -149,6 +156,13 @@
         "titulo": "Orain: PSOE y Sumar pactan prorrogar dos años los alquileres que acaban antes del 30 de junio de 2028 (22-7-2026)",
         "url": "https://orain.eus/en/politika/2026/07/22/psoe-sumar-pactan-prorrogar-2-anos-los-alquileres-acaban-antes-del-30-junio-2028/"
       }
+    ],
+    "correcciones": [
+      {
+        "fecha": "2026-11-14",
+        "antes": "mayormente_verdadero",
+        "motivo": "Bildu no tiene ministros ni forma parte del Gobierno, y Maldita recoge que PSOE y EH Bildu no compartieron gobierno en ninguna institución entre 2019 y 2023; el apoyo parlamentario es otra cosa que Sánchez no niega."
+      }
     ]
   },
   {
@@ -170,6 +184,13 @@
       {
         "titulo": "Maldita.es: La relación de Bildu y el PSOE: cronología de acuerdos, apoyos de iniciativas y formación de gobiernos",
         "url": "https://maldita.es/malditateexplica/20240125/cronologia-relacion-bildu-psoe/"
+      }
+    ],
+    "correcciones": [
+      {
+        "fecha": "2026-11-14",
+        "antes": "mayormente_verdadero",
+        "motivo": "Ni en Euskadi (coalición PNV-PSE-EE) ni en Navarra (PSN, Geroa Bai y Contigo) gobierna EH Bildu, que en Navarra solo se abstuvo en la investidura de 2023."
       }
     ]
   },
@@ -254,6 +275,13 @@
       {
         "titulo": "Maldita.es: Qué dijo Pedro Sánchez en 2019 y qué no sobre «dormir tranquilo» con ministros de Podemos (20-6-2023)",
         "url": "https://maldita.es/malditobulo/20230620/pedro-sanchez-dormir-tranquilo-ministros-unidas-podemos-gobierno"
+      }
+    ],
+    "correcciones": [
+      {
+        "fecha": "2026-11-14",
+        "antes": "falso",
+        "motivo": "Sánchez sí dijo en laSexta, el 19-9-2019, que «no dormiría por la noche» si ciertos ministerios iban a personas del círculo de Iglesias, y Maldita considera manipulada la versión viral, que omite esa condición."
       }
     ]
   },
@@ -376,6 +404,13 @@
       {
         "titulo": "NacióDigital: El PSC recupera amb autoritat l'hegemonia municipal (28-5-2023)",
         "url": "https://naciodigital.cat/politica/el-psc-recupera-amb-autoritat-lhegemonia-municipal.html"
+      }
+    ],
+    "correcciones": [
+      {
+        "fecha": "2026-11-14",
+        "antes": "mayormente_verdadero",
+        "motivo": "NacióDigital recoge que el PSC fue la fuerza más votada de Cataluña en las municipales de 2023, por primera vez desde 2007, lo que cubre lo de «muchos municipios» que antes no se pudo comprobar."
       }
     ]
   },

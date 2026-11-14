@@ -263,6 +263,13 @@
         "titulo": "Europa Press (vía Iustel): El Supremo confirma la condena de 6 años para el 'narco' Marcial Dorado por blanquear dinero de la droga",
         "url": "https://www.iustel.com/diario_del_derecho/noticia.asp?ref_iustel=1149930"
       }
+    ],
+    "correcciones": [
+      {
+        "fecha": "2026-11-14",
+        "antes": "verdadero",
+        "motivo": "La absolución de 1999 solo la recoge El Salto: Público no la menciona, las crónicas de El País y La Voz de Galicia no se pudieron abrir y no se accedió a la sentencia."
+      }
     ]
   },
   {

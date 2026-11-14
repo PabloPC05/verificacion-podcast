@@ -247,6 +247,13 @@
         "titulo": "Ara: La justicia confirma que el gobierno de Colau no delinquió al detener desahucios (30/09/2024)",
         "url": "https://es.ara.cat/sociedad/barcelona/justicia-confirma-gobierno-colau-no-delinquio-detener-desahucios_1_5156072.html"
       }
+    ],
+    "correcciones": [
+      {
+        "fecha": "2026-11-14",
+        "antes": "mayormente_verdadero",
+        "motivo": "Público y elDiario.es confirman que la jueza atribuyó la querella a la discrepancia con las políticas de vivienda de Colau y al «efecto mediático»; antes la cita se apoyaba en Deia, que no se pudo abrir."
+      }
     ]
   },
   {

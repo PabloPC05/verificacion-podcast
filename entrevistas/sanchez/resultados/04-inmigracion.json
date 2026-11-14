@@ -93,6 +93,13 @@
         "titulo": "El Independiente: España no ha sido el motor económico de Europa, la inmigración explica la mitad del crecimiento (6/7/2026)",
         "url": "https://www.elindependiente.com/economia/2026/07/06/espana-no-sido-motor-economico-europa-inmigracion-mitad-crecimiento/"
       }
+    ],
+    "correcciones": [
+      {
+        "fecha": "2026-11-14",
+        "antes": "mayormente_verdadero",
+        "motivo": "El Banco de España estima que la inmigración aportó en torno a la mitad del crecimiento del PIB en 2022-2025 y cerca del 19 % del per cápita; ninguna estimación publicada coincide con el 25 %."
+      }
     ]
   },
   {
@@ -162,6 +169,13 @@
       {
         "titulo": "The Objective: La Policía cifra en 1,5 millones los inmigrantes irregulares (27/7/2026; fuentes policiales anónimas)",
         "url": "https://theobjective.com/espana/2026-07-27/policia-cifra-15-millones-inmigrantes-irregulares-espana-efecto-llamada/"
+      }
+    ],
+    "correcciones": [
+      {
+        "fecha": "2026-11-14",
+        "antes": "mayormente_verdadero",
+        "motivo": "La afirmación estaba mal reformulada: Sánchez dice que «muchos» vienen en avión y en coche, no que sean la mayoría de los irregulares, y los datos del INE y ACNUR de 2024 respaldan lo dicho."
       }
     ]
   },
@@ -377,6 +391,13 @@
       {
         "titulo": "INE (INEbase, tabla 65336): tasas de paro por nacionalidad, sexo y comunidad autónoma, 2018-2026",
         "url": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/65336?date=20180101:20261101"
+      }
+    ],
+    "correcciones": [
+      {
+        "fecha": "2026-11-14",
+        "antes": "mayormente_verdadero",
+        "motivo": "La tabla del INE de paro por nacionalidad, que antes no se había obtenido, muestra que la tasa de los españoles bajó del 13,70 % (tercer trimestre de 2018) al 9,26 % (tercero de 2026)."
       }
     ]
   },

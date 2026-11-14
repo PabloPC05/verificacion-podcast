@@ -157,6 +157,13 @@
         "titulo": "Crónicas de la Emigración: La llegada de Feijóo a la Xunta centró la historia de la emigración gallega en 2009 («reducir en un 47% los altos cargos»)",
         "url": "https://www.cronicasdelaemigracion.com/articulo/galicia/llegada-feijoo-xunta-centro-historia-emigracion-gallega/20091228104854018362.html"
       }
+    ],
+    "correcciones": [
+      {
+        "fecha": "2026-11-14",
+        "antes": "mayormente_verdadero",
+        "motivo": "El Decreto 83/2009 solo documenta un 17 % menos de direcciones y secretarías generales y un 25 % menos de consellerías, no un 50 %, y no hay recuento oficial de altos cargos que lo confirme o desmienta."
+      }
     ]
   },
   {
@@ -301,6 +308,13 @@
         "titulo": "Newtral (10-1-2024): Galicia no es la comunidad autónoma que más ha reducido su deuda pública desde 2009 (cinco comunidades con superávit en 2023)",
         "url": "https://www.newtral.es/deuda-galicia-2009-deficit-rueda-factcheck/20240110/"
       }
+    ],
+    "correcciones": [
+      {
+        "fecha": "2026-11-14",
+        "antes": "no_verificable",
+        "motivo": "La AIReF (15-4-2026) recoge seis comunidades con superávit previsto en 2026 y Newtral, cinco con superávit en 2023; son previsiones, y falta el desglose autonómico del último cierre."
+      }
     ]
   },
   {
@@ -381,6 +395,13 @@
         "titulo": "Al Jazeera (19-6-2025): Spain rejects NATO's 5% defence spending hike as counterproductive",
         "url": "https://www.aljazeera.com/economy/2025/6/19/spain-rejects-natos-5-defence-spending-hike-as-counterproductive"
       }
+    ],
+    "correcciones": [
+      {
+        "fecha": "2026-11-14",
+        "antes": "no_verificable",
+        "motivo": "Las tablas de la OTAN de junio de 2024 dan a España un 1,19 % del PIB en 2023 y un 1,28 % estimado en 2024, lo que encaja con su cifra, aunque luego se revisó 2024 al 1,43 %."
+      }
     ]
   },
   {
@@ -420,6 +441,13 @@
       {
         "titulo": "Diario Socialista (13-11-2026): El Gobierno autoriza 11.860 millones en armas en un solo Consejo de Ministros",
         "url": "https://diariosocialista.net/2026/11/13/el-gobierno-autoriza-11-860-millones-en-armas-en-un-solo-consejo-de-ministros/"
+      }
+    ],
+    "correcciones": [
+      {
+        "fecha": "2026-11-14",
+        "antes": "no_verificable",
+        "motivo": "Tres Consejos de Ministros (27-10, 3-11 y 10-11) suman unos 18.700 millones en Defensa, pero son autorizaciones de gasto y no adjudicaciones, y el tramo del 10-11 solo lo recoge un medio que cita a La Moncloa."
       }
     ]
   },

@@ -41,6 +41,13 @@
         "titulo": "El Independiente (29-jul-2026): Colapso en Ceuta por las más de 1.500 entradas a nado",
         "url": "https://www.elindependiente.com/espana/2026/07/29/colapso-ceuta-crisis-migratoria-1500-entradas-nado-marruecos/"
       }
+    ],
+    "correcciones": [
+      {
+        "fecha": "2026-11-14",
+        "antes": "no_verificable",
+        "motivo": "Un informe de la Guardia Civil cuenta 605 entradas a nado en 24 horas y la Presidencia de Ceuta cifraba unas 200 al día, lo que hace plausible la cifra, aunque falta el recuento exacto de los cinco días."
+      }
     ]
   },
   {
@@ -114,6 +121,13 @@
       {
         "titulo": "Maldita.es: De la sentencia del Tribunal Supremo sobre Ceuta a la idea de una frontera abierta: cómo un mismo mensaje la disparó en Facebook en Marruecos el 30J",
         "url": "https://maldita.es/investigaciones/20260806/tribunal-supremo-sentencia-ceuta-marruecos-facebook/"
+      }
+    ],
+    "correcciones": [
+      {
+        "fecha": "2026-11-14",
+        "antes": "mayormente_verdadero",
+        "motivo": "El informe de la Policía Nacional para la Audiencia Nacional confirma que la lectura distorsionada de la sentencia circuló antes de la entrada y se usó en la convocatoria."
       }
     ]
   },
@@ -224,6 +238,13 @@
       {
         "titulo": "El Debate: ¿Cuáles son las verdaderas cifras de la crisis de Ceuta? (17-sep-2026)",
         "url": "https://www.eldebate.com/espana/20260917/cuales-son-verdaderas-cifras-invasion-ceuta-numero-entradas-salidas-alojados-calle_459327.html"
+      }
+    ],
+    "correcciones": [
+      {
+        "fecha": "2026-11-14",
+        "antes": "falso",
+        "motivo": "No hay censo por edades de quienes entraron y la Policía describe un «alto porcentaje de menores» en dos de las tres oleadas, así que los datos no contradicen directamente la afirmación, solo no la respaldan para el conjunto."
       }
     ]
   },

@@ -181,6 +181,13 @@
         "titulo": "Ara: Robles y Marlaska se enredan con los avisos del CNI sobre Ceuta (26-08-2026)",
         "url": "https://es.ara.cat/politica/gobierno-sanchez-rinde-cuentas-26-dias-despues-crisis-ceuta_1_5831446.html"
       }
+    ],
+    "correcciones": [
+      {
+        "fecha": "2026-11-14",
+        "antes": "enganoso",
+        "motivo": "La afirmación estaba mal reformulada: Colau no dice que la crisis fuera en agosto ni que Sánchez no fuera a Ceuta, sino que critica sus vacaciones y la primera respuesta, algo documentado salvo la visita del 31 de julio."
+      }
     ]
   },
   {

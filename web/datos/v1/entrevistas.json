@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-14T10:22:15+01:00",
+ "generado": "2026-11-14T10:32:58+01:00",
  "aviso": "Verificación asistida por IA, sin revisión de un equipo de periodistas. «falso» no implica intención de mentir. Contrasta siempre con las fuentes enlazadas.",
  "veredictos": {
   "verdadero": "Los datos lo confirman.",
@@ -26,11 +26,11 @@
    "transcripcion_txt_url": "https://verificacion-podcast.vercel.app/api/v1/sanchez/transcripcion.txt",
    "total_afirmaciones": 147,
    "por_veredicto": {
-    "falso": 5,
-    "enganoso": 23,
-    "mayormente_verdadero": 52,
-    "verdadero": 33,
-    "no_verificable": 34
+    "falso": 4,
+    "enganoso": 24,
+    "mayormente_verdadero": 50,
+    "verdadero": 38,
+    "no_verificable": 31
    },
    "excluidas": 10,
    "esencial": [
@@ -75,9 +75,9 @@
      "por_veredicto": {
       "falso": 0,
       "enganoso": 1,
-      "mayormente_verdadero": 3,
+      "mayormente_verdadero": 4,
       "verdadero": 1,
-      "no_verificable": 2
+      "no_verificable": 1
      }
     },
     {
@@ -87,10 +87,10 @@
      "total": 19,
      "por_veredicto": {
       "falso": 0,
-      "enganoso": 2,
+      "enganoso": 3,
       "mayormente_verdadero": 7,
-      "verdadero": 3,
-      "no_verificable": 7
+      "verdadero": 4,
+      "no_verificable": 5
      }
     },
     {
@@ -99,11 +99,11 @@
      "inicio_s": 1738,
      "total": 29,
      "por_veredicto": {
-      "falso": 1,
-      "enganoso": 6,
+      "falso": 0,
+      "enganoso": 7,
       "mayormente_verdadero": 6,
-      "verdadero": 10,
-      "no_verificable": 6
+      "verdadero": 11,
+      "no_verificable": 5
      }
     },
     {
@@ -114,9 +114,9 @@
      "por_veredicto": {
       "falso": 2,
       "enganoso": 1,
-      "mayormente_verdadero": 10,
-      "verdadero": 3,
-      "no_verificable": 5
+      "mayormente_verdadero": 7,
+      "verdadero": 5,
+      "no_verificable": 6
      }
     },
     {
@@ -126,9 +126,9 @@
      "total": 16,
      "por_veredicto": {
       "falso": 0,
-      "enganoso": 3,
+      "enganoso": 2,
       "mayormente_verdadero": 7,
-      "verdadero": 2,
+      "verdadero": 3,
       "no_verificable": 4
      }
     },
@@ -214,10 +214,10 @@
    "total_afirmaciones": 153,
    "por_veredicto": {
     "falso": 4,
-    "enganoso": 28,
-    "mayormente_verdadero": 51,
-    "verdadero": 40,
-    "no_verificable": 30
+    "enganoso": 26,
+    "mayormente_verdadero": 54,
+    "verdadero": 43,
+    "no_verificable": 26
    },
    "excluidas": 15,
    "esencial": [
@@ -248,10 +248,10 @@
      "total": 18,
      "por_veredicto": {
       "falso": 0,
-      "enganoso": 4,
-      "mayormente_verdadero": 4,
+      "enganoso": 3,
+      "mayormente_verdadero": 6,
       "verdadero": 8,
-      "no_verificable": 2
+      "no_verificable": 1
      }
     },
     {
@@ -260,11 +260,11 @@
      "inicio_s": 1161,
      "total": 21,
      "por_veredicto": {
-      "falso": 0,
-      "enganoso": 1,
-      "mayormente_verdadero": 10,
-      "verdadero": 3,
-      "no_verificable": 7
+      "falso": 1,
+      "enganoso": 0,
+      "mayormente_verdadero": 8,
+      "verdadero": 6,
+      "no_verificable": 6
      }
     },
     {
@@ -288,9 +288,9 @@
      "por_veredicto": {
       "falso": 0,
       "enganoso": 4,
-      "mayormente_verdadero": 5,
+      "mayormente_verdadero": 7,
       "verdadero": 3,
-      "no_verificable": 7
+      "no_verificable": 5
      }
     },
     {
@@ -312,9 +312,9 @@
      "inicio_s": 2956,
      "total": 12,
      "por_veredicto": {
-      "falso": 2,
+      "falso": 1,
       "enganoso": 3,
-      "mayormente_verdadero": 3,
+      "mayormente_verdadero": 4,
       "verdadero": 3,
       "no_verificable": 1
      }
@@ -400,11 +400,11 @@
    "transcripcion_txt_url": "https://verificacion-podcast.vercel.app/api/v1/colau/transcripcion.txt",
    "total_afirmaciones": 153,
    "por_veredicto": {
-    "falso": 5,
-    "enganoso": 22,
+    "falso": 4,
+    "enganoso": 24,
     "mayormente_verdadero": 73,
     "verdadero": 37,
-    "no_verificable": 16
+    "no_verificable": 15
    },
    "excluidas": 12,
    "esencial": [
@@ -449,9 +449,9 @@
      "por_veredicto": {
       "falso": 0,
       "enganoso": 0,
-      "mayormente_verdadero": 2,
+      "mayormente_verdadero": 3,
       "verdadero": 0,
-      "no_verificable": 2
+      "no_verificable": 1
      }
     },
     {
@@ -488,8 +488,8 @@
      "por_veredicto": {
       "falso": 0,
       "enganoso": 2,
-      "mayormente_verdadero": 11,
-      "verdadero": 3,
+      "mayormente_verdadero": 10,
+      "verdadero": 4,
       "no_verificable": 0
      }
     },
@@ -499,10 +499,10 @@
      "inicio_s": 2186,
      "total": 21,
      "por_veredicto": {
-      "falso": 3,
-      "enganoso": 2,
+      "falso": 2,
+      "enganoso": 4,
       "mayormente_verdadero": 8,
-      "verdadero": 8,
+      "verdadero": 7,
       "no_verificable": 0
      }
     },
@@ -513,8 +513,8 @@
      "total": 20,
      "por_veredicto": {
       "falso": 0,
-      "enganoso": 2,
-      "mayormente_verdadero": 10,
+      "enganoso": 1,
+      "mayormente_verdadero": 11,
       "verdadero": 8,
       "no_verificable": 0
      }
@@ -539,8 +539,8 @@
      "total": 6,
      "por_veredicto": {
       "falso": 0,
-      "enganoso": 0,
-      "mayormente_verdadero": 5,
+      "enganoso": 1,
+      "mayormente_verdadero": 4,
       "verdadero": 0,
       "no_verificable": 1
      }

@@ -281,6 +281,13 @@
         "titulo": "INE: Estadística Continua de Población, 1 de julio de 2026 (datos provisionales, publicada el 6 de agosto de 2026)",
         "url": "https://ine.es/dyngs/Prensa/ECP2T26.htm"
       }
+    ],
+    "correcciones": [
+      {
+        "fecha": "2026-11-14",
+        "antes": "mayormente_verdadero",
+        "motivo": "El CES habla de un impacto fiscal «neutro o ligeramente positivo», no de «mucho más»; según The Conversation, el 1% es gasto en prestaciones y no todo el gasto público, y las cifras no figuran en el informe del CES."
+      }
     ]
   },
   {

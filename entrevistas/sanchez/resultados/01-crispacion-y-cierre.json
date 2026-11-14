@@ -225,6 +225,13 @@
         "titulo": "PressDigital: Sémper pide al PSOE que condene la violencia contra Vox (22/10/2026)",
         "url": "https://www.pressdigital.es/articulo/politica/2026-10-22/6062203-semper-pide-psoe-condene-violencia-contra-vox-no-puede-callar-afecta-partido-derechas"
       }
+    ],
+    "correcciones": [
+      {
+        "fecha": "2026-11-14",
+        "antes": "no_verificable",
+        "motivo": "La afirmación estaba mal reformulada: los «intentos de asalto» los plantea Jordi Wild y Sánchez solo responde «nosotros las hemos condenado». Cargos socialistas condenaron los disturbios de A Coruña, pero no consta una condena expresa de Sánchez."
+      }
     ]
   },
   {
@@ -294,6 +301,13 @@
       {
         "titulo": "America Magazine: Patti Smith y el papa León XIV (31/7/2026)",
         "url": "https://www.americamagazine.org/news/2026/07/31/patti-smith-pope-leo/"
+      }
+    ],
+    "correcciones": [
+      {
+        "fecha": "2026-11-14",
+        "antes": "verdadero",
+        "motivo": "La Santa Sede confirmó que el Papa votó, pero no hay prueba de que Patti Smith lo hiciera; la afirmación anterior estaba mal reformulada, pues decía que Smith «se ha pronunciado»."
       }
     ]
   }

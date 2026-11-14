@@ -79,6 +79,13 @@
         "titulo": "The Objective: programa de desregulación de Vox (27-6-2026)",
         "url": "https://theobjective.com/espana/politica/2026-06-27/desregulacion-motosierra-vox-podar-marana-burocratica/"
       }
+    ],
+    "correcciones": [
+      {
+        "fecha": "2026-11-14",
+        "antes": "verdadero",
+        "motivo": "La fuente anterior no era válida; los programas de Vox de 2019 y 2023 y la reacción de Abascal en 2024 confirman su posición, aunque Vox la ha presentado como objetivo a largo plazo."
+      }
     ]
   },
   {
@@ -335,6 +342,13 @@
         "titulo": "Infocop: El Congreso de los Diputados renueva el Pacto de Estado contra la Violencia de Género (febrero de 2025)",
         "url": "https://www.infocop.es/el-congreso-de-los-diputados-renueva-el-pacto-de-estado-contra-la-violencia-de-genero/"
       }
+    ],
+    "correcciones": [
+      {
+        "fecha": "2026-11-14",
+        "antes": "enganoso",
+        "motivo": "El PP apoyó la renovación del pacto, aprobada en el Pleno el 26 de febrero de 2025, y sigue vigente. Pero fue hace casi dos años, no «unos meses», y por dictamen parlamentario, no por pacto personal."
+      }
     ]
   },
   {
@@ -432,6 +446,13 @@
       {
         "titulo": "Xunta de Galicia (Lex.gal): Decreto 215/2020, do 3 de decembro, polo que se establece a estrutura orgánica da Consellería de Emprego e Igualdade",
         "url": "https://www.lex.gal/normativa/detalle/8767/pdf/"
+      }
+    ],
+    "correcciones": [
+      {
+        "fecha": "2026-11-14",
+        "antes": "no_verificable",
+        "motivo": "El Decreto 325/2009 (DOG de 2009) fija la dependencia de la Presidencia y el Decreto 215/2020 recoge la fusión con empleo, algo que antes no se había podido comprobar."
       }
     ]
   },

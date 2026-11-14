@@ -501,6 +501,13 @@
         "titulo": "Público: Vox amplifica su apología del franquismo mientras un PP incómodo busca apartarlo del debate público",
         "url": "https://www.publico.es/politica/vox-amplifica-apologia-franquismo-pp-incomodo-busca-apartarlo-debate-publico.html"
       }
+    ],
+    "correcciones": [
+      {
+        "fecha": "2026-11-14",
+        "antes": "enganoso",
+        "motivo": "La historiografía sitúa las víctimas de la represión franquista entre 130.000 y 200.000, de modo que «cientos de miles» es un redondeo al alza dentro de ese rango."
+      }
     ]
   },
   {
@@ -530,6 +537,13 @@
       {
         "titulo": "Demócrata: Who are the detainees of Núcleo Nacional",
         "url": "https://www.democrata.es/en/courts/who-are-the-detainees-of-nucleo-nacional-the-neo-nazi-alberto-pugilato-and-the-founder-of-noviembre-nacional-among-the-14-arrested/"
+      }
+    ],
+    "correcciones": [
+      {
+        "fecha": "2026-11-14",
+        "antes": "mayormente_verdadero",
+        "motivo": "La detención de la cúpula de Núcleo Nacional es cierta, pero los cargos conocidos (odio, asociación ilícita y armas) no incluyen palizas y los detenidos están investigados, no condenados."
       }
     ]
   },
@@ -676,6 +690,13 @@
       {
         "titulo": "Ara: Colau's Broad Front is presented in Catalonia: «We will fry the posh people with taxes» (7-11-2026)",
         "url": "https://en.ara.cat/politics/colau-s-broad-front-is-presented-in-catalonia-we-will-fry-the-posh-people-with-taxes_1_5903199.html"
+      }
+    ],
+    "correcciones": [
+      {
+        "fecha": "2026-11-14",
+        "antes": "mayormente_verdadero",
+        "motivo": "La cita de Ara coincide literalmente con lo que Colau cuenta («amigos pijos»), y «crujir» y «ricachones» son palabras de Jordi Wild; solo hay cobertura de Ara, una fuente independiente."
       }
     ]
   },

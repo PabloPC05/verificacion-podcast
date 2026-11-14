@@ -91,6 +91,13 @@
         "titulo": "Artículo 14: El PSOE ofrece un interés récord del 3,75% para financiar su campaña electoral (20/10/2026)",
         "url": "https://www.articulo14.es/politica/el-psoe-ofrece-un-interes-record-del-375-para-financiar-su-campana-electoral-20261020.html"
       }
+    ],
+    "correcciones": [
+      {
+        "fecha": "2026-11-14",
+        "antes": "no_verificable",
+        "motivo": "El Tribunal de Cuentas da el gasto real de PP, PSOE y Sumar en 2023 y Frente Amplio declara 1,6 millones para 2026, aunque faltan cifras de 2026 de PP y PSOE y la suya viene de un solo medio."
+      }
     ]
   },
   {
@@ -160,6 +167,13 @@
       {
         "titulo": "Vozpópuli: La irrelevancia fuerza a Colau a regresar a la red social de Elon Musk (21/10/2026)",
         "url": "https://www.vozpopuli.com/espana/politica/la-irrelevancia-fuerza-a-colau-a-superar-su-fiebre-woke-y-regresar-a-la-red-social-de-elon-musk.html"
+      }
+    ],
+    "correcciones": [
+      {
+        "fecha": "2026-11-14",
+        "antes": "enganoso",
+        "motivo": "Ninguna fuente abierta aclara quién gestiona la cuenta @AdaColau, y Colau distingue entre su uso personal y el de la campaña, que sí usará X; el veredicto anterior daba por hecho que publicó ella."
       }
     ]
   },
