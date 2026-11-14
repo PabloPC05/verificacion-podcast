@@ -1376,7 +1376,7 @@ def pagina_entrevista(m, entrevistas):
         filas += [panel(a) for a in t["suyas"]]
     excl = len(m["excluidas"])
     nota_excl = (f' Se han dejado fuera {excl} afirmaciones sin interés para el debate público (datos personales, anécdotas, '
-                 f'duración de cargos); están en <a href="{REPO}/blob/main/entrevistas/{m["slug"]}/excluidas.json" target="_blank" '
+                 f'duración de cargos, estimaciones dichas de pasada); están en <a href="{REPO}/blob/main/entrevistas/{m["slug"]}/excluidas.json" target="_blank" '
                  f'rel="noopener noreferrer">esta lista</a>.') if excl else ""
     cab = cabecera(
         f'/{m["slug"]}', f'Verificación: {m["invitado"]} en The Wild Project',
@@ -2006,6 +2006,11 @@ def generar_api(hechas, temas=()):
     # Restos de cuando los datos vivían en web/api/ y del panel privado de visitas, ya retirado.
     shutil.rmtree(SALIDA / "api", ignore_errors=True)
     shutil.rmtree(SALIDA / "panel", ignore_errors=True)
+    # Una afirmación excluida después de publicarse deja de tener página: se borra la que quedó en web/ y su enlace
+    # redirige a la línea temporal del candidato (más abajo, en vercel.json), por si alguien lo había compartido.
+    for m in hechas:
+        for x in m.get("excluidas", []):
+            shutil.rmtree(SALIDA / m["slug"] / x["id"], ignore_errors=True)
     api = DATOS / "v1"
     ahora = dt.datetime.now().astimezone().isoformat(timespec="seconds")
     aviso = ("Verificación asistida por IA, sin revisión de un equipo de periodistas. «falso» no implica intención de mentir. "
@@ -2072,7 +2077,9 @@ Los errores se comunican en {REPO}/issues.
     (SALIDA / "vercel.json").write_text(json.dumps({
         "redirects": [{"source": "/api/referencia", "destination": "/api", "permanent": True},
                       {"source": "/verificalo", "destination": "/api#verificalo", "permanent": True},
-                      {"source": "/verificalo/", "destination": "/api#verificalo", "permanent": True}],
+                      {"source": "/verificalo/", "destination": "/api#verificalo", "permanent": True}]
+                     + [{"source": f'/{m["slug"]}/{x["id"]}{barra}', "destination": f'/{m["slug"]}', "permanent": False}
+                        for m in hechas for x in m.get("excluidas", []) for barra in ("", "/")],
         # Las URL públicas siguen siendo /api y /api/v1/*; los ficheros están en web/datos/ (ver DATOS).
         "rewrites": [{"source": "/api", "destination": "/datos/index.html"},
                      {"source": "/api/", "destination": "/datos/index.html"},
@@ -2411,9 +2418,10 @@ entrevistas.forEach(e => console.log(e.invitado, e.por_veredicto));
                                  "minuto": {"type": "string", "pattern": "^\\d+:\\d{2}:\\d{2}$"},
                                  "afirmacion": {"type": "string"},
                                  "veredicto": ref("Veredicto"),
-                                 "motivo": {"type": "string", "description": "Uno de los cinco motivos de exclusión del método "
+                                 "motivo": {"type": "string", "description": "Uno de los seis motivos de exclusión del método "
                                                                              "(dato biográfico, anécdota privada, duración de un cargo, "
-                                                                             "logística de la campaña o curiosidad)."},
+                                                                             "logística de la campaña, curiosidad o estimación dicha de "
+                                                                             "pasada con el dato de fondo verificado aparte)."},
                              }},
                 "AfirmacionesEntrevista": {"allOf": [ref("Comun"), {"type": "object", "required": ["entrevista", "afirmaciones", "excluidas"],
                                            "properties": {"entrevista": ref("Entrevista"),

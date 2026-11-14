@@ -1,5 +1,5 @@
 {
- "criterio": "Se excluyen de la web y de los recuentos las afirmaciones comprobables que no aportan al debate público: datos biográficos o familiares, anécdotas privadas, la duración de cargos o trayectorias y detalles logísticos de la campaña. El criterio se aplica igual a todos los invitados y con independencia del veredicto. Siguen aquí, con su veredicto original, por transparencia.",
+ "criterio": "Se excluyen de la web y de los recuentos las afirmaciones comprobables que no aportan al debate público: datos biográficos o familiares, anécdotas privadas, la duración de cargos o trayectorias, detalles logísticos de la campaña, curiosidades y las estimaciones o equivalencias aproximadas dichas de pasada al hablar, cuyo dato de fondo ya se verifica en otra afirmación. El criterio se aplica igual a todos los invitados y con independencia del veredicto. Siguen aquí, con su veredicto original, por transparencia.",
  "excluidas": [
   {
    "id": "m251",
@@ -49,6 +49,13 @@
    "afirmacion": "El abuelo de Sánchez trabajó 40 años en Alemania y regresaba allí antes de que se cumplieran tres meses del vencimiento de su visado.",
    "veredicto": "no_verificable",
    "motivo": "Dato biográfico o familiar del invitado, sin relación con su gestión ni con el debate público."
+  },
+  {
+   "id": "m3720",
+   "minuto": "1:02:00",
+   "afirmacion": "19 semanas equivalen a 100 días.",
+   "veredicto": "falso",
+   "motivo": "Estimación dicha de pasada al hablar («19 semanas, que son 100 días»): es una equivalencia aproximada, no un dato que haya que contrastar, y el dato de fondo, el permiso de 19 semanas, ya se verifica como verdadero en m3706. Publicada como «Falso» hasta el 14-11-2026; se excluyó ese día con este criterio, revisado en las tres entrevistas (es la única afirmación publicada que lo cumplía)."
   },
   {
    "id": "m4154",

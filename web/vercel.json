@@ -14,6 +14,386 @@
    "source": "/verificalo/",
    "destination": "/api#verificalo",
    "permanent": true
+  },
+  {
+   "source": "/sanchez/m251",
+   "destination": "/sanchez",
+   "permanent": false
+  },
+  {
+   "source": "/sanchez/m251/",
+   "destination": "/sanchez",
+   "permanent": false
+  },
+  {
+   "source": "/sanchez/m273",
+   "destination": "/sanchez",
+   "permanent": false
+  },
+  {
+   "source": "/sanchez/m273/",
+   "destination": "/sanchez",
+   "permanent": false
+  },
+  {
+   "source": "/sanchez/m286",
+   "destination": "/sanchez",
+   "permanent": false
+  },
+  {
+   "source": "/sanchez/m286/",
+   "destination": "/sanchez",
+   "permanent": false
+  },
+  {
+   "source": "/sanchez/m294",
+   "destination": "/sanchez",
+   "permanent": false
+  },
+  {
+   "source": "/sanchez/m294/",
+   "destination": "/sanchez",
+   "permanent": false
+  },
+  {
+   "source": "/sanchez/m414",
+   "destination": "/sanchez",
+   "permanent": false
+  },
+  {
+   "source": "/sanchez/m414/",
+   "destination": "/sanchez",
+   "permanent": false
+  },
+  {
+   "source": "/sanchez/m1412",
+   "destination": "/sanchez",
+   "permanent": false
+  },
+  {
+   "source": "/sanchez/m1412/",
+   "destination": "/sanchez",
+   "permanent": false
+  },
+  {
+   "source": "/sanchez/m3148",
+   "destination": "/sanchez",
+   "permanent": false
+  },
+  {
+   "source": "/sanchez/m3148/",
+   "destination": "/sanchez",
+   "permanent": false
+  },
+  {
+   "source": "/sanchez/m3720",
+   "destination": "/sanchez",
+   "permanent": false
+  },
+  {
+   "source": "/sanchez/m3720/",
+   "destination": "/sanchez",
+   "permanent": false
+  },
+  {
+   "source": "/sanchez/m4154",
+   "destination": "/sanchez",
+   "permanent": false
+  },
+  {
+   "source": "/sanchez/m4154/",
+   "destination": "/sanchez",
+   "permanent": false
+  },
+  {
+   "source": "/sanchez/m5608",
+   "destination": "/sanchez",
+   "permanent": false
+  },
+  {
+   "source": "/sanchez/m5608/",
+   "destination": "/sanchez",
+   "permanent": false
+  },
+  {
+   "source": "/sanchez/m6686",
+   "destination": "/sanchez",
+   "permanent": false
+  },
+  {
+   "source": "/sanchez/m6686/",
+   "destination": "/sanchez",
+   "permanent": false
+  },
+  {
+   "source": "/feijoo/m191",
+   "destination": "/feijoo",
+   "permanent": false
+  },
+  {
+   "source": "/feijoo/m191/",
+   "destination": "/feijoo",
+   "permanent": false
+  },
+  {
+   "source": "/feijoo/m531",
+   "destination": "/feijoo",
+   "permanent": false
+  },
+  {
+   "source": "/feijoo/m531/",
+   "destination": "/feijoo",
+   "permanent": false
+  },
+  {
+   "source": "/feijoo/m612",
+   "destination": "/feijoo",
+   "permanent": false
+  },
+  {
+   "source": "/feijoo/m612/",
+   "destination": "/feijoo",
+   "permanent": false
+  },
+  {
+   "source": "/feijoo/m2417-2",
+   "destination": "/feijoo",
+   "permanent": false
+  },
+  {
+   "source": "/feijoo/m2417-2/",
+   "destination": "/feijoo",
+   "permanent": false
+  },
+  {
+   "source": "/feijoo/m2703",
+   "destination": "/feijoo",
+   "permanent": false
+  },
+  {
+   "source": "/feijoo/m2703/",
+   "destination": "/feijoo",
+   "permanent": false
+  },
+  {
+   "source": "/feijoo/m2998",
+   "destination": "/feijoo",
+   "permanent": false
+  },
+  {
+   "source": "/feijoo/m2998/",
+   "destination": "/feijoo",
+   "permanent": false
+  },
+  {
+   "source": "/feijoo/m3469",
+   "destination": "/feijoo",
+   "permanent": false
+  },
+  {
+   "source": "/feijoo/m3469/",
+   "destination": "/feijoo",
+   "permanent": false
+  },
+  {
+   "source": "/feijoo/m3603",
+   "destination": "/feijoo",
+   "permanent": false
+  },
+  {
+   "source": "/feijoo/m3603/",
+   "destination": "/feijoo",
+   "permanent": false
+  },
+  {
+   "source": "/feijoo/m4429",
+   "destination": "/feijoo",
+   "permanent": false
+  },
+  {
+   "source": "/feijoo/m4429/",
+   "destination": "/feijoo",
+   "permanent": false
+  },
+  {
+   "source": "/feijoo/m4631",
+   "destination": "/feijoo",
+   "permanent": false
+  },
+  {
+   "source": "/feijoo/m4631/",
+   "destination": "/feijoo",
+   "permanent": false
+  },
+  {
+   "source": "/feijoo/m4697",
+   "destination": "/feijoo",
+   "permanent": false
+  },
+  {
+   "source": "/feijoo/m4697/",
+   "destination": "/feijoo",
+   "permanent": false
+  },
+  {
+   "source": "/feijoo/m4743",
+   "destination": "/feijoo",
+   "permanent": false
+  },
+  {
+   "source": "/feijoo/m4743/",
+   "destination": "/feijoo",
+   "permanent": false
+  },
+  {
+   "source": "/feijoo/m4761",
+   "destination": "/feijoo",
+   "permanent": false
+  },
+  {
+   "source": "/feijoo/m4761/",
+   "destination": "/feijoo",
+   "permanent": false
+  },
+  {
+   "source": "/feijoo/m5210",
+   "destination": "/feijoo",
+   "permanent": false
+  },
+  {
+   "source": "/feijoo/m5210/",
+   "destination": "/feijoo",
+   "permanent": false
+  },
+  {
+   "source": "/feijoo/m5244",
+   "destination": "/feijoo",
+   "permanent": false
+  },
+  {
+   "source": "/feijoo/m5244/",
+   "destination": "/feijoo",
+   "permanent": false
+  },
+  {
+   "source": "/colau/m219",
+   "destination": "/colau",
+   "permanent": false
+  },
+  {
+   "source": "/colau/m219/",
+   "destination": "/colau",
+   "permanent": false
+  },
+  {
+   "source": "/colau/m300",
+   "destination": "/colau",
+   "permanent": false
+  },
+  {
+   "source": "/colau/m300/",
+   "destination": "/colau",
+   "permanent": false
+  },
+  {
+   "source": "/colau/m339",
+   "destination": "/colau",
+   "permanent": false
+  },
+  {
+   "source": "/colau/m339/",
+   "destination": "/colau",
+   "permanent": false
+  },
+  {
+   "source": "/colau/m384",
+   "destination": "/colau",
+   "permanent": false
+  },
+  {
+   "source": "/colau/m384/",
+   "destination": "/colau",
+   "permanent": false
+  },
+  {
+   "source": "/colau/m539",
+   "destination": "/colau",
+   "permanent": false
+  },
+  {
+   "source": "/colau/m539/",
+   "destination": "/colau",
+   "permanent": false
+  },
+  {
+   "source": "/colau/m545",
+   "destination": "/colau",
+   "permanent": false
+  },
+  {
+   "source": "/colau/m545/",
+   "destination": "/colau",
+   "permanent": false
+  },
+  {
+   "source": "/colau/m545-2",
+   "destination": "/colau",
+   "permanent": false
+  },
+  {
+   "source": "/colau/m545-2/",
+   "destination": "/colau",
+   "permanent": false
+  },
+  {
+   "source": "/colau/m666",
+   "destination": "/colau",
+   "permanent": false
+  },
+  {
+   "source": "/colau/m666/",
+   "destination": "/colau",
+   "permanent": false
+  },
+  {
+   "source": "/colau/m3278",
+   "destination": "/colau",
+   "permanent": false
+  },
+  {
+   "source": "/colau/m3278/",
+   "destination": "/colau",
+   "permanent": false
+  },
+  {
+   "source": "/colau/m3532",
+   "destination": "/colau",
+   "permanent": false
+  },
+  {
+   "source": "/colau/m3532/",
+   "destination": "/colau",
+   "permanent": false
+  },
+  {
+   "source": "/colau/m3944",
+   "destination": "/colau",
+   "permanent": false
+  },
+  {
+   "source": "/colau/m3944/",
+   "destination": "/colau",
+   "permanent": false
+  },
+  {
+   "source": "/colau/m4135",
+   "destination": "/colau",
+   "permanent": false
+  },
+  {
+   "source": "/colau/m4135/",
+   "destination": "/colau",
+   "permanent": false
   }
  ],
  "rewrites": [

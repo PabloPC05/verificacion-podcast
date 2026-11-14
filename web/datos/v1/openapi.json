@@ -78,15 +78,15 @@
            "afirmaciones_url": "https://verificacion-podcast.vercel.app/api/v1/sanchez.json",
            "transcripcion_url": "https://verificacion-podcast.vercel.app/api/v1/sanchez/transcripcion.json",
            "transcripcion_txt_url": "https://verificacion-podcast.vercel.app/api/v1/sanchez/transcripcion.txt",
-           "total_afirmaciones": 147,
+           "total_afirmaciones": 146,
            "por_veredicto": {
-            "falso": 5,
+            "falso": 4,
             "enganoso": 23,
             "mayormente_verdadero": 52,
             "verdadero": 36,
             "no_verificable": 31
            },
-           "excluidas": 10,
+           "excluidas": 11,
            "esencial": [
             "sanchez-m5188",
             "sanchez-m3267",
@@ -160,7 +160,7 @@
          "metodo_url": "https://github.com/PabloPC05/verificacion-podcast/blob/main/METODO.md",
          "repositorio": "https://github.com/PabloPC05/verificacion-podcast",
          "documentacion": "https://verificacion-podcast.vercel.app/api",
-         "total": 453,
+         "total": 452,
          "afirmaciones": [
           {
            "id": "sanchez-m566",
@@ -257,15 +257,15 @@
           "afirmaciones_url": "https://verificacion-podcast.vercel.app/api/v1/sanchez.json",
           "transcripcion_url": "https://verificacion-podcast.vercel.app/api/v1/sanchez/transcripcion.json",
           "transcripcion_txt_url": "https://verificacion-podcast.vercel.app/api/v1/sanchez/transcripcion.txt",
-          "total_afirmaciones": 147,
+          "total_afirmaciones": 146,
           "por_veredicto": {
-           "falso": 5,
+           "falso": 4,
            "enganoso": 23,
            "mayormente_verdadero": 52,
            "verdadero": 36,
            "no_verificable": 31
           },
-          "excluidas": 10,
+          "excluidas": 11,
           "esencial": [
            "sanchez-m5188",
            "sanchez-m3267",
@@ -464,15 +464,15 @@
           "afirmaciones_url": "https://verificacion-podcast.vercel.app/api/v1/sanchez.json",
           "transcripcion_url": "https://verificacion-podcast.vercel.app/api/v1/sanchez/transcripcion.json",
           "transcripcion_txt_url": "https://verificacion-podcast.vercel.app/api/v1/sanchez/transcripcion.txt",
-          "total_afirmaciones": 147,
+          "total_afirmaciones": 146,
           "por_veredicto": {
-           "falso": 5,
+           "falso": 4,
            "enganoso": 23,
            "mayormente_verdadero": 52,
            "verdadero": 36,
            "no_verificable": 31
           },
-          "excluidas": 10,
+          "excluidas": 11,
           "esencial": [
            "sanchez-m5188",
            "sanchez-m3267",
@@ -656,7 +656,7 @@
      }
     },
     "example": {
-     "falso": 5,
+     "falso": 4,
      "enganoso": 23,
      "mayormente_verdadero": 52,
      "verdadero": 36,
@@ -1209,7 +1209,7 @@
      },
      "motivo": {
       "type": "string",
-      "description": "Uno de los cinco motivos de exclusión del método (dato biográfico, anécdota privada, duración de un cargo, logística de la campaña o curiosidad)."
+      "description": "Uno de los seis motivos de exclusión del método (dato biográfico, anécdota privada, duración de un cargo, logística de la campaña, curiosidad o estimación dicha de pasada con el dato de fondo verificado aparte)."
      }
     }
    },

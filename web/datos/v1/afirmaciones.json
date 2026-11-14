@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-14T11:05:54+01:00",
+ "generado": "2026-11-14T20:58:35+01:00",
  "aviso": "Verificación asistida por IA, sin revisión de un equipo de periodistas. «falso» no implica intención de mentir. Contrasta siempre con las fuentes enlazadas.",
  "veredictos": {
   "verdadero": "Los datos lo confirman.",
@@ -11,7 +11,7 @@
  "metodo_url": "https://github.com/PabloPC05/verificacion-podcast/blob/main/METODO.md",
  "repositorio": "https://github.com/PabloPC05/verificacion-podcast",
  "documentacion": "https://verificacion-podcast.vercel.app/api",
- "total": 453,
+ "total": 452,
  "afirmaciones": [
   {
    "id": "sanchez-m566",
@@ -2513,35 +2513,6 @@
    "esencial": false,
    "otros_verificadores": [],
    "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m3706.png"
-  },
-  {
-   "id": "sanchez-m3720",
-   "entrevista": "sanchez",
-   "invitado": "Pedro Sánchez",
-   "tema_n": 6,
-   "tema": "Inmigración, integración y futuro demográfico de España",
-   "segundo": 3720,
-   "minuto": "1:02:00",
-   "video_url": "https://www.youtube.com/watch?v=mStOFBvToUI&t=3720s",
-   "web_url": "https://verificacion-podcast.vercel.app/sanchez#m3720",
-   "pagina_url": "https://verificacion-podcast.vercel.app/sanchez/m3720",
-   "cita": "A 19 semanas, que son 100 días.",
-   "afirmacion": "19 semanas equivalen a 100 días.",
-   "veredicto": "falso",
-   "resumen": "19 semanas son 133 días naturales, no 100, y solo unos 95 laborables; es un error de cálculo oral que no afecta a la medida de 19 semanas, ya confirmada.",
-   "explicacion": "19 semanas son 133 días naturales (19 x 7), no 100; solo serían unos 95 días laborables (19 x 5). El permiso de 19 semanas por progenitor sí está confirmado (Ministerio de Derechos Sociales, RDL 9/2025 convalidado el 9/9/2025), de modo que es un error de cálculo oral que no afecta a la medida. La confianza es media porque podría haber querido decir días laborables, aunque no lo dijo.",
-   "confianza": "media",
-   "fuentes": [
-    {
-     "titulo": "Ministerio de Derechos Sociales y Agenda 2030: el Congreso aprueba la ampliación de los permisos por nacimiento y cuidados a 19 semanas",
-     "url": "https://www.dsca.gob.es/es/comunicacion/notas-prensa/congreso-aprueba-ampliacion-del-gobierno-permisos-nacimiento-cuidados"
-    }
-   ],
-   "verificado": "2026-11-13",
-   "correcciones": [],
-   "esencial": false,
-   "otros_verificadores": [],
-   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m3720.png"
   },
   {
    "id": "sanchez-m3754",

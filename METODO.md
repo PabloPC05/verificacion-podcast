@@ -112,7 +112,7 @@ que no esté en la explicación. Se guarda como array de cadenas en
 
 Algunas afirmaciones se pueden comprobar pero no tienen interés público. Se quitan de la web y de los recuentos,
 y se listan en `entrevistas/<slug>/excluidas.json` con su veredicto original y el motivo. La API las publica
-aparte, en el campo `excluidas`. Solo hay cinco motivos posibles:
+aparte, en el campo `excluidas`. Solo hay seis motivos posibles:
 
 | Motivo | Ejemplos |
 |---|---|
@@ -121,10 +121,18 @@ aparte, en el campo `excluidas`. Solo hay cinco motivos posibles:
 | Duración de un cargo o de una trayectoria | «Lleva ocho años en el Gobierno», «llevo 30 años en política» |
 | Detalle logístico de la campaña o de la entrevista | Cuándo empieza la campaña, a qué medios ha ido |
 | Curiosidad sin relación con el debate público | Que el Papa votó, en qué año se construyó un edificio |
+| Estimación dicha de pasada al hablar, con el dato de fondo verificado aparte | «19 semanas, que son 100 días», cuando el permiso de 19 semanas ya está verificado en otra afirmación |
 
 El criterio se aplica igual a todos los invitados y **sin mirar el veredicto**. Nunca se excluye una
 afirmación sobre políticas, cifras públicas, instituciones, leyes o la actuación de un cargo o de un partido,
-aunque parezca menor. Los identificadores (`m<segundo>`) se asignan antes de excluir, así que no cambian.
+aunque parezca menor. La única excepción son las estimaciones de pasada: una equivalencia o una cuenta aproximada
+que el invitado suelta al hablar para explicar otro dato, sin defenderla como cifra, cuando ese dato de fondo
+tiene su propia afirmación verificada. Si el dato de fondo no está verificado aparte, o si la cifra es lo que el
+invitado defiende, se queda y se juzga como cualquier otra afirmación. Los identificadores (`m<segundo>`) se
+asignan antes de excluir, así que no cambian.
+
+Este sexto motivo se añadió el 14 de noviembre de 2026, después de publicar, a raíz de las críticas a
+`sanchez-m3720`. Se revisaron entonces las tres entrevistas y era la única afirmación publicada que lo cumplía.
 
 ## 5. Generar la web y publicar
 
@@ -185,7 +193,7 @@ aquí y se vuelve a ejecutar `build.py`.
 | Verdadero | Los datos lo confirman. |
 | Casi cierto | Cierto en lo esencial, con una imprecisión menor. |
 | Engañoso | Se apoya en algo real pero omite contexto, mezcla periodos o lleva a una conclusión que no se sigue. |
-| Falso | Los datos lo contradicen. No implica intención de mentir: incluye errores y lapsus. |
+| Falso | Los datos lo contradicen. No implica intención de mentir: incluye errores y lapsus. Las estimaciones dichas de pasada cuyo dato de fondo ya se verifica aparte se excluyen (apartado 4 bis). |
 | No verificable | No hay prueba pública suficiente, o la búsqueda se quedó corta. |
 
 ## Límites conocidos

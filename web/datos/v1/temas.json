@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-14T11:05:54+01:00",
+ "generado": "2026-11-14T20:58:35+01:00",
  "aviso": "Verificación asistida por IA, sin revisión de un equipo de periodistas. «falso» no implica intención de mentir. Contrasta siempre con las fuentes enlazadas.",
  "veredictos": {
   "verdadero": "Los datos lo confirman.",
@@ -104,9 +104,9 @@
      "capitulos": [
       6
      ],
-     "total": 21,
+     "total": 20,
      "por_veredicto": {
-      "falso": 2,
+      "falso": 1,
       "enganoso": 1,
       "mayormente_verdadero": 7,
       "verdadero": 5,
@@ -114,7 +114,6 @@
      },
      "afirmaciones": [
       "sanchez-m3267",
-      "sanchez-m3720",
       "sanchez-m3620",
       "sanchez-m3251",
       "sanchez-m3257",

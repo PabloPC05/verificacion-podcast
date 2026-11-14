@@ -1,5 +1,5 @@
 {
- "criterio": "Se excluyen de la web y de los recuentos las afirmaciones comprobables que no aportan al debate público: datos biográficos o familiares, anécdotas privadas, la duración de cargos o trayectorias y detalles logísticos de la campaña. El criterio se aplica igual a todos los invitados y con independencia del veredicto. Siguen aquí, con su veredicto original, por transparencia.",
+ "criterio": "Se excluyen de la web y de los recuentos las afirmaciones comprobables que no aportan al debate público: datos biográficos o familiares, anécdotas privadas, la duración de cargos o trayectorias, detalles logísticos de la campaña, curiosidades y las estimaciones o equivalencias aproximadas dichas de pasada al hablar, cuyo dato de fondo ya se verifica en otra afirmación. El criterio se aplica igual a todos los invitados y con independencia del veredicto. Siguen aquí, con su veredicto original, por transparencia.",
  "excluidas": [
   {
    "id": "m219",
