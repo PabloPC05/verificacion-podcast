@@ -87,6 +87,13 @@
             "no_verificable": 35
            },
            "excluidas": 10,
+           "esencial": [
+            "sanchez-m5188",
+            "sanchez-m3267",
+            "sanchez-m2012",
+            "sanchez-m4742",
+            "sanchez-m6437"
+           ],
            "temas": [
             {
              "n": 1,
@@ -189,7 +196,12 @@
              "titulo": "Diari de Tarragona/EFE: Sánchez a Abascal: «yo seré un perro, pero no tengo amo» (9/9/2026)",
              "url": "https://www.diaridetarragona.com/espana/270259/sanchez-abascal-diferencia-sere-perro-amo.html"
             }
-           ]
+           ],
+           "verificado": "2026-11-13",
+           "correcciones": [],
+           "esencial": false,
+           "otros_verificadores": [],
+           "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m566.png"
           }
          ]
         }
@@ -254,6 +266,13 @@
            "no_verificable": 35
           },
           "excluidas": 10,
+          "esencial": [
+           "sanchez-m5188",
+           "sanchez-m3267",
+           "sanchez-m2012",
+           "sanchez-m4742",
+           "sanchez-m6437"
+          ],
           "temas": [
            {
             "n": 1,
@@ -318,7 +337,12 @@
              "titulo": "Diari de Tarragona/EFE: Sánchez a Abascal: «yo seré un perro, pero no tengo amo» (9/9/2026)",
              "url": "https://www.diaridetarragona.com/espana/270259/sanchez-abascal-diferencia-sere-perro-amo.html"
             }
-           ]
+           ],
+           "verificado": "2026-11-13",
+           "correcciones": [],
+           "esencial": false,
+           "otros_verificadores": [],
+           "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m566.png"
           }
          ],
          "excluidas": [
@@ -449,6 +473,13 @@
            "no_verificable": 35
           },
           "excluidas": 10,
+          "esencial": [
+           "sanchez-m5188",
+           "sanchez-m3267",
+           "sanchez-m2012",
+           "sanchez-m4742",
+           "sanchez-m6437"
+          ],
           "temas": [
            {
             "n": 1,
@@ -843,6 +874,88 @@
       "type": "string",
       "format": "uri",
       "description": "Siempre `http` o `https`."
+     },
+     "archivo": {
+      "type": "string",
+      "format": "uri",
+      "description": "Copia de la fuente en la Wayback Machine (archive.org), por si la original cambia o desaparece. Solo si ya se ha archivado."
+     }
+    }
+   },
+   "Correccion": {
+    "type": "object",
+    "required": [
+     "fecha",
+     "motivo"
+    ],
+    "properties": {
+     "fecha": {
+      "type": "string",
+      "format": "date"
+     },
+     "antes": {
+      "anyOf": [
+       {
+        "$ref": "#/components/schemas/Veredicto"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "description": "Veredicto anterior, si cambió."
+     },
+     "motivo": {
+      "type": "string",
+      "description": "Qué se corrigió y por qué."
+     }
+    }
+   },
+   "OtroVerificador": {
+    "type": "object",
+    "required": [
+     "medio",
+     "url"
+    ],
+    "properties": {
+     "medio": {
+      "type": "string",
+      "description": "Newtral, Maldita.es, EFE Verifica…"
+     },
+     "titulo": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "url": {
+      "type": "string",
+      "format": "uri"
+     },
+     "fecha": {
+      "type": [
+       "string",
+       "null"
+      ],
+      "format": "date"
+     },
+     "veredicto_medio": {
+      "type": [
+       "string",
+       "null"
+      ],
+      "description": "La etiqueta del propio medio, literal."
+     },
+     "alcance": {
+      "type": [
+       "string",
+       "null"
+      ],
+      "enum": [
+       "misma_frase",
+       "mismo_dato",
+       null
+      ],
+      "description": "`misma_frase`: verificó lo dicho en esta entrevista. `mismo_dato`: el mismo dato dicho por el candidato en otro momento."
      }
     }
    },
@@ -957,6 +1070,37 @@
        "$ref": "#/components/schemas/Fuente"
       },
       "description": "Fuentes que sustentan el veredicto. Puede venir vacía, sobre todo con `no_verificable`."
+     },
+     "verificado": {
+      "type": [
+       "string",
+       "null"
+      ],
+      "format": "date",
+      "description": "Fecha en que se verificó."
+     },
+     "correcciones": {
+      "type": "array",
+      "items": {
+       "$ref": "#/components/schemas/Correccion"
+      },
+      "description": "Cambios hechos después de publicar, del más antiguo al más reciente. Vacía si no se ha corregido."
+     },
+     "esencial": {
+      "type": "boolean",
+      "description": "Si está entre las 3-5 afirmaciones clave del candidato («Lo esencial»)."
+     },
+     "otros_verificadores": {
+      "type": "array",
+      "items": {
+       "$ref": "#/components/schemas/OtroVerificador"
+      },
+      "description": "Lo que otros verificadores publicaron sobre la misma frase o el mismo dato."
+     },
+     "imagen_url": {
+      "type": "string",
+      "format": "uri",
+      "description": "Imagen de 1200×630 para compartir la afirmación."
      }
     }
    },

@@ -145,6 +145,33 @@ git add entrevistas/<slug> web web-src/compartir && git commit -m "Verificación
 cd web && npx vercel deploy --prod --yes --scope pablopc05s-projects
 ```
 
+### Después de publicar
+
+Estos pasos añaden contexto sin tocar los veredictos:
+
+- **Copias archivadas de las fuentes.** `python3 herramientas/archivar_fuentes.py` guarda cada fuente en la
+  Wayback Machine (o reutiliza una copia hecha desde el 1 de noviembre de 2026) y lo apunta en `entrevistas/archivo.json`.
+  La web pone «copia archivada» al lado de cada fuente, por si la noticia cambia o desaparece. Va despacio a propósito,
+  porque archive.org limita las peticiones, y se puede cortar y reanudar.
+- **Imágenes de cada afirmación.** El mismo `imagenes_compartir.py` crea una imagen por afirmación (veredicto, texto y
+  minuto) en `web-src/compartir/afirmaciones/<slug>/`. Estas sí llevan el veredicto, así que hay que regenerarlas al
+  corregir uno; solo se reescriben las que cambian.
+- **Lo esencial.** `entrevistas/<slug>/esencial.json` elige de 3 a 5 afirmaciones por candidato: las que llevan un dato
+  concreto sobre los temas centrales de la campaña, salgan bien o mal. El criterio es el mismo para todos.
+- **Otros verificadores.** `entrevistas/<slug>/otros_verificadores.json` enlaza lo que Newtral, Maldita.es, EFE Verifica
+  u otros verificadores profesionales publicaron sobre la misma frase (`misma_frase`) o sobre el mismo dato dicho por el
+  candidato en otro momento (`mismo_dato`). Un artículo general sobre el tema no cuenta, y su veredicto se copia tal cual,
+  aunque no coincida con el nuestro. La primera búsqueda solo miró las falsas y las engañosas.
+- **Temas comunes.** `entrevistas/temas.json` agrupa capítulos de las distintas entrevistas en temas compartidos
+  (vivienda, inmigración…) para la comparativa de `/temas`. Un tema solo sale si lo tratan dos candidatos o más.
+
+### Correcciones
+
+Cuando una corrección cambia un veredicto, la explicación o una fuente, se edita la afirmación y se le añade
+`correcciones: [{fecha, antes, motivo}]`. La web la marca como «Corregido» y enseña el historial en su página, con el
+veredicto anterior a la vista, y la API lo publica en el mismo campo. Cada afirmación muestra además la fecha en que se verificó
+(`verificado` en `meta.json`, o en la propia afirmación si se volvió a verificar entera).
+
 La API se genera como JSON estático en `web/datos/` (ahí está también su documentación) y `web/vercel.json` hace que
 Vercel la sirva en `/api` y en `/api/v1/…`. En local, con `python3 -m http.server -d web`, los datos están en
 `/datos/v1/`. Esta página (`/metodologia`) sale de este mismo fichero, `METODO.md`: para cambiar el método, se edita

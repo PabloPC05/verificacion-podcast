@@ -15,7 +15,11 @@ API de solo lectura, JSON estático, sin clave, CORS abierto. Base: https://veri
 
 Campos de cada afirmación: id, entrevista, invitado, tema, segundo, minuto, video_url, web_url, cita (literal de la
 transcripción), afirmacion (reformulada), veredicto (verdadero | mayormente_verdadero | enganoso | falso | no_verificable),
-resumen, explicacion, confianza (alta | media | baja), fuentes [{titulo, url}].
+resumen, explicacion, confianza (alta | media | baja), fuentes [{titulo, url, archivo}] (archivo: copia en la Wayback
+Machine), verificado (fecha), correcciones [{fecha, antes, motivo}], esencial (si es de las clave del candidato),
+otros_verificadores [{medio, titulo, url, fecha, veredicto_medio, alcance}] e imagen_url.
+
+- [Temas comunes](https://verificacion-podcast.vercel.app/api/v1/temas.json): las afirmaciones de cada candidato agrupadas por tema (vivienda, inmigración…).
 
 Para volver a comprobar una afirmación: lee `cita` y `afirmacion`, abre cada `fuentes[].url`, y contrasta con la `explicacion`.
 Los errores se comunican en https://github.com/PabloPC05/verificacion-podcast/issues.

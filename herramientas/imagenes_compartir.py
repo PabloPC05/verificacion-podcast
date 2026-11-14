@@ -3,11 +3,14 @@
 
   web-src/compartir/general.png        1200×630: portada, /verificalo y /api
   web-src/compartir/<slug>.png         1200×630: una por entrevista publicada ("publicar": true)
+  web-src/compartir/afirmaciones/<slug>/<id>.png  1200×630: una por afirmación, con su veredicto y su texto
   web-src/compartir/favicon.svg        icono vectorial
   web-src/compartir/favicon-32.png     32×32
   web-src/compartir/apple-touch-icon.png  180×180
 
-Las imágenes NO llevan recuentos de veredictos: así no quedan viejas cuando se corrige un veredicto.
+Las imágenes generales y las de cada entrevista NO llevan recuentos de veredictos: así no quedan viejas cuando se
+corrige un veredicto. Las de cada afirmación sí llevan el suyo, así que hay que regenerarlas al corregir uno
+(solo se reescriben las que cambian).
 Necesita Pillow, que no es dependencia del proyecto (build.py solo copia estos ficheros), así que se ejecuta con:
 
     uv run --with pillow python herramientas/imagenes_compartir.py
@@ -116,7 +119,7 @@ def rasterizar_logo(svg, caja):
     return img
 
 
-def lienzo(rotulo):
+def lienzo(rotulo, tono=None):
     """Fondo blanco con marco negro grueso, rótulo en una pastilla negra y banda inferior con los colores de veredicto."""
     img = Image.new("RGB", (ANCHO, ALTO), BLANCO)
     d = ImageDraw.Draw(img)
@@ -128,6 +131,9 @@ def lienzo(rotulo):
     con_espaciado(d, (80, 71), rotulo, f, BLANCO, esp)
     # Banda de colores (como la barra de cada tema de la web); es solo un detalle, sin proporciones ni cifras.
     x0, x1, y0, y1 = 34, ANCHO - 34, ALTO - 34 - 22, ALTO - 34
+    if tono:  # imagen de una afirmación: la banda entera en el color de su veredicto
+        d.rectangle([x0, y0, x1, y1], fill=tono)
+        return img, d
     paso = (x1 - x0) / len(build.ORDEN)
     for n, k in enumerate(build.ORDEN):
         d.rectangle([round(x0 + n * paso), y0, round(x0 + (n + 1) * paso) - 1, y1], fill=build.TONO[k])
@@ -174,6 +180,42 @@ def imagen_entrevista(m):
     return img
 
 
+def imagen_afirmacion(m, a):
+    """Veredicto en su color, la afirmación en grande y, debajo, quién lo dijo y en qué minuto."""
+    v = a["veredicto"]
+    img, d = lienzo(f'VERIFICACIÓN · {m["invitado"].upper()}', build.TONO[v])
+    f_v = sans(30)
+    texto_v = build.NOMBRE[v].upper()
+    w = ancho(d, texto_v, f_v, 2)
+    d.rectangle([80, 140, 80 + w + 36, 140 + 50], fill=build.TONO[v])
+    con_espaciado(d, (98, 150), texto_v, f_v, BLANCO, 2)
+    afirmacion = " ".join(a.get("afirmacion", "").split())
+    if len(afirmacion) > 230:
+        afirmacion = afirmacion[:230].rsplit(" ", 1)[0].rstrip(",.;:") + "…"
+    f, lineas = ajustar(d, afirmacion, 58, 34, 1040, 4)
+    paso = int(f.size * 1.18)
+    y = 210 + (426 - 210 - paso * len(lineas)) // 2
+    for l in lineas:
+        d.text((80, y), l, font=f, fill=NEGRO)
+        y += paso
+    d.text((80, 462), f'{m["invitado"]} en {m["programa"]}, minuto {build.hms(a["_t"])}', font=serif(34, "Italic"), fill=NEGRO)
+    d.text((80, 512), f'{build.BASE.replace("https://", "")}/{m["slug"]}/{a["_id"]}', font=sans(26), fill=NEGRO)
+    return img
+
+
+def guardar_si_cambia(img, ruta):
+    """PNG con paleta reducida (pesa la cuarta parte y el texto se ve igual); no reescribe si sale idéntico."""
+    import io
+    buf = io.BytesIO()
+    img.quantize(colors=48, method=Image.Quantize.MEDIANCUT, dither=Image.Dither.NONE).save(buf, "PNG", optimize=True)
+    datos = buf.getvalue()
+    if ruta.exists() and ruta.read_bytes() == datos:
+        return False
+    ruta.parent.mkdir(parents=True, exist_ok=True)
+    ruta.write_bytes(datos)
+    return True
+
+
 # Favicon: cuadrado negro con una marca de verificación blanca (vista 64×64).
 MARCA = [(17, 34), (28, 45), (48, 20)]
 FAVICON_SVG = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
@@ -211,6 +253,15 @@ def main():
         if m.get("publicar"):
             imagen_entrevista(m).save(SALIDA / f'{m["slug"]}.png', optimize=True)
             publicadas.append(m["slug"])
+            # una por afirmación publicada (las excluidas no tienen página); se borran las que ya no existen
+            pm = build.preparar(m)
+            carpeta = SALIDA / "afirmaciones" / m["slug"]
+            nuevas = sum(guardar_si_cambia(imagen_afirmacion(pm, a), carpeta / f'{a["_id"]}.png') for a in pm["todas"])
+            vivas = {f'{a["_id"]}.png' for a in pm["todas"]}
+            for vieja in carpeta.glob("*.png"):
+                if vieja.name not in vivas:
+                    vieja.unlink()
+            print(f'{m["slug"]}: {len(pm["todas"])} imágenes de afirmación ({nuevas} nuevas o cambiadas)')
     (SALIDA / "favicon.svg").write_text(FAVICON_SVG, encoding="utf-8")
     icono(32, True).save(SALIDA / "favicon-32.png", optimize=True)
     icono(180, False).convert("RGB").save(SALIDA / "apple-touch-icon.png", optimize=True)
