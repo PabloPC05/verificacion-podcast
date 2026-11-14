@@ -509,11 +509,11 @@ def muestra_hero(hechas, por_veredicto=(("falso", "enganoso"), ("verdadero",), (
                 f'<span class="estampa"><span class="sr">Veredicto: </span>{NOMBRE[a["veredicto"]]}</span></a></li>')
     items = "".join(item(i, m, a) for i, (m, a) in enumerate(elegidas))
     return ('<section class="muestra" aria-roledescription="carrusel" aria-label="Afirmaciones verificadas, de muestra">'
-            '<p class="muestra-rot">Así se ve una afirmación comprobada</p><div class="muestra-barra">'
+            '<div class="muestra-cab"><p class="muestra-rot">Así se ve una afirmación comprobada</p><div class="muestra-barra">'
             '<button class="muestra-ant" type="button" aria-label="Afirmación anterior" title="Anterior">'
             '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>'
             '<button class="muestra-sig" type="button" aria-label="Afirmación siguiente" title="Siguiente">'
-            '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button></div>'
+            '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button></div></div>'
             f'<ul class="muestra-lista" aria-live="off">{items}</ul></section>')
 
 
@@ -3322,11 +3322,12 @@ footer .leyenda-f { max-width:820px; }
 /* ── Hero con GSAP: el titular sube por líneas y se subraya «dato a dato»; debajo, un carrusel de afirmaciones reales que reciben su veredicto como un sello */
 .subraya { font-style:normal; background:linear-gradient(var(--tinta),var(--tinta)) no-repeat 0 96% / var(--subrayado,100%) .075em;
   -webkit-box-decoration-break:clone; box-decoration-break:clone; }
-/* Sin marco: la etiqueta de quién y cuándo lleva delante las flechas, la cita debajo y el sello del veredicto a la derecha */
+/* Sin marco: arriba el rótulo con las flechas a su derecha; debajo quién y cuándo, la cita y el sello del veredicto a la derecha */
 .muestra { position:relative; margin-top:20px; max-width:62ch; }
-.muestra-rot { margin:0 0 8px; font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--gris); }
-.muestra-barra { position:absolute; left:-8px; z-index:1; display:flex; gap:2px; margin:0; transform:translateY(-6px); }
-.muestra-barra button { display:grid; place-items:center; width:36px; height:36px; padding:0; cursor:pointer; border:0; border-radius:var(--r-boton);
+.muestra-cab { display:flex; align-items:center; justify-content:space-between; gap:12px; margin:0 0 4px; }
+.muestra-rot { margin:0; min-width:0; font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--gris); }
+.muestra-barra { display:flex; flex:none; gap:2px; margin:0 -8px 0 0; }
+.muestra-barra button { display:grid; place-items:center; width:40px; height:40px; padding:0; cursor:pointer; border:0; border-radius:var(--r-boton);
   background:transparent; color:var(--tinta); transition:background-color .15s ease-out, transform .12s ease-out; }
 .muestra-barra button:hover { background:var(--claro); }
 .muestra-barra button:active { transform:scale(.92); }
@@ -3336,14 +3337,15 @@ footer .leyenda-f { max-width:820px; }
 .muestra-item { grid-area:1 / 1; visibility:hidden; min-width:0; }
 .muestra-item.activa { visibility:visible; }
 .muestra-item a { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:6px 20px; align-items:center; color:inherit; text-decoration:none; }
-.muestra-quien { grid-column:1; padding-left:70px; font-size:12.5px; font-weight:700; line-height:24px; color:var(--suave); }
+.muestra-quien { grid-column:1; font-size:12.5px; font-weight:700; line-height:24px; color:var(--suave); }
 .muestra-cita { grid-column:1; font:italic 400 clamp(17px,1.55vw,21px)/1.3 var(--serif); text-wrap:pretty; }
+.muestra-cita .palabra-mask { padding:0 .12em .08em; margin:0 -.12em -.08em; }
 .muestra-item a:hover .muestra-cita { text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:3px; }
 .muestra-item a:focus-visible { outline:2px solid var(--tinta); outline-offset:4px; border-radius:var(--r-mini); }
 .estampa { grid-column:2; grid-row:1 / span 2; justify-self:end; align-self:center; padding:8px 12px; border:2.5px solid currentColor; border-radius:var(--r-mini);
   color:var(--tono); background:color-mix(in srgb, var(--tono) 8%, var(--fondo)); transform:rotate(-4deg);
   font:800 14px/1 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; letter-spacing:.09em; text-transform:uppercase; white-space:nowrap; }
-@media (max-width:560px) { .muestra-item a { column-gap:12px; } .estampa { padding:7px 9px; font-size:12px; } }
+@media (max-width:560px) { .muestra-rot { letter-spacing:.05em; } .muestra-item a { column-gap:12px; } .estampa { padding:7px 9px; font-size:12px; } }
 /* Escritorio: a la izquierda el titular con la entradilla debajo; a la derecha el carrusel, más grande y centrado en vertical */
 @media (min-width:1000px) {
   .cabeza { grid-template-columns:minmax(0,1.3fr) minmax(0,1fr); }
@@ -3372,7 +3374,7 @@ footer .leyenda-f { max-width:820px; }
 <main class="ancho">
 <div class="primera">
 <div class="cabeza">
-<h1>Las entrevistas de The Wild Project, comprobadas <em class="subraya">dato a dato</em></h1>
+<h1>Las entrevistas de The Wild Project, comprobadas<br> <em class="subraya">dato a dato</em></h1>
 <p class="entrada">Jordi Wild ha entrevistado a los candidatos a las elecciones generales del 29 de noviembre. Comprobamos cada dato que dan con fuentes públicas, con el mismo método y la misma vara de medir para todos.</p>
 @@MUESTRA@@
 </div>
@@ -3437,24 +3439,19 @@ function carrusel(muestra, animado) {
   // Empieza en una afirmación al azar: si no, cada visita abriría con el mismo candidato y el mismo veredicto
   const inicio = Math.floor(Math.random() * items.length);
   if (inicio) { activar(items[0], items[inicio]); actual = inicio; }
+  // Cada cita se parte en palabras una sola vez y se queda partida: deshacer el corte al acabar recolocaba el texto un píxel
+  if (animado) items.forEach(it => { it._palabras = SplitText.create(it.querySelector(".muestra-cita"), { type: "words", mask: "words", wordsClass: "palabra" }).words; });
   const entrar = it => {
-    const cita = it.querySelector(".muestra-cita"), [quien, estampa] = partes(it);
-    it._split = SplitText.create(cita, { type: "words", mask: "words" });
+    const [quien, estampa] = partes(it);
     return gsap.timeline()
-      .from(quien, { autoAlpha: 0, x: -10, duration: .35, ease: "power2.out" })
-      .from(it._split.words, { yPercent: 110, duration: .55, stagger: .022, ease: "power3.out" }, "<.05")
+      .fromTo(quien, { autoAlpha: 0, x: -10 }, { autoAlpha: 1, x: 0, duration: .35, ease: "power2.out" })
+      .fromTo(it._palabras, { yPercent: 110 }, { yPercent: 0, duration: .55, stagger: .022, ease: "power3.out" }, "<.05")
       .fromTo(estampa, { autoAlpha: 0, scale: 2, rotation: -18 }, { autoAlpha: 1, scale: 1, rotation: -4, duration: .38, ease: "back.out(2.6)" }, ">-.15")
-      .to(muestra, { keyframes: { x: [0, -3, 2.5, -1.5, 0] }, duration: .24, ease: "none" }, "<.22")
-      .add(() => { it._split.revert(); it._split = null; });
+      .to(muestra, { keyframes: { x: [0, -3, 2.5, -1.5, 0] }, duration: .24, ease: "none", clearProps: "x" }, "<.22");
   };
-  const salir = it => {
-    const cita = it.querySelector(".muestra-cita");
-    it._split = SplitText.create(cita, { type: "words", mask: "words" });
-    return gsap.timeline()
-      .to(it._split.words, { yPercent: -110, duration: .3, stagger: .01, ease: "power2.in" })
-      .to(partes(it), { autoAlpha: 0, duration: .22, ease: "power1.in" }, "<")
-      .add(() => { it._split.revert(); it._split = null; gsap.set(partes(it), { clearProps: "all" }); });
-  };
+  const salir = it => gsap.timeline()
+    .to(it._palabras, { yPercent: -110, duration: .3, stagger: .01, ease: "power2.in" })
+    .to(partes(it), { autoAlpha: 0, duration: .22, ease: "power1.in" }, "<");
   // Pasa sola cada ESPERA segundos y solo se para mientras el ratón o el foco del teclado están encima.
   // Las flechas cambian de afirmación y vuelven a empezar la cuenta. Lo que pasa solo no se anuncia al lector de pantalla.
   const esperar = () => {
