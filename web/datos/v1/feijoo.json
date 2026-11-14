@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-14T20:58:35+01:00",
+ "generado": "2026-11-14T21:20:47+01:00",
  "aviso": "Verificación asistida por IA, sin revisión de un equipo de periodistas. «falso» no implica intención de mentir. Contrasta siempre con las fuentes enlazadas.",
  "veredictos": {
   "verdadero": "Los datos lo confirman.",
@@ -23,10 +23,10 @@
   "afirmaciones_url": "https://verificacion-podcast.vercel.app/api/v1/feijoo.json",
   "transcripcion_url": "https://verificacion-podcast.vercel.app/api/v1/feijoo/transcripcion.json",
   "transcripcion_txt_url": "https://verificacion-podcast.vercel.app/api/v1/feijoo/transcripcion.txt",
-  "total_afirmaciones": 153,
+  "total_afirmaciones": 154,
   "por_veredicto": {
-   "falso": 4,
-   "enganoso": 26,
+   "falso": 6,
+   "enganoso": 25,
    "mayormente_verdadero": 54,
    "verdadero": 43,
    "no_verificable": 26
@@ -83,9 +83,9 @@
     "n": 4,
     "titulo": "Autónomos, impuestos y propuestas económicas del PP",
     "inicio_s": 1731,
-    "total": 5,
+    "total": 6,
     "por_veredicto": {
-     "falso": 0,
+     "falso": 1,
      "enganoso": 0,
      "mayormente_verdadero": 3,
      "verdadero": 2,
@@ -150,8 +150,8 @@
     "inicio_s": 3834,
     "total": 30,
     "por_veredicto": {
-     "falso": 1,
-     "enganoso": 4,
+     "falso": 2,
+     "enganoso": 3,
      "mayormente_verdadero": 8,
      "verdadero": 10,
      "no_verificable": 7
@@ -1822,8 +1822,8 @@
    "cita": "la tarifa del impuesto de la renta con la inflación",
    "afirmacion": "El Gobierno no ha actualizado (deflactado) la tarifa del IRPF con la inflación, lo que hace que las subidas de sueldo nominales se paguen en tramos más altos.",
    "veredicto": "verdadero",
-   "resumen": "El Gobierno reconoce a Bruselas que no deflactar el IRPF aportó 2.294 millones en 2025 y se mantendrá al menos hasta 2028; las cifras del ejemplo son ilustrativas.",
-   "explicacion": "El Informe de Progreso Anual 2026 que el Gobierno remitió a Bruselas el 30-4-2026 reconoce que la «no deflactación» de la tarifa y los mínimos del IRPF aportó 2.294 millones de euros en 2025 (0,14% del PIB; 1.137 al Estado y 1.157 a las CCAA) y la presenta como medida para cumplir el compromiso de ingresos del Plan Fiscal Estructural. La prensa recoge que se mantendrá al menos hasta 2028 y que solo en 2008 y 2015 se ajustó la tarifa en veinte años. Las cifras del ejemplo de Feijóo (subida del 4-5% que se queda en un 1% neto) son ilustrativas, no medidas.",
+   "resumen": "El Gobierno reconoce a Bruselas que no deflactar el IRPF aportó 2.294 millones en 2025 y se mantendrá al menos hasta 2028; el ejemplo numérico se verifica aparte.",
+   "explicacion": "El Informe de Progreso Anual 2026 que el Gobierno remitió a Bruselas el 30-4-2026 reconoce que la «no deflactación» de la tarifa y los mínimos del IRPF aportó 2.294 millones de euros en 2025 (0,14% del PIB; 1.137 al Estado y 1.157 a las CCAA) y la presenta como medida para cumplir el compromiso de ingresos del Plan Fiscal Estructural. La prensa recoge que se mantendrá al menos hasta 2028 y que solo en 2008 y 2015 se ajustó la tarifa en veinte años. El ejemplo numérico de Feijóo (una subida del 4-5 % que se queda en un 1 % neto) se verifica aparte, en la afirmación siguiente.",
    "confianza": "alta",
    "fuentes": [
     {
@@ -1844,10 +1844,69 @@
     }
    ],
    "verificado": "2026-11-13",
-   "correcciones": [],
+   "correcciones": [
+    {
+     "fecha": "2026-11-14",
+     "antes": "verdadero",
+     "motivo": "La explicación decía que las cifras del ejemplo de Feijóo eran «ilustrativas, no medidas», pero se pueden calcular con la normativa de 2026: tras el aviso de un lector se verifican ahora como afirmación aparte. El veredicto de esta no cambia."
+    }
+   ],
    "esencial": false,
    "otros_verificadores": [],
    "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m1904.png"
+  },
+  {
+   "id": "feijoo-m1911",
+   "entrevista": "feijoo",
+   "invitado": "Alberto Núñez Feijóo",
+   "tema_n": 4,
+   "tema": "Autónomos, impuestos y propuestas económicas del PP",
+   "segundo": 1911,
+   "minuto": "0:31:51",
+   "video_url": "https://www.youtube.com/watch?v=1YlGArMx_N4&t=1911s",
+   "web_url": "https://verificacion-podcast.vercel.app/feijoo#m1911",
+   "pagina_url": "https://verificacion-podcast.vercel.app/feijoo/m1911",
+   "cita": "el neto de lo que te queda de incremento es un 1%",
+   "afirmacion": "Si a un trabajador le suben el sueldo un 4-5%, por pagar más cotización a la Seguridad Social y pasarse de tramo del IRPF, lo que le queda de incremento neto es un 1%.",
+   "veredicto": "falso",
+   "resumen": "Con un 4% de subida el neto sube un 3,4% con 30.000 euros y un 3,25% con 45.000; solo cerca de 18.000-20.200 euros queda cerca del 1%.",
+   "explicacion": "Con la normativa de 2026 (cotización del trabajador del 6,5% incluido el MEI, escala del IRPF 19-47%, reducción por rendimientos del trabajo y deducción para sueldos cercanos al SMI), una subida bruta del 4% deja un neto de +3,4% con 30.000 euros y +3,25% con 45.000; con una del 5%, +4,25% y +4,07%. El neto solo queda en torno al 1-1,5% en sueldos de unos 18.000 a 20.200 euros brutos, y no por la cuota ni por cambiar de tramo (que solo grava el exceso), sino por la retirada gradual de deducciones; por encima de 25.000 euros nunca baja del 3,2%. La pérdida real de la no deflactación con 4% de inflación es de unos 140 euros (30.000) a 244 (45.000), un 0,6-0,7% del neto, no 3 puntos. La inflación fue del 4,9% en octubre de 2026 (INE), así que el 4% es un supuesto razonable.",
+   "confianza": "media",
+   "fuentes": [
+    {
+     "titulo": "BOE: Real Decreto-ley 5/2026, de 17 de febrero (art. 28: deducción por rendimientos del trabajo hasta 20.048,45 euros; SMI 2026 de 17.094 euros) (19-2-2026)",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2026-3810"
+    },
+    {
+     "titulo": "BOE: Ley 35/2006 del IRPF, texto consolidado (art. 19.2 otros gastos 2.000 euros; art. 20 reducción por rendimientos del trabajo)",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2006-20764"
+    },
+    {
+     "titulo": "AEAT: Algoritmo de retenciones 2026 (escala 19-47%, mínimo 5.550 euros, reducción 7.302 euros)",
+     "url": "https://sede.agenciatributaria.gob.es/static_files/Sede/Programas_ayuda/Retenciones/2026/Algoritmo%20Retenciones-2026_10sept.pdf"
+    },
+    {
+     "titulo": "BOE: Orden PJC/297/2026, de 30 de marzo, de cotización 2026 (tipos del trabajador y MEI 0,15%) (31-3-2026)",
+     "url": "https://boe.es/buscar/pdf/2026/BOE-A-2026-7296-consolidado.pdf"
+    },
+    {
+     "titulo": "INE: Índice de Precios de Consumo, octubre de 2026 (13-11-2026)",
+     "url": "https://www.ine.es/dyngs/Prensa/IPC1026.htm"
+    },
+    {
+     "titulo": "INE: Índice de Precios de Consumo, septiembre de 2026",
+     "url": "https://www.ine.es/dyngs/Prensa/IPC0926.htm"
+    },
+    {
+     "titulo": "Vozpópuli: El INE confirma que la inflación bajó una décima en diciembre y cerró 2025 con una media del 2,7%",
+     "url": "https://www.vozpopuli.com/economia/el-ine-confirma-que-la-inflacion-bajo-una-decima-en-diciembre-y-cerro-2025-con-una-media-del-27.html"
+    }
+   ],
+   "verificado": "2026-11-14",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m1911.png"
   },
   {
    "id": "feijoo-m1938",
@@ -5054,22 +5113,26 @@
    "pagina_url": "https://verificacion-podcast.vercel.app/feijoo/m4238",
    "cita": "este abogado con carácter general no llevaba los asuntos que afectaban a temas penales en la Audiencia Nacional y en el Tribunal Supremo",
    "afirmacion": "El abogado en cuestión, con carácter general, no llevaba los asuntos penales del PP en la Audiencia Nacional y el Tribunal Supremo.",
-   "veredicto": "enganoso",
-   "resumen": "Artículo 14 y elDiario.es cuentan que Durán dirigió la acusación popular del PP en el caso Koldo y en el del hermano de Sánchez hasta que lo apartaron, lo que no encaja con que no llevara esos asuntos.",
-   "explicacion": "Artículo 14 (7/11/2026) dice que Durán dirigió la acusación popular del PP en el caso Koldo y en el del hermano de Sánchez, y elDiario.es (5-6/11/2026) lo llama «abogado del PP hasta hace unos meses en los principales casos de corrupción que afectan al Gobierno y al PSOE» y dice que el partido lo apartó de las principales causas de la Audiencia Nacional. Además, un juez unificó en 2024 las acusaciones populares del caso Koldo bajo la dirección letrada del PP, tanto en el Supremo como en la Audiencia Nacional. Eso no encaja con que «con carácter general» no llevase esos asuntos, aunque el reparto interno solo consta por prensa y no por documentos del partido.",
+   "veredicto": "falso",
+   "resumen": "Durán fue letrado del PP en el juicio del Supremo y dirigió su acusación popular en el caso Koldo: llevaba los asuntos penales principales, hasta que el PP lo apartó.",
+   "explicacion": "Durán sí llevaba los asuntos penales del PP en el Supremo y la Audiencia Nacional. Artículo 14 (7-11-2026) dice que dirigió la acusación popular del PP en el caso Koldo y en el del hermano de Sánchez; Europa Press (4-5-2026) lo cita como «letrado del PP» en el juicio del caso mascarillas en el Supremo; y elDiario.es (5-6/11/2026) lo describe como abogado del PP «hasta hace unos meses en los principales casos de corrupción» y dice que el partido lo apartó de las principales causas de la Audiencia Nacional. El reparto interno del trabajo solo consta por prensa, no por documentos del partido.",
    "confianza": "media",
    "fuentes": [
     {
-     "titulo": "Artículo 14: El PP rechaza que el paso a un lado de Alberto Durán tenga relación con su reunión con Koldo García (7/11/2026)",
+     "titulo": "Artículo 14: El PP rechaza que el paso a un lado de Alberto Durán tenga relación con su reunión con Koldo García (7-11-2026)",
      "url": "https://www.articulo14.es/politica/el-pp-rechaza-que-el-paso-a-un-lado-de-alberto-duran-tenga-relacion-con-su-reunion-con-koldo-garcia-20261107.html"
+    },
+    {
+     "titulo": "Europa Press (Periódico de Ibiza): Anticorrupción mantiene las penas para Ábalos, Koldo y Aldama y el PP reduce a 5 los años de cárcel para el empresario (4-5-2026)",
+     "url": "https://www.periodicodeibiza.es/noticias/nacional/2026/05/04/2622773/anticorrupcion-mantiene-penas-para-abalos-koldo-aldama-reduce-anos-carcel-para-empresario.html"
+    },
+    {
+     "titulo": "elDiario.es: Koldo, el abogado Alberto Durán y el PP (5-11-2026, actualizado 6-11)",
+     "url": "https://www.eldiario.es/1_d02a9f"
     },
     {
      "titulo": "elDiario.es: el PP aparta a su abogado Alberto Durán de las principales causas de la Audiencia Nacional (5-6/11/2026)",
      "url": "https://www.eldiario.es/1_d0246f"
-    },
-    {
-     "titulo": "elDiario.es: Koldo, el abogado Alberto Durán y el PP (5/11/2026, actualizado 6/11)",
-     "url": "https://www.eldiario.es/1_d02a9f"
     },
     {
      "titulo": "Infobae/EFE: El PP también dirigirá las acusaciones populares del caso Koldo en la Audiencia Nacional (30/12/2024)",
@@ -5077,7 +5140,13 @@
     }
    ],
    "verificado": "2026-11-13",
-   "correcciones": [],
+   "correcciones": [
+    {
+     "fecha": "2026-11-14",
+     "antes": "enganoso",
+     "motivo": "Varias fuentes (Artículo 14, Europa Press, elDiario.es) muestran que Durán dirigía la acusación popular del PP en el caso Koldo y litigaba en el Supremo, lo que contradice lo que dijo Feijóo."
+    }
+   ],
    "esencial": false,
    "otros_verificadores": [],
    "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m4238.png"

@@ -163,6 +163,10 @@
 "lectura": false,
 "comprobado": "2026-11-13"
 },
+"https://boe.es/buscar/pdf/2026/BOE-A-2026-7296-consolidado.pdf": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://boe.gob.es/boe/dias/2023/09/01/pdfs/BOE-A-2023-18907.pdf": {
 "lectura": false,
 "comprobado": "2026-11-13"
@@ -588,6 +592,10 @@
 "comprobado": "2026-11-13"
 },
 "https://es.ara.cat/politica/gobierno-sanchez-rinde-cuentas-26-dias-despues-crisis-ceuta_1_5831446.html": {
+"lectura": false,
+"comprobado": "2026-11-14"
+},
+"https://es.ara.cat/politica/juez-deja-santos-cerdan-libertad_1_5566495.html": {
 "lectura": false,
 "comprobado": "2026-11-14"
 },
@@ -1105,6 +1113,10 @@
 },
 "https://hj.tribunalconstitucional.es/es/Resolucion/GetDocumentResolucion/31403": {
 "lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://iairgroup.com/press-releases/2020/iberia-and-vueling-sign-syndicated-loan-agreements": {
+"lectura": false,
 "comprobado": "2026-11-14"
 },
 "https://ine.es/dyngs/Prensa/CNTR4T25.htm?print=1": {
@@ -1695,6 +1707,10 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://sede.agenciatributaria.gob.es/static_files/Sede/Programas_ayuda/Retenciones/2026/Algoritmo%20Retenciones-2026_10sept.pdf": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://semanariouniversidad.com/mundo/varios-paises-anuncian-un-boicot-de-festival-europeo-de-la-cancion-tras-permitirse-la-participacion-de-israel/": {
 "lectura": false,
 "comprobado": "2026-11-13"
@@ -2023,11 +2039,19 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://valenciaplaza.com/iberia-erte-coronavirus": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://valenciaplaza.com/santos-cerdan-confirma-koldo-custodio-avales-sanchez-fue-chofer-psoe": {
 "lectura": true,
 "comprobado": "2026-11-13"
 },
 "https://valenciaplaza.com/valenciaplaza/abalos-mano-derecha-de-pedro-sanchez-portavoz-interino-del-grupo-socialista": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://valenciaplaza.com/valenciaplaza/el-fondo-del-sepi-ha-rechazado-15-peticiones-de-apoyo-financiero-por-445-millones": {
 "lectura": true,
 "comprobado": "2026-11-14"
 },
@@ -2390,6 +2414,14 @@
 "https://www.bluradio.com/mundo/ee-uu-niega-estar-en-guerra-con-venezuela-y-defiende-captura-de-nicolas-maduro-ante-la-onu-rg10": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://www.boe.es/buscar/act.php?id=BOE-A-2006-20764": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.boe.es/buscar/act.php?id=BOE-A-2026-3810": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://www.boe.es/buscar/doc.php?id=BOE-A-2009-4369": {
 "lectura": true,
@@ -4131,6 +4163,14 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.ine.es/dyngs/Prensa/IPC0926.htm": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
+"https://www.ine.es/dyngs/Prensa/IPC1026.htm": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.ine.es/dyngs/Prensa/PROP20242074.htm": {
 "lectura": true,
 "comprobado": "2026-11-13"
@@ -4691,6 +4731,10 @@
 "lectura": true,
 "comprobado": "2026-11-14"
 },
+"https://www.merca2.es/2021/12/05/volotea-solicita-sepi-prestamo-818911/": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.merca2.es/2026/05/06/lista-ricos-espana-2026-2377075/": {
 "lectura": true,
 "comprobado": "2026-11-13"
@@ -4998,6 +5042,10 @@
 "https://www.ocu.org/organizacion/prensa/notas-de-prensa/2025/rodaliescat260325": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://www.ondacero.es/emisoras/comunidad-valenciana/valencia/noticias/ano-dimision-mazon-que-mantiene-acta-diputado-autonomico_202611036ae9a69b02501232157214c7.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://www.ondavasca.com/colau-acusa-a-sanchez-de-llegar-tarde-al-caso-de-maricarmen/": {
 "lectura": true,
@@ -5619,6 +5667,10 @@
 "lectura": true,
 "comprobado": "2026-11-13"
 },
+"https://www.vozpopuli.com/economia/el-ine-confirma-que-la-inflacion-bajo-una-decima-en-diciembre-y-cerro-2025-con-una-media-del-27.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
+},
 "https://www.vozpopuli.com/economia/empresas/el-gobierno-adjudico-a-fcc-ferrovial-ohla-y-azvi-el-cuidado-de-la-via-en-adamuz-por-56-millones-hasta-2028.html": {
 "lectura": true,
 "comprobado": "2026-11-14"
@@ -5638,6 +5690,10 @@
 "https://www.vozpopuli.com/economia/inmobiliario/el-gobierno-engordara-casa-47-como-macrocasero-estatal-con-5000-millones-en-activos-y-fondos-antes-de-2029.html": {
 "lectura": true,
 "comprobado": "2026-11-13"
+},
+"https://www.vozpopuli.com/economia/plus-ultra-air-europa-2.html": {
+"lectura": true,
+"comprobado": "2026-11-14"
 },
 "https://www.vozpopuli.com/economia/record-historico-de-los-100-mas-ricos-de-espana-el-imperio-de-amancio-ortega-la-escalada-de-juan-roig-y-la-entrada-de-ana-botin.html": {
 "lectura": true,

@@ -1,286 +1,308 @@
 [
-  {
-    "minuto": "1:19:50",
-    "cita": "nosotros contratamos esos 40 y pico mil euros contratamos los servicios de varios despachos de abogados que esos despachos de abogados contrataran a Leire Díaz, eso es algo que el Partido Socialista desconocía.",
-    "afirmacion": "Los 43.225 euros que la UCO atribuye al PSOE como pagos que llegaron a Leire Díez corresponden a servicios de varios despachos de abogados contratados por el partido, y el PSOE desconocía que esos despachos contrataran después a Leire Díez.",
-    "veredicto": "enganoso",
-    "explicacion": "El informe de la UCO (fechado el 9-7-2026 y difundido el 14-7) sitúa en el PSOE el origen de 43.225 euros que llegaron a Leire Díez: 16.000 en cuatro transferencias de la consultora Zaño, vinculada a Gaspar Zarrías y presentadas como nóminas, y 27.225 desde sociedades del abogado Ismael Oliver. Por tanto, parte del dinero no pasó por un despacho de abogados. La UCO sostiene que Díez promovió dentro del partido el pago de honorarios a los abogados Teijelo y Oliver como vía para recibir dinero, y la gerente del PSOE, Ana María Fuentes, declaró como investigada (9-9-2026) que era Santos Cerdán, entonces secretario de Organización, quien planteaba esas contrataciones. El 9-10-2026 el juez Pedraz rechazó imputar al PSOE como persona jurídica porque aún falta determinar quién ordenó los pagos y si los órganos de administración los conocían: que el partido desconociera la intervención de Díez no está probado ni refutado, y la causa sigue en instrucción.",
-    "confianza": "media",
-    "fuentes": [
-      {
-        "titulo": "Poder Judicial (CGPJ): El juez de la Audiencia Nacional rechaza atribuir por el momento la condición de investigado al PSOE",
-        "url": "https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Audiencia-Nacional/Noticias-Judiciales/El-juez-de-la-Audiencia-Nacional-rechaza-atribuir-por-el-momento-la-condicion-de-investigado-al-PSOE"
-      },
-      {
-        "titulo": "Público (EFE): La UCO confirma que el PSOE realizó pagos de un total de 43.225 euros a Leire Díez",
-        "url": "https://www.publico.es/politica/uco-confirma-psoe-realizo-pagos-total-43-225-euros-leire-diez.html"
-      },
-      {
-        "titulo": "Euronews (14-7-2026): Caso Leire Díez, la UCO confirma pagos del PSOE por valor de 43.225 euros",
-        "url": "https://es.euronews.com/my-europe/2026/07/14/caso-leire-diez-la-uco-confirma-pagos-del-psoe-por-valor-de-43225-euros-a-traves-de-interm"
-      },
-      {
-        "titulo": "Mundiario: La gerente del PSOE atribuye a Santos Cerdán los encargos a los imputados del caso Leire Díez",
-        "url": "https://www.mundiario.com/articulo/politica/gerente-psoe-descarga-santos-cerdan-encargos-imputados-caso-leire-diez/20260910110316440311.html"
-      },
-      {
-        "titulo": "Infobae (Europa Press): Sánchez afirma que \"no sabe muy bien\" cuál es el \"delito\" de Leire Díez y reitera que no tuvo ninguna reunión con ella",
-        "url": "https://www.infobae.com/espana/agencias/2026/11/13/sanchez-afirma-que-no-sabe-muy-bien-cual-es-el-delito-de-leire-diez-y-reitera-que-no-tuvo-ninguna-reunion-con-ella/"
-      }
-    ]
-  },
-  {
-    "minuto": "1:20:52",
-    "cita": "con Lady Di no he tenido ninguna reunión con presidente del gobierno yo no sabía que esta mujer estuviera",
-    "afirmacion": "Pedro Sánchez nunca ha mantenido ninguna reunión con Leire Díez.",
-    "veredicto": "no_verificable",
-    "explicacion": "Negar una reunión es un hecho privado que no se puede probar ni refutar con documentos públicos. La UCO intervino una agenda de Díez con la anotación «reunión con P.S.» en la página del 3-2-2025, sin más detalle; las fuentes consultadas no aportan prueba de que la reunión se produjera, El Español recoge que «no consta que Leire Díez asistiese» y Moncloa desmiente «rotundamente cualquier encuentro» (junio de 2026). Según Maldita.es, la agenda oficial sitúa a Sánchez ese día en Bélgica, en el retiro informal de líderes de la UE; según El Español, otra anotación con las mismas iniciales (13-1-2025) se refiere a un acuerdo de Prisa, de modo que las iniciales son ambiguas.",
-    "confianza": "media",
-    "fuentes": [
-      {
-        "titulo": "Maldita.es: Qué sabemos de la supuesta \"reunión con P.S.\" anotada en una agenda atribuida a Leire Díez",
-        "url": "https://maldita.es/desinfo/20260608/leire-diez-se-reunio-con-pedro-sanchez-en-febrero-de-2025-segun-una-de-sus-agendas/"
-      },
-      {
-        "titulo": "Diario de Pontevedra (Europa Press): Leire Díez anotó en una agenda \"reunión con P.S.\": el Gobierno niega \"cualquier encuentro\" con Sánchez",
-        "url": "https://www.diariodepontevedra.es/articulo/espana/directo-marlaska-respalda-directora-guardia-civil-hubo-ningun-contacto-relacionado-trama/202606051220431452090.html"
-      },
-      {
-        "titulo": "El Español: La negación de Sánchez que las notas de Leire Díez cuestionan",
-        "url": "https://www.elespanol.com/espana/politica/20260606/negacion-sanchez-notas-leire-cuestionan-no-andanzas-nunca-tolerado/1003744275524_0.html"
-      },
-      {
-        "titulo": "El Español: Las notas de Leire Díez \"reunión con P. S.\" y \"reunión con ZP\"",
-        "url": "https://www.elespanol.com/espana/tribunales/20260606/notas-leire-reunion-zp-refuerzan-teoria-acceso-sanchez-zapatero/1003744275987_0.html"
-      },
-      {
-        "titulo": "El Debate: El Gobierno niega reuniones entre Sánchez y Leire como negó las tres de la directora de la Guardia Civil",
-        "url": "https://www.eldebate.com/espana/20260609/gobierno-niega-reuniones-entre-sanchez-leire-como-nego-tres-directora-guardia-civil_426818.html"
-      }
-    ]
-  },
-  {
-    "minuto": "1:20:52",
-    "cita": "ella misma, en el Senado y también ante la justicia, lo que ha dicho es que no ha tenido nunca una reunión conmigo.",
-    "afirmacion": "Leire Díez ha declarado en el Senado y ante la justicia que nunca tuvo una reunión con Pedro Sánchez.",
-    "veredicto": "mayormente_verdadero",
-    "explicacion": "En la comisión del caso Koldo del Senado (8-9-2025) Díez negó haber tenido «contacto alguno con el presidente del Gobierno», según Euronews, algo más amplio que no haberse reunido con él. Ante el juez Arturo Zamarriego (17-11-2025) dijo, según elDiario.es con fuentes jurídicas recogidas por Europa Press, que coincidió con Sánchez en algún mitin pero que no tiene relación con él, lo que es compatible con no haberse reunido. Sus agendas intervenidas contienen anotaciones «reunión con P.S.» que la prensa vincula a Sánchez, aunque El Español señala que no consta que Díez asistiese a ellas. Ambas declaraciones se conocen por crónicas de prensa y no por el diario de sesiones ni el acta, a los que no he tenido acceso.",
-    "confianza": "media",
-    "fuentes": [
-      {
-        "titulo": "Euronews: Leire Díez niega tener vínculos con Santos Cerdán y Pedro Sánchez en la comisión del caso Koldo",
-        "url": "https://es.euronews.com/2025/09/08/leire-diez-niega-tener-vinculos-con-santos-cerdan-y-pedro-sanchez-en-la-comision-del-caso-"
-      },
-      {
-        "titulo": "elDiario.es: Leire Díez declara que mantuvo dos reuniones con Cerdán como “periodista” pero niega tener vinculación con el PSOE",
-        "url": "https://www.eldiario.es/politica/leire-diez-declara-mantuvo-reuniones-cerdan-periodista-niega-vinculacion-psoe_1_12775483.html"
-      },
-      {
-        "titulo": "Infobae (Europa Press): Sánchez afirma que \"no sabe muy bien\" cuál es el \"delito\" de Leire Díez y reitera que no tuvo ninguna reunión con ella",
-        "url": "https://www.infobae.com/espana/agencias/2026/11/13/sanchez-afirma-que-no-sabe-muy-bien-cual-es-el-delito-de-leire-diez-y-reitera-que-no-tuvo-ninguna-reunion-con-ella/"
-      },
-      {
-        "titulo": "El Español: Las notas de Leire Díez \"reunión con P. S.\" y \"reunión con ZP\"",
-        "url": "https://www.elespanol.com/espana/tribunales/20260606/notas-leire-reunion-zp-refuerzan-teoria-acceso-sanchez-zapatero/1003744275987_0.html"
-      }
-    ]
-  },
-  {
-    "minuto": "1:19:50",
-    "cita": "Y tampoco sé muy bien exactamente qué es lo que ha hecho esta mujer desde el punto de vista del delito.",
-    "afirmacion": "Pedro Sánchez dice no saber con exactitud qué ha hecho Leire Díez desde el punto de vista del delito, dando a entender que no está claro de qué se la investiga.",
-    "veredicto": "enganoso",
-    "explicacion": "Lo que Sánchez sabe es personal y no se puede comprobar, pero lo que se investiga sí consta públicamente. Leire Díez figura como investigada por el juez Santiago Pedraz, de la Audiencia Nacional, en una causa sobre una presunta organización que buscaba desestabilizar las causas judiciales que afectaban al PSOE y al Gobierno (CGPJ, 9-10-2026). Según la UCO habría ofrecido dinero o favores a guardias civiles y fiscales a cambio de información (elDiario.es, 13-8-2026) y, en la pieza de la SEPI, habría orientado expedientes a cambio de comisiones de unos 700.000 euros (Orain, 27-5-2026). Son indicios en instrucción, no hechos probados, y Díez goza de presunción de inocencia; aun así, presentar como poco claro de qué se la investiga omite lo que consta en autos.",
-    "confianza": "media",
-    "fuentes": [
-      {
-        "titulo": "Poder Judicial (CGPJ): El juez de la Audiencia Nacional rechaza atribuir por el momento la condición de investigado al PSOE",
-        "url": "https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Audiencia-Nacional/Noticias-Judiciales/El-juez-de-la-Audiencia-Nacional-rechaza-atribuir-por-el-momento-la-condicion-de-investigado-al-PSOE"
-      },
-      {
-        "titulo": "elDiario.es: El primer juez el caso Leire Díez lo eleva a la Audiencia Nacional porque allí se investiga a personas con más “jerarquía” en la trama",
-        "url": "https://www.eldiario.es/politica/primer-juez-caso-leire-diez-eleva-audiencia-nacional-investiga-personas-jerarquia-trama_1_13445330.html"
-      },
-      {
-        "titulo": "Orain: ¿Qué es el caso Leire Díez y de qué acusa ahora el juez Pedraz al PSOE?",
-        "url": "https://orain.eus/es/politica/2026/05/27/es-el-caso-leire-diez-investiga-el-juez-pedraz/"
-      },
-      {
-        "titulo": "Infobae (Europa Press): Sánchez afirma que \"no sabe muy bien\" cuál es el \"delito\" de Leire Díez y reitera que no tuvo ninguna reunión con ella",
-        "url": "https://www.infobae.com/espana/agencias/2026/11/13/sanchez-afirma-que-no-sabe-muy-bien-cual-es-el-delito-de-leire-diez-y-reitera-que-no-tuvo-ninguna-reunion-con-ella/"
-      }
-    ]
-  },
-  {
-    "minuto": "1:20:52",
-    "cita": "en el momento en el que se pruebe que el partido ha sido afectado por alguna actividad ilícita, nosotros no descartamos ninguna acción judicial.",
-    "afirmacion": "Pedro Sánchez dice haber consultado a los asesores jurídicos del PSOE sobre una acción judicial contra Leire Díez y que el partido no descarta ninguna si se prueba que fue afectado por una actividad ilícita.",
-    "veredicto": "no_verificable",
-    "explicacion": "Son consultas internas y una intención condicionada, que no se pueden contrastar con documentos públicos. Consta que el 3-6-2026 el presidente de Castilla-La Mancha, Emiliano García-Page, pidió que el PSOE se querellara contra Díez, que Sánchez dijo el 5-6-2026 que los equipos jurídicos del partido estudiaban toda la documentación del caso y que el 29-6-2026 el PSOE seguía sin querellarse (The Objective). En las fuentes consultadas no consta que el partido haya presentado querella hasta el 13-11-2026, cuando Europa Press recoge que Sánchez remite la decisión a los asesores jurídicos.",
-    "confianza": "media",
-    "fuentes": [
-      {
-        "titulo": "Infobae (Europa Press): Sánchez afirma que \"no sabe muy bien\" cuál es el \"delito\" de Leire Díez y reitera que no tuvo ninguna reunión con ella",
-        "url": "https://www.infobae.com/espana/agencias/2026/11/13/sanchez-afirma-que-no-sabe-muy-bien-cual-es-el-delito-de-leire-diez-y-reitera-que-no-tuvo-ninguna-reunion-con-ella/"
-      },
-      {
-        "titulo": "Press Digital: Leire Díez responde al PP que irá al Senado y ve \"necia\" la petición de Page de que el PSOE se querelle contra ella",
-        "url": "https://www.pressdigital.es/articulo/politica/2026-06-03/5905813-leire-diez-responde-pp-ira-senado-ve-necia-peticion-page-psoe-querelle-contra"
-      },
-      {
-        "titulo": "Orain: Sánchez says he didn't support Díez's \"walks\", he didn't know about them, and if he had, he wouldn't have accepted them",
-        "url": "https://orain.eus/en/politika/2026/06/05/sanchez-says-he-didnt-support-diezs-walks-he-didnt-know-about-them-and-even-if-he-had-he-wouldnt-have-accepted-them/"
-      },
-      {
-        "titulo": "The Objective (29-6-2026): sobre la falta de querella del PSOE contra Leire Díez",
-        "url": "https://theobjective.com/espana/politica/2026-06-29/alusion-abogado-psoe-agenda-leire-partido-querelle/"
-      }
-    ]
-  },
-  {
-    "minuto": "1:21:53",
-    "cita": "Nosotros a todas las aerolíneas las rescatamos.",
-    "afirmacion": "El Gobierno, a través del fondo de rescate de la SEPI durante la pandemia, rescató a todas las aerolíneas.",
-    "veredicto": "falso",
-    "explicacion": "El Fondo de Apoyo a la Solvencia de Empresas Estratégicas (FASEE) de la SEPI desembolsó 2.681 millones a 28 empresas de todos los sectores (SEPI, 29-9-2026). Solo cuatro aerolíneas españolas recibieron préstamos: Air Europa (475 M), Volotea (200 M), Air Nostrum (111 M) y Plus Ultra (53 M), 839 M en total (EFE, 20-5-2026); a ellas se suma el Grupo Wamos (85 M), titular de la aerolínea Wamos Air, ya devuelto. Las listas de beneficiarias que publican SEPI (las once que ya han cancelado su deuda) y Forbes España (las 25 con préstamo vivo en octubre de 2024) no incluyen otras aerolíneas con base en España, como Iberia, Vueling o Binter, así que «todas» no se sostiene.",
-    "confianza": "alta",
-    "fuentes": [
-      {
-        "titulo": "SEPI: El Fondo de Solvencia ha recuperado el 66% de la financiación pública temporal (29-9-2026)",
-        "url": "https://www.sepi.es/es/sala-de-prensa/noticias/el-fondo-de-solvencia-ha-recuperado-el-66-de-la-financiacion-publica"
-      },
-      {
-        "titulo": "Infobae (EFE): Plus Ultra, una de las 4 aerolíneas a las que la SEPI concedió préstamos durante la covid",
-        "url": "https://www.infobae.com/espana/agencias/2026/05/20/plus-ultra-una-de-las-4-aerolineas-a-las-que-la-sepi-concedio-prestamos-durante-la-covid/"
-      },
-      {
-        "titulo": "Hosteltur: Préstamos SEPI: ¿cuánto han devuelto Plus Ultra y el resto de aerolíneas?",
-        "url": "https://www.hosteltur.com/176362_prestamos-sepi-cuanto-han-devuelto-air-europa-air-nostrum-volotea-y-plus-ultra.html"
-      },
-      {
-        "titulo": "Forbes España: El Fondo de Solvencia de SEPI recibe la devolución total de los 85 millones concedidos a Grupo Wamos",
-        "url": "https://forbes.es/economia/519334/el-fondo-de-solvencia-de-sepi-recibe-la-devolucion-total-de-los-85-millones-de-ayuda-concedida-a-grupo-wamos/"
-      },
-      {
-        "titulo": "El Español: La Sepi ha recuperado 1.425M de los rescates a empresas por la Covid",
-        "url": "https://www.elespanol.com/invertia/empresas/turismo/20251107/sepi-recuperado-rescates-empresas-covid-doble-previsto-devolucion-air-europa/1003744001957_0.html"
-      }
-    ]
-  },
-  {
-    "minuto": "1:21:53",
-    "cita": "Pero fíjate, no las rescatamos a fondo perdido. Las dimos un préstamo. El famoso préstamo a Europa, a Plus Ultra, a todas las compañías aéreas.",
-    "afirmacion": "Las ayudas a las aerolíneas del fondo de la SEPI no fueron a fondo perdido sino préstamos.",
-    "veredicto": "verdadero",
-    "explicacion": "SEPI (29-9-2026) describe los 2.681 millones del FASEE como préstamos que las empresas amortizan con intereses: ha recuperado 1.775 millones (66,2 %) y cobrado 359 millones en intereses. En las aerolíneas fueron préstamos ordinarios y participativos: Air Europa 240 M participativo y 235 M ordinario (devuelto con intereses el 6-11-2025), Plus Ultra 34 M y 19 M, Volotea íntegramente participativo y Air Nostrum 111 M. Matiz: Plus Ultra no ha devuelto el principal (solo unos 12 M en intereses) y Volotea y Air Nostrum han aplazado vencimientos (EFE y Hosteltur, mayo de 2026).",
-    "confianza": "alta",
-    "fuentes": [
-      {
-        "titulo": "SEPI: El Fondo de Solvencia ha recuperado el 66% de la financiación pública temporal (29-9-2026)",
-        "url": "https://www.sepi.es/es/sala-de-prensa/noticias/el-fondo-de-solvencia-ha-recuperado-el-66-de-la-financiacion-publica"
-      },
-      {
-        "titulo": "Infobae (EFE): Plus Ultra, una de las 4 aerolíneas a las que la SEPI concedió préstamos durante la covid",
-        "url": "https://www.infobae.com/espana/agencias/2026/05/20/plus-ultra-una-de-las-4-aerolineas-a-las-que-la-sepi-concedio-prestamos-durante-la-covid/"
-      },
-      {
-        "titulo": "Hosteltur: Préstamos SEPI: ¿cuánto han devuelto Plus Ultra y el resto de aerolíneas?",
-        "url": "https://www.hosteltur.com/176362_prestamos-sepi-cuanto-han-devuelto-air-europa-air-nostrum-volotea-y-plus-ultra.html"
-      },
-      {
-        "titulo": "Hoy Aragón: Qué pasó con los rescates de las aerolíneas durante la pandemia: Air Europa pagó, Plus Ultra no",
-        "url": "https://www.hoyaragon.es/espana/rescates-aerolineas-pandemia-air-europa-plus-ultra/20260521060003131502.html"
-      },
-      {
-        "titulo": "El Español: La Sepi ha recuperado 1.425M de los rescates a empresas por la Covid",
-        "url": "https://www.elespanol.com/invertia/empresas/turismo/20251107/sepi-recuperado-rescates-empresas-covid-doble-previsto-devolucion-air-europa/1003744001957_0.html"
-      }
-    ]
-  },
-  {
-    "minuto": "1:21:53",
-    "cita": "En las compañías aéreas llegamos a salvar, me parece que son casi 8.500 puestos de trabajo.",
-    "afirmacion": "El rescate de las compañías aéreas con el fondo de la SEPI salvó casi 8.500 puestos de trabajo.",
-    "veredicto": "no_verificable",
-    "explicacion": "SEPI (29-9-2026) cifra en más de 60.000 los puestos de trabajo que el FASEE contribuyó a preservar en el conjunto de las 28 empresas, y su presidenta dijo en el Congreso el 9-6-2026 que fueron 62.000, sin desglose por aerolíneas. La única cifra concreta de una aerolínea que he localizado es la de Plus Ultra: 345 empleos directos y más de 2.500 contando los indirectos según el acta de la SEPI, cifras que El Español (27-5-2026) considera infladas. No hay fuente oficial ni de prensa que dé 8.500 empleos para las aerolíneas, y Sánchez lo dice con reservas («me parece»).",
-    "confianza": "media",
-    "fuentes": [
-      {
-        "titulo": "SEPI: El Fondo de Solvencia ha recuperado el 66% de la financiación pública temporal (29-9-2026)",
-        "url": "https://www.sepi.es/es/sala-de-prensa/noticias/el-fondo-de-solvencia-ha-recuperado-el-66-de-la-financiacion-publica"
-      },
-      {
-        "titulo": "elDiario.es: La presidenta de la SEPI defiende el fondo que rescató a Air Europa o Plus Ultra: \"Salvó 62.000 empleos\"",
-        "url": "https://www.eldiario.es/economia/presidenta-sepi-defiende-fondo-rescate-salvo-62-000-empleos-condiciones-exigentes_1_13286818.html"
-      },
-      {
-        "titulo": "El Español: La SEPI infló los empleos de Plus Ultra, su cuota de mercado y minimizó su crisis financiera para aprobar el rescate",
-        "url": "https://www.elespanol.com/invertia/empresas/20260527/sepi-inflo-empleos-plus-ultra-cuota-mercado-minimizo-crisis-financiera-aprobar-rescate/1003744258402_0.html"
-      },
-      {
-        "titulo": "Infobae (EFE): Plus Ultra, una de las 4 aerolíneas a las que la SEPI concedió préstamos durante la covid",
-        "url": "https://www.infobae.com/espana/agencias/2026/05/20/plus-ultra-una-de-las-4-aerolineas-a-las-que-la-sepi-concedio-prestamos-durante-la-covid/"
-      }
-    ]
-  },
-  {
-    "minuto": "1:22:54",
-    "cita": "Una, el tema del préstamo a Plus Ultra, que es lo que estaba explicando, y dos, el tema de las joyas que aparecen cuando le hace el registro, en este caso, la Policía Nacional a UDEF.",
-    "afirmacion": "Zapatero está investigado por dos asuntos: el rescate (préstamo) a Plus Ultra y unas joyas que aparecieron cuando la UDEF de la Policía Nacional registró su despacho.",
-    "veredicto": "mayormente_verdadero",
-    "explicacion": "El juez José Luis Calama (Audiencia Nacional) citó como investigado a Zapatero el 19-5-2026 como presunto líder de una estructura de tráfico de influencias para lograr el rescate de 53 millones a Plus Ultra (CGPJ); lo que se investiga es la presunta influencia, no el préstamo en sí. Ese día la UDEF y el GOIT de la Policía Nacional registraron su oficina, donde aparecieron joyas tasadas preliminarmente en 1.323.915 euros, y el 12-6-2026 el juez abrió una pieza separada por posible delito fiscal y contrabando (CGPJ); el 6-11-2026 rechazó ampliarla a malversación. Zapatero niega haber intervenido en el rescate y sostiene que las joyas fueron un regalo de 2007; no hay procesamiento ni acusación y rige la presunción de inocencia.",
-    "confianza": "alta",
-    "fuentes": [
-      {
-        "titulo": "Poder Judicial (CGPJ): La Audiencia Nacional cita al expresidente José Luis Rodríguez Zapatero como investigado por delitos de tráfico de influencias y otros conexos",
-        "url": "https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Audiencia-Nacional/Noticias-Judiciales/----La-Audiencia-Nacional-cita-al-expresidente-Jose-Luis-Rodriguez-Zapatero-como-investigado-por-delitos-de-trafico-de-influencias-y-otros-conexos"
-      },
-      {
-        "titulo": "Poder Judicial (CGPJ): El juez de la Audiencia Nacional abre una pieza separada para investigar al expresidente José Luis Rodríguez Zapatero en relación con las joyas halladas en el registro de su oficina de Ferraz",
-        "url": "https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Audiencia-Nacional/Noticias-Judiciales/El-juez-de-la-Audiencia-Nacional-abre-una-pieza-separada-para-investigar-al-expresidente-Jose-Luis-Rodriguez-Zapatero-en-relacion-con-las-joyas-halladas-en-el-registro-de-su-oficina-de-Ferraz"
-      },
-      {
-        "titulo": "Poder Judicial (CGPJ): El juez de la Audiencia Nacional del caso Plus Ultra rechaza investigar al expresidente del Gobierno José Luis Rodríguez Zapatero por malversación por quedarse con las joyas",
-        "url": "https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Audiencia-Nacional/Noticias-Judiciales/El-juez-de-la-Audiencia-Nacional-del-caso-Plus-Ultra-rechaza-investigar-al-expresidente-del-Gobierno-Jose-Luis-Rodriguez-Zapatero-por-malversacion-por-quedarse-con-las-joyas"
-      },
-      {
-        "titulo": "Infobae: Guía para entender el caso Plus Ultra y la imputación de Zapatero",
-        "url": "https://www.infobae.com/espana/2026/05/20/guia-para-entender-el-caso-plus-ultra-un-rescate-aprobado-por-el-gobierno-la-implicacion-de-zapatero-conexiones-con-venezuela-y-acercamientos-a-figuras-del-psoe/"
-      },
-      {
-        "titulo": "El Español: El juez pide a la UDEF que identifique al autor de la marca grabada en las joyas de Zapatero",
-        "url": "https://www.elespanol.com/espana/tribunales/20261103/juez-pide-udef-identifique-autor-marca-grabada-joyas-zapatero-intentar-revelar-origen/1003744444476_0.html"
-      },
-      {
-        "titulo": "Confilegal: El magistrado Calama prorroga hasta mayo de 2027 la instrucción del 'caso Plus Ultra'",
-        "url": "https://confilegal.com/20261112-calama-prorroga-instruccion-caso-plus-ultra-zapatero-mayo-2027/"
-      }
-    ]
-  },
-  {
-    "minuto": "1:22:54",
-    "cita": "a mí nunca, pero cuando digo nunca es nunca me ha preguntado por Plus Ultra y te diré más por ninguna empresa",
-    "afirmacion": "José Luis Rodríguez Zapatero nunca preguntó a Pedro Sánchez por Plus Ultra ni por ninguna empresa en sus conversaciones.",
-    "veredicto": "no_verificable",
-    "explicacion": "Se refiere a conversaciones privadas y no hay prueba pública que las confirme ni las desmienta. El auto del juez Calama (CGPJ, 19-5-2026) describe dos vías de influencia para el rescate, una a través de Ábalos y otra de Zapatero, sin atribuir a Sánchez ningún contacto. Según Infobae, el sumario (entregado a las partes el 25-5-2026) no contiene mensajes directos de Zapatero ni contactos con Sánchez sobre el rescate, y las fuentes consultadas no recogen ninguna conversación entre ambos sobre Plus Ultra. Sánchez repitió la misma versión en otra entrevista el 10-11-2026 (El Debate).",
-    "confianza": "media",
-    "fuentes": [
-      {
-        "titulo": "Poder Judicial (CGPJ): La Audiencia Nacional cita al expresidente José Luis Rodríguez Zapatero como investigado por delitos de tráfico de influencias y otros conexos",
-        "url": "https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Audiencia-Nacional/Noticias-Judiciales/----La-Audiencia-Nacional-cita-al-expresidente-Jose-Luis-Rodriguez-Zapatero-como-investigado-por-delitos-de-trafico-de-influencias-y-otros-conexos"
-      },
-      {
-        "titulo": "Infobae: El sumario de 4.000 folios del caso Plus Ultra por el que se imputa a Zapatero",
-        "url": "https://www.infobae.com/espana/2026/05/27/el-sumario-de-4000-folios-del-caso-plus-ultra-por-el-que-se-imputa-a-zapatero-ningun-mensaje-directo-suyo-pero-muchas-conversaciones-que-apuntan-a-su-liderazgo-en-la-trama/"
-      },
-      {
-        "titulo": "Infobae: Guía para entender el caso Plus Ultra y la imputación de Zapatero",
-        "url": "https://www.infobae.com/espana/2026/05/20/guia-para-entender-el-caso-plus-ultra-un-rescate-aprobado-por-el-gobierno-la-implicacion-de-zapatero-conexiones-con-venezuela-y-acercamientos-a-figuras-del-psoe/"
-      },
-      {
-        "titulo": "El Debate: Sánchez asegura que Zapatero nunca le habló de Plus Ultra",
-        "url": "https://www.eldebate.com/espana/20261110/sanchez-asegura-zapatero-nunca-le-hablo-plus-ultra-rescate-prestamo-esta-absolutamente-impoluto_479010.html"
-      }
-    ]
-  }
+ {
+  "minuto": "1:19:50",
+  "cita": "nosotros contratamos esos 40 y pico mil euros contratamos los servicios de varios despachos de abogados que esos despachos de abogados contrataran a Leire Díaz, eso es algo que el Partido Socialista desconocía.",
+  "afirmacion": "Los 43.225 euros que la UCO atribuye al PSOE como pagos que llegaron a Leire Díez corresponden a servicios de varios despachos de abogados contratados por el partido, y el PSOE desconocía que esos despachos contrataran después a Leire Díez.",
+  "veredicto": "enganoso",
+  "explicacion": "El informe de la UCO (fechado el 9-7-2026 y difundido el 14-7) sitúa en el PSOE el origen de 43.225 euros que llegaron a Leire Díez: 16.000 en cuatro transferencias de la consultora Zaño, vinculada a Gaspar Zarrías y presentadas como nóminas, y 27.225 desde sociedades del abogado Ismael Oliver. Por tanto, parte del dinero no pasó por un despacho de abogados. La UCO sostiene que Díez promovió dentro del partido el pago de honorarios a los abogados Teijelo y Oliver como vía para recibir dinero, y la gerente del PSOE, Ana María Fuentes, declaró como investigada (9-9-2026) que era Santos Cerdán, entonces secretario de Organización, quien planteaba esas contrataciones. El 9-10-2026 el juez Pedraz rechazó imputar al PSOE como persona jurídica porque aún falta determinar quién ordenó los pagos y si los órganos de administración los conocían: que el partido desconociera la intervención de Díez no está probado ni refutado, y la causa sigue en instrucción.",
+  "confianza": "media",
+  "fuentes": [
+   {
+    "titulo": "Poder Judicial (CGPJ): El juez de la Audiencia Nacional rechaza atribuir por el momento la condición de investigado al PSOE",
+    "url": "https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Audiencia-Nacional/Noticias-Judiciales/El-juez-de-la-Audiencia-Nacional-rechaza-atribuir-por-el-momento-la-condicion-de-investigado-al-PSOE"
+   },
+   {
+    "titulo": "Público (EFE): La UCO confirma que el PSOE realizó pagos de un total de 43.225 euros a Leire Díez",
+    "url": "https://www.publico.es/politica/uco-confirma-psoe-realizo-pagos-total-43-225-euros-leire-diez.html"
+   },
+   {
+    "titulo": "Euronews (14-7-2026): Caso Leire Díez, la UCO confirma pagos del PSOE por valor de 43.225 euros",
+    "url": "https://es.euronews.com/my-europe/2026/07/14/caso-leire-diez-la-uco-confirma-pagos-del-psoe-por-valor-de-43225-euros-a-traves-de-interm"
+   },
+   {
+    "titulo": "Mundiario: La gerente del PSOE atribuye a Santos Cerdán los encargos a los imputados del caso Leire Díez",
+    "url": "https://www.mundiario.com/articulo/politica/gerente-psoe-descarga-santos-cerdan-encargos-imputados-caso-leire-diez/20260910110316440311.html"
+   },
+   {
+    "titulo": "Infobae (Europa Press): Sánchez afirma que \"no sabe muy bien\" cuál es el \"delito\" de Leire Díez y reitera que no tuvo ninguna reunión con ella",
+    "url": "https://www.infobae.com/espana/agencias/2026/11/13/sanchez-afirma-que-no-sabe-muy-bien-cual-es-el-delito-de-leire-diez-y-reitera-que-no-tuvo-ninguna-reunion-con-ella/"
+   }
+  ]
+ },
+ {
+  "minuto": "1:20:52",
+  "cita": "con Lady Di no he tenido ninguna reunión con presidente del gobierno yo no sabía que esta mujer estuviera",
+  "afirmacion": "Pedro Sánchez nunca ha mantenido ninguna reunión con Leire Díez.",
+  "veredicto": "no_verificable",
+  "explicacion": "Negar una reunión es un hecho privado que no se puede probar ni refutar con documentos públicos. La UCO intervino una agenda de Díez con la anotación «reunión con P.S.» en la página del 3-2-2025, sin más detalle; las fuentes consultadas no aportan prueba de que la reunión se produjera, El Español recoge que «no consta que Leire Díez asistiese» y Moncloa desmiente «rotundamente cualquier encuentro» (junio de 2026). Según Maldita.es, la agenda oficial sitúa a Sánchez ese día en Bélgica, en el retiro informal de líderes de la UE; según El Español, otra anotación con las mismas iniciales (13-1-2025) se refiere a un acuerdo de Prisa, de modo que las iniciales son ambiguas.",
+  "confianza": "media",
+  "fuentes": [
+   {
+    "titulo": "Maldita.es: Qué sabemos de la supuesta \"reunión con P.S.\" anotada en una agenda atribuida a Leire Díez",
+    "url": "https://maldita.es/desinfo/20260608/leire-diez-se-reunio-con-pedro-sanchez-en-febrero-de-2025-segun-una-de-sus-agendas/"
+   },
+   {
+    "titulo": "Diario de Pontevedra (Europa Press): Leire Díez anotó en una agenda \"reunión con P.S.\": el Gobierno niega \"cualquier encuentro\" con Sánchez",
+    "url": "https://www.diariodepontevedra.es/articulo/espana/directo-marlaska-respalda-directora-guardia-civil-hubo-ningun-contacto-relacionado-trama/202606051220431452090.html"
+   },
+   {
+    "titulo": "El Español: La negación de Sánchez que las notas de Leire Díez cuestionan",
+    "url": "https://www.elespanol.com/espana/politica/20260606/negacion-sanchez-notas-leire-cuestionan-no-andanzas-nunca-tolerado/1003744275524_0.html"
+   },
+   {
+    "titulo": "El Español: Las notas de Leire Díez \"reunión con P. S.\" y \"reunión con ZP\"",
+    "url": "https://www.elespanol.com/espana/tribunales/20260606/notas-leire-reunion-zp-refuerzan-teoria-acceso-sanchez-zapatero/1003744275987_0.html"
+   },
+   {
+    "titulo": "El Debate: El Gobierno niega reuniones entre Sánchez y Leire como negó las tres de la directora de la Guardia Civil",
+    "url": "https://www.eldebate.com/espana/20260609/gobierno-niega-reuniones-entre-sanchez-leire-como-nego-tres-directora-guardia-civil_426818.html"
+   }
+  ]
+ },
+ {
+  "minuto": "1:20:52",
+  "cita": "ella misma, en el Senado y también ante la justicia, lo que ha dicho es que no ha tenido nunca una reunión conmigo.",
+  "afirmacion": "Leire Díez ha declarado en el Senado y ante la justicia que nunca tuvo una reunión con Pedro Sánchez.",
+  "veredicto": "mayormente_verdadero",
+  "explicacion": "En la comisión del caso Koldo del Senado (8-9-2025) Díez negó haber tenido «contacto alguno con el presidente del Gobierno», según Euronews, algo más amplio que no haberse reunido con él. Ante el juez Arturo Zamarriego (17-11-2025) dijo, según elDiario.es con fuentes jurídicas recogidas por Europa Press, que coincidió con Sánchez en algún mitin pero que no tiene relación con él, lo que es compatible con no haberse reunido. Sus agendas intervenidas contienen anotaciones «reunión con P.S.» que la prensa vincula a Sánchez, aunque El Español señala que no consta que Díez asistiese a ellas. Ambas declaraciones se conocen por crónicas de prensa y no por el diario de sesiones ni el acta, a los que no he tenido acceso.",
+  "confianza": "media",
+  "fuentes": [
+   {
+    "titulo": "Euronews: Leire Díez niega tener vínculos con Santos Cerdán y Pedro Sánchez en la comisión del caso Koldo",
+    "url": "https://es.euronews.com/2025/09/08/leire-diez-niega-tener-vinculos-con-santos-cerdan-y-pedro-sanchez-en-la-comision-del-caso-"
+   },
+   {
+    "titulo": "elDiario.es: Leire Díez declara que mantuvo dos reuniones con Cerdán como “periodista” pero niega tener vinculación con el PSOE",
+    "url": "https://www.eldiario.es/politica/leire-diez-declara-mantuvo-reuniones-cerdan-periodista-niega-vinculacion-psoe_1_12775483.html"
+   },
+   {
+    "titulo": "Infobae (Europa Press): Sánchez afirma que \"no sabe muy bien\" cuál es el \"delito\" de Leire Díez y reitera que no tuvo ninguna reunión con ella",
+    "url": "https://www.infobae.com/espana/agencias/2026/11/13/sanchez-afirma-que-no-sabe-muy-bien-cual-es-el-delito-de-leire-diez-y-reitera-que-no-tuvo-ninguna-reunion-con-ella/"
+   },
+   {
+    "titulo": "El Español: Las notas de Leire Díez \"reunión con P. S.\" y \"reunión con ZP\"",
+    "url": "https://www.elespanol.com/espana/tribunales/20260606/notas-leire-reunion-zp-refuerzan-teoria-acceso-sanchez-zapatero/1003744275987_0.html"
+   }
+  ]
+ },
+ {
+  "minuto": "1:19:50",
+  "cita": "Y tampoco sé muy bien exactamente qué es lo que ha hecho esta mujer desde el punto de vista del delito.",
+  "afirmacion": "Pedro Sánchez dice que no sabe con exactitud qué ha hecho Leire Díez desde el punto de vista del delito.",
+  "veredicto": "no_verificable",
+  "explicacion": "Lo que Sánchez sabe o ignora sobre Leire Díez es personal y no se puede comprobar. Públicamente consta que el juez Santiago Pedraz, de la Audiencia Nacional, la investiga en una causa sobre una presunta trama para desestabilizar causas judiciales que afectan al PSOE (CGPJ, 9-10-2026) y que la UCO le atribuye, junto a otros, unos 700.000 euros en comisiones en la pieza de la SEPI (Orain, 27-5-2026). Son indicios en instrucción y Díez goza de presunción de inocencia; las fuentes consultadas no detallan los delitos concretos que se le imputan.",
+  "confianza": "media",
+  "fuentes": [
+   {
+    "titulo": "Poder Judicial (CGPJ): El juez de la Audiencia Nacional rechaza atribuir por el momento la condición de investigado al PSOE (9-10-2026)",
+    "url": "https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Audiencia-Nacional/Noticias-Judiciales/El-juez-de-la-Audiencia-Nacional-rechaza-atribuir-por-el-momento-la-condicion-de-investigado-al-PSOE"
+   },
+   {
+    "titulo": "Orain: ¿Qué es el caso Leire Díez y de qué acusa ahora el juez Pedraz al PSOE? (27-5-2026)",
+    "url": "https://orain.eus/es/politica/2026/05/27/es-el-caso-leire-diez-investiga-el-juez-pedraz/"
+   },
+   {
+    "titulo": "Infobae (Europa Press): Sánchez afirma que \"no sabe muy bien\" cuál es el \"delito\" de Leire Díez y reitera que no tuvo ninguna reunión con ella (13-11-2026)",
+    "url": "https://www.infobae.com/espana/agencias/2026/11/13/sanchez-afirma-que-no-sabe-muy-bien-cual-es-el-delito-de-leire-diez-y-reitera-que-no-tuvo-ninguna-reunion-con-ella/"
+   }
+  ],
+  "correcciones": [
+   {
+    "fecha": "2026-11-14",
+    "antes": "enganoso",
+    "motivo": "La afirmación añadía «dando a entender que no está claro de qué se la investiga», que Sánchez no dice; lo que dice es sobre su propio conocimiento y no se puede comprobar. Lo que consta de la investigación sigue en la explicación."
+   }
+  ]
+ },
+ {
+  "minuto": "1:20:52",
+  "cita": "en el momento en el que se pruebe que el partido ha sido afectado por alguna actividad ilícita, nosotros no descartamos ninguna acción judicial.",
+  "afirmacion": "Pedro Sánchez dice haber consultado a los asesores jurídicos del PSOE sobre una acción judicial contra Leire Díez y que el partido no descarta ninguna si se prueba que fue afectado por una actividad ilícita.",
+  "veredicto": "no_verificable",
+  "explicacion": "Son consultas internas y una intención condicionada, que no se pueden contrastar con documentos públicos. Consta que el 3-6-2026 el presidente de Castilla-La Mancha, Emiliano García-Page, pidió que el PSOE se querellara contra Díez, que Sánchez dijo el 5-6-2026 que los equipos jurídicos del partido estudiaban toda la documentación del caso y que el 29-6-2026 el PSOE seguía sin querellarse (The Objective). En las fuentes consultadas no consta que el partido haya presentado querella hasta el 13-11-2026, cuando Europa Press recoge que Sánchez remite la decisión a los asesores jurídicos.",
+  "confianza": "media",
+  "fuentes": [
+   {
+    "titulo": "Infobae (Europa Press): Sánchez afirma que \"no sabe muy bien\" cuál es el \"delito\" de Leire Díez y reitera que no tuvo ninguna reunión con ella",
+    "url": "https://www.infobae.com/espana/agencias/2026/11/13/sanchez-afirma-que-no-sabe-muy-bien-cual-es-el-delito-de-leire-diez-y-reitera-que-no-tuvo-ninguna-reunion-con-ella/"
+   },
+   {
+    "titulo": "Press Digital: Leire Díez responde al PP que irá al Senado y ve \"necia\" la petición de Page de que el PSOE se querelle contra ella",
+    "url": "https://www.pressdigital.es/articulo/politica/2026-06-03/5905813-leire-diez-responde-pp-ira-senado-ve-necia-peticion-page-psoe-querelle-contra"
+   },
+   {
+    "titulo": "Orain: Sánchez says he didn't support Díez's \"walks\", he didn't know about them, and if he had, he wouldn't have accepted them",
+    "url": "https://orain.eus/en/politika/2026/06/05/sanchez-says-he-didnt-support-diezs-walks-he-didnt-know-about-them-and-even-if-he-had-he-wouldnt-have-accepted-them/"
+   },
+   {
+    "titulo": "The Objective (29-6-2026): sobre la falta de querella del PSOE contra Leire Díez",
+    "url": "https://theobjective.com/espana/politica/2026-06-29/alusion-abogado-psoe-agenda-leire-partido-querelle/"
+   }
+  ]
+ },
+ {
+  "minuto": "1:21:53",
+  "cita": "Nosotros a todas las aerolíneas las rescatamos.",
+  "afirmacion": "El Gobierno, a través del fondo de rescate de la SEPI durante la pandemia, rescató a todas las aerolíneas.",
+  "veredicto": "enganoso",
+  "explicacion": "El fondo de rescate de la SEPI (FASEE) desembolsó 2.681 millones a 28 empresas de todos los sectores (SEPI, 29-9-2026). Entre las aerolíneas solo recibieron préstamo las que lo solicitaron: Air Europa (475 M), Volotea (200 M), Air Nostrum (111 M), Plus Ultra (53 M) y Grupo Wamos (85 M, ya devuelto). Binter dijo en 2021 que no se había planteado pedirlo, y Iberia y Vueling no tuvieron préstamo de la SEPI, solo financiación bancaria con aval del ICO (750 y 260 M, mayo de 2020). No consta ninguna aerolínea cuya petición se rechazara, así que «todas las que lo pidieron» es defendible, pero «todas las aerolíneas» es una generalización que el Gobierno no aplicó.",
+  "confianza": "media",
+  "fuentes": [
+   {
+    "titulo": "SEPI: El Fondo de Solvencia ha recuperado el 66% de la financiación pública temporal (29-9-2026)",
+    "url": "https://www.sepi.es/es/sala-de-prensa/noticias/el-fondo-de-solvencia-ha-recuperado-el-66-de-la-financiacion-publica"
+   },
+   {
+    "titulo": "Infobae (EFE): Plus Ultra, una de las 4 aerolíneas a las que la SEPI concedió préstamos durante la covid (20-5-2026)",
+    "url": "https://www.infobae.com/espana/agencias/2026/05/20/plus-ultra-una-de-las-4-aerolineas-a-las-que-la-sepi-concedio-prestamos-durante-la-covid/"
+   },
+   {
+    "titulo": "Forbes España: El Fondo de Solvencia de SEPI recibe la devolución total de los 85 millones concedidos a Grupo Wamos (16-10-2024)",
+    "url": "https://forbes.es/economia/519334/el-fondo-de-solvencia-de-sepi-recibe-la-devolucion-total-de-los-85-millones-de-ayuda-concedida-a-grupo-wamos/"
+   },
+   {
+    "titulo": "Merca2: Volotea solicita a la SEPI un préstamo de 185 M€ para «retornar al equilibrio patrimonial» (5-12-2021)",
+    "url": "https://www.merca2.es/2021/12/05/volotea-solicita-sepi-prestamo-818911/"
+   },
+   {
+    "titulo": "Valencia Plaza: El Fondo del SEPI ha rechazado 15 peticiones de apoyo financiero por 445 millones (26-4-2022)",
+    "url": "https://valenciaplaza.com/valenciaplaza/el-fondo-del-sepi-ha-rechazado-15-peticiones-de-apoyo-financiero-por-445-millones"
+   },
+   {
+    "titulo": "Vozpópuli: entrevista a Rodolfo Núñez, presidente de Binter, sobre el fondo de la SEPI (21-3-2021)",
+    "url": "https://www.vozpopuli.com/economia/plus-ultra-air-europa-2.html"
+   },
+   {
+    "titulo": "IAG: Iberia and Vueling sign syndicated loan agreements (1-5-2020)",
+    "url": "https://iairgroup.com/press-releases/2020/iberia-and-vueling-sign-syndicated-loan-agreements"
+   },
+   {
+    "titulo": "Valencia Plaza: Iberia presenta un ERTE de tres meses y reduce su operativa de vuelos (19-3-2020)",
+    "url": "https://valenciaplaza.com/iberia-erte-coronavirus"
+   }
+  ],
+  "correcciones": [
+   {
+    "fecha": "2026-11-14",
+    "antes": "falso",
+    "motivo": "Revisada tras un aviso de un lector: Sánchez se refería al fondo de la SEPI, que rescató a las aerolíneas que lo pidieron y sin que conste ninguna rechazada; «falso» era demasiado duro, pero «todas» no es literalmente cierto (Binter no lo pidió, Iberia y Vueling solo tuvieron préstamos con aval del ICO)."
+   }
+  ]
+ },
+ {
+  "minuto": "1:21:53",
+  "cita": "Pero fíjate, no las rescatamos a fondo perdido. Las dimos un préstamo. El famoso préstamo a Europa, a Plus Ultra, a todas las compañías aéreas.",
+  "afirmacion": "Las ayudas a las aerolíneas del fondo de la SEPI no fueron a fondo perdido sino préstamos.",
+  "veredicto": "verdadero",
+  "explicacion": "SEPI (29-9-2026) describe los 2.681 millones del FASEE como préstamos que las empresas amortizan con intereses: ha recuperado 1.775 millones (66,2 %) y cobrado 359 millones en intereses. En las aerolíneas fueron préstamos ordinarios y participativos: Air Europa 240 M participativo y 235 M ordinario (devuelto con intereses el 6-11-2025), Plus Ultra 34 M y 19 M, Volotea íntegramente participativo y Air Nostrum 111 M. Matiz: Plus Ultra no ha devuelto el principal (solo unos 12 M en intereses) y Volotea y Air Nostrum han aplazado vencimientos (EFE y Hosteltur, mayo de 2026).",
+  "confianza": "alta",
+  "fuentes": [
+   {
+    "titulo": "SEPI: El Fondo de Solvencia ha recuperado el 66% de la financiación pública temporal (29-9-2026)",
+    "url": "https://www.sepi.es/es/sala-de-prensa/noticias/el-fondo-de-solvencia-ha-recuperado-el-66-de-la-financiacion-publica"
+   },
+   {
+    "titulo": "Infobae (EFE): Plus Ultra, una de las 4 aerolíneas a las que la SEPI concedió préstamos durante la covid",
+    "url": "https://www.infobae.com/espana/agencias/2026/05/20/plus-ultra-una-de-las-4-aerolineas-a-las-que-la-sepi-concedio-prestamos-durante-la-covid/"
+   },
+   {
+    "titulo": "Hosteltur: Préstamos SEPI: ¿cuánto han devuelto Plus Ultra y el resto de aerolíneas?",
+    "url": "https://www.hosteltur.com/176362_prestamos-sepi-cuanto-han-devuelto-air-europa-air-nostrum-volotea-y-plus-ultra.html"
+   },
+   {
+    "titulo": "Hoy Aragón: Qué pasó con los rescates de las aerolíneas durante la pandemia: Air Europa pagó, Plus Ultra no",
+    "url": "https://www.hoyaragon.es/espana/rescates-aerolineas-pandemia-air-europa-plus-ultra/20260521060003131502.html"
+   },
+   {
+    "titulo": "El Español: La Sepi ha recuperado 1.425M de los rescates a empresas por la Covid",
+    "url": "https://www.elespanol.com/invertia/empresas/turismo/20251107/sepi-recuperado-rescates-empresas-covid-doble-previsto-devolucion-air-europa/1003744001957_0.html"
+   }
+  ]
+ },
+ {
+  "minuto": "1:21:53",
+  "cita": "En las compañías aéreas llegamos a salvar, me parece que son casi 8.500 puestos de trabajo.",
+  "afirmacion": "El rescate de las compañías aéreas con el fondo de la SEPI salvó casi 8.500 puestos de trabajo.",
+  "veredicto": "no_verificable",
+  "explicacion": "SEPI (29-9-2026) cifra en más de 60.000 los puestos de trabajo que el FASEE contribuyó a preservar en el conjunto de las 28 empresas, y su presidenta dijo en el Congreso el 9-6-2026 que fueron 62.000, sin desglose por aerolíneas. La única cifra concreta de una aerolínea que he localizado es la de Plus Ultra: 345 empleos directos y más de 2.500 contando los indirectos según el acta de la SEPI, cifras que El Español (27-5-2026) considera infladas. No hay fuente oficial ni de prensa que dé 8.500 empleos para las aerolíneas, y Sánchez lo dice con reservas («me parece»).",
+  "confianza": "media",
+  "fuentes": [
+   {
+    "titulo": "SEPI: El Fondo de Solvencia ha recuperado el 66% de la financiación pública temporal (29-9-2026)",
+    "url": "https://www.sepi.es/es/sala-de-prensa/noticias/el-fondo-de-solvencia-ha-recuperado-el-66-de-la-financiacion-publica"
+   },
+   {
+    "titulo": "elDiario.es: La presidenta de la SEPI defiende el fondo que rescató a Air Europa o Plus Ultra: \"Salvó 62.000 empleos\"",
+    "url": "https://www.eldiario.es/economia/presidenta-sepi-defiende-fondo-rescate-salvo-62-000-empleos-condiciones-exigentes_1_13286818.html"
+   },
+   {
+    "titulo": "El Español: La SEPI infló los empleos de Plus Ultra, su cuota de mercado y minimizó su crisis financiera para aprobar el rescate",
+    "url": "https://www.elespanol.com/invertia/empresas/20260527/sepi-inflo-empleos-plus-ultra-cuota-mercado-minimizo-crisis-financiera-aprobar-rescate/1003744258402_0.html"
+   },
+   {
+    "titulo": "Infobae (EFE): Plus Ultra, una de las 4 aerolíneas a las que la SEPI concedió préstamos durante la covid",
+    "url": "https://www.infobae.com/espana/agencias/2026/05/20/plus-ultra-una-de-las-4-aerolineas-a-las-que-la-sepi-concedio-prestamos-durante-la-covid/"
+   }
+  ]
+ },
+ {
+  "minuto": "1:22:54",
+  "cita": "Una, el tema del préstamo a Plus Ultra, que es lo que estaba explicando, y dos, el tema de las joyas que aparecen cuando le hace el registro, en este caso, la Policía Nacional a UDEF.",
+  "afirmacion": "Zapatero está investigado por dos asuntos: el rescate (préstamo) a Plus Ultra y unas joyas que aparecieron cuando la UDEF de la Policía Nacional registró su despacho.",
+  "veredicto": "mayormente_verdadero",
+  "explicacion": "El juez José Luis Calama (Audiencia Nacional) citó como investigado a Zapatero el 19-5-2026 como presunto líder de una estructura de tráfico de influencias para lograr el rescate de 53 millones a Plus Ultra (CGPJ); lo que se investiga es la presunta influencia, no el préstamo en sí. Ese día la UDEF y el GOIT de la Policía Nacional registraron su oficina, donde aparecieron joyas tasadas preliminarmente en 1.323.915 euros, y el 12-6-2026 el juez abrió una pieza separada por posible delito fiscal y contrabando (CGPJ); el 6-11-2026 rechazó ampliarla a malversación. Zapatero niega haber intervenido en el rescate y sostiene que las joyas fueron un regalo de 2007; no hay procesamiento ni acusación y rige la presunción de inocencia.",
+  "confianza": "alta",
+  "fuentes": [
+   {
+    "titulo": "Poder Judicial (CGPJ): La Audiencia Nacional cita al expresidente José Luis Rodríguez Zapatero como investigado por delitos de tráfico de influencias y otros conexos",
+    "url": "https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Audiencia-Nacional/Noticias-Judiciales/----La-Audiencia-Nacional-cita-al-expresidente-Jose-Luis-Rodriguez-Zapatero-como-investigado-por-delitos-de-trafico-de-influencias-y-otros-conexos"
+   },
+   {
+    "titulo": "Poder Judicial (CGPJ): El juez de la Audiencia Nacional abre una pieza separada para investigar al expresidente José Luis Rodríguez Zapatero en relación con las joyas halladas en el registro de su oficina de Ferraz",
+    "url": "https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Audiencia-Nacional/Noticias-Judiciales/El-juez-de-la-Audiencia-Nacional-abre-una-pieza-separada-para-investigar-al-expresidente-Jose-Luis-Rodriguez-Zapatero-en-relacion-con-las-joyas-halladas-en-el-registro-de-su-oficina-de-Ferraz"
+   },
+   {
+    "titulo": "Poder Judicial (CGPJ): El juez de la Audiencia Nacional del caso Plus Ultra rechaza investigar al expresidente del Gobierno José Luis Rodríguez Zapatero por malversación por quedarse con las joyas",
+    "url": "https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Audiencia-Nacional/Noticias-Judiciales/El-juez-de-la-Audiencia-Nacional-del-caso-Plus-Ultra-rechaza-investigar-al-expresidente-del-Gobierno-Jose-Luis-Rodriguez-Zapatero-por-malversacion-por-quedarse-con-las-joyas"
+   },
+   {
+    "titulo": "Infobae: Guía para entender el caso Plus Ultra y la imputación de Zapatero",
+    "url": "https://www.infobae.com/espana/2026/05/20/guia-para-entender-el-caso-plus-ultra-un-rescate-aprobado-por-el-gobierno-la-implicacion-de-zapatero-conexiones-con-venezuela-y-acercamientos-a-figuras-del-psoe/"
+   },
+   {
+    "titulo": "El Español: El juez pide a la UDEF que identifique al autor de la marca grabada en las joyas de Zapatero",
+    "url": "https://www.elespanol.com/espana/tribunales/20261103/juez-pide-udef-identifique-autor-marca-grabada-joyas-zapatero-intentar-revelar-origen/1003744444476_0.html"
+   },
+   {
+    "titulo": "Confilegal: El magistrado Calama prorroga hasta mayo de 2027 la instrucción del 'caso Plus Ultra'",
+    "url": "https://confilegal.com/20261112-calama-prorroga-instruccion-caso-plus-ultra-zapatero-mayo-2027/"
+   }
+  ]
+ },
+ {
+  "minuto": "1:22:54",
+  "cita": "a mí nunca, pero cuando digo nunca es nunca me ha preguntado por Plus Ultra y te diré más por ninguna empresa",
+  "afirmacion": "José Luis Rodríguez Zapatero nunca preguntó a Pedro Sánchez por Plus Ultra ni por ninguna empresa en sus conversaciones.",
+  "veredicto": "no_verificable",
+  "explicacion": "Se refiere a conversaciones privadas y no hay prueba pública que las confirme ni las desmienta. El auto del juez Calama (CGPJ, 19-5-2026) describe dos vías de influencia para el rescate, una a través de Ábalos y otra de Zapatero, sin atribuir a Sánchez ningún contacto. Según Infobae, el sumario (entregado a las partes el 25-5-2026) no contiene mensajes directos de Zapatero ni contactos con Sánchez sobre el rescate, y las fuentes consultadas no recogen ninguna conversación entre ambos sobre Plus Ultra. Sánchez repitió la misma versión en otra entrevista el 10-11-2026 (El Debate).",
+  "confianza": "media",
+  "fuentes": [
+   {
+    "titulo": "Poder Judicial (CGPJ): La Audiencia Nacional cita al expresidente José Luis Rodríguez Zapatero como investigado por delitos de tráfico de influencias y otros conexos",
+    "url": "https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Audiencia-Nacional/Noticias-Judiciales/----La-Audiencia-Nacional-cita-al-expresidente-Jose-Luis-Rodriguez-Zapatero-como-investigado-por-delitos-de-trafico-de-influencias-y-otros-conexos"
+   },
+   {
+    "titulo": "Infobae: El sumario de 4.000 folios del caso Plus Ultra por el que se imputa a Zapatero",
+    "url": "https://www.infobae.com/espana/2026/05/27/el-sumario-de-4000-folios-del-caso-plus-ultra-por-el-que-se-imputa-a-zapatero-ningun-mensaje-directo-suyo-pero-muchas-conversaciones-que-apuntan-a-su-liderazgo-en-la-trama/"
+   },
+   {
+    "titulo": "Infobae: Guía para entender el caso Plus Ultra y la imputación de Zapatero",
+    "url": "https://www.infobae.com/espana/2026/05/20/guia-para-entender-el-caso-plus-ultra-un-rescate-aprobado-por-el-gobierno-la-implicacion-de-zapatero-conexiones-con-venezuela-y-acercamientos-a-figuras-del-psoe/"
+   },
+   {
+    "titulo": "El Debate: Sánchez asegura que Zapatero nunca le habló de Plus Ultra",
+    "url": "https://www.eldebate.com/espana/20261110/sanchez-asegura-zapatero-nunca-le-hablo-plus-ultra-rescate-prestamo-esta-absolutamente-impoluto_479010.html"
+   }
+  ]
+ }
 ]

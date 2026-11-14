@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-14T20:58:35+01:00",
+ "generado": "2026-11-14T21:20:47+01:00",
  "aviso": "Verificación asistida por IA, sin revisión de un equipo de periodistas. «falso» no implica intención de mentir. Contrasta siempre con las fuentes enlazadas.",
  "veredictos": {
   "verdadero": "Los datos lo confirman.",
@@ -2356,7 +2356,7 @@
    "afirmacion": "La derecha que pide la dimisión de Sánchez no ha dimitido nunca por cosas más graves, como la dana.",
    "veredicto": "falso",
    "resumen": "Mazón (PP) dimitió el 3 de noviembre de 2025, un año y cinco días después de la dana; se puede criticar que tardara, pero decir que «nunca» dimitieron es falso.",
-   "explicacion": "Carlos Mazón (PP), presidente de la Generalitat Valenciana, dimitió el 3 de noviembre de 2025, un año y cinco días después de la dana del 29 de octubre de 2024 (Maldita.es, Newtral); el real decreto de cese lleva fecha del 5 de noviembre y el BOE lo publicó el 7 de noviembre (El Debate). Se puede criticar que tardara un año y dimitiera tras fuertes presiones, pero el «nunca» y el «jamás» son incorrectos. El caso de Mazón basta para desmentir la generalización.",
+   "explicacion": "Carlos Mazón (PP), presidente de la Generalitat Valenciana, dimitió el 3 de noviembre de 2025, un año y cinco días después de la dana del 29 de octubre de 2024 (Maldita.es, Newtral); el real decreto de cese lleva fecha del 5 de noviembre y el BOE lo publicó el 7 de noviembre (El Debate). Un año después sigue siendo diputado en Les Corts, aforado y con oficina de expresident (Onda Cero, 3-11-2026). Se puede criticar que tardara un año, que dimitiera tras fuertes presiones y que conserve el escaño, pero dejó la presidencia de la Generalitat, así que el «nunca» y el «jamás» son incorrectos. El caso de Mazón basta para desmentir la generalización.",
    "confianza": "alta",
    "fuentes": [
     {
@@ -2370,10 +2370,20 @@
     {
      "titulo": "El Debate: El BOE publica el cese de Mazón (07/11/2025)",
      "url": "https://www.eldebate.com/espana/comunidad-valenciana/20251107/boe-publica-cese-mazon-plena-negociacion-entre-pp-vox-sobre-sucesor_352774_amp.html"
+    },
+    {
+     "titulo": "Onda Cero: Un año de la dimisión de Mazón, que mantiene el acta de diputado autonómico (3-11-2026)",
+     "url": "https://www.ondacero.es/emisoras/comunidad-valenciana/valencia/noticias/ano-dimision-mazon-que-mantiene-acta-diputado-autonomico_202611036ae9a69b02501232157214c7.html"
     }
    ],
    "verificado": "2026-11-13",
-   "correcciones": [],
+   "correcciones": [
+    {
+     "fecha": "2026-11-14",
+     "antes": "falso",
+     "motivo": "A raíz del aviso de un lector se añade que Mazón conserva el escaño en Les Corts, el aforamiento y la oficina de expresident. El veredicto no cambia: dejó la presidencia de la Generalitat."
+    }
+   ],
    "esencial": false,
    "otros_verificadores": [],
    "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m2732.png"

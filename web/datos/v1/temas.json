@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-14T20:58:35+01:00",
+ "generado": "2026-11-14T21:20:47+01:00",
  "aviso": "Verificación asistida por IA, sin revisión de un equipo de periodistas. «falso» no implica intención de mentir. Contrasta siempre con las fuentes enlazadas.",
  "veredictos": {
   "verdadero": "Los datos lo confirman.",
@@ -336,18 +336,16 @@
      ],
      "total": 26,
      "por_veredicto": {
-      "falso": 1,
-      "enganoso": 4,
-      "mayormente_verdadero": 9,
+      "falso": 0,
+      "enganoso": 3,
+      "mayormente_verdadero": 10,
       "verdadero": 4,
-      "no_verificable": 8
+      "no_verificable": 9
      },
      "afirmaciones": [
-      "sanchez-m4938",
       "sanchez-m4262",
-      "sanchez-m4742",
       "sanchez-m4808",
-      "sanchez-m4823",
+      "sanchez-m4938",
       "sanchez-m4309",
       "sanchez-m4331",
       "sanchez-m4485",
@@ -355,6 +353,7 @@
       "sanchez-m4623",
       "sanchez-m4660",
       "sanchez-m4683",
+      "sanchez-m4742",
       "sanchez-m4891",
       "sanchez-m4983",
       "sanchez-m4080",
@@ -365,6 +364,7 @@
       "sanchez-m4277",
       "sanchez-m4285",
       "sanchez-m4374",
+      "sanchez-m4823",
       "sanchez-m4860",
       "sanchez-m4873",
       "sanchez-m4953",
@@ -380,14 +380,15 @@
      ],
      "total": 45,
      "por_veredicto": {
-      "falso": 1,
-      "enganoso": 10,
+      "falso": 2,
+      "enganoso": 9,
       "mayormente_verdadero": 12,
       "verdadero": 11,
       "no_verificable": 11
      },
      "afirmaciones": [
       "feijoo-m3945-2",
+      "feijoo-m4238",
       "feijoo-m3510",
       "feijoo-m3540",
       "feijoo-m3651",
@@ -397,7 +398,6 @@
       "feijoo-m3973-2",
       "feijoo-m3994",
       "feijoo-m4053",
-      "feijoo-m4238",
       "feijoo-m3549",
       "feijoo-m3628",
       "feijoo-m3695",

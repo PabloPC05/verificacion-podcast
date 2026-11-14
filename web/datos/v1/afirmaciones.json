@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-14T20:58:35+01:00",
+ "generado": "2026-11-14T21:20:47+01:00",
  "aviso": "Verificación asistida por IA, sin revisión de un equipo de periodistas. «falso» no implica intención de mentir. Contrasta siempre con las fuentes enlazadas.",
  "veredictos": {
   "verdadero": "Los datos lo confirman.",
@@ -11,7 +11,7 @@
  "metodo_url": "https://github.com/PabloPC05/verificacion-podcast/blob/main/METODO.md",
  "repositorio": "https://github.com/PabloPC05/verificacion-podcast",
  "documentacion": "https://verificacion-podcast.vercel.app/api",
- "total": 452,
+ "total": 453,
  "afirmaciones": [
   {
    "id": "sanchez-m566",
@@ -3494,26 +3494,40 @@
    "pagina_url": "https://verificacion-podcast.vercel.app/sanchez/m4742",
    "cita": "aquellos que la hacen, la han pagado porque han salido del partido",
    "afirmacion": "Quienes han cometido corrupción en el PSOE la han pagado con la salida del partido.",
-   "veredicto": "enganoso",
-   "resumen": "Es cierto con Ábalos, expulsado el 16/6/2025, pero la regla no es general: Zapatero, investigado en el caso Plus Ultra, no iba a ser suspendido de militancia a fecha 13/6/2026.",
-   "explicacion": "Es cierto en el caso central de Ábalos: el PSOE le suspendió de militancia en febrero de 2024 y la Ejecutiva Federal lo expulsó el 16/6/2025 (Orain.eus, The Objective). Cerdán dimitió de sus cargos y del escaño en junio de 2025 (EFE) y, según Vozpópuli (13/6/2026), el partido le dejó darse de baja antes de pedírselo. Pero la regla no es general: Zapatero, investigado en la Audiencia Nacional por el caso Plus Ultra (organización criminal, tráfico de influencias, falsedad y blanqueo), no iba a ser suspendido de militancia a fecha 13/6/2026 porque, según fuentes socialistas, no ostenta cargo público (Vozpópuli, medio de línea crítica). Zapatero no está condenado y conserva la presunción de inocencia; no consta su situación posterior a junio de 2026.",
+   "veredicto": "mayormente_verdadero",
+   "resumen": "El PSOE expulsó a Ábalos (16-6-2025, condenado a 24 años en junio de 2026) y Cerdán se dio de baja; Zapatero, solo investigado, conserva la presunción de inocencia.",
+   "explicacion": "El PSOE suspendió de militancia a Ábalos en febrero de 2024 y lo expulsó el 16-6-2025, y el Supremo lo condenó el 22-6-2026 a 24 años y 3 meses por el caso mascarillas (Orain.eus, The Objective, elDiario.es). Cerdán se dio de baja voluntaria del partido tras el informe de la UCO y estuvo 142 días en prisión provisional desde el 30-6-2025 (Vozpópuli 13/6/2026, Ara). La salida fue tardía en el caso de Ábalos (15 meses) y voluntaria en el de Cerdán. Zapatero, investigado en la Audiencia Nacional por Plus Ultra y al que el PSOE no suspendió de militancia a 13/6/2026, no está condenado y conserva la presunción de inocencia, por lo que no desmiente la frase.",
    "confianza": "media",
    "fuentes": [
     {
-     "titulo": "Orain.eus: El PSOE ha expulsado a Ábalos 15 meses después de abrir el expediente",
+     "titulo": "Orain.eus: El PSOE ha expulsado a Ábalos 15 meses después de abrir el expediente (16/6/2025)",
      "url": "https://orain.eus/en/politika/2025/06/16/the-psoe-has-expelled-jose-luis-abalos-15-months-after-the-opening-of-the-file/"
-    },
-    {
-     "titulo": "Vozpópuli: El PSOE no suspenderá de militancia a Zapatero pese a estar investigado por cuatro delitos",
-     "url": "https://www.vozpopuli.com/espana/politica/el-psoe-no-suspendera-de-militancia-a-zapatero-pese-a-estar-ya-investigado-por-cuatro-delitos.html"
     },
     {
      "titulo": "The Objective: El PSOE expulsa a Ábalos del partido 15 meses después de que le abriesen expediente (16/6/2025)",
      "url": "https://theobjective.com/espana/politica/2025-06-16/psoe-expulsa-abalos-expediente/"
+    },
+    {
+     "titulo": "elDiario.es: El Supremo condena a Ábalos a 24 años de cárcel por el caso mascarillas (22/6/2026)",
+     "url": "https://www.eldiario.es/politica/jose-luis-abalos-condenado-carcel-tribunal-supremo_1_13301658.html"
+    },
+    {
+     "titulo": "Ara: Santos Cerdán sale de la cárcel tras 142 días en Soto del Real (19/11/2025)",
+     "url": "https://es.ara.cat/politica/juez-deja-santos-cerdan-libertad_1_5566495.html"
+    },
+    {
+     "titulo": "Vozpópuli: El PSOE no suspenderá de militancia a Zapatero pese a estar investigado por cuatro delitos (13/6/2026)",
+     "url": "https://www.vozpopuli.com/espana/politica/el-psoe-no-suspendera-de-militancia-a-zapatero-pese-a-estar-ya-investigado-por-cuatro-delitos.html"
     }
    ],
    "verificado": "2026-11-13",
-   "correcciones": [],
+   "correcciones": [
+    {
+     "fecha": "2026-11-14",
+     "antes": "enganoso",
+     "motivo": "El único contraejemplo de la explicación era Zapatero, que no está condenado y goza de presunción de inocencia; Ábalos y Cerdán, los casos en contexto, están fuera del partido y Ábalos fue condenado el 22-6-2026."
+    }
+   ],
    "esencial": true,
    "otros_verificadores": [],
    "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m4742.png"
@@ -3575,31 +3589,33 @@
    "web_url": "https://verificacion-podcast.vercel.app/sanchez#m4823",
    "pagina_url": "https://verificacion-podcast.vercel.app/sanchez/m4823",
    "cita": "Y tampoco sé muy bien exactamente qué es lo que ha hecho esta mujer desde el punto de vista del delito.",
-   "afirmacion": "Pedro Sánchez dice no saber con exactitud qué ha hecho Leire Díez desde el punto de vista del delito, dando a entender que no está claro de qué se la investiga.",
-   "veredicto": "enganoso",
-   "resumen": "Consta que el juez Pedraz investiga a Díez en una causa sobre una presunta trama para desestabilizar causas judiciales que afectaban al PSOE y al Gobierno; son indicios en instrucción, pero presentarlo como poco claro omite lo que consta en autos.",
-   "explicacion": "Lo que Sánchez sabe es personal y no se puede comprobar, pero lo que se investiga sí consta públicamente. Leire Díez figura como investigada por el juez Santiago Pedraz, de la Audiencia Nacional, en una causa sobre una presunta organización que buscaba desestabilizar las causas judiciales que afectaban al PSOE y al Gobierno (CGPJ, 9-10-2026). Según la UCO habría ofrecido dinero o favores a guardias civiles y fiscales a cambio de información (elDiario.es, 13-8-2026) y, en la pieza de la SEPI, habría orientado expedientes a cambio de comisiones de unos 700.000 euros (Orain, 27-5-2026). Son indicios en instrucción, no hechos probados, y Díez goza de presunción de inocencia; aun así, presentar como poco claro de qué se la investiga omite lo que consta en autos.",
+   "afirmacion": "Pedro Sánchez dice que no sabe con exactitud qué ha hecho Leire Díez desde el punto de vista del delito.",
+   "veredicto": "no_verificable",
+   "resumen": "El juez Pedraz investiga a Leire Díez en la Audiencia Nacional (9-10-2026), pero lo que Sánchez sabe de su delito es personal y no comprobable; sigue en instrucción.",
+   "explicacion": "Lo que Sánchez sabe o ignora sobre Leire Díez es personal y no se puede comprobar. Públicamente consta que el juez Santiago Pedraz, de la Audiencia Nacional, la investiga en una causa sobre una presunta trama para desestabilizar causas judiciales que afectan al PSOE (CGPJ, 9-10-2026) y que la UCO le atribuye, junto a otros, unos 700.000 euros en comisiones en la pieza de la SEPI (Orain, 27-5-2026). Son indicios en instrucción y Díez goza de presunción de inocencia; las fuentes consultadas no detallan los delitos concretos que se le imputan.",
    "confianza": "media",
    "fuentes": [
     {
-     "titulo": "Poder Judicial (CGPJ): El juez de la Audiencia Nacional rechaza atribuir por el momento la condición de investigado al PSOE",
+     "titulo": "Poder Judicial (CGPJ): El juez de la Audiencia Nacional rechaza atribuir por el momento la condición de investigado al PSOE (9-10-2026)",
      "url": "https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Audiencia-Nacional/Noticias-Judiciales/El-juez-de-la-Audiencia-Nacional-rechaza-atribuir-por-el-momento-la-condicion-de-investigado-al-PSOE"
     },
     {
-     "titulo": "elDiario.es: El primer juez el caso Leire Díez lo eleva a la Audiencia Nacional porque allí se investiga a personas con más “jerarquía” en la trama",
-     "url": "https://www.eldiario.es/politica/primer-juez-caso-leire-diez-eleva-audiencia-nacional-investiga-personas-jerarquia-trama_1_13445330.html"
-    },
-    {
-     "titulo": "Orain: ¿Qué es el caso Leire Díez y de qué acusa ahora el juez Pedraz al PSOE?",
+     "titulo": "Orain: ¿Qué es el caso Leire Díez y de qué acusa ahora el juez Pedraz al PSOE? (27-5-2026)",
      "url": "https://orain.eus/es/politica/2026/05/27/es-el-caso-leire-diez-investiga-el-juez-pedraz/"
     },
     {
-     "titulo": "Infobae (Europa Press): Sánchez afirma que \"no sabe muy bien\" cuál es el \"delito\" de Leire Díez y reitera que no tuvo ninguna reunión con ella",
+     "titulo": "Infobae (Europa Press): Sánchez afirma que \"no sabe muy bien\" cuál es el \"delito\" de Leire Díez y reitera que no tuvo ninguna reunión con ella (13-11-2026)",
      "url": "https://www.infobae.com/espana/agencias/2026/11/13/sanchez-afirma-que-no-sabe-muy-bien-cual-es-el-delito-de-leire-diez-y-reitera-que-no-tuvo-ninguna-reunion-con-ella/"
     }
    ],
    "verificado": "2026-11-13",
-   "correcciones": [],
+   "correcciones": [
+    {
+     "fecha": "2026-11-14",
+     "antes": "enganoso",
+     "motivo": "La afirmación añadía «dando a entender que no está claro de qué se la investiga», que Sánchez no dice; lo que dice es sobre su propio conocimiento y no se puede comprobar. Lo que consta de la investigación sigue en la explicación."
+    }
+   ],
    "esencial": false,
    "otros_verificadores": [],
    "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m4823.png"
@@ -3744,34 +3760,52 @@
    "pagina_url": "https://verificacion-podcast.vercel.app/sanchez/m4938",
    "cita": "Nosotros a todas las aerolíneas las rescatamos.",
    "afirmacion": "El Gobierno, a través del fondo de rescate de la SEPI durante la pandemia, rescató a todas las aerolíneas.",
-   "veredicto": "falso",
-   "resumen": "El fondo de la SEPI financió a 28 empresas y solo cuatro aerolíneas españolas (Air Europa, Volotea, Air Nostrum y Plus Ultra, 839 millones), más Wamos; Iberia, Vueling o Binter no figuran entre las beneficiarias.",
-   "explicacion": "El Fondo de Apoyo a la Solvencia de Empresas Estratégicas (FASEE) de la SEPI desembolsó 2.681 millones a 28 empresas de todos los sectores (SEPI, 29-9-2026). Solo cuatro aerolíneas españolas recibieron préstamos: Air Europa (475 M), Volotea (200 M), Air Nostrum (111 M) y Plus Ultra (53 M), 839 M en total (EFE, 20-5-2026); a ellas se suma el Grupo Wamos (85 M), titular de la aerolínea Wamos Air, ya devuelto. Las listas de beneficiarias que publican SEPI (las once que ya han cancelado su deuda) y Forbes España (las 25 con préstamo vivo en octubre de 2024) no incluyen otras aerolíneas con base en España, como Iberia, Vueling o Binter, así que «todas» no se sostiene.",
-   "confianza": "alta",
+   "veredicto": "enganoso",
+   "resumen": "Cinco aerolíneas recibieron préstamos de la SEPI, las que lo pidieron, pero no todas: Binter no lo pidió e Iberia y Vueling solo tuvieron préstamos avalados por el ICO.",
+   "explicacion": "El fondo de rescate de la SEPI (FASEE) desembolsó 2.681 millones a 28 empresas de todos los sectores (SEPI, 29-9-2026). Entre las aerolíneas solo recibieron préstamo las que lo solicitaron: Air Europa (475 M), Volotea (200 M), Air Nostrum (111 M), Plus Ultra (53 M) y Grupo Wamos (85 M, ya devuelto). Binter dijo en 2021 que no se había planteado pedirlo, y Iberia y Vueling no tuvieron préstamo de la SEPI, solo financiación bancaria con aval del ICO (750 y 260 M, mayo de 2020). No consta ninguna aerolínea cuya petición se rechazara, así que «todas las que lo pidieron» es defendible, pero «todas las aerolíneas» es una generalización que el Gobierno no aplicó.",
+   "confianza": "media",
    "fuentes": [
     {
      "titulo": "SEPI: El Fondo de Solvencia ha recuperado el 66% de la financiación pública temporal (29-9-2026)",
      "url": "https://www.sepi.es/es/sala-de-prensa/noticias/el-fondo-de-solvencia-ha-recuperado-el-66-de-la-financiacion-publica"
     },
     {
-     "titulo": "Infobae (EFE): Plus Ultra, una de las 4 aerolíneas a las que la SEPI concedió préstamos durante la covid",
+     "titulo": "Infobae (EFE): Plus Ultra, una de las 4 aerolíneas a las que la SEPI concedió préstamos durante la covid (20-5-2026)",
      "url": "https://www.infobae.com/espana/agencias/2026/05/20/plus-ultra-una-de-las-4-aerolineas-a-las-que-la-sepi-concedio-prestamos-durante-la-covid/"
     },
     {
-     "titulo": "Hosteltur: Préstamos SEPI: ¿cuánto han devuelto Plus Ultra y el resto de aerolíneas?",
-     "url": "https://www.hosteltur.com/176362_prestamos-sepi-cuanto-han-devuelto-air-europa-air-nostrum-volotea-y-plus-ultra.html"
-    },
-    {
-     "titulo": "Forbes España: El Fondo de Solvencia de SEPI recibe la devolución total de los 85 millones concedidos a Grupo Wamos",
+     "titulo": "Forbes España: El Fondo de Solvencia de SEPI recibe la devolución total de los 85 millones concedidos a Grupo Wamos (16-10-2024)",
      "url": "https://forbes.es/economia/519334/el-fondo-de-solvencia-de-sepi-recibe-la-devolucion-total-de-los-85-millones-de-ayuda-concedida-a-grupo-wamos/"
     },
     {
-     "titulo": "El Español: La Sepi ha recuperado 1.425M de los rescates a empresas por la Covid",
-     "url": "https://www.elespanol.com/invertia/empresas/turismo/20251107/sepi-recuperado-rescates-empresas-covid-doble-previsto-devolucion-air-europa/1003744001957_0.html"
+     "titulo": "Merca2: Volotea solicita a la SEPI un préstamo de 185 M€ para «retornar al equilibrio patrimonial» (5-12-2021)",
+     "url": "https://www.merca2.es/2021/12/05/volotea-solicita-sepi-prestamo-818911/"
+    },
+    {
+     "titulo": "Valencia Plaza: El Fondo del SEPI ha rechazado 15 peticiones de apoyo financiero por 445 millones (26-4-2022)",
+     "url": "https://valenciaplaza.com/valenciaplaza/el-fondo-del-sepi-ha-rechazado-15-peticiones-de-apoyo-financiero-por-445-millones"
+    },
+    {
+     "titulo": "Vozpópuli: entrevista a Rodolfo Núñez, presidente de Binter, sobre el fondo de la SEPI (21-3-2021)",
+     "url": "https://www.vozpopuli.com/economia/plus-ultra-air-europa-2.html"
+    },
+    {
+     "titulo": "IAG: Iberia and Vueling sign syndicated loan agreements (1-5-2020)",
+     "url": "https://iairgroup.com/press-releases/2020/iberia-and-vueling-sign-syndicated-loan-agreements"
+    },
+    {
+     "titulo": "Valencia Plaza: Iberia presenta un ERTE de tres meses y reduce su operativa de vuelos (19-3-2020)",
+     "url": "https://valenciaplaza.com/iberia-erte-coronavirus"
     }
    ],
    "verificado": "2026-11-13",
-   "correcciones": [],
+   "correcciones": [
+    {
+     "fecha": "2026-11-14",
+     "antes": "falso",
+     "motivo": "Revisada tras un aviso de un lector: Sánchez se refería al fondo de la SEPI, que rescató a las aerolíneas que lo pidieron y sin que conste ninguna rechazada; «falso» era demasiado duro, pero «todas» no es literalmente cierto (Binter no lo pidió, Iberia y Vueling solo tuvieron préstamos con aval del ICO)."
+    }
+   ],
    "esencial": false,
    "otros_verificadores": [],
    "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/sanchez/m4938.png"
@@ -7442,8 +7476,8 @@
    "cita": "la tarifa del impuesto de la renta con la inflación",
    "afirmacion": "El Gobierno no ha actualizado (deflactado) la tarifa del IRPF con la inflación, lo que hace que las subidas de sueldo nominales se paguen en tramos más altos.",
    "veredicto": "verdadero",
-   "resumen": "El Gobierno reconoce a Bruselas que no deflactar el IRPF aportó 2.294 millones en 2025 y se mantendrá al menos hasta 2028; las cifras del ejemplo son ilustrativas.",
-   "explicacion": "El Informe de Progreso Anual 2026 que el Gobierno remitió a Bruselas el 30-4-2026 reconoce que la «no deflactación» de la tarifa y los mínimos del IRPF aportó 2.294 millones de euros en 2025 (0,14% del PIB; 1.137 al Estado y 1.157 a las CCAA) y la presenta como medida para cumplir el compromiso de ingresos del Plan Fiscal Estructural. La prensa recoge que se mantendrá al menos hasta 2028 y que solo en 2008 y 2015 se ajustó la tarifa en veinte años. Las cifras del ejemplo de Feijóo (subida del 4-5% que se queda en un 1% neto) son ilustrativas, no medidas.",
+   "resumen": "El Gobierno reconoce a Bruselas que no deflactar el IRPF aportó 2.294 millones en 2025 y se mantendrá al menos hasta 2028; el ejemplo numérico se verifica aparte.",
+   "explicacion": "El Informe de Progreso Anual 2026 que el Gobierno remitió a Bruselas el 30-4-2026 reconoce que la «no deflactación» de la tarifa y los mínimos del IRPF aportó 2.294 millones de euros en 2025 (0,14% del PIB; 1.137 al Estado y 1.157 a las CCAA) y la presenta como medida para cumplir el compromiso de ingresos del Plan Fiscal Estructural. La prensa recoge que se mantendrá al menos hasta 2028 y que solo en 2008 y 2015 se ajustó la tarifa en veinte años. El ejemplo numérico de Feijóo (una subida del 4-5 % que se queda en un 1 % neto) se verifica aparte, en la afirmación siguiente.",
    "confianza": "alta",
    "fuentes": [
     {
@@ -7464,10 +7498,69 @@
     }
    ],
    "verificado": "2026-11-13",
-   "correcciones": [],
+   "correcciones": [
+    {
+     "fecha": "2026-11-14",
+     "antes": "verdadero",
+     "motivo": "La explicación decía que las cifras del ejemplo de Feijóo eran «ilustrativas, no medidas», pero se pueden calcular con la normativa de 2026: tras el aviso de un lector se verifican ahora como afirmación aparte. El veredicto de esta no cambia."
+    }
+   ],
    "esencial": false,
    "otros_verificadores": [],
    "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m1904.png"
+  },
+  {
+   "id": "feijoo-m1911",
+   "entrevista": "feijoo",
+   "invitado": "Alberto Núñez Feijóo",
+   "tema_n": 4,
+   "tema": "Autónomos, impuestos y propuestas económicas del PP",
+   "segundo": 1911,
+   "minuto": "0:31:51",
+   "video_url": "https://www.youtube.com/watch?v=1YlGArMx_N4&t=1911s",
+   "web_url": "https://verificacion-podcast.vercel.app/feijoo#m1911",
+   "pagina_url": "https://verificacion-podcast.vercel.app/feijoo/m1911",
+   "cita": "el neto de lo que te queda de incremento es un 1%",
+   "afirmacion": "Si a un trabajador le suben el sueldo un 4-5%, por pagar más cotización a la Seguridad Social y pasarse de tramo del IRPF, lo que le queda de incremento neto es un 1%.",
+   "veredicto": "falso",
+   "resumen": "Con un 4% de subida el neto sube un 3,4% con 30.000 euros y un 3,25% con 45.000; solo cerca de 18.000-20.200 euros queda cerca del 1%.",
+   "explicacion": "Con la normativa de 2026 (cotización del trabajador del 6,5% incluido el MEI, escala del IRPF 19-47%, reducción por rendimientos del trabajo y deducción para sueldos cercanos al SMI), una subida bruta del 4% deja un neto de +3,4% con 30.000 euros y +3,25% con 45.000; con una del 5%, +4,25% y +4,07%. El neto solo queda en torno al 1-1,5% en sueldos de unos 18.000 a 20.200 euros brutos, y no por la cuota ni por cambiar de tramo (que solo grava el exceso), sino por la retirada gradual de deducciones; por encima de 25.000 euros nunca baja del 3,2%. La pérdida real de la no deflactación con 4% de inflación es de unos 140 euros (30.000) a 244 (45.000), un 0,6-0,7% del neto, no 3 puntos. La inflación fue del 4,9% en octubre de 2026 (INE), así que el 4% es un supuesto razonable.",
+   "confianza": "media",
+   "fuentes": [
+    {
+     "titulo": "BOE: Real Decreto-ley 5/2026, de 17 de febrero (art. 28: deducción por rendimientos del trabajo hasta 20.048,45 euros; SMI 2026 de 17.094 euros) (19-2-2026)",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2026-3810"
+    },
+    {
+     "titulo": "BOE: Ley 35/2006 del IRPF, texto consolidado (art. 19.2 otros gastos 2.000 euros; art. 20 reducción por rendimientos del trabajo)",
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2006-20764"
+    },
+    {
+     "titulo": "AEAT: Algoritmo de retenciones 2026 (escala 19-47%, mínimo 5.550 euros, reducción 7.302 euros)",
+     "url": "https://sede.agenciatributaria.gob.es/static_files/Sede/Programas_ayuda/Retenciones/2026/Algoritmo%20Retenciones-2026_10sept.pdf"
+    },
+    {
+     "titulo": "BOE: Orden PJC/297/2026, de 30 de marzo, de cotización 2026 (tipos del trabajador y MEI 0,15%) (31-3-2026)",
+     "url": "https://boe.es/buscar/pdf/2026/BOE-A-2026-7296-consolidado.pdf"
+    },
+    {
+     "titulo": "INE: Índice de Precios de Consumo, octubre de 2026 (13-11-2026)",
+     "url": "https://www.ine.es/dyngs/Prensa/IPC1026.htm"
+    },
+    {
+     "titulo": "INE: Índice de Precios de Consumo, septiembre de 2026",
+     "url": "https://www.ine.es/dyngs/Prensa/IPC0926.htm"
+    },
+    {
+     "titulo": "Vozpópuli: El INE confirma que la inflación bajó una décima en diciembre y cerró 2025 con una media del 2,7%",
+     "url": "https://www.vozpopuli.com/economia/el-ine-confirma-que-la-inflacion-bajo-una-decima-en-diciembre-y-cerro-2025-con-una-media-del-27.html"
+    }
+   ],
+   "verificado": "2026-11-14",
+   "correcciones": [],
+   "esencial": false,
+   "otros_verificadores": [],
+   "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m1911.png"
   },
   {
    "id": "feijoo-m1938",
@@ -10674,22 +10767,26 @@
    "pagina_url": "https://verificacion-podcast.vercel.app/feijoo/m4238",
    "cita": "este abogado con carácter general no llevaba los asuntos que afectaban a temas penales en la Audiencia Nacional y en el Tribunal Supremo",
    "afirmacion": "El abogado en cuestión, con carácter general, no llevaba los asuntos penales del PP en la Audiencia Nacional y el Tribunal Supremo.",
-   "veredicto": "enganoso",
-   "resumen": "Artículo 14 y elDiario.es cuentan que Durán dirigió la acusación popular del PP en el caso Koldo y en el del hermano de Sánchez hasta que lo apartaron, lo que no encaja con que no llevara esos asuntos.",
-   "explicacion": "Artículo 14 (7/11/2026) dice que Durán dirigió la acusación popular del PP en el caso Koldo y en el del hermano de Sánchez, y elDiario.es (5-6/11/2026) lo llama «abogado del PP hasta hace unos meses en los principales casos de corrupción que afectan al Gobierno y al PSOE» y dice que el partido lo apartó de las principales causas de la Audiencia Nacional. Además, un juez unificó en 2024 las acusaciones populares del caso Koldo bajo la dirección letrada del PP, tanto en el Supremo como en la Audiencia Nacional. Eso no encaja con que «con carácter general» no llevase esos asuntos, aunque el reparto interno solo consta por prensa y no por documentos del partido.",
+   "veredicto": "falso",
+   "resumen": "Durán fue letrado del PP en el juicio del Supremo y dirigió su acusación popular en el caso Koldo: llevaba los asuntos penales principales, hasta que el PP lo apartó.",
+   "explicacion": "Durán sí llevaba los asuntos penales del PP en el Supremo y la Audiencia Nacional. Artículo 14 (7-11-2026) dice que dirigió la acusación popular del PP en el caso Koldo y en el del hermano de Sánchez; Europa Press (4-5-2026) lo cita como «letrado del PP» en el juicio del caso mascarillas en el Supremo; y elDiario.es (5-6/11/2026) lo describe como abogado del PP «hasta hace unos meses en los principales casos de corrupción» y dice que el partido lo apartó de las principales causas de la Audiencia Nacional. El reparto interno del trabajo solo consta por prensa, no por documentos del partido.",
    "confianza": "media",
    "fuentes": [
     {
-     "titulo": "Artículo 14: El PP rechaza que el paso a un lado de Alberto Durán tenga relación con su reunión con Koldo García (7/11/2026)",
+     "titulo": "Artículo 14: El PP rechaza que el paso a un lado de Alberto Durán tenga relación con su reunión con Koldo García (7-11-2026)",
      "url": "https://www.articulo14.es/politica/el-pp-rechaza-que-el-paso-a-un-lado-de-alberto-duran-tenga-relacion-con-su-reunion-con-koldo-garcia-20261107.html"
+    },
+    {
+     "titulo": "Europa Press (Periódico de Ibiza): Anticorrupción mantiene las penas para Ábalos, Koldo y Aldama y el PP reduce a 5 los años de cárcel para el empresario (4-5-2026)",
+     "url": "https://www.periodicodeibiza.es/noticias/nacional/2026/05/04/2622773/anticorrupcion-mantiene-penas-para-abalos-koldo-aldama-reduce-anos-carcel-para-empresario.html"
+    },
+    {
+     "titulo": "elDiario.es: Koldo, el abogado Alberto Durán y el PP (5-11-2026, actualizado 6-11)",
+     "url": "https://www.eldiario.es/1_d02a9f"
     },
     {
      "titulo": "elDiario.es: el PP aparta a su abogado Alberto Durán de las principales causas de la Audiencia Nacional (5-6/11/2026)",
      "url": "https://www.eldiario.es/1_d0246f"
-    },
-    {
-     "titulo": "elDiario.es: Koldo, el abogado Alberto Durán y el PP (5/11/2026, actualizado 6/11)",
-     "url": "https://www.eldiario.es/1_d02a9f"
     },
     {
      "titulo": "Infobae/EFE: El PP también dirigirá las acusaciones populares del caso Koldo en la Audiencia Nacional (30/12/2024)",
@@ -10697,7 +10794,13 @@
     }
    ],
    "verificado": "2026-11-13",
-   "correcciones": [],
+   "correcciones": [
+    {
+     "fecha": "2026-11-14",
+     "antes": "enganoso",
+     "motivo": "Varias fuentes (Artículo 14, Europa Press, elDiario.es) muestran que Durán dirigía la acusación popular del PP en el caso Koldo y litigaba en el Supremo, lo que contradice lo que dijo Feijóo."
+    }
+   ],
    "esencial": false,
    "otros_verificadores": [],
    "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/feijoo/m4238.png"
@@ -13786,7 +13889,7 @@
    "afirmacion": "La derecha que pide la dimisión de Sánchez no ha dimitido nunca por cosas más graves, como la dana.",
    "veredicto": "falso",
    "resumen": "Mazón (PP) dimitió el 3 de noviembre de 2025, un año y cinco días después de la dana; se puede criticar que tardara, pero decir que «nunca» dimitieron es falso.",
-   "explicacion": "Carlos Mazón (PP), presidente de la Generalitat Valenciana, dimitió el 3 de noviembre de 2025, un año y cinco días después de la dana del 29 de octubre de 2024 (Maldita.es, Newtral); el real decreto de cese lleva fecha del 5 de noviembre y el BOE lo publicó el 7 de noviembre (El Debate). Se puede criticar que tardara un año y dimitiera tras fuertes presiones, pero el «nunca» y el «jamás» son incorrectos. El caso de Mazón basta para desmentir la generalización.",
+   "explicacion": "Carlos Mazón (PP), presidente de la Generalitat Valenciana, dimitió el 3 de noviembre de 2025, un año y cinco días después de la dana del 29 de octubre de 2024 (Maldita.es, Newtral); el real decreto de cese lleva fecha del 5 de noviembre y el BOE lo publicó el 7 de noviembre (El Debate). Un año después sigue siendo diputado en Les Corts, aforado y con oficina de expresident (Onda Cero, 3-11-2026). Se puede criticar que tardara un año, que dimitiera tras fuertes presiones y que conserve el escaño, pero dejó la presidencia de la Generalitat, así que el «nunca» y el «jamás» son incorrectos. El caso de Mazón basta para desmentir la generalización.",
    "confianza": "alta",
    "fuentes": [
     {
@@ -13800,10 +13903,20 @@
     {
      "titulo": "El Debate: El BOE publica el cese de Mazón (07/11/2025)",
      "url": "https://www.eldebate.com/espana/comunidad-valenciana/20251107/boe-publica-cese-mazon-plena-negociacion-entre-pp-vox-sobre-sucesor_352774_amp.html"
+    },
+    {
+     "titulo": "Onda Cero: Un año de la dimisión de Mazón, que mantiene el acta de diputado autonómico (3-11-2026)",
+     "url": "https://www.ondacero.es/emisoras/comunidad-valenciana/valencia/noticias/ano-dimision-mazon-que-mantiene-acta-diputado-autonomico_202611036ae9a69b02501232157214c7.html"
     }
    ],
    "verificado": "2026-11-13",
-   "correcciones": [],
+   "correcciones": [
+    {
+     "fecha": "2026-11-14",
+     "antes": "falso",
+     "motivo": "A raíz del aviso de un lector se añade que Mazón conserva el escaño en Les Corts, el aforamiento y la oficina de expresident. El veredicto no cambia: dejó la presidencia de la Generalitat."
+    }
+   ],
    "esencial": false,
    "otros_verificadores": [],
    "imagen_url": "https://verificacion-podcast.vercel.app/compartir/afirmaciones/colau/m2732.png"

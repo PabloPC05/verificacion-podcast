@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-14T20:58:35+01:00",
+ "generado": "2026-11-14T21:20:47+01:00",
  "aviso": "Verificación asistida por IA, sin revisión de un equipo de periodistas. «falso» no implica intención de mentir. Contrasta siempre con las fuentes enlazadas.",
  "veredictos": {
   "verdadero": "Los datos lo confirman.",
@@ -23,10 +23,10 @@
   "afirmaciones_url": "https://verificacion-podcast.vercel.app/api/v1/feijoo.json",
   "transcripcion_url": "https://verificacion-podcast.vercel.app/api/v1/feijoo/transcripcion.json",
   "transcripcion_txt_url": "https://verificacion-podcast.vercel.app/api/v1/feijoo/transcripcion.txt",
-  "total_afirmaciones": 153,
+  "total_afirmaciones": 154,
   "por_veredicto": {
-   "falso": 4,
-   "enganoso": 26,
+   "falso": 6,
+   "enganoso": 25,
    "mayormente_verdadero": 54,
    "verdadero": 43,
    "no_verificable": 26
@@ -83,9 +83,9 @@
     "n": 4,
     "titulo": "Autónomos, impuestos y propuestas económicas del PP",
     "inicio_s": 1731,
-    "total": 5,
+    "total": 6,
     "por_veredicto": {
-     "falso": 0,
+     "falso": 1,
      "enganoso": 0,
      "mayormente_verdadero": 3,
      "verdadero": 2,
@@ -150,8 +150,8 @@
     "inicio_s": 3834,
     "total": 30,
     "por_veredicto": {
-     "falso": 1,
-     "enganoso": 4,
+     "falso": 2,
+     "enganoso": 3,
      "mayormente_verdadero": 8,
      "verdadero": 10,
      "no_verificable": 7

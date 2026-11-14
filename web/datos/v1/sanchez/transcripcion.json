@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-14T20:58:35+01:00",
+ "generado": "2026-11-14T21:20:47+01:00",
  "aviso": "Verificación asistida por IA, sin revisión de un equipo de periodistas. «falso» no implica intención de mentir. Contrasta siempre con las fuentes enlazadas.",
  "veredictos": {
   "verdadero": "Los datos lo confirman.",
@@ -25,11 +25,11 @@
   "transcripcion_txt_url": "https://verificacion-podcast.vercel.app/api/v1/sanchez/transcripcion.txt",
   "total_afirmaciones": 146,
   "por_veredicto": {
-   "falso": 4,
-   "enganoso": 23,
-   "mayormente_verdadero": 52,
+   "falso": 3,
+   "enganoso": 22,
+   "mayormente_verdadero": 53,
    "verdadero": 36,
-   "no_verificable": 31
+   "no_verificable": 32
   },
   "excluidas": 11,
   "esencial": [
@@ -125,8 +125,8 @@
     "total": 16,
     "por_veredicto": {
      "falso": 0,
-     "enganoso": 2,
-     "mayormente_verdadero": 7,
+     "enganoso": 1,
+     "mayormente_verdadero": 8,
      "verdadero": 3,
      "no_verificable": 4
     }
@@ -137,11 +137,11 @@
     "inicio_s": 4785,
     "total": 10,
     "por_veredicto": {
-     "falso": 1,
+     "falso": 0,
      "enganoso": 2,
      "mayormente_verdadero": 2,
      "verdadero": 1,
-     "no_verificable": 4
+     "no_verificable": 5
     }
    },
    {
