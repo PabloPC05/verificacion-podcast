@@ -140,8 +140,8 @@
     "minuto": "1:38:37",
     "cita": "Yo no he gobernado con Bildu.",
     "afirmacion": "Sánchez no ha gobernado con EH Bildu.",
-    "veredicto": "verdadero",
-    "explicacion": "Bildu no ha tenido ministros ni forma parte del Gobierno, que es una coalición de PSOE y Sumar (Orain, 22-7-2026). Maldita recoge que entre 2019 y el 23-J de 2023 PSOE y EH Bildu no compartieron gobierno en ninguna institución y cita a Sánchez: «No hay ministros, no hay consejeros». Lo que sí hubo fue apoyo parlamentario: Bildu votó a favor de la investidura de Sánchez el 16-11-2023, de 80 iniciativas legislativas del Gobierno y de todos los presupuestos de la XIV Legislatura, y en 2020 firmó con PSOE y Unidas Podemos un documento para abstenerse en la quinta prórroga del estado de alarma. En 2015 y 2019 Sánchez había dicho «Con Bildu no vamos a pactar» y «con Bildu no se acuerda nada» (Maldita).",
+    "veredicto": "mayormente_verdadero",
+    "explicacion": "Bildu no ha tenido ministros ni forma parte del Gobierno, que es una coalición de PSOE y Sumar (Orain, 22-7-2026). Maldita recoge que entre 2019 y el 23-J de 2023 PSOE y EH Bildu no compartieron gobierno en ninguna institución y cita a Sánchez: «No hay ministros, no hay consejeros». Lo que sí hubo fue apoyo parlamentario: Bildu votó a favor de la investidura de Sánchez el 16-11-2023, de 80 iniciativas legislativas del Gobierno y de todos los presupuestos de la XIV Legislatura, y en 2020 firmó con PSOE y Unidas Podemos un documento para abstenerse en la quinta prórroga del estado de alarma. En 2015 y 2019 Sánchez había dicho «Con Bildu no vamos a pactar» y «con Bildu no se acuerda nada» (Maldita). Es cierto en lo esencial, porque Bildu no ha formado parte del Gobierno, pero ese apoyo parlamentario continuado matiza la frase.",
     "confianza": "media",
     "fuentes": [
       {
@@ -162,6 +162,11 @@
         "fecha": "2026-11-14",
         "antes": "mayormente_verdadero",
         "motivo": "Bildu no tiene ministros ni forma parte del Gobierno, y Maldita recoge que PSOE y EH Bildu no compartieron gobierno en ninguna institución entre 2019 y 2023; el apoyo parlamentario es otra cosa que Sánchez no niega."
+      },
+      {
+        "fecha": "2026-11-14",
+        "antes": "verdadero",
+        "motivo": "Tras una segunda revisión: es cierto que Bildu no ha formado parte de ningún Gobierno de Sánchez, pero su apoyo a la investidura de 2023 y a todos los presupuestos de la XIV Legislatura matiza la frase."
       }
     ]
   },
@@ -169,8 +174,8 @@
     "minuto": "1:38:37",
     "cita": "yo no he pactado un gobierno en Euskadi ni en Navarra",
     "afirmacion": "Sánchez (el PSOE) no ha pactado un gobierno con Bildu en Euskadi ni en Navarra.",
-    "veredicto": "verdadero",
-    "explicacion": "En Euskadi gobierna una coalición PNV-PSE-EE: Pradales fue investido lehendakari el 20-6-2024 con 27 votos del PNV y 12 del PSE-EE, y EH Bildu quedó en la oposición (Orain). En Navarra, Chivite fue investida en agosto de 2023 con los votos de PSN, Geroa Bai y Contigo y la abstención de EH Bildu, y gobierna en coalición con Geroa Bai y Contigo (Última Hora); Maldita recuerda que Bildu también se abstuvo en 2019. Bildu facilitó el Gobierno navarro sin entrar en él, y el PSN sí votó en diciembre de 2023 la moción de censura que dio la alcaldía de Pamplona a EH Bildu, que es un ayuntamiento y no un gobierno autonómico.",
+    "veredicto": "mayormente_verdadero",
+    "explicacion": "En Euskadi gobierna una coalición PNV-PSE-EE: Pradales fue investido lehendakari el 20-6-2024 con 27 votos del PNV y 12 del PSE-EE, y EH Bildu quedó en la oposición (Orain). En Navarra, Chivite fue investida en agosto de 2023 con los votos de PSN, Geroa Bai y Contigo y la abstención de EH Bildu, y gobierna en coalición con Geroa Bai y Contigo (Última Hora); Maldita recuerda que Bildu también se abstuvo en 2019. Bildu facilitó el Gobierno navarro sin entrar en él, y el PSN sí votó en diciembre de 2023 la moción de censura que dio la alcaldía de Pamplona a EH Bildu, que es un ayuntamiento y no un gobierno autonómico. Según EFE, Asiron (EH Bildu) fue elegido alcalde de Pamplona el 28-12-2023 con 15 votos, cuatro de ellos del PSN. Es cierto que no ha pactado esos gobiernos autonómicos con Bildu, pero en Navarra sí ha contado con ella.",
     "confianza": "media",
     "fuentes": [
       {
@@ -184,6 +189,10 @@
       {
         "titulo": "Maldita.es: La relación de Bildu y el PSOE: cronología de acuerdos, apoyos de iniciativas y formación de gobiernos",
         "url": "https://maldita.es/malditateexplica/20240125/cronologia-relacion-bildu-psoe/"
+      },
+      {
+        "titulo": "RTVC (EFE): Joseba Asiron (EH Bildu), alcalde de Pamplona al ganar la moción de censura a UPN (28-12-2023)",
+        "url": "https://rtvc.es/joseba-asiron-eh-bildu-alcalde-de-pamplona-al-ganar-la-mocion-de-censura/"
       }
     ],
     "correcciones": [
@@ -191,6 +200,11 @@
         "fecha": "2026-11-14",
         "antes": "mayormente_verdadero",
         "motivo": "Ni en Euskadi (coalición PNV-PSE-EE) ni en Navarra (PSN, Geroa Bai y Contigo) gobierna EH Bildu, que en Navarra solo se abstuvo en la investidura de 2023."
+      },
+      {
+        "fecha": "2026-11-14",
+        "antes": "verdadero",
+        "motivo": "Tras una segunda revisión: Bildu no está en esos gobiernos, pero en Navarra el de Chivite salió adelante con su abstención y el PSN votó con Bildu la moción que dio a Asiron la alcaldía de Pamplona."
       }
     ]
   },
@@ -264,9 +278,9 @@
     "minuto": "1:39:37",
     "cita": "Yo no he dicho lo de dormir, de hecho.",
     "afirmacion": "Sánchez no dijo en 2019 lo de que no dormiría (por tener a Podemos en el Gobierno), y es un bulo.",
-    "veredicto": "enganoso",
-    "explicacion": "Sánchez sí dijo en laSexta, el 19-9-2019, que «sería un presidente del Gobierno que no dormiría por la noche» si aceptaba que Hacienda, Energía o Seguridad Social fueran para personas del círculo de Iglesias «con poca experiencia» (elDiario.es), y en esa misma respuesta él habla de lo que «me quitaba el sueño». Maldita considera manipulada la versión viral («no podría dormir tranquilo con Podemos en el Gobierno») porque omite que se refería a esos ministerios, y en Onda Cero (junio de 2023) Sánchez dijo «No dije exactamente eso». Negar haber dicho nada sobre dormir es inexacto, pero atribuirle el sentido general que circula también lo es, y llamar «bulo» a todo es excesivo.",
-    "confianza": "media",
+    "veredicto": "falso",
+    "explicacion": "Sánchez sí lo dijo: en laSexta, el 19-9-2019, afirmó que «sería un presidente del Gobierno que no dormiría por la noche» si aceptaba que Hacienda, Energía o Seguridad Social fueran para personas del círculo de Iglesias «con poca experiencia» (elDiario.es). Maldita considera manipulada la versión viral («no podría dormir tranquilo con Podemos en el Gobierno») porque omite esa condición, y en Onda Cero (junio de 2023) Sánchez dijo «No dije exactamente eso». Pero que la versión viral exagere no hace cierta su negativa: la frase sobre no dormir la dijo.",
+    "confianza": "alta",
     "fuentes": [
       {
         "titulo": "elDiario.es: Sánchez dice que «no dormiría» como presidente del Gobierno si hubiera cedido Hacienda o Energía a Iglesias (19-9-2019)",
@@ -282,6 +296,11 @@
         "fecha": "2026-11-14",
         "antes": "falso",
         "motivo": "Sánchez sí dijo en laSexta, el 19-9-2019, que «no dormiría por la noche» si ciertos ministerios iban a personas del círculo de Iglesias, y Maldita considera manipulada la versión viral, que omite esa condición."
+      },
+      {
+        "fecha": "2026-11-14",
+        "antes": "enganoso",
+        "motivo": "Tras una segunda revisión: Sánchez sí dijo en laSexta, el 19-9-2019, que «no dormiría por la noche»; que la versión viral omita su condición no hace cierta su negativa a haberlo dicho."
       }
     ]
   },

@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-14T10:32:58+01:00",
+ "generado": "2026-11-14T10:48:43+01:00",
  "aviso": "Verificación asistida por IA, sin revisión de un equipo de periodistas. «falso» no implica intención de mentir. Contrasta siempre con las fuentes enlazadas.",
  "veredictos": {
   "verdadero": "Los datos lo confirman.",
@@ -566,20 +566,22 @@
      ],
      "total": 28,
      "por_veredicto": {
-      "falso": 1,
-      "enganoso": 3,
-      "mayormente_verdadero": 10,
-      "verdadero": 11,
+      "falso": 2,
+      "enganoso": 2,
+      "mayormente_verdadero": 12,
+      "verdadero": 9,
       "no_verificable": 3
      },
      "afirmaciones": [
       "sanchez-m6003",
-      "sanchez-m5923",
       "sanchez-m6028",
+      "sanchez-m5923",
       "sanchez-m6054",
       "sanchez-m5838",
       "sanchez-m5890",
       "sanchez-m5911",
+      "sanchez-m5951",
+      "sanchez-m5970",
       "sanchez-m6009",
       "sanchez-m6037",
       "sanchez-m6104",
@@ -588,8 +590,6 @@
       "sanchez-m6451",
       "sanchez-m6456",
       "sanchez-m5816",
-      "sanchez-m5951",
-      "sanchez-m5970",
       "sanchez-m5986",
       "sanchez-m6081",
       "sanchez-m6204",
