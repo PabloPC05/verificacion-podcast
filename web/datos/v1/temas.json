@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-14T21:20:47+01:00",
+ "generado": "2026-11-17T19:29:38+01:00",
  "aviso": "Verificación asistida por IA, sin revisión de un equipo de periodistas. «falso» no implica intención de mentir. Contrasta siempre con las fuentes enlazadas.",
  "veredictos": {
   "verdadero": "Los datos lo confirman.",
@@ -143,15 +143,15 @@
      ],
      "total": 12,
      "por_veredicto": {
-      "falso": 1,
-      "enganoso": 3,
+      "falso": 2,
+      "enganoso": 2,
       "mayormente_verdadero": 4,
       "verdadero": 3,
       "no_verificable": 1
      },
      "afirmaciones": [
-      "feijoo-m3377",
       "feijoo-m3123-2",
+      "feijoo-m3377",
       "feijoo-m3225",
       "feijoo-m3389",
       "feijoo-m3123",

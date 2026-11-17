@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-14T21:20:47+01:00",
+ "generado": "2026-11-17T19:29:38+01:00",
  "aviso": "Verificación asistida por IA, sin revisión de un equipo de periodistas. «falso» no implica intención de mentir. Contrasta siempre con las fuentes enlazadas.",
  "veredictos": {
   "verdadero": "Los datos lo confirman.",
@@ -213,8 +213,8 @@
    "transcripcion_txt_url": "https://verificacion-podcast.vercel.app/api/v1/feijoo/transcripcion.txt",
    "total_afirmaciones": 154,
    "por_veredicto": {
-    "falso": 6,
-    "enganoso": 25,
+    "falso": 7,
+    "enganoso": 24,
     "mayormente_verdadero": 54,
     "verdadero": 43,
     "no_verificable": 26
@@ -312,8 +312,8 @@
      "inicio_s": 2956,
      "total": 12,
      "por_veredicto": {
-      "falso": 1,
-      "enganoso": 3,
+      "falso": 2,
+      "enganoso": 2,
       "mayormente_verdadero": 4,
       "verdadero": 3,
       "no_verificable": 1

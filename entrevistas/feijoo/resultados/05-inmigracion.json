@@ -39,17 +39,17 @@
     "minuto": "0:51:38",
     "cita": "hay medio millón de inmigrantes cobrándolo sin haber trabajado una sola hora en el último año",
     "afirmacion": "Hay medio millón de inmigrantes que cobran el ingreso mínimo vital sin haber trabajado ni una sola hora en el último año.",
-    "veredicto": "enganoso",
-    "explicacion": "Feijóo atribuye la cifra a «información que nos han trasladado», sin fuente. Los datos del Ministerio a 15 de mayo de 2026 (citados por laSexta) cuentan 150.679 migrantes perceptores del IMV, y la ministra Saiz dijo que más del 80 % de los perceptores son españoles y que dos de cada tres trabajaron en el último año; Maldita, con datos de la Seguridad Social, da un 17 % de titulares extranjeros en el primer semestre de 2026. No hay datos oficiales de beneficiarios por nacionalidad ni del cruce con el empleo, y laSexta apunta a que Feijóo pudo multiplicar por tres la cifra oficial (contando a todos los miembros del hogar, menores incluidos), pero que medio millón de inmigrantes lleve un año sin trabajar no tiene respaldo y choca con las cifras ministeriales.",
+    "veredicto": "falso",
+    "explicacion": "Feijóo atribuye la cifra a «información que nos han trasladado», sin fuente. Los titulares extranjeros del IMV rondaron el 17 % en el primer semestre de 2026 (Seguridad Social, en respuesta a Maldita) y el Ministerio contaba 150.679 a 15 de mayo (laSexta): unos 150.000, no medio millón. No hay datos de beneficiarios por nacionalidad; contando a todos los miembros de esos hogares la cifra podría acercarse al medio millón, pero casi la mitad de los 2,6 millones de beneficiarios del IMV son menores y dos de cada tres hogares perceptores tuvieron ingresos por trabajo en el último año (Ministerio de Inclusión, 27-7-2026; sin desglose por nacionalidad). Con ninguna de las dos lecturas salen medio millón de inmigrantes que no hayan trabajado ni una hora.",
     "confianza": "media",
     "fuentes": [
       {
-        "titulo": "elDiario.es/laSexta: señala las «imprecisiones» de Feijóo sobre los migrantes que cobran el IMV, «ha multiplicado por 3 la cifra oficial» (150.679 migrantes, datos a 15 de mayo)",
-        "url": "https://www.eldiario.es/vertele/videos/actualidad/lasexta-senala-imprecisiones-feijoo-hormiguero-migrantes-cobran-imv-multiplicado-3-cifra-oficial_7_13317252.html"
+        "titulo": "Ministerio de Inclusión (La Moncloa): Elma Saiz reivindica la reforma del incentivo al empleo del IMV (27/7/2026): 860.000 hogares y 2,6 millones de personas, casi la mitad menores; dos de cada tres hogares con ingresos por trabajo en el último año",
+        "url": "https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/inclusion/Paginas/2026/270726-reforma-incentivo-empleo-imv.aspx"
       },
       {
-        "titulo": "Diario de Avisos: Feijóo, trancas, barrancas y los bulos sobre la inmigración (réplica de Saiz: más del 80 % son españoles, unos 150.000 de origen extranjero)",
-        "url": "https://diariodeavisos.elespanol.com/2026/06/feijoo-trancas-barrancas-y-los-bulos-sobre-la-inmigracion/"
+        "titulo": "elDiario.es/laSexta: señala las «imprecisiones» de Feijóo sobre los migrantes que cobran el IMV, «ha multiplicado por 3 la cifra oficial» (150.679 migrantes, datos a 15 de mayo)",
+        "url": "https://www.eldiario.es/vertele/videos/actualidad/lasexta-senala-imprecisiones-feijoo-hormiguero-migrantes-cobran-imv-multiplicado-3-cifra-oficial_7_13317252.html"
       },
       {
         "titulo": "Maldita.es: los españoles superan a los extranjeros entre los titulares del IMV desde 2020",
@@ -61,6 +61,11 @@
         "fecha": "2026-11-14",
         "antes": "falso",
         "motivo": "Los datos oficiales no publican los beneficiarios por nacionalidad, por lo que «medio millón» podría ser el total de miembros de hogares con titular extranjero; lo que las cifras ministeriales sí contradicen es que no hayan trabajado."
+      },
+      {
+        "fecha": "2026-11-17",
+        "antes": "enganoso",
+        "motivo": "Tras una segunda revisión: los titulares extranjeros son unos 150.000 y, si se cuenta a todos los miembros de sus hogares, casi la mitad de los beneficiarios del IMV son menores y dos de cada tres hogares tuvieron ingresos por trabajo; ninguna lectura sostiene medio millón de inmigrantes sin trabajar."
       }
     ]
   },
